@@ -1,0 +1,116 @@
+.Dropdown,
+.Submenu {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  appearance: none;
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+
+  h5 {
+    transition: $transitions--primary;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  .child {
+    background: $colors--light;
+    border: $borders--primary;
+    border-radius: $borders--radius-a;
+    box-shadow: $borders--shadow-b;
+    box-sizing: border-box;
+    overflow-y: auto;
+    position: absolute;
+    margin-top: $space--1 * 0.9;
+    padding: $space--2 * 0.3;
+    max-height: 40rem;
+    max-width: 32rem;
+    min-width: 20rem;
+    width: fit-content;
+    cursor: pointer;
+    z-index: 5;
+    -webkit-overflow-scrolling: touch;
+
+    @include phone {
+      margin-top: $space--1;
+    }
+
+    &._inactive {
+      display: none;
+    }
+
+    ._selected {
+      opacity: 0.8;
+    }
+
+    &.left {
+      left: 0;
+    }
+    &.right {
+      right: 0;
+    }
+    &.center {
+      right: 0;
+      left: 0;
+    }
+    @include micro {
+      &.center-micro {
+        right: 0;
+        left: 0;
+      }
+    }
+
+    .option {
+      text-align: left !important;
+      transition: $transitions--primary;
+      padding: ($space--2 * 0.4) ($space--2 * 0.7);
+      border-bottom: 0.1rem solid rgba(0, 0, 0, 0.03);
+      border-radius: $borders--radius-a;
+
+      &:hover,
+      &:focus {
+        background: $colors--navy-body;
+      }
+      a {
+        display: block;
+        color: $colors--dark !important;
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+._night .Dropdown,
+._night .Submenu {
+  .child {
+    * {
+      opacity: 1;
+    }
+    background: $colors--dark;
+    box-shadow: none;
+    color: $colors--light;
+    border-color: $borders--night;
+
+    .option {
+      &:hover,
+      &:focus {
+        color: $colors--light !important;
+        background: rgba(0, 0, 0, 0.4);
+      }
+      a {
+        display: block;
+      }
+      &._active {
+        opacity: 0.5;
+      }
+    }
+  }
+}

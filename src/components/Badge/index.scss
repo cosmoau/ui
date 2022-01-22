@@ -1,0 +1,97 @@
+@mixin theme($background, $text) {
+  background-color: $background !important;
+  color: $text !important;
+}
+
+.Badge {
+  padding: 0.22rem 0.99rem;
+  border: 1px solid transparent;
+  display: -webkit-inline-block;
+  display: inline-block;
+  -webkit-align-items: center;
+  align-items: center;
+  position: relative;
+  font-weight: inherit;
+  border-radius: $borders--radius-b;
+  background: $colors--light;
+  transition: $transitions--primary;
+  @include rhythm(1.65, 1.5);
+
+  &._disabled {
+    cursor: wait;
+    opacity: 0.85;
+  }
+
+  &._block {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &._large {
+    padding: $space--2 * 0.6;
+    font-size: 1.65rem;
+  }
+  &._shadow {
+    box-shadow: $borders--shadow-c;
+    border: $borders--primary;
+  }
+  &._red {
+    @include theme($colors--red-body, $colors--red-text);
+  }
+  &._yellow {
+    @include theme($colors--yellow-body, $colors--yellow-text);
+  }
+  &._green {
+    @include theme($colors--green-body, $colors--green-text);
+  }
+  &._blue {
+    @include theme($colors--blue-body, $colors--blue-text);
+  }
+  &._navy {
+    @include theme($colors--navy-body, $colors--navy-text);
+  }
+  &._purple {
+    @include theme($colors--purple-body, $colors--purple-text);
+  }
+  &._pink {
+    @include theme($colors--pink-body, $colors--pink-text);
+  }
+  &._dark {
+    @include theme($colors--dark, $colors--light);
+  }
+}
+
+._night .Badge {
+  background-color: $colors--dark;
+  color: $colors--light;
+
+  &._red {
+    @include theme(rgba($colors--red-text, 0.5), $colors--red-state);
+  }
+  &._yellow {
+    @include theme(rgba($colors--yellow-text, 0.5), $colors--yellow-state);
+  }
+  &._green {
+    @include theme(rgba($colors--green-text, 0.5), $colors--green-state);
+  }
+  &._blue {
+    @include theme(rgba($colors--blue-text, 0.5), $colors--blue-state);
+  }
+  &._navy {
+    @include theme($colors--navy-state, $colors--light);
+  }
+  &._purple {
+    @include theme(rgba($colors--purple-text, 0.5), $colors--purple-state);
+  }
+  &._pink {
+    @include theme(rgba($colors--pink-text, 0.5), $colors--pink-state);
+  }
+  &._dark {
+    @include theme($colors--dark, $colors--light);
+  }
+}

@@ -1,0 +1,116 @@
+@mixin theme($background, $text) {
+  background-color: $background !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+  color: $text !important;
+}
+
+.Card {
+  padding: $space--2;
+  background: $colors--light;
+  color: $colors--dark;
+  transition: $transitions--primary;
+  border-radius: $borders--radius-b;
+
+  &:hover {
+    box-shadow: $borders--shadow-b;
+
+    img {
+      transition: $transitions--primary;
+      opacity: 0.95;
+    }
+  }
+  &._disabled {
+    cursor: wait;
+    opacity: 0.66;
+  }
+  &._border {
+    border: $borders--primary;
+  }
+
+  &._image {
+    padding: 0;
+
+    .image-container {
+      width: 100%;
+      height: 100%;
+      img {
+        border-top-left-radius: $borders--radius-a;
+        border-top-right-radius: $borders--radius-a;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+    .image-children {
+      padding: $space--2;
+    }
+  }
+  &._small {
+    padding: $space--2 * 0.77;
+    .image-children {
+      padding: $space--2 * 0.77;
+    }
+  }
+  &._minimal {
+    padding: 0;
+    .image-children {
+      padding: $space--2 * 0.77;
+    }
+  }
+  &._shadow {
+    box-shadow: $borders--shadow-b;
+  }
+  &._red {
+    @include theme($colors--red-body, $colors--red-text);
+  }
+  &._yellow {
+    @include theme($colors--yellow-body, $colors--yellow-text);
+  }
+  &._green {
+    @include theme($colors--green-body, $colors--green-text);
+  }
+  &._blue {
+    @include theme($colors--blue-body, $colors--blue-text);
+  }
+  &._navy {
+    @include theme($colors--navy-body, $colors--navy-text);
+  }
+  &._purple {
+    @include theme($colors--purple-body, $colors--purple-text);
+  }
+  &._pink {
+    @include theme($colors--pink-body, $colors--pink-text);
+  }
+  &._dark {
+    @include theme($colors--dark, $colors--light);
+  }
+}
+
+._night .Card {
+  background-color: $colors--dark;
+  color: $colors--light;
+
+  &._red {
+    @include theme(rgba($colors--red-text, 0.5), $colors--red-state);
+  }
+  &._yellow {
+    @include theme(rgba($colors--yellow-text, 0.5), $colors--yellow-state);
+  }
+  &._green {
+    @include theme(rgba($colors--green-text, 0.5), $colors--green-state);
+  }
+  &._blue {
+    @include theme(rgba($colors--blue-text, 0.5), $colors--blue-state);
+  }
+  &._navy {
+    @include theme($colors--navy-state, $colors--light);
+  }
+  &._purple {
+    @include theme(rgba($colors--purple-text, 0.5), $colors--purple-state);
+  }
+  &._pink {
+    @include theme(rgba($colors--pink-text, 0.5), $colors--pink-state);
+  }
+  &._dark {
+    @include theme($colors--dark, $colors--light);
+  }
+}

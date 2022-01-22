@@ -1,0 +1,25 @@
+.Precode {
+  display: block;
+  width: 100%;
+
+  pre {
+    font-family: monospace;
+    font-size: 1.5rem;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: $space--2;
+    border-radius: $borders--radius-a;
+    background-color: rgba($colors--purple-state, 0.5);
+    color: $colors--dark;
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+._night .Precode {
+  pre {
+    background: $colors--navy-body !important;
+    color: $colors--light;
+  }
+}

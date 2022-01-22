@@ -1,0 +1,19 @@
+.Checkbox {
+  cursor: pointer;
+  white-space: nowrap;
+  display: table-row-group;
+
+  .Button {
+    display: inline-block;
+    margin-right: $space--1;
+    padding: $space--1 * 0.4;
+    line-height: 0;
+  }
+  label {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    user-select: none;
+    white-space: pre-wrap;
+  }
+}

@@ -1,0 +1,40 @@
+.Textarea {
+  label {
+    opacity: 0.6;
+    font-size: 1.4rem;
+    display: block;
+    display: block;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+  }
+  textarea {
+    padding: $space--1;
+    font-size: 1.5rem;
+    border-radius: $borders--radius-a;
+    border: $borders--primary;
+    transition: $transitions--primary;
+    box-sizing: border-box;
+    transition-duration: 0.08s;
+    width: 100%;
+
+    &:focus {
+      border-color: rgba($colors--dark, 0.3);
+      box-shadow: $borders--shadow-b;
+    }
+  }
+  p {
+    opacity: 0.4;
+    font-size: 1.4rem;
+  }
+}
+
+._night .Textarea {
+  textarea {
+    background: $colors--navy-body !important;
+    color: $colors--light;
+    &:focus {
+      border: $borders--night;
+      box-shadow: 0;
+    }
+  }
+}

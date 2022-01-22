@@ -1,0 +1,397 @@
+@use 'sass:math';
+
+html {
+  box-sizing: border-box;
+  vertical-align: baseline;
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  font-family: $type--parent;
+  color: $colors--dark;
+  line-height: 1.6;
+  font-size: 1.5rem;
+  height: 100%;
+  -webkit-text-size-adjust: none;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after,
+*:focus {
+  box-sizing: inherit;
+  outline: none;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  letter-spacing: normal;
+  word-spacing: normal;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+div {
+  position: relative;
+  margin: 0 auto;
+}
+svg {
+  transition: $transitions--primary;
+  vertical-align: middle;
+  align-self: center;
+  line-height: normal;
+}
+
+img {
+  border-radius: $borders--radius-b;
+}
+
+.Main {
+  min-width: 100%;
+  width: 100%;
+  background: $body--base;
+  color: $colors--dark;
+
+  &._light {
+    background-color: $colors--light !important;
+    color: $colors--dark !important;
+  }
+  &._alternate {
+    background-color: $colors--alternate !important;
+    color: $colors--dark !important;
+  }
+
+  &._dark {
+    background-color: $colors--dark !important;
+    color: $colors--light !important;
+  }
+  &._night._dark {
+    background-color: $colors--night !important;
+    color: $colors--light !important;
+  }
+  &._night {
+    background: $colors--night;
+    color: $colors--light;
+  }
+
+  ._inner {
+    min-width: auto !important;
+    @include max--widths();
+  }
+
+  ._full,
+  ._inner {
+    padding-left: math.div($space--3, 1.5);
+    padding-right: math.div($space--3, 1.5);
+
+    @include micro {
+      padding-left: math.div($space--1, 2);
+      padding-right: math.div($space--1, 2);
+    }
+
+    @include phone {
+      padding-left: math.div($space--1, 2);
+      padding-right: math.div($space--1, 2);
+    }
+
+    @include tablet-specific {
+      padding-left: math.div($space--2, 1.5);
+      padding-right: math.div($space--2, 1.5);
+    }
+    @include laptop-specific {
+      padding-left: math.div($space--2, 1.5);
+      padding-right: math.div($space--2, 1.5);
+    }
+
+    @include desktop-specific {
+      padding-left: $space--2;
+      padding-right: $space--2;
+    }
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+/* Spacing */
+@include render-padding-t-b(0, 0);
+@include render-padding-t-b(($space--1 * 0.5), '1-h');
+@include render-padding-t-b($space--1, 1);
+@include render-padding-t-b(($space--2 * 0.5), '2-h');
+@include render-padding-t-b($space--2, 2);
+@include render-padding-t-b($space--3, 3);
+@include render-padding-t-b($space--4, 4);
+@include render-padding-t-b($space--5, 5);
+@include render-padding-t-b($space--6, 6);
+
+@include micro {
+  @include render-padding-t-b-micro(0, 0);
+  @include render-padding-t-b-micro(($space--1 * 0.45), '1-h');
+  @include render-padding-t-b-micro(math.div($space--1, 1.75), 1);
+  @include render-padding-t-b-micro(($space--2 * 0.45), '2-h');
+  @include render-padding-t-b-micro(math.div($space--2, 1.75), 2);
+  @include render-padding-t-b-micro(math.div($space--3, 1.75), 3);
+  @include render-padding-t-b-micro(math.div($space--4, 1.75), 4);
+  @include render-padding-t-b-micro(math.div($space--5, 1.75), 5);
+  @include render-padding-t-b-micro(math.div($space--6, 1.75), 6);
+}
+
+@include phone {
+  @include render-padding-t-b-phone(0, 0);
+  @include render-padding-t-b-phone(($space--1 * 0.5), '1-h');
+  @include render-padding-t-b-phone(math.div($space--1, 1.5), 1);
+  @include render-padding-t-b-phone(($space--2 * 0.5), '2-h');
+  @include render-padding-t-b-phone(math.div($space--2, 1.5), 2);
+  @include render-padding-t-b-phone(math.div($space--3, 1.5), 3);
+  @include render-padding-t-b-phone(math.div($space--4, 1.5), 4);
+  @include render-padding-t-b-phone(math.div($space--5, 1.5), 5);
+  @include render-padding-t-b-phone(math.div($space--6, 1.5), 6);
+}
+
+@include tablet-specific {
+  @include render-padding-t-b-tablet(0, 0);
+  @include render-padding-t-b-tablet(($space--1 * 0.5), '1-h');
+  @include render-padding-t-b-tablet(math.div($space--1, 1.25), 1);
+  @include render-padding-t-b-tablet(($space--2 * 0.5), '2-h');
+  @include render-padding-t-b-tablet(math.div($space--2, 1.25), 2);
+  @include render-padding-t-b-tablet(math.div($space--3, 1.25), 3);
+  @include render-padding-t-b-tablet(math.div($space--4, 1.25), 4);
+  @include render-padding-t-b-tablet(math.div($space--5, 1.25), 5);
+  @include render-padding-t-b-tablet(math.div($space--6, 1.25), 6);
+}
+
+@include laptop {
+  @include render-padding-t-b-laptop(0, 0);
+  @include render-padding-t-b-laptop(($space--1 * 0.5), '1-h');
+  @include render-padding-t-b-laptop($space--1, 1);
+  @include render-padding-t-b-laptop(($space--2 * 0.5), '2-h');
+  @include render-padding-t-b-laptop($space--2, 2);
+  @include render-padding-t-b-laptop($space--3, 3);
+  @include render-padding-t-b-laptop($space--4, 4);
+  @include render-padding-t-b-laptop($space--5, 5);
+  @include render-padding-t-b-laptop($space--6, 6);
+}
+
+@include desktop {
+  @include render-padding-t-b-desktop(0, 0);
+  @include render-padding-t-b-desktop(($space--1 * 0.5), '1-h');
+  @include render-padding-t-b-desktop($space--1, 1);
+  @include render-padding-t-b-desktop(($space--2 * 0.5), '2-h');
+  @include render-padding-t-b-desktop($space--2, 2);
+  @include render-padding-t-b-desktop($space--3, 3);
+  @include render-padding-t-b-desktop($space--4, 4);
+  @include render-padding-t-b-desktop($space--5, 5);
+  @include render-padding-t-b-desktop($space--6, 6);
+}
+
+@include wide {
+  @include render-padding-t-b-wide(0, 0);
+  @include render-padding-t-b-wide(($space--1 * 0.5), '1-h');
+  @include render-padding-t-b-wide($space--1, 1);
+  @include render-padding-t-b-wide(($space--2 * 0.5), '2-h');
+  @include render-padding-t-b-wide($space--2, 2);
+  @include render-padding-t-b-wide($space--3, 3);
+  @include render-padding-t-b-wide($space--4, 4);
+  @include render-padding-t-b-wide($space--5, 5);
+  @include render-padding-t-b-wide($space--6, 6);
+}
+
+/* Reset/Override Classes */
+svg {
+  vertical-align: middle;
+  line-height: inherit;
+  align-items: center;
+  align-self: center;
+}
+.border-all {
+  border: $borders--primary !important;
+}
+
+.border-top {
+  border-top: $borders--primary;
+}
+
+.border-bottom {
+  border-bottom: $borders--primary;
+}
+
+.border-left {
+  border-left: $borders--primary;
+}
+
+.border-right {
+  border-right: $borders--primary;
+}
+
+.border-radius-a {
+  border-radius: $borders--radius-a;
+}
+
+.border-radius-b {
+  border-radius: $borders--radius-a;
+}
+
+.border-radius-c {
+  border-radius: $borders--radius-b;
+}
+
+.border-radius-top-0 {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.border-radius-bottom-0 {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.border-radius-left-0 {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.border-radius-right-0 {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.border-radius-0 {
+  border-radius: 0 !important;
+}
+
+.border-radius-100 {
+  border-radius: 100% !important;
+}
+
+.box-shadow-0 {
+  box-shadow: 0;
+}
+
+.vr,
+.vertical-divider {
+  opacity: 0.2;
+}
+
+.margin-bottom-0 {
+  margin-bottom: 0 !important;
+}
+
+.padding-0 {
+  padding: 0;
+}
+
+:disabled,
+.disabled {
+  opacity: 0.3;
+  transition: $transitions--primary;
+}
+
+.hidden,
+.visible-wide,
+.visible-desktop,
+.visible-laptop,
+.visible-tablet,
+.visible-phone,
+.visible-micro {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+@include micro {
+  .visible-micro {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .hidden-micro {
+    display: none !important;
+  }
+}
+
+@include phone {
+  .visible-phone {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .hidden-phone {
+    display: none !important;
+  }
+}
+
+@include tablet-specific {
+  .visible-tablet {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .hidden-tablet {
+    display: none !important;
+  }
+}
+
+@include laptop-specific {
+  .visible-laptop {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .hidden-laptop {
+    display: none !important;
+  }
+}
+
+@include desktop-specific {
+  .visible-desktop {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .hidden-desktop {
+    display: none !important;
+  }
+}
+
+@include wide {
+  .visible-wide {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .hidden-wide {
+    display: none !important;
+  }
+}
+
+.color-dark {
+  color: $colors--dark;
+}
+.color-red {
+  color: $colors--red-text;
+}
+.color-yellow {
+  color: $colors--yellow-text;
+}
+.color-green {
+  color: $colors--green-text;
+}
+.color-blue {
+  color: $colors--blue-text;
+}
+.color-purple {
+  color: $colors--purple-text;
+}
+.color-pink {
+  color: $colors--pink-text;
+}

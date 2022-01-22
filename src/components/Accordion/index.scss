@@ -1,0 +1,58 @@
+.Accordion {
+  .item {
+    transition: $transitions--primary;
+    border-radius: $borders--radius-a;
+    border-bottom: $borders--primary;
+    padding-top: $space--2 * 0.66;
+    padding-bottom: $space--2 * 0.66;
+    border-color: rgba(0, 0, 0, 0.07);
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+
+    &:last-of-type {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .heading {
+      transition: $transitions--primary;
+    }
+
+    .content {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.4s;
+      .children {
+        padding-top: $space--2 * 0.6;
+        padding-bottom: $space--2 * 0.6;
+      }
+      &._viewing {
+        max-height: 40rem;
+      }
+    }
+  }
+}
+
+._night .Accordion {
+  .item {
+    .heading {
+      background: $colors--dark;
+    }
+
+    .content {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.4s;
+      .children {
+        background: $colors--navy-body;
+        padding: $space--2 * 0.66;
+      }
+      &._viewing {
+        max-height: 35rem;
+        border-top: $borders--night;
+      }
+    }
+  }
+}

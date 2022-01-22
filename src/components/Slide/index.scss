@@ -1,0 +1,105 @@
+.Slide {
+  position: fixed;
+  transition: $transitions--primary;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  background: $colors--light;
+  z-index: 6;
+  transition: all 0.33s ease-in-out;
+  cursor: auto;
+
+  .exit {
+    position: absolute;
+    top: $space--1;
+    left: $space--1;
+    z-index: 7;
+    transition: $transitions--primary;
+    cursor: pointer;
+    * {
+      vertical-align: middle;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    @include phone {
+      left: auto;
+      right: $space--1;
+    }
+    @include tablet-specific {
+      left: auto;
+      right: $space--1;
+    }
+  }
+
+  @include laptop {
+    height: 100vh;
+    width: 0%;
+    right: -50%;
+    top: 0;
+    border: $borders--primary;
+    border-top-left-radius: $borders--radius-a;
+    border-bottom-left-radius: $borders--radius-a;
+    box-shadow: 0px -0.01rem 4.4rem -0.1rem rgba(0, 0, 0, 0.1);
+  }
+
+  @include laptop-specific {
+    &._active {
+      width: 60%;
+      right: 0;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+
+  @include desktop-specific {
+    &._active {
+      width: 40%;
+      right: 0;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+
+  @include wide {
+    &._active {
+      width: 25%;
+      right: 0;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+  @include phone {
+    width: 100%;
+    bottom: -50%;
+    left: 0;
+    right: 0;
+    max-width: 100vw;
+    &._active {
+      height: auto;
+      bottom: 0;
+      transition: all 0.5s ease-in-out;
+      box-shadow: 0px -0.01rem 4.4rem -0.1rem rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  @include tablet-specific {
+    width: 100%;
+    bottom: -50%;
+    left: 0;
+    right: 0;
+    max-width: 100vw;
+    overflow-y: auto;
+    box-shadow: 0px -0.01rem 4.4rem -0.1rem rgba(0, 0, 0, 0.2);
+
+    &._active {
+      bottom: 0;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}
+
+._night .Slide {
+  background: $colors--dark;
+
+  .exit * {
+    color: $colors--light !important;
+  }
+}

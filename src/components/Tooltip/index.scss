@@ -1,0 +1,64 @@
+.Tooltip {
+  position: relative;
+  appearance: none;
+  outline: none;
+  width: 100%;
+
+  .children {
+    background: $colors--light;
+    padding: $space--1;
+    border-radius: $borders--radius-b;
+    box-shadow: $borders--shadow-b;
+    border: $borders--primary;
+    box-sizing: border-box;
+    line-height: normal;
+    font-size: 1.4rem;
+    position: absolute;
+    top: $space--1 * 0.8;
+    max-width: 40rem;
+    min-width: 25rem;
+    left: 0;
+    width: fit-content;
+    cursor: pointer;
+    z-index: 4;
+    -webkit-overflow-scrolling: touch;
+
+    &._inactive {
+      display: none;
+    }
+    &.left {
+      left: 0;
+    }
+    &.right {
+      right: 0;
+    }
+
+    @include phone {
+      &.left-phone {
+        left: 0;
+      }
+      &.right-phone {
+        right: 0;
+      }
+    }
+    @include tablet-specific {
+      &.left-tablet {
+        left: 0;
+      }
+      &.right-tablet {
+        right: 0;
+      }
+    }
+  }
+}
+
+.Tooltip-trigger {
+  cursor: pointer;
+}
+
+._night .Tooltip {
+  .children {
+    background: $colors--alternate;
+    color: $colors--dark !important;
+  }
+}
