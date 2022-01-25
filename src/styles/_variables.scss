@@ -1,7 +1,7 @@
 /* Spacing */
 $space--base: 0.33rem;
-$space--1: $space--base * 2.5 !default;
-$space--2: $space--base * 5 !default;
+$space--1: $space--base * 3.33 !default;
+$space--2: $space--base * 6.66 !default;
 $space--3: $space--base * 10 !default;
 $space--4: $space--base * 15 !default;
 $space--5: $space--base * 25 !default;
@@ -21,14 +21,14 @@ $width--wide-a: 98% !default;
 $width--wide-b: 1800px !default;
 
 /* Type */
-$type--parent: 'Graphik', system-ui, -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif !default;
+$type--parent: 'Untitled Sans', system-ui, -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif !default;
 
 /* Colors */
 $colors--light: #ffffff;
 $colors--alternate: #e6f0f1;
 
 $colors--dark: #042c3f;
-$colors--night: #1d4457;
+$colors--night: #010813;
 $colors--red-text: #a54741;
 $colors--red-body: #f7e0e0;
 $colors--red-state: #f1caca;
@@ -58,7 +58,7 @@ $column--gutter-phone: $space--1 !default;
 
 $transitions--primary: all 0.15s ease-in-out !default;
 
-$borders--primary: 0.1rem solid rgb(222, 228, 233) !default;
+$borders--primary: 0.1rem solid rgba(67, 98, 122, 0.15) !default;
 $borders--night: 0.1rem solid rgba(215, 208, 255, 0.1) !default;
 $borders--radius-a: 0.5rem !default;
 $borders--radius-b: 0.75rem !default;

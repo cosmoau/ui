@@ -6,7 +6,7 @@ import { Button } from '../Button';
 
 export interface Props {
   className?: string;
-  style?: React.CSSProperties;
+  css?: Stitches.CSS;
   link: string;
 }
 
@@ -29,7 +29,7 @@ function Cookies({ className, style, link = '#' }: Props): JSX.Element {
         [`${className}`]: className,
       })}
       id='Cookies'
-      style={style}>
+      css={css}>
       <h5 className='inline-spacer'>
         🍪&nbsp;We use cookies inline with our{' '}
         <a className='border-bottom' href={link} target='_blank' rel='noreferrer'>

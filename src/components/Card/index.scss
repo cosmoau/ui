@@ -86,7 +86,7 @@
 }
 
 ._night .Card {
-  background-color: $colors--dark;
+  background-color: rgba($colors--light, 0.05);
   color: $colors--light;
 
   &._red {

@@ -1,23 +1,30 @@
+import type * as Stitches from '@stitches/react';
 import classNames from 'classnames';
 import React from 'react';
 
+import { styled, breakpoints } from '../../stitches.config';
+
 export interface Props {
   className?: string;
-  style?: React.CSSProperties;
-  base?: number;
-  micro?: number;
-  phone?: number;
-  tablet?: number;
-  laptop?: number;
-  desktop?: number;
-  wide?: number;
+  css?: Stitches.CSS;
+  id?: string;
+  css?: Stitches.CSS;
+  baseWidth?: number;
+  phoneWidth?: number;
+  tabletWidth?: number;
+  laptopWidth?: number;
+  desktopWidth?: number;
+  wideWidth?: number;
   offset?: number;
-  microOffset?: number;
+  baseOffset?: number;
   phoneOffset?: number;
   tabletOffset?: number;
   laptopOffset?: number;
   desktopOffset?: number;
   wideOffset?: number;
+  align?: 'left' | 'center' | 'right' | 'justify' | 'initial' | 'inherit';
+  top?: 1 | 2 | 3 | 4 | 5 | 6;
+  bottom?: 1 | 2 | 3 | 4 | 5 | 6;
   minimal?: boolean;
   children: React.ReactNode;
 }
@@ -25,46 +32,92 @@ export interface Props {
 export default function Column({
   className,
   style,
-  base = 100,
-  micro,
-  phone,
-  tablet,
-  laptop,
-  desktop,
-  wide,
-  offset = 0,
-  microOffset,
+  id,
+  css,
+  baseWidth = 100,
+  phoneWidth,
+  tabletWidth,
+  laptopWidth,
+  desktopWidth,
+  wideWidth,
+  baseOffset = 0,
   phoneOffset,
   tabletOffset,
   laptopOffset,
   desktopOffset,
   wideOffset,
+  align = 'left',
+  top,
+  bottom,
   minimal,
   children,
 }: Props): JSX.Element {
+  const ColumnWrapper = styled('div', {
+    margin: 'auto',
+    display: 'inline-block',
+    flex: '1 1 auto',
+    marginLeft: 0,
+    maxWidth: '100%',
+    width: '100%',
+    marginBottom: 0,
+    paddingLeft: '$3',
+    paddingRight: '$3',
+    paddingTop: top ? `$${top}` : 'inherit',
+    paddingBottom: bottom ? `$${bottom}` : 'inherit',
+    textAlign: align,
+
+    '&.minimal': {
+      paddingLeft: 0,
+      paddingRight: 0,
+    },
+
+    [breakpoints.phone]: {
+      maxWidth: phoneWidth ? `${phoneWidth}%` : `100%`,
+      flex: phoneWidth ? `0 0 ${phoneWidth}%` : `0 0 100%`,
+      marginLeft: phoneOffset ? `${phoneOffset}%` : 0,
+    },
+
+    [breakpoints.tabletX]: {
+      maxWidth: tabletWidth ? `${tabletWidth}%` : `${baseWidth}%`,
+      flex: tabletWidth ? `0 0 ${tabletWidth}%` : `0 0 ${baseWidth}%`,
+      marginLeft: tabletOffset ? `${tabletOffset}%` : `${baseOffset}%`,
+    },
+
+    [breakpoints.tablet]: {
+      maxWidth: `${baseWidth}%`,
+      flex: `0 0 ${baseWidth}%`,
+      marginLeft: `${baseOffset}%`,
+    },
+
+    [breakpoints.laptopX]: {
+      maxWidth: laptopWidth ? `${laptopWidth}%` : `${baseWidth}%`,
+      flex: laptopWidth ? `0 0 ${laptopWidth}%` : `0 0 ${baseWidth}%`,
+      marginLeft: laptopOffset ? `${laptopOffset}%` : `${baseOffset}%`,
+    },
+
+    [breakpoints.desktopX]: {
+      maxWidth: desktopWidth ? `${desktopWidth}%` : `${baseWidth}%`,
+      flex: desktopWidth ? `0 0 ${desktopWidth}%` : `0 0 ${baseWidth}%`,
+      marginLeft: desktopOffset ? `${desktopOffset}%` : `${baseOffset}%`,
+    },
+
+    [breakpoints.wide]: {
+      maxWidth: `${wideWidth}%`,
+      flex: `0 0 ${wideWidth}%`,
+      marginLeft: `${wideOffset}%`,
+    },
+  });
+
   return (
-    <div
+    <ColumnWrapper
       className={classNames('Column', {
         [`${className}`]: className,
-        [`size-${base}`]: base,
-        [`size-${micro}-micro`]: micro,
-        [`size-${phone}-phone`]: phone,
-        [`size-${tablet}-tablet`]: tablet,
-        [`size-${laptop}-laptop`]: laptop,
-        [`size-${desktop}-desktop`]: desktop,
-        [`size-${wide}-wide`]: wide,
-        [`offset-${offset}`]: offset,
-        [`offset-${microOffset}-micro`]: microOffset,
-        [`offset-${phoneOffset}-phone`]: phoneOffset,
-        [`offset-${tabletOffset}-tablet`]: tabletOffset,
-        [`offset-${laptopOffset}-laptop`]: laptopOffset,
-        [`offset-${desktopOffset}-desktop`]: desktopOffset,
-        [`offset-${wideOffset}-wide`]: wideOffset,
-        _minimal: minimal,
+        [`minimal`]: minimal,
       })}
-      style={style}
-    >
+      css={css}
+      id={id}
+      css={css}>
       {children}
-    </div>
+    </ColumnWrapper>
   );
 }

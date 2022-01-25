@@ -3,9 +3,9 @@ import React from 'react';
 
 export interface Props {
   className?: string;
-  style?: React.CSSProperties;
+  css?: Stitches.CSS;
   theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'dark';
-  isLoading?: boolean;
+  loader?: boolean;
   small?: boolean;
   border?: boolean;
   image?: React.ReactNode;
@@ -19,7 +19,7 @@ function Card({
   className,
   style,
   theme,
-  isLoading,
+  loader,
   small,
   border,
   image,
@@ -35,12 +35,12 @@ function Card({
         [`_${theme}`]: theme,
         _small: small,
         _border: border,
-        _disabled: isLoading,
+        _disabled: loader,
         _minimal: minimal,
         _shadow: shadow,
         _image: image,
       })}
-      style={style}>
+      css={css}>
       {image ? (
         <>
           <div className='image-container' style={{ height: imageHeight || '15rem' }}>

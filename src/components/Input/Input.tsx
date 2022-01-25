@@ -8,7 +8,7 @@ import { Loading } from '../Loading';
 
 export interface Props {
   className?: string;
-  style?: React.CSSProperties;
+  css?: Stitches.CSS;
   label?: string | boolean;
   placeholder?: string;
   size?: 'numeric' | 'small' | 'medium' | 'large' | 'full';
@@ -19,7 +19,7 @@ export interface Props {
   copy?: boolean;
   submit?: string;
   customSubmit?: React.ReactNode;
-  isLoading?: boolean;
+  loader?: boolean;
   error?: boolean;
   onRef?: RefObject<HTMLInputElement>;
   onChangeHandler?: any;
@@ -37,7 +37,7 @@ function Input({
   copy,
   placeholder,
   label,
-  isLoading,
+  loader,
   submit,
   customSubmit,
   onRef,
@@ -79,15 +79,13 @@ function Input({
       className={classNames('Input', {
         [`${className}`]: className,
       })}
-      style={style}
-    >
+      css={css}>
       {label && <label>{label}</label>}
 
       <div
         className={classNames('function-container', {
           _full: size === 'full',
-        })}
-      >
+        })}>
         <input
           className={classNames({
             [`_${size}`]: size,
@@ -100,8 +98,8 @@ function Input({
           onChange={(e) => handleInput(e.target.value)}
         />
 
-        {isLoading && (
-          <div className='function' key='isLoading'>
+        {loader && (
+          <div className='function' key='loader'>
             <Badge theme='navy'>
               <Loading width={18} />
             </Badge>
@@ -110,7 +108,7 @@ function Input({
         {reveal && (
           <div className='function' key='reveal'>
             <Button className={inputType === 'text' ? 'disabled' : ''} onClick={() => handleInputType()}>
-              <Eye weight='duotone' size={18} style={{ marginRight: '0.5rem' }} />
+              <Eye size={18} style={{ marginRight: '0.5rem' }} />
               Reveal
             </Button>
           </div>
@@ -119,9 +117,9 @@ function Input({
           <div className='function' key='copy'>
             <Button className={inputCopy === true ? 'disabled' : ''} onClick={() => handleInputCopy()}>
               {inputCopy === false ? (
-                <Copy weight='duotone' size={18} style={{ marginRight: '0.5rem' }} />
+                <Copy size={18} style={{ marginRight: '0.5rem' }} />
               ) : (
-                <CheckCircle weight='duotone' size={18} style={{ marginRight: '0.5rem' }} />
+                <CheckCircle size={18} style={{ marginRight: '0.5rem' }} />
               )}
               Copy
             </Button>
@@ -130,7 +128,7 @@ function Input({
         {error && (
           <div className='function' key='error'>
             <Badge theme='red'>
-              <WarningOctagon size={18} weight='duotone' />
+              <WarningOctagon size={18} />
             </Badge>
           </div>
         )}

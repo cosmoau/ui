@@ -14,7 +14,7 @@ interface Options {
 
 export interface Props {
   className?: string;
-  style?: React.CSSProperties;
+  css?: Stitches.CSS;
   options: Array<Options>;
   optionsKey: string;
   optionsLabel: string | React.ReactNode;
@@ -53,7 +53,7 @@ function Submenu({
       ref={ref}
       key={`${optionsKey}-A`}
       id={`${optionsKey}-A`}
-      style={style}>
+      css={css}>
       {visibility === '_inactive' ? (
         <div
           className={optionsTriggerClass}

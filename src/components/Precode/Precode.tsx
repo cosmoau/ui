@@ -6,7 +6,7 @@ import { Section } from '../Section';
 
 export interface Props {
   className?: string;
-  style?: React.CSSProperties;
+  css?: Stitches.CSS;
   label?: string;
   language?: string;
   children: React.ReactNode;
@@ -19,8 +19,7 @@ function Precode({ className, style, label, language, children }: Props): JSX.El
       className={classNames('Precode', {
         [`${className}`]: className,
       })}
-      style={style}
-    >
+      css={css}>
       {label && (
         <Section minimal>
           <Column base={60} phone={60}>

@@ -13,7 +13,7 @@ interface Options {
 
 export interface Props {
   className?: string;
-  style?: React.CSSProperties;
+  css?: Stitches.CSS;
   options: Array<Options>;
   optionsKey: string;
   optionsHandler: any;
@@ -55,7 +55,7 @@ function Dropdown({
       ref={ref}
       key={`${optionsKey}-A`}
       id={optionsKey}
-      style={style}>
+      css={css}>
       {visibility === '_inactive' ? (
         <div
           onClickCapture={(e) => {
@@ -63,7 +63,7 @@ function Dropdown({
             setVisibility('_active');
           }}
           key={`${optionsKey}-B`}>
-          <Button isLoading={!optionsLabel}>{optionsLabel}</Button>
+          <Button loader={!optionsLabel}>{optionsLabel}</Button>
         </div>
       ) : (
         <div
@@ -72,7 +72,7 @@ function Dropdown({
             setVisibility('_inactive');
           }}
           key={`${optionsKey}-C`}>
-          <Button isLoading={!optionsLabel} theme='navy'>
+          <Button loader={!optionsLabel} theme='navy'>
             {optionsLabel}
           </Button>
         </div>
@@ -90,12 +90,7 @@ function Dropdown({
             key={option.value}>
             {optionsLabel === option.name ? (
               <div className='_selected'>
-                <Circle
-                  size={16}
-                  color='#3aa8b3'
-                  weight='duotone'
-                  style={{ marginTop: '-0.3rem', marginRight: '0.2rem' }}
-                />
+                <Circle size={16} color='#3aa8b3' style={{ marginTop: '-0.3rem', marginRight: '0.2rem' }} />
                 &nbsp;{option.name}
               </div>
             ) : (

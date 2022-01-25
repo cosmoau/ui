@@ -5,9 +5,9 @@ import { Loading } from '../Loading';
 
 export interface Props {
   className?: string;
-  style?: React.CSSProperties;
+  css?: Stitches.CSS;
   theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'dark' | 'light';
-  isLoading?: boolean;
+  loader?: boolean;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   large?: boolean;
   transparent?: boolean;
@@ -20,7 +20,7 @@ function Button({
   className,
   style,
   theme,
-  isLoading,
+  loader,
   onClick,
   large,
   transparent,
@@ -38,10 +38,10 @@ function Button({
         _conceal: conceal,
         _bolded: bolded,
       })}
-      disabled={isLoading}
+      disabled={loader}
       onClick={onClick}
-      style={style}>
-      {isLoading ? <Loading /> : children}
+      css={css}>
+      {loader ? <Loading /> : children}
     </button>
   );
 }

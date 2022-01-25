@@ -5,7 +5,7 @@ import { Outsider } from '../Outsider';
 
 export interface Props {
   className?: string;
-  style?: React.CSSProperties;
+  css?: Stitches.CSS;
   triggerActive: React.ReactNode | string;
   triggerInactive?: React.ReactNode | string;
   triggerKey: string | number;
@@ -69,7 +69,7 @@ function Tooltip({
         })}
         ref={ref}
         key={triggerKey}
-        style={style}>
+        css={css}>
         {visibility === '_active' ? (
           <div
             className='children'

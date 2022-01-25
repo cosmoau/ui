@@ -10,6 +10,7 @@ export interface Props {
   passHref?: boolean;
   children: React.ReactNode;
 }
+
 function ActiveLink({ href, activeClassName, defaultClassName = '_inactive', passHref, children }: Props): JSX.Element {
   const router = useRouter();
   const path = (router && router.pathname) || '/';

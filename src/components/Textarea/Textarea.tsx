@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 export interface Props {
   className?: string;
-  style?: React.CSSProperties;
+  css?: Stitches.CSS;
   label?: string | React.ReactNode;
   placeholder?: string;
   rows?: number;
@@ -34,16 +34,14 @@ function Textarea({
       className={classNames('Textarea', {
         [`${className}`]: className,
       })}
-      style={style}
-    >
+      css={css}>
       {label && <label>{label}</label>}
       <textarea
         rows={rows}
         cols={columns}
         placeholder={placeholder || undefined}
         maxLength={maxLength}
-        onChange={(e) => handleInput(e.target.value.length)}
-      ></textarea>
+        onChange={(e) => handleInput(e.target.value.length)}></textarea>
       <p>
         {inputValue}/{maxLength}
       </p>

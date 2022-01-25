@@ -21,6 +21,7 @@
   "devDependencies": {
     "@cosmo-au/eslint-config-cosmo": "^1.1.0",
     "@parcel/transformer-sass": "^2.2.1",
+    "@stitches/react": "^1.2.6",
     "@types/react": "^17.0.38",
     "classnames": "^2.3.1",
     "eslint": "^8.7.0",
@@ -46,7 +47,6 @@
   "peerDependencies": {
     "next": ">=12",
     "nookies": ">=2.0.0",
-    "phosphor-react": ">=1.3.0",
     "react": ">=16"
   },
   "prettier": "@cosmo-au/eslint-config-cosmo/.prettierrc.json",
@@ -58,15 +58,10 @@
     "dev": "microbundle watch  --jsx React.createElement",
     "lint": "eslint src --ext .tsx",
     "test:dev": "parcel test/index.html",
-    "test:build": "parcel build test/index.html",
     "release:patch": "standard-version --type patch",
     "release:minor": "standard-version --type minor",
     "release:major": "standard-version --type major"
   },
   "source": "src/index.tsx",
-  "types": "dist/index.d.ts",
-  "dependencies": {
-    "@radix-ui/react-accordion": "^0.1.5",
-    "@radix-ui/react-popover": "0.1.4"
-  }
+  "types": "dist/index.d.ts"
 }

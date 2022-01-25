@@ -8,7 +8,7 @@ import { Section } from '../Section';
 
 export interface Props {
   className?: string;
-  style?: React.CSSProperties;
+  css?: Stitches.CSS;
   triggerActive: React.ReactNode | string;
   triggerInactive?: React.ReactNode | string;
   triggerKey: string | number;
@@ -66,11 +66,11 @@ function Slide({
         })}
         ref={ref}
         key={triggerKey}
-        style={style}>
+        css={css}>
         {visibility === '_active' ? (
           <>
             <div className='exit' onClick={() => setVisibility('_inactive')} key={`${triggerKey}-D`}>
-              <X size={22} weight='duotone' />
+              <X size={22} />
             </div>
             <Section className='padding-top-3 padding-bottom-3'>
               <Column>{children}</Column>

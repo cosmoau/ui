@@ -21,7 +21,7 @@ function Percentages({ newNumber, previousNumber, percentageDollar, financial, i
     <>
       <Badge theme={!inverse ? 'yellow' : 'green'}>
         <span className='hidden-phone hidden-tablet'>
-          <TrendDown size={16} weight='duotone' />
+          <TrendDown size={16} />
           &nbsp;
         </span>
         {percentage}%
@@ -38,7 +38,7 @@ function Percentages({ newNumber, previousNumber, percentageDollar, financial, i
     <>
       <Badge theme='navy'>
         <span className='hidden-phone hidden-tablet'>
-          <TrendDown size={16} weight='duotone' />
+          <TrendDown size={16} />
           &nbsp;
         </span>
         -100%
@@ -55,7 +55,7 @@ function Percentages({ newNumber, previousNumber, percentageDollar, financial, i
     <>
       <Badge theme={!inverse ? 'green' : 'yellow'}>
         <span className='hidden-phone hidden-tablet'>
-          <TrendUp size={16} weight='duotone' />
+          <TrendUp size={16} />
           &nbsp;
         </span>
         {percentage}%
@@ -72,7 +72,7 @@ function Percentages({ newNumber, previousNumber, percentageDollar, financial, i
     <>
       <Badge theme='navy'>
         <span className='hidden-phone hidden-tablet'>
-          <TrendUp size={16} weight='duotone' />
+          <TrendUp size={16} />
           &nbsp;
         </span>
         100%

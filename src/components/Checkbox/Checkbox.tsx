@@ -6,7 +6,7 @@ import { Button } from '../Button';
 
 export interface Props {
   className?: string;
-  style?: React.CSSProperties;
+  css?: Stitches.CSS;
   children: React.ReactNode;
 }
 
@@ -27,7 +27,7 @@ function Checkbox({ className, style, children }: Props): JSX.Element {
       })}
       onClick={() => handleCheckedValue()}
       key={Math.random()}
-      style={style}>
+      css={css}>
       <Button>{checkedValue === false ? <Circle color='rgba(0,0,0,0.033)' /> : <Check />}</Button>
       <label>
         <div className='inline'>{children}</div>

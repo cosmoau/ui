@@ -1,15 +1,16 @@
+import type * as Stitches from '@stitches/react';
 import classNames from 'classnames';
 import React, { useRef, useState } from 'react';
 
+import { breakpoints, styled } from '../../stitches.config';
 import { Button } from '../Button';
 import { Card } from '../Card';
-import { Column } from '../Column';
 import { Outsider } from '../Outsider';
-import { Section } from '../Section';
 
 export interface Props {
   className?: string;
-  style?: React.CSSProperties;
+  css?: Stitches.CSS;
+  id?: string;
   trigger: React.ReactNode | string;
   title: React.ReactNode | string;
   description: React.ReactNode | string;
@@ -17,66 +18,96 @@ export interface Props {
   action: React.ReactNode;
 }
 
-function Alert({ className, style, trigger, title, description, cancel, action }: Props): JSX.Element {
+function Alert({ className, css, id, trigger, title, description, cancel, action }: Props): JSX.Element {
   const ref = useRef(null);
 
-  const [visibility, setVisibility] = useState('_inactive');
+  const [visibility, setVisibility] = useState(false);
 
-  function handler(): void {
-    if (visibility === '_inactive') {
-      setVisibility('_active');
-    } else {
-      setVisibility('_inactive');
-    }
-  }
+  Outsider(ref, () => {
+    setVisibility(false);
+  });
 
-  Outsider(ref, handler);
+  const AlertTrigger = styled('div', {
+    display: 'inherit',
+  });
+
+  const AlertWrapper = styled('div', {
+    position: 'fixed',
+    transition: '$1',
+    zIndex: '$zIndexAlert',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0,0,0,0.1)',
+    width: '100%',
+    scrollBehavior: 'smooth',
+    overscrollBehavior: 'contain',
+  });
+
+  const AlertCard = styled('div', {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: '90vw',
+    maxWidth: '50rem',
+    maxHeight: '90vh',
+
+    [breakpoints.phone]: {
+      width: '95%',
+      maxWidth: '95%',
+    },
+  });
+
+  const AlertCardTriggers = styled('div', {
+    paddingTop: '$3',
+    textAlign: 'right',
+  });
+
+  const AlertCardActionTrigger = styled('div', {
+    display: 'inline-block',
+  });
+
   return (
     <>
-      <div
+      <AlertTrigger
         onClickCapture={(e) => {
           e.persist();
-          handler();
+          setVisibility(true);
         }}>
         {trigger}
-      </div>
-      <div
-        className={classNames('Alert', {
-          [`${className}`]: className,
-          [`${visibility}`]: visibility,
-        })}
-        style={style}>
-        {visibility === '_active' ? (
-          <div ref={ref}>
-            <style jsx>{`
-              body {
-                overflow: hidden;
-                height: 100vh;
-              }
-            `}</style>
-            <Card className='content'>
-              <div className='bottom-2'>
-                <Section minimal>
-                  <Column>
-                    <h3>{title}</h3>
-                    <h6>{description}</h6>
-                  </Column>
-                </Section>
-              </div>
-              <Section minimal className='right'>
-                <Column>
-                  <Button theme='navy' className='inline-spacer' onClick={handler}>
-                    {cancel}
-                  </Button>
-                  <div className='inline' onClick={handler}>
-                    {action}
-                  </div>
-                </Column>
-              </Section>
+      </AlertTrigger>
+      {visibility && (
+        <AlertWrapper
+          className={classNames({
+            [`${className}`]: className,
+          })}
+          id={id}>
+          <AlertCard ref={ref} css={css}>
+            <Card>
+              <h3>{title}</h3>
+              <h6>{description}</h6>
+              <AlertCardTriggers>
+                <Button
+                  onClick={(e) => {
+                    e.persist();
+                    setVisibility(false);
+                  }}>
+                  {cancel}
+                </Button>
+                <AlertCardActionTrigger
+                  onClickCapture={(e) => {
+                    e.persist();
+                    setVisibility(false);
+                  }}>
+                  {action}
+                </AlertCardActionTrigger>
+              </AlertCardTriggers>
             </Card>
-          </div>
-        ) : null}
-      </div>
+          </AlertCard>
+        </AlertWrapper>
+      )}
     </>
   );
 }
