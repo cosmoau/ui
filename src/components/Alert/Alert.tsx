@@ -6,6 +6,7 @@ import { breakpoints, styled } from '../../stitches.config';
 import { Button } from '../Button';
 import { Card } from '../Card';
 import { Outsider } from '../Outsider';
+import { Heading } from '../Typography';
 
 export interface Props {
   className?: string;
@@ -28,7 +29,7 @@ function Alert({ className, css, id, trigger, title, description, cancel, action
   });
 
   const AlertTrigger = styled('div', {
-    display: 'inherit',
+    display: 'inline-flex',
   });
 
   const AlertWrapper = styled('div', {
@@ -86,13 +87,16 @@ function Alert({ className, css, id, trigger, title, description, cancel, action
           id={id}>
           <AlertCard ref={ref} css={css}>
             <Card>
-              <h3>{title}</h3>
-              <h6>{description}</h6>
+              <Heading level={3}>{title}</Heading>
+              <Heading level={6}>{description}</Heading>
               <AlertCardTriggers>
                 <Button
                   onClick={(e) => {
                     e.persist();
                     setVisibility(false);
+                  }}
+                  css={{
+                    mr: '$2',
                   }}>
                   {cancel}
                 </Button>

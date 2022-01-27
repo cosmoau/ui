@@ -1,45 +1,149 @@
+import type * as Stitches from '@stitches/react';
+import { keyframes } from '@stitches/react';
 import classNames from 'classnames';
 import { Circle } from 'phosphor-react';
 import React from 'react';
 
+import { styled } from '../../stitches.config';
 import { Loading } from '../Loading';
 
 export interface Props {
   className?: string;
   css?: Stitches.CSS;
-  theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'dark';
+  id?: string;
+  theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'border';
   loader?: boolean;
   shadow?: boolean;
   dot?: boolean | 'pulse';
+  dotColor?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink';
   children: React.ReactNode;
 }
 
-function Badge({ className, style, theme, loader, shadow, dot, children }: Props): JSX.Element {
+function Badge({ className, css, id, theme, loader, shadow, dot, dotColor, children }: Props): JSX.Element {
+  const BadgeWrapper = styled('div', {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'relative',
+    transition: '$1',
+    paddingTop: '$1',
+    paddingBottom: '$1',
+    paddingLeft: '$2',
+    paddingRight: '$2',
+    borderRadius: '$3',
+    fontSize: '1.55rem',
+    lineHeight: '1.5rem',
+    backgroundColor:
+      theme === 'red'
+        ? '$red300'
+        : theme === 'yellow'
+        ? '$yellow300'
+        : theme === 'green'
+        ? '$green300'
+        : theme === 'blue'
+        ? '$blue300'
+        : theme === 'navy'
+        ? '$navy300'
+        : theme === 'purple'
+        ? '$purple300'
+        : theme === 'pink'
+        ? '$pink300'
+        : '$light100',
+    color:
+      theme === 'red'
+        ? '$red100'
+        : theme === 'yellow'
+        ? '$yellow100'
+        : theme === 'green'
+        ? '$green100'
+        : theme === 'blue'
+        ? '$blue100'
+        : theme === 'navy'
+        ? '$navy100'
+        : theme === 'purple'
+        ? '$purple100'
+        : theme === 'pink'
+        ? '$pink100'
+        : '$dark100',
+    border: `0.1rem solid ${theme === 'border' ? '$dark300' : 'transparent'}`,
+    boxShadow: shadow ? '$1' : 'none',
+    '&:disabled': {
+      opacity: 0.5,
+      cursor: 'wait',
+    },
+  });
+
+  const pulseAnimation = keyframes({
+    '0%': {
+      opacity: 0.5,
+      transform: 'scale(0.95)',
+    },
+    '50%': {
+      opacity: 1,
+      transform: 'scale(1)',
+    },
+    '100%': {
+      opacity: 0.5,
+      transform: 'scale(0.95)',
+    },
+  });
+
+  const BadgeLoaderWrapper = styled('div', {
+    height: '2.5rem',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: '$3',
+  });
+
+  const BadgeDotWrapper = styled('div', {
+    color: `${
+      dotColor === 'red'
+        ? '$red100'
+        : dotColor === 'yellow'
+        ? '$yellow100'
+        : dotColor === 'green'
+        ? '$green100'
+        : dotColor === 'blue'
+        ? '$blue100'
+        : dotColor === 'navy'
+        ? '$navy100'
+        : dotColor === 'purple'
+        ? '$purple100'
+        : dotColor === 'pink'
+        ? '$pink100'
+        : 'inherit'
+    }`,
+  });
+
+  const BadgePulseWrapper = styled('div', {
+    animation: `${pulseAnimation} 1.5s infinite`,
+  });
+
   return (
-    <div
-      className={classNames('Badge', {
-        [`${className}`]: className,
-        [`_${theme}`]: theme,
-        _shadow: shadow,
-        _disabled: loader,
-      })}
-      css={css}>
+    <BadgeWrapper className={classNames(className)} css={css} id={id}>
       {loader ? (
-        <Loading width={13} />
+        <BadgeLoaderWrapper>
+          <Loading />
+        </BadgeLoaderWrapper>
       ) : (
         <>
-          {dot &&
-            (dot === 'pulse' ? (
-              <div className='pulse'>
+          {dot && (
+            <BadgeDotWrapper>
+              {dot === 'pulse' ? (
+                <BadgePulseWrapper>
+                  <Circle weight='fill' size={10} style={{ marginRight: 3.33 }} />
+                </BadgePulseWrapper>
+              ) : (
                 <Circle weight='fill' size={10} style={{ marginRight: 3.33 }} />
-              </div>
-            ) : (
-              <Circle weight='fill' size={10} style={{ marginRight: 3.33 }} />
-            ))}
+              )}
+            </BadgeDotWrapper>
+          )}
           {children}
         </>
       )}
-    </div>
+    </BadgeWrapper>
   );
 }
+
 export default Badge;

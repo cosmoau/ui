@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 import { styled } from '../../stitches.config';
 import { Column } from '../Column';
 import { Section } from '../Section';
+import { Heading } from '../Typography';
 
 interface Options {
   id: number;
@@ -23,6 +24,14 @@ export interface Props {
 function Accordion({ className, css, options, active = false }: Props): JSX.Element {
   const [activeId, setActiveId] = useState(active);
 
+  const handleClick = (id: number) => {
+    if (id === activeId) {
+      setActiveId(false);
+    } else {
+      setActiveId(id);
+    }
+  };
+
   const AccordionWrapper = styled('div', {
     width: '100%',
 
@@ -32,63 +41,51 @@ function Accordion({ className, css, options, active = false }: Props): JSX.Elem
   });
 
   const AccordionItem = styled('div', {
-    paddingTop: '$2',
-    paddingBottom: '$2',
-    transition: 'all 0.2s ease-in-out',
-    borderBottom: '0.1rem solid $navy200',
-    '&:first-of-type': {
+    display: 'block',
+    cursor: 'pointer',
+    paddingTop: '$1',
+
+    '&:first-child': {
       paddingTop: 0,
-    },
-    '&:last-of-type': {
-      borderBottom: 0,
-      paddingBottom: 0,
     },
   });
 
   const AccordionContent = styled('div', {
-    overflow: 'hidden',
+    transition: '$1',
     maxHeight: 0,
-    transition: 'max-height 0.2s ease-in-out',
+    overflow: 'hidden',
 
-    '&.active': {
-      maxHeight: '$5',
+    ['&.active']: {
+      maxHeight: '100%',
+      transition: '$1',
+      bt: '$navy300',
+      mt: '$1',
+      ptb: 'calc($1 / 2)',
     },
   });
 
   return (
-    <AccordionWrapper
-      className={classNames('Accordion', {
-        [`${className}`]: className,
-      })}
-      css={css}>
-      {options.map((option) => (
-        <AccordionItem
-          key={option.id}
-          onClick={() => {
-            if (activeId === option.id) {
-              setActiveId(false);
-            } else {
-              setActiveId(option.id);
-            }
-          }}>
+    <AccordionWrapper className={classNames({ className })} css={css}>
+      {options.map(({ id, heading, content }) => (
+        <AccordionItem key={id} onClick={() => handleClick(id)}>
           <Section alignment='center'>
             <Column minimal baseWidth={80} phoneWidth={80}>
-              <h3>{option.heading}</h3>
+              <Heading
+                level={3}
+                css={{
+                  userSelect: 'none',
+                }}>
+                {heading}
+              </Heading>
             </Column>
-            <Column
-              minimal
-              baseWidth={20}
-              phoneWidth={20}
-              css={{
-                textAlign: 'right',
-              }}>
-              {activeId === option.id ? <CaretUp size={20} /> : <CaretDown size={20} />}
+            <Column minimal baseWidth={20} phoneWidth={20} align='right'>
+              {activeId === id ? <CaretUp /> : <CaretDown />}
             </Column>
           </Section>
-          <AccordionContent className={activeId === option.id ? 'active' : ''}>
+          <AccordionContent className={activeId === id ? 'active' : ''}>
             <Section>
               <Column minimal>
-                <h6>{option.content}</h6>
+                <Heading level={6}>{content}</Heading>
               </Column>
             </Section>
           </AccordionContent>

@@ -8,7 +8,6 @@ export interface Props {
   className?: string;
   css?: Stitches.CSS;
   id?: string;
-  css?: Stitches.CSS;
   baseWidth?: number;
   phoneWidth?: number;
   tabletWidth?: number;
@@ -31,7 +30,6 @@ export interface Props {
 
 export default function Column({
   className,
-  style,
   id,
   css,
   baseWidth = 100,
@@ -60,16 +58,11 @@ export default function Column({
     maxWidth: '100%',
     width: '100%',
     marginBottom: 0,
-    paddingLeft: '$3',
-    paddingRight: '$3',
+    paddingLeft: minimal ? 0 : '$3',
+    paddingRight: minimal ? 0 : '$3',
     paddingTop: top ? `$${top}` : 'inherit',
     paddingBottom: bottom ? `$${bottom}` : 'inherit',
     textAlign: align,
-
-    '&.minimal': {
-      paddingLeft: 0,
-      paddingRight: 0,
-    },
 
     [breakpoints.phone]: {
       maxWidth: phoneWidth ? `${phoneWidth}%` : `100%`,
@@ -109,14 +102,7 @@ export default function Column({
   });
 
   return (
-    <ColumnWrapper
-      className={classNames('Column', {
-        [`${className}`]: className,
-        [`minimal`]: minimal,
-      })}
-      css={css}
-      id={id}
-      css={css}>
+    <ColumnWrapper className={classNames({ className })} css={css} id={id}>
       {children}
     </ColumnWrapper>
   );
