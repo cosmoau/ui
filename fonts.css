@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('public/webfonts/subset-UntitledSans-Medium.eot');
+  src: local('Untitled Sans Medium'), local('UntitledSans-Medium'),
+    url('public/webfonts/subset-UntitledSans-Medium.eot?#iefix') format('embedded-opentype'),
+    url('public/webfonts/subset-UntitledSans-Medium.woff2') format('woff2'),
+    url('public/webfonts/subset-UntitledSans-Medium.woff') format('woff'),
+    url('public/webfonts/subset-UntitledSans-Medium.ttf') format('truetype'),
+    url('public/webfonts/subset-UntitledSans-Medium.svg#UntitledSans-Medium') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('public/webfonts/subset-UntitledSans-Regular.eot');
+  src: local('Untitled Sans Regular'), local('UntitledSans-Regular'),
+    url('public/webfonts/subset-UntitledSans-Regular.eot?#iefix') format('embedded-opentype'),
+    url('public/webfonts/subset-UntitledSans-Regular.woff2') format('woff2'),
+    url('public/webfonts/subset-UntitledSans-Regular.woff') format('woff'),
+    url('public/webfonts/subset-UntitledSans-Regular.ttf') format('truetype'),
+    url('public/webfonts/subset-UntitledSans-Regular.svg#UntitledSans-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

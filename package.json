@@ -1,5 +1,5 @@
 {
-  "name": "@cosmo-au/ui",
+  "name": "@cosmo-au/design-system",
   "description": "Foundational styles and components for Cosmo projects.",
   "version": "0.0.1",
   "author": "Jackson Dolman <jackson@cosmogroup.io>",
@@ -16,51 +16,70 @@
     ]
   },
   "bugs": {
-    "url": "https://github.com/cosmo-au/ui/issues"
+    "url": "https://github.com/cosmo-au/design-system/issues"
   },
   "devDependencies": {
     "@cosmo-au/eslint-config-cosmo": "^1.1.0",
     "@parcel/transformer-sass": "^2.2.1",
     "@stitches/react": "^1.2.6",
+    "@types/numeral": "^2.0.2",
     "@types/react": "^17.0.38",
     "classnames": "^2.3.1",
     "eslint": "^8.7.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "js-confetti": "^0.10.2",
     "microbundle": "^0.14.2",
     "next": "^12.0.8",
+    "next-themes": "^0.0.15",
     "nookies": "^2.5.2",
+    "np": "^7.6.0",
+    "numeral": "^2.0.6",
     "parcel": "^2.2.1",
     "phosphor-react": "^1.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "sass": "^1.49.0",
-    "standard-version": "^9.3.2",
-    "typescript": "^4.5.4"
+    "typescript": "^4.5.4",
+    "usehooks-ts": "^2.2.2"
   },
   "files": [
     "dist",
     "src"
   ],
-  "homepage": "https://ui.cosmogroup.io",
+  "homepage": "https://design.cosmogroup.io",
+  "keywords": [
+    "component",
+    "components",
+    "cosmo",
+    "design",
+    "framework",
+    "frontend",
+    "next",
+    "nextjs",
+    "react",
+    "react-component",
+    "stitches",
+    "stitches-react",
+    "ui",
+    "user interface"
+  ],
   "license": "MIT",
   "main": "dist/index.umd.js",
   "module": "dist/index.modern.module.js",
   "peerDependencies": {
-    "next": ">=12",
-    "nookies": ">=2.0.0",
-    "react": ">=16"
+    "next": ">=12.0.5",
+    "react": ">=17.0.0"
   },
   "prettier": "@cosmo-au/eslint-config-cosmo/.prettierrc.json",
   "private": false,
-  "repository": "https://github.com/cosmo-au/ui/",
+  "repository": "https://github.com/cosmo-au/design-system",
   "scripts": {
-    "build": "microbundle  --jsx React.createElement",
+    "build": "microbundle --compress --jsx React.createElement",
     "clean": "prettier --write '**/*.{js,css,scss}' '!node_modules/**' '!.git/**' '!dist/**'",
     "dev": "microbundle watch  --jsx React.createElement",
     "lint": "eslint src --ext .tsx",
-    "test:dev": "parcel test/index.html",
-    "release:patch": "standard-version --type patch",
-    "release:minor": "standard-version --type minor",
-    "release:major": "standard-version --type major"
+    "release": "np",
+    "test:dev": "parcel test/index.html"
   },
   "source": "src/index.tsx",
   "types": "dist/index.d.ts"

@@ -1,151 +1,243 @@
-import classNames from 'classnames';
-import { CheckCircle, Copy, Eye, WarningOctagon } from 'phosphor-react';
-import React, { RefObject, useState } from 'react';
+/* eslint-disable no-duplicate-imports */
+import type * as Stitches from '@stitches/react';
+import type { $$StyledComponentProps } from '@stitches/react/types/styled-component';
+import { Check, Clipboard, Eye, EyeClosed, WarningOctagon, X } from 'phosphor-react';
+import type { ChangeEvent, FC, InputHTMLAttributes } from 'react';
+import React, { useState } from 'react';
 
+import { styled } from '../../Theme';
 import { Badge } from '../Badge';
 import { Button } from '../Button';
 import { Loading } from '../Loading';
 
-export interface Props {
-  className?: string;
-  css?: Stitches.CSS;
-  label?: string | boolean;
-  placeholder?: string;
-  size?: 'numeric' | 'small' | 'medium' | 'large' | 'full';
-  type?: string;
-  min?: number;
-  max?: number;
-  reveal?: boolean;
-  copy?: boolean;
-  submit?: string;
-  customSubmit?: React.ReactNode;
-  loader?: boolean;
-  error?: boolean;
-  onRef?: RefObject<HTMLInputElement>;
-  onChangeHandler?: any;
-  onSubmitHandler?: any;
-}
+const InputContainerWrapper = styled('div', {
+  width: 'auto',
+  display: 'inline-flex',
+  alignItems: 'center',
+  height: '100%',
+  position: 'relative',
+  borderRadius: '$2',
+  backgroundColor: '$baseContrast100',
+  border: '0.1rem solid $navy200',
+  paddingTop: 'calc($2 * 0.6)',
+  paddingBottom: 'calc($2 * 0.6)',
+  paddingLeft: '$2',
+  paddingRight: '$2',
+  boxShadow: '$1',
+  userSelect: 'noe',
+  transition: '$1',
+  '&:hover': {
+    boxShadow: '$2',
+    border: '0.1rem solid $navy200',
+  },
+  '&:focus-within': {
+    boxShadow: '$2',
+    border: '0.1rem solid $navy200',
+  },
+  '&:active': {
+    boxShadow: '$2',
+    border: '0.1rem solid $navy200',
+  },
 
-function Input({
-  className,
-  style,
-  size,
-  reveal,
+  '&:disabled': {
+    cursor: 'not-allowed',
+    opacity: 0.5,
+  },
+});
+
+const InputIconWrapper = styled('div', {
+  display: 'inline-flex',
+  alignItems: 'center',
+  width: 'auto',
+  marginRight: '$2',
+  height: '100%',
+  position: 'relative',
+  verticalAlign: 'middle',
+});
+
+const InputWrapper = styled('input', {
+  appearance: 'none',
+  display: 'inline-flex',
+  fontSize: '16px',
+  fontFamily: '$untitled',
+  margin: 0,
+  outline: 'none',
+  padding: 0,
+  WebkitTapHighlightColor: 'rgba(0,0,0,0)',
+  height: '100%',
+  border: 0,
+  backgroundColor: 'transparent',
+  color: '$base100',
+  lineHeight: '1.5',
+  fontWeight: '$1',
+  textAlign: 'left',
+  transition: '$1',
+  boxSizing: 'border-box',
+  alignItems: 'center',
+  verticalAlign: 'middle',
+  width: '100%',
+  '&:focus': {
+    outline: 0,
+  },
+  variants: {
+    width: {
+      1: {
+        width: '12rem',
+      },
+      2: {
+        width: '18rem',
+      },
+      3: {
+        width: '26rem',
+      },
+      4: {
+        width: '34rem',
+      },
+      5: {
+        width: '100%',
+      },
+    },
+  },
+});
+
+const InputFunctionWrapper = styled('div', {
+  display: 'inline-flex',
+  alignItems: 'center',
+  width: 'auto',
+  height: '100%',
+  position: 'relative',
+  verticalAlign: 'middle',
+
+  '*': {
+    verticalAlign: 'middle',
+    lineHeight: '1',
+  },
+  button: {
+    marginLeft: '$1',
+  },
+});
+
+type Props = InputHTMLAttributes<HTMLInputElement> &
+  typeof InputWrapper[$$StyledComponentProps] & {
+    css: Stitches.CSS;
+    size?: 'numeric' | 'small' | 'medium' | 'large' | 'full';
+    icon?: React.ReactNode;
+    copy?: boolean;
+    reset?: boolean;
+    reveal?: boolean;
+    loader?: boolean;
+    error?: boolean;
+    submit?: boolean | string;
+    customSubmit?: boolean;
+    onChange?: any;
+    onSubmit?: any;
+  };
+
+const Input: FC<Props> = ({
+  css,
+  value = '',
   type = 'text',
-  min,
-  max,
-  copy,
-  placeholder,
-  label,
-  loader,
-  submit,
-  customSubmit,
-  onRef,
-  onChangeHandler,
-  onSubmitHandler,
-  error,
-}: Props): JSX.Element {
-  const [inputValue, setInputValue] = useState('');
-  const [inputType, setInputType] = useState(type);
-  const [inputCopy, setInputCopy] = useState(false);
+  size = 'medium',
+  icon,
+  copy = false,
+  reset = false,
+  reveal = false,
+  loader = false,
+  error = false,
+  submit = false,
+  customSubmit = false,
+  onChange,
+  onSubmit,
+  ...props
+}) => {
+  const [controlledValue, setControlledValue] = useState(value as any);
+  const [controlledType, setControlledType] = useState(type as any);
+  const [isRevealed, setIsRevealed] = useState(false);
+  const [isCopied, setIsCopied] = useState(false);
 
-  async function handleInput(value: any): Promise<void> {
-    if (onChangeHandler) {
-      onChangeHandler(value);
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setControlledValue(e.target.value);
+    if (onChange) {
+      onChange(e);
     }
-    setInputValue(value);
-  }
+  };
 
-  async function handleSubmit(value: any): Promise<void> {
-    onSubmitHandler(value);
-  }
-  function handleInputType(): void {
-    if (inputType === 'text') {
-      setInputType('password');
+  const handleReveal = () => {
+    if (controlledType === 'password') {
+      setIsRevealed(true);
+      setControlledType('text');
     } else {
-      setInputType('text');
+      setIsRevealed(false);
+      setControlledType('password');
     }
-  }
-  async function handleInputCopy(): Promise<void> {
-    try {
-      await navigator.clipboard.writeText(inputValue);
-      setInputCopy(true);
-    } catch (err) {
-      setInputCopy(false);
+  };
+
+  const handleCopy = (): void => {
+    navigator.clipboard.writeText(controlledValue);
+    setIsCopied(true);
+    setTimeout(() => {
+      setIsCopied(false);
+    }, 2000);
+  };
+
+  const handleReset = () => {
+    setControlledValue('');
+  };
+
+  const handleSubmit = (): void => {
+    if (onSubmit) {
+      onSubmit(controlledValue);
     }
-  }
+  };
   return (
-    <div
-      className={classNames('Input', {
-        [`${className}`]: className,
-      })}
-      css={css}>
-      {label && <label>{label}</label>}
-
-      <div
-        className={classNames('function-container', {
-          _full: size === 'full',
-        })}>
-        <input
-          className={classNames({
-            [`_${size}`]: size,
-          })}
-          type={inputType}
-          min={inputType === 'number' ? min : undefined}
-          max={inputType === 'number' ? max : undefined}
-          placeholder={placeholder || undefined}
-          ref={onRef}
-          onChange={(e) => handleInput(e.target.value)}
+    <>
+      <InputContainerWrapper css={css}>
+        {icon && <InputIconWrapper>{icon}</InputIconWrapper>}
+        <InputWrapper
+          width={
+            size === 'numeric' ? '1' : size === 'small' ? '2' : size === 'medium' ? '3' : size === 'large' ? '4' : '5'
+          }
+          type={controlledType}
+          value={controlledValue}
+          onChange={handleChange}
+          {...props}
         />
-
-        {loader && (
-          <div className='function' key='loader'>
-            <Badge theme='navy'>
-              <Loading width={18} />
+        <InputFunctionWrapper>
+          {loader && (
+            <Badge theme='navy' dot='pulse'>
+              <Loading />
             </Badge>
-          </div>
-        )}
-        {reveal && (
-          <div className='function' key='reveal'>
-            <Button className={inputType === 'text' ? 'disabled' : ''} onClick={() => handleInputType()}>
-              <Eye size={18} style={{ marginRight: '0.5rem' }} />
-              Reveal
-            </Button>
-          </div>
-        )}
-        {copy && (
-          <div className='function' key='copy'>
-            <Button className={inputCopy === true ? 'disabled' : ''} onClick={() => handleInputCopy()}>
-              {inputCopy === false ? (
-                <Copy size={18} style={{ marginRight: '0.5rem' }} />
-              ) : (
-                <CheckCircle size={18} style={{ marginRight: '0.5rem' }} />
-              )}
-              Copy
-            </Button>
-          </div>
-        )}
-        {error && (
-          <div className='function' key='error'>
-            <Badge theme='red'>
-              <WarningOctagon size={18} />
+          )}
+          {error && (
+            <Badge theme='red' dot='pulse'>
+              <WarningOctagon />
             </Badge>
-          </div>
-        )}
-
-        {submit && (
-          <div className='function' key='submit'>
-            <Button onClick={() => handleSubmit(inputValue)}>{submit || 'Submit'} </Button>
-          </div>
-        )}
-
-        {customSubmit && (
-          <div className='function' key='submit'>
-            {customSubmit}
-          </div>
-        )}
-      </div>
-    </div>
+          )}
+          {reveal && (
+            <Button theme='navy' onClick={handleReveal}>
+              {isRevealed ? <EyeClosed /> : <Eye />}
+            </Button>
+          )}
+          {reset && controlledValue.length > 1 && (
+            <Button theme='navy' onClick={handleReset}>
+              <X />
+            </Button>
+          )}
+          {copy && (
+            <Button theme='navy' onClick={handleCopy}>
+              {isCopied ? <Check /> : <Clipboard />}
+            </Button>
+          )}
+          {submit && (
+            <Button theme='navy' onClick={handleSubmit}>
+              {typeof submit === 'string' ? submit : 'Submit'}
+            </Button>
+          )}
+          {customSubmit && customSubmit}
+        </InputFunctionWrapper>
+      </InputContainerWrapper>
+    </>
   );
-}
+};
+
 export default Input;

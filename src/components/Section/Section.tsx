@@ -2,7 +2,7 @@ import type * as Stitches from '@stitches/react';
 import classNames from 'classnames';
 import React from 'react';
 
-import { styled } from '../../stitches.config';
+import { styled } from '../../Theme';
 
 export interface Props {
   className?: string;
@@ -18,7 +18,7 @@ export default function Section({
   className,
   css,
   id,
-  alignment = 'flex-start',
+  alignment = 'initial',
   top,
   bottom,
   children,

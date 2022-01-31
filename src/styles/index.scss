@@ -2,11 +2,6 @@
 
 @import 'mixins';
 
-@include font-face('Untitled Sans', '../../test/webfont/untitled-sans-web-regular', normal);
-@include font-face('Untitled Sans', '../../test/webfont/untitled-sans-web-medium', bold);
-@include font-face('Untitled Sans', '../../test/webfont/untitled-sans-web-regular', normal);
-@include font-face('Untitled Sans', '../../test/webfont/untitled-sans-web-medium', bold);
-
 @import 'variables';
 @import 'typography';
 

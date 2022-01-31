@@ -1,101 +1,87 @@
 import { TrendDown, TrendUp } from 'phosphor-react';
 import React from 'react';
 
+import { styled } from '../../Theme';
 import { Badge } from '../Badge';
 import Loading from '../Loading/Loading';
+import { Heading } from '../Typography';
 
 export interface Props {
-  newNumber: number;
-  previousNumber: number;
-  percentageDollar?: boolean;
-  financial?: boolean;
-  inverse?: boolean;
+  numberA: number;
+  numberB: number;
+  toFixed?: number;
+  trendDirection?: 'up' | 'down';
+  showDollarDifference?: boolean;
 }
 
-function Percentages({ newNumber, previousNumber, percentageDollar, financial, inverse }: Props): JSX.Element {
-  const presum = newNumber - previousNumber;
-  const percentage = Math.round((presum / previousNumber) * 100);
-  const dollar = Math.abs(newNumber - previousNumber).toLocaleString();
+export default function Percentages({
+  numberA,
+  numberB,
+  toFixed = 1,
+  trendDirection = 'up',
+  showDollarDifference = false,
+}: Props): JSX.Element {
+  const [loading, setLoading] = React.useState(true as boolean);
+  const [value, setValue] = React.useState(0 as any);
+  const [difference, setDifference] = React.useState(0 as any);
+  const [differenceDirection, setDifferenceDirection] = React.useState('up' as 'up' | 'down');
 
-  const decrease = (
-    <>
-      <Badge theme={!inverse ? 'yellow' : 'green'}>
-        <span className='hidden-phone hidden-tablet'>
-          <TrendDown size={16} />
-          &nbsp;
-        </span>
-        {percentage}%
-      </Badge>
-      {percentageDollar && (
-        <p className='padding-top-1-h'>
-          -{financial && '$'}
-          {dollar}
-        </p>
-      )}
-    </>
-  );
-  const invalidDecrease = (
-    <>
-      <Badge theme='navy'>
-        <span className='hidden-phone hidden-tablet'>
-          <TrendDown size={16} />
-          &nbsp;
-        </span>
-        -100%
-      </Badge>
-      {percentageDollar && (
-        <p className='padding-top-1-h'>
-          -{financial && '$'}
-          {dollar}
-        </p>
-      )}
-    </>
-  );
-  const increase = (
-    <>
-      <Badge theme={!inverse ? 'green' : 'yellow'}>
-        <span className='hidden-phone hidden-tablet'>
-          <TrendUp size={16} />
-          &nbsp;
-        </span>
-        {percentage}%
-      </Badge>
-      {percentageDollar && (
-        <p className='padding-top-1-h'>
-          -{financial && '$'}
-          {dollar}
-        </p>
-      )}
-    </>
-  );
-  const invalidIncrease = (
-    <>
-      <Badge theme='navy'>
-        <span className='hidden-phone hidden-tablet'>
-          <TrendUp size={16} />
-          &nbsp;
-        </span>
-        100%
-      </Badge>
-      {percentageDollar && (
-        <p className='padding-top-1-h'>
-          -{financial && '$'}
-          {dollar}
-        </p>
-      )}
-    </>
-  );
-  const unch = <></>;
+  React.useEffect(() => {
+    const mathPercentage = ((numberA - numberB) / numberB) * 100;
+    const mathDifference = numberA - numberB;
 
-  if (isNaN(presum)) return <Loading />;
-  else if (newNumber === 0 && previousNumber === 0) return unch;
-  else if (isNaN(percentage)) return unch;
-  else if (newNumber === 0 && previousNumber > 0) return invalidDecrease;
-  else if (newNumber > 0 && previousNumber === 0) return invalidIncrease;
-  else if (!isFinite(percentage)) return unch;
-  else if (newNumber < previousNumber) return decrease;
-  else if (newNumber > previousNumber) return increase;
-  else if (newNumber === previousNumber) return unch;
-  else return unch;
+    setValue(mathPercentage.toFixed(toFixed));
+    setDifference(mathDifference.toFixed(toFixed));
+    setLoading(false);
+
+    if (mathDifference > 0) {
+      if (trendDirection === 'up') {
+        setDifferenceDirection('up');
+      } else {
+        setDifferenceDirection('down');
+      }
+    } else {
+      if (trendDirection === 'up') {
+        setDifferenceDirection('down');
+      } else {
+        setDifferenceDirection('up');
+      }
+    }
+
+    return () => {
+      setLoading(true);
+    };
+  }, [numberA, numberB, toFixed, trendDirection]);
+
+  const PercentagesWrapper = styled('div', {
+    display: 'inherit',
+    position: 'relative',
+    width: '100%',
+    height: '100%',
+  });
+
+  return (
+    <PercentagesWrapper>
+      {loading ? (
+        <Loading />
+      ) : (
+        <>
+          <Badge theme={differenceDirection === 'up' ? 'green' : 'yellow'}>
+            {differenceDirection === 'up' ? <TrendUp /> : <TrendDown />}
+            &nbsp;{value}%
+          </Badge>
+          {showDollarDifference ? (
+            <Heading
+              level={6}
+              css={{
+                pt: '$1',
+                opacity: 0.5,
+              }}>
+              ${difference.toLocaleString()}
+            </Heading>
+          ) : null}
+        </>
+      )}
+    </PercentagesWrapper>
+  );
 }
-export default Percentages;

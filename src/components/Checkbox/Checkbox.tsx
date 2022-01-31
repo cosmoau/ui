@@ -1,38 +1,66 @@
-import classNames from 'classnames';
+import type * as Stitches from '@stitches/react';
 import { Check, Circle } from 'phosphor-react';
 import React, { useState } from 'react';
 
+import { styled } from '../../Theme';
 import { Button } from '../Button';
 
 export interface Props {
-  className?: string;
   css?: Stitches.CSS;
-  children: React.ReactNode;
+  id?: string;
+  checked?: boolean;
+  disabled?: boolean;
+  children?: React.ReactNode;
 }
 
-function Checkbox({ className, style, children }: Props): JSX.Element {
-  const [checkedValue, setCheckedValue] = useState(false);
+function Checkbox({ css, id, checked, disabled, children }: Props): JSX.Element {
+  const [checkedState, setCheckedState] = useState(checked);
 
-  function handleCheckedValue() {
-    if (checkedValue === false) {
-      setCheckedValue(true);
-    } else {
-      setCheckedValue(false);
-    }
-  }
+  const handleChange = (): void => {
+    if (disabled) {
+      return;
+    } else setCheckedState(!checkedState);
+  };
+
+  const CheckboxWrapper = styled('div', {
+    opacity: disabled ? 0.5 : 1,
+    whiteSpace: 'nowrap',
+    display: 'table-row-group',
+
+    '*': {
+      cursor: disabled ? 'not-allowed' : 'pointer',
+    },
+
+    svg: {
+      color: disabled ? '$navy100' : 'inherit',
+    },
+  });
+
+  const CheckboxLabel = styled('label', {
+    display: 'table-cell',
+    verticalAlign: 'middle',
+    paddingLeft: '$2',
+    userSelect: 'none',
+    whiteSpace: 'pre-wrap',
+    wordBreak: 'break-word',
+  });
+
   return (
-    <div
-      className={classNames('Checkbox', {
-        [`${className}`]: className,
-      })}
-      onClick={() => handleCheckedValue()}
-      key={Math.random()}
-      css={css}>
-      <Button>{checkedValue === false ? <Circle color='rgba(0,0,0,0.033)' /> : <Check />}</Button>
-      <label>
-        <div className='inline'>{children}</div>
-      </label>
-    </div>
+    <CheckboxWrapper css={css} id={id}>
+      <Button
+        css={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          borderRadius: '100%',
+          aspectRatio: 1,
+          padding: 'calc($2 * 0.5)',
+        }}
+        onClick={handleChange}>
+        {checkedState ? <Check /> : <Circle opacity={0.1} />}
+      </Button>
+      <CheckboxLabel>{children}</CheckboxLabel>
+    </CheckboxWrapper>
   );
 }
 export default Checkbox;

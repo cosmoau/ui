@@ -1,43 +1,85 @@
-import classNames from 'classnames';
+import type * as Stitches from '@stitches/react';
+import JSConfetti from 'js-confetti';
 import { parseCookies, setCookie } from 'nookies';
-import React, { useState } from 'react';
+import { X } from 'phosphor-react';
+import React, { useEffect, useState } from 'react';
 
-import { Button } from '../Button';
+import { breakpoints, styled } from '../../Theme';
+import { Card } from '../Card';
+import { Heading } from '../Typography';
 
 export interface Props {
-  className?: string;
   css?: Stitches.CSS;
+  token?: string;
   link: string;
 }
 
-function Cookies({ className, style, link = '#' }: Props): JSX.Element {
-  const cookies = parseCookies();
-  const [visibility, setVisibility] = useState(cookies.stickyicky);
+function Cookies({ css, token = 'cooookies' }: Props): JSX.Element {
+  const [show, setShow] = useState(false);
+  const jsConfetti = new JSConfetti();
 
-  function handleCookiesVal() {
-    setVisibility('approved');
-    setCookie(null, 'stickyicky', 'approved', {
-      maxAge: 30 * 24 * 60 * 60,
+  useEffect(() => {
+    const cookies = parseCookies();
+    if (cookies[token] === 'true') {
+      setShow(false);
+    } else {
+      setShow(true);
+    }
+  }, [token]);
+
+  const handleAccept = () => {
+    setCookie(null, token, 'true', {
+      maxAge: 365 * 24 * 60 * 60,
       path: '/',
     });
-  }
+    jsConfetti.addConfetti({
+      emojis: ['🍪'],
+    });
+    setShow(false);
+  };
 
-  if (visibility === 'approved') return <></>;
+  const CookiesWrapper = styled('div', {
+    position: 'fixed',
+    transition: '$1',
+    zIndex: '$zIndexCookies',
+    bottom: '$2',
+    left: 0,
+    right: 0,
+    maxWidth: '100%',
+    margin: 'auto',
+    textAlign: 'center',
+
+    [breakpoints.phone]: {
+      maxWidth: '95%',
+    },
+  });
+
   return (
-    <div
-      className={classNames('Cookies', {
-        [`${className}`]: className,
-      })}
-      id='Cookies'
-      css={css}>
-      <h5 className='inline-spacer'>
-        🍪&nbsp;We use cookies inline with our{' '}
-        <a className='border-bottom' href={link} target='_blank' rel='noreferrer'>
-          privacy policy
-        </a>
-      </h5>
-      <Button onClick={handleCookiesVal}>Hide</Button>
-    </div>
+    <>
+      {show && (
+        <CookiesWrapper css={css}>
+          <Card
+            border
+            minimal
+            css={{
+              ptb: '$1',
+              plr: '$3',
+              textAlign: 'center',
+              display: 'inline-flex',
+              boxShadow: '$4',
+            }}>
+            <Heading level={5} inline inlineSpacer={1}>
+              🍪
+            </Heading>
+            <Heading level={5} inline inlineSpacer={1}>
+              We use anonymized cookies for performance tracking
+            </Heading>
+            <X onClick={handleAccept} />
+          </Card>
+        </CookiesWrapper>
+      )}
+    </>
   );
 }
+
 export default Cookies;

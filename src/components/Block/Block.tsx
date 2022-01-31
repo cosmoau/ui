@@ -1,14 +1,11 @@
 import type * as Stitches from '@stitches/react';
-import classNames from 'classnames';
 import React from 'react';
 
-import { breakpoints, styled } from '../../stitches.config';
+import { breakpoints, styled } from '../../Theme/stitches.config';
 
 export interface Props {
-  className?: string;
   css?: Stitches.CSS;
   id?: string;
-  css?: Stitches.CSS;
   theme?: 'dark' | 'alternate' | 'light';
   inner?: boolean;
   top?: 1 | 2 | 3 | 4 | 5 | 6;
@@ -16,12 +13,12 @@ export interface Props {
   children: React.ReactNode;
 }
 
-export default function Block({ className, style, id, css, theme, inner, top, bottom, children }: Props): JSX.Element {
+export default function Block({ css, id, theme, inner, top, bottom, children }: Props): JSX.Element {
   const BlockWrapper = styled('div', {
     minWidth: '100%',
     width: '100%',
-    backgroundColor: theme === 'dark' ? '$dark100' : theme === 'alternate' ? 'light200' : '$light100',
-    color: theme === 'dark' ? '$light100' : '$dark100',
+    backgroundColor: theme === 'dark' ? '$base100' : theme === 'alternate' ? '$baseContrast200' : '$baseContrast100',
+    color: theme === 'dark' ? '$baseContrast100' : '$base100',
     paddingLeft: '$2',
     paddingRight: '$2',
     paddingTop: top ? `$${top}` : 'inherit',
@@ -50,13 +47,7 @@ export default function Block({ className, style, id, css, theme, inner, top, bo
   });
 
   return (
-    <BlockWrapper
-      className={classNames({
-        [`${className}`]: className,
-      })}
-      css={css}
-      id={id}
-      css={css}>
+    <BlockWrapper css={css} id={id}>
       {inner ? <InnerWrapper>{children}</InnerWrapper> : children}
     </BlockWrapper>
   );

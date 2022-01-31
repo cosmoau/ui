@@ -1,11 +1,9 @@
 import type * as Stitches from '@stitches/react';
-import classNames from 'classnames';
 import React from 'react';
 
-import { styled } from '../../stitches.config';
+import { styled } from '../../Theme';
 
 export interface Props {
-  className?: string;
   css?: Stitches.CSS;
   id?: string;
   level?: 1 | 2 | 3;
@@ -17,18 +15,7 @@ export interface Props {
   children: React.ReactNode;
 }
 
-function Text({
-  className,
-  css,
-  id,
-  level = 1,
-  inline,
-  inlineSpacer = 0,
-  align = 'left',
-  top,
-  bottom,
-  children,
-}: Props) {
+function Text({ css, id, level = 1, inline, inlineSpacer = 0, align = 'left', top, bottom, children }: Props) {
   const baseStyles = {
     textAlign: align,
     display: inline ? 'inline-block' : 'inherit',
@@ -50,33 +37,12 @@ function Text({
     ...baseStyles,
   });
 
-  return level === 2 ? (
-    <TextTwoWrapper
-      className={classNames({
-        [`${className}`]: className,
-      })}
-      css={css}
-      id={id}>
+  const TextWrapper = level === 2 ? TextTwoWrapper : level === 3 ? TextThreeWrapper : TextOneWrapper;
+
+  return (
+    <TextWrapper css={css} id={id}>
       {children}
-    </TextTwoWrapper>
-  ) : level === 3 ? (
-    <TextThreeWrapper
-      className={classNames({
-        [`${className}`]: className,
-      })}
-      css={css}
-      id={id}>
-      {children}
-    </TextThreeWrapper>
-  ) : (
-    <TextOneWrapper
-      className={classNames({
-        [`${className}`]: className,
-      })}
-      css={css}
-      id={id}>
-      {children}
-    </TextOneWrapper>
+    </TextWrapper>
   );
 }
 

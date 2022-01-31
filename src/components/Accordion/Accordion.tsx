@@ -1,9 +1,8 @@
 import type * as Stitches from '@stitches/react';
-import classNames from 'classnames';
 import { CaretDown, CaretUp } from 'phosphor-react';
 import React, { useState } from 'react';
 
-import { styled } from '../../stitches.config';
+import { styled } from '../../Theme';
 import { Column } from '../Column';
 import { Section } from '../Section';
 import { Heading } from '../Typography';
@@ -16,12 +15,13 @@ interface Options {
 
 export interface Props {
   className?: string;
+  id?: string;
   css?: Stitches.CSS;
   options: Array<Options>;
   active?: number | boolean;
 }
 
-function Accordion({ className, css, options, active = false }: Props): JSX.Element {
+function Accordion({ css, id, options, active = false }: Props): JSX.Element {
   const [activeId, setActiveId] = useState(active);
 
   const handleClick = (id: number) => {
@@ -65,7 +65,7 @@ function Accordion({ className, css, options, active = false }: Props): JSX.Elem
   });
 
   return (
-    <AccordionWrapper className={classNames({ className })} css={css}>
+    <AccordionWrapper css={css} id={id}>
       {options.map(({ id, heading, content }) => (
         <AccordionItem key={id} onClick={() => handleClick(id)}>
           <Section alignment='center'>

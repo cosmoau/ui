@@ -1,11 +1,9 @@
 import type * as Stitches from '@stitches/react';
-import classNames from 'classnames';
 import React from 'react';
 
-import { styled } from '../../stitches.config';
+import { styled } from '../../Theme';
 
 export interface Props {
-  className?: string;
   css?: Stitches.CSS;
   id?: string;
   level?: 1 | 2 | 3 | 4 | 5 | 6;
@@ -17,18 +15,7 @@ export interface Props {
   children: React.ReactNode;
 }
 
-function Heading({
-  className,
-  css,
-  id,
-  level = 6,
-  inline,
-  inlineSpacer = 0,
-  align = 'left',
-  top,
-  bottom,
-  children,
-}: Props) {
+function Heading({ css, id, level = 6, inline, inlineSpacer = 0, align = 'left', top, bottom, children }: Props) {
   const baseStyles = {
     textAlign: align,
     display: inline ? 'inline-block' : 'inherit',
@@ -62,60 +49,23 @@ function Heading({
     ...baseStyles,
   });
 
-  return level === 1 ? (
-    <HeadingOneWrapper
-      className={classNames({
-        [`${className}`]: className,
-      })}
-      css={css}
-      id={id}>
+  const HeadingWrapper =
+    level === 1
+      ? HeadingOneWrapper
+      : level === 2
+      ? HeadingTwoWrapper
+      : level === 3
+      ? HeadingThreeWrapper
+      : level === 4
+      ? HeadingFourWrapper
+      : level === 5
+      ? HeadingFiveWrapper
+      : HeadingSixWrapper;
+
+  return (
+    <HeadingWrapper css={css} id={id}>
       {children}
-    </HeadingOneWrapper>
-  ) : level === 2 ? (
-    <HeadingTwoWrapper
-      className={classNames({
-        [`${className}`]: className,
-      })}
-      css={css}
-      id={id}>
-      {children}
-    </HeadingTwoWrapper>
-  ) : level === 3 ? (
-    <HeadingThreeWrapper
-      className={classNames({
-        [`${className}`]: className,
-      })}
-      css={css}
-      id={id}>
-      {children}
-    </HeadingThreeWrapper>
-  ) : level === 4 ? (
-    <HeadingFourWrapper
-      className={classNames({
-        [`${className}`]: className,
-      })}
-      css={css}
-      id={id}>
-      {children}
-    </HeadingFourWrapper>
-  ) : level === 5 ? (
-    <HeadingFiveWrapper
-      className={classNames({
-        [`${className}`]: className,
-      })}
-      css={css}
-      id={id}>
-      {children}
-    </HeadingFiveWrapper>
-  ) : (
-    <HeadingSixWrapper
-      className={classNames({
-        [`${className}`]: className,
-      })}
-      css={css}
-      id={id}>
-      {children}
-    </HeadingSixWrapper>
+    </HeadingWrapper>
   );
 }
 

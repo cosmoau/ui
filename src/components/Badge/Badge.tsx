@@ -1,14 +1,12 @@
 import type * as Stitches from '@stitches/react';
 import { keyframes } from '@stitches/react';
-import classNames from 'classnames';
 import { Circle } from 'phosphor-react';
 import React from 'react';
 
-import { styled } from '../../stitches.config';
+import { styled } from '../../Theme';
 import { Loading } from '../Loading';
 
 export interface Props {
-  className?: string;
   css?: Stitches.CSS;
   id?: string;
   theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'border';
@@ -19,7 +17,7 @@ export interface Props {
   children: React.ReactNode;
 }
 
-function Badge({ className, css, id, theme, loader, shadow, dot, dotColor, children }: Props): JSX.Element {
+function Badge({ css, id, theme, loader, shadow, dot, dotColor, children }: Props): JSX.Element {
   const BadgeWrapper = styled('div', {
     display: 'inline-flex',
     alignItems: 'center',
@@ -31,8 +29,8 @@ function Badge({ className, css, id, theme, loader, shadow, dot, dotColor, child
     paddingLeft: '$2',
     paddingRight: '$2',
     borderRadius: '$3',
-    fontSize: '1.55rem',
-    lineHeight: '1.5rem',
+    fontSize: '1.55rem !important',
+    lineHeight: '1.25',
     backgroundColor:
       theme === 'red'
         ? '$red300'
@@ -48,7 +46,7 @@ function Badge({ className, css, id, theme, loader, shadow, dot, dotColor, child
         ? '$purple300'
         : theme === 'pink'
         ? '$pink300'
-        : '$light100',
+        : '$baseContrast100',
     color:
       theme === 'red'
         ? '$red100'
@@ -64,9 +62,9 @@ function Badge({ className, css, id, theme, loader, shadow, dot, dotColor, child
         ? '$purple100'
         : theme === 'pink'
         ? '$pink100'
-        : '$dark100',
-    border: `0.1rem solid ${theme === 'border' ? '$dark300' : 'transparent'}`,
-    boxShadow: shadow ? '$1' : 'none',
+        : '$base100',
+    border: `0.1rem solid ${theme === 'border' ? '$base300' : 'transparent'}`,
+    boxShadow: shadow ? '$3' : 'none',
     '&:disabled': {
       opacity: 0.5,
       cursor: 'wait',
@@ -121,7 +119,7 @@ function Badge({ className, css, id, theme, loader, shadow, dot, dotColor, child
   });
 
   return (
-    <BadgeWrapper className={classNames(className)} css={css} id={id}>
+    <BadgeWrapper css={css} id={id}>
       {loader ? (
         <BadgeLoaderWrapper>
           <Loading />

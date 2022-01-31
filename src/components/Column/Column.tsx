@@ -1,8 +1,7 @@
 import type * as Stitches from '@stitches/react';
-import classNames from 'classnames';
 import React from 'react';
 
-import { styled, breakpoints } from '../../stitches.config';
+import { styled, breakpoints } from '../../Theme';
 
 export interface Props {
   className?: string;
@@ -29,7 +28,6 @@ export interface Props {
 }
 
 export default function Column({
-  className,
   id,
   css,
   baseWidth = 100,
@@ -102,7 +100,7 @@ export default function Column({
   });
 
   return (
-    <ColumnWrapper className={classNames({ className })} css={css} id={id}>
+    <ColumnWrapper css={css} id={id}>
       {children}
     </ColumnWrapper>
   );

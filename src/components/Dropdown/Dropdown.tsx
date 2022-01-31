@@ -1,105 +1,143 @@
-import classNames from 'classnames';
-import { Circle } from 'phosphor-react';
+import type * as Stitches from '@stitches/react';
 import React, { useState, useRef } from 'react';
 
+import { styled } from '../../Theme';
 import { Button } from '../Button';
 import { Loading } from '../Loading';
 import { Outsider } from '../Outsider';
 
-interface Options {
-  value: string;
-  name: string;
-}
-
 export interface Props {
-  className?: string;
   css?: Stitches.CSS;
-  options: Array<Options>;
-  optionsKey: string;
-  optionsHandler: any;
-  optionsLabel: string | React.ReactNode;
-  optionsWidth?: string;
-  optionsAlignment?: string;
+  options: Array<{
+    value: string;
+    name: string;
+    icon?: React.ReactNode;
+  }>;
+  header?: React.ReactNode;
+  label: string | React.ReactNode;
+  reqKey: string;
+  actions: any;
+  align?: 'left' | 'right' | 'center';
 }
 
-function Dropdown({
-  className,
-  style,
-  options,
-  optionsKey,
-  optionsHandler,
-  optionsLabel = <Loading />,
-  optionsWidth = 'auto',
-  optionsAlignment = 'left',
-}: Props): JSX.Element {
+function Dropdown({ css, options, header, label, reqKey, actions, align = 'left' }: Props): JSX.Element {
   const ref = useRef(null);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const [visibility, setVisibility] = useState('_inactive');
+  const handleClick = (): void => {
+    setIsOpen(!isOpen);
+  };
 
-  function handler(): void {
-    setVisibility('_inactive');
+  const handleActions = (value: string, name: string) => {
+    actions(value, name);
+    setIsOpen(false);
+  };
+
+  Outsider(ref, () => {
+    setIsOpen(false);
+  });
+
+  const DropdownWrapper = styled('div', {
+    position: 'relative',
+    display: 'inline-flex',
+  });
+
+  const DropdownGroupWrapper = styled('div', {
+    background: '$baseContrast100',
+    borderRadius: '$2',
+    border: '0.1rem solid $navy400',
+    boxShadow: '$3',
+    boxSizing: 'border-box',
+    overflowY: 'auto',
+    position: 'absolute',
+    marginTop: 'calc($4 / 1.2)',
+    maxHeight: '50rem',
+    width: 'fit-content',
+    minWidth: '20rem',
+    maxWidth: '50rem',
+    zIndex: 9999,
+    webkitoverflowscrolling: 'touch',
+    left: align === 'left' ? '0' : align === 'right' ? 'auto' : '50%',
+    right: align === 'right' ? '0' : align === 'left' ? 'auto' : '50%',
+    transform: align === 'left' ? 'translateX(-100%)' : align === 'right' ? 'translateX(100%)' : 'translateX(-50%)',
+  });
+
+  const DropdownHeaderWrapper = styled('div', {
+    display: 'flex',
+    textAlign: 'left',
+    transition: '$1',
+    padding: '$2',
+    paddingTop: 'calc($2 / 1.66)',
+    paddingBottom: 'calc($2 / 1.66)',
+    paddingLeft: 'calc($3 / 1.66)',
+    paddingRight: 'calc($3 / 1.66)',
+    borderBottom: '0.1rem solid $navy200',
+    width: '100%',
+  });
+
+  const DropdownItemWrapper = styled('div', {
+    display: 'flex',
+    textAlign: 'left',
+    transition: '$1',
+    padding: '$2',
+    paddingTop: '$2',
+    paddingBottom: '$2',
+    paddingLeft: 'calc($3 / 1.66)',
+    paddingRight: 'calc($3 / 1.66)',
+    borderBottom: '0.1rem solid $navy400',
+    cursor: 'pointer',
+    fontSize: '1.6rem',
+
+    '&:hover': {
+      backgroundColor: '$navy300',
+    },
+
+    '&:last-child': {
+      borderBottom: 0,
+    },
+
+    '&.active': {
+      backgroundColor: '$navy400',
+
+      '&:hover': {
+        backgroundColor: '$navy300',
+      },
+    },
+  });
+
+  const DropdownIconWrapper = styled('div', {
+    display: 'inline-flex',
+    alignItems: 'center',
+    width: 'auto',
+    marginRight: '$2',
+    height: '100%',
+    position: 'relative',
+    verticalAlign: 'middle',
+  });
+
+  if (!reqKey) {
+    throw new Error('Dropdown: key is required');
   }
-
-  function preHandler({ inValue, inName }: { inValue: string; inName: string }): void {
-    optionsHandler(inValue, inName);
-    setVisibility('_inactive');
-  }
-
-  Outsider(ref, handler);
 
   return (
-    <div
-      className={classNames('Dropdown', {
-        [`${className}`]: className,
-      })}
-      ref={ref}
-      key={`${optionsKey}-A`}
-      id={optionsKey}
-      css={css}>
-      {visibility === '_inactive' ? (
-        <div
-          onClickCapture={(e) => {
-            e.persist();
-            setVisibility('_active');
-          }}
-          key={`${optionsKey}-B`}>
-          <Button loader={!optionsLabel}>{optionsLabel}</Button>
-        </div>
-      ) : (
-        <div
-          onClickCapture={(e) => {
-            e.persist();
-            setVisibility('_inactive');
-          }}
-          key={`${optionsKey}-C`}>
-          <Button loader={!optionsLabel} theme='navy'>
-            {optionsLabel}
-          </Button>
-        </div>
+    <DropdownWrapper css={css} key={reqKey} ref={ref}>
+      <Button onClick={handleClick}>{label || <Loading />}</Button>
+      {isOpen && (
+        <DropdownGroupWrapper>
+          {header && <DropdownHeaderWrapper>{header}</DropdownHeaderWrapper>}
+          {options.map((option) => (
+            <DropdownItemWrapper
+              className={label === option.name ? 'active' : 'inactive'}
+              key={option.value}
+              onClick={() => handleActions(option.value, option.name)}>
+              {option.icon && <DropdownIconWrapper>{option.icon}</DropdownIconWrapper>}
+              {option.name}
+            </DropdownItemWrapper>
+          ))}
+        </DropdownGroupWrapper>
       )}
-      <div
-        className={classNames('child', {
-          [`${optionsAlignment}`]: optionsAlignment,
-          [`${visibility}`]: visibility,
-        })}
-        style={{ minWidth: optionsWidth }}>
-        {options.map((option) => (
-          <div
-            className='option'
-            onClick={() => preHandler({ inValue: option.value, inName: option.name })}
-            key={option.value}>
-            {optionsLabel === option.name ? (
-              <div className='_selected'>
-                <Circle size={16} color='#3aa8b3' style={{ marginTop: '-0.3rem', marginRight: '0.2rem' }} />
-                &nbsp;{option.name}
-              </div>
-            ) : (
-              option.name
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
+    </DropdownWrapper>
   );
 }
+
 export default Dropdown;

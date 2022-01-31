@@ -1,15 +1,13 @@
 import type * as Stitches from '@stitches/react';
-import classNames from 'classnames';
 import React, { useRef, useState } from 'react';
 
-import { breakpoints, styled } from '../../stitches.config';
+import { breakpoints, styled } from '../../Theme';
 import { Button } from '../Button';
 import { Card } from '../Card';
 import { Outsider } from '../Outsider';
 import { Heading } from '../Typography';
 
 export interface Props {
-  className?: string;
   css?: Stitches.CSS;
   id?: string;
   trigger: React.ReactNode | string;
@@ -19,7 +17,7 @@ export interface Props {
   action: React.ReactNode;
 }
 
-function Alert({ className, css, id, trigger, title, description, cancel, action }: Props): JSX.Element {
+function Alert({ css, id, trigger, title, description, cancel, action }: Props): JSX.Element {
   const ref = useRef(null);
 
   const [visibility, setVisibility] = useState(false);
@@ -51,9 +49,9 @@ function Alert({ className, css, id, trigger, title, description, cancel, action
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: '90vw',
-    maxWidth: '50rem',
-    maxHeight: '90vh',
+    width: '55rem',
+    maxWidth: '90vw',
+    maxHeight: '70vh',
 
     [breakpoints.phone]: {
       width: '95%',
@@ -80,11 +78,7 @@ function Alert({ className, css, id, trigger, title, description, cancel, action
         {trigger}
       </AlertTrigger>
       {visibility && (
-        <AlertWrapper
-          className={classNames({
-            [`${className}`]: className,
-          })}
-          id={id}>
+        <AlertWrapper id={id}>
           <AlertCard ref={ref} css={css}>
             <Card>
               <Heading level={3}>{title}</Heading>

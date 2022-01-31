@@ -1,12 +1,10 @@
 import type * as Stitches from '@stitches/react';
-import classNames from 'classnames';
 import React from 'react';
 
-import { styled } from '../../stitches.config';
+import { styled } from '../../Theme';
 import { Loading } from '../Loading';
 
-export interface Props {
-  className?: string;
+export interface Props extends React.HTMLAttributes<HTMLButtonElement> {
   css?: Stitches.CSS;
   id?: string;
   theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'transparent';
@@ -16,7 +14,7 @@ export interface Props {
   children: React.ReactNode;
 }
 
-function Button({ className, css, id, theme, loader, icon, onClick, children }: Props): JSX.Element {
+function Button({ css, id, theme, loader, icon, onClick, children, ...props }: Props): JSX.Element {
   const ButtonWrapper = styled('button', {
     // resets
     appearance: 'none',
@@ -72,7 +70,7 @@ function Button({ className, css, id, theme, loader, icon, onClick, children }: 
         ? '$pink400'
         : theme === 'transparent'
         ? 'transparent'
-        : '$dark300'
+        : '$base300'
     }`,
     backgroundColor:
       theme === 'red'
@@ -91,7 +89,7 @@ function Button({ className, css, id, theme, loader, icon, onClick, children }: 
         ? '$pink300'
         : theme === 'transparent'
         ? 'transparent'
-        : '$light100',
+        : '$baseContrast100',
     color:
       theme === 'red'
         ? '$red100'
@@ -107,7 +105,7 @@ function Button({ className, css, id, theme, loader, icon, onClick, children }: 
         ? '$purple100'
         : theme === 'pink'
         ? '$pink100'
-        : '$dark100',
+        : '$base100',
     boxShadow: '$1',
     '&:disabled': {
       opacity: 0.5,
@@ -142,7 +140,7 @@ function Button({ className, css, id, theme, loader, icon, onClick, children }: 
   });
 
   return (
-    <ButtonWrapper className={classNames(className)} css={css} id={id} onClick={onClick}>
+    <ButtonWrapper css={css} id={id} onClick={onClick} {...props}>
       {loader ? (
         <Loading />
       ) : (
