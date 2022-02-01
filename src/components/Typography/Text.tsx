@@ -1,7 +1,7 @@
 import type * as Stitches from '@stitches/react';
 import React from 'react';
 
-import { styled } from '../../Theme';
+import { styled } from '../../stitches.config';
 
 export interface Props {
   css?: Stitches.CSS;
@@ -19,21 +19,43 @@ function Text({ css, id, level = 1, inline, inlineSpacer = 0, align = 'left', to
   const baseStyles = {
     textAlign: align,
     display: inline ? 'inline-block' : 'inherit',
-    marginRight: inlineSpacer + 'rem',
-    marginBottom: inline ? 0 : 'inherit',
     paddingTop: top ? `$${top}` : 'inherit',
     paddingBottom: bottom ? `$${bottom}` : 'inherit',
+    marginRight: inlineSpacer ? `${inlineSpacer}rem` : 'inherit',
+
+    '&:last-child': {
+      marginBottom: 0,
+    },
   };
 
   const TextOneWrapper = styled('p', {
+    fontSize: '$t1',
+    fontWeight: '$1',
+    lineHeight: '$t1',
+    marginBottom: inlineSpacer ? 0 : 'calc($1 * 2)',
+    opacity: 0.8,
+
     ...baseStyles,
   });
 
   const TextTwoWrapper = styled('p', {
+    fontSize: '$t2',
+    fontWeight: '$1',
+    lineHeight: '$t2',
+    opacity: 0.7,
+
+    marginBottom: inlineSpacer ? 0 : 'calc($1 * 2)',
+
     ...baseStyles,
   });
 
-  const TextThreeWrapper = styled('span', {
+  const TextThreeWrapper = styled('p', {
+    fontSize: '$t3',
+    fontWeight: '$1',
+    lineHeight: '$t3',
+    opacity: 0.7,
+    marginBottom: inlineSpacer ? 0 : '$1',
+
     ...baseStyles,
   });
 

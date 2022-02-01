@@ -1,11 +1,10 @@
 import React from 'react';
 import { useDarkMode } from 'usehooks-ts';
 
-import { Button } from '..';
+import { styled } from '../../stitches.config';
+import { Button } from '../Button';
 
-import { styled } from './';
-
-export default function Switch(): JSX.Element {
+function Switch(): JSX.Element {
   const { isDarkMode, toggle } = useDarkMode();
 
   const SwitchWrapper = styled('div', {
@@ -20,3 +19,4 @@ export default function Switch(): JSX.Element {
     </SwitchWrapper>
   );
 }
+export default Switch;

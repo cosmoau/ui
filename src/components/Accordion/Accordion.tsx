@@ -2,7 +2,7 @@ import type * as Stitches from '@stitches/react';
 import { CaretDown, CaretUp } from 'phosphor-react';
 import React, { useState } from 'react';
 
-import { styled } from '../../Theme';
+import { styled } from '../../stitches.config';
 import { Column } from '../Column';
 import { Section } from '../Section';
 import { Heading } from '../Typography';

@@ -4,7 +4,7 @@ import { parseCookies, setCookie } from 'nookies';
 import { X } from 'phosphor-react';
 import React, { useEffect, useState } from 'react';
 
-import { breakpoints, styled } from '../../Theme';
+import { breakpoints, styled } from '../../stitches.config';
 import { Card } from '../Card';
 import { Heading } from '../Typography';
 
@@ -57,21 +57,22 @@ function Cookies({ css, token = 'cooookies' }: Props): JSX.Element {
   return (
     <>
       {show && (
-        <CookiesWrapper css={css}>
+        <CookiesWrapper
+          css={{
+            ...css,
+          }}>
           <Card
             border
-            minimal
             css={{
-              ptb: '$1',
-              plr: '$3',
+              ptb: 'calc($2 / 2)',
               textAlign: 'center',
               display: 'inline-flex',
               boxShadow: '$4',
             }}>
-            <Heading level={5} inline inlineSpacer={1}>
+            <Heading level={6} inline inlineSpacer={1}>
               🍪
             </Heading>
-            <Heading level={5} inline inlineSpacer={1}>
+            <Heading level={6} inline inlineSpacer={1}>
               We use anonymized cookies for performance tracking
             </Heading>
             <X onClick={handleAccept} />

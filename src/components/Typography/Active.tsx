@@ -3,7 +3,7 @@ import Link, { LinkProps } from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 
-import { styled } from '../../Theme';
+import { styled } from '../../stitches.config';
 
 export interface Props extends LinkProps {
   css?: Stitches.CSS;

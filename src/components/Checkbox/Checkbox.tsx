@@ -2,7 +2,7 @@ import type * as Stitches from '@stitches/react';
 import { Check, Circle } from 'phosphor-react';
 import React, { useState } from 'react';
 
-import { styled } from '../../Theme';
+import { styled } from '../../stitches.config';
 import { Button } from '../Button';
 
 export interface Props {

@@ -1,7 +1,7 @@
 import type * as Stitches from '@stitches/react';
 import React, { useState, useRef } from 'react';
 
-import { styled } from '../../Theme';
+import { styled } from '../../stitches.config';
 import { Button } from '../Button';
 import { Loading } from '../Loading';
 import { Outsider } from '../Outsider';

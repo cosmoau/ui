@@ -1,7 +1,7 @@
 import type * as Stitches from '@stitches/react';
 import React from 'react';
 
-import { styled } from '../../Theme';
+import { styled } from '../../stitches.config';
 import { Loading } from '../Loading';
 
 export interface Props extends React.HTMLAttributes<HTMLButtonElement> {
@@ -39,6 +39,7 @@ function Button({ css, id, theme, loader, icon, onClick, children, ...props }: P
       outline: 0,
     },
     // custom
+    lineHeight: '1.3',
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -46,9 +47,9 @@ function Button({ css, id, theme, loader, icon, onClick, children, ...props }: P
     verticalAlign: 'middle',
     position: 'relative',
     transition: '$1',
-    paddingTop: 'calc($2 / 4)',
     fontWeight: '$1',
-    paddingBottom: 'calc($2 / 4)',
+    paddingTop: '$1',
+    paddingBottom: '$1',
     paddingLeft: '$2',
     paddingRight: '$2',
     borderRadius: '$1',
@@ -63,14 +64,14 @@ function Button({ css, id, theme, loader, icon, onClick, children, ...props }: P
         : theme === 'blue'
         ? '$blue400'
         : theme === 'navy'
-        ? '$navy400'
+        ? '$navy200'
         : theme === 'purple'
         ? '$purple400'
         : theme === 'pink'
         ? '$pink400'
         : theme === 'transparent'
         ? 'transparent'
-        : '$base300'
+        : '$border100'
     }`,
     backgroundColor:
       theme === 'red'

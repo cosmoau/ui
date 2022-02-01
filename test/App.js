@@ -3,7 +3,6 @@ import { HardDrive, MapPinLine } from 'phosphor-react';
 import React, { useState } from 'react';
 
 import * as UI from '../src/index.tsx';
-import '../src/styles/index.scss';
 import '../fonts.css';
 
 export default function App() {
@@ -24,7 +23,7 @@ export default function App() {
         top={2}
         bottom={2}
         css={{
-          bb: '$base300',
+          bb: '$border200',
         }}>
         <UI.Section alignment='center'>
           <UI.Column baseWidth={50} phoneWidth={50}>
@@ -54,14 +53,25 @@ export default function App() {
         top={4}
         bottom={4}
         css={{
-          bb: '$base300',
+          bb: '$border200',
         }}>
         <UI.Section alignment='stretch'>
           <UI.Column>
-            <UI.Heading level={2} bottom={1}>
-              Accordion
-            </UI.Heading>
-            <UI.Heading level={4} bottom={3}>
+            <UI.Heading level={2}>Typography</UI.Heading>
+          </UI.Column>
+        </UI.Section>
+      </UI.Block>
+      <UI.Block
+        inner
+        top={4}
+        bottom={4}
+        css={{
+          bb: '$border200',
+        }}>
+        <UI.Section alignment='stretch'>
+          <UI.Column>
+            <UI.Heading level={2}>Accordion</UI.Heading>
+            <UI.Heading level={4}>
               A vertically stacked set of interactive headings that each reveal an associated section of content.
             </UI.Heading>
             <div>
@@ -120,16 +130,12 @@ export default function App() {
         top={4}
         bottom={4}
         css={{
-          bb: '$base300',
+          bb: '$border200',
         }}>
         <UI.Section>
           <UI.Column base={50} offset={25}>
-            <UI.Heading level={2} bottom={1}>
-              Active
-            </UI.Heading>
-            <UI.Heading level={4} bottom={3}>
-              A link that is active when the user is on the page it links to.
-            </UI.Heading>
+            <UI.Heading level={2}>Active</UI.Heading>
+            <UI.Heading level={4}>A link that is active when the user is on the page it links to.</UI.Heading>
             <div>
               <UI.Badge
                 theme='red'
@@ -161,16 +167,12 @@ export default function App() {
         top={4}
         bottom={4}
         css={{
-          bb: '$navy300',
+          bb: '$border200',
         }}>
         <UI.Section>
           <UI.Column>
-            <UI.Heading level={2} bottom={1}>
-              Alert
-            </UI.Heading>
-            <UI.Heading level={4} bottom={3}>
-              A modal with a required callback, typically confirm or cancel.
-            </UI.Heading>
+            <UI.Heading level={2}>Alert</UI.Heading>
+            <UI.Heading level={4}>A modal with a required callback, typically confirm or cancel.</UI.Heading>
             <UI.Card
               border
               css={{
@@ -195,14 +197,12 @@ export default function App() {
         top={4}
         bottom={4}
         css={{
-          bb: '$base300',
+          bb: '$border200',
         }}>
         <UI.Section>
           <UI.Column>
-            <UI.Heading level={2} bottom={1}>
-              Badge
-            </UI.Heading>
-            <UI.Heading level={4} bottom={3}>
+            <UI.Heading level={2}>Badge</UI.Heading>
+            <UI.Heading level={4}>
               A small badge that can be used to values or a status. Can be used in any context.
             </UI.Heading>
             <UI.Card border>
@@ -218,16 +218,12 @@ export default function App() {
         top={4}
         bottom={4}
         css={{
-          bb: '$base300',
+          bb: '$border200',
         }}>
         <UI.Section>
           <UI.Column>
-            <UI.Heading level={2} bottom={1}>
-              Button
-            </UI.Heading>
-            <UI.Heading level={4} bottom={3}>
-              A button that can be used in any context.
-            </UI.Heading>
+            <UI.Heading level={2}>Button</UI.Heading>
+            <UI.Heading level={4}>A button that can be used in any context.</UI.Heading>
             <UI.Card border>
               <UI.Button theme='red' css={{ mr: '$2' }}>
                 Hey
@@ -259,14 +255,12 @@ export default function App() {
         top={4}
         bottom={4}
         css={{
-          bb: '$base300',
+          bb: '$border200',
         }}>
         <UI.Section>
           <UI.Column>
-            <UI.Heading level={2} bottom={1}>
-              Card
-            </UI.Heading>
-            <UI.Heading level={4} bottom={3}>
+            <UI.Heading level={2}>Card</UI.Heading>
+            <UI.Heading level={4}>
               A card is used for any content that needs to be grouped together in a single area.
             </UI.Heading>
             <UI.Card border theme='navy'>
@@ -280,16 +274,12 @@ export default function App() {
         top={4}
         bottom={4}
         css={{
-          bb: '$base300',
+          bb: '$border200',
         }}>
         <UI.Section>
           <UI.Column>
-            <UI.Heading level={2} bottom={1}>
-              Checkbox
-            </UI.Heading>
-            <UI.Heading level={4} bottom={3}>
-              A checkbox that can be used in any context, singularly.
-            </UI.Heading>
+            <UI.Heading level={2}>Checkbox</UI.Heading>
+            <UI.Heading level={4}>A checkbox that can be used in any context, singularly.</UI.Heading>
             <UI.Card border theme='navy'>
               <UI.Checkbox checked>Check me</UI.Checkbox>
               <UI.Checkbox>Check me</UI.Checkbox>
@@ -305,16 +295,12 @@ export default function App() {
         top={4}
         bottom={4}
         css={{
-          bb: '$base300',
+          bb: '$border200',
         }}>
         <UI.Section>
           <UI.Column align='right'>
-            <UI.Heading level={2} bottom={1}>
-              Dropdown
-            </UI.Heading>
-            <UI.Heading level={4} bottom={3}>
-              A dropdown that can be used in any context.
-            </UI.Heading>
+            <UI.Heading level={2}>Dropdown</UI.Heading>
+            <UI.Heading level={4}>A dropdown that can be used in any context.</UI.Heading>
             <UI.Card
               border
               css={{
@@ -360,16 +346,12 @@ export default function App() {
         top={4}
         bottom={4}
         css={{
-          bb: '$navy300',
+          bb: '$border200',
         }}>
         <UI.Section>
           <UI.Column>
-            <UI.Heading level={2} bottom={1}>
-              Dialog
-            </UI.Heading>
-            <UI.Heading level={4} bottom={3}>
-              A modal with completely optional content and function.
-            </UI.Heading>
+            <UI.Heading level={2}>Dialog</UI.Heading>
+            <UI.Heading level={4}>A modal with completely optional content and function.</UI.Heading>
             <UI.Card
               border
               css={{
@@ -390,16 +372,12 @@ export default function App() {
         top={4}
         bottom={4}
         css={{
-          bb: '$base300',
+          bb: '$border200',
         }}>
         <UI.Section>
           <UI.Column>
-            <UI.Heading level={2} bottom={1}>
-              Input
-            </UI.Heading>
-            <UI.Heading level={4} bottom={3}>
-              A input that can be used in any context.
-            </UI.Heading>
+            <UI.Heading level={2}>Input</UI.Heading>
+            <UI.Heading level={4}>A input that can be used in any context.</UI.Heading>
             <UI.Card border>
               <UI.Input
                 name='password'
@@ -421,16 +399,12 @@ export default function App() {
         top={4}
         bottom={4}
         css={{
-          bb: '$base300',
+          bb: '$border200',
         }}>
         <UI.Section>
           <UI.Column>
-            <UI.Heading level={2} bottom={1}>
-              Money
-            </UI.Heading>
-            <UI.Heading level={4} bottom={3}>
-              A simple formatter to make money look pretty.
-            </UI.Heading>
+            <UI.Heading level={2}>Money</UI.Heading>
+            <UI.Heading level={4}>A simple formatter to make money look pretty.</UI.Heading>
             <UI.Card border>
               <UI.Money data={123456789} numerals />
             </UI.Card>
@@ -442,14 +416,12 @@ export default function App() {
         top={4}
         bottom={4}
         css={{
-          bb: '$base300',
+          bb: '$border200',
         }}>
         <UI.Section>
           <UI.Column>
-            <UI.Heading level={2} bottom={1}>
-              Percentages
-            </UI.Heading>
-            <UI.Heading level={4} bottom={3}>
+            <UI.Heading level={2}>Percentages</UI.Heading>
+            <UI.Heading level={4}>
               A simple formatter to show percentage differences without the clunky code.
             </UI.Heading>
             <UI.Card border>
@@ -464,14 +436,12 @@ export default function App() {
         top={4}
         bottom={4}
         css={{
-          bb: '$base300',
+          bb: '$border200',
         }}>
         <UI.Section>
           <UI.Column>
-            <UI.Heading level={2} bottom={1}>
-              Percentages
-            </UI.Heading>
-            <UI.Heading level={4} bottom={3}>
+            <UI.Heading level={2}>Percentages</UI.Heading>
+            <UI.Heading level={4}>
               A simple formatter to show percentage differences without the clunky code.
             </UI.Heading>
             <UI.Card border>
@@ -485,16 +455,12 @@ export default function App() {
         top={4}
         bottom={4}
         css={{
-          bb: '$base300',
+          bb: '$border200',
         }}>
         <UI.Section>
           <UI.Column>
-            <UI.Heading level={2} bottom={1}>
-              Textarea
-            </UI.Heading>
-            <UI.Heading level={4} bottom={3}>
-              A restricted textarea.
-            </UI.Heading>
+            <UI.Heading level={2}>Textarea</UI.Heading>
+            <UI.Heading level={4}>A restricted textarea.</UI.Heading>
             <UI.Card border>
               <UI.Textarea copy />
             </UI.Card>
@@ -506,16 +472,12 @@ export default function App() {
         top={4}
         bottom={4}
         css={{
-          bb: '$base300',
+          bb: '$border200',
         }}>
         <UI.Section>
           <UI.Column>
-            <UI.Heading level={2} bottom={1}>
-              Submenu
-            </UI.Heading>
-            <UI.Heading level={4} bottom={3}>
-              A submenu.
-            </UI.Heading>
+            <UI.Heading level={2}>Submenu</UI.Heading>
+            <UI.Heading level={4}>A submenu.</UI.Heading>
             <UI.Card border>
               <UI.Submenu
                 trigger={<UI.Button icon={<HardDrive size={25} />}>Open</UI.Button>}
@@ -551,13 +513,11 @@ export default function App() {
         top={4}
         bottom={4}
         css={{
-          bb: '$base300',
+          bb: '$border200',
         }}>
         <UI.Section>
           <UI.Column>
-            <UI.Heading level={2} bottom={3}>
-              🔥 Tasks
-            </UI.Heading>
+            <UI.Heading level={2}>🔥 Tasks</UI.Heading>
             <UI.Card border>
               <div>
                 <UI.Badge
@@ -628,17 +588,6 @@ export default function App() {
                     mb: '$2',
                   }}>
                   Remove all use of classNames
-                </UI.Badge>
-              </div>
-              <div>
-                <UI.Badge
-                  theme='border'
-                  dot='pulse'
-                  dotColor='yellow'
-                  css={{
-                    mb: '$2',
-                  }}>
-                  Migrate all typography css to the new typography component
                 </UI.Badge>
               </div>
             </UI.Card>

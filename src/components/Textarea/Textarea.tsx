@@ -5,7 +5,7 @@ import { Check, Clipboard } from 'phosphor-react';
 import type { ChangeEvent, FC, InputHTMLAttributes } from 'react';
 import React, { useState } from 'react';
 
-import { styled } from '../../Theme';
+import { styled } from '../../stitches.config';
 import { Button } from '../Button';
 import { Column } from '../Column';
 import { Section } from '../Section';

@@ -1,7 +1,4 @@
-// Theme
-export * from './Theme/index';
-
-// Components
+export * from './components/Theme/index';
 export * from './components/Accordion/index';
 export * from './components/Alert/index';
 export * from './components/Badge/index';
@@ -24,3 +21,5 @@ export * from './components/Textarea/index';
 // export * from './components/Tooltip/index';
 export * from './components/Block/index';
 export * from './components/Typography/index';
+
+export { breakpoints, theme, css, styled, globalCss, getCssText, darkTheme, globalStyles } from './stitches.config';

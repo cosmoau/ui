@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useState, useRef } from 'react';
 
-import { styled } from '../../Theme';
+import { styled } from '../../stitches.config';
 import { Outsider } from '../Outsider';
 
 export interface Props {

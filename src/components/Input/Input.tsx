@@ -5,7 +5,7 @@ import { Check, Clipboard, Eye, EyeClosed, WarningOctagon, X } from 'phosphor-re
 import type { ChangeEvent, FC, InputHTMLAttributes } from 'react';
 import React, { useState } from 'react';
 
-import { styled } from '../../Theme';
+import { styled } from '../../stitches.config';
 import { Badge } from '../Badge';
 import { Button } from '../Button';
 import { Loading } from '../Loading';

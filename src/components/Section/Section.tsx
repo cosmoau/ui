@@ -2,7 +2,7 @@ import type * as Stitches from '@stitches/react';
 import classNames from 'classnames';
 import React from 'react';
 
-import { styled } from '../../Theme';
+import { styled } from '../../stitches.config';
 
 export interface Props {
   className?: string;

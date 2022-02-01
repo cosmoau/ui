@@ -1,7 +1,7 @@
 import { TrendDown, TrendUp } from 'phosphor-react';
 import React from 'react';
 
-import { styled } from '../../Theme';
+import { styled } from '../../stitches.config';
 import { Badge } from '../Badge';
 import Loading from '../Loading/Loading';
 import { Heading } from '../Typography';

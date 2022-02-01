@@ -1,7 +1,7 @@
 import type * as Stitches from '@stitches/react';
 import React from 'react';
 
-import { styled } from '../../Theme';
+import { styled } from '../../stitches.config';
 
 export interface Props {
   css?: Stitches.CSS;
@@ -17,10 +17,9 @@ export interface Props {
 
 function Card({ css, id, theme, loader, border, image, imageHeight, minimal, children }: Props): JSX.Element {
   const CardWrapper = styled('div', {
-    paddingTop: minimal ? 0 : image ? 0 : 'calc($3 / 1.2)',
-    paddingBottom: minimal ? 0 : image ? 0 : 'calc($3 / 1.2)',
-    paddingLeft: minimal ? 0 : image ? 0 : 'calc($3 / 1.2)',
-    paddingRight: minimal ? 0 : image ? 0 : 'calc($3 / 1.2)',
+    padding: minimal ? 0 : image ? 0 : 'calc($3 / 1.25)',
+    height: '100%',
+    display: 'block',
     borderRadius: '$2',
     transition: '$1',
     color: 'inherit',
@@ -60,7 +59,7 @@ function Card({ css, id, theme, loader, border, image, imageHeight, minimal, chi
             ? '$purple400'
             : theme === 'pink'
             ? '$pink400'
-            : '$base400'
+            : '$border200'
         }`
       : 'none',
 

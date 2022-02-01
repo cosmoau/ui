@@ -3,7 +3,7 @@ import { keyframes } from '@stitches/react';
 import { Circle } from 'phosphor-react';
 import React from 'react';
 
-import { styled } from '../../Theme';
+import { styled } from '../../stitches.config';
 import { Loading } from '../Loading';
 
 export interface Props {
@@ -26,8 +26,8 @@ function Badge({ css, id, theme, loader, shadow, dot, dotColor, children }: Prop
     transition: '$1',
     paddingTop: '$1',
     paddingBottom: '$1',
-    paddingLeft: '$2',
-    paddingRight: '$2',
+    paddingLeft: 'calc($2 / 1.5)',
+    paddingRight: 'calc($2 / 1.5)',
     borderRadius: '$3',
     fontSize: '1.55rem !important',
     lineHeight: '1.25',
@@ -63,7 +63,7 @@ function Badge({ css, id, theme, loader, shadow, dot, dotColor, children }: Prop
         : theme === 'pink'
         ? '$pink100'
         : '$base100',
-    border: `0.1rem solid ${theme === 'border' ? '$base300' : 'transparent'}`,
+    border: `0.1rem solid ${theme === 'border' ? '$border100' : 'transparent'}`,
     boxShadow: shadow ? '$3' : 'none',
     '&:disabled': {
       opacity: 0.5,

@@ -1,7 +1,7 @@
 import type * as Stitches from '@stitches/react';
 import React from 'react';
 
-import { styled, breakpoints } from '../../Theme';
+import { styled, breakpoints } from '../../stitches.config';
 
 export interface Props {
   className?: string;

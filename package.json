@@ -36,9 +36,9 @@
     "numeral": "^2.0.6",
     "parcel": "^2.2.1",
     "phosphor-react": "^1.4.0",
+    "prettier": "^2.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "sass": "^1.49.0",
     "typescript": "^4.5.4",
     "usehooks-ts": "^2.2.2"
   },
@@ -75,7 +75,7 @@
   "repository": "https://github.com/cosmo-au/design-system",
   "scripts": {
     "build": "microbundle --compress --jsx React.createElement",
-    "clean": "prettier --write '**/*.{js,css,scss}' '!node_modules/**' '!.git/**' '!dist/**'",
+    "clean": "prettier --write '**/*.{js,css,jsx,tsx,ts}' '!node_modules/**' '!.git/**' '!dist/**'",
     "dev": "microbundle watch  --jsx React.createElement",
     "lint": "eslint src --ext .tsx",
     "release": "np",
