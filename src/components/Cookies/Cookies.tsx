@@ -1,7 +1,7 @@
 import type * as Stitches from '@stitches/react';
 import JSConfetti from 'js-confetti';
 import { parseCookies, setCookie } from 'nookies';
-import { X } from 'phosphor-react';
+import { ArrowUpRight, X } from 'phosphor-react';
 import React, { useEffect, useState } from 'react';
 
 import { breakpoints, styled } from '../../stitches.config';
@@ -11,10 +11,10 @@ import { Heading } from '../Typography';
 export interface Props {
   css?: Stitches.CSS;
   token?: string;
-  link: string;
+  href?: string;
 }
 
-function Cookies({ css, token = 'cooookies' }: Props): JSX.Element {
+function Cookies({ css, token = 'cooookies', href = 'https://cosmogroup.io/legal/privacy' }: Props): JSX.Element {
   const [show, setShow] = useState(false);
   const jsConfetti = new JSConfetti();
 
@@ -73,7 +73,15 @@ function Cookies({ css, token = 'cooookies' }: Props): JSX.Element {
               🍪
             </Heading>
             <Heading level={6} inline inlineSpacer={1}>
-              We use anonymized cookies for performance tracking
+              We use anonymous cookies.{' '}
+              <a href={href || '#'}>
+                <b>
+                  Learn more{' '}
+                  <sup>
+                    <ArrowUpRight />
+                  </sup>
+                </b>
+              </a>
             </Heading>
             <X onClick={handleAccept} />
           </Card>

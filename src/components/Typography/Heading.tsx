@@ -173,6 +173,7 @@ function Heading({
     fontWeight: '$1',
     lineHeight: '$h6',
     marginBottom: inlineSpacer ? 0 : 'calc($1 * 3)',
+    opacity: 0.7,
 
     [breakpoints.phone]: {
       fontSize: 'calc($h6 * 0.95)',

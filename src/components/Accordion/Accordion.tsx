@@ -1,5 +1,6 @@
 import type * as Stitches from '@stitches/react';
-import { CaretDown, CaretUp } from 'phosphor-react';
+import { keyframes } from '@stitches/react';
+import { ArrowDown, ArrowUp } from 'phosphor-react';
 import React, { useState } from 'react';
 
 import { styled } from '../../stitches.config';
@@ -32,6 +33,16 @@ function Accordion({ css, id, options, active = false }: Props): JSX.Element {
     }
   };
 
+  const slideDown = keyframes({
+    from: { maxHeight: 0, opacity: 0 },
+    to: { maxHeight: '50rem', opacity: 1 },
+  });
+
+  const slideUp = keyframes({
+    from: { maxHeight: '40rem', opacity: 1 },
+    to: { maxHeight: 0, opacity: 0 },
+  });
+
   const AccordionWrapper = styled('div', {
     width: '100%',
 
@@ -43,7 +54,7 @@ function Accordion({ css, id, options, active = false }: Props): JSX.Element {
   const AccordionItem = styled('div', {
     display: 'block',
     cursor: 'pointer',
-    paddingTop: '$1',
+    paddingTop: 'calc($2 / 2.5)',
 
     '&:first-child': {
       paddingTop: 0,
@@ -52,15 +63,23 @@ function Accordion({ css, id, options, active = false }: Props): JSX.Element {
 
   const AccordionContent = styled('div', {
     transition: '$1',
-    maxHeight: 0,
     overflow: 'hidden',
 
-    ['&.active']: {
-      maxHeight: '100%',
+    '&.open': {
+      animation: `${slideDown} .5s cubic-bezier(0.87, 0, 0.13, 1)`,
       transition: '$1',
-      bt: '$navy300',
-      mt: '$1',
-      ptb: 'calc($1 / 2)',
+      color: 'inherit',
+      overflow: 'hidden',
+      marginTop: 'calc($2 / 1)',
+      paddingTop: '$1',
+      borderTop: '1px solid $border200',
+    },
+    '&.closed': {
+      color: 'transparent',
+      maxHeight: 0,
+      transition: '$1',
+      overflow: 'hidden',
+      animation: `${slideUp} .4s cubic-bezier(0.87, 0, 0.13, 1)`,
     },
   });
 
@@ -79,10 +98,10 @@ function Accordion({ css, id, options, active = false }: Props): JSX.Element {
               </Heading>
             </Column>
             <Column minimal baseWidth={20} phoneWidth={20} align='right'>
-              {activeId === id ? <CaretUp /> : <CaretDown />}
+              {activeId === id ? <ArrowUp size={22} /> : <ArrowDown size={22} />}
             </Column>
           </Section>
-          <AccordionContent className={activeId === id ? 'active' : ''}>
+          <AccordionContent className={activeId === id ? 'open' : 'closed'}>
             <Section>
               <Column minimal>
                 <Heading level={6}>{content}</Heading>
