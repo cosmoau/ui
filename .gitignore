@@ -29,4 +29,4 @@ node_modules
 
 *.mdb
 
-public
+/public
