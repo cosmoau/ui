@@ -1,20 +1,22 @@
-# @cosmo-au/ui
+# @cosmo-au/design-system
 
-Foundational styling, components and no-fuss functions for internal use.
+The goal of the Cosmo Design System is to streamline our teams ability to build and maintain Cosmo projects, enforcing strict component APIs and performance parameters.
 
 ### Installation
 
-    $ yarn add @cosmo-au/ui
+    $ yarn add @cosmo-au/design-system
 
 ### Develop
 
     $ yarn dev
+    $ yarn test:dev
 
 ### Build
 
-    $ yarn test
+    $ yarn lint && yarn clean
     $ yarn build
+    $ yarn release
 
-### Usage
+### Documentation
 
-📚 See documentation at https://ui.cosmogroup.io.
+🧃 https://design.cosmogroup.io
