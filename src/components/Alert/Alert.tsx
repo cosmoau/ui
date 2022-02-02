@@ -1,5 +1,5 @@
 import type * as Stitches from '@stitches/react';
-import React, { useRef, useState } from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
 
 import { breakpoints, styled } from '../../stitches.config';
 import { Button } from '../Button';
@@ -26,6 +26,14 @@ function Alert({ css, id, trigger, title, description, cancel, action }: Props):
     setVisibility(false);
   });
 
+  useLayoutEffect(() => {
+    if (visibility) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [visibility]);
+
   const AlertTrigger = styled('div', {
     display: 'inline-flex',
   });
@@ -38,7 +46,7 @@ function Alert({ css, id, trigger, title, description, cancel, action }: Props):
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: '$base400',
+    backgroundColor: '$base300',
     width: '100%',
     scrollBehavior: 'smooth',
     overscrollBehavior: 'contain',
@@ -46,12 +54,14 @@ function Alert({ css, id, trigger, title, description, cancel, action }: Props):
 
   const AlertCard = styled('div', {
     position: 'absolute',
+    transition: '$1',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: '55rem',
     maxWidth: '90vw',
     maxHeight: '70vh',
+    boxShadow: '$4',
 
     [breakpoints.phone]: {
       width: '95%',

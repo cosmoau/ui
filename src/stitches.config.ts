@@ -18,7 +18,7 @@ export const { theme, css, styled, globalCss, getCssText } = createStitches({
     colors: {
       baseBody: '#ffffff',
       base100: 'rgb(4, 44, 63)',
-      base200: 'rgb(1, 8, 19)',
+      base200: 'rgba(4, 44, 63, 0.9)',
       base300: 'rgba(4, 44, 63, 0.15)',
       base400: 'rgba(4, 44, 63, 0.1)',
       baseContrast100: 'rgb(255, 255, 255)',
@@ -54,7 +54,7 @@ export const { theme, css, styled, globalCss, getCssText } = createStitches({
       pink300: 'rgb(245, 213, 235)',
       pink400: 'rgba(107, 26, 83, 0.2)',
       border100: 'rgba(0, 1, 2, 0.15)',
-      border200: 'rgba(0, 1, 2, 0.1)',
+      border200: 'rgb(223, 227, 230)',
     },
     space: {
       1: '0.33rem',
@@ -68,18 +68,18 @@ export const { theme, css, styled, globalCss, getCssText } = createStitches({
     fontSizes: {
       base1: '62.5%',
       base2: '1.6rem',
-      h1: '3.3rem',
-      h2: '2.8rem',
-      h3: '2rem',
-      h4: '2rem',
-      h5: '1.8rem',
+      h1: '3.2rem',
+      h2: '2.7rem',
+      h3: '2.1rem',
+      h4: '1.9rem',
+      h5: '1.75rem',
       h6: '1.6rem',
       t1: '1.5rem',
       t2: '1.4rem',
       t3: '1.2rem',
     },
     fonts: {
-      untitled: 'Untitled Sans, system-ui, sans-serif',
+      body: 'Graphik, system-ui, sans-serif',
     },
     fontWeights: {
       1: 'normal',
@@ -116,22 +116,14 @@ export const { theme, css, styled, globalCss, getCssText } = createStitches({
     },
     shadows: {
       1: '0 0.2rem 0.1rem rgba(0, 0, 0, 0.01)',
-      2: '0 0.4rem 0.4rem rgba(0, 0, 0, 0.05)',
-      3: '0 0.6rem 0.6rem rgba(0, 0, 0, 0.075)',
-      4: '0 0.6rem 0.6rem rgba(0, 0, 0, 0.15)',
+      2: '0 0.4rem 0.4rem rgba(0, 0, 0, 0.033)',
+      3: '0 0.6rem 0.8rem rgba(0, 0, 0, 0.066)',
+      4: '0 0.6rem 0.6rem rgba(0, 0, 0, 0.1)',
     },
     zIndices: {
-      1: '1',
-      2: '2',
-      3: '3',
-      4: '4',
-      5: '5',
-      6: '6',
-      7: '7',
-      8: '8',
-      9: '9',
-      10: '10',
-      zIndexAlert: 50,
+      dropdown: 10,
+      tooltip: 15,
+      zIndexAlert: 100,
       zIndexCookies: 9999,
     },
     transitions: {
@@ -230,7 +222,7 @@ export const { theme, css, styled, globalCss, getCssText } = createStitches({
 export const darkTheme = createTheme('dark', {
   colors: {
     ...(theme.colors as any),
-    baseBody: '#02000a',
+    /* baseBody: '#02000a',
     base100: 'rgb(255, 255, 255)',
     base200: '#e2feff5)',
     base300: 'rgba(255, 255, 255, 0.2)',
@@ -268,7 +260,7 @@ export const darkTheme = createTheme('dark', {
     pink300: 'rgb(245, 213, 235)',
     pink400: 'rgba(107, 26, 83, 0.2)',
     border100: 'rgba(255, 255, 255, 0.15)',
-    border200: 'rgba(255, 255, 255, 0.075)',
+    border200: 'rgba(255, 255, 255, 0.075)',*/
   },
 });
 
@@ -282,26 +274,23 @@ export const globalStyles = globalCss({
     margin: '0',
     padding: '0',
     border: '0',
-    font: 'inherit',
   },
   body: {
     color: theme.colors.base100,
     lineHeight: theme.lineHeights.base + ' !important',
     fontSize: theme.fontSizes.base2 + ' !important',
     height: '100%',
-    verticalAlign: 'baseline',
     boxSizing: 'border-box;',
     margin: 0,
     padding: 0,
   },
   '*': {
-    fontFamily: 'Untitled Sans',
-
+    fontFamily: 'Graphik',
+    WebkitFontSmoothing: 'antialiased',
+    MozOsxFontSmoothing: 'grayscale',
+    WebkitAppearance: 'none',
     boxSizing: 'border-box',
     outline: 'none',
-    webkitfontSmoothing: 'antialiased',
-    mozOsxFontSmoothing: 'grayscale',
-    textRendering: 'optimizeLegibility',
     letterSpacing: 'normal',
     wordSpacing: 'normal',
     marginBlockStart: '0',
@@ -315,8 +304,6 @@ export const globalStyles = globalCss({
   },
   svg: {
     transition: theme.transitions[1],
-    verticalAlign: 'middle',
-    alignSelf: 'center',
   },
   img: {
     borderRadius: theme.radii[3],

@@ -1,13 +1,13 @@
 import type * as Stitches from '@stitches/react';
 import React from 'react';
 
-import { styled } from '../../stitches.config';
+import { styled, breakpoints } from '../../stitches.config';
 import { Loading } from '../Loading';
 
 export interface Props extends React.HTMLAttributes<HTMLButtonElement> {
   css?: Stitches.CSS;
   id?: string;
-  theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'transparent';
+  theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'transparent' | 'dark';
   loader?: boolean;
   icon?: JSX.Element;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
@@ -22,11 +22,12 @@ function Button({ css, id, theme, loader, icon, onClick, children, ...props }: P
     cursor: 'pointer',
     margin: 0,
     width: 'auto',
-    font: '$untitled',
-    webkitFontSmoothing: 'inherit',
-    mozOsxFontSmoothing: 'inherit',
-    webkitAppearance: 'none',
+    font: '$body',
+    WebkitFontSmoothing: 'antialiased',
+    MozOsxFontSmoothing: 'grayscale',
+    WebkitAppearance: 'none',
     overflow: 'visible',
+    fontFamily: 'inherit',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
     '&::-moz-focus-inner': {
@@ -53,7 +54,7 @@ function Button({ css, id, theme, loader, icon, onClick, children, ...props }: P
     paddingLeft: '$2',
     paddingRight: '$2',
     borderRadius: '$1',
-    fontSize: '1.7rem',
+    fontSize: '$h5',
     border: `0.1rem solid ${
       theme === 'red'
         ? '$red400'
@@ -71,6 +72,8 @@ function Button({ css, id, theme, loader, icon, onClick, children, ...props }: P
         ? '$pink400'
         : theme === 'transparent'
         ? 'transparent'
+        : theme === 'dark'
+        ? '$base100'
         : '$border100'
     }`,
     backgroundColor:
@@ -90,6 +93,8 @@ function Button({ css, id, theme, loader, icon, onClick, children, ...props }: P
         ? '$pink300'
         : theme === 'transparent'
         ? 'transparent'
+        : theme === 'dark'
+        ? '$base100'
         : '$baseContrast100',
     color:
       theme === 'red'
@@ -106,11 +111,20 @@ function Button({ css, id, theme, loader, icon, onClick, children, ...props }: P
         ? '$purple100'
         : theme === 'pink'
         ? '$pink100'
+        : theme === 'transparent'
+        ? '$base100'
+        : theme === 'dark'
+        ? '$baseContrast100'
         : '$base100',
     boxShadow: '$1',
     '&:disabled': {
       opacity: 0.5,
       cursor: 'wait',
+    },
+    '*': {
+      boxSizing: 'border-box',
+      verticalAlign: 'middle',
+      display: 'inline-block',
     },
     '&:hover': {
       backgroundColor:
@@ -128,7 +142,26 @@ function Button({ css, id, theme, loader, icon, onClick, children, ...props }: P
           ? '$purple200'
           : theme === 'pink'
           ? '$pink200'
+          : theme === 'transparent'
+          ? '$navy300'
+          : theme === 'dark'
+          ? '$base200'
           : '$navy300',
+    },
+
+    [breakpoints.phone]: {
+      fontSize: 'calc($h5 * 0.95)',
+      lineHeight: 'calc($h5 * 0.95)',
+    },
+
+    [breakpoints.tabletX]: {
+      fontSize: 'calc($h5 * 0.92)',
+      lineHeight: 'calc($h5 * 0.92)',
+    },
+
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($h5 * 0.96)',
+      lineHeight: 'calc($h5 * 0.96)',
     },
   });
 
@@ -136,8 +169,14 @@ function Button({ css, id, theme, loader, icon, onClick, children, ...props }: P
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    pointerEvents: 'none',
+    width: '2.8rem',
+    height: '2.8rem',
     marginRight: 'calc($2 / 2)',
+
+    svg: {
+      width: '100%',
+      height: '100%',
+    },
   });
 
   return (

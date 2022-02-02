@@ -1,6 +1,6 @@
 import type * as Stitches from '@stitches/react';
 import { X } from 'phosphor-react';
-import React, { useRef, useState } from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
 
 import { breakpoints, styled } from '../../stitches.config';
 import { Card } from '../Card';
@@ -22,6 +22,14 @@ export default function Dialog({ css, id, trigger, children }: Props): JSX.Eleme
     setVisibility(false);
   });
 
+  useLayoutEffect(() => {
+    if (visibility) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [visibility]);
+
   const DialogTrigger = styled('div', {
     display: 'inline-flex',
   });
@@ -34,10 +42,11 @@ export default function Dialog({ css, id, trigger, children }: Props): JSX.Eleme
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: 'rgba(0,0,0,0.1)',
+    backgroundColor: '$base300',
     width: '100%',
     scrollBehavior: 'smooth',
     overscrollBehavior: 'contain',
+    overflowY: 'scroll',
   });
 
   const DialogCard = styled('div', {
@@ -48,6 +57,7 @@ export default function Dialog({ css, id, trigger, children }: Props): JSX.Eleme
     width: '70rem',
     maxWidth: '90vw',
     maxHeight: '80vh',
+    boxShadow: '$4',
 
     [breakpoints.phone]: {
       width: '95%',

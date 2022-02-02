@@ -6,7 +6,7 @@ import { breakpoints, styled } from '../../stitches.config';
 export interface Props {
   css?: Stitches.CSS;
   id?: string;
-  theme?: 'alternate' | 'light';
+  theme?: 'dark' | 'alternate' | 'light';
   inner?: boolean;
   top?: 1 | 2 | 3 | 4 | 5 | 6;
   bottom?: 1 | 2 | 3 | 4 | 5 | 6;
@@ -17,8 +17,8 @@ export default function Block({ css, id, theme, inner, top, bottom, children }: 
   const BlockWrapper = styled('div', {
     minWidth: '100%',
     width: '100%',
-    backgroundColor: theme === 'alternate' ? '$baseContrast200' : '$baseBody',
-    color: '$base100',
+    backgroundColor: theme === 'dark' ? '$base100' : theme === 'alternate' ? '$baseContrast200' : '$baseBody',
+    color: theme === 'dark' ? '$baseContrast100' : '$base100',
     paddingLeft: '$2',
     paddingRight: '$2',
     paddingTop: top ? `$${top}` : 'inherit',

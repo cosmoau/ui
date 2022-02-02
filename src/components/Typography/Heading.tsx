@@ -42,7 +42,6 @@ function Heading({
     fontSize: '$h1',
     fontWeight: '$2',
     lineHeight: '$h1',
-    letterSpacing: '0.01rem',
     marginBottom: inlineSpacer ? 0 : 'calc($3 / 1.1)',
 
     [breakpoints.phone]: {
@@ -67,7 +66,6 @@ function Heading({
     fontSize: '$h2',
     fontWeight: '$2',
     lineHeight: '$h2',
-    letterSpacing: '0.01rem',
     marginBottom: inlineSpacer ? 0 : 'calc($3 / 1.4)',
 
     [breakpoints.phone]: {
@@ -118,7 +116,6 @@ function Heading({
     fontWeight: '$1',
     lineHeight: '$h4',
     opacity: 0.8,
-    letterSpacing: '0.01rem',
     marginBottom: inlineSpacer ? 0 : '$2',
 
     [breakpoints.phone]: {
@@ -161,11 +158,6 @@ function Heading({
     },
 
     [breakpoints.laptopX]: {
-      fontSize: 'calc($h5 * 0.94)',
-      lineHeight: 'calc($h5 * 0.94)',
-    },
-
-    [breakpoints.desktopX]: {
       fontSize: 'calc($h5 * 0.96)',
       lineHeight: 'calc($h5 * 0.96)',
     },
@@ -178,7 +170,6 @@ function Heading({
     fontWeight: '$1',
     lineHeight: '$h6',
     marginBottom: inlineSpacer ? 0 : 'calc($1 * 3)',
-    opacity: 0.7,
 
     [breakpoints.phone]: {
       fontSize: 'calc($h6 * 0.95)',

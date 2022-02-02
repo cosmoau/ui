@@ -65,7 +65,7 @@ function Tooltip({ css, trigger, passKey, type = 'click', align = 'left', childr
     paddingRight: 'calc($2 / 1.66)',
     display: 'inline-flex',
     minWidth: 'max-content',
-    zIndex: 9999,
+    zIndex: '$tooltip',
     webkitoverflowscrolling: 'touch',
     left: align === 'left' ? '0' : align === 'right' ? 'auto' : '50%',
     right: align === 'right' ? '0' : align === 'left' ? 'auto' : '50%',

@@ -52,10 +52,10 @@ function Dropdown({ css, options, label, passKey, actions, align = 'left' }: Pro
     padding: 'calc($2 / 1.5)',
     marginTop: 'calc($4 / 1.2)',
     maxHeight: '50rem',
-    width: 'fit-content',
-    minWidth: '20rem',
-    maxWidth: '50rem',
-    zIndex: 9999,
+    width: '100%',
+    minWidth: '15rem',
+    maxWidth: '60rem',
+    zIndex: '$dropdown',
     webkitoverflowscrolling: 'touch',
     left: align === 'left' ? '0' : align === 'right' ? 'auto' : '50%',
     right: align === 'right' ? '0' : align === 'left' ? 'auto' : '50%',
@@ -70,6 +70,7 @@ function Dropdown({ css, options, label, passKey, actions, align = 'left' }: Pro
     borderBottom: '0.1rem solid $navy300',
     cursor: 'pointer',
     fontSize: '1.6rem',
+    borderRadius: '$1',
 
     '&:hover': {
       backgroundColor: '$navy400',
@@ -80,7 +81,7 @@ function Dropdown({ css, options, label, passKey, actions, align = 'left' }: Pro
     },
 
     '&.active': {
-      backgroundColor: '$navy400',
+      backgroundColor: '$navy300',
 
       '&:hover': {
         backgroundColor: '$navy400',
@@ -96,6 +97,7 @@ function Dropdown({ css, options, label, passKey, actions, align = 'left' }: Pro
     height: '100%',
     position: 'relative',
     verticalAlign: 'middle',
+    alignSelf: 'center',
   });
 
   return (

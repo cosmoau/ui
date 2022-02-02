@@ -33,7 +33,6 @@ function Text({ css, id, level = 1, inline, inlineSpacer = 0, align = 'left', to
     fontWeight: '$1',
     lineHeight: '$t1',
     marginBottom: inlineSpacer ? 0 : 'calc($1 * 2)',
-    opacity: 0.8,
 
     ...baseStyles,
   });

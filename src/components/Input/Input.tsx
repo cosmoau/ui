@@ -59,7 +59,7 @@ const InputWrapper = styled('input', {
   appearance: 'none',
   display: 'inline-flex',
   fontSize: '16px',
-  fontFamily: '$untitled',
+  fontFamily: '$body',
   margin: 0,
   outline: 'none',
   padding: 0,

@@ -66,13 +66,13 @@ function Accordion({ css, id, options, active = false }: Props): JSX.Element {
     overflow: 'hidden',
 
     '&.open': {
-      animation: `${slideDown} .5s cubic-bezier(0.87, 0, 0.13, 1)`,
+      animation: `${slideDown} .3s cubic-bezier(0.87, 0, 0.13, 1)`,
       transition: '$1',
       color: 'inherit',
       overflow: 'hidden',
-      marginTop: 'calc($2 / 1)',
+      marginTop: '$1',
       paddingTop: '$1',
-      borderTop: '1px solid $border200',
+      borderTop: '1px solid $navy300',
     },
     '&.closed': {
       color: 'transparent',

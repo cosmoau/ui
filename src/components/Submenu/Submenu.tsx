@@ -6,6 +6,7 @@ import React, { useState, useRef } from 'react';
 
 import { styled } from '../../stitches.config';
 import { Outsider } from '../Outsider';
+import { Heading } from '../Typography';
 
 export interface Props {
   css?: Stitches.CSS;
@@ -58,10 +59,11 @@ export default function Submenu({ css, options, trigger, passKey, align = 'left'
     width: '100%',
     minWidth: '15rem',
     maxWidth: '60rem',
-    zIndex: 9999,
+    zIndex: '$dropdown',
     webkitoverflowscrolling: 'touch',
     left: align === 'left' ? '0' : align === 'right' ? 'auto' : '50%',
     right: align === 'right' ? '0' : align === 'left' ? 'auto' : '50%',
+    transform: align === 'left' ? 'translateX(-100%)' : align === 'right' ? 'translateX(100%)' : 'translateX(-50%)',
   });
 
   const SubmenuItemWrapper = styled('div', {
@@ -72,6 +74,7 @@ export default function Submenu({ css, options, trigger, passKey, align = 'left'
     borderBottom: '0.1rem solid $navy300',
     cursor: 'pointer',
     fontSize: '1.6rem',
+    borderRadius: '$1',
 
     a: {
       display: 'block',
@@ -79,7 +82,7 @@ export default function Submenu({ css, options, trigger, passKey, align = 'left'
     },
 
     '&:hover': {
-      backgroundColor: '$navy300',
+      backgroundColor: '$navy400',
     },
 
     '&:last-child': {
@@ -87,10 +90,10 @@ export default function Submenu({ css, options, trigger, passKey, align = 'left'
     },
 
     '&.active': {
-      backgroundColor: '$navy400',
+      backgroundColor: '$navy300',
 
       '&:hover': {
-        backgroundColor: '$navy300',
+        backgroundColor: '$navy400',
       },
     },
   });
@@ -103,6 +106,7 @@ export default function Submenu({ css, options, trigger, passKey, align = 'left'
     height: '100%',
     position: 'relative',
     verticalAlign: 'middle',
+    alignSelf: 'center',
   });
 
   return (
@@ -120,10 +124,13 @@ export default function Submenu({ css, options, trigger, passKey, align = 'left'
                   }}>
                   {icon ? (
                     <SubmenuIconWrapper>
-                      {icon}&nbsp; {name}
+                      {icon}&nbsp;{' '}
+                      <Heading level={5} inline>
+                        {name}
+                      </Heading>
                     </SubmenuIconWrapper>
                   ) : (
-                    name
+                    <Heading level={5}>{name}</Heading>
                   )}
                 </a>
               </Link>

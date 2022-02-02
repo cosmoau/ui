@@ -18,13 +18,7 @@ export default function App() {
     <UI.Context>
       <UI.Cookies token={Math.random()} />
 
-      <UI.Block
-        inner
-        top={2}
-        bottom={2}
-        css={{
-          bb: '$border200',
-        }}>
+      <UI.Block theme='alternate' inner top={6} bottom={6}>
         <UI.Section alignment='center'>
           <UI.Column baseWidth={50} phoneWidth={50}>
             <UI.Heading
@@ -36,7 +30,7 @@ export default function App() {
               }}>
               Cosmo UI Playground
             </UI.Heading>
-            <UI.Switch />
+            <UI.Button theme='dark'>Sign Up</UI.Button>
           </UI.Column>
           <UI.Column baseWidth={50} phoneWidth={50} align='right'>
             <UI.Heading level={5} align='right' inline inlineSpacer={1}>
@@ -73,6 +67,10 @@ export default function App() {
             <UI.Heading level={2}>Accordion</UI.Heading>
             <UI.Heading level={4}>
               A vertically stacked set of interactive headings that each reveal an associated section of content.
+            </UI.Heading>
+            <UI.Heading level={6}>
+              In this quick tutorial, we will install, style, and export a Popover component. This example uses
+              Stitches, but any styling solution is compatible.
             </UI.Heading>
             <div>
               <UI.Badge
