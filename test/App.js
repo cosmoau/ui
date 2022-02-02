@@ -403,23 +403,6 @@ export default function App() {
         }}>
         <UI.Section>
           <UI.Column>
-            <UI.Heading level={2}>Money</UI.Heading>
-            <UI.Heading level={4}>A simple formatter to make money look pretty.</UI.Heading>
-            <UI.Card border>
-              <UI.Money data={123456789} numerals />
-            </UI.Card>
-          </UI.Column>
-        </UI.Section>
-      </UI.Block>
-      <UI.Block
-        inner
-        top={4}
-        bottom={4}
-        css={{
-          bb: '$border200',
-        }}>
-        <UI.Section>
-          <UI.Column>
             <UI.Heading level={2}>Percentages</UI.Heading>
             <UI.Heading level={4}>
               A simple formatter to show percentage differences without the clunky code.

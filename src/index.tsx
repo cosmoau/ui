@@ -11,7 +11,6 @@ export * from './components/Dropdown/index';
 export * from './components/Dialog/index';
 export * from './components/Input/index';
 export * from './components/Loading/index';
-export * from './components/Money/index';
 export * from './components/Outsider/index';
 export * from './components/Percentages/index';
 // export * from './components/Precode/index';

@@ -1,11 +1,9 @@
 import type * as Stitches from '@stitches/react';
-import classNames from 'classnames';
 import React from 'react';
 
 import { styled } from '../../stitches.config';
 
 export interface Props {
-  className?: string;
   css?: Stitches.CSS;
   id?: string;
   alignment?: 'initial' | 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch';
@@ -14,15 +12,7 @@ export interface Props {
   children: React.ReactNode;
 }
 
-export default function Section({
-  className,
-  css,
-  id,
-  alignment = 'initial',
-  top,
-  bottom,
-  children,
-}: Props): JSX.Element {
+export default function Section({ css, id, alignment = 'initial', top, bottom, children }: Props): JSX.Element {
   const SectionWrapper = styled('div', {
     display: 'flex',
     flexDirection: 'row',
@@ -41,12 +31,7 @@ export default function Section({
   });
 
   return (
-    <SectionWrapper
-      className={classNames({
-        [`${className}`]: className,
-      })}
-      css={css}
-      id={id}>
+    <SectionWrapper css={css} id={id}>
       {children}
     </SectionWrapper>
   );
