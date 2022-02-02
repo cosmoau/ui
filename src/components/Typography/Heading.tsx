@@ -106,8 +106,8 @@ function Heading({
     },
 
     [breakpoints.laptopX]: {
-      fontSize: 'calc($h3 * 0.94)',
-      lineHeight: 'calc($h3 * 0.94)',
+      fontSize: 'calc($h3 * 0.9)',
+      lineHeight: 'calc($h3 * 0.9)',
     },
 
     ...baseStyles,
@@ -132,8 +132,13 @@ function Heading({
     },
 
     [breakpoints.laptopX]: {
-      fontSize: 'calc($h4 * 0.96)',
-      lineHeight: 'calc($h4 * 0.96)',
+      fontSize: 'calc($h4 * 0.93)',
+      lineHeight: 'calc($h4 * 0.93)',
+    },
+
+    [breakpoints.desktopX]: {
+      fontSize: 'calc($h4 * 0.93)',
+      lineHeight: 'calc($h4 * 0.93)',
     },
 
     ...baseStyles,
@@ -161,8 +166,8 @@ function Heading({
     },
 
     [breakpoints.desktopX]: {
-      fontSize: 'calc($h5 * 0.97)',
-      lineHeight: 'calc($h5 * 0.97)',
+      fontSize: 'calc($h5 * 0.96)',
+      lineHeight: 'calc($h5 * 0.96)',
     },
 
     ...baseStyles,

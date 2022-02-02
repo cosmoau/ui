@@ -1,7 +1,7 @@
 import type * as Stitches from '@stitches/react';
 import JSConfetti from 'js-confetti';
 import { parseCookies, setCookie } from 'nookies';
-import { ArrowUpRight, X } from 'phosphor-react';
+import { X } from 'phosphor-react';
 import React, { useEffect, useState } from 'react';
 
 import { breakpoints, styled } from '../../stitches.config';
@@ -68,22 +68,26 @@ function Cookies({ css, token = 'cooookies', href = 'https://cosmogroup.io/legal
               textAlign: 'center',
               display: 'inline-flex',
               boxShadow: '$4',
+
+              '*': {
+                color: '$base100',
+              },
             }}>
-            <Heading level={6} inline inlineSpacer={1}>
+            <Heading level={5} inline inlineSpacer={1}>
               🍪
             </Heading>
-            <Heading level={6} inline inlineSpacer={1}>
+            <Heading level={5} inline inlineSpacer={1}>
               We use anonymous cookies.{' '}
               <a href={href || '#'}>
-                <b>
-                  Learn more{' '}
-                  <sup>
-                    <ArrowUpRight />
-                  </sup>
-                </b>
+                <b>Learn more</b>
               </a>
             </Heading>
-            <X onClick={handleAccept} />
+            <X
+              onClick={handleAccept}
+              style={{
+                cursor: 'pointer',
+              }}
+            />
           </Card>
         </CookiesWrapper>
       )}

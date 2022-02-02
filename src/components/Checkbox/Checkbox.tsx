@@ -54,7 +54,7 @@ function Checkbox({ css, id, checked, disabled, children }: Props): JSX.Element 
           justifyContent: 'center',
           borderRadius: '100%',
           aspectRatio: 1,
-          padding: 'calc($2 * 0.5)',
+          padding: 'calc($2 * 0.33)',
         }}
         onClick={handleChange}>
         {checkedState ? <Check /> : <Circle opacity={0.1} />}

@@ -15,11 +15,11 @@ export interface Props {
     icon?: React.ReactNode;
   }>;
   trigger: React.ReactNode;
-  reqKey: string;
+  passKey: string;
   align?: 'left' | 'right' | 'center';
 }
 
-export default function Submenu({ css, options, trigger, reqKey, align = 'left' }: Props): JSX.Element {
+export default function Submenu({ css, options, trigger, passKey, align = 'left' }: Props): JSX.Element {
   const router = useRouter();
   const ref = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -34,24 +34,25 @@ export default function Submenu({ css, options, trigger, reqKey, align = 'left' 
     setIsOpen(false);
   });
 
-  const SubmenuTrigger = styled('div', {
-    display: 'inline-block',
-    position: 'relative',
-  });
-
   const SubmenuWrapper = styled('div', {
     position: 'relative',
     display: 'inline-flex',
   });
 
+  const SubmenuTrigger = styled('div', {
+    display: 'inline-block',
+    position: 'relative',
+  });
+
   const SubmenuGroupWrapper = styled('div', {
     background: '$baseContrast100',
     borderRadius: '$2',
-    border: '0.1rem solid $navy400',
+    border: '0.1rem solid $border100',
     boxShadow: '$3',
     boxSizing: 'border-box',
     overflowY: 'auto',
     position: 'absolute',
+    padding: 'calc($2 / 1.5)',
     marginTop: 'calc($4 / 1.2)',
     maxHeight: '50rem',
     width: '100%',
@@ -67,12 +68,8 @@ export default function Submenu({ css, options, trigger, reqKey, align = 'left' 
     display: 'flex',
     textAlign: 'left',
     transition: '$1',
-    padding: '$2',
-    paddingTop: '$2',
-    paddingBottom: '$2',
-    paddingLeft: 'calc($3 / 1.66)',
-    paddingRight: 'calc($3 / 1.66)',
-    borderBottom: '0.1rem solid $navy400',
+    padding: 'calc($2 / 1.8)',
+    borderBottom: '0.1rem solid $navy300',
     cursor: 'pointer',
     fontSize: '1.6rem',
 
@@ -108,12 +105,8 @@ export default function Submenu({ css, options, trigger, reqKey, align = 'left' 
     verticalAlign: 'middle',
   });
 
-  if (!reqKey) {
-    throw new Error('Dropdown: key is required');
-  }
-
   return (
-    <SubmenuWrapper css={css} key={reqKey} ref={ref}>
+    <SubmenuWrapper css={css} key={passKey} ref={ref}>
       <SubmenuTrigger onClick={handleClick}>{trigger}</SubmenuTrigger>
       {isOpen && (
         <SubmenuGroupWrapper>

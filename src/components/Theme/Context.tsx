@@ -12,8 +12,11 @@ function Context({ children, theme = defaultTheme }: Props): JSX.Element {
   const { isDarkMode } = useDarkMode();
 
   const ContextWrapper = styled('div', {
-    globalStyles,
+    position: 'relative',
+    background: isDarkMode ? 'black' : 'white',
   });
+
+  globalStyles();
 
   return <ContextWrapper className={isDarkMode ? darkTheme : theme}>{children}</ContextWrapper>;
 }

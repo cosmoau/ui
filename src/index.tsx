@@ -13,11 +13,10 @@ export * from './components/Input/index';
 export * from './components/Loading/index';
 export * from './components/Outsider/index';
 export * from './components/Percentages/index';
-// export * from './components/Precode/index';
 export * from './components/Section/index';
 export * from './components/Submenu/index';
 export * from './components/Textarea/index';
-// export * from './components/Tooltip/index';
+export * from './components/Tooltip/index';
 export * from './components/Block/index';
 export * from './components/Typography/index';
 

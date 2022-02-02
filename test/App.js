@@ -252,6 +252,7 @@ export default function App() {
       </UI.Block>
       <UI.Block
         inner
+        theme='dark'
         top={4}
         bottom={4}
         css={{
@@ -315,7 +316,6 @@ export default function App() {
                     {
                       name: 'Demo 1',
                       value: 'demo1',
-                      icon: <HardDrive size={25} />,
                     },
                     {
                       name: 'Demo 2',
@@ -326,15 +326,10 @@ export default function App() {
                       value: 'demo3',
                     },
                   ]}
-                  header={
-                    <UI.Heading level={5}>
-                      {activeLabel} ({active})
-                    </UI.Heading>
-                  }
                   label={activeLabel}
                   actions={handleOptions}
                   align='center'
-                  reqKey={'keysss'}
+                  passKey='keys3'
                 />
               </div>
             </UI.Card>
@@ -423,12 +418,12 @@ export default function App() {
         }}>
         <UI.Section>
           <UI.Column>
-            <UI.Heading level={2}>Percentages</UI.Heading>
-            <UI.Heading level={4}>
-              A simple formatter to show percentage differences without the clunky code.
-            </UI.Heading>
+            <UI.Heading level={2}>Tooltip</UI.Heading>
+            <UI.Heading level={4}>A tooltip that can be used in any context.</UI.Heading>
             <UI.Card border>
-              <UI.Percentages numberA={222225.22} numberB={503444656} showDollarDifference toFixed={5} />
+              <UI.Tooltip type='hover' trigger={<UI.Button>Open</UI.Button>} passKey='33333'>
+                lorem ipsum
+              </UI.Tooltip>
             </UI.Card>
           </UI.Column>
         </UI.Section>
@@ -484,7 +479,7 @@ export default function App() {
                     {activeLabel} ({active})
                   </UI.Heading>
                 }
-                reqKey={'keysss2'}
+                passKey='keys2'
               />
             </UI.Card>
           </UI.Column>
@@ -511,66 +506,6 @@ export default function App() {
                     mb: '$2',
                   }}>
                   Alphabetical ordering of prop types
-                </UI.Badge>
-              </div>
-              <div>
-                <UI.Badge
-                  theme='border'
-                  dot='pulse'
-                  dotColor='yellow'
-                  css={{
-                    mb: '$2',
-                  }}>
-                  Remove classname dependency
-                </UI.Badge>
-              </div>
-
-              <div>
-                <UI.Badge
-                  theme='border'
-                  dot='pulse'
-                  dotColor='yellow'
-                  css={{
-                    mb: '$2',
-                  }}>
-                  Todo - Create Tab component, which is essentially a big button with optional heading, heading opacity
-                  low unless on hover - acting as a conceal with an active state. See
-                  https://cosmo.pirsch.io/?domain=cosmogroup.io
-                </UI.Badge>
-              </div>
-              <div>
-                <UI.Badge
-                  theme='border'
-                  dot='pulse'
-                  dotColor='yellow'
-                  css={{
-                    mb: '$2',
-                  }}>
-                  Committ and release cheatsheet (CONTRIBUTION.MD)
-                </UI.Badge>
-              </div>
-
-              <div>
-                <UI.Badge
-                  theme='border'
-                  dot='pulse'
-                  dotColor='yellow'
-                  css={{
-                    mb: '$2',
-                  }}>
-                  Migrate Tooltip, set option for hover or click to open
-                </UI.Badge>
-              </div>
-
-              <div>
-                <UI.Badge
-                  theme='border'
-                  dot='pulse'
-                  dotColor='yellow'
-                  css={{
-                    mb: '$2',
-                  }}>
-                  Remove all use of classNames
                 </UI.Badge>
               </div>
             </UI.Card>

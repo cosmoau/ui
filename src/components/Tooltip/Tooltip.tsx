@@ -1,87 +1,83 @@
-import classNames from 'classnames';
+import type * as Stitches from '@stitches/react';
 import React, { useRef, useState } from 'react';
 
+import { styled } from '../../stitches.config';
 import { Outsider } from '../Outsider';
 
 export interface Props {
-  className?: string;
   css?: Stitches.CSS;
-  triggerActive: React.ReactNode | string;
-  triggerInactive?: React.ReactNode | string;
-  triggerKey: string | number;
-  triggerDisplay?: string;
-  triggerAlignment?: string;
+  trigger: React.ReactNode;
+  passKey: string;
+  type?: 'hover' | 'click';
+  align?: 'left' | 'right' | 'center';
   children: React.ReactNode;
 }
 
-function Tooltip({
-  className,
-  style,
-  triggerActive,
-  triggerInactive = triggerActive,
-  triggerKey,
-  triggerDisplay = 'inline',
-  triggerAlignment = 'left',
-  children,
-}: Props): JSX.Element {
+function Tooltip({ css, trigger, passKey, type = 'click', align = 'left', children }: Props): JSX.Element {
   const ref = useRef(null);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const [visibility, setVisibility] = useState('_inactive');
+  const handleClick = (): void => {
+    if (type === 'click') {
+      setIsOpen(!isOpen);
+    }
+  };
 
-  function handler(): void {
-    setVisibility('_inactive');
-  }
+  const handleMouseEnter = (): void => {
+    if (type === 'hover') {
+      setIsOpen(true);
+    }
+  };
 
-  Outsider(ref, handler);
+  const handleMouseLeave = (): void => {
+    if (type === 'hover') {
+      setIsOpen(false);
+    }
+  };
+
+  Outsider(ref, () => {
+    setIsOpen(false);
+  });
+
+  const TooltipWrapper = styled('div', {
+    position: 'relative',
+    display: 'inline-flex',
+  });
+
+  const TooltipTriggerWrapper = styled('div', {
+    display: 'inline-block',
+    position: 'relative',
+  });
+
+  const TooltipContentWrapper = styled('div', {
+    transition: '$1',
+    borderRadius: '$2',
+    background: '$baseContrast100',
+    border: '0.1rem solid $border100',
+    boxShadow: '$3',
+    boxSizing: 'border-box',
+    overflowY: 'auto',
+    position: 'absolute',
+    marginTop: 'calc($4 / 1.4)',
+    paddingTop: '$1',
+    paddingBottom: '$1',
+    paddingLeft: 'calc($2 / 1.66)',
+    paddingRight: 'calc($2 / 1.66)',
+    display: 'inline-flex',
+    minWidth: 'max-content',
+    zIndex: 9999,
+    webkitoverflowscrolling: 'touch',
+    left: align === 'left' ? '0' : align === 'right' ? 'auto' : '50%',
+    right: align === 'right' ? '0' : align === 'left' ? 'auto' : '50%',
+  });
 
   return (
-    <>
-      {visibility === '_inactive' ? (
-        <div
-          className={classNames('Tooltip-trigger', {
-            [triggerDisplay]: triggerDisplay,
-          })}
-          onClickCapture={(e) => {
-            e.persist();
-            setVisibility('_active');
-          }}
-          key={`${triggerKey}-B`}>
-          {triggerActive}
-        </div>
-      ) : (
-        <div
-          className={classNames('Tooltip-trigger', {
-            [triggerDisplay]: triggerDisplay,
-          })}
-          onClickCapture={(e) => {
-            e.persist();
-            setVisibility('_inactive');
-          }}
-          key={`${triggerKey}-C`}>
-          {triggerInactive || triggerActive}
-        </div>
-      )}
-      <div
-        className={classNames('Tooltip', {
-          [`${className}`]: className,
-          [`${visibility}`]: visibility,
-          [`${triggerAlignment}`]: visibility,
-        })}
-        ref={ref}
-        key={triggerKey}
-        css={css}>
-        {visibility === '_active' ? (
-          <div
-            className='children'
-            onClickCapture={(e) => {
-              e.persist();
-              setVisibility('_inactive');
-            }}>
-            {children}
-          </div>
-        ) : null}
-      </div>
-    </>
+    <TooltipWrapper css={css} key={passKey} ref={ref}>
+      <TooltipTriggerWrapper onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        {trigger}
+      </TooltipTriggerWrapper>
+      {isOpen && <TooltipContentWrapper>{children}</TooltipContentWrapper>}
+    </TooltipWrapper>
   );
 }
 export default Tooltip;

@@ -13,14 +13,13 @@ export interface Props {
     name: string;
     icon?: React.ReactNode;
   }>;
-  header?: React.ReactNode;
   label: string | React.ReactNode;
-  reqKey: string;
+  passKey: string;
   actions: any;
   align?: 'left' | 'right' | 'center';
 }
 
-function Dropdown({ css, options, header, label, reqKey, actions, align = 'left' }: Props): JSX.Element {
+function Dropdown({ css, options, label, passKey, actions, align = 'left' }: Props): JSX.Element {
   const ref = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -45,11 +44,12 @@ function Dropdown({ css, options, header, label, reqKey, actions, align = 'left'
   const DropdownGroupWrapper = styled('div', {
     background: '$baseContrast100',
     borderRadius: '$2',
-    border: '0.1rem solid $navy400',
+    border: '0.1rem solid $border100',
     boxShadow: '$3',
     boxSizing: 'border-box',
     overflowY: 'auto',
     position: 'absolute',
+    padding: 'calc($2 / 1.5)',
     marginTop: 'calc($4 / 1.2)',
     maxHeight: '50rem',
     width: 'fit-content',
@@ -62,34 +62,17 @@ function Dropdown({ css, options, header, label, reqKey, actions, align = 'left'
     transform: align === 'left' ? 'translateX(-100%)' : align === 'right' ? 'translateX(100%)' : 'translateX(-50%)',
   });
 
-  const DropdownHeaderWrapper = styled('div', {
-    display: 'flex',
-    textAlign: 'left',
-    transition: '$1',
-    padding: '$2',
-    paddingTop: 'calc($2 / 1.66)',
-    paddingBottom: 'calc($2 / 1.66)',
-    paddingLeft: 'calc($3 / 1.66)',
-    paddingRight: 'calc($3 / 1.66)',
-    borderBottom: '0.1rem solid $navy200',
-    width: '100%',
-  });
-
   const DropdownItemWrapper = styled('div', {
     display: 'flex',
     textAlign: 'left',
     transition: '$1',
-    padding: '$2',
-    paddingTop: '$2',
-    paddingBottom: '$2',
-    paddingLeft: 'calc($3 / 1.66)',
-    paddingRight: 'calc($3 / 1.66)',
-    borderBottom: '0.1rem solid $navy400',
+    padding: 'calc($2 / 1.8)',
+    borderBottom: '0.1rem solid $navy300',
     cursor: 'pointer',
     fontSize: '1.6rem',
 
     '&:hover': {
-      backgroundColor: '$navy300',
+      backgroundColor: '$navy400',
     },
 
     '&:last-child': {
@@ -100,7 +83,7 @@ function Dropdown({ css, options, header, label, reqKey, actions, align = 'left'
       backgroundColor: '$navy400',
 
       '&:hover': {
-        backgroundColor: '$navy300',
+        backgroundColor: '$navy400',
       },
     },
   });
@@ -115,16 +98,11 @@ function Dropdown({ css, options, header, label, reqKey, actions, align = 'left'
     verticalAlign: 'middle',
   });
 
-  if (!reqKey) {
-    throw new Error('Dropdown: key is required');
-  }
-
   return (
-    <DropdownWrapper css={css} key={reqKey} ref={ref}>
+    <DropdownWrapper css={css} key={passKey} ref={ref}>
       <Button onClick={handleClick}>{label || <Loading />}</Button>
       {isOpen && (
         <DropdownGroupWrapper>
-          {header && <DropdownHeaderWrapper>{header}</DropdownHeaderWrapper>}
           {options.map((option) => (
             <DropdownItemWrapper
               className={label === option.name ? 'active' : 'inactive'}

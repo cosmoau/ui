@@ -18,7 +18,7 @@ const InputContainerWrapper = styled('div', {
   position: 'relative',
   borderRadius: '$2',
   backgroundColor: '$baseContrast100',
-  border: '0.1rem solid $navy200',
+  border: '0.1rem solid $border100',
   paddingTop: 'calc($2 * 0.6)',
   paddingBottom: 'calc($2 * 0.6)',
   paddingLeft: '$2',
@@ -28,15 +28,15 @@ const InputContainerWrapper = styled('div', {
   transition: '$1',
   '&:hover': {
     boxShadow: '$2',
-    border: '0.1rem solid $navy200',
+    border: '0.1rem solid $border100',
   },
   '&:focus-within': {
     boxShadow: '$2',
-    border: '0.1rem solid $navy200',
+    border: '0.1rem solid $border100',
   },
   '&:active': {
     boxShadow: '$2',
-    border: '0.1rem solid $navy200',
+    border: '0.1rem solid $border100',
   },
 
   '&:disabled': {

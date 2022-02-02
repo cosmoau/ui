@@ -9,7 +9,7 @@ import { styled } from '../../stitches.config';
 import { Button } from '../Button';
 import { Column } from '../Column';
 import { Section } from '../Section';
-import { Heading } from '../Typography';
+import { Text } from '../Typography';
 
 const TextAreaContainerWrapper = styled('div', {
   width: 'auto',
@@ -19,9 +19,9 @@ const TextAreaContainerWrapper = styled('div', {
   position: 'relative',
   borderRadius: '$2',
   backgroundColor: '$baseContrast100',
-  border: '0.1rem solid $navy200',
-  paddingTop: 'calc($2 * 0.6)',
-  paddingBottom: 'calc($2 * 0.6)',
+  border: '0.1rem solid $border100',
+  paddingTop: 'calc($2 * 0.8)',
+  paddingBottom: 'calc($2 * 0.8)',
   paddingLeft: '$2',
   paddingRight: '$2',
   boxShadow: '$1',
@@ -29,15 +29,15 @@ const TextAreaContainerWrapper = styled('div', {
   transition: '$1',
   '&:hover': {
     boxShadow: '$2',
-    border: '0.1rem solid $navy200',
+    border: '0.1rem solid $border100',
   },
   '&:focus-within': {
     boxShadow: '$2',
-    border: '0.1rem solid $navy200',
+    border: '0.1rem solid $border100',
   },
   '&:active': {
     boxShadow: '$2',
-    border: '0.1rem solid $navy200',
+    border: '0.1rem solid $border100',
   },
 
   '&:disabled': {
@@ -47,12 +47,13 @@ const TextAreaContainerWrapper = styled('div', {
 });
 
 const TextareaWrapper = styled('textarea', {
+  backgroundColor: 'transparent',
+  color: '$base100',
   appearance: 'none',
   display: 'inline-flex',
   width: '100%',
   height: '100%',
   border: '0',
-  padding: 'calc($2 * 0.6)',
   margin: '0',
   fontSize: '1.6rem !important',
 });
@@ -95,11 +96,14 @@ const Textarea: FC<Props> = ({ css, rows = 5, columns = 1, value = '', maxLength
         maxLength={maxLength}
         onChange={handleChange}
       />
-      <Section>
+      <Section
+        css={{
+          padding: 0,
+        }}>
         <Column minimal baseWidth={60} phoneWidth={60}>
-          <Heading level={6}>
+          <Text level={2}>
             {controlledValue.length} / {maxLength}
-          </Heading>
+          </Text>
         </Column>
         {copy && (
           <Column minimal baseWidth={40} phoneWidth={40} align='right'>
