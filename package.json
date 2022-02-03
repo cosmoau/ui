@@ -61,16 +61,7 @@
   "main": "dist/index.js",
   "module": "dist/index.modern.module.js",
   "np": {
-    "anyBranch": false,
-    "branch": "main",
-    "cleanup": true,
-    "tests": true,
-    "yolo": false,
-    "publish": true,
-    "preview": true,
-    "yarn": true,
-    "releaseDraft": true,
-    "2fa": true,
+    "branch": "main",  
     "message": "release: v%s"
   },
   "peerDependencies": {
