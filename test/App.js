@@ -5,7 +5,16 @@ import '../fonts.css';
 export function App() {
   return (
     <UI.Context>
-      <UI.Button>Hello world!</UI.Button>
+      <UI.Accordion
+        options={[
+          {
+            content: 'hey',
+            heading: 'hey',
+            id: 1,
+          },
+        ]}>
+        Hello world!
+      </UI.Accordion>
     </UI.Context>
   );
 }

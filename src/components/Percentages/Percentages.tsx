@@ -1,6 +1,6 @@
 import type * as Stitches from '@stitches/react';
 import { TrendDown, TrendUp } from 'phosphor-react';
-import React from 'react';
+import { useState, useEffect } from 'react';
 
 import { styled } from '../../stitches.config';
 import { Badge } from '../Badge';
@@ -26,12 +26,12 @@ export default function Percentages({
   toFixed = 1,
   trendDirection = 'up',
 }: Props): JSX.Element {
-  const [isLoading, setIsLoading] = React.useState(true as boolean);
-  const [value, setValue] = React.useState(0 as any);
-  const [difference, setDifference] = React.useState(0 as any);
-  const [differenceDirection, setDifferenceDirection] = React.useState('up' as 'up' | 'down');
+  const [isLoading, setIsLoading] = useState(true as boolean);
+  const [value, setValue] = useState(0 as any);
+  const [difference, setDifference] = useState(0 as any);
+  const [differenceDirection, setDifferenceDirection] = useState('up' as 'up' | 'down');
 
-  React.useEffect(() => {
+  useEffect(() => {
     const mathPercentage = ((numberA - numberB) / numberB) * 100;
     const mathDifference = numberA - numberB;
 

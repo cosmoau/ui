@@ -13,7 +13,7 @@ export const breakpoints = {
   dark: '@media only screen and (prefers-color-scheme: dark)',
 };
 
-export const { theme, css, styled, globalCss, getCssText } = createStitches({
+export const { theme, css, styled, globalCss } = createStitches({
   theme: {
     colors: {
       baseBody: '#ffffff',
@@ -284,6 +284,7 @@ export const globalStyles = globalCss({
     margin: 0,
     padding: 0,
   },
+
   '*': {
     fontFamily: 'Graphik',
     WebkitFontSmoothing: 'antialiased',
@@ -304,6 +305,7 @@ export const globalStyles = globalCss({
   },
   svg: {
     transition: theme.transitions[1],
+    verticalAlign: 'middle',
   },
   img: {
     borderRadius: theme.radii[3],

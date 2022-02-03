@@ -1,5 +1,4 @@
 import type * as Stitches from '@stitches/react';
-import JSConfetti from 'js-confetti';
 import { parseCookies, setCookie } from 'nookies';
 import { X } from 'phosphor-react';
 import { useEffect, useState } from 'react';
@@ -20,7 +19,6 @@ export default function Cookies({
   token = 'cooookies',
 }: Props): JSX.Element {
   const [isShown, setIsShown] = useState(false);
-  const jsConfetti = new JSConfetti();
 
   useEffect(() => {
     const cookies = parseCookies();
@@ -36,11 +34,7 @@ export default function Cookies({
       maxAge: 365 * 24 * 60 * 60,
       path: '/',
     });
-    jsConfetti.addConfetti({
-      emojis: ['🍪'],
-      confettiNumber: 1,
-      emojiSize: 50,
-    });
+
     setIsShown(false);
   };
 
@@ -88,12 +82,9 @@ export default function Cookies({
                 <b>Learn more</b>
               </a>
             </Heading>
-            <X
-              onClick={handleAccept}
-              style={{
-                cursor: 'pointer',
-              }}
-            />
+            <Heading level={5} inline>
+              <X onClick={handleAccept} />
+            </Heading>
           </Card>
         </Wrapper>
       )}
