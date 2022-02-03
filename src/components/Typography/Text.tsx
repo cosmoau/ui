@@ -5,18 +5,18 @@ import { styled } from '../../stitches.config';
 
 export interface Props {
   align?: 'left' | 'center' | 'right' | 'justify' | 'initial' | 'inherit';
-  bottom?: 1 | 2 | 3 | 4 | 5 | 6;
+  bottom?: 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 5 | 6;
   children: ReactNode;
   css?: Stitches.CSS;
   id?: string;
   inline?: boolean;
   inlineSpacer?: number;
   level?: 1 | 2 | 3;
-  top?: 1 | 2 | 3 | 4 | 5 | 6;
+  top?: 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 5 | 6;
 }
 
 export default function Text({
-  align = 'left',
+  align = 'inherit',
   bottom,
   children,
   css,

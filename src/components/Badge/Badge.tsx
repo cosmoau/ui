@@ -12,12 +12,25 @@ export interface Props {
   dot?: boolean | 'pulse';
   dotColor?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink';
   id?: string;
+  inline?: boolean;
+  inlineSpacer?: number;
   loader?: boolean;
   shadow?: boolean;
   theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'border';
 }
 
-export default function Badge({ children, css, dot, dotColor, id, loader, shadow, theme }: Props): JSX.Element {
+export default function Badge({
+  children,
+  css,
+  dot,
+  dotColor,
+  id,
+  inline = true,
+  inlineSpacer = 0,
+  loader,
+  shadow,
+  theme,
+}: Props): JSX.Element {
   const pulseAnimation = keyframes({
     '0%': {
       opacity: 0.5,
@@ -34,7 +47,8 @@ export default function Badge({ children, css, dot, dotColor, id, loader, shadow
   });
 
   const Wrapper = styled('div', {
-    display: 'inline-flex',
+    display: inline ? 'inline-flex' : 'flex',
+    marginRight: inlineSpacer ? `${inlineSpacer}rem` : 0,
     alignItems: 'center',
     justifyContent: 'center',
     position: 'relative',

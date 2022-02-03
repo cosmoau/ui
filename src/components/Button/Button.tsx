@@ -9,12 +9,25 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
   css?: Stitches.CSS;
   icon?: JSX.Element;
   id?: string;
+  inline?: boolean;
+  inlineSpacer?: number;
   loader?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
   theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'transparent' | 'dark';
 }
 
-export default function Button({ children, css, icon, id, loader, onClick, theme, ...props }: Props): JSX.Element {
+export default function Button({
+  children,
+  css,
+  icon,
+  id,
+  inline = true,
+  inlineSpacer = 0,
+  loader,
+  onClick,
+  theme,
+  ...props
+}: Props): JSX.Element {
   const Wrapper = styled('button', {
     // resets
     appearance: 'none',
@@ -41,7 +54,8 @@ export default function Button({ children, css, icon, id, loader, onClick, theme
     },
     // custom
     lineHeight: '1.3',
-    display: 'inline-flex',
+    display: inline ? 'inline-flex' : 'flex',
+    marginRight: inlineSpacer ? `${inlineSpacer}rem` : 0,
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',

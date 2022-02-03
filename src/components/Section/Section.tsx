@@ -5,11 +5,11 @@ import { styled } from '../../stitches.config';
 
 export interface Props {
   alignment?: 'stretch' | 'center' | 'flex-start' | 'flex-end' | 'baseline' | 'initial' | 'inherit';
-  bottom?: 1 | 2 | 3 | 4 | 5 | 6;
+  bottom?: 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 5 | 6;
   children: ReactNode;
   css?: Stitches.CSS;
   id?: string;
-  top?: 1 | 2 | 3 | 4 | 5 | 6;
+  top?: 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 5 | 6;
 }
 
 export default function Section({ alignment = 'initial', bottom, children, css, id, top }: Props): JSX.Element {
@@ -21,8 +21,8 @@ export default function Section({ alignment = 'initial', bottom, children, css, 
     justifyContent: alignment,
     width: '100%',
     maxWidth: '100%',
-    paddingTop: top ? `$${top}` : 'inherit',
-    paddingBottom: bottom ? `$${bottom}` : 'inherit',
+    paddingTop: top ? `$${top}` : 0,
+    paddingBottom: bottom ? `$${bottom}` : 0,
 
     '*': {
       boxSizing: 'border-box',

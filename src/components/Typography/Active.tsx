@@ -10,10 +10,11 @@ export interface Props extends LinkProps {
   css?: Stitches.CSS;
   cssActive: Stitches.CSS;
   cssInactive: Stitches.CSS;
+  hover?: boolean;
   id?: string;
 }
 
-export default function Active({ children, css, cssActive, cssInactive, href, id }: Props): JSX.Element {
+export default function Active({ children, css, cssActive, cssInactive, hover, href, id }: Props): JSX.Element {
   const router = useRouter();
   const path = (router && router.pathname) || '/';
 
@@ -22,6 +23,7 @@ export default function Active({ children, css, cssActive, cssInactive, href, id
     color: 'inherit',
     '&:hover': {
       color: 'inherit',
+      opacity: hover ? 0.7 : 1,
     },
     '&:focus': {
       color: 'inherit',

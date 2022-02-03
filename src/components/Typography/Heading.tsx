@@ -5,18 +5,18 @@ import { styled, breakpoints } from '../../stitches.config';
 
 export interface Props {
   align?: 'left' | 'center' | 'right' | 'justify' | 'initial' | 'inherit';
-  bottom?: 1 | 2 | 3 | 4 | 5 | 6;
+  bottom?: 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 5 | 6;
   children: ReactNode;
   css?: Stitches.CSS;
   id?: string;
   inline?: boolean;
   inlineSpacer?: number;
   level?: 1 | 2 | 3 | 4 | 5 | 6;
-  top?: 1 | 2 | 3 | 4 | 5 | 6;
+  top?: 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 5 | 6;
 }
 
 export default function Heading({
-  align = 'left',
+  align = 'inherit',
   bottom,
   children,
   css,
@@ -158,8 +158,8 @@ export default function Heading({
     },
 
     [breakpoints.laptopX]: {
-      fontSize: 'calc($h5 * 0.96)',
-      lineHeight: 'calc($h5 * 0.96)',
+      fontSize: 'calc($h5 * 0.94)',
+      lineHeight: 'calc($h5 * 0.94)',
     },
 
     ...baseStyles,
@@ -182,8 +182,8 @@ export default function Heading({
     },
 
     [breakpoints.laptopX]: {
-      fontSize: 'calc($h6 * 0.94)',
-      lineHeight: 'calc($h6 * 0.94)',
+      fontSize: 'calc($h6 * 0.96)',
+      lineHeight: 'calc($h6 * 0.96)',
     },
 
     ...baseStyles,

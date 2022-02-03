@@ -18,9 +18,10 @@ export interface Props {
   }>;
   passKey: string;
   trigger: ReactNode;
+  width?: number;
 }
 
-export default function Submenu({ align = 'left', css, id, options, passKey, trigger }: Props): JSX.Element {
+export default function Submenu({ align = 'left', css, id, options, passKey, trigger, width }: Props): JSX.Element {
   const router = useRouter();
   const ref = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -43,6 +44,10 @@ export default function Submenu({ align = 'left', css, id, options, passKey, tri
   const Trigger = styled('div', {
     display: 'inline-block',
     position: 'relative',
+    cursor: 'pointer',
+    appearance: 'none',
+    outline: 'none',
+    userSelect: 'none',
   });
 
   const GroupWrapper = styled('div', {
@@ -53,27 +58,26 @@ export default function Submenu({ align = 'left', css, id, options, passKey, tri
     boxSizing: 'border-box',
     overflowY: 'auto',
     position: 'absolute',
-    padding: 'calc($2 / 1.5)',
-    marginTop: 'calc($4 / 1.2)',
+    padding: 'calc($2 / 2)',
+    top: '120%',
     maxHeight: '50rem',
     width: '100%',
-    minWidth: '15rem',
-    maxWidth: '60rem',
+    minWidth: width ? `${width}rem` : '15rem',
+    maxWidth: width ? `${width}rem` : '80rem',
     zIndex: '$dropdown - 1',
     webkitoverflowscrolling: 'touch',
-    left: align === 'left' ? '0' : align === 'right' ? 'auto' : '50%',
-    right: align === 'right' ? '0' : align === 'left' ? 'auto' : '50%',
-    transform: align === 'left' ? 'translateX(-100%)' : align === 'right' ? 'translateX(100%)' : 'translateX(-50%)',
+    left: align === 'right' ? 'auto' : 0,
+    right: align === 'right' ? 0 : 'auto',
   });
 
   const ItemWrapper = styled('div', {
     display: 'flex',
     textAlign: 'left',
     transition: '$1',
-    padding: 'calc($2 / 1.8)',
+    padding: 'calc($2 / 2)',
     borderBottom: '0.1rem solid $navy300',
     cursor: 'pointer',
-    fontSize: '1.6rem',
+    fontSize: '1.5rem',
     borderRadius: '$1',
 
     a: {
@@ -131,7 +135,7 @@ export default function Submenu({ align = 'left', css, id, options, passKey, tri
                       </Heading>
                     </IconWrapper>
                   ) : (
-                    <Heading level={5}>{name}</Heading>
+                    <Heading level={6}>{name}</Heading>
                   )}
                 </a>
               </Link>

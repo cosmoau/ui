@@ -5,7 +5,7 @@ import { styled, breakpoints } from '../../stitches.config';
 
 export interface Props {
   align?: 'left' | 'center' | 'right' | 'justify' | 'initial' | 'inherit';
-  bottom?: 1 | 2 | 3 | 4 | 5 | 6;
+  bottom?: 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 5 | 6;
   children: ReactNode;
   css?: Stitches.CSS;
   id?: string;
@@ -16,7 +16,7 @@ export interface Props {
   offsetPhone?: number;
   offsetTablet?: number;
   offsetWide?: number;
-  top?: 1 | 2 | 3 | 4 | 5 | 6;
+  top?: 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 5 | 6;
   width?: number;
   widthDesktop?: number;
   widthLaptop?: number;
@@ -26,7 +26,7 @@ export interface Props {
 }
 
 export default function Column({
-  align = 'left',
+  align = 'inherit',
   bottom,
   children,
   css,
@@ -47,7 +47,7 @@ export default function Column({
   widthWide,
 }: Props): JSX.Element {
   const Wrapper = styled('div', {
-    margin: 'auto',
+    margin: '0 auto',
     display: 'inline-block',
     flex: '1 1 auto',
     marginLeft: 0,
@@ -56,8 +56,8 @@ export default function Column({
     marginBottom: 0,
     paddingLeft: minimal ? 0 : '$3',
     paddingRight: minimal ? 0 : '$3',
-    paddingTop: top ? `$${top}` : 'inherit',
-    paddingBottom: bottom ? `$${bottom}` : 'inherit',
+    paddingTop: top ? `$${top}` : 0,
+    paddingBottom: bottom ? `$${bottom}` : 0,
     textAlign: align,
 
     [breakpoints.phone]: {
