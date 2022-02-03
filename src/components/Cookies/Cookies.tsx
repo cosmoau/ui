@@ -1,7 +1,7 @@
 import type * as Stitches from '@stitches/react';
 import { parseCookies, setCookie } from 'nookies';
 import { X } from 'phosphor-react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { breakpoints, styled } from '../../stitches.config';
 import { Card } from '../Card';

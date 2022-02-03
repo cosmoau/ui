@@ -1,6 +1,6 @@
 import type * as Stitches from '@stitches/react';
 import { X } from 'phosphor-react';
-import { ReactNode, useLayoutEffect, useRef, useState } from 'react';
+import React, { ReactNode, useLayoutEffect, useRef, useState } from 'react';
 import { useOnClickOutside } from 'usehooks-ts';
 
 import { breakpoints, styled } from '../../stitches.config';

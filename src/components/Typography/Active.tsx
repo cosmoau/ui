@@ -1,7 +1,7 @@
 import type * as Stitches from '@stitches/react';
 import Link, { LinkProps } from 'next/link';
 import { useRouter } from 'next/router';
-import { ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 
 import { styled } from '../../stitches.config';
 

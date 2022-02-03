@@ -1,7 +1,7 @@
 import type * as Stitches from '@stitches/react';
 import { keyframes } from '@stitches/react';
 import { Circle } from 'phosphor-react';
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 import { styled } from '../../stitches.config';
 import { Loading } from '../Loading';

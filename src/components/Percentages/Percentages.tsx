@@ -1,6 +1,6 @@
 import type * as Stitches from '@stitches/react';
 import { TrendDown, TrendUp } from 'phosphor-react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { styled } from '../../stitches.config';
 import { Badge } from '../Badge';

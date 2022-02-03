@@ -1,3 +1,4 @@
+import React from 'react';
 export interface Props {
   stroke?: string;
   width?: number;

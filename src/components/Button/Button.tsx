@@ -1,5 +1,5 @@
 import type * as Stitches from '@stitches/react';
-import { HTMLAttributes, MouseEventHandler, ReactNode } from 'react';
+import React, { HTMLAttributes, MouseEventHandler, ReactNode } from 'react';
 
 import { breakpoints, styled } from '../../stitches.config';
 import { Loading } from '../Loading';

@@ -1,5 +1,5 @@
 import type * as Stitches from '@stitches/react';
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { useDarkMode } from 'usehooks-ts';
 
 import { theme as defaultTheme, darkTheme, globalStyles, styled } from '../../stitches.config';

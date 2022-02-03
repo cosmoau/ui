@@ -1,3 +1,4 @@
+import React from 'react';
 import { useDarkMode } from 'usehooks-ts';
 
 import { styled } from '../../stitches.config';

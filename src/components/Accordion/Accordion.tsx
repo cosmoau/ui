@@ -1,7 +1,7 @@
 import type * as Stitches from '@stitches/react';
 import { keyframes } from '@stitches/react';
 import { ArrowDown, ArrowUp } from 'phosphor-react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import { styled } from '../../stitches.config';
 import { Column } from '../Column';

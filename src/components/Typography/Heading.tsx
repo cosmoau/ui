@@ -1,5 +1,5 @@
 import type * as Stitches from '@stitches/react';
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 import { styled, breakpoints } from '../../stitches.config';
 

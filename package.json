@@ -1,7 +1,7 @@
 {
   "name": "@cosmo-au/design-system",
   "description": "The goal of the Cosmo Design System is to streamline our teams ability to build and maintain Cosmo projects, enforcing strict component APIs and performance parameters.",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": false,
   "author": "Jackson Dolman <jackson@cosmogroup.io>",
   "browserslist": {
@@ -64,12 +64,13 @@
     "next": ">=12.0.10",
     "nookies": ">=2.0.0",
     "phosphor-react": ">=1.3.0",
-    "react": ">=17.0.2"
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2"
   },
   "prettier": "@cosmo-au/eslint-config-cosmo/.prettierrc.json",
   "repository": "https://github.com/cosmo-au/design-system",
   "scripts": {
-    "build": "yarn lint && microbundle --jsx React.createElement --format modern,es,cjs",
+    "build": "yarn lint && microbundle --jsx React.createElement --format modern,es,cjs --compress",
     "clean": "prettier --write '**/*.{js,css,jsx,tsx,ts}' '!node_modules/**' '!.git/**' '!dist/**'",
     "dev": "parcel test/index.html",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx",

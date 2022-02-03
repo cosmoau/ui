@@ -3,7 +3,7 @@ import type * as Stitches from '@stitches/react';
 import type { $$StyledComponentProps } from '@stitches/react/types/styled-component';
 import { Check, Clipboard, Eye, EyeClosed, WarningOctagon, X } from 'phosphor-react';
 import type { ChangeEvent, InputHTMLAttributes, ReactNode } from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import { styled } from '../../stitches.config';
 import { Badge } from '../Badge';

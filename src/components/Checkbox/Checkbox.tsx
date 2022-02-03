@@ -1,6 +1,6 @@
 import type * as Stitches from '@stitches/react';
 import { Check, Circle } from 'phosphor-react';
-import { ReactNode, useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 
 import { styled } from '../../stitches.config';
 import { Button } from '../Button';

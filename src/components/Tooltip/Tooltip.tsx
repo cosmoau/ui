@@ -1,5 +1,5 @@
 import type * as Stitches from '@stitches/react';
-import { ReactNode, useRef, useState } from 'react';
+import React, { ReactNode, useRef, useState } from 'react';
 import { useOnClickOutside } from 'usehooks-ts';
 
 import { styled } from '../../stitches.config';
