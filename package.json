@@ -68,7 +68,7 @@
     "yolo": false,
     "publish": true,
     "preview": true,
-    "yarn": true,
+    "yarn": false,
     "releaseDraft": true,
     "2fa": true,
     "message": "release: v%s"
@@ -82,12 +82,12 @@
   "prettier": "@cosmo-au/eslint-config-cosmo/.prettierrc.json",
   "repository": "https://github.com/cosmo-au/design-system",
   "scripts": {
-    "watch": "microbundle watch --jsx 'React.createElement' --jsxImportSource react --format modern,cjs",
-    "clean": "prettier --write '**/*.{js,css,jsx,tsx,ts}' '!node_modules/**' '!.git/**' '!dist/**'",
-    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
     "build": "yarn lint && microbundle  --jsx 'React.createElement' --jsxImportSource react --format modern,cjs",
+    "clean": "prettier --write '**/*.{js,css,jsx,tsx,ts}' '!node_modules/**' '!.git/**' '!dist/**'",
+    "dev": "parcel test/index.html",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
     "release": "np",
-    "dev": "parcel test/index.html"
+    "watch": "microbundle watch --jsx 'React.createElement' --jsxImportSource react --format modern,cjs"
   },
   "source": "src/index.tsx",
   "types": "dist/index.d.ts"
