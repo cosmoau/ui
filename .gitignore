@@ -1,32 +1,14 @@
-# dependencies
-.yarn/*
-!.yarn/cache
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
-dist
-/.vscode
-.parcel-cache
-
-# misc
+ misc
 .DS_Store
-
-# debug
 yarn-debug.log*
 yarn-error.log*
-
-# local env files
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 .DS_Store
-
+.parcel-cache
 node_modules
-.yarn/install-state.gz
-
-*.mdb
-
-/public
+public
+dist
+fonts.css
