@@ -81,8 +81,5 @@
     "watch": "microbundle watch --jsx 'React.createElement' --jsxImportSource react --format modern,cjs"
   },
   "source": "src/index.tsx",
-  "types": "dist/index.d.ts",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
-  }
+  "types": "dist/index.d.ts"
 }
