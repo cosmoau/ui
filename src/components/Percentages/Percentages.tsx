@@ -1,3 +1,4 @@
+import type * as Stitches from '@stitches/react';
 import { TrendDown, TrendUp } from 'phosphor-react';
 import React from 'react';
 
@@ -7,21 +8,25 @@ import Loading from '../Loading/Loading';
 import { Heading } from '../Typography';
 
 export interface Props {
+  css?: Stitches.CSS;
+  id?: string;
   numberA: number;
   numberB: number;
+  showDollarDifference?: boolean;
   toFixed?: number;
   trendDirection?: 'up' | 'down';
-  showDollarDifference?: boolean;
 }
 
 export default function Percentages({
+  css,
+  id,
   numberA,
   numberB,
+  showDollarDifference = false,
   toFixed = 1,
   trendDirection = 'up',
-  showDollarDifference = false,
 }: Props): JSX.Element {
-  const [loading, setLoading] = React.useState(true as boolean);
+  const [isLoading, setIsLoading] = React.useState(true as boolean);
   const [value, setValue] = React.useState(0 as any);
   const [difference, setDifference] = React.useState(0 as any);
   const [differenceDirection, setDifferenceDirection] = React.useState('up' as 'up' | 'down');
@@ -32,7 +37,7 @@ export default function Percentages({
 
     setValue(mathPercentage.toFixed(toFixed));
     setDifference(mathDifference.toFixed(toFixed));
-    setLoading(false);
+    setIsLoading(false);
 
     if (mathDifference > 0) {
       if (trendDirection === 'up') {
@@ -49,11 +54,11 @@ export default function Percentages({
     }
 
     return () => {
-      setLoading(true);
+      setIsLoading(true);
     };
   }, [numberA, numberB, toFixed, trendDirection]);
 
-  const PercentagesWrapper = styled('div', {
+  const Wrapper = styled('div', {
     display: 'inherit',
     position: 'relative',
     width: '100%',
@@ -61,8 +66,8 @@ export default function Percentages({
   });
 
   return (
-    <PercentagesWrapper>
-      {loading ? (
+    <Wrapper css={css} id={id}>
+      {isLoading ? (
         <Loading />
       ) : (
         <>
@@ -82,6 +87,6 @@ export default function Percentages({
           ) : null}
         </>
       )}
-    </PercentagesWrapper>
+    </Wrapper>
   );
 }

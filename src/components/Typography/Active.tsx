@@ -1,23 +1,23 @@
 import type * as Stitches from '@stitches/react';
 import Link, { LinkProps } from 'next/link';
 import { useRouter } from 'next/router';
-import React from 'react';
+import { ReactElement } from 'react';
 
 import { styled } from '../../stitches.config';
 
 export interface Props extends LinkProps {
+  children: ReactElement;
   css?: Stitches.CSS;
+  cssActive: Stitches.CSS;
+  cssInactive: Stitches.CSS;
   id?: string;
-  activeCSS: Stitches.CSS;
-  inactiveCSS: Stitches.CSS;
-  children: React.ReactElement;
 }
 
-function Active({ css, id, href, activeCSS, inactiveCSS, children }: Props) {
+export default function Active({ children, css, cssActive, cssInactive, href, id }: Props): JSX.Element {
   const router = useRouter();
   const path = (router && router.pathname) || '/';
 
-  const LinkWrapper = styled('a', {
+  const Wrapper = styled('a', {
     textDecoration: 'none',
     color: 'inherit',
     '&:hover': {
@@ -27,12 +27,12 @@ function Active({ css, id, href, activeCSS, inactiveCSS, children }: Props) {
       color: 'inherit',
     },
     '&.inactive': {
-      ...(inactiveCSS || {
+      ...(cssInactive || {
         color: '$navy100',
       }),
     },
     '&.active': {
-      ...(activeCSS || {
+      ...(cssActive || {
         color: 'inherit',
       }),
     },
@@ -40,11 +40,9 @@ function Active({ css, id, href, activeCSS, inactiveCSS, children }: Props) {
 
   return (
     <Link href={href} passHref {...children.props}>
-      <LinkWrapper css={css} id={id} className={path === href ? 'active' : 'inactive'}>
+      <Wrapper css={css} id={id} className={path === href ? 'active' : 'inactive'}>
         {children}
-      </LinkWrapper>
+      </Wrapper>
     </Link>
   );
 }
-
-export default Active;

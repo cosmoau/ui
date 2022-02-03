@@ -1,24 +1,29 @@
-import React from 'react';
+import type * as Stitches from '@stitches/react';
+import { ReactNode } from 'react';
 import { useDarkMode } from 'usehooks-ts';
 
 import { theme as defaultTheme, darkTheme, globalStyles, styled } from '../../stitches.config';
 
 export interface Props {
-  children: React.ReactNode;
+  children: ReactNode;
+  css?: Stitches.CSS;
   switchable?: boolean;
   theme?: typeof defaultTheme;
 }
 
-function Context({ children, switchable, theme = defaultTheme }: Props): JSX.Element {
+export default function Context({ children, css, switchable, theme = defaultTheme }: Props): JSX.Element {
   const { isDarkMode } = useDarkMode();
 
-  const ContextWrapper = styled('div', {
+  const Wrapper = styled('div', {
     position: 'relative',
     background: switchable && isDarkMode ? 'black' : 'white',
   });
 
   globalStyles();
 
-  return <ContextWrapper className={switchable && isDarkMode ? darkTheme : theme}>{children}</ContextWrapper>;
+  return (
+    <Wrapper className={switchable && isDarkMode ? darkTheme : theme} css={css}>
+      {children}
+    </Wrapper>
+  );
 }
-export default Context;

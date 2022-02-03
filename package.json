@@ -21,8 +21,8 @@
   "devDependencies": {
     "@cosmo-au/eslint-config-cosmo": "^1.1.0",
     "@stitches/react": "^1.2.6",
+    "@types/react": "^17.0.38",
     "eslint": "^8.8.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
     "js-confetti": "^0.10.2",
     "microbundle": "^0.14.2",
     "next": "^12.0.10",
@@ -58,8 +58,21 @@
     "user interface"
   ],
   "license": "MIT",
-  "main": "dist/index.umd.js",
+  "main": "dist/index.js",
   "module": "dist/index.modern.module.js",
+  "np": {
+    "anyBranch": false,
+    "branch": "main",
+    "cleanup": true,
+    "tests": true,
+    "yolo": false,
+    "publish": true,
+    "preview": true,
+    "yarn": true,
+    "releaseDraft": true,
+    "2fa": true,
+    "message": "release: v%s"
+  },
   "packageManager": "yarn@3.1.1",
   "peerDependencies": {
     "@stitches/react": ">=1.2.6",
@@ -69,16 +82,13 @@
   "prettier": "@cosmo-au/eslint-config-cosmo/.prettierrc.json",
   "repository": "https://github.com/cosmo-au/design-system",
   "scripts": {
-    "build": "microbundle --compress --jsx React.createElement",
+    "watch": "microbundle watch --jsx 'React.createElement' --jsxImportSource react --format modern,cjs",
     "clean": "prettier --write '**/*.{js,css,jsx,tsx,ts}' '!node_modules/**' '!.git/**' '!dist/**'",
-    "dev": "microbundle watch  --jsx React.createElement",
-    "lint": "eslint src --ext .tsx",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "build": "yarn lint && microbundle  --jsx 'React.createElement' --jsxImportSource react --format modern,cjs",
     "release": "np",
-    "test:dev": "parcel test/index.html"
+    "dev": "parcel test/index.html"
   },
   "source": "src/index.tsx",
-  "types": "dist/index.d.ts",
-  "dependencies": {
-    "@types/react": "^17.0.38"
-  }
+  "types": "dist/index.d.ts"
 }

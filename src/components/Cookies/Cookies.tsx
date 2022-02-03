@@ -2,7 +2,7 @@ import type * as Stitches from '@stitches/react';
 import JSConfetti from 'js-confetti';
 import { parseCookies, setCookie } from 'nookies';
 import { X } from 'phosphor-react';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { breakpoints, styled } from '../../stitches.config';
 import { Card } from '../Card';
@@ -10,20 +10,24 @@ import { Heading } from '../Typography';
 
 export interface Props {
   css?: Stitches.CSS;
-  token?: string;
   href?: string;
+  token?: string;
 }
 
-function Cookies({ css, token = 'cooookies', href = 'https://cosmogroup.io/legal/privacy' }: Props): JSX.Element {
-  const [show, setShow] = useState(false);
+export default function Cookies({
+  css,
+  href = 'https://cosmogroup.io/legal/privacy',
+  token = 'cooookies',
+}: Props): JSX.Element {
+  const [isShown, setIsShown] = useState(false);
   const jsConfetti = new JSConfetti();
 
   useEffect(() => {
     const cookies = parseCookies();
     if (cookies[token] === 'true') {
-      setShow(false);
+      setIsShown(false);
     } else {
-      setShow(true);
+      setIsShown(true);
     }
   }, [token]);
 
@@ -34,14 +38,16 @@ function Cookies({ css, token = 'cooookies', href = 'https://cosmogroup.io/legal
     });
     jsConfetti.addConfetti({
       emojis: ['🍪'],
+      confettiNumber: 1,
+      emojiSize: 50,
     });
-    setShow(false);
+    setIsShown(false);
   };
 
-  const CookiesWrapper = styled('div', {
+  const Wrapper = styled('div', {
     position: 'fixed',
     transition: '$1',
-    zIndex: '$zIndexCookies',
+    zIndex: '$cookies',
     bottom: '$2',
     left: 0,
     right: 0,
@@ -56,8 +62,8 @@ function Cookies({ css, token = 'cooookies', href = 'https://cosmogroup.io/legal
 
   return (
     <>
-      {show && (
-        <CookiesWrapper
+      {isShown && (
+        <Wrapper
           css={{
             ...css,
           }}>
@@ -89,10 +95,8 @@ function Cookies({ css, token = 'cooookies', href = 'https://cosmogroup.io/legal
               }}
             />
           </Card>
-        </CookiesWrapper>
+        </Wrapper>
       )}
     </>
   );
 }
-
-export default Cookies;

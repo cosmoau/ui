@@ -1,19 +1,28 @@
 import type * as Stitches from '@stitches/react';
-import React, { useRef, useState } from 'react';
+import { ReactNode, useRef, useState } from 'react';
+import { useOnClickOutside } from 'usehooks-ts';
 
 import { styled } from '../../stitches.config';
-import { Outsider } from '../Outsider';
 
 export interface Props {
-  css?: Stitches.CSS;
-  trigger: React.ReactNode;
-  passKey: string;
-  type?: 'hover' | 'click';
   align?: 'left' | 'right' | 'center';
-  children: React.ReactNode;
+  children: ReactNode;
+  css?: Stitches.CSS;
+  id?: string;
+  passKey: string;
+  trigger: ReactNode;
+  type?: 'hover' | 'click';
 }
 
-function Tooltip({ css, trigger, passKey, type = 'click', align = 'left', children }: Props): JSX.Element {
+export default function Tooltip({
+  align = 'left',
+  children,
+  css,
+  id,
+  passKey,
+  trigger,
+  type = 'hover',
+}: Props): JSX.Element {
   const ref = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -35,21 +44,21 @@ function Tooltip({ css, trigger, passKey, type = 'click', align = 'left', childr
     }
   };
 
-  Outsider(ref, () => {
+  useOnClickOutside(ref, () => {
     setIsOpen(false);
   });
 
-  const TooltipWrapper = styled('div', {
+  const Wrapper = styled('div', {
     position: 'relative',
     display: 'inline-flex',
   });
 
-  const TooltipTriggerWrapper = styled('div', {
+  const TriggerWrapper = styled('div', {
     display: 'inline-block',
     position: 'relative',
   });
 
-  const TooltipContentWrapper = styled('div', {
+  const ContentWrapper = styled('div', {
     transition: '$1',
     borderRadius: '$2',
     background: '$baseContrast100',
@@ -72,12 +81,11 @@ function Tooltip({ css, trigger, passKey, type = 'click', align = 'left', childr
   });
 
   return (
-    <TooltipWrapper css={css} key={passKey} ref={ref}>
-      <TooltipTriggerWrapper onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <Wrapper css={css} id={id} key={passKey} ref={ref}>
+      <TriggerWrapper onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         {trigger}
-      </TooltipTriggerWrapper>
-      {isOpen && <TooltipContentWrapper>{children}</TooltipContentWrapper>}
-    </TooltipWrapper>
+      </TriggerWrapper>
+      {isOpen && <ContentWrapper>{children}</ContentWrapper>}
+    </Wrapper>
   );
 }
-export default Tooltip;

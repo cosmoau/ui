@@ -1,24 +1,39 @@
 import type * as Stitches from '@stitches/react';
 import { keyframes } from '@stitches/react';
 import { Circle } from 'phosphor-react';
-import React from 'react';
+import { ReactNode } from 'react';
 
 import { styled } from '../../stitches.config';
 import { Loading } from '../Loading';
 
 export interface Props {
+  children: ReactNode;
   css?: Stitches.CSS;
-  id?: string;
-  theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'border';
-  loader?: boolean;
-  shadow?: boolean;
   dot?: boolean | 'pulse';
   dotColor?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink';
-  children: React.ReactNode;
+  id?: string;
+  loader?: boolean;
+  shadow?: boolean;
+  theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'border';
 }
 
-function Badge({ css, id, theme, loader, shadow, dot, dotColor, children }: Props): JSX.Element {
-  const BadgeWrapper = styled('div', {
+export default function Badge({ children, css, dot, dotColor, id, loader, shadow, theme }: Props): JSX.Element {
+  const pulseAnimation = keyframes({
+    '0%': {
+      opacity: 0.5,
+      transform: 'scale(0.95)',
+    },
+    '50%': {
+      opacity: 1,
+      transform: 'scale(1)',
+    },
+    '100%': {
+      opacity: 0.5,
+      transform: 'scale(0.95)',
+    },
+  });
+
+  const Wrapper = styled('div', {
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -71,22 +86,7 @@ function Badge({ css, id, theme, loader, shadow, dot, dotColor, children }: Prop
     },
   });
 
-  const pulseAnimation = keyframes({
-    '0%': {
-      opacity: 0.5,
-      transform: 'scale(0.95)',
-    },
-    '50%': {
-      opacity: 1,
-      transform: 'scale(1)',
-    },
-    '100%': {
-      opacity: 0.5,
-      transform: 'scale(0.95)',
-    },
-  });
-
-  const BadgeLoaderWrapper = styled('div', {
+  const LoaderWrapper = styled('div', {
     height: '2.5rem',
     display: 'flex',
     alignItems: 'center',
@@ -94,7 +94,7 @@ function Badge({ css, id, theme, loader, shadow, dot, dotColor, children }: Prop
     borderRadius: '$3',
   });
 
-  const BadgeDotWrapper = styled('div', {
+  const DotWrapper = styled('div', {
     color: `${
       dotColor === 'red'
         ? '$red100'
@@ -114,34 +114,32 @@ function Badge({ css, id, theme, loader, shadow, dot, dotColor, children }: Prop
     }`,
   });
 
-  const BadgePulseWrapper = styled('div', {
+  const PulseWrapper = styled('div', {
     animation: `${pulseAnimation} 1.5s infinite`,
   });
 
   return (
-    <BadgeWrapper css={css} id={id}>
+    <Wrapper css={css} id={id}>
       {loader ? (
-        <BadgeLoaderWrapper>
+        <LoaderWrapper>
           <Loading />
-        </BadgeLoaderWrapper>
+        </LoaderWrapper>
       ) : (
         <>
           {dot && (
-            <BadgeDotWrapper>
+            <DotWrapper>
               {dot === 'pulse' ? (
-                <BadgePulseWrapper>
+                <PulseWrapper>
                   <Circle weight='fill' size={10} style={{ marginRight: 3.33 }} />
-                </BadgePulseWrapper>
+                </PulseWrapper>
               ) : (
                 <Circle weight='fill' size={10} style={{ marginRight: 3.33 }} />
               )}
-            </BadgeDotWrapper>
+            </DotWrapper>
           )}
           {children}
         </>
       )}
-    </BadgeWrapper>
+    </Wrapper>
   );
 }
-
-export default Badge;

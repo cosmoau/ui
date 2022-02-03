@@ -1,5 +1,5 @@
 {
-  "extends": ["plugin:jsx-a11y/recommended", "@cosmo-au/eslint-config-cosmo"],
+  "extends": ["@cosmo-au/eslint-config-cosmo"],
   "globals": {
     "React": true,
     "google": true,

@@ -1,43 +1,43 @@
 import type * as Stitches from '@stitches/react';
 import { X } from 'phosphor-react';
-import React, { useLayoutEffect, useRef, useState } from 'react';
+import { ReactNode, useLayoutEffect, useRef, useState } from 'react';
+import { useOnClickOutside } from 'usehooks-ts';
 
 import { breakpoints, styled } from '../../stitches.config';
 import { Card } from '../Card';
-import { Outsider } from '../Outsider';
 
 export interface Props {
+  children: ReactNode;
   css?: Stitches.CSS;
   id?: string;
-  trigger: React.ReactNode;
-  children: React.ReactNode;
+  trigger: ReactNode;
 }
 
-export default function Dialog({ css, id, trigger, children }: Props): JSX.Element {
+export default function Dialog({ children, css, id, trigger }: Props): JSX.Element {
   const ref = useRef(null);
 
-  const [visibility, setVisibility] = useState(false);
+  const [isShown, setIsShown] = useState(false);
 
-  Outsider(ref, () => {
-    setVisibility(false);
+  useOnClickOutside(ref, () => {
+    setIsShown(false);
   });
 
   useLayoutEffect(() => {
-    if (visibility) {
+    if (isShown) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
     }
-  }, [visibility]);
+  }, [isShown]);
 
-  const DialogTrigger = styled('div', {
+  const TriggerWrapper = styled('div', {
     display: 'inline-flex',
   });
 
-  const DialogWrapper = styled('div', {
+  const Wrapper = styled('div', {
     position: 'fixed',
     transition: '$1',
-    zIndex: '$zIndexAlert',
+    zIndex: '$alert + 1',
     top: 0,
     left: 0,
     right: 0,
@@ -49,7 +49,7 @@ export default function Dialog({ css, id, trigger, children }: Props): JSX.Eleme
     overflowY: 'scroll',
   });
 
-  const DialogCard = styled('div', {
+  const CardWrapper = styled('div', {
     position: 'absolute',
     top: '50%',
     left: '50%',
@@ -66,7 +66,7 @@ export default function Dialog({ css, id, trigger, children }: Props): JSX.Eleme
     },
   });
 
-  const DialogExit = styled('div', {
+  const Exit = styled('div', {
     position: 'absolute',
     top: 0,
     right: 0,
@@ -76,22 +76,22 @@ export default function Dialog({ css, id, trigger, children }: Props): JSX.Eleme
 
   return (
     <>
-      <DialogTrigger
+      <TriggerWrapper
         onClickCapture={(e) => {
           e.persist();
-          setVisibility(true);
+          setIsShown(true);
         }}>
         {trigger}
-      </DialogTrigger>
-      {visibility && (
-        <DialogWrapper id={id}>
-          <DialogCard ref={ref} css={css}>
-            <DialogExit onClick={() => setVisibility(false)}>
+      </TriggerWrapper>
+      {isShown && (
+        <Wrapper id={id}>
+          <CardWrapper ref={ref} css={css}>
+            <Exit onClick={() => setIsShown(false)}>
               <X size={18} />
-            </DialogExit>
+            </Exit>
             <Card>{children}</Card>
-          </DialogCard>
-        </DialogWrapper>
+          </CardWrapper>
+        </Wrapper>
       )}
     </>
   );

@@ -1,26 +1,26 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import type * as Stitches from '@stitches/react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React, { useState, useRef } from 'react';
+import { useState, useRef, ReactNode } from 'react';
+import { useOnClickOutside } from 'usehooks-ts';
 
 import { styled } from '../../stitches.config';
-import { Outsider } from '../Outsider';
 import { Heading } from '../Typography';
 
 export interface Props {
-  css?: Stitches.CSS;
-  options: Array<{
-    value: string;
-    name: string;
-    icon?: React.ReactNode;
-  }>;
-  trigger: React.ReactNode;
-  passKey: string;
   align?: 'left' | 'right' | 'center';
+  css?: Stitches.CSS;
+  id?: string;
+  options: Array<{
+    icon?: ReactNode;
+    name: string;
+    value: string;
+  }>;
+  passKey: string;
+  trigger: ReactNode;
 }
 
-export default function Submenu({ css, options, trigger, passKey, align = 'left' }: Props): JSX.Element {
+export default function Submenu({ align = 'left', css, id, options, passKey, trigger }: Props): JSX.Element {
   const router = useRouter();
   const ref = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -31,21 +31,21 @@ export default function Submenu({ css, options, trigger, passKey, align = 'left'
     setIsOpen(!isOpen);
   };
 
-  Outsider(ref, () => {
+  useOnClickOutside(ref, () => {
     setIsOpen(false);
   });
 
-  const SubmenuWrapper = styled('div', {
+  const Wrapper = styled('div', {
     position: 'relative',
     display: 'inline-flex',
   });
 
-  const SubmenuTrigger = styled('div', {
+  const Trigger = styled('div', {
     display: 'inline-block',
     position: 'relative',
   });
 
-  const SubmenuGroupWrapper = styled('div', {
+  const GroupWrapper = styled('div', {
     background: '$baseContrast100',
     borderRadius: '$2',
     border: '0.1rem solid $border100',
@@ -59,14 +59,14 @@ export default function Submenu({ css, options, trigger, passKey, align = 'left'
     width: '100%',
     minWidth: '15rem',
     maxWidth: '60rem',
-    zIndex: '$dropdown',
+    zIndex: '$dropdown - 1',
     webkitoverflowscrolling: 'touch',
     left: align === 'left' ? '0' : align === 'right' ? 'auto' : '50%',
     right: align === 'right' ? '0' : align === 'left' ? 'auto' : '50%',
     transform: align === 'left' ? 'translateX(-100%)' : align === 'right' ? 'translateX(100%)' : 'translateX(-50%)',
   });
 
-  const SubmenuItemWrapper = styled('div', {
+  const ItemWrapper = styled('div', {
     display: 'flex',
     textAlign: 'left',
     transition: '$1',
@@ -98,7 +98,7 @@ export default function Submenu({ css, options, trigger, passKey, align = 'left'
     },
   });
 
-  const SubmenuIconWrapper = styled('div', {
+  const IconWrapper = styled('div', {
     display: 'inline-flex',
     alignItems: 'center',
     width: 'auto',
@@ -110,34 +110,35 @@ export default function Submenu({ css, options, trigger, passKey, align = 'left'
   });
 
   return (
-    <SubmenuWrapper css={css} key={passKey} ref={ref}>
-      <SubmenuTrigger onClick={handleClick}>{trigger}</SubmenuTrigger>
+    <Wrapper css={css} id={id} key={passKey} ref={ref}>
+      <Trigger onClick={handleClick}>{trigger}</Trigger>
       {isOpen && (
-        <SubmenuGroupWrapper>
+        <GroupWrapper>
           {options.map(({ value, name, icon }) => (
-            <SubmenuItemWrapper key={value} className={path === value ? 'active' : ''}>
+            <ItemWrapper key={value} className={path === value ? 'active' : ''}>
               <Link href={value || '#'}>
                 <a
+                  href={value || '#'}
                   onClickCapture={(e) => {
                     e.preventDefault();
                     setIsOpen(false);
                   }}>
                   {icon ? (
-                    <SubmenuIconWrapper>
+                    <IconWrapper>
                       {icon}&nbsp;{' '}
                       <Heading level={5} inline>
                         {name}
                       </Heading>
-                    </SubmenuIconWrapper>
+                    </IconWrapper>
                   ) : (
                     <Heading level={5}>{name}</Heading>
                   )}
                 </a>
               </Link>
-            </SubmenuItemWrapper>
+            </ItemWrapper>
           ))}
-        </SubmenuGroupWrapper>
+        </GroupWrapper>
       )}
-    </SubmenuWrapper>
+    </Wrapper>
   );
 }

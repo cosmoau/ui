@@ -1,31 +1,31 @@
 import type * as Stitches from '@stitches/react';
-import React from 'react';
+import { ReactNode } from 'react';
 
 import { styled, breakpoints } from '../../stitches.config';
 
 export interface Props {
+  align?: 'left' | 'center' | 'right' | 'justify' | 'initial' | 'inherit';
+  bottom?: 1 | 2 | 3 | 4 | 5 | 6;
+  children: ReactNode;
   css?: Stitches.CSS;
   id?: string;
-  level?: 1 | 2 | 3 | 4 | 5 | 6;
   inline?: boolean;
   inlineSpacer?: number;
-  align?: 'left' | 'center' | 'right' | 'justify' | 'initial' | 'inherit';
+  level?: 1 | 2 | 3 | 4 | 5 | 6;
   top?: 1 | 2 | 3 | 4 | 5 | 6;
-  bottom?: 1 | 2 | 3 | 4 | 5 | 6;
-  children: React.ReactNode;
 }
 
-function Heading({
-  css,
-  id,
-  level = 6,
-  inline = false,
-  inlineSpacer = 0,
+export default function Heading({
   align = 'left',
-  top,
   bottom,
   children,
-}: Props) {
+  css,
+  id,
+  inline = false,
+  inlineSpacer = 0,
+  level = 6,
+  top,
+}: Props): JSX.Element {
   const baseStyles = {
     textAlign: align,
     display: inline ? 'inline-block' : 'inherit',
@@ -38,7 +38,7 @@ function Heading({
     },
   };
 
-  const HeadingOneWrapper = styled('h1', {
+  const LevelOneWrapper = styled('h1', {
     fontSize: '$h1',
     fontWeight: '$2',
     lineHeight: '$h1',
@@ -62,7 +62,7 @@ function Heading({
     ...baseStyles,
   });
 
-  const HeadingTwoWrapper = styled('h2', {
+  const LevelTwoWrapper = styled('h2', {
     fontSize: '$h2',
     fontWeight: '$2',
     lineHeight: '$h2',
@@ -86,7 +86,7 @@ function Heading({
     ...baseStyles,
   });
 
-  const HeadingThreeWrapper = styled('h3', {
+  const LevelThreeWrapper = styled('h3', {
     fontSize: '$h3',
     fontWeight: '$2',
     lineHeight: '$h3',
@@ -111,7 +111,7 @@ function Heading({
     ...baseStyles,
   });
 
-  const HeadingFourWrapper = styled('h4', {
+  const LevelFourWrapper = styled('h4', {
     fontSize: '$h4',
     fontWeight: '$1',
     lineHeight: '$h4',
@@ -141,7 +141,7 @@ function Heading({
     ...baseStyles,
   });
 
-  const HeadingFiveWrapper = styled('h5', {
+  const LevelFiveWrapper = styled('h5', {
     fontSize: '$h5',
     fontWeight: '$1',
     lineHeight: '$h5',
@@ -165,7 +165,7 @@ function Heading({
     ...baseStyles,
   });
 
-  const HeadingSixWrapper = styled('h6', {
+  const LevelSixWrapper = styled('h6', {
     fontSize: '$h6',
     fontWeight: '$1',
     lineHeight: '$h6',
@@ -189,24 +189,22 @@ function Heading({
     ...baseStyles,
   });
 
-  const HeadingWrapper =
+  const Wrapper =
     level === 1
-      ? HeadingOneWrapper
+      ? LevelOneWrapper
       : level === 2
-      ? HeadingTwoWrapper
+      ? LevelTwoWrapper
       : level === 3
-      ? HeadingThreeWrapper
+      ? LevelThreeWrapper
       : level === 4
-      ? HeadingFourWrapper
+      ? LevelFourWrapper
       : level === 5
-      ? HeadingFiveWrapper
-      : HeadingSixWrapper;
+      ? LevelFiveWrapper
+      : LevelSixWrapper;
 
   return (
-    <HeadingWrapper css={css} id={id}>
+    <Wrapper css={css} id={id}>
       {children}
-    </HeadingWrapper>
+    </Wrapper>
   );
 }
-
-export default Heading;

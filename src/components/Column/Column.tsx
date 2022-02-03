@@ -1,54 +1,52 @@
 import type * as Stitches from '@stitches/react';
-import React from 'react';
+import { ReactNode } from 'react';
 
 import { styled, breakpoints } from '../../stitches.config';
 
 export interface Props {
-  className?: string;
+  align?: 'left' | 'center' | 'right' | 'justify' | 'initial' | 'inherit';
+  bottom?: 1 | 2 | 3 | 4 | 5 | 6;
+  children: ReactNode;
   css?: Stitches.CSS;
   id?: string;
-  baseWidth?: number;
-  phoneWidth?: number;
-  tabletWidth?: number;
-  laptopWidth?: number;
-  desktopWidth?: number;
-  wideWidth?: number;
-  offset?: number;
-  baseOffset?: number;
-  phoneOffset?: number;
-  tabletOffset?: number;
-  laptopOffset?: number;
-  desktopOffset?: number;
-  wideOffset?: number;
-  align?: 'left' | 'center' | 'right' | 'justify' | 'initial' | 'inherit';
-  top?: 1 | 2 | 3 | 4 | 5 | 6;
-  bottom?: 1 | 2 | 3 | 4 | 5 | 6;
   minimal?: boolean;
-  children: React.ReactNode;
+  offset?: number;
+  offsetDesktop?: number;
+  offsetLaptop?: number;
+  offsetPhone?: number;
+  offsetTablet?: number;
+  offsetWide?: number;
+  top?: 1 | 2 | 3 | 4 | 5 | 6;
+  width?: number;
+  widthDesktop?: number;
+  widthLaptop?: number;
+  widthPhone?: number;
+  widthTablet?: number;
+  widthWide?: number;
 }
 
 export default function Column({
-  id,
-  css,
-  baseWidth = 100,
-  phoneWidth,
-  tabletWidth,
-  laptopWidth,
-  desktopWidth,
-  wideWidth,
-  baseOffset = 0,
-  phoneOffset,
-  tabletOffset,
-  laptopOffset,
-  desktopOffset,
-  wideOffset,
   align = 'left',
-  top,
   bottom,
-  minimal,
   children,
+  css,
+  id,
+  minimal,
+  offset = 0,
+  offsetDesktop,
+  offsetLaptop,
+  offsetPhone,
+  offsetTablet,
+  offsetWide,
+  top,
+  width = 100,
+  widthDesktop,
+  widthLaptop,
+  widthPhone,
+  widthTablet,
+  widthWide,
 }: Props): JSX.Element {
-  const ColumnWrapper = styled('div', {
+  const Wrapper = styled('div', {
     margin: 'auto',
     display: 'inline-block',
     flex: '1 1 auto',
@@ -63,45 +61,45 @@ export default function Column({
     textAlign: align,
 
     [breakpoints.phone]: {
-      maxWidth: phoneWidth ? `${phoneWidth}%` : `100%`,
-      flex: phoneWidth ? `0 0 ${phoneWidth}%` : `0 0 100%`,
-      marginLeft: phoneOffset ? `${phoneOffset}%` : 0,
+      maxWidth: widthPhone ? `${widthPhone}%` : `100%`,
+      flex: widthPhone ? `0 0 ${widthPhone}%` : `0 0 100%`,
+      marginLeft: offsetPhone ? `${offsetPhone}%` : 0,
     },
 
     [breakpoints.tabletX]: {
-      maxWidth: tabletWidth ? `${tabletWidth}%` : `${baseWidth}%`,
-      flex: tabletWidth ? `0 0 ${tabletWidth}%` : `0 0 ${baseWidth}%`,
-      marginLeft: tabletOffset ? `${tabletOffset}%` : `${baseOffset}%`,
+      maxWidth: widthTablet ? `${widthTablet}%` : `${width}%`,
+      flex: widthTablet ? `0 0 ${widthTablet}%` : `0 0 ${width}%`,
+      marginLeft: offsetTablet ? `${offsetTablet}%` : `${offset}%`,
     },
 
     [breakpoints.tablet]: {
-      maxWidth: `${baseWidth}%`,
-      flex: `0 0 ${baseWidth}%`,
-      marginLeft: `${baseOffset}%`,
+      maxWidth: `${width}%`,
+      flex: `0 0 ${width}%`,
+      marginLeft: `${offset}%`,
     },
 
     [breakpoints.laptopX]: {
-      maxWidth: laptopWidth ? `${laptopWidth}%` : `${baseWidth}%`,
-      flex: laptopWidth ? `0 0 ${laptopWidth}%` : `0 0 ${baseWidth}%`,
-      marginLeft: laptopOffset ? `${laptopOffset}%` : `${baseOffset}%`,
+      maxWidth: widthLaptop ? `${widthLaptop}%` : `${width}%`,
+      flex: widthLaptop ? `0 0 ${widthLaptop}%` : `0 0 ${width}%`,
+      marginLeft: offsetLaptop ? `${offsetLaptop}%` : `${offset}%`,
     },
 
     [breakpoints.desktopX]: {
-      maxWidth: desktopWidth ? `${desktopWidth}%` : `${baseWidth}%`,
-      flex: desktopWidth ? `0 0 ${desktopWidth}%` : `0 0 ${baseWidth}%`,
-      marginLeft: desktopOffset ? `${desktopOffset}%` : `${baseOffset}%`,
+      maxWidth: widthDesktop ? `${widthDesktop}%` : `${width}%`,
+      flex: widthDesktop ? `0 0 ${widthDesktop}%` : `0 0 ${width}%`,
+      marginLeft: offsetDesktop ? `${offsetDesktop}%` : `${offset}%`,
     },
 
     [breakpoints.wide]: {
-      maxWidth: `${wideWidth}%`,
-      flex: `0 0 ${wideWidth}%`,
-      marginLeft: `${wideOffset}%`,
+      maxWidth: `${widthWide}%`,
+      flex: `0 0 ${widthWide}%`,
+      marginLeft: `${offsetWide}%`,
     },
   });
 
   return (
-    <ColumnWrapper css={css} id={id}>
+    <Wrapper css={css} id={id}>
       {children}
-    </ColumnWrapper>
+    </Wrapper>
   );
 }

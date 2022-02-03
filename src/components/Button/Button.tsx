@@ -1,21 +1,21 @@
 import type * as Stitches from '@stitches/react';
-import React from 'react';
+import { HTMLAttributes, MouseEventHandler, ReactNode } from 'react';
 
-import { styled, breakpoints } from '../../stitches.config';
+import { breakpoints, styled } from '../../stitches.config';
 import { Loading } from '../Loading';
 
-export interface Props extends React.HTMLAttributes<HTMLButtonElement> {
+export interface Props extends HTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
   css?: Stitches.CSS;
-  id?: string;
-  theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'transparent' | 'dark';
-  loader?: boolean;
   icon?: JSX.Element;
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
-  children: React.ReactNode;
+  id?: string;
+  loader?: boolean;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+  theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'transparent' | 'dark';
 }
 
-function Button({ css, id, theme, loader, icon, onClick, children, ...props }: Props): JSX.Element {
-  const ButtonWrapper = styled('button', {
+export default function Button({ children, css, icon, id, loader, onClick, theme, ...props }: Props): JSX.Element {
+  const Wrapper = styled('button', {
     // resets
     appearance: 'none',
     outline: 'none',
@@ -165,7 +165,7 @@ function Button({ css, id, theme, loader, icon, onClick, children, ...props }: P
     },
   });
 
-  const ButtonIconWrapper = styled('div', {
+  const IconWrapper = styled('div', {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -180,17 +180,15 @@ function Button({ css, id, theme, loader, icon, onClick, children, ...props }: P
   });
 
   return (
-    <ButtonWrapper css={css} id={id} onClick={onClick} {...props}>
+    <Wrapper css={css} id={id} onClick={onClick} {...props}>
       {loader ? (
         <Loading />
       ) : (
         <>
-          {icon && <ButtonIconWrapper>{icon}</ButtonIconWrapper>}
+          {icon && <IconWrapper>{icon}</IconWrapper>}
           {children}
         </>
       )}
-    </ButtonWrapper>
+    </Wrapper>
   );
 }
-
-export default Button;

@@ -1,11 +1,9 @@
-import React from 'react';
-
 export interface Props {
-  width?: number;
   stroke?: string;
+  width?: number;
 }
 
-function Loading({ width = 18, stroke = '#969696' }: Props): JSX.Element {
+export default function Loading({ stroke = '#969696', width = 18 }: Props): JSX.Element {
   return (
     <svg width={width} height={width} viewBox={'0 0 38 38'} xmlns='http://www.w3.org/2000/svg' stroke={stroke}>
       <g fill='none' fillRule='evenodd'>
@@ -26,4 +24,3 @@ function Loading({ width = 18, stroke = '#969696' }: Props): JSX.Element {
     </svg>
   );
 }
-export default Loading;

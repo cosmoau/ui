@@ -2,15 +2,15 @@
 import type * as Stitches from '@stitches/react';
 import type { $$StyledComponentProps } from '@stitches/react/types/styled-component';
 import { Check, Clipboard, Eye, EyeClosed, WarningOctagon, X } from 'phosphor-react';
-import type { ChangeEvent, FC, InputHTMLAttributes } from 'react';
-import React, { useState } from 'react';
+import type { ChangeEvent, InputHTMLAttributes, ReactNode } from 'react';
+import { useState } from 'react';
 
 import { styled } from '../../stitches.config';
 import { Badge } from '../Badge';
 import { Button } from '../Button';
 import { Loading } from '../Loading';
 
-const InputContainerWrapper = styled('div', {
+const Wrapper = styled('div', {
   width: 'auto',
   display: 'inline-flex',
   alignItems: 'center',
@@ -45,7 +45,7 @@ const InputContainerWrapper = styled('div', {
   },
 });
 
-const InputIconWrapper = styled('div', {
+const IconWrapper = styled('div', {
   display: 'inline-flex',
   alignItems: 'center',
   width: 'auto',
@@ -100,14 +100,14 @@ const InputWrapper = styled('input', {
   },
 });
 
-const InputFunctionWrapper = styled('div', {
+const FunctionWrapper = styled('div', {
   display: 'inline-flex',
   alignItems: 'center',
   width: 'auto',
   height: '100%',
   position: 'relative',
   verticalAlign: 'middle',
-
+  marginLeft: '$2',
   '*': {
     verticalAlign: 'middle',
     lineHeight: '1',
@@ -119,37 +119,40 @@ const InputFunctionWrapper = styled('div', {
 
 type Props = InputHTMLAttributes<HTMLInputElement> &
   typeof InputWrapper[$$StyledComponentProps] & {
-    css: Stitches.CSS;
-    size?: 'numeric' | 'small' | 'medium' | 'large' | 'full';
-    icon?: React.ReactNode;
     copy?: boolean;
-    reset?: boolean;
-    reveal?: boolean;
-    loader?: boolean;
-    error?: boolean;
-    submit?: boolean | string;
+    css: Stitches.CSS;
     customSubmit?: boolean;
+    error?: boolean;
+    icon?: ReactNode;
+    id?: string;
+    loader?: boolean;
     onChange?: any;
     onSubmit?: any;
+    reset?: boolean;
+    reveal?: boolean;
+    submit?: boolean | string;
+    width?: 1 | 2 | 3 | 4 | 5;
   };
 
-const Input: FC<Props> = ({
+export default function Input({
+  copy,
   css,
-  value = '',
-  type = 'text',
-  size = 'medium',
+  customSubmit,
+  error,
   icon,
-  copy = false,
-  reset = false,
-  reveal = false,
-  loader = false,
-  error = false,
-  submit = false,
-  customSubmit = false,
+  id,
+  loader,
   onChange,
   onSubmit,
+  reset,
+  reveal,
+  submit,
+  width,
+  // inherited
+  value = '',
+  type = 'text',
   ...props
-}) => {
+}: Props): JSX.Element {
   const [controlledValue, setControlledValue] = useState(value as any);
   const [controlledType, setControlledType] = useState(type as any);
   const [isRevealed, setIsRevealed] = useState(false);
@@ -191,18 +194,10 @@ const Input: FC<Props> = ({
   };
   return (
     <>
-      <InputContainerWrapper css={css}>
-        {icon && <InputIconWrapper>{icon}</InputIconWrapper>}
-        <InputWrapper
-          width={
-            size === 'numeric' ? '1' : size === 'small' ? '2' : size === 'medium' ? '3' : size === 'large' ? '4' : '5'
-          }
-          type={controlledType}
-          value={controlledValue}
-          onChange={handleChange}
-          {...props}
-        />
-        <InputFunctionWrapper>
+      <Wrapper css={css} id={id}>
+        {icon && <IconWrapper>{icon}</IconWrapper>}
+        <InputWrapper width={width} type={controlledType} value={controlledValue} onChange={handleChange} {...props} />
+        <FunctionWrapper>
           {loader && (
             <Badge theme='navy' dot='pulse'>
               <Loading />
@@ -234,10 +229,8 @@ const Input: FC<Props> = ({
             </Button>
           )}
           {customSubmit && customSubmit}
-        </InputFunctionWrapper>
-      </InputContainerWrapper>
+        </FunctionWrapper>
+      </Wrapper>
     </>
   );
-};
-
-export default Input;
+}

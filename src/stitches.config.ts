@@ -54,7 +54,7 @@ export const { theme, css, styled, globalCss, getCssText } = createStitches({
       pink300: 'rgb(245, 213, 235)',
       pink400: 'rgba(107, 26, 83, 0.2)',
       border100: 'rgba(0, 1, 2, 0.15)',
-      border200: 'rgb(223, 227, 230)',
+      border200: 'rgba(223, 227, 230, 0.9)',
     },
     space: {
       1: '0.33rem',
@@ -123,8 +123,8 @@ export const { theme, css, styled, globalCss, getCssText } = createStitches({
     zIndices: {
       dropdown: 10,
       tooltip: 15,
-      zIndexAlert: 100,
-      zIndexCookies: 9999,
+      alert: 100,
+      cookies: 9999,
     },
     transitions: {
       1: 'all 0.2s ease-in-out',

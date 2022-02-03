@@ -10,12 +10,12 @@ The system is built for use within Next.js, using Stitches for styling.
 
 ### Develop
 
-    $ yarn dev
-    $ yarn test:dev
+    $ yarn watch
+    $ yarn dev (parcel dev playground)
 
 ### Build
 
-    $ yarn lint && yarn clean
+    $ yarn lint
     $ yarn build
     $ yarn release
 

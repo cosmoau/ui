@@ -1,28 +1,28 @@
 import type * as Stitches from '@stitches/react';
 import { Check, Circle } from 'phosphor-react';
-import React, { useState } from 'react';
+import { ReactNode, useState } from 'react';
 
 import { styled } from '../../stitches.config';
 import { Button } from '../Button';
 
 export interface Props {
-  css?: Stitches.CSS;
-  id?: string;
   checked?: boolean;
+  children?: ReactNode;
+  css?: Stitches.CSS;
   disabled?: boolean;
-  children?: React.ReactNode;
+  id?: string;
 }
 
-function Checkbox({ css, id, checked, disabled, children }: Props): JSX.Element {
-  const [checkedState, setCheckedState] = useState(checked);
+export default function Checkbox({ checked = false, children, css, disabled = false, id }: Props): JSX.Element {
+  const [isChecked, setIsChecked] = useState(checked);
 
   const handleChange = (): void => {
     if (disabled) {
       return;
-    } else setCheckedState(!checkedState);
+    } else setIsChecked(!isChecked);
   };
 
-  const CheckboxWrapper = styled('div', {
+  const Wrapper = styled('div', {
     opacity: disabled ? 0.5 : 1,
     whiteSpace: 'nowrap',
     display: 'table-row-group',
@@ -36,7 +36,7 @@ function Checkbox({ css, id, checked, disabled, children }: Props): JSX.Element 
     },
   });
 
-  const CheckboxLabel = styled('label', {
+  const LabelWrapper = styled('label', {
     display: 'table-cell',
     verticalAlign: 'middle',
     paddingLeft: '$2',
@@ -46,7 +46,7 @@ function Checkbox({ css, id, checked, disabled, children }: Props): JSX.Element 
   });
 
   return (
-    <CheckboxWrapper css={css} id={id}>
+    <Wrapper css={css} id={id}>
       <Button
         css={{
           display: 'flex',
@@ -57,10 +57,9 @@ function Checkbox({ css, id, checked, disabled, children }: Props): JSX.Element 
           padding: 'calc($2 * 0.33)',
         }}
         onClick={handleChange}>
-        {checkedState ? <Check /> : <Circle opacity={0.1} />}
+        {isChecked ? <Check /> : <Circle opacity={0.1} />}
       </Button>
-      <CheckboxLabel>{children}</CheckboxLabel>
-    </CheckboxWrapper>
+      <LabelWrapper>{children}</LabelWrapper>
+    </Wrapper>
   );
 }
-export default Checkbox;

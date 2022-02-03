@@ -2,8 +2,8 @@
 import type * as Stitches from '@stitches/react';
 import type { $$StyledComponentProps } from '@stitches/react/types/styled-component';
 import { Check, Clipboard } from 'phosphor-react';
-import type { ChangeEvent, FC, InputHTMLAttributes } from 'react';
-import React, { useState } from 'react';
+import type { ChangeEvent, InputHTMLAttributes } from 'react';
+import { useState } from 'react';
 
 import { styled } from '../../stitches.config';
 import { Button } from '../Button';
@@ -11,7 +11,7 @@ import { Column } from '../Column';
 import { Section } from '../Section';
 import { Text } from '../Typography';
 
-const TextAreaContainerWrapper = styled('div', {
+const Wrapper = styled('div', {
   width: 'auto',
   display: 'block',
   alignItems: 'center',
@@ -46,7 +46,7 @@ const TextAreaContainerWrapper = styled('div', {
   },
 });
 
-const TextareaWrapper = styled('textarea', {
+const InputWrapper = styled('textarea', {
   backgroundColor: 'transparent',
   color: '$base100',
   appearance: 'none',
@@ -59,16 +59,27 @@ const TextareaWrapper = styled('textarea', {
 });
 
 type Props = InputHTMLAttributes<HTMLTextAreaElement> &
-  typeof TextareaWrapper[$$StyledComponentProps] & {
-    css: Stitches.CSS;
-    rows?: number;
+  typeof InputWrapper[$$StyledComponentProps] & {
     columns?: number;
-    maxLength?: number;
     copy?: boolean;
+    css: Stitches.CSS;
+    maxLength?: number;
     onChange?: any;
+    rows?: number;
   };
 
-const Textarea: FC<Props> = ({ css, rows = 5, columns = 1, value = '', maxLength = 250, copy, onChange }) => {
+export default function Input({
+  columns,
+  copy,
+  css,
+  disabled,
+  maxLength,
+  onChange,
+  rows,
+  // inherited
+  value = '',
+  ...props
+}: Props): JSX.Element {
   const [controlledValue, setControlledValue] = useState(value as any);
   const [isCopied, setIsCopied] = useState(false);
 
@@ -88,33 +99,33 @@ const Textarea: FC<Props> = ({ css, rows = 5, columns = 1, value = '', maxLength
   };
 
   return (
-    <TextAreaContainerWrapper css={css}>
-      <TextareaWrapper
+    <Wrapper css={css}>
+      <InputWrapper
         rows={rows}
         cols={columns}
         value={controlledValue}
         maxLength={maxLength}
         onChange={handleChange}
+        disabled={disabled}
+        {...props}
       />
       <Section
         css={{
           padding: 0,
         }}>
-        <Column minimal baseWidth={60} phoneWidth={60}>
+        <Column minimal width={60} widthPhone={60}>
           <Text level={2}>
             {controlledValue.length} / {maxLength}
           </Text>
         </Column>
         {copy && (
-          <Column minimal baseWidth={40} phoneWidth={40} align='right'>
+          <Column minimal width={40} widthPhone={40} align='right'>
             <Button theme='navy' onClick={handleCopy}>
               {isCopied ? <Check /> : <Clipboard />}
             </Button>
           </Column>
         )}
       </Section>
-    </TextAreaContainerWrapper>
+    </Wrapper>
   );
-};
-
-export default Textarea;
+}

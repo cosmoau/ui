@@ -1,7 +1,7 @@
 import type * as Stitches from '@stitches/react';
 import { keyframes } from '@stitches/react';
 import { ArrowDown, ArrowUp } from 'phosphor-react';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import { styled } from '../../stitches.config';
 import { Column } from '../Column';
@@ -9,27 +9,26 @@ import { Section } from '../Section';
 import { Heading } from '../Typography';
 
 interface Options {
-  id: number;
-  heading: string;
   content: string;
+  heading: string;
+  id: number;
 }
 
 export interface Props {
-  className?: string;
-  id?: string;
-  css?: Stitches.CSS;
-  options: Array<Options>;
   active?: number | boolean;
+  css?: Stitches.CSS;
+  id?: string;
+  options: Array<Options>;
 }
 
-function Accordion({ css, id, options, active = false }: Props): JSX.Element {
-  const [activeId, setActiveId] = useState(active);
+export default function Accordion({ active = false, css, id, options }: Props): JSX.Element {
+  const [idIsActive, setIdIsActive] = useState(active);
 
   const handleClick = (id: number) => {
-    if (id === activeId) {
-      setActiveId(false);
+    if (id === idIsActive) {
+      setIdIsActive(false);
     } else {
-      setActiveId(id);
+      setIdIsActive(id);
     }
   };
 
@@ -43,7 +42,7 @@ function Accordion({ css, id, options, active = false }: Props): JSX.Element {
     to: { maxHeight: 0, opacity: 0 },
   });
 
-  const AccordionWrapper = styled('div', {
+  const Wrapper = styled('div', {
     width: '100%',
 
     '*': {
@@ -51,9 +50,9 @@ function Accordion({ css, id, options, active = false }: Props): JSX.Element {
     },
   });
 
-  const AccordionItem = styled('div', {
-    display: 'block',
+  const ItemWrapper = styled('div', {
     cursor: 'pointer',
+    display: 'block',
     paddingTop: 'calc($2 / 2.5)',
 
     '&:first-child': {
@@ -61,14 +60,14 @@ function Accordion({ css, id, options, active = false }: Props): JSX.Element {
     },
   });
 
-  const AccordionContent = styled('div', {
-    transition: '$1',
+  const ContentWrapper = styled('div', {
     overflow: 'hidden',
+    transition: '$1',
 
     '&.open': {
       animation: `${slideDown} .3s cubic-bezier(0.87, 0, 0.13, 1)`,
-      transition: '$1',
       color: 'inherit',
+      transition: '$1',
       overflow: 'hidden',
       marginTop: '$1',
       paddingTop: '$1',
@@ -84,11 +83,11 @@ function Accordion({ css, id, options, active = false }: Props): JSX.Element {
   });
 
   return (
-    <AccordionWrapper css={css} id={id}>
+    <Wrapper css={css} id={id}>
       {options.map(({ id, heading, content }) => (
-        <AccordionItem key={id} onClick={() => handleClick(id)}>
+        <ItemWrapper key={id} onClick={() => handleClick(id)}>
           <Section alignment='center'>
-            <Column minimal baseWidth={80} phoneWidth={80}>
+            <Column minimal width={80} widthPhone={80}>
               <Heading
                 level={3}
                 css={{
@@ -97,21 +96,19 @@ function Accordion({ css, id, options, active = false }: Props): JSX.Element {
                 {heading}
               </Heading>
             </Column>
-            <Column minimal baseWidth={20} phoneWidth={20} align='right'>
-              {activeId === id ? <ArrowUp size={22} /> : <ArrowDown size={22} />}
+            <Column minimal width={20} widthPhone={20} align='right'>
+              {idIsActive === id ? <ArrowUp size={22} /> : <ArrowDown size={22} />}
             </Column>
           </Section>
-          <AccordionContent className={activeId === id ? 'open' : 'closed'}>
+          <ContentWrapper className={idIsActive === id ? 'open' : 'closed'}>
             <Section>
               <Column minimal>
                 <Heading level={6}>{content}</Heading>
               </Column>
             </Section>
-          </AccordionContent>
-        </AccordionItem>
+          </ContentWrapper>
+        </ItemWrapper>
       ))}
-    </AccordionWrapper>
+    </Wrapper>
   );
 }
-
-export default Accordion;

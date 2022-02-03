@@ -1,21 +1,31 @@
 import type * as Stitches from '@stitches/react';
-import React from 'react';
+import { ReactNode } from 'react';
 
 import { styled } from '../../stitches.config';
 
 export interface Props {
+  align?: 'left' | 'center' | 'right' | 'justify' | 'initial' | 'inherit';
+  bottom?: 1 | 2 | 3 | 4 | 5 | 6;
+  children: ReactNode;
   css?: Stitches.CSS;
   id?: string;
-  level?: 1 | 2 | 3;
   inline?: boolean;
   inlineSpacer?: number;
-  align?: 'left' | 'center' | 'right' | 'justify' | 'initial' | 'inherit';
+  level?: 1 | 2 | 3;
   top?: 1 | 2 | 3 | 4 | 5 | 6;
-  bottom?: 1 | 2 | 3 | 4 | 5 | 6;
-  children: React.ReactNode;
 }
 
-function Text({ css, id, level = 1, inline, inlineSpacer = 0, align = 'left', top, bottom, children }: Props) {
+export default function Text({
+  align = 'left',
+  bottom,
+  children,
+  css,
+  id,
+  inline = false,
+  inlineSpacer = 0,
+  level = 1,
+  top,
+}: Props): JSX.Element {
   const baseStyles = {
     textAlign: align,
     display: inline ? 'inline-block' : 'inherit',
@@ -28,7 +38,7 @@ function Text({ css, id, level = 1, inline, inlineSpacer = 0, align = 'left', to
     },
   };
 
-  const TextOneWrapper = styled('p', {
+  const LevelOneWrapper = styled('p', {
     fontSize: '$t1',
     fontWeight: '$1',
     lineHeight: '$t1',
@@ -37,7 +47,7 @@ function Text({ css, id, level = 1, inline, inlineSpacer = 0, align = 'left', to
     ...baseStyles,
   });
 
-  const TextTwoWrapper = styled('p', {
+  const LevelTwoWrapper = styled('p', {
     fontSize: '$t2',
     fontWeight: '$1',
     lineHeight: '$t2',
@@ -48,7 +58,7 @@ function Text({ css, id, level = 1, inline, inlineSpacer = 0, align = 'left', to
     ...baseStyles,
   });
 
-  const TextThreeWrapper = styled('p', {
+  const LevelThreeWrapper = styled('p', {
     fontSize: '$t3',
     fontWeight: '$1',
     lineHeight: '$t3',
@@ -58,13 +68,11 @@ function Text({ css, id, level = 1, inline, inlineSpacer = 0, align = 'left', to
     ...baseStyles,
   });
 
-  const TextWrapper = level === 2 ? TextTwoWrapper : level === 3 ? TextThreeWrapper : TextOneWrapper;
+  const Wrapper = level === 2 ? LevelTwoWrapper : level === 3 ? LevelThreeWrapper : LevelOneWrapper;
 
   return (
-    <TextWrapper css={css} id={id}>
+    <Wrapper css={css} id={id}>
       {children}
-    </TextWrapper>
+    </Wrapper>
   );
 }
-
-export default Text;

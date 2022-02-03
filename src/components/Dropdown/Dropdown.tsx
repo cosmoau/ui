@@ -1,47 +1,48 @@
 import type * as Stitches from '@stitches/react';
-import React, { useState, useRef } from 'react';
+import { useState, useRef, ReactNode } from 'react';
+import { useOnClickOutside } from 'usehooks-ts';
 
 import { styled } from '../../stitches.config';
 import { Button } from '../Button';
 import { Loading } from '../Loading';
-import { Outsider } from '../Outsider';
 
 export interface Props {
-  css?: Stitches.CSS;
-  options: Array<{
-    value: string;
-    name: string;
-    icon?: React.ReactNode;
-  }>;
-  label: string | React.ReactNode;
-  passKey: string;
   actions: any;
   align?: 'left' | 'right' | 'center';
+  css?: Stitches.CSS;
+  id?: string;
+  label: string | ReactNode;
+  options: Array<{
+    icon?: ReactNode;
+    name: string;
+    value: string;
+  }>;
+  passKey: string;
 }
 
-function Dropdown({ css, options, label, passKey, actions, align = 'left' }: Props): JSX.Element {
+export default function Dropdown({ actions, align = 'left', css, id, label, options, passKey }: Props): JSX.Element {
   const ref = useRef(null);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isShown, setIsShown] = useState(false);
 
   const handleClick = (): void => {
-    setIsOpen(!isOpen);
+    setIsShown(!isShown);
   };
 
   const handleActions = (value: string, name: string) => {
     actions(value, name);
-    setIsOpen(false);
+    setIsShown(false);
   };
 
-  Outsider(ref, () => {
-    setIsOpen(false);
+  useOnClickOutside(ref, () => {
+    setIsShown(false);
   });
 
-  const DropdownWrapper = styled('div', {
+  const Wrapper = styled('div', {
     position: 'relative',
     display: 'inline-flex',
   });
 
-  const DropdownGroupWrapper = styled('div', {
+  const GroupWrapper = styled('div', {
     background: '$baseContrast100',
     borderRadius: '$2',
     border: '0.1rem solid $border100',
@@ -62,7 +63,7 @@ function Dropdown({ css, options, label, passKey, actions, align = 'left' }: Pro
     transform: align === 'left' ? 'translateX(-100%)' : align === 'right' ? 'translateX(100%)' : 'translateX(-50%)',
   });
 
-  const DropdownItemWrapper = styled('div', {
+  const ItemWrapper = styled('div', {
     display: 'flex',
     textAlign: 'left',
     transition: '$1',
@@ -89,7 +90,7 @@ function Dropdown({ css, options, label, passKey, actions, align = 'left' }: Pro
     },
   });
 
-  const DropdownIconWrapper = styled('div', {
+  const IconWrapper = styled('div', {
     display: 'inline-flex',
     alignItems: 'center',
     width: 'auto',
@@ -101,23 +102,21 @@ function Dropdown({ css, options, label, passKey, actions, align = 'left' }: Pro
   });
 
   return (
-    <DropdownWrapper css={css} key={passKey} ref={ref}>
+    <Wrapper css={css} id={id} key={passKey} ref={ref}>
       <Button onClick={handleClick}>{label || <Loading />}</Button>
-      {isOpen && (
-        <DropdownGroupWrapper>
+      {isShown && (
+        <GroupWrapper>
           {options.map((option) => (
-            <DropdownItemWrapper
+            <ItemWrapper
               className={label === option.name ? 'active' : 'inactive'}
               key={option.value}
               onClick={() => handleActions(option.value, option.name)}>
-              {option.icon && <DropdownIconWrapper>{option.icon}</DropdownIconWrapper>}
+              {option.icon && <IconWrapper>{option.icon}</IconWrapper>}
               {option.name}
-            </DropdownItemWrapper>
+            </ItemWrapper>
           ))}
-        </DropdownGroupWrapper>
+        </GroupWrapper>
       )}
-    </DropdownWrapper>
+    </Wrapper>
   );
 }
-
-export default Dropdown;

@@ -1,22 +1,32 @@
 import type * as Stitches from '@stitches/react';
-import React from 'react';
+import { ReactNode } from 'react';
 
 import { styled } from '../../stitches.config';
 
 export interface Props {
+  border?: boolean;
+  children: ReactNode;
   css?: Stitches.CSS;
   id?: string;
-  theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'transparent';
-  loader?: boolean;
-  border?: boolean;
-  image?: React.ReactNode;
+  image?: ReactNode;
   imageHeight?: string;
+  loader?: boolean;
   minimal?: boolean;
-  children: React.ReactNode;
+  theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'transparent';
 }
 
-function Card({ css, id, theme, loader, border, image, imageHeight, minimal, children }: Props): JSX.Element {
-  const CardWrapper = styled('div', {
+export default function Card({
+  css,
+  id,
+  theme,
+  loader,
+  border,
+  image,
+  imageHeight,
+  minimal,
+  children,
+}: Props): JSX.Element {
+  const Wrapper = styled('div', {
     padding: minimal ? 0 : image ? 0 : 'calc($3 / 1.25)',
     height: '100%',
     display: 'block',
@@ -34,7 +44,7 @@ function Card({ css, id, theme, loader, border, image, imageHeight, minimal, chi
         : theme === 'blue'
         ? '$blue300'
         : theme === 'navy'
-        ? '$navy300'
+        ? '$navy200'
         : theme === 'purple'
         ? '$purple300'
         : theme === 'pink'
@@ -68,7 +78,7 @@ function Card({ css, id, theme, loader, border, image, imageHeight, minimal, chi
     },
   });
 
-  const CardImageWrapper = styled('div', {
+  const ImageWrapper = styled('div', {
     height: imageHeight || '15rem',
     width: '100%',
     backgroundColor: '$baseContrast200',
@@ -78,22 +88,21 @@ function Card({ css, id, theme, loader, border, image, imageHeight, minimal, chi
     borderBottomRightRadius: 0,
   });
 
-  const CardImageChildrenWrapper = styled('div', {
+  const ImageChildrenWrapper = styled('div', {
     padding: '$2',
   });
 
   return (
-    <CardWrapper css={css} id={id}>
+    <Wrapper css={css} id={id}>
       {image ? (
         <>
-          <CardImageWrapper>{image}</CardImageWrapper>
+          <ImageWrapper>{image}</ImageWrapper>
 
-          <CardImageChildrenWrapper>{children}</CardImageChildrenWrapper>
+          <ImageChildrenWrapper>{children}</ImageChildrenWrapper>
         </>
       ) : (
         children
       )}
-    </CardWrapper>
+    </Wrapper>
   );
 }
-export default Card;

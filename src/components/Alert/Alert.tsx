@@ -1,47 +1,47 @@
 import type * as Stitches from '@stitches/react';
-import React, { useLayoutEffect, useRef, useState } from 'react';
+import { ReactNode, useLayoutEffect, useRef, useState } from 'react';
+import { useOnClickOutside } from 'usehooks-ts';
 
 import { breakpoints, styled } from '../../stitches.config';
 import { Button } from '../Button';
 import { Card } from '../Card';
-import { Outsider } from '../Outsider';
 import { Heading } from '../Typography';
 
 export interface Props {
+  action: ReactNode;
+  cancel: ReactNode;
   css?: Stitches.CSS;
+  description: ReactNode | string;
   id?: string;
-  trigger: React.ReactNode | string;
-  title: React.ReactNode | string;
-  description: React.ReactNode | string;
-  cancel: React.ReactNode;
-  action: React.ReactNode;
+  title: ReactNode | string;
+  trigger: ReactNode | string;
 }
 
-function Alert({ css, id, trigger, title, description, cancel, action }: Props): JSX.Element {
+export default function Alert({ action, cancel, css, description, id, title, trigger }: Props): JSX.Element {
   const ref = useRef(null);
 
-  const [visibility, setVisibility] = useState(false);
+  const [isShown, setIsShown] = useState(false);
 
-  Outsider(ref, () => {
-    setVisibility(false);
+  useOnClickOutside(ref, () => {
+    setIsShown(false);
   });
 
   useLayoutEffect(() => {
-    if (visibility) {
+    if (isShown) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
     }
-  }, [visibility]);
+  }, [isShown]);
 
-  const AlertTrigger = styled('div', {
+  const TriggerWrapper = styled('div', {
     display: 'inline-flex',
   });
 
-  const AlertWrapper = styled('div', {
+  const Wrapper = styled('div', {
     position: 'fixed',
     transition: '$1',
-    zIndex: '$zIndexAlert',
+    zIndex: '$alert',
     top: 0,
     left: 0,
     right: 0,
@@ -52,7 +52,7 @@ function Alert({ css, id, trigger, title, description, cancel, action }: Props):
     overscrollBehavior: 'contain',
   });
 
-  const AlertCard = styled('div', {
+  const CardWrapper = styled('div', {
     position: 'absolute',
     transition: '$1',
     top: '50%',
@@ -69,54 +69,53 @@ function Alert({ css, id, trigger, title, description, cancel, action }: Props):
     },
   });
 
-  const AlertCardTriggers = styled('div', {
+  const CardActionsWrapper = styled('div', {
     paddingTop: '$3',
     textAlign: 'right',
   });
 
-  const AlertCardActionTrigger = styled('div', {
+  const CardPrimaryActionwrapper = styled('div', {
     display: 'inline-block',
   });
 
   return (
     <>
-      <AlertTrigger
+      <TriggerWrapper
         onClickCapture={(e) => {
           e.persist();
-          setVisibility(true);
+          setIsShown(true);
         }}>
         {trigger}
-      </AlertTrigger>
-      {visibility && (
-        <AlertWrapper id={id}>
-          <AlertCard ref={ref} css={css}>
+      </TriggerWrapper>
+      {isShown && (
+        <Wrapper id={id}>
+          <CardWrapper ref={ref} css={css}>
             <Card>
               <Heading level={3}>{title}</Heading>
               <Heading level={6}>{description}</Heading>
-              <AlertCardTriggers>
+              <CardActionsWrapper>
                 <Button
                   onClick={(e) => {
                     e.persist();
-                    setVisibility(false);
+                    setIsShown(false);
                   }}
                   css={{
                     mr: '$2',
                   }}>
                   {cancel}
                 </Button>
-                <AlertCardActionTrigger
+                <CardPrimaryActionwrapper
                   onClickCapture={(e) => {
                     e.persist();
-                    setVisibility(false);
+                    setIsShown(false);
                   }}>
                   {action}
-                </AlertCardActionTrigger>
-              </AlertCardTriggers>
+                </CardPrimaryActionwrapper>
+              </CardActionsWrapper>
             </Card>
-          </AlertCard>
-        </AlertWrapper>
+          </CardWrapper>
+        </Wrapper>
       )}
     </>
   );
 }
-export default Alert;
