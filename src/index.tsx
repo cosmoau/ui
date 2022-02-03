@@ -9,6 +9,7 @@ export * from './components/Column/index';
 export * from './components/Cookies/index';
 export * from './components/Dialog/index';
 export * from './components/Dropdown/index';
+export * from './components/Element/index';
 export * from './components/Input/index';
 export * from './components/Loading/index';
 export * from './components/Percentages/index';

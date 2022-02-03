@@ -57,9 +57,13 @@ export const { theme, css, styled, globalCss } = createStitches({
       border200: 'rgba(223, 227, 230, 0.9)',
     },
     space: {
+      0.5: '0.125rem',
       1: '0.33rem',
+      1.5: '0.66rem',
       2: '1.5rem',
+      2.5: '2rem',
       3: '2.5rem',
+      3.5: '3.5rem',
       4: '5rem',
       5: '7.5rem',
       6: '10rem',
@@ -213,7 +217,15 @@ export const { theme, css, styled, globalCss } = createStitches({
     visible: (value: 'phone' | 'tablet' | 'tabletX' | 'laptop' | 'laptopX' | 'desktop' | 'desktopX' | 'wide') => ({
       display: 'none',
       [breakpoints[value]]: {
-        display: 'auto',
+        display: 'block',
+      },
+    }),
+    visibleInline: (
+      value: 'phone' | 'tablet' | 'tabletX' | 'laptop' | 'laptopX' | 'desktop' | 'desktopX' | 'wide'
+    ) => ({
+      display: 'none',
+      [breakpoints[value]]: {
+        display: 'inline-block',
       },
     }),
   },
@@ -294,14 +306,14 @@ export const globalStyles = globalCss({
     outline: 'none',
     letterSpacing: 'normal',
     wordSpacing: 'normal',
-    marginBlockStart: '0',
-    marginBlockEnd: '0',
-    marginInlineStart: '0',
-    marginInlineEnd: '0',
-    paddingBlockStart: '0',
-    paddingBlockEnd: '0',
-    paddingInlineStart: '0',
-    paddingInlineEnd: '0',
+    marginBlockStart: 0,
+    marginBlockEnd: 0,
+    marginInlineStart: 0,
+    marginInlineEnd: 0,
+    paddingBlockStart: 0,
+    paddingBlockEnd: 0,
+    paddingInlineStart: 0,
+    paddingInlineEnd: 0,
   },
   svg: {
     transition: theme.transitions[1],
