@@ -38,8 +38,7 @@
     "usehooks-ts": "^2.3.0"
   },
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "homepage": "https://design.cosmogroup.io",
   "keywords": [
