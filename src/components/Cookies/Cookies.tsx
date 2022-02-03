@@ -55,39 +55,37 @@ export default function Cookies({
   });
 
   return (
-    <>
-      {isShown && (
-        <Wrapper
+    isShown && (
+      <Wrapper
+        css={{
+          ...css,
+        }}>
+        <Card
+          border
           css={{
-            ...css,
-          }}>
-          <Card
-            border
-            css={{
-              ptb: 'calc($2 / 2)',
-              textAlign: 'center',
-              display: 'inline-flex',
-              boxShadow: '$4',
+            ptb: 'calc($2 / 2)',
+            textAlign: 'center',
+            display: 'inline-flex',
+            boxShadow: '$4',
 
-              '*': {
-                color: '$base100',
-              },
-            }}>
-            <Heading level={5} inline inlineSpacer={1}>
-              🍪
-            </Heading>
-            <Heading level={5} inline inlineSpacer={1}>
-              We use anonymous cookies.{' '}
-              <a href={href || '#'}>
-                <b>Learn more</b>
-              </a>
-            </Heading>
-            <Heading level={5} inline>
-              <X onClick={handleAccept} />
-            </Heading>
-          </Card>
-        </Wrapper>
-      )}
-    </>
+            '*': {
+              color: '$base100',
+            },
+          }}>
+          <Heading level={5} inline inlineSpacer={1}>
+            🍪
+          </Heading>
+          <Heading level={5} inline inlineSpacer={1}>
+            We use anonymous cookies.{' '}
+            <a href={href || '#'}>
+              <b>Learn more</b>
+            </a>
+          </Heading>
+          <Heading level={5} inline>
+            <X onClick={handleAccept} />
+          </Heading>
+        </Card>
+      </Wrapper>
+    )
   );
 }

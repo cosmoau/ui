@@ -79,6 +79,10 @@ export default function Card({
   });
 
   const ImageWrapper = styled('div', {
+    position: 'relative',
+  });
+
+  const ImageDisplayWrappper = styled('div', {
     height: imageHeight || '15rem',
     width: '100%',
     backgroundColor: '$baseContrast200',
@@ -95,11 +99,10 @@ export default function Card({
   return (
     <Wrapper css={css} id={id}>
       {image ? (
-        <>
-          <ImageWrapper>{image}</ImageWrapper>
-
+        <ImageWrapper>
+          <ImageDisplayWrappper>{image}</ImageDisplayWrappper>
           <ImageChildrenWrapper>{children}</ImageChildrenWrapper>
-        </>
+        </ImageWrapper>
       ) : (
         children
       )}

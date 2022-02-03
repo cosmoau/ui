@@ -116,6 +116,7 @@ export default function Badge({ children, css, dot, dotColor, id, loader, shadow
 
   const PulseWrapper = styled('div', {
     animation: `${pulseAnimation} 1.5s infinite`,
+    display: 'inline-flex',
   });
 
   return (
@@ -124,21 +125,19 @@ export default function Badge({ children, css, dot, dotColor, id, loader, shadow
         <LoaderWrapper>
           <Loading />
         </LoaderWrapper>
-      ) : (
-        <>
-          {dot && (
-            <DotWrapper>
-              {dot === 'pulse' ? (
-                <PulseWrapper>
-                  <Circle weight='fill' size={10} style={{ marginRight: 3.33 }} />
-                </PulseWrapper>
-              ) : (
-                <Circle weight='fill' size={10} style={{ marginRight: 3.33 }} />
-              )}
-            </DotWrapper>
+      ) : dot ? (
+        <DotWrapper>
+          {dot === 'pulse' ? (
+            <PulseWrapper>
+              <Circle weight='fill' size={10} style={{ marginRight: 3.33 }} />
+            </PulseWrapper>
+          ) : (
+            <Circle weight='fill' size={10} style={{ marginRight: 3.33 }} />
           )}
-          {children}
-        </>
+          children
+        </DotWrapper>
+      ) : (
+        children
       )}
     </Wrapper>
   );

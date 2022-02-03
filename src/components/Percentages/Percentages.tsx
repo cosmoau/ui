@@ -65,28 +65,24 @@ export default function Percentages({
     height: '100%',
   });
 
-  return (
+  return isLoading ? (
+    <Loading />
+  ) : (
     <Wrapper css={css} id={id}>
-      {isLoading ? (
-        <Loading />
-      ) : (
-        <>
-          <Badge theme={differenceDirection === 'up' ? 'green' : 'yellow'}>
-            {differenceDirection === 'up' ? <TrendUp /> : <TrendDown />}
-            &nbsp;{value}%
-          </Badge>
-          {showDollarDifference ? (
-            <Heading
-              level={6}
-              css={{
-                pt: '$1',
-                opacity: 0.5,
-              }}>
-              ${difference.toLocaleString()}
-            </Heading>
-          ) : null}
-        </>
-      )}
+      <Badge theme={differenceDirection === 'up' ? 'green' : 'yellow'}>
+        {differenceDirection === 'up' ? <TrendUp /> : <TrendDown />}
+        &nbsp;{value}%
+      </Badge>
+      {showDollarDifference ? (
+        <Heading
+          level={6}
+          css={{
+            pt: '$1',
+            opacity: 0.5,
+          }}>
+          ${difference.toLocaleString()}
+        </Heading>
+      ) : null}
     </Wrapper>
   );
 }

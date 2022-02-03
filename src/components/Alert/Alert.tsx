@@ -34,11 +34,15 @@ export default function Alert({ action, cancel, css, description, id, title, tri
     }
   }, [isShown]);
 
+  const Wrapper = styled('div', {
+    position: 'initial',
+  });
+
   const TriggerWrapper = styled('div', {
     display: 'inline-flex',
   });
 
-  const Wrapper = styled('div', {
+  const OverlayWrapper = styled('div', {
     position: 'fixed',
     transition: '$1',
     zIndex: '$alert',
@@ -79,7 +83,7 @@ export default function Alert({ action, cancel, css, description, id, title, tri
   });
 
   return (
-    <>
+    <Wrapper id={id}>
       <TriggerWrapper
         onClickCapture={(e) => {
           e.persist();
@@ -88,7 +92,7 @@ export default function Alert({ action, cancel, css, description, id, title, tri
         {trigger}
       </TriggerWrapper>
       {isShown && (
-        <Wrapper id={id}>
+        <OverlayWrapper>
           <CardWrapper ref={ref} css={css}>
             <Card>
               <Heading level={3}>{title}</Heading>
@@ -114,8 +118,8 @@ export default function Alert({ action, cancel, css, description, id, title, tri
               </CardActionsWrapper>
             </Card>
           </CardWrapper>
-        </Wrapper>
+        </OverlayWrapper>
       )}
-    </>
+    </Wrapper>
   );
 }

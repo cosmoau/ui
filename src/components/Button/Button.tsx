@@ -165,6 +165,12 @@ export default function Button({ children, css, icon, id, loader, onClick, theme
     },
   });
 
+  const ContentWrapper = styled('div', {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  });
+
   const IconWrapper = styled('div', {
     display: 'flex',
     alignItems: 'center',
@@ -184,10 +190,10 @@ export default function Button({ children, css, icon, id, loader, onClick, theme
       {loader ? (
         <Loading />
       ) : (
-        <>
+        <ContentWrapper>
           {icon && <IconWrapper>{icon}</IconWrapper>}
           {children}
-        </>
+        </ContentWrapper>
       )}
     </Wrapper>
   );

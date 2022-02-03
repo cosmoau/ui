@@ -193,44 +193,42 @@ export default function Input({
     }
   };
   return (
-    <>
-      <Wrapper css={css} id={id}>
-        {icon && <IconWrapper>{icon}</IconWrapper>}
-        <InputWrapper width={width} type={controlledType} value={controlledValue} onChange={handleChange} {...props} />
-        <FunctionWrapper>
-          {loader && (
-            <Badge theme='navy' dot='pulse'>
-              <Loading />
-            </Badge>
-          )}
-          {error && (
-            <Badge theme='red' dot='pulse'>
-              <WarningOctagon />
-            </Badge>
-          )}
-          {reveal && (
-            <Button theme='navy' onClick={handleReveal}>
-              {isRevealed ? <EyeClosed /> : <Eye />}
-            </Button>
-          )}
-          {reset && controlledValue.length > 1 && (
-            <Button theme='navy' onClick={handleReset}>
-              <X />
-            </Button>
-          )}
-          {copy && (
-            <Button theme='navy' onClick={handleCopy}>
-              {isCopied ? <Check /> : <Clipboard />}
-            </Button>
-          )}
-          {submit && (
-            <Button theme='navy' onClick={handleSubmit}>
-              {typeof submit === 'string' ? submit : 'Submit'}
-            </Button>
-          )}
-          {customSubmit && customSubmit}
-        </FunctionWrapper>
-      </Wrapper>
-    </>
+    <Wrapper css={css} id={id}>
+      {icon && <IconWrapper>{icon}</IconWrapper>}
+      <InputWrapper width={width} type={controlledType} value={controlledValue} onChange={handleChange} {...props} />
+      <FunctionWrapper>
+        {loader && (
+          <Badge theme='navy' dot='pulse'>
+            <Loading />
+          </Badge>
+        )}
+        {error && (
+          <Badge theme='red' dot='pulse'>
+            <WarningOctagon />
+          </Badge>
+        )}
+        {reveal && (
+          <Button theme='navy' onClick={handleReveal}>
+            {isRevealed ? <EyeClosed /> : <Eye />}
+          </Button>
+        )}
+        {reset && controlledValue.length > 1 && (
+          <Button theme='navy' onClick={handleReset}>
+            <X />
+          </Button>
+        )}
+        {copy && (
+          <Button theme='navy' onClick={handleCopy}>
+            {isCopied ? <Check /> : <Clipboard />}
+          </Button>
+        )}
+        {submit && (
+          <Button theme='navy' onClick={handleSubmit}>
+            {typeof submit === 'string' ? submit : 'Submit'}
+          </Button>
+        )}
+        {customSubmit && customSubmit}
+      </FunctionWrapper>
+    </Wrapper>
   );
 }

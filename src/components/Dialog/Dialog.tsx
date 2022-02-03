@@ -30,11 +30,15 @@ export default function Dialog({ children, css, id, trigger }: Props): JSX.Eleme
     }
   }, [isShown]);
 
+  const Wrapper = styled('div', {
+    position: 'initial',
+  });
+
   const TriggerWrapper = styled('div', {
     display: 'inline-flex',
   });
 
-  const Wrapper = styled('div', {
+  const OverlayWrapper = styled('div', {
     position: 'fixed',
     transition: '$1',
     zIndex: '$alert + 1',
@@ -75,7 +79,7 @@ export default function Dialog({ children, css, id, trigger }: Props): JSX.Eleme
   });
 
   return (
-    <>
+    <Wrapper id={id}>
       <TriggerWrapper
         onClickCapture={(e) => {
           e.persist();
@@ -84,15 +88,15 @@ export default function Dialog({ children, css, id, trigger }: Props): JSX.Eleme
         {trigger}
       </TriggerWrapper>
       {isShown && (
-        <Wrapper id={id}>
+        <OverlayWrapper>
           <CardWrapper ref={ref} css={css}>
             <Exit onClick={() => setIsShown(false)}>
               <X size={18} />
             </Exit>
             <Card>{children}</Card>
           </CardWrapper>
-        </Wrapper>
+        </OverlayWrapper>
       )}
-    </>
+    </Wrapper>
   );
 }
