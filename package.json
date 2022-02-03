@@ -27,7 +27,6 @@
     "microbundle": "^0.14.2",
     "next": "^12.0.10",
     "nookies": "^2.5.2",
-    "np": "^7.6.0",
     "parcel": "^2.2.1",
     "phosphor-react": "^1.4.0",
     "prettier": "^2.5.1",
@@ -60,10 +59,6 @@
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.modern.module.js",
-  "np": {
-    "branch": "main",
-    "message": "release: v%s"
-  },
   "peerDependencies": {
     "@stitches/react": ">=1.2.6",
     "next": ">=12.0.10",
@@ -78,7 +73,6 @@
     "clean": "prettier --write '**/*.{js,css,jsx,tsx,ts}' '!node_modules/**' '!.git/**' '!dist/**'",
     "dev": "parcel test/index.html",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
-    "release": "np",
     "watch": "microbundle watch --jsx React.createElement --format modern,es,cjs"
   },
   "source": "src/index.tsx",

@@ -17,7 +17,6 @@ The system is built for use within Next.js, using Stitches for styling.
 
     $ yarn lint
     $ yarn build
-    $ yarn release
 
 ### Contributing
 
