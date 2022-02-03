@@ -1,7 +1,6 @@
 src
 test
 .eslintrc
-.eslintrc
 .parcel-cache
 fonts.css
 public
