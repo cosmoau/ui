@@ -6,26 +6,25 @@ import type { ChangeEvent, InputHTMLAttributes } from 'react';
 import React, { useState } from 'react';
 
 import { styled } from '../../stitches.config';
+import { Badge } from '../Badge';
 import { Button } from '../Button';
-import { Column } from '../Column';
-import { Section } from '../Section';
-import { Text } from '../Typography';
+import { Element } from '../Element';
+
+import { Heading, Text } from '../Typography';
 
 const Wrapper = styled('div', {
-  width: 'auto',
   display: 'block',
-  alignItems: 'center',
-  height: '100%',
+  width: '100%',
   position: 'relative',
   borderRadius: '$2',
-  backgroundColor: '$baseContrast100',
+  backgroundColor: '$baseContrast100 !important',
   border: '0.1rem solid $border100',
-  paddingTop: 'calc($2 * 0.8)',
-  paddingBottom: 'calc($2 * 0.8)',
-  paddingLeft: '$2',
-  paddingRight: '$2',
+  paddingTop: '$4',
+  paddingBottom: '$4',
+  paddingLeft: '$4',
+  paddingRight: '$4',
   boxShadow: '$1',
-  userSelect: 'noe',
+
   transition: '$1',
   '&:hover': {
     boxShadow: '$2',
@@ -44,23 +43,38 @@ const Wrapper = styled('div', {
     cursor: 'not-allowed',
     opacity: 0.5,
   },
+
+  '&:after': {
+    clear: 'both',
+    content: '""',
+  },
 });
 
 const InputWrapper = styled('textarea', {
+  display: 'block',
   backgroundColor: 'transparent',
   color: '$base100',
   appearance: 'none',
-  display: 'inline-flex',
   width: '100%',
-  height: '100%',
   border: '0',
   margin: '0',
   fontSize: '1.6rem !important',
+  '&:after': {
+    clear: 'both',
+    content: '""',
+  },
+});
+
+const FunctionWrapper = styled('div', {
+  display: 'block',
+  '&:after': {
+    clear: 'both',
+    content: '""',
+  },
 });
 
 type Props = InputHTMLAttributes<HTMLTextAreaElement> &
   typeof InputWrapper[$$StyledComponentProps] & {
-    columns?: number;
     copy?: boolean;
     css: Stitches.CSS;
     maxLength?: number;
@@ -69,13 +83,12 @@ type Props = InputHTMLAttributes<HTMLTextAreaElement> &
   };
 
 export default function Input({
-  columns,
   copy,
   css,
   disabled,
-  maxLength,
+  maxLength = 250,
   onChange,
-  rows,
+  rows = 5,
   // inherited
   value = '',
   ...props
@@ -102,30 +115,22 @@ export default function Input({
     <Wrapper css={css}>
       <InputWrapper
         rows={rows}
-        cols={columns}
         value={controlledValue}
         maxLength={maxLength}
         onChange={handleChange}
         disabled={disabled}
         {...props}
       />
-      <Section
-        css={{
-          padding: 0,
-        }}>
-        <Column minimal width={60} widthPhone={60}>
-          <Text level={2}>
-            {controlledValue.length} / {maxLength}
-          </Text>
-        </Column>
+      <FunctionWrapper>
+        <Text level={2} inline inlineSpacer={2}>
+          {controlledValue.length} / {maxLength}
+        </Text>
         {copy && (
-          <Column minimal width={40} widthPhone={40} align='right'>
-            <Button theme='navy' onClick={handleCopy}>
-              {isCopied ? <Check /> : <Clipboard />}
-            </Button>
-          </Column>
+          <Button theme='navy' onClick={handleCopy}>
+            {isCopied ? <Check /> : <Clipboard />}
+          </Button>
         )}
-      </Section>
+      </FunctionWrapper>
     </Wrapper>
   );
 }

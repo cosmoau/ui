@@ -27,7 +27,7 @@ export default function Card({
   children,
 }: Props): JSX.Element {
   const Wrapper = styled('div', {
-    padding: minimal ? 0 : image ? 0 : 'calc($3 / 1.25)',
+    padding: minimal ? 0 : image ? 0 : 'calc($6 / 1.25)',
     height: '100%',
     display: 'block',
     borderRadius: '$2',

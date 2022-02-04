@@ -5,11 +5,11 @@ import { styled } from '../../stitches.config';
 
 export interface Props {
   align?: 'left' | 'center' | 'right' | 'justify' | 'initial' | 'inherit';
-  bottom?: 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 5 | 6;
+  bottom?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   children: ReactNode;
   css?: Stitches.CSS;
   id?: string;
-  top?: 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 5 | 6;
+  top?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 }
 
 export default function Element({ align = 'inherit', bottom, children, css, id, top }: Props): JSX.Element {

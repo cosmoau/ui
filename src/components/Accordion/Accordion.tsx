@@ -53,7 +53,7 @@ export default function Accordion({ active = false, css, id, options }: Props): 
   const ItemWrapper = styled('div', {
     cursor: 'pointer',
     display: 'block',
-    paddingTop: 'calc($2 / 2.5)',
+    paddingTop: 'calc($4 / 2.5)',
 
     '&:first-child': {
       paddingTop: 0,
@@ -65,12 +65,12 @@ export default function Accordion({ active = false, css, id, options }: Props): 
     transition: '$1',
 
     '&.open': {
-      animation: `${slideDown} .3s cubic-bezier(0.87, 0, 0.13, 1)`,
+      animation: `${slideDown} .33s cubic-bezier(0.87, 0, 0.13, 1)`,
       color: 'inherit',
       transition: '$1',
       overflow: 'hidden',
-      marginTop: '$1',
-      paddingTop: '$1',
+      marginTop: '$2',
+      paddingTop: '$2',
       borderTop: '1px solid $navy300',
     },
     '&.closed': {
@@ -78,7 +78,7 @@ export default function Accordion({ active = false, css, id, options }: Props): 
       maxHeight: 0,
       transition: '$1',
       overflow: 'hidden',
-      animation: `${slideUp} .4s cubic-bezier(0.87, 0, 0.13, 1)`,
+      animation: `${slideUp} .33s cubic-bezier(0.87, 0, 0.13, 1)`,
     },
   });
 

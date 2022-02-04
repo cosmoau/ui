@@ -5,7 +5,7 @@ import '../fonts.css';
 export function App() {
   return (
     <UI.Context>
-      <UI.Block top={6} bottom={6}>
+      <UI.Block theme='alternate' top={1.5} bottom={6}>
         <UI.Section>
           <UI.Column align='left'>
             <UI.Submenu
@@ -37,6 +37,10 @@ export function App() {
                 </>
               }
             />
+          </UI.Column>
+          <UI.Column top={3}>
+            <UI.Textarea copy />
+            <UI.Input copy />
           </UI.Column>
         </UI.Section>
       </UI.Block>

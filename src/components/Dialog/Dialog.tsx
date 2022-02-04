@@ -41,7 +41,7 @@ export default function Dialog({ children, css, id, trigger }: Props): JSX.Eleme
   const OverlayWrapper = styled('div', {
     position: 'fixed',
     transition: '$1',
-    zIndex: '$alert + 1',
+    zIndex: '$alert',
     top: 0,
     left: 0,
     right: 0,

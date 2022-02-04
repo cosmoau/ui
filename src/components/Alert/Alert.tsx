@@ -74,7 +74,7 @@ export default function Alert({ action, cancel, css, description, id, title, tri
   });
 
   const CardActionsWrapper = styled('div', {
-    paddingTop: '$3',
+    paddingTop: '$6',
     textAlign: 'right',
   });
 
@@ -104,7 +104,7 @@ export default function Alert({ action, cancel, css, description, id, title, tri
                     setIsShown(false);
                   }}
                   css={{
-                    mr: '$2',
+                    mr: '$4',
                   }}>
                   {cancel}
                 </Button>

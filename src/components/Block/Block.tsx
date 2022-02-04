@@ -4,13 +4,13 @@ import React, { ReactNode } from 'react';
 import { breakpoints, styled } from '../../stitches.config';
 
 export interface Props {
-  bottom?: 1 | 2 | 3 | 4 | 5 | 6;
+  bottom?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   children: ReactNode;
   css?: Stitches.CSS;
   id?: string;
   inner?: boolean;
   theme?: 'dark' | 'alternate' | 'light';
-  top?: 1 | 2 | 3 | 4 | 5 | 6;
+  top?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 }
 
 export default function Block({ bottom, children, css, id, inner, theme, top }: Props): JSX.Element {

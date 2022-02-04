@@ -5,7 +5,7 @@ import { styled, breakpoints } from '../../stitches.config';
 
 export interface Props {
   align?: 'left' | 'center' | 'right' | 'justify' | 'initial' | 'inherit';
-  bottom?: 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 5 | 6;
+  bottom?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   children: ReactNode;
   css?: Stitches.CSS;
   id?: string;
@@ -16,7 +16,7 @@ export interface Props {
   offsetPhone?: number;
   offsetTablet?: number;
   offsetWide?: number;
-  top?: 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 5 | 6;
+  top?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   width?: number;
   widthDesktop?: number;
   widthLaptop?: number;
@@ -54,8 +54,8 @@ export default function Column({
     maxWidth: '100%',
     width: '100%',
     marginBottom: 0,
-    paddingLeft: minimal ? 0 : '$3',
-    paddingRight: minimal ? 0 : '$3',
+    paddingLeft: minimal ? 0 : '$6',
+    paddingRight: minimal ? 0 : '$6',
     paddingTop: top ? `$${top}` : 0,
     paddingBottom: bottom ? `$${bottom}` : 0,
     textAlign: align,

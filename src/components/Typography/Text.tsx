@@ -29,9 +29,9 @@ export default function Text({
   const baseStyles = {
     textAlign: align,
     display: inline ? 'inline-block' : 'inherit',
-    paddingTop: top ? `$${top}` : 'inherit',
-    paddingBottom: bottom ? `$${bottom}` : 'inherit',
-    marginRight: inlineSpacer ? `${inlineSpacer}rem` : 'inherit',
+    paddingTop: top ? `$${top}` : 0,
+    paddingBottom: bottom ? `$${bottom}` : 0,
+    marginRight: inlineSpacer ? `${inlineSpacer}rem` : 0,
 
     '&:last-child': {
       marginBottom: 0,

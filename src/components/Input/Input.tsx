@@ -19,12 +19,11 @@ const Wrapper = styled('div', {
   borderRadius: '$2',
   backgroundColor: '$baseContrast100',
   border: '0.1rem solid $border100',
-  paddingTop: 'calc($2 * 0.6)',
-  paddingBottom: 'calc($2 * 0.6)',
-  paddingLeft: '$2',
-  paddingRight: '$2',
+  paddingTop: '$2',
+  paddingBottom: '$2',
+  paddingLeft: '$3',
+  paddingRight: '$3',
   boxShadow: '$1',
-  userSelect: 'noe',
   transition: '$1',
   '&:hover': {
     boxShadow: '$2',
@@ -46,25 +45,26 @@ const Wrapper = styled('div', {
 });
 
 const IconWrapper = styled('div', {
-  display: 'inline-flex',
+  display: 'block',
   alignItems: 'center',
   width: 'auto',
-  marginRight: '$2',
   height: '100%',
+  marginRight: '$3',
   position: 'relative',
-  verticalAlign: 'middle',
 });
 
 const InputWrapper = styled('input', {
   appearance: 'none',
-  display: 'inline-flex',
+  height: '100%',
+  maxHeight: '100%',
+  display: 'inline-block',
   fontSize: '16px',
   fontFamily: '$body',
   margin: 0,
   outline: 'none',
   padding: 0,
   WebkitTapHighlightColor: 'rgba(0,0,0,0)',
-  height: '100%',
+
   border: 0,
   backgroundColor: 'transparent',
   color: '$base100',
@@ -101,19 +101,19 @@ const InputWrapper = styled('input', {
 });
 
 const FunctionWrapper = styled('div', {
-  display: 'inline-flex',
+  display: 'inline-block',
   alignItems: 'center',
   width: 'auto',
   height: '100%',
   position: 'relative',
   verticalAlign: 'middle',
-  marginLeft: '$2',
+  marginLeft: '$3',
   '*': {
     verticalAlign: 'middle',
     lineHeight: '1',
   },
   button: {
-    marginLeft: '$1',
+    marginLeft: '$2',
   },
 });
 

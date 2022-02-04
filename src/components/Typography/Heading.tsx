@@ -42,7 +42,7 @@ export default function Heading({
     fontSize: '$h1',
     fontWeight: '$2',
     lineHeight: '$h1',
-    marginBottom: inlineSpacer ? 0 : 'calc($3 / 1.1)',
+    marginBottom: inline ? 0 : 'calc($3 / 1.1)',
 
     [breakpoints.phone]: {
       fontSize: 'calc($h1 * 0.95)',
@@ -66,7 +66,7 @@ export default function Heading({
     fontSize: '$h2',
     fontWeight: '$2',
     lineHeight: '$h2',
-    marginBottom: inlineSpacer ? 0 : 'calc($3 / 1.4)',
+    marginBottom: inline ? 0 : 'calc($3 / 1.4)',
 
     [breakpoints.phone]: {
       fontSize: 'calc($h2 * 0.95)',
@@ -91,7 +91,7 @@ export default function Heading({
     fontWeight: '$2',
     lineHeight: '$h3',
     letterSpacing: '0.01rem',
-    marginBottom: inlineSpacer ? 0 : '$2',
+    marginBottom: inline ? 0 : '$2',
 
     [breakpoints.phone]: {
       fontSize: 'calc($h3 * 0.95)',
@@ -116,7 +116,7 @@ export default function Heading({
     fontWeight: '$1',
     lineHeight: '$h4',
     opacity: 0.8,
-    marginBottom: inlineSpacer ? 0 : '$2',
+    marginBottom: inline ? 0 : '$2',
 
     [breakpoints.phone]: {
       fontSize: 'calc($h4 * 0.95)',
@@ -145,7 +145,7 @@ export default function Heading({
     fontSize: '$h5',
     fontWeight: '$1',
     lineHeight: '$h5',
-    marginBottom: inlineSpacer ? 0 : 'calc($1 * 3.3)',
+    marginBottom: inline ? 0 : 'calc($2 * 3.3)',
 
     [breakpoints.phone]: {
       fontSize: 'calc($h5 * 0.95)',
@@ -169,7 +169,7 @@ export default function Heading({
     fontSize: '$h6',
     fontWeight: '$1',
     lineHeight: '$h6',
-    marginBottom: inlineSpacer ? 0 : 'calc($1 * 3)',
+    marginBottom: inline ? 0 : 'calc($2 * 3)',
 
     [breakpoints.phone]: {
       fontSize: 'calc($h6 * 0.95)',

@@ -42,13 +42,22 @@ export default function Cookies({
     position: 'fixed',
     transition: '$1',
     zIndex: '$cookies',
-    bottom: '$2',
+    bottom: '$4',
     left: 0,
     right: 0,
     maxWidth: '100%',
     margin: 'auto',
     textAlign: 'center',
 
+    svg: {
+      verticalAlign: 'middle',
+      cursor: 'pointer',
+      transition: '$1',
+
+      '&:hover': {
+        opacity: 0.4,
+      },
+    },
     [breakpoints.phone]: {
       maxWidth: '95%',
     },
@@ -63,7 +72,7 @@ export default function Cookies({
         <Card
           border
           css={{
-            ptb: 'calc($2 / 2)',
+            ptb: '$3',
             textAlign: 'center',
             display: 'inline-flex',
             boxShadow: '$4',

@@ -63,10 +63,10 @@ export default function Button({
     position: 'relative',
     transition: '$1',
     fontWeight: '$1',
-    paddingTop: '$1',
-    paddingBottom: '$1',
-    paddingLeft: '$2',
-    paddingRight: '$2',
+    paddingTop: '$2',
+    paddingBottom: '$2',
+    paddingLeft: '$4',
+    paddingRight: '$4',
     borderRadius: '$1',
     fontSize: '$h5',
     border: `0.1rem solid ${
@@ -191,7 +191,7 @@ export default function Button({
     justifyContent: 'center',
     width: '2.8rem',
     height: '2.8rem',
-    marginRight: 'calc($2 / 2)',
+    marginRight: 'calc($4 / 2)',
 
     svg: {
       width: '100%',

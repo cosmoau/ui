@@ -53,10 +53,10 @@ export default function Badge({
     justifyContent: 'center',
     position: 'relative',
     transition: '$1',
-    paddingTop: '$1',
-    paddingBottom: '$1',
-    paddingLeft: 'calc($2 / 1.5)',
-    paddingRight: 'calc($2 / 1.5)',
+    paddingTop: '$2',
+    paddingBottom: '$2',
+    paddingLeft: 'calc($4 / 1.5)',
+    paddingRight: 'calc($4 / 1.5)',
     borderRadius: '$3',
     fontSize: '1.55rem !important',
     lineHeight: '1.25',
@@ -101,7 +101,7 @@ export default function Badge({
   });
 
   const LoaderWrapper = styled('div', {
-    height: '2.5rem',
+    height: '$6',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',

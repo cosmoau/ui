@@ -39,7 +39,7 @@ export default function Checkbox({ checked = false, children, css, disabled = fa
   const LabelWrapper = styled('label', {
     display: 'table-cell',
     verticalAlign: 'middle',
-    paddingLeft: '$2',
+    paddingLeft: '$3',
     userSelect: 'none',
     whiteSpace: 'pre-wrap',
     wordBreak: 'break-word',
@@ -52,9 +52,10 @@ export default function Checkbox({ checked = false, children, css, disabled = fa
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          borderRadius: '100%',
+          borderRadius: '$3',
           aspectRatio: 1,
-          padding: 'calc($2 * 0.33)',
+          width: '3rem',
+          height: '3rem',
         }}
         onClick={handleChange}>
         {isChecked ? <Check /> : <Circle opacity={0.1} />}
