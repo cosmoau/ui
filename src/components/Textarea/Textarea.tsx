@@ -6,26 +6,21 @@ import type { ChangeEvent, InputHTMLAttributes } from 'react';
 import React, { useState } from 'react';
 
 import { styled } from '../../stitches.config';
-import { Badge } from '../Badge';
 import { Button } from '../Button';
-import { Element } from '../Element';
-
-import { Heading, Text } from '../Typography';
+import { Text } from '../Typography';
 
 const Wrapper = styled('div', {
-  display: 'block',
+  display: 'flex',
+  flexDirection: 'column',
   width: '100%',
   position: 'relative',
   borderRadius: '$2',
   backgroundColor: '$baseContrast100 !important',
   border: '0.1rem solid $border100',
-  paddingTop: '$4',
-  paddingBottom: '$4',
-  paddingLeft: '$4',
-  paddingRight: '$4',
+  padding: 'calc($4 * 0.8)',
   boxShadow: '$1',
-
   transition: '$1',
+
   '&:hover': {
     boxShadow: '$2',
     border: '0.1rem solid $border100',
@@ -43,11 +38,6 @@ const Wrapper = styled('div', {
     cursor: 'not-allowed',
     opacity: 0.5,
   },
-
-  '&:after': {
-    clear: 'both',
-    content: '""',
-  },
 });
 
 const InputWrapper = styled('textarea', {
@@ -57,7 +47,7 @@ const InputWrapper = styled('textarea', {
   appearance: 'none',
   width: '100%',
   border: '0',
-  margin: '0',
+  margin: '0 auto',
   fontSize: '1.6rem !important',
   '&:after': {
     clear: 'both',

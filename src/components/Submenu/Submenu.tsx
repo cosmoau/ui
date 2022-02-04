@@ -10,6 +10,7 @@ import { Heading } from '../Typography';
 export interface Props {
   align?: 'left' | 'right' | 'center';
   css?: Stitches.CSS;
+  hover?: boolean;
   id?: string;
   options: Array<{
     icon?: ReactNode;
@@ -21,7 +22,16 @@ export interface Props {
   width?: number;
 }
 
-export default function Submenu({ align = 'left', css, id, options, passKey, trigger, width }: Props): JSX.Element {
+export default function Submenu({
+  align = 'left',
+  css,
+  hover,
+  id,
+  options,
+  passKey,
+  trigger,
+  width,
+}: Props): JSX.Element {
   const router = useRouter();
   const ref = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -48,6 +58,11 @@ export default function Submenu({ align = 'left', css, id, options, passKey, tri
     appearance: 'none',
     outline: 'none',
     userSelect: 'none',
+    transition: '$1',
+    '&:hover': {
+      color: 'inherit',
+      opacity: hover ? 0.7 : 1,
+    },
   });
 
   const GroupWrapper = styled('div', {
@@ -58,7 +73,7 @@ export default function Submenu({ align = 'left', css, id, options, passKey, tri
     boxSizing: 'border-box',
     overflowY: 'auto',
     position: 'absolute',
-    padding: '$3',
+    padding: '$2',
     top: '120%',
     maxHeight: '50rem',
     width: '100%',

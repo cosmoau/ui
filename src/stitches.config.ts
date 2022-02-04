@@ -3,11 +3,11 @@ import type * as Stitches from '@stitches/react';
 
 export const breakpoints = {
   phone: '@media only screen and (max-width: 799px)',
-  tablet: '@media only screen and (min-width: 800px)',
+  tablet: '@media only screen and (max-width: 999px)',
   tabletX: '@media only screen and (min-width: 800px) and (max-width: 999px)',
-  laptop: '@media only screen and (min-width: 1000px)',
+  laptop: '@media only screen and (max-width: 1449px)',
   laptopX: '@media only screen and (min-width: 1000px) and (max-width: 1449px)',
-  desktop: '@media only screen and (min-width: 1450px)',
+  desktop: '@media only screen and (max-width: 1999px)',
   desktopX: '@media only screen and (min-width: 1450px) and (max-width: 1999px)',
   wide: '@media only screen and (min-width: 2000px)',
   dark: '@media only screen and (prefers-color-scheme: dark)',
@@ -59,7 +59,7 @@ export const { theme, css, styled, globalCss } = createStitches({
     space: {
       1: '0.2rem',
       2: '0.4rem',
-      3: '0.8rem',
+      3: '1rem',
       4: '1.6rem',
       5: '2rem',
       6: '2.5rem',
@@ -79,9 +79,9 @@ export const { theme, css, styled, globalCss } = createStitches({
       h4: '1.9rem',
       h5: '1.8rem',
       h6: '1.7rem',
-      t1: '1.6rem',
-      t2: '1.4rem',
-      t3: '1.2rem',
+      t1: '1.5rem',
+      t2: '1.3rem',
+      t3: '1.1rem',
     },
     fonts: {
       body: 'Graphik, system-ui, sans-serif',

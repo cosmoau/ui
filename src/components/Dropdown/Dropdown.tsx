@@ -60,7 +60,7 @@ export default function Dropdown({
     boxSizing: 'border-box',
     overflowY: 'auto',
     position: 'absolute',
-    padding: '$3',
+    padding: '$2',
     top: '120%',
     maxHeight: '50rem',
     width: '100%',

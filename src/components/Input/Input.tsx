@@ -11,11 +11,9 @@ import { Button } from '../Button';
 import { Loading } from '../Loading';
 
 const Wrapper = styled('div', {
-  width: 'auto',
   display: 'inline-flex',
-  alignItems: 'center',
-  height: '100%',
   position: 'relative',
+  alignContent: 'center',
   borderRadius: '$2',
   backgroundColor: '$baseContrast100',
   border: '0.1rem solid $border100',
@@ -42,10 +40,13 @@ const Wrapper = styled('div', {
     cursor: 'not-allowed',
     opacity: 0.5,
   },
+  '*': {
+    verticalAlign: 'middle',
+  },
 });
 
 const IconWrapper = styled('div', {
-  display: 'block',
+  display: 'inline-flex',
   alignItems: 'center',
   width: 'auto',
   height: '100%',
@@ -55,20 +56,17 @@ const IconWrapper = styled('div', {
 
 const InputWrapper = styled('input', {
   appearance: 'none',
-  height: '100%',
-  maxHeight: '100%',
-  display: 'inline-block',
+  display: 'inline-flex',
   fontSize: '16px',
   fontFamily: '$body',
   margin: 0,
   outline: 'none',
   padding: 0,
   WebkitTapHighlightColor: 'rgba(0,0,0,0)',
-
   border: 0,
   backgroundColor: 'transparent',
   color: '$base100',
-  lineHeight: '1.5',
+  lineHeight: 'normal',
   fontWeight: '$1',
   textAlign: 'left',
   transition: '$1',
@@ -101,7 +99,7 @@ const InputWrapper = styled('input', {
 });
 
 const FunctionWrapper = styled('div', {
-  display: 'inline-block',
+  display: 'inline-flex',
   alignItems: 'center',
   width: 'auto',
   height: '100%',

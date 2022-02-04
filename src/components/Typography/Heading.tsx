@@ -5,14 +5,14 @@ import { styled, breakpoints } from '../../stitches.config';
 
 export interface Props {
   align?: 'left' | 'center' | 'right' | 'justify' | 'initial' | 'inherit';
-  bottom?: 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 5 | 6;
+  bottom?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   children: ReactNode;
   css?: Stitches.CSS;
   id?: string;
   inline?: boolean;
   inlineSpacer?: number;
   level?: 1 | 2 | 3 | 4 | 5 | 6;
-  top?: 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 5 | 6;
+  top?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 }
 
 export default function Heading({
@@ -36,13 +36,13 @@ export default function Heading({
     '&:last-child': {
       marginBottom: 0,
     },
-  };
+  } as Stitches.CSS;
 
   const LevelOneWrapper = styled('h1', {
     fontSize: '$h1',
     fontWeight: '$2',
     lineHeight: '$h1',
-    marginBottom: inline ? 0 : 'calc($3 / 1.1)',
+    marginBottom: inline ? 0 : '$6',
 
     [breakpoints.phone]: {
       fontSize: 'calc($h1 * 0.95)',
@@ -66,7 +66,7 @@ export default function Heading({
     fontSize: '$h2',
     fontWeight: '$2',
     lineHeight: '$h2',
-    marginBottom: inline ? 0 : 'calc($3 / 1.4)',
+    marginBottom: inline ? 0 : '$5',
 
     [breakpoints.phone]: {
       fontSize: 'calc($h2 * 0.95)',
@@ -91,7 +91,7 @@ export default function Heading({
     fontWeight: '$2',
     lineHeight: '$h3',
     letterSpacing: '0.01rem',
-    marginBottom: inline ? 0 : '$2',
+    marginBottom: inline ? 0 : '$4',
 
     [breakpoints.phone]: {
       fontSize: 'calc($h3 * 0.95)',
@@ -116,7 +116,7 @@ export default function Heading({
     fontWeight: '$1',
     lineHeight: '$h4',
     opacity: 0.8,
-    marginBottom: inline ? 0 : '$2',
+    marginBottom: inline ? 0 : '$4',
 
     [breakpoints.phone]: {
       fontSize: 'calc($h4 * 0.95)',
@@ -145,7 +145,7 @@ export default function Heading({
     fontSize: '$h5',
     fontWeight: '$1',
     lineHeight: '$h5',
-    marginBottom: inline ? 0 : 'calc($2 * 3.3)',
+    marginBottom: inline ? 0 : '$3',
 
     [breakpoints.phone]: {
       fontSize: 'calc($h5 * 0.95)',
@@ -169,7 +169,7 @@ export default function Heading({
     fontSize: '$h6',
     fontWeight: '$1',
     lineHeight: '$h6',
-    marginBottom: inline ? 0 : 'calc($2 * 3)',
+    marginBottom: inline ? 0 : '$3',
 
     [breakpoints.phone]: {
       fontSize: 'calc($h6 * 0.95)',

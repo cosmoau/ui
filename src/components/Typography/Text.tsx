@@ -5,14 +5,14 @@ import { styled } from '../../stitches.config';
 
 export interface Props {
   align?: 'left' | 'center' | 'right' | 'justify' | 'initial' | 'inherit';
-  bottom?: 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 5 | 6;
+  bottom?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   children: ReactNode;
   css?: Stitches.CSS;
   id?: string;
   inline?: boolean;
   inlineSpacer?: number;
   level?: 1 | 2 | 3;
-  top?: 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 5 | 6;
+  top?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 }
 
 export default function Text({
@@ -31,6 +31,7 @@ export default function Text({
     display: inline ? 'inline-block' : 'inherit',
     paddingTop: top ? `$${top}` : 0,
     paddingBottom: bottom ? `$${bottom}` : 0,
+    marginBottom: inline ? 0 : '$3',
     marginRight: inlineSpacer ? `${inlineSpacer}rem` : 0,
 
     '&:last-child': {
@@ -42,7 +43,6 @@ export default function Text({
     fontSize: '$t1',
     fontWeight: '$1',
     lineHeight: '$t1',
-    marginBottom: inlineSpacer ? 0 : 'calc($1 * 2)',
 
     ...baseStyles,
   });
@@ -53,8 +53,6 @@ export default function Text({
     lineHeight: '$t2',
     opacity: 0.7,
 
-    marginBottom: inlineSpacer ? 0 : 'calc($1 * 2)',
-
     ...baseStyles,
   });
 
@@ -63,7 +61,6 @@ export default function Text({
     fontWeight: '$1',
     lineHeight: '$t3',
     opacity: 0.7,
-    marginBottom: inlineSpacer ? 0 : '$1',
 
     ...baseStyles,
   });
