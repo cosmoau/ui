@@ -72,12 +72,6 @@ export default function Column({
       marginLeft: offsetTablet ? `${offsetTablet}%` : `${offset}%`,
     },
 
-    [breakpoints.tablet]: {
-      maxWidth: `${width}%`,
-      flex: `0 0 ${width}%`,
-      marginLeft: `${offset}%`,
-    },
-
     [breakpoints.laptopX]: {
       maxWidth: widthLaptop ? `${widthLaptop}%` : `${width}%`,
       flex: widthLaptop ? `0 0 ${widthLaptop}%` : `0 0 ${width}%`,
@@ -91,9 +85,9 @@ export default function Column({
     },
 
     [breakpoints.wide]: {
-      maxWidth: `${widthWide}%`,
-      flex: `0 0 ${widthWide}%`,
-      marginLeft: `${offsetWide}%`,
+      maxWidth: widthWide ? `${widthWide}%` : `${width}%`,
+      flex: widthWide ? `0 0 ${widthWide}%` : `0 0 ${width}%`,
+      marginLeft: offsetWide ? `${offsetWide}%` : `${offset}%`,
     },
   });
 
