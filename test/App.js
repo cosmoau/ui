@@ -17,7 +17,14 @@ export function App() {
               sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur
               adipisicing elit. Quisquam, quidem.
             </UI.Heading>
-            <UI.Heading level={2}>
+            <UI.Heading
+              level={2}
+              css={{
+                phone: {
+                  opacity: 0.4,
+                  fontStyle: 'italic',
+                },
+              }}>
               Heading Two - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor
               sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur
               adipisicing elit. Quisquam, quidem.

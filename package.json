@@ -1,7 +1,7 @@
 {
   "name": "@cosmo-au/design-system",
   "description": "The goal of the Cosmo Design System is to streamline our teams ability to build and maintain Cosmo projects, enforcing strict component APIs and performance parameters.",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "private": false,
   "author": "Jackson Dolman <jackson@cosmogroup.io>",
   "browserslist": {
@@ -72,7 +72,7 @@
   "scripts": {
     "build": "yarn lint && microbundle --jsx React.createElement --format modern,es,cjs --compress",
     "clean": "prettier --write '**/*.{js,css,jsx,tsx,ts}' '!node_modules/**' '!.git/**' '!dist/**'",
-    "dev": "parcel test/index.html",
+    "dev": "parcel test/index.html --dist-dir test/dist --open",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
     "watch": "microbundle watch --jsx React.createElement --format modern,es,cjs"
   },

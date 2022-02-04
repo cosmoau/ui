@@ -134,6 +134,7 @@ export const { theme, css, styled, globalCss } = createStitches({
     transitions: {
       1: 'all 0.33s ease-in-out',
     },
+    // Custom breakpoints are used throughout, as I don't love how Stitches currently handles media queries and they aren't used heaps - so I prefer to inline them, albeit with a bit of a hack,
     media: breakpoints,
   },
   utils: {
@@ -228,6 +229,30 @@ export const { theme, css, styled, globalCss } = createStitches({
       [breakpoints[value]]: {
         display: 'inline-block',
       },
+    }),
+    phone: (value: any) => ({
+      [breakpoints.phone]: value,
+    }),
+    tablet: (value: any) => ({
+      [breakpoints.tablet]: value,
+    }),
+    tabletX: (value: any) => ({
+      [breakpoints.tabletX]: value,
+    }),
+    laptop: (value: any) => ({
+      [breakpoints.laptop]: value,
+    }),
+    laptopX: (value: any) => ({
+      [breakpoints.laptopX]: value,
+    }),
+    desktop: (value: any) => ({
+      [breakpoints.desktop]: value,
+    }),
+    desktopX: (value: any) => ({
+      [breakpoints.desktopX]: value,
+    }),
+    wide: (value: any) => ({
+      [breakpoints.wide]: value,
     }),
   },
 });
