@@ -4,7 +4,7 @@ export default function stitchesShared({ ...props }) {
   const baseStyles = {
     textAlign: props.align,
     display: props.inline ? 'inline-block' : 'inherit',
-    paddingTop: top ? `$${top}` : 0,
+    paddingTop: props.top ? `$${props.top}` : 0,
     paddingBottom: props.bottom ? `$${props.bottom}` : 0,
     marginRight: props.inlineSpacer ? `${props.inlineSpacer}rem` : 0,
 

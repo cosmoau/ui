@@ -21,8 +21,8 @@ export default function Block({ bottom, children, css, id, inner, theme, top }: 
     color: theme === 'dark' ? '$baseContrast100' : '$base100',
     paddingLeft: '$2',
     paddingRight: '$2',
-    paddingTop: !top ? 'inherit' : `$${top}`,
-    paddingBottom: !bottom ? 'inherit' : `$${bottom}`,
+    paddingTop: top ? `$${top}` : 'inherit',
+    paddingBottom: bottom ? `$${bottom}` : 'inherit',
   });
 
   const InnerWrapper = styled('div', {
