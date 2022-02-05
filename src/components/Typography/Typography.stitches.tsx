@@ -1,48 +1,23 @@
-import type * as Stitches from '@stitches/react';
-import React, { ReactNode } from 'react';
-
 import { styled, breakpoints } from '../../stitches.config';
 
-export interface Props {
-  align?: 'left' | 'center' | 'right' | 'justify' | 'initial' | 'inherit';
-  bottom?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
-  children: ReactNode;
-  css?: Stitches.CSS;
-  id?: string;
-  inline?: boolean;
-  inlineSpacer?: number;
-  level?: 1 | 2 | 3 | 4 | 5 | 6;
-  top?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
-}
-
-export default function Heading({
-  align = 'inherit',
-  bottom,
-  children,
-  css,
-  id,
-  inline = false,
-  inlineSpacer = 0,
-  level = 6,
-  top,
-}: Props): JSX.Element {
+export default function stitchesShared({ ...props }) {
   const baseStyles = {
-    textAlign: align,
-    display: inline ? 'inline-block' : 'inherit',
+    textAlign: props.align,
+    display: props.inline ? 'inline-block' : 'inherit',
     paddingTop: top ? `$${top}` : 0,
-    paddingBottom: bottom ? `$${bottom}` : 0,
-    marginRight: inlineSpacer ? `${inlineSpacer}rem` : 0,
+    paddingBottom: props.bottom ? `$${props.bottom}` : 0,
+    marginRight: props.inlineSpacer ? `${props.inlineSpacer}rem` : 0,
 
     '&:last-child': {
       marginBottom: 0,
     },
-  } as Stitches.CSS;
+  };
 
-  const LevelOneWrapper = styled('h1', {
+  const HeadingOneWrapper = styled('h1', {
     fontSize: '$h1',
     fontWeight: '$2',
     lineHeight: '$h1',
-    marginBottom: inline ? 0 : '$6',
+    marginBottom: props.inline ? 0 : '$6',
 
     [breakpoints.phone]: {
       fontSize: 'calc($h1 * 0.95)',
@@ -62,11 +37,11 @@ export default function Heading({
     ...baseStyles,
   });
 
-  const LevelTwoWrapper = styled('h2', {
+  const HeadingTwoWrapper = styled('h2', {
     fontSize: '$h2',
     fontWeight: '$2',
     lineHeight: '$h2',
-    marginBottom: inline ? 0 : '$5',
+    marginBottom: props.inline ? 0 : '$5',
 
     [breakpoints.phone]: {
       fontSize: 'calc($h2 * 0.95)',
@@ -86,12 +61,12 @@ export default function Heading({
     ...baseStyles,
   });
 
-  const LevelThreeWrapper = styled('h3', {
+  const HeadingThreeWrapper = styled('h3', {
     fontSize: '$h3',
     fontWeight: '$2',
     lineHeight: '$h3',
     letterSpacing: '0.01rem',
-    marginBottom: inline ? 0 : '$4',
+    marginBottom: props.inline ? 0 : '$4',
 
     [breakpoints.phone]: {
       fontSize: 'calc($h3 * 0.95)',
@@ -111,12 +86,12 @@ export default function Heading({
     ...baseStyles,
   });
 
-  const LevelFourWrapper = styled('h4', {
+  const HeadingFourWrapper = styled('h4', {
     fontSize: '$h4',
     fontWeight: '$1',
     lineHeight: '$h4',
     opacity: 0.8,
-    marginBottom: inline ? 0 : '$4',
+    marginBottom: props.inline ? 0 : '$4',
 
     [breakpoints.phone]: {
       fontSize: 'calc($h4 * 0.95)',
@@ -141,11 +116,11 @@ export default function Heading({
     ...baseStyles,
   });
 
-  const LevelFiveWrapper = styled('h5', {
+  const HeadingFiveWrapper = styled('h5', {
     fontSize: '$h5',
     fontWeight: '$1',
     lineHeight: '$h5',
-    marginBottom: inline ? 0 : '$3',
+    marginBottom: props.inline ? 0 : '$3',
 
     [breakpoints.phone]: {
       fontSize: 'calc($h5 * 0.95)',
@@ -158,18 +133,18 @@ export default function Heading({
     },
 
     [breakpoints.laptopX]: {
-      fontSize: 'calc($h5 * 0.94)',
-      lineHeight: 'calc($h5 * 0.94)',
+      fontSize: 'calc($h5 * 0.9)',
+      lineHeight: 'calc($h5 * 0.9)',
     },
 
     ...baseStyles,
   });
 
-  const LevelSixWrapper = styled('h6', {
+  const HeadingSixWrapper = styled('h6', {
     fontSize: '$h6',
     fontWeight: '$1',
     lineHeight: '$h6',
-    marginBottom: inline ? 0 : '$3',
+    marginBottom: props.inline ? 0 : '$3',
 
     [breakpoints.phone]: {
       fontSize: 'calc($h6 * 0.95)',
@@ -189,22 +164,56 @@ export default function Heading({
     ...baseStyles,
   });
 
-  const Wrapper =
-    level === 1
-      ? LevelOneWrapper
-      : level === 2
-      ? LevelTwoWrapper
-      : level === 3
-      ? LevelThreeWrapper
-      : level === 4
-      ? LevelFourWrapper
-      : level === 5
-      ? LevelFiveWrapper
-      : LevelSixWrapper;
+  const TextOneWrapper = styled('p', {
+    fontSize: '$t1',
+    fontWeight: '$1',
+    lineHeight: '$t1',
+    marginBottom: props.inline ? 0 : '$3',
 
-  return (
-    <Wrapper css={css} id={id}>
-      {children}
-    </Wrapper>
-  );
+    ...baseStyles,
+  });
+
+  const TextTwoWrapper = styled('p', {
+    fontSize: '$t2',
+    fontWeight: '$1',
+    lineHeight: '$t2',
+    opacity: 0.7,
+    marginBottom: props.inline ? 0 : '$3',
+
+    ...baseStyles,
+  });
+
+  const TextThreeWrapper = styled('p', {
+    fontSize: '$t3',
+    fontWeight: '$1',
+    lineHeight: '$t3',
+    opacity: 0.7,
+    marginBottom: props.inline ? 0 : '$3',
+
+    ...baseStyles,
+  });
+
+  const Wrapper =
+    props.type === 'Heading'
+      ? props.level === 1
+        ? HeadingOneWrapper
+        : props.level === 2
+        ? HeadingTwoWrapper
+        : props.level === 3
+        ? HeadingThreeWrapper
+        : props.level === 4
+        ? HeadingFourWrapper
+        : props.level === 5
+        ? HeadingFiveWrapper
+        : HeadingSixWrapper
+      : props.type === 'Text'
+      ? props.level === 1
+        ? TextOneWrapper
+        : props.level === 2
+        ? TextTwoWrapper
+        : props.level === 3
+        ? TextThreeWrapper
+        : TextOneWrapper
+      : HeadingSixWrapper;
+  return Wrapper;
 }

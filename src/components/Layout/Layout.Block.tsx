@@ -1,4 +1,4 @@
-import type * as Stitches from '@stitches/react';
+import { CSS } from '@stitches/react/types/css-util';
 import React, { ReactNode } from 'react';
 
 import { breakpoints, styled } from '../../stitches.config';
@@ -6,7 +6,7 @@ import { breakpoints, styled } from '../../stitches.config';
 export interface Props {
   bottom?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   children: ReactNode;
-  css?: Stitches.CSS;
+  css?: CSS;
   id?: string;
   inner?: boolean;
   theme?: 'dark' | 'alternate' | 'light';
@@ -21,8 +21,8 @@ export default function Block({ bottom, children, css, id, inner, theme, top }: 
     color: theme === 'dark' ? '$baseContrast100' : '$base100',
     paddingLeft: '$2',
     paddingRight: '$2',
-    paddingTop: top ? `$${top}` : 'inherit',
-    paddingBottom: bottom ? `$${bottom}` : 'inherit',
+    paddingTop: !top ? 'inherit' : `$${top}`,
+    paddingBottom: !bottom ? 'inherit' : `$${bottom}`,
   });
 
   const InnerWrapper = styled('div', {

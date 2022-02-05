@@ -1,4 +1,4 @@
-import type * as Stitches from '@stitches/react';
+import { CSS } from '@stitches/react/types/css-util';
 import React, { ReactNode, useRef, useState } from 'react';
 import { useOnClickOutside } from 'usehooks-ts';
 
@@ -7,22 +7,14 @@ import { styled } from '../../stitches.config';
 export interface Props {
   align?: 'left' | 'right' | 'center';
   children: ReactNode;
-  css?: Stitches.CSS;
+  css?: CSS;
   id?: string;
   passKey: string;
   trigger: ReactNode;
   type?: 'hover' | 'click';
 }
 
-export default function Tooltip({
-  align = 'left',
-  children,
-  css,
-  id,
-  passKey,
-  trigger,
-  type = 'hover',
-}: Props): JSX.Element {
+export default function Tooltip({ align = 'left', children, css, id, passKey, trigger, type = 'hover' }: Props): JSX.Element {
   const ref = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
 

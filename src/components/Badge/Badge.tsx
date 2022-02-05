@@ -1,5 +1,5 @@
-import type * as Stitches from '@stitches/react';
 import { keyframes } from '@stitches/react';
+import { CSS } from '@stitches/react/types/css-util';
 import { Circle } from 'phosphor-react';
 import React, { ReactNode } from 'react';
 
@@ -8,7 +8,7 @@ import { Loading } from '../Loading';
 
 export interface Props {
   children: ReactNode;
-  css?: Stitches.CSS;
+  css?: CSS;
   dot?: boolean | 'pulse';
   dotColor?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink';
   id?: string;
@@ -19,18 +19,7 @@ export interface Props {
   theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'border';
 }
 
-export default function Badge({
-  children,
-  css,
-  dot,
-  dotColor,
-  id,
-  inline = true,
-  inlineSpacer = 0,
-  loader,
-  shadow,
-  theme,
-}: Props): JSX.Element {
+export default function Badge({ children, css, dot, dotColor, id, inline = true, inlineSpacer = 0, loader, shadow, theme }: Props): JSX.Element {
   const pulseAnimation = keyframes({
     '0%': {
       opacity: 0.5,
@@ -92,7 +81,7 @@ export default function Badge({
         : theme === 'pink'
         ? '$pink100'
         : '$base100',
-    border: `0.1rem solid ${theme === 'border' ? '$border100' : 'transparent'}`,
+    border: `0.1rem solid ${theme === 'border' ? '$border200' : 'transparent'}`,
     boxShadow: shadow ? '$3' : 'none',
     '&:disabled': {
       opacity: 0.5,

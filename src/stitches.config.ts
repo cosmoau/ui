@@ -13,7 +13,7 @@ export const breakpoints = {
   dark: '@media only screen and (prefers-color-scheme: dark)',
 };
 
-export const { theme, css, styled, globalCss } = createStitches({
+export const { theme, css, styled, globalCss, getCssText } = createStitches({
   theme: {
     colors: {
       baseBody: '#ffffff',
@@ -54,7 +54,7 @@ export const { theme, css, styled, globalCss } = createStitches({
       pink300: 'rgb(245, 213, 235)',
       pink400: 'rgba(107, 26, 83, 0.2)',
       border100: 'rgba(0, 1, 2, 0.15)',
-      border200: 'rgba(223, 227, 230, 0.9)',
+      border200: 'rgba(0, 1, 2, 0.05)',
     },
     space: {
       1: '0.2rem',
@@ -122,14 +122,14 @@ export const { theme, css, styled, globalCss } = createStitches({
     shadows: {
       1: '0 0.2rem 0.1rem rgba(0, 0, 0, 0.01)',
       2: '0 0.4rem 0.4rem rgba(0, 0, 0, 0.033)',
-      3: '0 0.6rem 0.8rem rgba(0, 0, 0, 0.066)',
+      3: '0 0.4rem 0.4rem rgba(0, 0, 0, 0.066)',
       4: '0 0.6rem 0.6rem rgba(0, 0, 0, 0.1)',
     },
     zIndices: {
       dropdown: 10,
       tooltip: 15,
       alert: 100,
-      cookies: 9999,
+      cookies: 9_999,
     },
     transitions: {
       1: 'all 0.33s ease-in-out',
@@ -139,64 +139,64 @@ export const { theme, css, styled, globalCss } = createStitches({
   },
   utils: {
     pt: (value: Stitches.ScaleValue<'space'>) => ({
-      paddingTop: (value as Stitches.ScaleValue<'space'>) + '!important',
+      paddingTop: `${value as Stitches.ScaleValue<'space'>}!important`,
     }),
     pb: (value: Stitches.ScaleValue<'space'>) => ({
-      paddingBottom: (value as Stitches.ScaleValue<'space'>) + '!important',
+      paddingBottom: `${value as Stitches.ScaleValue<'space'>}!important`,
     }),
     pl: (value: Stitches.ScaleValue<'space'>) => ({
-      paddingLeft: (value as Stitches.ScaleValue<'space'>) + '!important',
+      paddingLeft: `${value as Stitches.ScaleValue<'space'>}!important`,
     }),
     pr: (value: Stitches.ScaleValue<'space'>) => ({
-      paddingRight: (value as Stitches.ScaleValue<'space'>) + '!important',
+      paddingRight: `${value as Stitches.ScaleValue<'space'>}!important`,
     }),
     ptb: (value: Stitches.ScaleValue<'space'>) => ({
-      paddingTop: (value as Stitches.ScaleValue<'space'>) + '!important',
-      paddingBottom: (value as Stitches.ScaleValue<'space'>) + '!important',
+      paddingTop: `${value as Stitches.ScaleValue<'space'>}!important`,
+      paddingBottom: `${value as Stitches.ScaleValue<'space'>}!important`,
     }),
     plr: (value: Stitches.ScaleValue<'space'>) => ({
-      paddingLeft: (value as Stitches.ScaleValue<'space'>) + '!important',
-      paddingRight: (value as Stitches.ScaleValue<'space'>) + '!important',
+      paddingLeft: `${value as Stitches.ScaleValue<'space'>}!important`,
+      paddingRight: `${value as Stitches.ScaleValue<'space'>}!important`,
     }),
     plrz: (value: Stitches.ScaleValue<'space'>) => ({
-      paddingLeft: (value as Stitches.ScaleValue<'space'>) + '!important',
-      paddingRight: (value as Stitches.ScaleValue<'space'>) + '!important',
-      paddingTop: (value as Stitches.ScaleValue<'space'>) + '!important',
-      paddingBottom: (value as Stitches.ScaleValue<'space'>) + '!important',
+      paddingLeft: `${value as Stitches.ScaleValue<'space'>}!important`,
+      paddingRight: `${value as Stitches.ScaleValue<'space'>}!important`,
+      paddingTop: `${value as Stitches.ScaleValue<'space'>}!important`,
+      paddingBottom: `${value as Stitches.ScaleValue<'space'>}!important`,
     }),
     mt: (value: Stitches.ScaleValue<'space'>) => ({
-      marginTop: (value as Stitches.ScaleValue<'space'>) + '!important',
+      marginTop: `${value as Stitches.ScaleValue<'space'>}!important`,
     }),
     mb: (value: Stitches.ScaleValue<'space'>) => ({
-      marginBottom: (value as Stitches.ScaleValue<'space'>) + '!important',
+      marginBottom: `${value as Stitches.ScaleValue<'space'>}!important`,
     }),
     ml: (value: Stitches.ScaleValue<'space'>) => ({
-      marginLeft: (value as Stitches.ScaleValue<'space'>) + '!important',
+      marginLeft: `${value as Stitches.ScaleValue<'space'>}!important`,
     }),
     mr: (value: Stitches.ScaleValue<'space'>) => ({
-      marginRight: (value as Stitches.ScaleValue<'space'>) + '!important',
+      marginRight: `${value as Stitches.ScaleValue<'space'>}!important`,
     }),
     mtr: (value: Stitches.ScaleValue<'space'>) => ({
-      marginTop: (value as Stitches.ScaleValue<'space'>) + '!important',
-      marginRight: (value as Stitches.ScaleValue<'space'>) + '!important',
+      marginTop: `${value as Stitches.ScaleValue<'space'>}!important`,
+      marginRight: `${value as Stitches.ScaleValue<'space'>}!important`,
     }),
     mbr: (value: Stitches.ScaleValue<'space'>) => ({
-      marginBottom: (value as Stitches.ScaleValue<'space'>) + '!important',
-      marginRight: (value as Stitches.ScaleValue<'space'>) + '!important',
+      marginBottom: `${value as Stitches.ScaleValue<'space'>}!important`,
+      marginRight: `${value as Stitches.ScaleValue<'space'>}!important`,
     }),
     mbl: (value: Stitches.ScaleValue<'space'>) => ({
-      marginBottom: (value as Stitches.ScaleValue<'space'>) + '!important',
-      marginLeft: (value as Stitches.ScaleValue<'space'>) + '!important',
+      marginBottom: `${value as Stitches.ScaleValue<'space'>}!important`,
+      marginLeft: `${value as Stitches.ScaleValue<'space'>}!important`,
     }),
     mtl: (value: Stitches.ScaleValue<'space'>) => ({
-      marginTop: (value as Stitches.ScaleValue<'space'>) + '!important',
-      marginLeft: (value as Stitches.ScaleValue<'space'>) + '!important',
+      marginTop: `${value as Stitches.ScaleValue<'space'>}!important`,
+      marginLeft: `${value as Stitches.ScaleValue<'space'>}!important`,
     }),
     mtrz: (value: Stitches.ScaleValue<'space'>) => ({
-      marginTop: (value as Stitches.ScaleValue<'space'>) + '!important',
-      marginRight: (value as Stitches.ScaleValue<'space'>) + '!important',
-      marginBottom: (value as Stitches.ScaleValue<'space'>) + '!important',
-      marginLeft: (value as Stitches.ScaleValue<'space'>) + '!important',
+      marginTop: `${value as Stitches.ScaleValue<'space'>}!important`,
+      marginRight: `${value as Stitches.ScaleValue<'space'>}!important`,
+      marginBottom: `${value as Stitches.ScaleValue<'space'>}!important`,
+      marginLeft: `${value as Stitches.ScaleValue<'space'>}!important`,
     }),
     bt: (value: Stitches.PropertyValue<'color'>) => ({
       borderTop: `0.1rem solid ${value as Stitches.PropertyValue<'color'>}`,
@@ -222,9 +222,7 @@ export const { theme, css, styled, globalCss } = createStitches({
         display: 'block',
       },
     }),
-    visibleInline: (
-      value: 'phone' | 'tablet' | 'tabletX' | 'laptop' | 'laptopX' | 'desktop' | 'desktopX' | 'wide'
-    ) => ({
+    visibleInline: (value: 'phone' | 'tablet' | 'tabletX' | 'laptop' | 'laptopX' | 'desktop' | 'desktopX' | 'wide') => ({
       display: 'none',
       [breakpoints[value]]: {
         display: 'inline-block',
@@ -260,13 +258,13 @@ export const { theme, css, styled, globalCss } = createStitches({
 export const darkTheme = createTheme('dark', {
   colors: {
     ...(theme.colors as any),
-    /* baseBody: '#02000a',
+    baseBody: 'rgb(1, 1, 11)',
     base100: 'rgb(255, 255, 255)',
     base200: '#e2feff5)',
     base300: 'rgba(255, 255, 255, 0.2)',
     base400: 'rgba(255, 255, 255, 0.1)',
-    baseContrast100: 'rgba(12, 19, 27, 1)',
-    baseContrast200: 'rgba(82, 154, 212, 0.3)',
+    baseContrast100: 'rgba(0, 0, 0, 0.8)',
+    baseContrast200: 'rgb(0, 15, 20)',
     baseContrast300: 'rgba(45, 90, 126, 0.15)',
     baseContrast400: 'rgba(45, 90, 126, 0.1)',
     red100: 'rgb(248, 170, 165)',
@@ -298,14 +296,14 @@ export const darkTheme = createTheme('dark', {
     pink300: 'rgb(245, 213, 235)',
     pink400: 'rgba(107, 26, 83, 0.2)',
     border100: 'rgba(255, 255, 255, 0.15)',
-    border200: 'rgba(255, 255, 255, 0.075)',*/
+    border200: 'rgba(255, 255, 255, 0.05)',
   },
 });
 
 export const globalStyles = globalCss({
   ...(theme as any),
   html: {
-    fontSize: theme.fontSizes.base1 + ' !important',
+    fontSize: `${theme.fontSizes.base1} !important`,
     height: '100%',
     verticalAlign: 'baseline',
     boxSizing: 'border-box;',
@@ -315,8 +313,8 @@ export const globalStyles = globalCss({
   },
   body: {
     color: theme.colors.base100,
-    lineHeight: theme.lineHeights.base + ' !important',
-    fontSize: theme.fontSizes.base2 + ' !important',
+    lineHeight: `${theme.lineHeights.base} !important`,
+    fontSize: `${theme.fontSizes.base2} !important`,
     height: '100%',
     boxSizing: 'border-box;',
     margin: 0,

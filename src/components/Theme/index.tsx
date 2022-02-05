@@ -1,2 +1,2 @@
-export { default as Context } from './Context';
-export { default as Switch } from './Switch';
+export { default as Context } from './Theme.Context';
+export { default as Switch } from './Theme.Switch';

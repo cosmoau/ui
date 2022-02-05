@@ -1,4 +1,4 @@
-import type * as Stitches from '@stitches/react';
+import { CSS } from '@stitches/react/types/css-util';
 import React, { ReactNode } from 'react';
 
 import { styled } from '../../stitches.config';
@@ -6,7 +6,7 @@ import { styled } from '../../stitches.config';
 export interface Props {
   border?: boolean;
   children: ReactNode;
-  css?: Stitches.CSS;
+  css?: CSS;
   id?: string;
   image?: ReactNode;
   imageHeight?: string;
@@ -15,17 +15,7 @@ export interface Props {
   theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'transparent';
 }
 
-export default function Card({
-  css,
-  id,
-  theme,
-  loader,
-  border,
-  image,
-  imageHeight,
-  minimal,
-  children,
-}: Props): JSX.Element {
+export default function Card({ css, id, theme, loader, border, image, imageHeight, minimal, children }: Props): JSX.Element {
   const Wrapper = styled('div', {
     padding: minimal ? 0 : image ? 0 : 'calc($6 / 1.25)',
     height: '100%',

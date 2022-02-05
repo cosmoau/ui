@@ -1,4 +1,4 @@
-import type * as Stitches from '@stitches/react';
+import { CSS } from '@stitches/react/types/css-util';
 import React, { ReactNode } from 'react';
 import { useDarkMode } from 'usehooks-ts';
 
@@ -6,7 +6,7 @@ import { theme as defaultTheme, darkTheme, globalStyles, styled } from '../../st
 
 export interface Props {
   children: ReactNode;
-  css?: Stitches.CSS;
+  css?: CSS;
   switchable?: boolean;
   theme?: typeof defaultTheme;
 }

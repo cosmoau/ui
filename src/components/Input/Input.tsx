@@ -1,5 +1,5 @@
 /* eslint-disable no-duplicate-imports */
-import type * as Stitches from '@stitches/react';
+import { CSS } from '@stitches/react/types/css-util';
 import type { $$StyledComponentProps } from '@stitches/react/types/styled-component';
 import { Check, Clipboard, Eye, EyeClosed, WarningOctagon, X } from 'phosphor-react';
 import type { ChangeEvent, InputHTMLAttributes, ReactNode } from 'react';
@@ -118,7 +118,7 @@ const FunctionWrapper = styled('div', {
 type Props = InputHTMLAttributes<HTMLInputElement> &
   typeof InputWrapper[$$StyledComponentProps] & {
     copy?: boolean;
-    css: Stitches.CSS;
+    css: CSS;
     customSubmit?: boolean;
     error?: boolean;
     icon?: ReactNode;
@@ -225,7 +225,7 @@ export default function Input({
             {typeof submit === 'string' ? submit : 'Submit'}
           </Button>
         )}
-        {customSubmit && customSubmit}
+        {customSubmit || null}
       </FunctionWrapper>
     </Wrapper>
   );

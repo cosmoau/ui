@@ -1,4 +1,4 @@
-import type * as Stitches from '@stitches/react';
+import { CSS } from '@stitches/react/types/css-util';
 import React, { HTMLAttributes, MouseEventHandler, ReactNode } from 'react';
 
 import { breakpoints, styled } from '../../stitches.config';
@@ -6,7 +6,7 @@ import { Loading } from '../Loading';
 
 export interface Props extends HTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  css?: Stitches.CSS;
+  css?: CSS;
   icon?: JSX.Element;
   id?: string;
   inline?: boolean;
@@ -16,18 +16,7 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
   theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'transparent' | 'dark';
 }
 
-export default function Button({
-  children,
-  css,
-  icon,
-  id,
-  inline = true,
-  inlineSpacer = 0,
-  loader,
-  onClick,
-  theme,
-  ...props
-}: Props): JSX.Element {
+export default function Button({ children, css, icon, id, inline = true, inlineSpacer = 0, loader, onClick, theme, ...props }: Props): JSX.Element {
   const Wrapper = styled('button', {
     // resets
     appearance: 'none',
@@ -174,8 +163,8 @@ export default function Button({
     },
 
     [breakpoints.laptopX]: {
-      fontSize: 'calc($h5 * 0.96)',
-      lineHeight: 'calc($h5 * 0.96)',
+      fontSize: 'calc($h5 * 0.9)',
+      lineHeight: 'calc($h5 * 0.9)',
     },
   });
 
@@ -198,7 +187,6 @@ export default function Button({
       height: '100%',
     },
   });
-
   return (
     <Wrapper css={css} id={id} onClick={onClick} {...props}>
       {loader ? (

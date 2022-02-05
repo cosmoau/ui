@@ -1,3 +1,4 @@
+import { Moon, Sun } from 'phosphor-react';
 import React from 'react';
 import { useDarkMode } from 'usehooks-ts';
 
@@ -15,7 +16,7 @@ export default function Switch(): JSX.Element {
 
   return (
     <Wrapper>
-      <Button onClick={toggle}>{isDarkMode ? 'Dark' : 'Light'}</Button>
+      <Button onClick={toggle}>{isDarkMode ? <Moon /> : <Sun />}</Button>
     </Wrapper>
   );
 }

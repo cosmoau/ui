@@ -5,17 +5,24 @@ import '../fonts.css';
 export function App() {
   return (
     <UI.Context>
-      <UI.Block theme='alternate' top={1.5} bottom={6}>
+      <UI.Block top={1.5} bottom={6}>
         <UI.Section>
           <UI.Column top={3}>
+            <UI.Badge
+              theme='border'
+              shadow
+              css={{
+                mt: '$12',
+              }}>
+              hey
+            </UI.Badge>
             <UI.Heading
               level={1}
               css={{
                 hidden: 'tablet',
               }}>
-              Heading One - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Quisquam, quidem.
+              Heading One - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
             </UI.Heading>
             <UI.Heading
               level={2}
@@ -25,44 +32,36 @@ export function App() {
                   fontStyle: 'italic',
                 },
               }}>
-              Heading Two - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Quisquam, quidem.
+              Heading Two - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
             </UI.Heading>
             <UI.Heading level={3}>
-              Heading Three - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Quisquam, quidem.
+              Heading Three - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
             </UI.Heading>
             <UI.Heading level={4}>
-              Heading Four - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Quisquam, quidem.
+              Heading Four - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
             </UI.Heading>
             <UI.Heading level={5}>
-              Heading Five - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Quisquam, quidem.
+              Heading Five - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
             </UI.Heading>
             <UI.Heading level={6}>
-              Heading Six - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Quisquam, quidem.
+              Heading Six - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
             </UI.Heading>
             <UI.Text level={1}>
-              Text One - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Quisquam, quidem.
+              Text One - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
             </UI.Text>
             <UI.Text level={2}>
-              Text Two - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Quisquam, quidem.
+              Text Two - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
             </UI.Text>
             <UI.Text level={3}>
-              Text Three - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Quisquam, quidem.
+              Text Three - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
             </UI.Text>
             <UI.Tooltip passKey='lol' trigger='lol'>
               sadfdsg
@@ -96,11 +95,9 @@ export function App() {
                 },
               ]}
               trigger={
-                <>
-                  <UI.Heading level={5} inline inlineSpacer={2}>
-                    Product
-                  </UI.Heading>
-                </>
+                <UI.Heading level={5} inline inlineSpacer={2}>
+                  Product
+                </UI.Heading>
               }
             />
             <UI.Submenu
@@ -127,11 +124,9 @@ export function App() {
               ]}
               hover
               trigger={
-                <>
-                  <UI.Heading level={5} inline>
-                    Product
-                  </UI.Heading>
-                </>
+                <UI.Heading level={5} inline>
+                  Product
+                </UI.Heading>
               }
             />
           </UI.Column>

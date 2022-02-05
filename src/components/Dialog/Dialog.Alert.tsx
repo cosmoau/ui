@@ -1,16 +1,17 @@
-import type * as Stitches from '@stitches/react';
-import React, { ReactNode, useLayoutEffect, useRef, useState } from 'react';
+import { CSS } from '@stitches/react/types/css-util';
+import React, { useLayoutEffect, useRef, useState, ReactNode } from 'react';
 import { useOnClickOutside } from 'usehooks-ts';
 
-import { breakpoints, styled } from '../../stitches.config';
 import { Button } from '../Button';
 import { Card } from '../Card';
 import { Heading } from '../Typography';
 
+import stitchesShared from './Dialog.stitches';
+
 export interface Props {
   action: ReactNode;
   cancel: ReactNode;
-  css?: Stitches.CSS;
+  css?: CSS;
   description: ReactNode | string;
   id?: string;
   title: ReactNode | string;
@@ -27,60 +28,10 @@ export default function Alert({ action, cancel, css, description, id, title, tri
   });
 
   useLayoutEffect(() => {
-    if (isShown) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
+    document.body.style.overflow = isShown ? 'hidden' : 'auto';
   }, [isShown]);
 
-  const Wrapper = styled('div', {
-    position: 'initial',
-  });
-
-  const TriggerWrapper = styled('div', {
-    display: 'inline-flex',
-  });
-
-  const OverlayWrapper = styled('div', {
-    position: 'fixed',
-    transition: '$1',
-    zIndex: '$alert',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    backgroundColor: '$base300',
-    width: '100%',
-    scrollBehavior: 'smooth',
-    overscrollBehavior: 'contain',
-  });
-
-  const CardWrapper = styled('div', {
-    position: 'absolute',
-    transition: '$1',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: '55rem',
-    maxWidth: '90vw',
-    maxHeight: '70vh',
-    boxShadow: '$4',
-
-    [breakpoints.phone]: {
-      width: '95%',
-      maxWidth: '95%',
-    },
-  });
-
-  const CardActionsWrapper = styled('div', {
-    paddingTop: '$6',
-    textAlign: 'right',
-  });
-
-  const CardPrimaryActionwrapper = styled('div', {
-    display: 'inline-block',
-  });
+  const { Wrapper, TriggerWrapper, OverlayWrapper, CardWrapper, CardActionsWrapper, CardPrimaryActionwrapper } = stitchesShared();
 
   return (
     <Wrapper id={id}>

@@ -1,4 +1,4 @@
-import type * as Stitches from '@stitches/react';
+import { CSS } from '@stitches/react/types/css-util';
 import React, { ReactNode } from 'react';
 
 import { styled } from '../../stitches.config';
@@ -7,7 +7,7 @@ export interface Props {
   align?: 'left' | 'center' | 'right' | 'justify' | 'initial' | 'inherit';
   bottom?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   children: ReactNode;
-  css?: Stitches.CSS;
+  css?: CSS;
   id?: string;
   top?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 }

@@ -1,4 +1,4 @@
-import type * as Stitches from '@stitches/react';
+import { CSS } from '@stitches/react/types/css-util';
 import { TrendDown, TrendUp } from 'phosphor-react';
 import React, { useState, useEffect } from 'react';
 
@@ -8,7 +8,7 @@ import Loading from '../Loading/Loading';
 import { Heading } from '../Typography';
 
 export interface Props {
-  css?: Stitches.CSS;
+  css?: CSS;
   id?: string;
   numberA: number;
   numberB: number;
@@ -17,15 +17,7 @@ export interface Props {
   trendDirection?: 'up' | 'down';
 }
 
-export default function Percentages({
-  css,
-  id,
-  numberA,
-  numberB,
-  showDollarDifference = false,
-  toFixed = 1,
-  trendDirection = 'up',
-}: Props): JSX.Element {
+export default function Percentages({ css, id, numberA, numberB, showDollarDifference = false, toFixed = 1, trendDirection = 'up' }: Props): JSX.Element {
   const [isLoading, setIsLoading] = useState(true as boolean);
   const [value, setValue] = useState(0 as any);
   const [difference, setDifference] = useState(0 as any);
@@ -45,12 +37,10 @@ export default function Percentages({
       } else {
         setDifferenceDirection('down');
       }
+    } else if (trendDirection === 'up') {
+      setDifferenceDirection('down');
     } else {
-      if (trendDirection === 'up') {
-        setDifferenceDirection('down');
-      } else {
-        setDifferenceDirection('up');
-      }
+      setDifferenceDirection('up');
     }
 
     return () => {

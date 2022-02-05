@@ -1,5 +1,5 @@
 /* eslint-disable no-duplicate-imports */
-import type * as Stitches from '@stitches/react';
+import { CSS } from '@stitches/react/types/css-util';
 import type { $$StyledComponentProps } from '@stitches/react/types/styled-component';
 import { Check, Clipboard } from 'phosphor-react';
 import type { ChangeEvent, InputHTMLAttributes } from 'react';
@@ -66,7 +66,7 @@ const FunctionWrapper = styled('div', {
 type Props = InputHTMLAttributes<HTMLTextAreaElement> &
   typeof InputWrapper[$$StyledComponentProps] & {
     copy?: boolean;
-    css: Stitches.CSS;
+    css: CSS;
     maxLength?: number;
     onChange?: any;
     rows?: number;
@@ -98,19 +98,12 @@ export default function Input({
     setIsCopied(true);
     setTimeout(() => {
       setIsCopied(false);
-    }, 2000);
+    }, 2_000);
   };
 
   return (
     <Wrapper css={css}>
-      <InputWrapper
-        rows={rows}
-        value={controlledValue}
-        maxLength={maxLength}
-        onChange={handleChange}
-        disabled={disabled}
-        {...props}
-      />
+      <InputWrapper rows={rows} value={controlledValue} maxLength={maxLength} onChange={handleChange} disabled={disabled} {...props} />
       <FunctionWrapper>
         <Text level={2} inline inlineSpacer={2}>
           {controlledValue.length} / {maxLength}

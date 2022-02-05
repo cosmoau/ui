@@ -1,4 +1,4 @@
-import type * as Stitches from '@stitches/react';
+import { CSS } from '@stitches/react/types/css-util';
 import { Check, Circle } from 'phosphor-react';
 import React, { ReactNode, useState } from 'react';
 
@@ -8,7 +8,7 @@ import { Button } from '../Button';
 export interface Props {
   checked?: boolean;
   children?: ReactNode;
-  css?: Stitches.CSS;
+  css?: CSS;
   disabled?: boolean;
   id?: string;
 }
@@ -19,20 +19,21 @@ export default function Checkbox({ checked = false, children, css, disabled = fa
   const handleChange = (): void => {
     if (disabled) {
       return;
-    } else setIsChecked(!isChecked);
+    }
+    setIsChecked(!isChecked);
   };
 
   const Wrapper = styled('div', {
-    opacity: disabled ? 0.5 : 1,
+    opacity: !disabled ? 1 : 0.5,
     whiteSpace: 'nowrap',
     display: 'table-row-group',
 
     '*': {
-      cursor: disabled ? 'not-allowed' : 'pointer',
+      cursor: !disabled ? 'pointer' : 'not-allowed',
     },
 
     svg: {
-      color: disabled ? '$navy100' : 'inherit',
+      color: !disabled ? 'inherit' : '$navy100',
     },
   });
 

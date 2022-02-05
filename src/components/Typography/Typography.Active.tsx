@@ -1,4 +1,4 @@
-import type * as Stitches from '@stitches/react';
+import { CSS } from '@stitches/react/types/css-util';
 import Link, { LinkProps } from 'next/link';
 import { useRouter } from 'next/router';
 import React, { ReactElement } from 'react';
@@ -7,16 +7,16 @@ import { styled } from '../../stitches.config';
 
 export interface Props extends LinkProps {
   children: ReactElement;
-  css?: Stitches.CSS;
-  cssActive: Stitches.CSS;
-  cssInactive: Stitches.CSS;
+  css?: CSS;
+  cssActive: CSS;
+  cssInactive: CSS;
   hover?: boolean;
   id?: string;
 }
 
 export default function Active({ children, css, cssActive, cssInactive, hover, href, id }: Props): JSX.Element {
   const router = useRouter();
-  const path = (router && router.pathname) || '/';
+  const path = router?.pathname || '/';
 
   const Wrapper = styled('a', {
     textDecoration: 'none',

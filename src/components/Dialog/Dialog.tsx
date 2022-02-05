@@ -1,14 +1,15 @@
-import type * as Stitches from '@stitches/react';
+import { CSS } from '@stitches/react/types/css-util';
 import { X } from 'phosphor-react';
 import React, { ReactNode, useLayoutEffect, useRef, useState } from 'react';
 import { useOnClickOutside } from 'usehooks-ts';
 
-import { breakpoints, styled } from '../../stitches.config';
 import { Card } from '../Card';
+
+import stitchesShared from './Dialog.stitches';
 
 export interface Props {
   children: ReactNode;
-  css?: Stitches.CSS;
+  css?: CSS;
   id?: string;
   trigger: ReactNode;
 }
@@ -23,60 +24,10 @@ export default function Dialog({ children, css, id, trigger }: Props): JSX.Eleme
   });
 
   useLayoutEffect(() => {
-    if (isShown) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
+    document.body.style.overflow = isShown ? 'hidden' : 'auto';
   }, [isShown]);
 
-  const Wrapper = styled('div', {
-    position: 'initial',
-  });
-
-  const TriggerWrapper = styled('div', {
-    display: 'inline-flex',
-  });
-
-  const OverlayWrapper = styled('div', {
-    position: 'fixed',
-    transition: '$1',
-    zIndex: '$alert',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    backgroundColor: '$base300',
-    width: '100%',
-    scrollBehavior: 'smooth',
-    overscrollBehavior: 'contain',
-    overflowY: 'scroll',
-  });
-
-  const CardWrapper = styled('div', {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: '70rem',
-    maxWidth: '90vw',
-    maxHeight: '80vh',
-    boxShadow: '$4',
-
-    [breakpoints.phone]: {
-      width: '95%',
-      maxWidth: '95%',
-      maxHeight: '95vh',
-    },
-  });
-
-  const Exit = styled('div', {
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    padding: '1rem',
-    cursor: 'pointer',
-  });
+  const { Wrapper, TriggerWrapper, OverlayWrapper, CardWrapper, Exit } = stitchesShared();
 
   return (
     <Wrapper id={id}>

@@ -1,4 +1,4 @@
-import type * as Stitches from '@stitches/react';
+import { CSS } from '@stitches/react/types/css-util';
 import { parseCookies, setCookie } from 'nookies';
 import { X } from 'phosphor-react';
 import React, { useEffect, useState } from 'react';
@@ -8,16 +8,12 @@ import { Card } from '../Card';
 import { Heading } from '../Typography';
 
 export interface Props {
-  css?: Stitches.CSS;
+  css?: CSS;
   href?: string;
   token?: string;
 }
 
-export default function Cookies({
-  css,
-  href = 'https://cosmogroup.io/legal/privacy',
-  token = 'cooookies',
-}: Props): JSX.Element {
+export default function Cookies({ css, href = 'https://cosmogroup.io/legal/privacy', token = 'cooookies' }: Props): JSX.Element {
   const [isShown, setIsShown] = useState(false);
 
   useEffect(() => {
