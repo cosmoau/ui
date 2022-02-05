@@ -8,6 +8,7 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   css?: CSS;
   icon?: JSX.Element;
+  iconPosition?: 'left' | 'right';
   id?: string;
   inline?: boolean;
   inlineSpacer?: number;
@@ -16,7 +17,7 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
   theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'transparent' | 'dark';
 }
 
-export default function Button({ children, css, icon, id, inline = true, inlineSpacer = 0, loader, onClick, theme, ...props }: Props): JSX.Element {
+export default function Button({ children, css, icon, iconPosition = 'left', id, inline = true, inlineSpacer = 0, loader, onClick, theme, ...props }: Props): JSX.Element {
   const Wrapper = styled('button', {
     // resets
     appearance: 'none',
@@ -52,10 +53,7 @@ export default function Button({ children, css, icon, id, inline = true, inlineS
     position: 'relative',
     transition: '$1',
     fontWeight: '$1',
-    paddingTop: '$2',
-    paddingBottom: '$2',
-    paddingLeft: '$4',
-    paddingRight: '$4',
+    padding: '$2 $4',
     borderRadius: '$1',
     fontSize: '$h5',
     border: `0.1rem solid ${
@@ -175,16 +173,16 @@ export default function Button({ children, css, icon, id, inline = true, inlineS
   });
 
   const IconWrapper = styled('div', {
-    display: 'flex',
+    display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '2.8rem',
-    height: '2.8rem',
-    marginRight: 'calc($4 / 2)',
+    verticalAlign: 'middle',
+    marginRight: iconPosition === 'left' ? '$3' : 0,
+    marginLeft: iconPosition === 'right' ? '$3' : 0,
 
     svg: {
-      width: '100%',
-      height: '100%',
+      width: '2.5rem',
+      height: '2.5rem',
     },
   });
   return (
@@ -193,8 +191,9 @@ export default function Button({ children, css, icon, id, inline = true, inlineS
         <Loading />
       ) : (
         <ContentWrapper>
-          {icon && <IconWrapper>{icon}</IconWrapper>}
+          {iconPosition === 'left' && icon && <IconWrapper>{icon}</IconWrapper>}
           {children}
+          {iconPosition === 'right' && icon && <IconWrapper>{icon}</IconWrapper>}
         </ContentWrapper>
       )}
     </Wrapper>

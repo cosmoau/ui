@@ -1,3 +1,5 @@
+import { ArrowRight } from 'phosphor-react';
+
 import * as UI from '../src/index.tsx';
 
 import '../fonts.css';
@@ -8,14 +10,22 @@ export function App() {
       <UI.Block top={1.5} bottom={6}>
         <UI.Section>
           <UI.Column top={3}>
-            <UI.Badge
-              theme='border'
-              shadow
+            <UI.Button
+              icon={<ArrowRight />}
+              iconPosition='right'
               css={{
-                mt: '$12',
+                mt: '$7',
               }}>
-              hey
-            </UI.Badge>
+              heysdsjkfkjsdfjkdsfkjdsjkskjdsjka
+            </UI.Button>
+            <UI.Button
+              icon={<ArrowRight />}
+              iconPosition='left'
+              css={{
+                mt: '$7',
+              }}>
+              heysdsjkfkjsdfjkdsfkjdsjkskjdsjka
+            </UI.Button>
             <UI.Heading
               level={1}
               css={{

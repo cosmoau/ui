@@ -67,8 +67,8 @@ export const { theme, css, styled, globalCss, getCssText } = createStitches({
       8: '5rem',
       9: '7.5rem',
       10: '10rem',
-      11: '15rem',
-      12: '20rem',
+      11: '12.5rem',
+      12: '15rem',
     },
     fontSizes: {
       base1: '62.5%',
@@ -103,11 +103,11 @@ export const { theme, css, styled, globalCss, getCssText } = createStitches({
       t3: '1.1',
     },
     sizes: {
-      1: '100%',
-      2: '96%',
-      3: '1250px',
-      4: '1400px',
-      5: '1600px',
+      1: '99%',
+      2: '98%',
+      3: '1280px',
+      4: '1480px',
+      5: '1680px',
       6: '98%',
     },
     borderC: {
