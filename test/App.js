@@ -7,6 +7,17 @@ import '../fonts.css';
 export function App() {
   return (
     <UI.Context>
+      <UI.Block theme='alternate' top={7} bottom={7}>
+        <UI.Section>
+          <UI.Column width={60} offset={20} offsetTablet='0' widthTablet={40} offsetLaptop='0' align='center'>
+            <UI.Heading level={2}>Imagine earning more, by doing less</UI.Heading>
+            <UI.Heading level={4}>
+              We make it happen every day. There are only so many hours in a day and you&apos;re a busy person. We take the load off your shoulders, capture the opportunities and
+              deliver you the results you deserve.
+            </UI.Heading>
+          </UI.Column>
+        </UI.Section>
+      </UI.Block>
       <UI.Block top={1.5} bottom={6}>
         <UI.Section>
           <UI.Column top={3}>

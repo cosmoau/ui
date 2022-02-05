@@ -158,12 +158,6 @@ export const { theme, css, styled, globalCss, getCssText } = createStitches({
       paddingLeft: `${value as Stitches.ScaleValue<'space'>}!important`,
       paddingRight: `${value as Stitches.ScaleValue<'space'>}!important`,
     }),
-    plrz: (value: Stitches.ScaleValue<'space'>) => ({
-      paddingLeft: `${value as Stitches.ScaleValue<'space'>}!important`,
-      paddingRight: `${value as Stitches.ScaleValue<'space'>}!important`,
-      paddingTop: `${value as Stitches.ScaleValue<'space'>}!important`,
-      paddingBottom: `${value as Stitches.ScaleValue<'space'>}!important`,
-    }),
     mt: (value: Stitches.ScaleValue<'space'>) => ({
       marginTop: `${value as Stitches.ScaleValue<'space'>}!important`,
     }),
@@ -176,27 +170,13 @@ export const { theme, css, styled, globalCss, getCssText } = createStitches({
     mr: (value: Stitches.ScaleValue<'space'>) => ({
       marginRight: `${value as Stitches.ScaleValue<'space'>}!important`,
     }),
-    mtr: (value: Stitches.ScaleValue<'space'>) => ({
+    mtb: (value: Stitches.ScaleValue<'space'>) => ({
       marginTop: `${value as Stitches.ScaleValue<'space'>}!important`,
-      marginRight: `${value as Stitches.ScaleValue<'space'>}!important`,
-    }),
-    mbr: (value: Stitches.ScaleValue<'space'>) => ({
       marginBottom: `${value as Stitches.ScaleValue<'space'>}!important`,
+    }),
+    mlr: (value: Stitches.ScaleValue<'space'>) => ({
+      marginLeft: `${value as Stitches.ScaleValue<'space'>}!important`,
       marginRight: `${value as Stitches.ScaleValue<'space'>}!important`,
-    }),
-    mbl: (value: Stitches.ScaleValue<'space'>) => ({
-      marginBottom: `${value as Stitches.ScaleValue<'space'>}!important`,
-      marginLeft: `${value as Stitches.ScaleValue<'space'>}!important`,
-    }),
-    mtl: (value: Stitches.ScaleValue<'space'>) => ({
-      marginTop: `${value as Stitches.ScaleValue<'space'>}!important`,
-      marginLeft: `${value as Stitches.ScaleValue<'space'>}!important`,
-    }),
-    mtrz: (value: Stitches.ScaleValue<'space'>) => ({
-      marginTop: `${value as Stitches.ScaleValue<'space'>}!important`,
-      marginRight: `${value as Stitches.ScaleValue<'space'>}!important`,
-      marginBottom: `${value as Stitches.ScaleValue<'space'>}!important`,
-      marginLeft: `${value as Stitches.ScaleValue<'space'>}!important`,
     }),
     bt: (value: Stitches.PropertyValue<'color'>) => ({
       borderTop: `0.1rem solid ${value as Stitches.PropertyValue<'color'>}`,

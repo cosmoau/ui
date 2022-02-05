@@ -91,6 +91,10 @@ export default function Column({
     },
   });
 
+  if (offsetTablet !== undefined) {
+    console.warn(0);
+  }
+
   return (
     <Wrapper css={css} id={id}>
       {children}
