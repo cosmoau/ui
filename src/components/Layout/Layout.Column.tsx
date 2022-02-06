@@ -64,12 +64,16 @@ export default function Column({
       maxWidth: widthPhone ? `${widthPhone}%` : `100%`,
       flex: widthPhone ? `0 0 ${widthPhone}%` : `0 0 100%`,
       marginLeft: offsetPhone ? `${offsetPhone}%` : 0,
+      paddingLeft: minimal ? 0 : '$5',
+      paddingRight: minimal ? 0 : '$5',
     },
 
     [breakpoints.tabletX]: {
       maxWidth: widthTablet ? `${widthTablet}%` : `${width}%`,
       flex: widthTablet ? `0 0 ${widthTablet}%` : `0 0 ${width}%`,
       marginLeft: offsetTablet ? `${offsetTablet}%` : `${offset}%`,
+      paddingLeft: minimal ? 0 : '$5',
+      paddingRight: minimal ? 0 : '$5',
     },
 
     [breakpoints.laptopX]: {

@@ -20,13 +20,13 @@ export default function stitchesShared({ ...props }) {
     marginBottom: props.inline ? 0 : '$6',
 
     [breakpoints.phone]: {
-      fontSize: 'calc($h1 * 0.95)',
-      lineHeight: 'calc($h1 * 0.95)',
+      fontSize: 'calc($h1 * 0.92)',
+      lineHeight: 'calc($h1 * 0.92)',
     },
 
     [breakpoints.tabletX]: {
-      fontSize: 'calc($h1 * 0.92)',
-      lineHeight: 'calc($h1 * 0.92)',
+      fontSize: 'calc($h1 * 0.93)',
+      lineHeight: 'calc($h1 * 0.93)',
     },
 
     [breakpoints.laptopX]: {
@@ -44,13 +44,13 @@ export default function stitchesShared({ ...props }) {
     marginBottom: props.inline ? 0 : '$5',
 
     [breakpoints.phone]: {
-      fontSize: 'calc($h2 * 0.95)',
-      lineHeight: 'calc($h2 * 0.95)',
+      fontSize: 'calc($h2 * 0.92)',
+      lineHeight: 'calc($h2 * 0.92)',
     },
 
     [breakpoints.tabletX]: {
-      fontSize: 'calc($h2 * 0.92)',
-      lineHeight: 'calc($h2 * 0.92)',
+      fontSize: 'calc($h2 * 0.93)',
+      lineHeight: 'calc($h2 * 0.93)',
     },
 
     [breakpoints.laptopX]: {
@@ -69,18 +69,18 @@ export default function stitchesShared({ ...props }) {
     marginBottom: props.inline ? 0 : '$4',
 
     [breakpoints.phone]: {
-      fontSize: 'calc($h3 * 0.95)',
-      lineHeight: 'calc($h3 * 0.95)',
+      fontSize: 'calc($h3 * 0.92)',
+      lineHeight: 'calc($h3 * 0.25)',
     },
 
     [breakpoints.tabletX]: {
-      fontSize: 'calc($h3 * 0.92)',
-      lineHeight: 'calc($h3 * 0.92)',
+      fontSize: 'calc($h3 * 0.93)',
+      lineHeight: 'calc($h3 * 0.93)',
     },
 
     [breakpoints.laptopX]: {
-      fontSize: 'calc($h3 * 0.9)',
-      lineHeight: 'calc($h3 * 0.9)',
+      fontSize: 'calc($h3 * 0.94)',
+      lineHeight: 'calc($h3 * 0.94)',
     },
 
     ...baseStyles,
@@ -90,27 +90,27 @@ export default function stitchesShared({ ...props }) {
     fontSize: '$h4',
     fontWeight: '$1',
     lineHeight: '$h4',
-    opacity: 0.8,
+    opacity: 0.75,
     marginBottom: props.inline ? 0 : '$4',
 
     [breakpoints.phone]: {
-      fontSize: 'calc($h4 * 0.95)',
-      lineHeight: 'calc($h4 * 0.95)',
+      fontSize: 'calc($h4 * 0.92)',
+      lineHeight: 'calc($h4 * 0.92)',
     },
 
     [breakpoints.tabletX]: {
-      fontSize: 'calc($h4 * 0.95)',
-      lineHeight: 'calc($h4 * 0.95)',
+      fontSize: 'calc($h4 * 0.93)',
+      lineHeight: 'calc($h4 * 0.93)',
     },
 
     [breakpoints.laptopX]: {
-      fontSize: 'calc($h4 * 0.93)',
-      lineHeight: 'calc($h4 * 0.93)',
+      fontSize: 'calc($h4 * 0.94)',
+      lineHeight: 'calc($h4 * 0.94)',
     },
 
     [breakpoints.desktopX]: {
-      fontSize: 'calc($h4 * 0.93)',
-      lineHeight: 'calc($h4 * 0.93)',
+      fontSize: 'calc($h4 * 0.94)',
+      lineHeight: 'calc($h4 * 0.94)',
     },
 
     ...baseStyles,
@@ -123,18 +123,18 @@ export default function stitchesShared({ ...props }) {
     marginBottom: props.inline ? 0 : '$3',
 
     [breakpoints.phone]: {
-      fontSize: 'calc($h5 * 0.95)',
-      lineHeight: 'calc($h5 * 0.95)',
-    },
-
-    [breakpoints.tabletX]: {
       fontSize: 'calc($h5 * 0.92)',
       lineHeight: 'calc($h5 * 0.92)',
     },
 
+    [breakpoints.tabletX]: {
+      fontSize: 'calc($h5 * 0.93)',
+      lineHeight: 'calc($h5 * 0.93)',
+    },
+
     [breakpoints.laptopX]: {
-      fontSize: 'calc($h5 * 0.9)',
-      lineHeight: 'calc($h5 * 0.9)',
+      fontSize: 'calc($h5 * 0.94)',
+      lineHeight: 'calc($h5 * 0.94)',
     },
 
     ...baseStyles,
@@ -145,20 +145,21 @@ export default function stitchesShared({ ...props }) {
     fontWeight: '$1',
     lineHeight: '$h6',
     marginBottom: props.inline ? 0 : '$3',
+    opacity: 0.75,
 
     [breakpoints.phone]: {
-      fontSize: 'calc($h6 * 0.95)',
-      lineHeight: 'calc($h6 * 0.95)',
-    },
-
-    [breakpoints.tabletX]: {
       fontSize: 'calc($h6 * 0.92)',
       lineHeight: 'calc($h6 * 0.92)',
     },
 
+    [breakpoints.tabletX]: {
+      fontSize: 'calc($h6 * 0.93)',
+      lineHeight: 'calc($h6 * 0.93)',
+    },
+
     [breakpoints.laptopX]: {
-      fontSize: 'calc($h6 * 0.96)',
-      lineHeight: 'calc($h6 * 0.96)',
+      fontSize: 'calc($h6 * 0.94)',
+      lineHeight: 'calc($h6 * 0.94)',
     },
 
     ...baseStyles,

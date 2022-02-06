@@ -151,18 +151,23 @@ export default function Button({ children, css, icon, iconPosition = 'left', id,
     },
 
     [breakpoints.phone]: {
-      fontSize: 'calc($h5 * 0.95)',
-      lineHeight: 'calc($h5 * 0.95)',
+      fontSize: 'calc($h5 * 0.94)',
+      lineHeight: 'calc($h5 * 0.94)',
     },
 
     [breakpoints.tabletX]: {
-      fontSize: 'calc($h5 * 0.92)',
-      lineHeight: 'calc($h5 * 0.92)',
+      fontSize: 'calc($h5 * 0.9)',
+      lineHeight: 'calc($h5 * 0.9)',
     },
 
     [breakpoints.laptopX]: {
       fontSize: 'calc($h5 * 0.9)',
       lineHeight: 'calc($h5 * 0.9)',
+    },
+
+    [breakpoints.desktopX]: {
+      fontSize: 'calc($h5 * 0.95)',
+      lineHeight: 'calc($h5 * 0.95)',
     },
   });
 
@@ -181,8 +186,9 @@ export default function Button({ children, css, icon, iconPosition = 'left', id,
     marginLeft: iconPosition === 'right' ? '$3' : 0,
 
     svg: {
-      width: '2.5rem',
-      height: '2.5rem',
+      verticalAlign: 'middle',
+      width: '2.2rem',
+      height: '2.2rem',
     },
   });
   return (

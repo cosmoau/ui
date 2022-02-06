@@ -12,7 +12,7 @@ export interface Props {
   top?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 }
 
-export default function Section({ align = 'initial', bottom, children, css, id, top }: Props): JSX.Element {
+export default function Section({ align = 'inherit', bottom, children, css, id, top }: Props): JSX.Element {
   const Wrapper = styled('div', {
     display: 'flex',
     flexDirection: 'row',

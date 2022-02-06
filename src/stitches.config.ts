@@ -54,7 +54,8 @@ export const { theme, css, styled, globalCss, getCssText } = createStitches({
       pink300: 'rgb(245, 213, 235)',
       pink400: 'rgba(107, 26, 83, 0.2)',
       border100: 'rgba(0, 1, 2, 0.15)',
-      border200: 'rgba(0, 1, 2, 0.05)',
+      border200: 'rgba(0, 1, 2, 0.1)',
+      border300: 'rgba(0, 1, 2, 0.05)',
     },
     space: {
       1: '0.2rem',
@@ -73,12 +74,12 @@ export const { theme, css, styled, globalCss, getCssText } = createStitches({
     fontSizes: {
       base1: '62.5%',
       base2: '1.6rem',
-      h1: '3.2rem',
-      h2: '2.7rem',
-      h3: '2.1rem',
-      h4: '1.9rem',
-      h5: '1.8rem',
-      h6: '1.7rem',
+      h1: '3.3rem',
+      h2: '2.5rem',
+      h3: '1.9rem',
+      h4: '2rem',
+      h5: '1.7rem',
+      h6: '1.6rem',
       t1: '1.5rem',
       t2: '1.3rem',
       t3: '1.1rem',
@@ -121,9 +122,9 @@ export const { theme, css, styled, globalCss, getCssText } = createStitches({
     },
     shadows: {
       1: '0 0.2rem 0.1rem rgba(0, 0, 0, 0.01)',
-      2: '0 0.4rem 0.4rem rgba(0, 0, 0, 0.033)',
-      3: '0 0.4rem 0.4rem rgba(0, 0, 0, 0.066)',
-      4: '0 0.6rem 0.6rem rgba(0, 0, 0, 0.1)',
+      2: '0 0.4rem 0.3rem rgba(0, 0, 0, 0.033)',
+      3: '0 0.4rem 0.3rem rgba(0, 0, 0, 0.066)',
+      4: '0 0.8rem 0.6rem rgba(0, 0, 0, 0.133)',
     },
     zIndices: {
       dropdown: 10,
@@ -238,13 +239,14 @@ export const { theme, css, styled, globalCss, getCssText } = createStitches({
 export const darkTheme = createTheme('dark', {
   colors: {
     ...(theme.colors as any),
+    /*
     baseBody: 'rgb(1, 1, 11)',
     base100: 'rgb(255, 255, 255)',
     base200: '#e2feff5)',
     base300: 'rgba(255, 255, 255, 0.2)',
     base400: 'rgba(255, 255, 255, 0.1)',
-    baseContrast100: 'rgba(0, 0, 0, 0.8)',
-    baseContrast200: 'rgb(0, 15, 20)',
+    baseContrast100: 'rgb(0, 2, 10)',
+    baseContrast200: 'rgb(6, 70, 77)',
     baseContrast300: 'rgba(45, 90, 126, 0.15)',
     baseContrast400: 'rgba(45, 90, 126, 0.1)',
     red100: 'rgb(248, 170, 165)',
@@ -264,9 +266,9 @@ export const darkTheme = createTheme('dark', {
     blue300: 'rgb(206, 222, 240)',
     blue400: 'rgba(5, 91, 141, 0.2)',
     navy100: 'inherit',
-    navy200: 'rgba(111, 217, 255, 0.33)',
-    navy300: 'rgba(111, 217, 255, 0.133)',
-    navy400: 'rgba(111, 217, 255, 0.066)',
+    navy200: 'rgba(255,255,255, 0.33)',
+    navy300: 'rgba(255,255,255, 0.133)',
+    navy400: 'rgba(255,255,255, 0.066)',
     purple100: 'rgb(89, 33, 141)',
     purple200: 'rgb(219, 195, 244)',
     purple300: 'rgb(229, 212, 246)',
@@ -277,6 +279,7 @@ export const darkTheme = createTheme('dark', {
     pink400: 'rgba(107, 26, 83, 0.2)',
     border100: 'rgba(255, 255, 255, 0.15)',
     border200: 'rgba(255, 255, 255, 0.05)',
+    */
   },
 });
 
@@ -285,7 +288,6 @@ export const globalStyles = globalCss({
   html: {
     fontSize: `${theme.fontSizes.base1} !important`,
     height: '100%',
-    verticalAlign: 'baseline',
     boxSizing: 'border-box;',
     margin: '0',
     padding: '0',
@@ -308,6 +310,7 @@ export const globalStyles = globalCss({
     WebkitAppearance: 'none',
     boxSizing: 'border-box',
     outline: 'none',
+    verticalAlign: 'inherit',
     letterSpacing: 'normal',
     wordSpacing: 'normal',
     marginBlockStart: 0,
@@ -332,7 +335,7 @@ export const globalStyles = globalCss({
     color: 'inherit',
     cursor: 'pointer',
     '&:hover': {
-      opacity: 0.8,
+      opacity: 0.7,
     },
     '&:focus': {
       outline: 'none',

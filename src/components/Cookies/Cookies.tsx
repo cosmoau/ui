@@ -77,16 +77,16 @@ export default function Cookies({ css, href = 'https://cosmogroup.io/legal/priva
               color: '$base100',
             },
           }}>
-          <Heading level={5} inline inlineSpacer={1}>
+          <Heading level={6} inline inlineSpacer={1}>
             🍪
           </Heading>
-          <Heading level={5} inline inlineSpacer={1}>
-            We use anonymous cookies.{' '}
-            <a href={href || '#'}>
+          <Heading level={6} inline inlineSpacer={1}>
+            We use cookies.{' '}
+            <a href={href}>
               <b>Learn more</b>
             </a>
           </Heading>
-          <Heading level={5} inline>
+          <Heading level={6} inline>
             <X onClick={handleAccept} />
           </Heading>
         </Card>

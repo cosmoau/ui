@@ -1,8 +1,7 @@
 @font-face {
   font-family: 'Graphik';
   src: url('public/webfonts/Graphik-Medium.eot');
-  src: url('public/webfonts/Graphik-Medium.eot?#iefix') format('embedded-opentype'),
-    url('public/webfonts/Graphik-Medium.woff2') format('woff2'),
+  src: url('public/webfonts/Graphik-Medium.eot?#iefix') format('embedded-opentype'), url('public/webfonts/Graphik-Medium.woff2') format('woff2'),
     url('public/webfonts/Graphik-Medium.woff') format('woff');
   font-weight: bold;
   font-style: normal;
@@ -12,8 +11,7 @@
 @font-face {
   font-family: 'Graphik';
   src: url('public/webfonts/Graphik-Regular.eot');
-  src: url('public/webfonts/Graphik-Regular.eot?#iefix') format('embedded-opentype'),
-    url('public/webfonts/Graphik-Regular.woff2') format('woff2'),
+  src: url('public/webfonts/Graphik-Regular.eot?#iefix') format('embedded-opentype'), url('public/webfonts/Graphik-Regular.woff2') format('woff2'),
     url('public/webfonts/Graphik-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
