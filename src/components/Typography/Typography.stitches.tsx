@@ -66,11 +66,11 @@ export default function stitchesShared({ ...props }) {
     fontWeight: '$2',
     lineHeight: '$h3',
     letterSpacing: '0.01rem',
-    marginBottom: props.inline ? 0 : '$4',
+    marginBottom: props.inline ? 0 : '$3',
 
     [breakpoints.phone]: {
       fontSize: 'calc($h3 * 0.92)',
-      lineHeight: 'calc($h3 * 0.25)',
+      lineHeight: 'calc($h3 * 0.92)',
     },
 
     [breakpoints.tabletX]: {
@@ -94,18 +94,18 @@ export default function stitchesShared({ ...props }) {
     marginBottom: props.inline ? 0 : '$4',
 
     [breakpoints.phone]: {
-      fontSize: 'calc($h4 * 0.92)',
-      lineHeight: 'calc($h4 * 0.92)',
+      fontSize: 'calc($h4 * 0.91)',
+      lineHeight: 'calc($h4 * 0.91)',
     },
 
     [breakpoints.tabletX]: {
-      fontSize: 'calc($h4 * 0.93)',
-      lineHeight: 'calc($h4 * 0.93)',
+      fontSize: 'calc($h4 * 0.91)',
+      lineHeight: 'calc($h4 * 0.91)',
     },
 
     [breakpoints.laptopX]: {
-      fontSize: 'calc($h4 * 0.94)',
-      lineHeight: 'calc($h4 * 0.94)',
+      fontSize: 'calc($h4 * 0.91)',
+      lineHeight: 'calc($h4 * 0.91)',
     },
 
     [breakpoints.desktopX]: {
@@ -145,21 +145,21 @@ export default function stitchesShared({ ...props }) {
     fontWeight: '$1',
     lineHeight: '$h6',
     marginBottom: props.inline ? 0 : '$3',
-    opacity: 0.75,
+    opacity: 0.7,
 
     [breakpoints.phone]: {
+      fontSize: 'calc($h6 * 0.91)',
+      lineHeight: 'calc($h6 * 0.91)',
+    },
+
+    [breakpoints.tabletX]: {
       fontSize: 'calc($h6 * 0.92)',
       lineHeight: 'calc($h6 * 0.92)',
     },
 
-    [breakpoints.tabletX]: {
-      fontSize: 'calc($h6 * 0.93)',
-      lineHeight: 'calc($h6 * 0.93)',
-    },
-
     [breakpoints.laptopX]: {
-      fontSize: 'calc($h6 * 0.94)',
-      lineHeight: 'calc($h6 * 0.94)',
+      fontSize: 'calc($h6 * 0.92)',
+      lineHeight: 'calc($h6 * 0.92)',
     },
 
     ...baseStyles,

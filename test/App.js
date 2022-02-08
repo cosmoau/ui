@@ -15,7 +15,14 @@ export function App() {
               We make it happen every day. There are only so many hours in a day and you&apos;re a busy person. We take the load off your shoulders, capture the opportunities and
               deliver you the results you deserve.
             </UI.Heading>
-            <UI.Switch />
+            <UI.Badge theme='border' shadow dot='pulse' dotPulse>
+              ehwhjwhjefd
+            </UI.Badge>
+            <UI.Heading level={4}>
+              We make it happen every day. There are only so many hours in a day and you&apos;re a busy person. We take the load off your shoulders, capture the opportunities and
+              deliver you the results you deserve.
+            </UI.Heading>
+            <UI.Card theme='navy'>hey</UI.Card>
           </UI.Column>
         </UI.Section>
       </UI.Block>

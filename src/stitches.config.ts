@@ -13,7 +13,7 @@ export const breakpoints = {
   dark: '@media only screen and (prefers-color-scheme: dark)',
 };
 
-export const { theme, css, styled, globalCss, getCssText } = createStitches({
+export const { theme, css, styled, globalCss } = createStitches({
   theme: {
     colors: {
       baseBody: '#ffffff',
@@ -53,8 +53,8 @@ export const { theme, css, styled, globalCss, getCssText } = createStitches({
       pink200: 'rgb(240, 195, 226)',
       pink300: 'rgb(245, 213, 235)',
       pink400: 'rgba(107, 26, 83, 0.2)',
-      border100: 'rgba(0, 1, 2, 0.15)',
-      border200: 'rgba(0, 1, 2, 0.1)',
+      border100: 'rgba(0, 1, 2, 0.125)',
+      border200: 'rgba(0, 1, 2, 0.075)',
       border300: 'rgba(0, 1, 2, 0.05)',
     },
     space: {
@@ -117,20 +117,20 @@ export const { theme, css, styled, globalCss, getCssText } = createStitches({
     },
     radii: {
       1: '0.5rem',
-      2: '0.75rem',
+      2: '1rem',
       3: '1.5rem',
     },
     shadows: {
       1: '0 0.2rem 0.1rem rgba(0, 0, 0, 0.01)',
       2: '0 0.4rem 0.3rem rgba(0, 0, 0, 0.033)',
-      3: '0 0.4rem 0.3rem rgba(0, 0, 0, 0.066)',
-      4: '0 0.8rem 0.6rem rgba(0, 0, 0, 0.133)',
+      3: '0 0.8rem 0.5rem rgba(0, 0, 0, 0.033)',
+      4: '0 0.8rem 0.6rem rgba(0, 0, 0, 0.099)',
     },
     zIndices: {
       dropdown: 10,
       tooltip: 15,
       alert: 100,
-      cookies: 9_999,
+      cookies: 9999,
     },
     transitions: {
       1: 'all 0.33s ease-in-out',

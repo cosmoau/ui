@@ -8,6 +8,7 @@ export interface Props {
   bottom?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   children: ReactNode;
   css?: CSS;
+  extra?: 'left' | 'right' | 'left-right';
   id?: string;
   minimal?: boolean;
   offset?: number;
@@ -30,6 +31,7 @@ export default function Column({
   bottom,
   children,
   css,
+  extra,
   id,
   minimal,
   offset = 0,
@@ -48,14 +50,15 @@ export default function Column({
 }: Props): JSX.Element {
   const Wrapper = styled('div', {
     margin: '0 auto',
+    flexBasis: 'auto',
     display: 'inline-block',
     flex: '1 1 auto',
     marginLeft: 0,
     maxWidth: '100%',
     width: '100%',
     marginBottom: 0,
-    paddingLeft: minimal ? 0 : '$6',
-    paddingRight: minimal ? 0 : '$6',
+    paddingLeft: minimal ? 0 : extra === 'left' ? '$6' : extra === 'left-right' ? '$6' : '$5',
+    paddingRight: minimal ? 0 : extra === 'right' ? '$6' : extra === 'left-right' ? '$6' : '$5',
     paddingTop: top ? `$${top}` : 0,
     paddingBottom: bottom ? `$${bottom}` : 0,
     textAlign: align,
@@ -64,22 +67,24 @@ export default function Column({
       maxWidth: widthPhone ? `${widthPhone}%` : `100%`,
       flex: widthPhone ? `0 0 ${widthPhone}%` : `0 0 100%`,
       marginLeft: offsetPhone ? `${offsetPhone}%` : 0,
-      paddingLeft: minimal ? 0 : '$5',
-      paddingRight: minimal ? 0 : '$5',
+      paddingLeft: minimal ? 0 : extra === 'left' ? '$5' : extra === 'left-right' ? '$5' : '$4',
+      paddingRight: minimal ? 0 : extra === 'right' ? '$5' : extra === 'left-right' ? '$5' : '$4',
     },
 
     [breakpoints.tabletX]: {
       maxWidth: widthTablet ? `${widthTablet}%` : `${width}%`,
       flex: widthTablet ? `0 0 ${widthTablet}%` : `0 0 ${width}%`,
       marginLeft: offsetTablet ? `${offsetTablet}%` : `${offset}%`,
-      paddingLeft: minimal ? 0 : '$5',
-      paddingRight: minimal ? 0 : '$5',
+      paddingLeft: minimal ? 0 : extra === 'left' ? '$5' : extra === 'left-right' ? '$5' : '$4',
+      paddingRight: minimal ? 0 : extra === 'right' ? '$5' : extra === 'left-right' ? '$5' : '$4',
     },
 
     [breakpoints.laptopX]: {
       maxWidth: widthLaptop ? `${widthLaptop}%` : `${width}%`,
       flex: widthLaptop ? `0 0 ${widthLaptop}%` : `0 0 ${width}%`,
       marginLeft: offsetLaptop ? `${offsetLaptop}%` : `${offset}%`,
+      paddingLeft: minimal ? 0 : extra === 'left' ? '$5' : extra === 'left-right' ? '$5' : '$4',
+      paddingRight: minimal ? 0 : extra === 'right' ? '$5' : extra === 'left-right' ? '$5' : '$4',
     },
 
     [breakpoints.desktopX]: {
@@ -92,12 +97,10 @@ export default function Column({
       maxWidth: widthWide ? `${widthWide}%` : `${width}%`,
       flex: widthWide ? `0 0 ${widthWide}%` : `0 0 ${width}%`,
       marginLeft: offsetWide ? `${offsetWide}%` : `${offset}%`,
+      paddingLeft: minimal ? 0 : extra === 'left' ? '$7' : extra === 'left-right' ? '$7' : '$6',
+      paddingRight: minimal ? 0 : extra === 'right' ? '$7' : extra === 'left-right' ? '$7' : '$6',
     },
   });
-
-  if (offsetTablet !== undefined) {
-    console.warn(0);
-  }
 
   return (
     <Wrapper css={css} id={id}>

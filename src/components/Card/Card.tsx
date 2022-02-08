@@ -17,9 +17,14 @@ export interface Props {
 
 export default function Card({ css, id, theme, loader, border, image, imageHeight, minimal, children }: Props): JSX.Element {
   const Wrapper = styled('div', {
+    position: 'relative',
+    display: 'block',
+  });
+  const InnerWrapper = styled('div', {
     padding: minimal ? 0 : image ? 0 : 'calc($6 / 1.25)',
     height: '100%',
     display: 'block',
+    position: 'relative',
     borderRadius: '$2',
     transition: '$1',
     color: 'inherit',
@@ -34,7 +39,7 @@ export default function Card({ css, id, theme, loader, border, image, imageHeigh
         : theme === 'blue'
         ? '$blue300'
         : theme === 'navy'
-        ? '$navy200'
+        ? '$navy300'
         : theme === 'purple'
         ? '$purple300'
         : theme === 'pink'
@@ -70,6 +75,8 @@ export default function Card({ css, id, theme, loader, border, image, imageHeigh
 
   const ImageWrapper = styled('div', {
     position: 'relative',
+    width: '100%',
+    height: '100%',
   });
 
   const ImageDisplayWrappper = styled('div', {
@@ -80,22 +87,28 @@ export default function Card({ css, id, theme, loader, border, image, imageHeigh
     borderTopRightRadius: '$2',
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 0,
+
+    img: {
+      borderRadius: '0',
+    },
   });
 
   const ImageChildrenWrapper = styled('div', {
-    padding: '$2',
+    padding: 'calc($6 / 1.25)',
   });
 
   return (
-    <Wrapper css={css} id={id}>
-      {image ? (
-        <ImageWrapper>
-          <ImageDisplayWrappper>{image}</ImageDisplayWrappper>
-          <ImageChildrenWrapper>{children}</ImageChildrenWrapper>
-        </ImageWrapper>
-      ) : (
-        children
-      )}
+    <Wrapper>
+      <InnerWrapper css={css} id={id}>
+        {image ? (
+          <ImageWrapper>
+            <ImageDisplayWrappper>{image}</ImageDisplayWrappper>
+            <ImageChildrenWrapper>{children}</ImageChildrenWrapper>
+          </ImageWrapper>
+        ) : (
+          children
+        )}
+      </InnerWrapper>
     </Wrapper>
   );
 }

@@ -144,7 +144,7 @@ export default function Button({ children, css, icon, iconPosition = 'left', id,
           : theme === 'pink'
           ? '$pink200'
           : theme === 'transparent'
-          ? '$navy300'
+          ? '$navy200'
           : theme === 'dark'
           ? '$base200'
           : '$navy300',
@@ -187,8 +187,9 @@ export default function Button({ children, css, icon, iconPosition = 'left', id,
 
     svg: {
       verticalAlign: 'middle',
-      width: '2.2rem',
-      height: '2.2rem',
+      alignSelf: 'center',
+      width: '2.1rem',
+      height: '2.1rem',
     },
   });
   return (

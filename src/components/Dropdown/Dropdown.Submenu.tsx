@@ -51,22 +51,28 @@ export default function Submenu({ align = 'left', css, hover, id, options, passK
         <GroupWrapper>
           {options.map(({ value, name, icon }) => (
             <ItemWrapper key={value} className={path === value ? 'active' : ''}>
-              <Link href={value || '#'}>
-                <a
-                  href={value || '#'}
-                  onClickCapture={(e) => {
-                    e.preventDefault();
-                    setIsOpen(false);
-                  }}>
+              <Link href={value} passHref>
+                <a>
                   {icon ? (
                     <IconWrapper>
                       {icon}&nbsp;{' '}
-                      <Heading level={5} inline>
+                      <Heading
+                        level={6}
+                        inline
+                        css={{
+                          opacity: 1,
+                        }}>
                         {name}
                       </Heading>
                     </IconWrapper>
                   ) : (
-                    <Heading level={6}>{name}</Heading>
+                    <Heading
+                      level={6}
+                      css={{
+                        opacity: 1,
+                      }}>
+                      {name}
+                    </Heading>
                   )}
                 </a>
               </Link>

@@ -47,7 +47,7 @@ export default function Checkbox({ checked = false, children, css, disabled = fa
   });
 
   return (
-    <Wrapper css={css} id={id}>
+    <Wrapper css={css} id={id} onClick={handleChange}>
       <Button
         css={{
           display: 'flex',
@@ -57,8 +57,7 @@ export default function Checkbox({ checked = false, children, css, disabled = fa
           aspectRatio: 1,
           width: '3rem',
           height: '3rem',
-        }}
-        onClick={handleChange}>
+        }}>
         {isChecked ? <Check /> : <Circle opacity={0.1} />}
       </Button>
       <LabelWrapper>{children}</LabelWrapper>

@@ -2,7 +2,7 @@
 import { CSS } from '@stitches/react/types/css-util';
 import type { $$StyledComponentProps } from '@stitches/react/types/styled-component';
 import { Check, Clipboard, Eye, EyeClosed, WarningOctagon, X } from 'phosphor-react';
-import type { ChangeEvent, InputHTMLAttributes, ReactNode } from 'react';
+import type { ChangeEvent, InputHTMLAttributes, ReactNode, RefObject } from 'react';
 import React, { useState } from 'react';
 
 import { styled } from '../../stitches.config';
@@ -66,7 +66,7 @@ const InputWrapper = styled('input', {
   border: 0,
   backgroundColor: 'transparent',
   color: '$base100',
-  lineHeight: 'normal',
+
   fontWeight: '$1',
   textAlign: 'left',
   transition: '$1',
@@ -126,6 +126,7 @@ type Props = InputHTMLAttributes<HTMLInputElement> &
     loader?: boolean;
     onChange?: any;
     onSubmit?: any;
+    onRef?: RefObject<HTMLInputElement>;
     reset?: boolean;
     reveal?: boolean;
     submit?: boolean | string;
@@ -142,6 +143,7 @@ export default function Input({
   loader,
   onChange,
   onSubmit,
+  onRef,
   reset,
   reveal,
   submit,
@@ -193,40 +195,42 @@ export default function Input({
   return (
     <Wrapper css={css} id={id}>
       {icon && <IconWrapper>{icon}</IconWrapper>}
-      <InputWrapper width={width} type={controlledType} value={controlledValue} onChange={handleChange} {...props} />
-      <FunctionWrapper>
-        {loader && (
-          <Badge theme='navy' dot='pulse'>
-            <Loading />
-          </Badge>
-        )}
-        {error && (
-          <Badge theme='red' dot='pulse'>
-            <WarningOctagon />
-          </Badge>
-        )}
-        {reveal && (
-          <Button theme='navy' onClick={handleReveal}>
-            {isRevealed ? <EyeClosed /> : <Eye />}
-          </Button>
-        )}
-        {reset && controlledValue.length > 1 && (
-          <Button theme='navy' onClick={handleReset}>
-            <X />
-          </Button>
-        )}
-        {copy && (
-          <Button theme='navy' onClick={handleCopy}>
-            {isCopied ? <Check /> : <Clipboard />}
-          </Button>
-        )}
-        {submit && (
-          <Button theme='navy' onClick={handleSubmit}>
-            {typeof submit === 'string' ? submit : 'Submit'}
-          </Button>
-        )}
-        {customSubmit || null}
-      </FunctionWrapper>
+      <InputWrapper width={width} type={controlledType} value={controlledValue} onChange={handleChange} ref={onRef} {...props} />
+      {(loader || error || reveal || reset || copy || submit || customSubmit) && (
+        <FunctionWrapper>
+          {loader && (
+            <Badge theme='navy' dot='pulse'>
+              <Loading />
+            </Badge>
+          )}
+          {error && (
+            <Badge theme='red' dot='pulse'>
+              <WarningOctagon />
+            </Badge>
+          )}
+          {reveal && (
+            <Button theme='navy' onClick={handleReveal}>
+              {isRevealed ? <EyeClosed /> : <Eye />}
+            </Button>
+          )}
+          {reset && controlledValue.length > 1 && (
+            <Button theme='navy' onClick={handleReset}>
+              <X />
+            </Button>
+          )}
+          {copy && (
+            <Button theme='navy' onClick={handleCopy}>
+              {isCopied ? <Check /> : <Clipboard />}
+            </Button>
+          )}
+          {submit && (
+            <Button theme='navy' onClick={handleSubmit}>
+              {typeof submit === 'string' ? submit : 'Submit'}
+            </Button>
+          )}
+          {customSubmit || null}
+        </FunctionWrapper>
+      )}
     </Wrapper>
   );
 }

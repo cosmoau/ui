@@ -137,7 +137,7 @@ export default function Badge({ children, css, dot, dotColor, id, inline = true,
           ) : (
             <Circle weight='fill' size={10} style={{ marginRight: 3.33 }} />
           )}
-          children
+          {children}
         </DotWrapper>
       ) : (
         children
