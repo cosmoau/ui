@@ -1,20 +1,20 @@
 import { CSS } from '@stitches/react/types/css-util';
 import Link, { LinkProps } from 'next/link';
 import { useRouter } from 'next/router';
-import React, { ReactElement } from 'react';
+import React, { ReactNode } from 'react';
 
 import { styled } from '../../stitches.config';
 
 export interface Props extends LinkProps {
-  children: ReactElement;
+  children: ReactNode;
   css?: CSS;
-  cssActive: CSS;
-  cssInactive: CSS;
+  cssActive?: CSS;
+  cssInactive?: CSS;
   hover?: boolean;
   id?: string;
 }
 
-export default function Active({ children, css, cssActive, cssInactive, hover, href, id }: Props): JSX.Element {
+export default function Active({ children, css, cssActive, cssInactive, hover, href, id, ...props }: Props): JSX.Element {
   const router = useRouter();
   const path = router?.pathname || '/';
 
@@ -41,7 +41,7 @@ export default function Active({ children, css, cssActive, cssInactive, hover, h
   });
 
   return (
-    <Link href={href} passHref {...children.props}>
+    <Link href={href} passHref {...props}>
       <Wrapper css={css} id={id} className={path === href ? 'active' : 'inactive'}>
         {children}
       </Wrapper>
