@@ -118,7 +118,7 @@ const FunctionWrapper = styled('div', {
 type Props = InputHTMLAttributes<HTMLInputElement> &
   typeof InputWrapper[$$StyledComponentProps] & {
     copy?: boolean;
-    css: CSS;
+    css?: CSS;
     customSubmit?: boolean;
     error?: boolean;
     icon?: ReactNode;
