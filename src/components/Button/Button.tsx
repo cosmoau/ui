@@ -143,7 +143,7 @@ export default function Button({ children, css, icon, iconPosition = 'left', id,
   });
 
   const IconWrapper = styled('div', {
-    display: 'inline-block',
+    display: 'inline-flex',
     verticalAlign: 'middle',
     marginRight: iconPosition === 'left' ? '$3' : 0,
     marginLeft: iconPosition === 'right' ? '$3' : 0,

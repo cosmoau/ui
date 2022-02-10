@@ -8,7 +8,7 @@ export function App() {
   return (
     <UI.Context switchable>
       <UI.Block inner theme='alternate' top={7} bottom={7}>
-        <UI.Section align='flex-end'>
+        <UI.Section align='stretch'>
           <UI.Column width={50} bottom={3}>
             <UI.Card extra>
               <UI.Heading level={2}>Imagine earning more, by doing less</UI.Heading>

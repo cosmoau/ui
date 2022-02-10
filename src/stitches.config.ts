@@ -303,7 +303,6 @@ export const globalStyles = globalCss({
     WebkitAppearance: 'none',
     boxSizing: 'border-box',
     outline: 'none',
-    verticalAlign: 'inherit',
     letterSpacing: 'normal',
     wordSpacing: 'normal',
     marginBlockStart: 0,
@@ -345,7 +344,9 @@ export const globalStyles = globalCss({
   },
   svg: {
     transition: theme.transitions[1],
-    verticalAlign: 'middle',
+    verticalAlign: 'middle !important',
+    fill: 'currentColor',
+    lineHeight: '1 !important',
   },
   img: {
     borderRadius: theme.radii[3],

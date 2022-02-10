@@ -88,7 +88,7 @@ export default function Badge({ children, css, dot, dotColor, id, inline = true,
 
   const PulseWrapper = styled('div', {
     animation: `${pulseAnimation} 1.5s infinite`,
-    display: 'inline-block',
+    display: 'inline-flex',
     verticalAlign: 'middle',
     marginRight: '$1',
     color: `${

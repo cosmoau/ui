@@ -19,6 +19,9 @@ export interface Props {
 export default function Card({ css, extra, id, theme, loader, border, image, imageHeight, minimal, children }: Props): JSX.Element {
   const Wrapper = styled('div', {
     padding: minimal ? 0 : image ? 0 : !image && extra ? '$7' : '$5',
+    display: 'block',
+    height: '100%',
+    width: 'auto',
     position: 'relative',
     borderRadius: '$2',
     transition: '$1',
