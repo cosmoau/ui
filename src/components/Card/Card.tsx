@@ -20,9 +20,6 @@ export default function Card({ css, extra, id, theme, loader, border, image, ima
   const Wrapper = styled('div', {
     padding: minimal ? 0 : image ? 0 : !image && extra ? '$7' : '$5',
     position: 'relative',
-    width: '100%',
-    height: '100%',
-    display: 'block',
     borderRadius: '$2',
     transition: '$1',
     color: 'inherit',

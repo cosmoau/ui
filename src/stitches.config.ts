@@ -17,10 +17,10 @@ export const { theme, css, styled, globalCss } = createStitches({
   theme: {
     colors: {
       baseBody: '#ffffff',
-      base100: 'rgb(5, 16, 41)',
-      base200: 'rgba(5, 16, 41, 0.9)',
-      base300: 'rgba(5, 16, 41, 0.15)',
-      base400: 'rgba(5, 16, 41, 0.1)',
+      base100: 'rgb(13, 24, 47)',
+      base200: 'rgba(13, 24, 47, 0.9)',
+      base300: 'rgba(13, 24, 47, 0.15)',
+      base400: 'rgba(13, 24, 47, 0.1)',
       baseContrast100: 'rgb(255, 255, 255)',
       baseContrast200: 'rgb(230, 240, 241)',
       baseContrast300: 'rgba(255, 255, 255, 0.15)',
@@ -118,8 +118,7 @@ export const { theme, css, styled, globalCss } = createStitches({
     shadows: {
       1: '0 0.2rem 0.1rem rgba(0, 0, 0, 0.01)',
       2: '0 0.4rem 0.3rem rgba(0, 0, 0, 0.033)',
-      3: '0 0.8rem 0.5rem rgba(0, 0, 0, 0.066)',
-      4: '0 0.8rem 0.6rem rgba(0, 0, 0, 0.099)',
+      3: '0 1rem 2rem rgba(0, 0, 0, 0.099)',
     },
     zIndices: {
       dropdown: 10,

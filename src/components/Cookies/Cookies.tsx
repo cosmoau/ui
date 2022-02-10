@@ -68,7 +68,7 @@ export default function Cookies({ css, href = 'https://cosmogroup.io/legal/priva
             ptb: '$3',
             textAlign: 'center',
             display: 'inline-flex',
-            boxShadow: '$4',
+            boxShadow: '$3',
 
             '*': {
               color: '$base100',

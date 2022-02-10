@@ -32,7 +32,7 @@ export default function stitchesShared() {
     width: '70rem',
     maxWidth: '90vw',
     maxHeight: '80vh',
-    boxShadow: '$4',
+    boxShadow: '$3',
 
     [breakpoints.phone]: {
       width: '95%',

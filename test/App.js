@@ -188,7 +188,7 @@ export function App() {
         </UI.Section>
       </UI.Block>
 
-      <UI.Cookies token='hey' />
+      <UI.Cookies token={Math.random()} />
     </UI.Context>
   );
 }

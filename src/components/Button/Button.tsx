@@ -31,7 +31,7 @@ export default function Button({ children, css, icon, iconPosition = 'left', id,
     fontWeight: '$1',
     padding: '$2 $4',
     borderRadius: '$1',
-    fontSize: '$h5',
+    fontSize: '1.6rem !important',
     border: `0.1rem solid ${
       theme === 'red'
         ? '$red400'
