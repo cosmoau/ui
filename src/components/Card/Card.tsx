@@ -71,6 +71,7 @@ export default function Card({ css, extra, id, theme, loader, border, image, ima
   const ImageWrapper = styled('div', {
     height: imageHeight || '15rem',
     width: '100%',
+    position: 'relative',
     backgroundColor: '$baseContrast200',
     borderTopLeftRadius: '$2',
     borderTopRightRadius: '$2',
@@ -78,7 +79,10 @@ export default function Card({ css, extra, id, theme, loader, border, image, ima
     borderBottomRightRadius: 0,
 
     img: {
-      borderRadius: '0',
+      borderTopLeftRadius: '$2',
+      borderTopRightRadius: '$2',
+      borderBottomLeftRadius: 0,
+      borderBottomRightRadius: 0,
     },
   });
 
