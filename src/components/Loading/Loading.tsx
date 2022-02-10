@@ -4,9 +4,9 @@ export interface Props {
   width?: number;
 }
 
-export default function Loading({ stroke = '#969696', width = 18 }: Props): JSX.Element {
+export default function Loading({ stroke = '#969696', width = 16 }: Props): JSX.Element {
   return (
-    <svg width={width} height={width} viewBox={'0 0 38 38'} xmlns='http://www.w3.org/2000/svg' stroke={stroke}>
+    <svg width={width} height={width} viewBox={'0 0 38 38'} xmlns={'http://www.w3.org/2000/svg'} stroke={stroke}>
       <g fill='none' fillRule='evenodd'>
         <g transform='translate(1 1)' strokeWidth='2'>
           <circle strokeOpacity='.5' cx='18' cy='18' r='18' />

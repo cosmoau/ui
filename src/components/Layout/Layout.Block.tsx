@@ -29,20 +29,22 @@ export default function Block({ bottom, children, css, id, inner, theme, top }: 
     margin: 'auto',
 
     [breakpoints.phone]: {
-      maxWidth: '$1',
+      width: '$1',
     },
     [breakpoints.tabletX]: {
-      maxWidth: '$2',
+      width: '$2',
     },
     [breakpoints.laptopX]: {
-      maxWidth: '$3',
+      width: '$3',
+      maxWidth: '98%',
     },
     [breakpoints.desktopX]: {
-      maxWidth: '$4',
+      width: '$4',
+      maxWidth: '97%',
     },
     [breakpoints.wide]: {
-      maxWidth: '$5',
-      width: '$6',
+      width: '$5',
+      maxWidth: '96%',
     },
   });
 

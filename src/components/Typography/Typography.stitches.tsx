@@ -90,22 +90,22 @@ export default function stitchesShared({ ...props }) {
     fontSize: '$h4',
     fontWeight: '$1',
     lineHeight: '$h4',
-    opacity: 0.75,
+    opacity: 0.8,
     marginBottom: props.inline ? 0 : '$4',
 
     [breakpoints.phone]: {
-      fontSize: 'calc($h4 * 0.91)',
-      lineHeight: 'calc($h4 * 0.91)',
+      fontSize: 'calc($h4 * 0.88)',
+      lineHeight: 'calc($h4 * 0.88)',
     },
 
     [breakpoints.tabletX]: {
-      fontSize: 'calc($h4 * 0.91)',
-      lineHeight: 'calc($h4 * 0.91)',
+      fontSize: 'calc($h4 * 0.89)',
+      lineHeight: 'calc($h4 * 0.89)',
     },
 
     [breakpoints.laptopX]: {
-      fontSize: 'calc($h4 * 0.91)',
-      lineHeight: 'calc($h4 * 0.91)',
+      fontSize: 'calc($h4 * 0.92)',
+      lineHeight: 'calc($h4 * 0.92)',
     },
 
     [breakpoints.desktopX]: {
@@ -145,7 +145,7 @@ export default function stitchesShared({ ...props }) {
     fontWeight: '$1',
     lineHeight: '$h6',
     marginBottom: props.inline ? 0 : '$3',
-    opacity: 0.7,
+    opacity: 0.8,
 
     [breakpoints.phone]: {
       fontSize: 'calc($h6 * 0.91)',

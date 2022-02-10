@@ -36,19 +36,16 @@ export default function Badge({ children, css, dot, dotColor, id, inline = true,
   });
 
   const Wrapper = styled('div', {
-    display: inline ? 'inline-flex' : 'flex',
+    lineHeight: 1.15,
+    display: inline ? 'inline-block' : 'block',
     marginRight: inlineSpacer ? `${inlineSpacer}rem` : 0,
-    alignItems: 'center',
-    justifyContent: 'center',
+    textAlign: 'center',
+    verticalAlign: 'middle',
     position: 'relative',
     transition: '$1',
-    paddingTop: '$2',
-    paddingBottom: '$2',
-    paddingLeft: 'calc($4 / 1.5)',
-    paddingRight: 'calc($4 / 1.5)',
+    padding: '$2 calc($4 / 1.5)',
     borderRadius: '$3',
     fontSize: '1.55rem !important',
-    lineHeight: '1.25',
     backgroundColor:
       theme === 'red'
         ? '$red300'
@@ -82,22 +79,18 @@ export default function Badge({ children, css, dot, dotColor, id, inline = true,
         ? '$pink100'
         : '$base100',
     border: `0.1rem solid ${theme === 'border' ? '$border200' : 'transparent'}`,
-    boxShadow: shadow ? '$3' : 'none',
+    boxShadow: shadow ? '$2' : 'none',
     '&:disabled': {
       opacity: 0.5,
       cursor: 'wait',
     },
   });
 
-  const LoaderWrapper = styled('div', {
-    height: '$6',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: '$3',
-  });
-
-  const DotWrapper = styled('div', {
+  const PulseWrapper = styled('div', {
+    animation: `${pulseAnimation} 1.5s infinite`,
+    display: 'inline-block',
+    verticalAlign: 'middle',
+    marginRight: '$1',
     color: `${
       dotColor === 'red'
         ? '$red100'
@@ -117,31 +110,25 @@ export default function Badge({ children, css, dot, dotColor, id, inline = true,
     }`,
   });
 
-  const PulseWrapper = styled('div', {
-    animation: `${pulseAnimation} 1.5s infinite`,
-    display: 'inline-flex',
-  });
-
-  return (
+  return loader ? (
+    <Wrapper
+      id={id}
+      css={{
+        height: '$7',
+      }}>
+      <Loading />
+    </Wrapper>
+  ) : (
     <Wrapper css={css} id={id}>
-      {loader ? (
-        <LoaderWrapper>
-          <Loading />
-        </LoaderWrapper>
-      ) : dot ? (
-        <DotWrapper>
-          {dot === 'pulse' ? (
-            <PulseWrapper>
-              <Circle weight='fill' size={10} style={{ marginRight: 3.33 }} />
-            </PulseWrapper>
-          ) : (
+      {dot &&
+        (dot === 'pulse' ? (
+          <PulseWrapper>
             <Circle weight='fill' size={10} style={{ marginRight: 3.33 }} />
-          )}
-          {children}
-        </DotWrapper>
-      ) : (
-        children
-      )}
+          </PulseWrapper>
+        ) : (
+          <Circle weight='fill' size={10} style={{ marginRight: 3.33 }} />
+        ))}
+      {children}
     </Wrapper>
   );
 }

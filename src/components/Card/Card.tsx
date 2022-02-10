@@ -7,6 +7,7 @@ export interface Props {
   border?: boolean;
   children: ReactNode;
   css?: CSS;
+  extra?: boolean;
   id?: string;
   image?: ReactNode;
   imageHeight?: string;
@@ -15,16 +16,13 @@ export interface Props {
   theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'transparent';
 }
 
-export default function Card({ css, id, theme, loader, border, image, imageHeight, minimal, children }: Props): JSX.Element {
+export default function Card({ css, extra, id, theme, loader, border, image, imageHeight, minimal, children }: Props): JSX.Element {
   const Wrapper = styled('div', {
+    padding: minimal ? 0 : image ? 0 : !image && extra ? '$7' : '$5',
     position: 'relative',
-    display: 'block',
-  });
-  const InnerWrapper = styled('div', {
-    padding: minimal ? 0 : image ? 0 : 'calc($6 / 1.25)',
+    width: '100%',
     height: '100%',
     display: 'block',
-    position: 'relative',
     borderRadius: '$2',
     transition: '$1',
     color: 'inherit',
@@ -74,12 +72,6 @@ export default function Card({ css, id, theme, loader, border, image, imageHeigh
   });
 
   const ImageWrapper = styled('div', {
-    position: 'relative',
-    width: '100%',
-    height: '100%',
-  });
-
-  const ImageDisplayWrappper = styled('div', {
     height: imageHeight || '15rem',
     width: '100%',
     backgroundColor: '$baseContrast200',
@@ -94,21 +86,17 @@ export default function Card({ css, id, theme, loader, border, image, imageHeigh
   });
 
   const ImageChildrenWrapper = styled('div', {
-    padding: 'calc($6 / 1.25)',
+    padding: minimal ? 0 : extra ? '$7' : '$5',
   });
 
-  return (
-    <Wrapper>
-      <InnerWrapper css={css} id={id}>
-        {image ? (
-          <ImageWrapper>
-            <ImageDisplayWrappper>{image}</ImageDisplayWrappper>
-            <ImageChildrenWrapper>{children}</ImageChildrenWrapper>
-          </ImageWrapper>
-        ) : (
-          children
-        )}
-      </InnerWrapper>
+  return image ? (
+    <Wrapper css={css} id={id}>
+      <ImageWrapper>{image}</ImageWrapper>
+      <ImageChildrenWrapper>{children}</ImageChildrenWrapper>
+    </Wrapper>
+  ) : (
+    <Wrapper css={css} id={id}>
+      {children}
     </Wrapper>
   );
 }

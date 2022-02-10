@@ -17,10 +17,10 @@ export const { theme, css, styled, globalCss } = createStitches({
   theme: {
     colors: {
       baseBody: '#ffffff',
-      base100: 'rgb(4, 44, 63)',
-      base200: 'rgba(4, 44, 63, 0.9)',
-      base300: 'rgba(4, 44, 63, 0.15)',
-      base400: 'rgba(4, 44, 63, 0.1)',
+      base100: 'rgb(5, 16, 41)',
+      base200: 'rgba(5, 16, 41, 0.9)',
+      base300: 'rgba(5, 16, 41, 0.15)',
+      base400: 'rgba(5, 16, 41, 0.1)',
       baseContrast100: 'rgb(255, 255, 255)',
       baseContrast200: 'rgb(230, 240, 241)',
       baseContrast300: 'rgba(255, 255, 255, 0.15)',
@@ -53,9 +53,9 @@ export const { theme, css, styled, globalCss } = createStitches({
       pink200: 'rgb(240, 195, 226)',
       pink300: 'rgb(245, 213, 235)',
       pink400: 'rgba(107, 26, 83, 0.2)',
-      border100: 'rgba(0, 1, 2, 0.125)',
-      border200: 'rgba(0, 1, 2, 0.075)',
-      border300: 'rgba(0, 1, 2, 0.05)',
+      border100: 'rgba(0, 1, 2, 0.133)',
+      border200: 'rgba(0, 1, 2, 0.088)',
+      border300: 'rgba(0, 1, 2, 0.055)',
     },
     space: {
       1: '0.2rem',
@@ -109,11 +109,6 @@ export const { theme, css, styled, globalCss } = createStitches({
       3: '1280px',
       4: '1480px',
       5: '1680px',
-      6: '98%',
-    },
-    borderC: {
-      1: '0.1rem solid rgb(4, 44, 63)',
-      2: '0.1rem solid rgb(4, 24, 34)',
     },
     radii: {
       1: '0.5rem',
@@ -123,7 +118,7 @@ export const { theme, css, styled, globalCss } = createStitches({
     shadows: {
       1: '0 0.2rem 0.1rem rgba(0, 0, 0, 0.01)',
       2: '0 0.4rem 0.3rem rgba(0, 0, 0, 0.033)',
-      3: '0 0.8rem 0.5rem rgba(0, 0, 0, 0.033)',
+      3: '0 0.8rem 0.5rem rgba(0, 0, 0, 0.066)',
       4: '0 0.8rem 0.6rem rgba(0, 0, 0, 0.099)',
     },
     zIndices: {
@@ -302,7 +297,6 @@ export const globalStyles = globalCss({
     margin: 0,
     padding: 0,
   },
-
   '*': {
     fontFamily: 'Graphik',
     WebkitFontSmoothing: 'antialiased',
@@ -321,6 +315,34 @@ export const globalStyles = globalCss({
     paddingBlockEnd: 0,
     paddingInlineStart: 0,
     paddingInlineEnd: 0,
+  },
+  button: {
+    appearance: 'none',
+    outline: 'none',
+    cursor: 'pointer',
+    margin: 0,
+    width: 'auto',
+    font: '$body',
+    WebkitFontSmoothing: 'antialiased',
+    MozOsxFontSmoothing: 'grayscale',
+    WebkitAppearance: 'none',
+    overflow: 'visible',
+    userSelect: 'text',
+    fontFamily: 'inherit',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    '&::-moz-focus-inner': {
+      border: 0,
+      padding: 0,
+      outline: 0,
+      outlineOffset: 0,
+    },
+    '&:focus': {
+      outline: 0,
+    },
+    '&:active': {
+      outline: 0,
+    },
   },
   svg: {
     transition: theme.transitions[1],

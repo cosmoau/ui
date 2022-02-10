@@ -49,11 +49,8 @@ export default function Column({
   widthWide,
 }: Props): JSX.Element {
   const Wrapper = styled('div', {
-    margin: '0 auto',
-    flexBasis: 'auto',
-    display: 'inline-block',
-    flex: '1 1 auto',
     marginLeft: 0,
+    flex: '1 1 auto',
     maxWidth: '100%',
     width: '100%',
     marginBottom: 0,
@@ -67,8 +64,8 @@ export default function Column({
       maxWidth: widthPhone ? `${widthPhone}%` : `100%`,
       flex: widthPhone ? `0 0 ${widthPhone}%` : `0 0 100%`,
       marginLeft: offsetPhone ? `${offsetPhone}%` : 0,
-      paddingLeft: minimal ? 0 : extra === 'left' ? '$5' : extra === 'left-right' ? '$5' : '$4',
-      paddingRight: minimal ? 0 : extra === 'right' ? '$5' : extra === 'left-right' ? '$5' : '$4',
+      paddingLeft: minimal ? 0 : extra === 'left' ? '$5' : extra === 'left-right' ? '$5' : '$3',
+      paddingRight: minimal ? 0 : extra === 'right' ? '$5' : extra === 'left-right' ? '$5' : '$3',
     },
 
     [breakpoints.tabletX]: {

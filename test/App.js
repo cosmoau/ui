@@ -7,22 +7,45 @@ import '../fonts.css';
 export function App() {
   return (
     <UI.Context switchable>
-      <UI.Block theme='alternate' top={7} bottom={7}>
-        <UI.Section>
-          <UI.Column width={60} offset={20} offsetTablet='0' widthTablet={40} offsetLaptop='0' align='center'>
-            <UI.Heading level={2}>Imagine earning more, by doing less</UI.Heading>
-            <UI.Heading level={4}>
-              We make it happen every day. There are only so many hours in a day and you&apos;re a busy person. We take the load off your shoulders, capture the opportunities and
-              deliver you the results you deserve.
-            </UI.Heading>
-            <UI.Badge theme='border' shadow dot='pulse' dotPulse>
-              ehwhjwhjefd
-            </UI.Badge>
-            <UI.Heading level={4}>
-              We make it happen every day. There are only so many hours in a day and you&apos;re a busy person. We take the load off your shoulders, capture the opportunities and
-              deliver you the results you deserve.
-            </UI.Heading>
-            <UI.Card theme='navy'>hey</UI.Card>
+      <UI.Block inner theme='alternate' top={7} bottom={7}>
+        <UI.Section align='flex-end'>
+          <UI.Column width={50} bottom={3}>
+            <UI.Card extra>
+              <UI.Heading level={2}>Imagine earning more, by doing less</UI.Heading>
+              <UI.Heading level={4}>
+                We make it happen every day. There are only so many hours in a day and you&apos;re a busy person. We take the load off your shoulders, capture the opportunities and
+                deliver you the results you deserve.
+              </UI.Heading>
+              <UI.Switch />
+
+              <UI.Heading level={4}>
+                We make it happen every day. There are only so many hours in a day and you&apos;re a busy person. We take the load off your shoulders, capture the opportunities and
+                deliver you the results you deserve.
+              </UI.Heading>
+            </UI.Card>
+          </UI.Column>
+          <UI.Column width={50}>
+            <UI.Card extra>
+              <UI.Heading level={2}>Imagine earning more, by doing less</UI.Heading>
+              <UI.Heading level={4}>
+                We make it happen every day. There are only so many hours in a day and you&apos;re a busy person. We take the load off your shoulders, capture the opportunities and
+                deliver you the results you deserve.
+              </UI.Heading>
+              <UI.Switch />
+
+              <UI.Heading level={4}>
+                We make it happen every day. There are only so many hours in a day and you&apos;re a busy person. We take the load off your shoulders, capture the opportunities and
+                deliver you the results you deserve.
+              </UI.Heading>
+              <UI.Heading level={4}>
+                We make it happen every day. There are only so many hours in a day and you&apos;re a busy person. We take the load off your shoulders, capture the opportunities and
+                deliver you the results you deserve.
+              </UI.Heading>
+              <UI.Heading level={4}>
+                We make it happen every day. There are only so many hours in a day and you&apos;re a busy person. We take the load off your shoulders, capture the opportunities and
+                deliver you the results you deserve.
+              </UI.Heading>
+            </UI.Card>
           </UI.Column>
         </UI.Section>
       </UI.Block>
@@ -91,7 +114,7 @@ export function App() {
       </UI.Block>
       <UI.Block top={1.5} bottom={6}>
         <UI.Section>
-          <UI.Column top={3}>
+          <UI.Column top={3} align='center'>
             <UI.Button
               icon={<ArrowRight />}
               iconPosition='right'
@@ -135,11 +158,14 @@ export function App() {
               Heading Four - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
             </UI.Heading>
-            <UI.Heading level={5}>
+            <UI.Heading level={5} bottom={6}>
               Heading Five - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
             </UI.Heading>
-            <UI.Heading level={6}>
+            <UI.Badge theme='border' shadow dot='pulse' dotPulse>
+              ehwhjwhjefd
+            </UI.Badge>
+            <UI.Heading level={6} top={6}>
               Heading Six - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
             </UI.Heading>

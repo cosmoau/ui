@@ -19,36 +19,12 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
 
 export default function Button({ children, css, icon, iconPosition = 'left', id, inline = true, inlineSpacer = 0, loader, onClick, theme, ...props }: Props): JSX.Element {
   const Wrapper = styled('button', {
-    // resets
-    appearance: 'none',
-    outline: 'none',
-    cursor: 'pointer',
-    margin: 0,
-    width: 'auto',
-    font: '$body',
-    WebkitFontSmoothing: 'antialiased',
-    MozOsxFontSmoothing: 'grayscale',
-    WebkitAppearance: 'none',
-    overflow: 'visible',
-    fontFamily: 'inherit',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
-    '&::-moz-focus-inner': {
-      border: 0,
-      padding: 0,
-      outline: 0,
-      outlineOffset: 0,
-    },
-    '&:focus': {
-      outline: 0,
-    },
-    // custom
-    lineHeight: '1.3',
-    display: inline ? 'inline-flex' : 'flex',
+    lineHeight: '15px',
+
+    display: inline ? 'inline-block' : 'block',
     marginRight: inlineSpacer ? `${inlineSpacer}rem` : 0,
-    alignItems: 'center',
-    justifyContent: 'center',
     textAlign: 'center',
+    alignContent: 'center',
     verticalAlign: 'middle',
     position: 'relative',
     transition: '$1',
@@ -122,11 +98,6 @@ export default function Button({ children, css, icon, iconPosition = 'left', id,
       opacity: 0.5,
       cursor: 'wait',
     },
-    '*': {
-      boxSizing: 'border-box',
-      verticalAlign: 'middle',
-      display: 'inline-block',
-    },
     '&:hover': {
       backgroundColor:
         theme === 'red'
@@ -171,38 +142,27 @@ export default function Button({ children, css, icon, iconPosition = 'left', id,
     },
   });
 
-  const ContentWrapper = styled('div', {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  });
-
   const IconWrapper = styled('div', {
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    display: 'inline-block',
     verticalAlign: 'middle',
     marginRight: iconPosition === 'left' ? '$3' : 0,
     marginLeft: iconPosition === 'right' ? '$3' : 0,
 
     svg: {
       verticalAlign: 'middle',
-      alignSelf: 'center',
       width: '2.1rem',
       height: '2.1rem',
     },
   });
-  return (
-    <Wrapper css={css} id={id} onClick={onClick} {...props}>
-      {loader ? (
-        <Loading />
-      ) : (
-        <ContentWrapper>
-          {iconPosition === 'left' && icon && <IconWrapper>{icon}</IconWrapper>}
-          {children}
-          {iconPosition === 'right' && icon && <IconWrapper>{icon}</IconWrapper>}
-        </ContentWrapper>
-      )}
+  return loader ? (
+    <Wrapper>
+      <Loading />
+    </Wrapper>
+  ) : (
+    <Wrapper {...props} css={css} id={id} onClick={onClick}>
+      {icon && iconPosition && iconPosition === 'left' && <IconWrapper>{icon}</IconWrapper>}
+      {children}
+      {icon && iconPosition && iconPosition === 'right' && <IconWrapper>{icon}</IconWrapper>}
     </Wrapper>
   );
 }

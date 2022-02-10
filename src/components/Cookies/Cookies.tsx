@@ -61,10 +61,7 @@ export default function Cookies({ css, href = 'https://cosmogroup.io/legal/priva
 
   return (
     isShown && (
-      <Wrapper
-        css={{
-          ...css,
-        }}>
+      <Wrapper css={css}>
         <Card
           border
           css={{
