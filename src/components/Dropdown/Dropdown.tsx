@@ -8,6 +8,7 @@ import { Loading } from '../Loading';
 import stitchesShared from './Dropdown.stitches';
 
 export interface Props {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   actions: any;
   align?: 'left' | 'right' | 'center';
   css?: CSS;

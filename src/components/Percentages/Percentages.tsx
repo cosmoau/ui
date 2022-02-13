@@ -19,8 +19,8 @@ export interface Props {
 
 export default function Percentages({ css, id, numberA, numberB, showDollarDifference = false, toFixed = 1, trendDirection = 'up' }: Props): JSX.Element {
   const [isLoading, setIsLoading] = useState(true as boolean);
-  const [value, setValue] = useState(0 as any);
-  const [difference, setDifference] = useState(0 as any);
+  const [value, setValue] = useState(0 as unknown);
+  const [difference, setDifference] = useState(0 as unknown);
   const [differenceDirection, setDifferenceDirection] = useState('up' as 'up' | 'down');
 
   useEffect(() => {
