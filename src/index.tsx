@@ -12,4 +12,4 @@ export * from './components/Theme/index';
 export * from './components/Tooltip/index';
 export * from './components/Typography/index';
 
-export { breakpoints, theme, css, styled, globalCss, darkTheme, globalStyles, getCssText } from './stitches.config';
+export { breakpoints, theme, css, styled, darkTheme, getCssText } from './stitches.config';

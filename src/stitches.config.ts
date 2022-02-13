@@ -13,7 +13,7 @@ export const breakpoints = {
   dark: '@media only screen and (prefers-color-scheme: dark)',
 };
 
-export const { theme, css, styled, globalCss, getCssText } = createStitches({
+export const { theme, css, styled, getCssText } = createStitches({
   theme: {
     colors: {
       baseBody: '#ffffff',
@@ -289,118 +289,5 @@ export const darkTheme = createTheme('dark', {
     border100: 'rgba(255, 255, 255, 0.15)',
     border200: 'rgba(255, 255, 255, 0.05)',
     */
-  },
-});
-
-export const globalStyles = globalCss({
-  ...(theme as object),
-  html: {
-    fontSize: `${theme.fontSizes.base1} !important`,
-    height: '100%',
-    boxSizing: 'border-box;',
-    margin: '0',
-    padding: '0',
-    border: '0',
-  },
-  body: {
-    color: theme.colors.base100,
-    lineHeight: `${theme.lineHeights.base} !important`,
-    fontSize: `${theme.fontSizes.base2} !important`,
-    height: '100%',
-    boxSizing: 'border-box;',
-    margin: 0,
-    padding: 0,
-  },
-  '*': {
-    fontFamily: 'Graphik',
-    WebkitFontSmoothing: 'antialiased',
-    MozOsxFontSmoothing: 'grayscale',
-    WebkitAppearance: 'none',
-    boxSizing: 'border-box',
-    outline: 'none',
-    letterSpacing: 'normal',
-    wordSpacing: 'normal',
-    marginBlockStart: 0,
-    marginBlockEnd: 0,
-    marginInlineStart: 0,
-    marginInlineEnd: 0,
-    paddingBlockStart: 0,
-    paddingBlockEnd: 0,
-    paddingInlineStart: 0,
-    paddingInlineEnd: 0,
-  },
-  button: {
-    appearance: 'none',
-    outline: 'none',
-    cursor: 'pointer',
-    margin: 0,
-    width: 'auto',
-    font: '$body',
-    WebkitFontSmoothing: 'antialiased',
-    MozOsxFontSmoothing: 'grayscale',
-    WebkitAppearance: 'none',
-    overflow: 'visible',
-    userSelect: 'text',
-    fontFamily: 'inherit',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
-    '&::-moz-focus-inner': {
-      border: 0,
-      padding: 0,
-      outline: 0,
-      outlineOffset: 0,
-    },
-    '&:focus': {
-      outline: 0,
-    },
-    '&:active': {
-      outline: 0,
-    },
-  },
-  svg: {
-    transition: theme.transitions[1],
-    verticalAlign: 'middle !important',
-    fill: 'currentColor',
-    lineHeight: '1 !important',
-  },
-  img: {
-    borderRadius: theme.radii[3],
-  },
-  a: {
-    transition: theme.transitions[1],
-    textDecoration: 'none',
-    color: 'inherit',
-    cursor: 'pointer',
-    '&:hover': {
-      opacity: 0.7,
-    },
-    '&:focus': {
-      outline: 'none',
-    },
-  },
-  pre: {
-    fontFamily: 'monospace',
-    fontSize: theme.fontSizes.base2,
-    overflowX: 'auto',
-    whiteSpace: 'pre-wrap',
-    wordWrap: 'break-word',
-  },
-  code: {
-    fontFamily: 'monospace',
-    fontSize: theme.fontSizes.base2,
-  },
-  ol: {
-    listStylePosition: 'inside',
-  },
-  ul: {
-    listStylePosition: 'inside',
-  },
-  li: {
-    listStyle: 'circle',
-    marginBottom: theme.space[2],
-
-    '&:last-child': {
-      marginBottom: 0,
-    },
   },
 });
