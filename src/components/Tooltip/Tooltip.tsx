@@ -74,7 +74,7 @@ export default function Tooltip({ align = 'left', children, css, id, passKey, tr
 
   return (
     <Wrapper css={css} id={id} key={passKey} ref={ref}>
-      <TriggerWrapper onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <TriggerWrapper onClickCapture={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         {trigger}
       </TriggerWrapper>
       {isOpen && <ContentWrapper>{children}</ContentWrapper>}

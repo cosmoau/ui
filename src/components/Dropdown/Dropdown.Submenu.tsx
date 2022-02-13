@@ -46,7 +46,7 @@ export default function Submenu({ align = 'left', css, hover, id, options, passK
 
   return (
     <Wrapper css={css} id={id} key={passKey} ref={ref}>
-      <Trigger onClick={handleClick}>{trigger}</Trigger>
+      <Trigger onClickCapture={handleClick}>{trigger}</Trigger>
       {isOpen && (
         <GroupWrapper>
           {options.map(({ value, name, icon }) => (

@@ -47,11 +47,11 @@ export default function Dropdown({ actions, align = 'left', css, id, label, opti
 
   return (
     <Wrapper css={css} id={id} key={passKey} ref={ref}>
-      <Button onClick={handleClick}>{label || <Loading />}</Button>
+      <Button onClickCapture={handleClick}>{label || <Loading />}</Button>
       {isShown && (
         <GroupWrapper>
           {options.map((option) => (
-            <ItemWrapper className={label === option.name ? 'active' : 'inactive'} key={option.value} onClick={() => handleActions(option.value, option.name)}>
+            <ItemWrapper className={label === option.name ? 'active' : 'inactive'} key={option.value} onClickCapture={() => handleActions(option.value, option.name)}>
               {option.icon && <IconWrapper>{option.icon}</IconWrapper>}
               {option.name}
             </ItemWrapper>
