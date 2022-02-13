@@ -1,7 +1,7 @@
 import { CSS } from '@stitches/react/types/css-util';
 import React, { HTMLAttributes, MouseEventHandler, ReactNode } from 'react';
 
-import { breakpoints, styled } from '../../stitches.config';
+import { styled } from '../../stitches.config';
 import { Loading } from '../Loading';
 
 export interface Props extends HTMLAttributes<HTMLButtonElement> {
@@ -19,8 +19,6 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
 
 export default function Button({ children, css, icon, iconPosition = 'left', id, inline = true, inlineSpacer = 0, loader, onClick, theme, ...props }: Props): JSX.Element {
   const Wrapper = styled('button', {
-    lineHeight: '15px',
-
     display: inline ? 'inline-block' : 'block',
     marginRight: inlineSpacer ? `${inlineSpacer}rem` : 0,
     textAlign: 'center',
@@ -28,10 +26,10 @@ export default function Button({ children, css, icon, iconPosition = 'left', id,
     verticalAlign: 'middle',
     position: 'relative',
     transition: '$1',
-    fontWeight: '$1',
+    fontWeight: 'normal',
     padding: '$2 $4',
     borderRadius: '$1',
-    fontSize: '1.6rem !important',
+    ft: '$h5',
     border: `0.1rem solid ${
       theme === 'red'
         ? '$red400'
@@ -119,26 +117,6 @@ export default function Button({ children, css, icon, iconPosition = 'left', id,
           : theme === 'dark'
           ? '$base200'
           : '$navy300',
-    },
-
-    [breakpoints.phone]: {
-      fontSize: 'calc($h5 * 0.94)',
-      lineHeight: 'calc($h5 * 0.94)',
-    },
-
-    [breakpoints.tabletX]: {
-      fontSize: 'calc($h5 * 0.9)',
-      lineHeight: 'calc($h5 * 0.9)',
-    },
-
-    [breakpoints.laptopX]: {
-      fontSize: 'calc($h5 * 0.9)',
-      lineHeight: 'calc($h5 * 0.9)',
-    },
-
-    [breakpoints.desktopX]: {
-      fontSize: 'calc($h5 * 0.95)',
-      lineHeight: 'calc($h5 * 0.95)',
     },
   });
 

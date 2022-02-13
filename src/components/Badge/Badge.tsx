@@ -36,7 +36,6 @@ export default function Badge({ children, css, dot, dotColor, id, inline = true,
   });
 
   const Wrapper = styled('div', {
-    lineHeight: 1.15,
     display: inline ? 'inline-block' : 'block',
     marginRight: inlineSpacer ? `${inlineSpacer}rem` : 0,
     textAlign: 'center',
@@ -45,7 +44,7 @@ export default function Badge({ children, css, dot, dotColor, id, inline = true,
     transition: '$1',
     padding: '$2 calc($4 / 1.5)',
     borderRadius: '$3',
-    fontSize: '1.6rem !important',
+    ft: '$h6',
     backgroundColor:
       theme === 'red'
         ? '$red300'

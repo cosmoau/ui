@@ -48,7 +48,7 @@ const InputWrapper = styled('textarea', {
   width: '100%',
   border: '0',
   margin: '0 auto',
-  fontSize: '1.6rem !important',
+  fontSize: '16px !important',
   '&:after': {
     clear: 'both',
     content: '""',

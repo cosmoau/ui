@@ -54,8 +54,8 @@ export default function Column({
     maxWidth: '100%',
     width: '100%',
     marginBottom: 0,
-    paddingLeft: minimal ? 0 : extra === 'left' ? '$6' : extra === 'left-right' ? '$6' : '$5',
-    paddingRight: minimal ? 0 : extra === 'right' ? '$6' : extra === 'left-right' ? '$6' : '$5',
+    paddingLeft: minimal ? 0 : extra === 'left' ? '$7' : extra === 'left-right' ? '$7' : '$4',
+    paddingRight: minimal ? 0 : extra === 'right' ? '$7' : extra === 'left-right' ? '$7' : '$4',
     paddingTop: top ? `$${top}` : 0,
     paddingBottom: bottom ? `$${bottom}` : 0,
     textAlign: align,
@@ -64,24 +64,22 @@ export default function Column({
       maxWidth: widthPhone ? `${widthPhone}%` : `100%`,
       flex: widthPhone ? `0 0 ${widthPhone}%` : `0 0 100%`,
       marginLeft: offsetPhone ? `${offsetPhone}%` : 0,
-      paddingLeft: minimal ? 0 : extra === 'left' ? '$5' : extra === 'left-right' ? '$5' : '$3',
-      paddingRight: minimal ? 0 : extra === 'right' ? '$5' : extra === 'left-right' ? '$5' : '$3',
+      paddingLeft: minimal ? 0 : '$4',
+      paddingRight: minimal ? 0 : '$4',
     },
 
     [breakpoints.tabletX]: {
       maxWidth: widthTablet ? `${widthTablet}%` : `${width}%`,
       flex: widthTablet ? `0 0 ${widthTablet}%` : `0 0 ${width}%`,
       marginLeft: offsetTablet ? `${offsetTablet}%` : `${offset}%`,
-      paddingLeft: minimal ? 0 : extra === 'left' ? '$5' : extra === 'left-right' ? '$5' : '$4',
-      paddingRight: minimal ? 0 : extra === 'right' ? '$5' : extra === 'left-right' ? '$5' : '$4',
+      paddingLeft: minimal ? 0 : extra === 'left' ? '$6' : extra === 'left-right' ? '$6' : '$4',
+      paddingRight: minimal ? 0 : extra === 'right' ? '$6' : extra === 'left-right' ? '$6' : '$4',
     },
 
     [breakpoints.laptopX]: {
       maxWidth: widthLaptop ? `${widthLaptop}%` : `${width}%`,
       flex: widthLaptop ? `0 0 ${widthLaptop}%` : `0 0 ${width}%`,
       marginLeft: offsetLaptop ? `${offsetLaptop}%` : `${offset}%`,
-      paddingLeft: minimal ? 0 : extra === 'left' ? '$5' : extra === 'left-right' ? '$5' : '$4',
-      paddingRight: minimal ? 0 : extra === 'right' ? '$5' : extra === 'left-right' ? '$5' : '$4',
     },
 
     [breakpoints.desktopX]: {
@@ -94,8 +92,8 @@ export default function Column({
       maxWidth: widthWide ? `${widthWide}%` : `${width}%`,
       flex: widthWide ? `0 0 ${widthWide}%` : `0 0 ${width}%`,
       marginLeft: offsetWide ? `${offsetWide}%` : `${offset}%`,
-      paddingLeft: minimal ? 0 : extra === 'left' ? '$7' : extra === 'left-right' ? '$7' : '$6',
-      paddingRight: minimal ? 0 : extra === 'right' ? '$7' : extra === 'left-right' ? '$7' : '$6',
+      paddingLeft: minimal ? 0 : extra === 'left' ? '$8' : extra === 'left-right' ? '$7' : '$5',
+      paddingRight: minimal ? 0 : extra === 'right' ? '$8' : extra === 'left-right' ? '$7' : '$5',
     },
   });
 

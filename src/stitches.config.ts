@@ -2,18 +2,18 @@ import { createStitches, createTheme } from '@stitches/react';
 import type * as Stitches from '@stitches/react';
 
 export const breakpoints = {
-  phone: '@media only screen and (max-width: 799px)',
-  tablet: '@media only screen and (max-width: 999px)',
-  tabletX: '@media only screen and (min-width: 800px) and (max-width: 999px)',
-  laptop: '@media only screen and (max-width: 1449px)',
-  laptopX: '@media only screen and (min-width: 1000px) and (max-width: 1449px)',
-  desktop: '@media only screen and (max-width: 1999px)',
-  desktopX: '@media only screen and (min-width: 1450px) and (max-width: 1999px)',
-  wide: '@media only screen and (min-width: 2000px)',
+  phone: '@media only screen and (max-width: 720px)',
+  tabletX: '@media only screen and (min-width: 721px) and (max-width: 960px)',
+  tablet: '@media only screen and (max-width: 960px)',
+  laptopX: '@media only screen and (min-width: 961px) and (max-width: 1580px)',
+  laptop: '@media only screen and (max-width: 1580px)',
+  desktopX: '@media only screen and (min-width: 1581px) and (max-width: 2160px)',
+  desktop: '@media only screen and (max-width: 2160px)',
+  wide: '@media only screen and (min-width: 2161px)',
   dark: '@media only screen and (prefers-color-scheme: dark)',
 };
 
-export const { theme, css, styled, globalCss } = createStitches({
+export const { theme, css, styled, globalCss, getCssText } = createStitches({
   theme: {
     colors: {
       baseBody: '#ffffff',
@@ -71,34 +71,31 @@ export const { theme, css, styled, globalCss } = createStitches({
       11: '12.5rem',
       12: '15rem',
     },
-    fontSizes: {
-      base1: '62.5%',
-      base2: '1.6rem',
-      h1: '3.3rem',
-      h2: '2.5rem',
-      h3: '1.9rem',
-      h4: '2rem',
-      h5: '1.7rem',
-      h6: '1.6rem',
-      t1: '1.5rem',
-      t2: '1.3rem',
-      t3: '1.1rem',
-    },
     fonts: {
       body: 'Graphik, system-ui, sans-serif',
     },
-    fontWeights: {
-      1: 'normal',
-      2: 'bold',
+    fontSizes: {
+      base1: '62.5%',
+      base2: '1.6rem',
+      h1: '3rem',
+      h2: '2.6rem',
+      h3: '2.1rem',
+      h4: '2rem',
+      h5: '1.8rem',
+      h6: '1.7rem',
+      t1: '1.5rem',
+      t2: '1.4rem',
+      t3: '1.3rem',
     },
+
     lineHeights: {
       base: '1.6',
       h1: '1.3',
-      h2: '1.35',
+      h2: '1.3',
       h3: '1.4',
-      h4: '1.5',
-      h5: '1.5',
-      h6: '1.45',
+      h4: '1.4',
+      h5: '1.4',
+      h6: '1.5',
       t1: '1.4',
       t2: '1.1',
       t3: '1.1',
@@ -185,6 +182,24 @@ export const { theme, css, styled, globalCss } = createStitches({
     br: (value: Stitches.PropertyValue<'color'>) => ({
       borderRight: `0.1rem solid ${value as Stitches.PropertyValue<'color'>}`,
     }),
+    ft: (value: Stitches.ScaleValue<'fontSizes' | 'lineHeights'>) => ({
+      fontSize: `${value as Stitches.ScaleValue<'fontSizes'>}!important`,
+      lineHeight: `${value as Stitches.ScaleValue<'lineHeights'>}!important`,
+
+      [breakpoints.phone]: {
+        fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .875) !important`,
+      },
+      [breakpoints.tabletX]: {
+        fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .9) !important`,
+      },
+      [breakpoints.laptopX]: {
+        fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .925) !important`,
+      },
+      [breakpoints.desktopX]: {
+        fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .95) !important`,
+      },
+    }),
+
     hidden: (value: 'phone' | 'tablet' | 'tabletX' | 'laptop' | 'laptopX' | 'desktop' | 'desktopX' | 'wide') => ({
       display: 'auto',
       [breakpoints[value]]: {

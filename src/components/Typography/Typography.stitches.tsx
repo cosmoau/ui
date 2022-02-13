@@ -1,4 +1,4 @@
-import { styled, breakpoints } from '../../stitches.config';
+import { styled } from '../../stitches.config';
 
 export default function stitchesShared({ ...props }) {
   const baseStyles = {
@@ -14,181 +14,74 @@ export default function stitchesShared({ ...props }) {
   };
 
   const HeadingOneWrapper = styled('h1', {
-    fontSize: '$h1',
-    fontWeight: '$2',
-    lineHeight: '$h1',
+    ft: '$h1',
+    fontWeight: 'bold',
     marginBottom: props.inline ? 0 : '$6',
-
-    [breakpoints.phone]: {
-      fontSize: 'calc($h1 * 0.92)',
-      lineHeight: 'calc($h1 * 0.92)',
-    },
-
-    [breakpoints.tabletX]: {
-      fontSize: 'calc($h1 * 0.93)',
-      lineHeight: 'calc($h1 * 0.93)',
-    },
-
-    [breakpoints.laptopX]: {
-      fontSize: 'calc($h1 * 0.94)',
-      lineHeight: 'calc($h1 * 0.94)',
-    },
 
     ...baseStyles,
   });
 
   const HeadingTwoWrapper = styled('h2', {
-    fontSize: '$h2',
-    fontWeight: '$2',
-    lineHeight: '$h2',
+    ft: '$h2',
+    fontWeight: 'bold',
     marginBottom: props.inline ? 0 : '$5',
-
-    [breakpoints.phone]: {
-      fontSize: 'calc($h2 * 0.92)',
-      lineHeight: 'calc($h2 * 0.92)',
-    },
-
-    [breakpoints.tabletX]: {
-      fontSize: 'calc($h2 * 0.93)',
-      lineHeight: 'calc($h2 * 0.93)',
-    },
-
-    [breakpoints.laptopX]: {
-      fontSize: 'calc($h2 * 0.94)',
-      lineHeight: 'calc($h2 * 0.94)',
-    },
 
     ...baseStyles,
   });
 
   const HeadingThreeWrapper = styled('h3', {
-    fontSize: '$h3',
-    fontWeight: '$2',
-    lineHeight: '$h3',
-    letterSpacing: '0.01rem',
+    ft: '$h3',
+    fontWeight: 'bold',
     marginBottom: props.inline ? 0 : '$3',
-
-    [breakpoints.phone]: {
-      fontSize: 'calc($h3 * 0.92)',
-      lineHeight: 'calc($h3 * 0.92)',
-    },
-
-    [breakpoints.tabletX]: {
-      fontSize: 'calc($h3 * 0.93)',
-      lineHeight: 'calc($h3 * 0.93)',
-    },
-
-    [breakpoints.laptopX]: {
-      fontSize: 'calc($h3 * 0.94)',
-      lineHeight: 'calc($h3 * 0.94)',
-    },
 
     ...baseStyles,
   });
 
   const HeadingFourWrapper = styled('h4', {
-    fontSize: '$h4',
-    fontWeight: '$1',
-    lineHeight: '$h4',
+    ft: '$h4',
+    fontWeight: 'normal',
     opacity: 0.8,
     marginBottom: props.inline ? 0 : '$4',
-
-    [breakpoints.phone]: {
-      fontSize: 'calc($h4 * 0.88)',
-      lineHeight: 'calc($h4 * 0.88)',
-    },
-
-    [breakpoints.tabletX]: {
-      fontSize: 'calc($h4 * 0.89)',
-      lineHeight: 'calc($h4 * 0.89)',
-    },
-
-    [breakpoints.laptopX]: {
-      fontSize: 'calc($h4 * 0.92)',
-      lineHeight: 'calc($h4 * 0.92)',
-    },
-
-    [breakpoints.desktopX]: {
-      fontSize: 'calc($h4 * 0.94)',
-      lineHeight: 'calc($h4 * 0.94)',
-    },
 
     ...baseStyles,
   });
 
   const HeadingFiveWrapper = styled('h5', {
-    fontSize: '$h5',
-    fontWeight: '$1',
-    lineHeight: '$h5',
+    ft: '$h5',
+    fontWeight: 'normal',
     marginBottom: props.inline ? 0 : '$3',
-
-    [breakpoints.phone]: {
-      fontSize: 'calc($h5 * 0.92)',
-      lineHeight: 'calc($h5 * 0.92)',
-    },
-
-    [breakpoints.tabletX]: {
-      fontSize: 'calc($h5 * 0.93)',
-      lineHeight: 'calc($h5 * 0.93)',
-    },
-
-    [breakpoints.laptopX]: {
-      fontSize: 'calc($h5 * 0.94)',
-      lineHeight: 'calc($h5 * 0.94)',
-    },
 
     ...baseStyles,
   });
 
   const HeadingSixWrapper = styled('h6', {
-    fontSize: '$h6',
-    fontWeight: '$1',
-    lineHeight: '$h6',
+    ft: '$h6',
+    fontWeight: 'normal',
     marginBottom: props.inline ? 0 : '$3',
     opacity: 0.8,
-
-    [breakpoints.phone]: {
-      fontSize: 'calc($h6 * 0.91)',
-      lineHeight: 'calc($h6 * 0.91)',
-    },
-
-    [breakpoints.tabletX]: {
-      fontSize: 'calc($h6 * 0.92)',
-      lineHeight: 'calc($h6 * 0.92)',
-    },
-
-    [breakpoints.laptopX]: {
-      fontSize: 'calc($h6 * 0.92)',
-      lineHeight: 'calc($h6 * 0.92)',
-    },
 
     ...baseStyles,
   });
 
   const TextOneWrapper = styled('p', {
-    fontSize: '$t1',
-    fontWeight: '$1',
-    lineHeight: '$t1',
+    ft: '$t1',
+    fontWeight: 'normal',
     marginBottom: props.inline ? 0 : '$3',
 
     ...baseStyles,
   });
 
   const TextTwoWrapper = styled('p', {
-    fontSize: '$t2',
-    fontWeight: '$1',
-    lineHeight: '$t2',
-    opacity: 0.7,
+    ft: '$t2',
+    fontWeight: 'normal',
     marginBottom: props.inline ? 0 : '$3',
 
     ...baseStyles,
   });
 
   const TextThreeWrapper = styled('p', {
-    fontSize: '$t3',
-    fontWeight: '$1',
-    lineHeight: '$t3',
-    opacity: 0.7,
+    ft: '$t3',
+    fontWeight: 'normal',
     marginBottom: props.inline ? 0 : '$3',
 
     ...baseStyles,

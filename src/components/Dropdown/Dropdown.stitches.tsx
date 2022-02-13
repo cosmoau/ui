@@ -47,8 +47,9 @@ export default function stitchesShared({ ...props }) {
     padding: '$3',
     borderBottom: '0.1rem solid $navy300',
     cursor: 'pointer',
-    fontSize: '1.6rem !important',
     borderRadius: '$1',
+    ft: '$h6',
+    opacity: 1,
 
     a: {
       display: 'block',

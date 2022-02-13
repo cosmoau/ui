@@ -57,7 +57,7 @@ const IconWrapper = styled('div', {
 const InputWrapper = styled('input', {
   appearance: 'none',
   display: 'inline-flex',
-  fontSize: '16px',
+  fontSize: '16px !important',
   fontFamily: '$body',
   margin: 0,
   outline: 'none',
@@ -67,7 +67,7 @@ const InputWrapper = styled('input', {
   backgroundColor: 'transparent',
   color: '$base100',
 
-  fontWeight: '$1',
+  fontWeight: 'normal',
   textAlign: 'left',
   transition: '$1',
   boxSizing: 'border-box',
@@ -108,7 +108,6 @@ const FunctionWrapper = styled('div', {
   marginLeft: '$3',
   '*': {
     verticalAlign: 'middle',
-    lineHeight: '1',
   },
   button: {
     marginLeft: '$2',

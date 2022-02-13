@@ -36,7 +36,7 @@ export default function Block({ bottom, children, css, id, inner, theme, top }: 
     },
     [breakpoints.laptopX]: {
       width: '$3',
-      maxWidth: '98%',
+      maxWidth: '96%',
     },
     [breakpoints.desktopX]: {
       width: '$4',
@@ -44,7 +44,7 @@ export default function Block({ bottom, children, css, id, inner, theme, top }: 
     },
     [breakpoints.wide]: {
       width: '$5',
-      maxWidth: '96%',
+      maxWidth: '95%',
     },
   });
 

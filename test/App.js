@@ -1,152 +1,87 @@
-import { ArrowRight } from 'phosphor-react';
-
 import * as UI from '../src/index.tsx';
 
 import '../fonts.css';
 
 export function App() {
   return (
-    <UI.Context switchable>
-      <UI.Block inner theme='alternate' top={7} bottom={7}>
-        <UI.Section align='stretch'>
-          <UI.Column width={50} bottom={3}>
-            <UI.Card extra>
-              <UI.Heading level={2}>Imagine earning more, by doing less</UI.Heading>
-              <UI.Heading level={4}>
-                We make it happen every day. There are only so many hours in a day and you&apos;re a busy person. We take the load off your shoulders, capture the opportunities and
-                deliver you the results you deserve.
-              </UI.Heading>
-              <UI.Switch />
-
-              <UI.Heading level={4}>
-                We make it happen every day. There are only so many hours in a day and you&apos;re a busy person. We take the load off your shoulders, capture the opportunities and
-                deliver you the results you deserve.
-              </UI.Heading>
-            </UI.Card>
+    <UI.Context>
+      <UI.Block theme='alternate' bottom={6}>
+        <UI.Section>
+          <UI.Column width={50} extra='right'>
+            <UI.Badge theme='navy'>
+              {' '}
+              Heading Two - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
+            </UI.Badge>
+          </UI.Column>
+          <UI.Column width={50} extra='left'>
+            <UI.Badge theme='navy'>
+              {' '}
+              Heading Two - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
+            </UI.Badge>
+          </UI.Column>
+        </UI.Section>
+      </UI.Block>
+      <UI.Block theme='alternate' bottom={6}>
+        <UI.Section>
+          <UI.Column width={50}>
+            <UI.Badge theme='navy'>
+              {' '}
+              Heading Two - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
+            </UI.Badge>
           </UI.Column>
           <UI.Column width={50}>
-            <UI.Card extra>
-              <UI.Heading level={2}>Imagine earning more, by doing less</UI.Heading>
-              <UI.Heading level={4}>
-                We make it happen every day. There are only so many hours in a day and you&apos;re a busy person. We take the load off your shoulders, capture the opportunities and
-                deliver you the results you deserve.
-              </UI.Heading>
-              <UI.Switch />
-
-              <UI.Heading level={4}>
-                We make it happen every day. There are only so many hours in a day and you&apos;re a busy person. We take the load off your shoulders, capture the opportunities and
-                deliver you the results you deserve.
-              </UI.Heading>
-              <UI.Heading level={4}>
-                We make it happen every day. There are only so many hours in a day and you&apos;re a busy person. We take the load off your shoulders, capture the opportunities and
-                deliver you the results you deserve.
-              </UI.Heading>
-              <UI.Heading level={4}>
-                We make it happen every day. There are only so many hours in a day and you&apos;re a busy person. We take the load off your shoulders, capture the opportunities and
-                deliver you the results you deserve.
-              </UI.Heading>
-            </UI.Card>
+            <UI.Badge theme='navy'>
+              {' '}
+              Heading Two - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
+            </UI.Badge>
           </UI.Column>
         </UI.Section>
       </UI.Block>
       <UI.Block top={6} bottom={6}>
         <UI.Section>
-          <UI.Column align='center'>
-            <UI.Submenu
-              id='plans1'
-              passKey='plans1'
-              align='center'
-              options={[
-                {
-                  name: 'Plans',
-                  value: '/plans',
-                },
-                {
-                  name: 'Services',
-                  value: '/services',
-                },
-                {
-                  name: 'Estimates',
-                  value: '/evaluate',
-                },
-                {
-                  name: 'Partnerships',
-                  value: '/partnerships',
-                },
-              ]}
-              trigger={
-                <UI.Heading level={5} inline inlineSpacer={2}>
-                  Product
-                </UI.Heading>
-              }
-            />
-            <UI.Submenu
-              id='plans1'
-              passKey='plans1'
-              align='right'
-              options={[
-                {
-                  name: 'Plans',
-                  value: '/plans',
-                },
-                {
-                  name: 'Services',
-                  value: '/services',
-                },
-                {
-                  name: 'Estimates',
-                  value: '/evaluate',
-                },
-                {
-                  name: 'Partnerships',
-                  value: '/partnerships',
-                },
-              ]}
-              hover
-              trigger={
-                <UI.Heading level={5} inline>
-                  Product
-                </UI.Heading>
-              }
-            />
-          </UI.Column>
-        </UI.Section>
-      </UI.Block>
-      <UI.Block top={1.5} bottom={6}>
-        <UI.Section>
           <UI.Column top={3} align='center'>
-            <UI.Button
-              icon={<ArrowRight />}
-              iconPosition='right'
-              css={{
-                mt: '$7',
-              }}>
-              heysdsjkfkjsdfjkdsfkjdsjkskjdsjka
-            </UI.Button>
-            <UI.Button
-              icon={<ArrowRight />}
-              iconPosition='left'
-              css={{
-                mt: '$7',
-              }}>
-              heysdsjkfkjsdfjkdsfkjdsjkskjdsjka
-            </UI.Button>
-            <UI.Heading
-              level={1}
-              css={{
-                hidden: 'tablet',
-              }}>
+            <UI.Badge theme='green' dot='pulse'>
+              <UI.Element
+                css={{
+                  visible: 'phone',
+                }}>
+                Phone
+              </UI.Element>
+              <UI.Element
+                css={{
+                  visible: 'tabletX',
+                }}>
+                Tablet
+              </UI.Element>
+              <UI.Element
+                css={{
+                  visible: 'laptopX',
+                }}>
+                Laptop
+              </UI.Element>
+              <UI.Element
+                css={{
+                  visible: 'desktopX',
+                }}>
+                Desktop
+              </UI.Element>
+              <UI.Element
+                css={{
+                  visible: 'wide',
+                }}>
+                Wide
+              </UI.Element>
+            </UI.Badge>
+
+            <UI.Heading level={1}>
               Heading One - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
             </UI.Heading>
-            <UI.Heading
-              level={2}
-              css={{
-                phone: {
-                  opacity: 0.4,
-                  fontStyle: 'italic',
-                },
-              }}>
+            <UI.Heading level={2}>
               Heading Two - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
             </UI.Heading>
