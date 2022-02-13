@@ -30,7 +30,7 @@ export default function Context({ children, css, switchable, theme = defaultThem
       color: '$base100',
       lineHeight: '$base !important',
       fontSize: '$base2 !important',
-      fontFamily: 'Graphik',
+      font: '$body',
       height: '100%',
       boxSizing: 'border-box;',
       margin: 0,

@@ -64,8 +64,8 @@ export default function Column({
       maxWidth: widthPhone ? `${widthPhone}%` : `100%`,
       flex: widthPhone ? `0 0 ${widthPhone}%` : `0 0 100%`,
       marginLeft: offsetPhone ? `${offsetPhone}%` : 0,
-      paddingLeft: minimal ? 0 : '$4',
-      paddingRight: minimal ? 0 : '$4',
+      paddingLeft: minimal ? 0 : '$3',
+      paddingRight: minimal ? 0 : '$3',
     },
 
     [breakpoints.tabletX]: {
