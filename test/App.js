@@ -3,16 +3,16 @@ import * as UI from '../src/index.tsx';
 import '../fonts.css';
 
 export function App() {
+  function handleSubmit(value) {
+    // eslint-disable-next-line no-alert
+    alert(value);
+  }
   return (
     <UI.Context>
       <UI.Block theme='alternate' bottom={6}>
         <UI.Section>
           <UI.Column width={50} extra='right'>
-            <UI.Badge theme='navy'>
-              {' '}
-              Heading Two - lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
-            </UI.Badge>
+            <UI.Input placeholder='Search' onSubmit={handleSubmit} submit='yay' copy />
           </UI.Column>
           <UI.Column width={50} extra='left'>
             <UI.Badge theme='navy'>

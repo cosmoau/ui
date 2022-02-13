@@ -78,9 +78,9 @@ export const { theme, css, styled, globalCss, getCssText } = createStitches({
       base1: '62.5%',
       base2: '1.6rem',
       h1: '3rem',
-      h2: '2.6rem',
-      h3: '2.1rem',
-      h4: '2rem',
+      h2: '2.5rem',
+      h3: '2rem',
+      h4: '1.9rem',
       h5: '1.8rem',
       h6: '1.7rem',
       t1: '1.5rem',
@@ -218,28 +218,28 @@ export const { theme, css, styled, globalCss, getCssText } = createStitches({
         display: 'inline-block',
       },
     }),
-    phone: (value: any) => ({
+    phone: (value: unknown) => ({
       [breakpoints.phone]: value,
     }),
-    tablet: (value: any) => ({
+    tablet: (value: unknown) => ({
       [breakpoints.tablet]: value,
     }),
-    tabletX: (value: any) => ({
+    tabletX: (value: unknown) => ({
       [breakpoints.tabletX]: value,
     }),
-    laptop: (value: any) => ({
+    laptop: (value: unknown) => ({
       [breakpoints.laptop]: value,
     }),
-    laptopX: (value: any) => ({
+    laptopX: (value: unknown) => ({
       [breakpoints.laptopX]: value,
     }),
-    desktop: (value: any) => ({
+    desktop: (value: unknown) => ({
       [breakpoints.desktop]: value,
     }),
-    desktopX: (value: any) => ({
+    desktopX: (value: unknown) => ({
       [breakpoints.desktopX]: value,
     }),
-    wide: (value: any) => ({
+    wide: (value: unknown) => ({
       [breakpoints.wide]: value,
     }),
   },
@@ -247,7 +247,7 @@ export const { theme, css, styled, globalCss, getCssText } = createStitches({
 
 export const darkTheme = createTheme('dark', {
   colors: {
-    ...(theme.colors as any),
+    ...(theme.colors as object),
     /*
     baseBody: 'rgb(1, 1, 11)',
     base100: 'rgb(255, 255, 255)',
@@ -293,7 +293,7 @@ export const darkTheme = createTheme('dark', {
 });
 
 export const globalStyles = globalCss({
-  ...(theme as any),
+  ...(theme as object),
   html: {
     fontSize: `${theme.fontSizes.base1} !important`,
     height: '100%',

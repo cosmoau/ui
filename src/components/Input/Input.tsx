@@ -111,6 +111,9 @@ const FunctionWrapper = styled('div', {
   },
   button: {
     marginLeft: '$2',
+    ft: '$h6',
+    paddingTop: '$1',
+    paddingBottom: '$1',
   },
 });
 
@@ -123,8 +126,8 @@ type Props = InputHTMLAttributes<HTMLInputElement> &
     icon?: ReactNode;
     id?: string;
     loader?: boolean;
-    onChange?: any;
-    onSubmit?: any;
+    onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
+    onSubmit?: (value) => void;
     onRef?: RefObject<HTMLInputElement>;
     reset?: boolean;
     reveal?: boolean;
@@ -152,8 +155,8 @@ export default function Input({
   type = 'text',
   ...props
 }: Props): JSX.Element {
-  const [controlledValue, setControlledValue] = useState(value as any);
-  const [controlledType, setControlledType] = useState(type as any);
+  const [controlledValue, setControlledValue] = useState(value as string);
+  const [controlledType, setControlledType] = useState(type as string);
   const [isRevealed, setIsRevealed] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
 
@@ -175,7 +178,7 @@ export default function Input({
   };
 
   const handleCopy = (): void => {
-    navigator.clipboard.writeText(controlledValue);
+    navigator.clipboard.writeText(controlledValue as string);
     setIsCopied(true);
     setTimeout(() => {
       setIsCopied(false);
@@ -183,12 +186,12 @@ export default function Input({
   };
 
   const handleReset = () => {
-    setControlledValue('');
+    setControlledValue('' as string);
   };
 
   const handleSubmit = (): void => {
     if (onSubmit) {
-      onSubmit(controlledValue);
+      onSubmit(controlledValue as string);
     }
   };
   return (

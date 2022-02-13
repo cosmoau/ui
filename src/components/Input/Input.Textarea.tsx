@@ -68,7 +68,7 @@ type Props = InputHTMLAttributes<HTMLTextAreaElement> &
     copy?: boolean;
     css: CSS;
     maxLength?: number;
-    onChange?: any;
+    onChange?: (event: ChangeEvent<HTMLTextAreaElement>) => void;
     rows?: number;
   };
 
@@ -83,7 +83,7 @@ export default function Input({
   value = '',
   ...props
 }: Props): JSX.Element {
-  const [controlledValue, setControlledValue] = useState(value as any);
+  const [controlledValue, setControlledValue] = useState(value as string);
   const [isCopied, setIsCopied] = useState(false);
 
   const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
