@@ -98,7 +98,7 @@ export const { theme, css, styled, getCssText } = createStitches({
       t3: '1.3',
     },
     sizes: {
-      1: '99%',
+      1: '98.5%',
       2: '98%',
       3: '1440px',
       4: '1600px',

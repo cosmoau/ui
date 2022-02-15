@@ -71,6 +71,10 @@ export default function stitchesShared({ ...props }) {
         backgroundColor: '$navy400',
       },
     },
+
+    phone: {
+      ft: '$h5',
+    },
   });
 
   const IconWrapper = styled('div', {

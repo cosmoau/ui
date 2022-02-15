@@ -1,9 +1,10 @@
 import { CSS } from '@stitches/react/types/css-util';
-import { Check, Circle } from 'phosphor-react';
+import { Check, Circle, Question } from 'phosphor-react';
 import React, { ReactNode, useState } from 'react';
 
 import { styled } from '../../stitches.config';
 import { Button } from '../Button';
+import { Tooltip } from '../Tooltip';
 
 export interface Props {
   checked?: boolean;
@@ -11,9 +12,11 @@ export interface Props {
   css?: CSS;
   disabled?: boolean;
   id?: string;
+  size?: 1 | 2;
+  tooltip?: string;
 }
 
-export default function Checkbox({ checked = false, children, css, disabled = false, id }: Props): JSX.Element {
+export default function Checkbox({ checked = false, children, css, disabled = false, id, size = 1, tooltip }: Props): JSX.Element {
   const [isChecked, setIsChecked] = useState(checked);
 
   const handleChange = (): void => {
@@ -44,6 +47,25 @@ export default function Checkbox({ checked = false, children, css, disabled = fa
     userSelect: 'none',
     whiteSpace: 'pre-wrap',
     wordBreak: 'break-word',
+    ft: size === 1 ? '$h5' : '$h6',
+  });
+
+  const TooltipWrapper = styled('div', {
+    verticalAlign: 'middle',
+    alignContent: 'center',
+    display: 'table-cell',
+
+    svg: {
+      marginLeft: '$3',
+      cursor: 'pointer',
+      verticalAlign: 'middle !important',
+      opacity: 0.5,
+      transition: '$1',
+
+      '&:hover': {
+        opacity: 1,
+      },
+    },
   });
 
   return (
@@ -55,12 +77,18 @@ export default function Checkbox({ checked = false, children, css, disabled = fa
           justifyContent: 'center',
           borderRadius: '$3',
           aspectRatio: 1,
-          width: '3rem',
-          height: '3rem',
+          padding: '$2',
         }}>
-        {isChecked ? <Check /> : <Circle opacity={0.1} />}
+        {isChecked ? <Check /> : <Circle opacity={0.15} />}
       </Button>
       <LabelWrapper>{children}</LabelWrapper>
+      {tooltip && (
+        <TooltipWrapper>
+          <Tooltip trigger={<Question size={18} />} passKey={`${children}`} type='click'>
+            {tooltip}
+          </Tooltip>
+        </TooltipWrapper>
+      )}
     </Wrapper>
   );
 }
