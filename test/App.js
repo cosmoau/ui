@@ -1,18 +1,20 @@
+import * as React from 'react';
+
 import * as UI from '../src/index.tsx';
 import '../fonts.css';
 
 export function App() {
+  const [beds, setBeds] = React.useState(1);
+
+  function handleBeds(content) {
+    setBeds(content.target.value);
+  }
+
+  const inputs = <UI.Input value={beds} onChange={handleBeds} />;
+
   return (
     <UI.Context>
-      <UI.Block theme='alternate' bottom={10} top={10}>
-        <UI.Section>
-          <UI.Column>
-            <h1>hey</h1>
-          </UI.Column>
-        </UI.Section>
-      </UI.Block>
-
-      <UI.Cookies token={Math.random()} />
+      <UI.Element>{inputs}</UI.Element>
     </UI.Context>
   );
 }

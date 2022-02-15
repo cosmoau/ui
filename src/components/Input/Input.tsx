@@ -3,7 +3,7 @@
 import { CSS } from '@stitches/react/types/css-util';
 import type { $$StyledComponentProps } from '@stitches/react/types/styled-component';
 import { Check, Clipboard, Eye, EyeClosed, WarningOctagon, X } from 'phosphor-react';
-import type { ChangeEvent, InputHTMLAttributes, ReactNode } from 'react';
+import type { ChangeEvent, FC, InputHTMLAttributes, ReactNode } from 'react';
 import React, { useState } from 'react';
 
 import { styled } from '../../stitches.config';
@@ -16,6 +16,7 @@ const Wrapper = styled('div', {
   position: 'relative',
   height: '3.5rem',
   alignContent: 'center',
+  userSelect: 'contain',
   borderRadius: '$2',
   backgroundColor: '$baseContrast100',
   border: '0.1rem solid $border200',
@@ -143,7 +144,7 @@ type Props = InputHTMLAttributes<HTMLInputElement> &
     width?: 1 | 2 | 3 | 4 | 5;
   };
 
-export default function Input({
+const Input: FC<Props> = ({
   copy,
   css,
   customSubmit,
@@ -162,16 +163,18 @@ export default function Input({
   value = '',
   type = 'text',
   ...props
-}: Props): JSX.Element {
-  const [controlledValue, setControlledValue] = useState(value as string);
-  const [controlledType, setControlledType] = useState(type as string);
+}) => {
+  const [controlledValue, setControlledValue] = useState(value as any);
+  const [controlledType, setControlledType] = useState(type as any);
   const [isRevealed, setIsRevealed] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setControlledValue(e.target.value);
+    setControlledValue(e.target.value as any);
+    e.preventDefault();
     if (onChange) {
-      onChange(e);
+      e.preventDefault();
+      onChange(e as any);
     }
   };
 
@@ -186,7 +189,7 @@ export default function Input({
   };
 
   const handleCopy = (): void => {
-    navigator.clipboard.writeText(controlledValue as string);
+    navigator.clipboard.writeText(controlledValue as any);
     setIsCopied(true);
     setTimeout(() => {
       setIsCopied(false);
@@ -194,12 +197,12 @@ export default function Input({
   };
 
   const handleReset = () => {
-    setControlledValue('' as string);
+    setControlledValue('' as any);
   };
 
   const handleSubmit = (): void => {
     if (onSubmit) {
-      onSubmit(controlledValue as string);
+      onSubmit(controlledValue as any);
     }
   };
   return (
@@ -243,4 +246,6 @@ export default function Input({
       )}
     </Wrapper>
   );
-}
+};
+
+export default Input;
