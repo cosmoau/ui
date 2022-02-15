@@ -137,6 +137,7 @@ type Props = InputHTMLAttributes<HTMLInputElement> &
     onChange?: any;
     onSubmit?: any;
     reset?: boolean;
+    passRef: any;
     reveal?: boolean;
     submit?: boolean | string;
     width?: 1 | 2 | 3 | 4 | 5;
@@ -153,6 +154,7 @@ export default function Input({
   onChange,
   onSubmit,
   reset,
+  passRef,
   reveal,
   submit,
   width,
@@ -203,7 +205,7 @@ export default function Input({
   return (
     <Wrapper css={css} id={id}>
       {icon && <IconWrapper>{icon}</IconWrapper>}
-      <InputWrapper width={width} type={controlledType} value={controlledValue} onChange={handleChange} {...props} />
+      <InputWrapper width={width} type={controlledType} value={controlledValue} ref={passRef} onChange={handleChange} {...props} />
       {(loader || error || reveal || reset || copy || submit || customSubmit) && (
         <FunctionWrapper>
           {loader && (
