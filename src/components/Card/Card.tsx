@@ -70,7 +70,7 @@ export default function Card({ css, extra, id, theme, loader, border, image, ima
       boxShadow: '$2',
     },
     [breakpoints.phone]: {
-      padding: minimal ? 0 : extra ? '$6' : '$5',
+      padding: minimal ? 0 : image ? 0 : !image && extra ? '$6' : '$5',
     },
   });
 

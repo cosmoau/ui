@@ -1,5 +1,9 @@
-.eslintrc
 .parcel-cache
 fonts.css
-public/
+public
 src
+test
+.gitignore
+.gitattributes
+.eslintrc
+.eslintignore
