@@ -137,7 +137,7 @@ type Props = InputHTMLAttributes<HTMLInputElement> &
     onChange?: any;
     onSubmit?: any;
     reset?: boolean;
-    passRef: any;
+    passRef?: any;
     reveal?: boolean;
     submit?: boolean | string;
     width?: 1 | 2 | 3 | 4 | 5;
