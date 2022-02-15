@@ -6,7 +6,7 @@ export default function stitchesShared({ ...props }) {
     display: 'inline-flex',
   });
 
-  const Trigger = styled('div', {
+  const TriggerWrapper = styled('div', {
     display: 'inline-block',
     position: 'relative',
     cursor: 'pointer',
@@ -84,5 +84,5 @@ export default function stitchesShared({ ...props }) {
     alignSelf: 'center',
   });
 
-  return { Wrapper, Trigger, GroupWrapper, ItemWrapper, IconWrapper };
+  return { Wrapper, TriggerWrapper, GroupWrapper, ItemWrapper, IconWrapper };
 }

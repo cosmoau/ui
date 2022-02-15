@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-duplicate-imports */
 import { CSS } from '@stitches/react/types/css-util';
 import type { $$StyledComponentProps } from '@stitches/react/types/styled-component';
 import { Check, Clipboard, Eye, EyeClosed, WarningOctagon, X } from 'phosphor-react';
-import type { ChangeEvent, InputHTMLAttributes, ReactNode, RefObject } from 'react';
+import type { ChangeEvent, InputHTMLAttributes, ReactNode } from 'react';
 import React, { useState } from 'react';
 
 import { styled } from '../../stitches.config';
@@ -13,14 +14,15 @@ import { Loading } from '../Loading';
 const Wrapper = styled('div', {
   display: 'inline-flex',
   position: 'relative',
+  height: '3.5rem',
   alignContent: 'center',
   borderRadius: '$2',
   backgroundColor: '$baseContrast100',
-  border: '0.1rem solid $border100',
+  border: '0.1rem solid $border200',
   paddingTop: '$2',
   paddingBottom: '$2',
-  paddingLeft: '$3',
-  paddingRight: '$3',
+  paddingLeft: 'calc($5 / 1.5)',
+  paddingRight: 'calc($5 / 1.5)',
   boxShadow: '$1',
   transition: '$1',
   '&:hover': {
@@ -114,6 +116,12 @@ const FunctionWrapper = styled('div', {
     ft: '$h6',
     paddingTop: '$1',
     paddingBottom: '$1',
+    paddingLeft: '$3',
+    paddingRight: '$3',
+  },
+  svg: {
+    height: '1.9rem',
+    width: 'auto',
   },
 });
 
@@ -126,9 +134,8 @@ type Props = InputHTMLAttributes<HTMLInputElement> &
     icon?: ReactNode;
     id?: string;
     loader?: boolean;
-    onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
-    onSubmit?: (value) => void;
-    onRef?: RefObject<HTMLInputElement>;
+    onChange?: any;
+    onSubmit?: any;
     reset?: boolean;
     reveal?: boolean;
     submit?: boolean | string;
@@ -145,7 +152,6 @@ export default function Input({
   loader,
   onChange,
   onSubmit,
-  onRef,
   reset,
   reveal,
   submit,
@@ -197,7 +203,7 @@ export default function Input({
   return (
     <Wrapper css={css} id={id}>
       {icon && <IconWrapper>{icon}</IconWrapper>}
-      <InputWrapper width={width} type={controlledType} value={controlledValue} onChange={handleChange} ref={onRef} {...props} />
+      <InputWrapper width={width} type={controlledType} value={controlledValue} onChange={handleChange} {...props} />
       {(loader || error || reveal || reset || copy || submit || customSubmit) && (
         <FunctionWrapper>
           {loader && (
@@ -207,12 +213,12 @@ export default function Input({
           )}
           {error && (
             <Badge theme='red' dot='pulse'>
-              <WarningOctagon />
+              <WarningOctagon weight='duotone' />
             </Badge>
           )}
           {reveal && (
             <Button theme='navy' onClick={handleReveal}>
-              {isRevealed ? <EyeClosed /> : <Eye />}
+              {isRevealed ? <EyeClosed weight='duotone' /> : <Eye weight='duotone' />}
             </Button>
           )}
           {reset && controlledValue.length > 1 && (
@@ -222,7 +228,7 @@ export default function Input({
           )}
           {copy && (
             <Button theme='navy' onClick={handleCopy}>
-              {isCopied ? <Check /> : <Clipboard />}
+              {isCopied ? <Check weight='duotone' /> : <Clipboard weight='duotone' />}
             </Button>
           )}
           {submit && (

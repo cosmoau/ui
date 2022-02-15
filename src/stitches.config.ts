@@ -66,17 +66,15 @@ export const { theme, css, styled, getCssText } = createStitches({
       6: '2.5rem',
       7: '3.5rem',
       8: '5rem',
-      9: '7.5rem',
-      10: '10rem',
-      11: '12.5rem',
-      12: '15rem',
+      9: '7rem',
+      10: '9rem',
+      11: '12rem',
+      12: '16rem',
     },
     fonts: {
       body: 'Graphik, system-ui, sans-serif',
     },
     fontSizes: {
-      base1: '62.5%',
-      base2: '1.6rem',
       h1: '3.2rem',
       h2: '2.6rem',
       h3: '2rem',
@@ -89,7 +87,6 @@ export const { theme, css, styled, getCssText } = createStitches({
     },
 
     lineHeights: {
-      base: '1.6',
       h1: '1.3',
       h2: '1.3',
       h3: '1.4',

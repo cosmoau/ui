@@ -38,7 +38,7 @@ export default function Submenu({ align = 'left', css, hover, id, options, passK
     setIsOpen(false);
   });
 
-  const { Wrapper, Trigger, GroupWrapper, ItemWrapper, IconWrapper } = stitchesShared({
+  const { Wrapper, TriggerWrapper, GroupWrapper, ItemWrapper, IconWrapper } = stitchesShared({
     align,
     hover,
     width,
@@ -46,7 +46,7 @@ export default function Submenu({ align = 'left', css, hover, id, options, passK
 
   return (
     <Wrapper css={css} id={id} key={passKey} ref={ref}>
-      <Trigger onClickCapture={handleClick}>{trigger}</Trigger>
+      <TriggerWrapper onClickCapture={handleClick}>{trigger}</TriggerWrapper>
       {isOpen && (
         <GroupWrapper>
           {options.map(({ value, name, icon }) => (

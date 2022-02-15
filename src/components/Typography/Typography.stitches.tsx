@@ -49,7 +49,7 @@ export default function stitchesShared({ ...props }) {
   const HeadingFiveWrapper = styled('h5', {
     ft: '$h5',
     fontWeight: 'normal',
-    marginBottom: props.inline ? 0 : '$3',
+    marginBottom: props.inline ? 0 : '$4',
 
     ...baseStyles,
   });

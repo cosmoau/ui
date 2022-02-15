@@ -10,14 +10,14 @@ import { Button } from '../Button';
 import { Text } from '../Typography';
 
 const Wrapper = styled('div', {
-  display: 'flex',
+  display: 'inline-flex',
+  position: 'relative',
   flexDirection: 'column',
   width: '100%',
-  position: 'relative',
   borderRadius: '$2',
   backgroundColor: '$baseContrast100 !important',
   border: '0.1rem solid $border100',
-  padding: 'calc($4 * 0.8)',
+  padding: 'calc($5 / 1.5)',
   boxShadow: '$1',
   transition: '$1',
 
@@ -57,6 +57,8 @@ const InputWrapper = styled('textarea', {
 
 const FunctionWrapper = styled('div', {
   display: 'block',
+  opacity: 0.4,
+  lineHeight: 0,
   '&:after': {
     clear: 'both',
     content: '""',

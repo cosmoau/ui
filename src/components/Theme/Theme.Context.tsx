@@ -19,7 +19,7 @@ export default function Context({ children, css, switchable, theme = defaultThem
     html: {
       position: 'relative',
       background: '$baseBody',
-      fontSize: '$base1 !important',
+      fontSize: '62.5% !important',
       height: '100%',
       boxSizing: 'border-box;',
       margin: '0',
@@ -28,8 +28,8 @@ export default function Context({ children, css, switchable, theme = defaultThem
     },
     body: {
       color: '$base100',
-      lineHeight: '$base !important',
-      fontSize: '$base2 !important',
+      lineHeight: '1.6',
+      fontSize: '1.6rem !important',
       fontFamily: '$body',
       height: '100%',
       boxSizing: 'border-box;',
@@ -122,7 +122,7 @@ export default function Context({ children, css, switchable, theme = defaultThem
     },
     li: {
       listStyle: 'circle',
-      marginBottom: '$2',
+      marginBottom: '$3',
 
       '&:last-child': {
         marginBottom: 0,
