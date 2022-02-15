@@ -209,7 +209,7 @@ export default function Input({
       {(loader || error || reveal || reset || copy || submit || customSubmit) && (
         <FunctionWrapper>
           {loader && (
-            <Badge theme='navy' dot='pulse'>
+            <Badge theme='navy'>
               <Loading />
             </Badge>
           )}
