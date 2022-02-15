@@ -1,7 +1,7 @@
 import { CSS } from '@stitches/react/types/css-util';
 import React, { ReactNode } from 'react';
 
-import { styled } from '../../stitches.config';
+import { breakpoints, styled } from '../../stitches.config';
 
 export interface Props {
   border?: boolean;
@@ -69,6 +69,9 @@ export default function Card({ css, extra, id, theme, loader, border, image, ima
     '&:hover': {
       boxShadow: '$2',
     },
+    [breakpoints.phone]: {
+      padding: minimal ? 0 : extra ? '$6' : '$5',
+    },
   });
 
   const ImageWrapper = styled('div', {
@@ -91,6 +94,10 @@ export default function Card({ css, extra, id, theme, loader, border, image, ima
 
   const ImageChildrenWrapper = styled('div', {
     padding: minimal ? 0 : extra ? '$7' : '$5',
+
+    [breakpoints.phone]: {
+      padding: minimal ? 0 : extra ? '$6' : '$5',
+    },
   });
 
   return image ? (
