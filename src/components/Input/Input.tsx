@@ -2,7 +2,7 @@
 
 import { CSS } from '@stitches/react/types/css-util';
 import { Check, Clipboard, Eye, EyeClosed, FloppyDisk, WarningOctagon, X } from 'phosphor-react';
-import React, { InputHTMLAttributes, ReactNode, useMemo, useState } from 'react';
+import React, { InputHTMLAttributes, ReactNode, useState } from 'react';
 
 import { styled } from '../../stitches.config';
 import { Badge } from '../Badge';
@@ -167,8 +167,9 @@ export default function Input({
     }
   }
 
-  const InputMemo = useMemo(
-    () => (
+  return (
+    <Wrapper css={css} id={id}>
+      {icon && <IconWrapper>{icon}</IconWrapper>}
       <InputWrapper
         onChange={(e) => {
           setIsValue(e.target.value);
@@ -182,14 +183,6 @@ export default function Input({
         width={width}
         {...props}
       />
-    ),
-    [InputWrapper, props, isValue, type, isRevealed, inputRef, width]
-  );
-
-  return (
-    <Wrapper css={css} id={id}>
-      {icon && <IconWrapper>{icon}</IconWrapper>}
-      {InputMemo}
       {(loader || error || tempSet || reset || reveal || copy || submit || submitFunction) && (
         <FunctionWrapper>
           {loader && (
