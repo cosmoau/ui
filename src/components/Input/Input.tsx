@@ -2,7 +2,7 @@
 
 import { CSS } from '@stitches/react/types/css-util';
 import { Check, Clipboard, Eye, EyeClosed, FloppyDisk, WarningOctagon, X } from 'phosphor-react';
-import React, { ChangeEvent, InputHTMLAttributes, ReactNode, useCallback, useMemo, useState } from 'react';
+import React, { InputHTMLAttributes, ReactNode, useMemo, useState } from 'react';
 
 import { styled } from '../../stitches.config';
 import { Badge } from '../Badge';
@@ -43,8 +43,8 @@ export default function Input({
   width,
   ...props
 }: Props) {
-  const [isValue, setIsValue] = useState((value as string) || '');
-  const [isCopied, setIsCopied] = useState(false as boolean);
+  const [isValue, setIsValue] = useState(value || '');
+  const [isCopied, setIsCopied] = useState(false);
   const [isRevealed, setIsRevealed] = useState(type !== 'password');
 
   const Wrapper = styled('div', {
@@ -167,22 +167,15 @@ export default function Input({
     }
   }
 
-  const handleChange = useCallback(
-    (e: ChangeEvent<HTMLInputElement>) => {
-      e.preventDefault();
-      setIsValue(e.target.value);
-
-      if (props.onChange) {
-        props.onChange(e);
-      }
-    },
-    [props]
-  );
-
   const InputMemo = useMemo(
     () => (
       <InputWrapper
-        onChange={handleChange}
+        onChange={(e) => {
+          setIsValue(e.target.value);
+          if (props.onChange) {
+            props.onChange(e);
+          }
+        }}
         value={isValue}
         type={type === 'password' ? (isRevealed ? 'text' : 'password') : type}
         ref={inputRef || undefined}
@@ -190,7 +183,7 @@ export default function Input({
         {...props}
       />
     ),
-    [InputWrapper, props, handleChange, isValue, type, isRevealed, inputRef, width]
+    [InputWrapper, props, isValue, type, isRevealed, inputRef, width]
   );
 
   return (
