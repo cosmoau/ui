@@ -1,215 +1,203 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable no-duplicate-imports */
+
 import { CSS } from '@stitches/react/types/css-util';
-import type { $$StyledComponentProps } from '@stitches/react/types/styled-component';
-import { Check, Clipboard, Eye, EyeClosed, WarningOctagon, X } from 'phosphor-react';
-import type { ChangeEvent, FC, InputHTMLAttributes, ReactNode } from 'react';
-import React, { useState } from 'react';
+import { Check, Clipboard, Eye, EyeClosed, FloppyDisk, WarningOctagon, X } from 'phosphor-react';
+import React, { ChangeEvent, InputHTMLAttributes, ReactNode, useCallback, useMemo, useState } from 'react';
 
 import { styled } from '../../stitches.config';
 import { Badge } from '../Badge';
 import { Button } from '../Button';
 import { Loading } from '../Loading';
 
-const Wrapper = styled('div', {
-  display: 'inline-flex',
-  position: 'relative',
-  height: '3.5rem',
-  alignContent: 'center',
-  userSelect: 'contain',
-  borderRadius: '$2',
-  backgroundColor: '$baseContrast100',
-  border: '0.1rem solid $border200',
-  paddingTop: '$2',
-  paddingBottom: '$2',
-  paddingLeft: 'calc($5 / 1.5)',
-  paddingRight: 'calc($5 / 1.5)',
-  boxShadow: '$1',
-  transition: '$1',
-  '&:hover': {
-    boxShadow: '$2',
-    border: '0.1rem solid $border100',
-  },
-  '&:focus-within': {
-    boxShadow: '$2',
-    border: '0.1rem solid $border100',
-  },
-  '&:active': {
-    boxShadow: '$2',
-    border: '0.1rem solid $border100',
-  },
-
-  '&:disabled': {
-    cursor: 'not-allowed',
-    opacity: 0.5,
-  },
-  '*': {
-    verticalAlign: 'middle',
-  },
-});
-
-const IconWrapper = styled('div', {
-  display: 'inline-flex',
-  alignItems: 'center',
-  width: 'auto',
-  height: '100%',
-  marginRight: '$3',
-  position: 'relative',
-});
-
-const InputWrapper = styled('input', {
-  appearance: 'none',
-  display: 'inline-flex',
-  fontSize: '16px !important',
-  fontFamily: '$body',
-  margin: 0,
-  outline: 'none',
-  padding: 0,
-  WebkitTapHighlightColor: 'rgba(0,0,0,0)',
-  border: 0,
-  backgroundColor: 'transparent',
-  color: '$base100',
-
-  fontWeight: 'normal',
-  textAlign: 'left',
-  transition: '$1',
-  boxSizing: 'border-box',
-  alignItems: 'center',
-  verticalAlign: 'middle',
-  width: '100%',
-  '&:focus': {
-    outline: 0,
-  },
-  variants: {
-    width: {
-      1: {
-        width: '12rem',
-      },
-      2: {
-        width: '18rem',
-      },
-      3: {
-        width: '26rem',
-      },
-      4: {
-        width: '34rem',
-      },
-      5: {
-        width: '100%',
-      },
-    },
-  },
-});
-
-const FunctionWrapper = styled('div', {
-  display: 'inline-flex',
-  alignItems: 'center',
-  width: 'auto',
-  height: '100%',
-  position: 'relative',
-  verticalAlign: 'middle',
-  marginLeft: '$3',
-  '*': {
-    verticalAlign: 'middle',
-  },
-  button: {
-    marginLeft: '$2',
-    ft: '$h6',
-    paddingTop: '$1',
-    paddingBottom: '$1',
-    paddingLeft: '$3',
-    paddingRight: '$3',
-  },
-  svg: {
-    height: '1.9rem',
-    width: 'auto',
-  },
-});
-
-type Props = InputHTMLAttributes<HTMLInputElement> &
-  typeof InputWrapper[$$StyledComponentProps] & {
-    copy?: boolean;
-    css?: CSS;
-    customSubmit?: boolean;
-    error?: boolean;
-    icon?: ReactNode;
-    id?: string;
-    loader?: boolean;
-    onChange?: any;
-    onSubmit?: any;
-    reset?: boolean;
-    passRef?: any;
-    reveal?: boolean;
-    submit?: boolean | string;
-    width?: 1 | 2 | 3 | 4 | 5;
-  };
-
-const Input: FC<Props> = ({
-  copy,
+export interface Props extends InputHTMLAttributes<HTMLInputElement> {
+  css?: CSS;
+  copy?: boolean;
+  error?: boolean;
+  icon?: ReactNode;
+  loader?: boolean;
+  submit?: boolean;
+  submitFunction?: any;
+  submitOverride?: any;
+  tempSet?: boolean;
+  inputRef?: any;
+  reveal?: boolean;
+  reset?: boolean;
+  width?: 1 | 2 | 3 | 4 | 5;
+}
+export default function Input({
   css,
-  customSubmit,
+  copy,
   error,
   icon,
   id,
+  value,
+  type,
   loader,
-  onChange,
-  onSubmit,
-  reset,
-  passRef,
-  reveal,
   submit,
+  submitFunction,
+  submitOverride,
+  tempSet,
+  inputRef,
+  reveal,
+  reset,
   width,
-  // inherited
-  value = '',
-  type = 'text',
   ...props
-}) => {
-  const [controlledValue, setControlledValue] = useState(value as any);
-  const [controlledType, setControlledType] = useState(type as any);
-  const [isRevealed, setIsRevealed] = useState(false);
-  const [isCopied, setIsCopied] = useState(false);
+}: Props) {
+  const [isValue, setIsValue] = useState((value as string) || '');
+  const [isCopied, setIsCopied] = useState(false as boolean);
+  const [isRevealed, setIsRevealed] = useState(type !== 'password');
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setControlledValue(e.target.value as any);
-    e.preventDefault();
-    if (onChange) {
+  const Wrapper = styled('div', {
+    display: 'inline-flex',
+    position: 'relative',
+    height: '3.5rem',
+    alignContent: 'center',
+    borderRadius: '$2',
+    backgroundColor: '$baseContrast100',
+    border: '0.1rem solid $border200',
+    paddingTop: '$2',
+    paddingBottom: '$2',
+    paddingLeft: 'calc($5 / 1.5)',
+    paddingRight: 'calc($5 / 1.5)',
+    boxShadow: '$1',
+    transition: '$1',
+    '&:hover': {
+      boxShadow: '$2',
+      border: '0.1rem solid $border100',
+    },
+    '&:focus-within': {
+      boxShadow: '$2',
+      border: '0.1rem solid $border100',
+    },
+    '&:active': {
+      boxShadow: '$2',
+      border: '0.1rem solid $border100',
+    },
+
+    '*': {
+      verticalAlign: 'middle',
+    },
+  });
+
+  const IconWrapper = styled('div', {
+    display: 'inline-flex',
+    alignItems: 'center',
+    width: 'auto',
+    height: '100%',
+    marginRight: '$3',
+    position: 'relative',
+  });
+
+  const InputWrapper = styled('input', {
+    appearance: 'none',
+    display: 'inline-flex',
+    fontSize: '16px !important',
+    fontFamily: '$body',
+    margin: 0,
+    outline: 'none',
+    padding: 0,
+    WebkitTapHighlightColor: 'rgba(0,0,0,0)',
+    border: 0,
+    backgroundColor: 'transparent',
+    color: '$base100',
+
+    fontWeight: 'normal',
+    textAlign: 'left',
+    transition: '$1',
+    boxSizing: 'border-box',
+    alignItems: 'center',
+    verticalAlign: 'middle',
+    width: '100%',
+    '&:focus': {
+      outline: 0,
+    },
+    variants: {
+      width: {
+        1: {
+          width: '12rem',
+        },
+        2: {
+          width: '18rem',
+        },
+        3: {
+          width: '26rem',
+        },
+        4: {
+          width: '34rem',
+        },
+        5: {
+          width: '100%',
+        },
+      },
+    },
+  });
+
+  const FunctionWrapper = styled('div', {
+    display: 'inline-flex',
+    alignItems: 'center',
+    width: 'auto',
+    height: '100%',
+    position: 'relative',
+    verticalAlign: 'middle',
+    marginLeft: '$3',
+    '*': {
+      verticalAlign: 'middle',
+    },
+    button: {
+      marginLeft: '$2',
+      ft: '$h6',
+      paddingTop: '$1',
+      paddingBottom: '$1',
+      paddingLeft: '$3',
+      paddingRight: '$3',
+    },
+    svg: {
+      height: '1.9rem',
+      width: 'auto',
+    },
+  });
+
+  function handleCopy() {
+    if (copy) {
+      navigator.clipboard.writeText(isValue as string);
+      setIsCopied(true);
+      setTimeout(() => {
+        setIsCopied(false);
+      }, 2000);
+    }
+  }
+
+  const handleChange = useCallback(
+    (e: ChangeEvent<HTMLInputElement>) => {
       e.preventDefault();
-      onChange(e as any);
-    }
-  };
+      setIsValue(e.target.value);
 
-  const handleReveal = () => {
-    if (controlledType === 'password') {
-      setIsRevealed(true);
-      setControlledType('text');
-    } else {
-      setIsRevealed(false);
-      setControlledType('password');
-    }
-  };
+      if (props.onChange) {
+        props.onChange(e);
+      }
+    },
+    [props]
+  );
 
-  const handleCopy = (): void => {
-    navigator.clipboard.writeText(controlledValue as any);
-    setIsCopied(true);
-    setTimeout(() => {
-      setIsCopied(false);
-    }, 2000);
-  };
+  const InputMemo = useMemo(
+    () => (
+      <InputWrapper
+        onChange={handleChange}
+        value={isValue}
+        type={type === 'password' ? (isRevealed ? 'text' : 'password') : type}
+        ref={inputRef || undefined}
+        width={width}
+        {...props}
+      />
+    ),
+    [InputWrapper, props, handleChange, isValue, type, isRevealed, inputRef, width]
+  );
 
-  const handleReset = () => {
-    setControlledValue('' as any);
-  };
-
-  const handleSubmit = (): void => {
-    if (onSubmit) {
-      onSubmit(controlledValue as any);
-    }
-  };
   return (
     <Wrapper css={css} id={id}>
       {icon && <IconWrapper>{icon}</IconWrapper>}
-      <InputWrapper width={width} type={controlledType} value={controlledValue} ref={passRef} onChange={handleChange} {...props} />
-      {(loader || error || reveal || reset || copy || submit || customSubmit) && (
+      {InputMemo}
+      {(loader || error || tempSet || reset || reveal || copy || submit || submitFunction) && (
         <FunctionWrapper>
           {loader && (
             <Badge theme='navy'>
@@ -221,14 +209,19 @@ const Input: FC<Props> = ({
               <WarningOctagon weight='duotone' />
             </Badge>
           )}
-          {reveal && (
-            <Button theme='navy' onClick={handleReveal}>
-              {isRevealed ? <EyeClosed weight='duotone' /> : <Eye weight='duotone' />}
+          {tempSet && (
+            <Button theme='navy'>
+              <FloppyDisk weight='duotone' />
             </Button>
           )}
-          {reset && controlledValue.length > 1 && (
-            <Button theme='navy' onClick={handleReset}>
-              <X />
+          {reset && (
+            <Button theme='navy' onClick={() => setIsValue('')}>
+              <X weight='duotone' />
+            </Button>
+          )}
+          {reveal && (
+            <Button theme='navy' onClick={() => setIsRevealed(!isRevealed)}>
+              {isRevealed ? <EyeClosed weight='duotone' /> : <Eye weight='duotone' />}
             </Button>
           )}
           {copy && (
@@ -236,16 +229,20 @@ const Input: FC<Props> = ({
               {isCopied ? <Check weight='duotone' /> : <Clipboard weight='duotone' />}
             </Button>
           )}
-          {submit && (
-            <Button theme='navy' onClick={handleSubmit}>
+          {!submitOverride && submit && (
+            <Button
+              theme='navy'
+              onClick={() => ({
+                if(submitFunction) {
+                  submitFunction(isValue);
+                },
+              })}>
               {typeof submit === 'string' ? submit : 'Submit'}
             </Button>
           )}
-          {customSubmit || null}
+          {submitOverride || null}
         </FunctionWrapper>
       )}
     </Wrapper>
   );
-};
-
-export default Input;
+}

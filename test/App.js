@@ -6,15 +6,10 @@ import '../fonts.css';
 export function App() {
   const [beds, setBeds] = React.useState(1);
 
-  function handleBeds(content) {
-    setBeds(content.target.value);
-  }
-
-  const inputs = <UI.Input value={beds} onChange={handleBeds} />;
-
   return (
     <UI.Context>
-      <UI.Element>{inputs}</UI.Element>
+      <h1>{beds}</h1>
+      <UI.Input value={beds} onBlur={(e) => setBeds(e.target.value)} onChange={(e) => setBeds(e.target.value)} type='password' reveal reset key='test' />
     </UI.Context>
   );
 }

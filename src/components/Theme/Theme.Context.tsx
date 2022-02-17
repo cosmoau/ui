@@ -65,7 +65,6 @@ export default function Context({ children, css, switchable, theme = defaultThem
       MozOsxFontSmoothing: 'grayscale',
       WebkitAppearance: 'none',
       overflow: 'visible',
-      userSelect: 'text',
       fontFamily: 'inherit',
       textOverflow: 'ellipsis',
       whiteSpace: 'nowrap',

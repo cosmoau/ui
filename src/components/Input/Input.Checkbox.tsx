@@ -44,7 +44,7 @@ export default function Checkbox({ checked = false, children, css, disabled = fa
     display: 'table-cell',
     verticalAlign: 'middle',
     paddingLeft: '$3',
-    userSelect: 'none',
+
     whiteSpace: 'pre-wrap',
     wordBreak: 'break-word',
     ft: size === 1 ? '$h5' : '$h6',
