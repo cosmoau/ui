@@ -6,7 +6,7 @@ import { useOnClickOutside } from 'usehooks-ts';
 
 import { Heading } from '../Typography';
 
-import stitchesShared from './Dropdown.stitches';
+import DropdownStyles from './Dropdown.styles';
 
 export interface Props {
   align?: 'left' | 'right' | 'center';
@@ -23,10 +23,12 @@ export interface Props {
   width?: number;
 }
 
+const { Wrapper, TriggerWrapper, GroupWrapper, ItemWrapper, IconWrapper } = DropdownStyles();
+
 export default function Submenu({ align = 'left', css, hover, id, options, passKey, trigger, width }: Props): JSX.Element {
   const router = useRouter();
   const ref = useRef(null);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false as boolean);
 
   const path = router?.pathname || '/';
 
@@ -38,39 +40,41 @@ export default function Submenu({ align = 'left', css, hover, id, options, passK
     setIsOpen(false);
   });
 
-  const { Wrapper, TriggerWrapper, GroupWrapper, ItemWrapper, IconWrapper } = stitchesShared({
-    align,
-    hover,
-    width,
-  });
-
   return (
     <Wrapper css={css} id={id} key={passKey} ref={ref}>
-      <TriggerWrapper onClickCapture={handleClick}>{trigger}</TriggerWrapper>
+      <TriggerWrapper hover={hover} onClickCapture={handleClick}>
+        {trigger}
+      </TriggerWrapper>
       {isOpen && (
-        <GroupWrapper>
+        <GroupWrapper
+          css={{
+            minWidth: width || '15rem',
+            maxWidth: width || '80rem',
+            left: align === 'right' ? 'auto' : '0',
+            right: align === 'left' ? '0' : 'auto',
+          }}>
           {options.map(({ value, name, icon }) => (
-            <ItemWrapper key={value} className={path === value ? 'active' : ''}>
+            <ItemWrapper className={path === value ? 'active' : ''} key={value}>
               <Link href={value} passHref>
                 <a>
                   {icon ? (
                     <IconWrapper>
                       {icon}&nbsp;{' '}
                       <Heading
-                        level={6}
-                        inline
                         css={{
                           opacity: 1,
-                        }}>
+                        }}
+                        inline
+                        level={6}>
                         {name}
                       </Heading>
                     </IconWrapper>
                   ) : (
                     <Heading
-                      level={6}
                       css={{
                         opacity: 1,
-                      }}>
+                      }}
+                      level={6}>
                       {name}
                     </Heading>
                   )}

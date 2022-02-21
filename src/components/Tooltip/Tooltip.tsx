@@ -2,7 +2,7 @@ import { CSS } from '@stitches/react/types/css-util';
 import React, { ReactNode, useRef, useState } from 'react';
 import { useOnClickOutside } from 'usehooks-ts';
 
-import { styled } from '../../stitches.config';
+import TooltipStyles from './Tooltip.styles';
 
 export interface Props {
   align?: 'left' | 'right' | 'center';
@@ -13,6 +13,8 @@ export interface Props {
   trigger: ReactNode;
   type?: 'hover' | 'click';
 }
+
+const { Wrapper, TriggerWrapper, ContentWrapper } = TooltipStyles();
 
 export default function Tooltip({ align = 'left', children, css, id, passKey, trigger, type = 'hover' }: Props): JSX.Element {
   const ref = useRef(null);
@@ -40,45 +42,20 @@ export default function Tooltip({ align = 'left', children, css, id, passKey, tr
     setIsOpen(false);
   });
 
-  const Wrapper = styled('div', {
-    position: 'relative',
-    display: 'flex',
-    flex: 1,
-  });
-
-  const TriggerWrapper = styled('div', {
-    display: 'inline-block',
-    position: 'relative',
-  });
-
-  const ContentWrapper = styled('div', {
-    transition: '$1',
-    borderRadius: '$2',
-    background: '$baseContrast100',
-    border: '0.1rem solid $border100',
-    boxShadow: '$3',
-    position: 'absolute',
-    top: '120%',
-    padding: '$1 $3',
-    width: 'max-content',
-    maxWidth: '30rem',
-    overflowY: 'scroll',
-    wordBreak: 'break-word',
-    lineBreak: 'auto',
-    whiteSpace: 'pre-wrap',
-    maxHeight: '30rem',
-    zIndex: '$tooltip',
-    webkitoverflowscrolling: 'touch',
-    left: align === 'left' ? '0' : align === 'right' ? 'auto' : '50%',
-    right: align === 'right' ? '0' : align === 'left' ? 'auto' : '50%',
-  });
-
   return (
     <Wrapper css={css} id={id} key={passKey} ref={ref}>
       <TriggerWrapper onClickCapture={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         {trigger}
       </TriggerWrapper>
-      {isOpen && <ContentWrapper>{children}</ContentWrapper>}
+      {isOpen && (
+        <ContentWrapper
+          css={{
+            left: align === 'left' ? '0' : align === 'right' ? 'auto' : '50%',
+            right: align === 'right' ? '0' : align === 'left' ? 'auto' : '50%',
+          }}>
+          {children}
+        </ContentWrapper>
+      )}
     </Wrapper>
   );
 }

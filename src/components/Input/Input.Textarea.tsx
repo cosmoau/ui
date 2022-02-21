@@ -1,121 +1,70 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-duplicate-imports */
 import { CSS } from '@stitches/react/types/css-util';
-import type { $$StyledComponentProps } from '@stitches/react/types/styled-component';
 import { Check, Clipboard } from 'phosphor-react';
 import type { ChangeEvent, InputHTMLAttributes } from 'react';
 import React, { useState } from 'react';
 
-import { styled } from '../../stitches.config';
 import { Button } from '../Button';
 import { Text } from '../Typography';
 
-const Wrapper = styled('div', {
-  display: 'inline-flex',
-  position: 'relative',
-  flexDirection: 'column',
-  width: '100%',
-  borderRadius: '$2',
-  backgroundColor: '$baseContrast100 !important',
-  border: '0.1rem solid $border100',
-  padding: 'calc($5 / 1.5)',
-  boxShadow: '$1',
-  transition: '$1',
+import InputStyles from './Input.styles';
 
-  '&:hover': {
-    boxShadow: '$2',
-    border: '0.1rem solid $border100',
-  },
-  '&:focus-within': {
-    boxShadow: '$2',
-    border: '0.1rem solid $border100',
-  },
-  '&:active': {
-    boxShadow: '$2',
-    border: '0.1rem solid $border100',
-  },
+export interface Props extends InputHTMLAttributes<HTMLTextAreaElement> {
+  changeFunction?: any;
+  copy?: boolean;
+  css: CSS;
+  maxLength?: number;
+  rows?: number;
+}
 
-  '&:disabled': {
-    cursor: 'not-allowed',
-    opacity: 0.5,
-  },
-});
-
-const InputWrapper = styled('textarea', {
-  display: 'block',
-  backgroundColor: 'transparent',
-  color: '$base100',
-  appearance: 'none',
-  width: '100%',
-  border: '0',
-  margin: '0 auto',
-  fontSize: '16px !important',
-  '&:after': {
-    clear: 'both',
-    content: '""',
-  },
-});
-
-const FunctionWrapper = styled('div', {
-  display: 'block',
-  opacity: 0.4,
-  lineHeight: 0,
-  '&:after': {
-    clear: 'both',
-    content: '""',
-  },
-});
-
-type Props = InputHTMLAttributes<HTMLTextAreaElement> &
-  typeof InputWrapper[$$StyledComponentProps] & {
-    copy?: boolean;
-    css: CSS;
-    maxLength?: number;
-    onChange?: (event: ChangeEvent<HTMLTextAreaElement>) => void;
-    rows?: number;
-  };
+const { TextareaWrapper, TextareaInputWrapper, TextareaFunctionWrapper } = InputStyles();
 
 export default function Input({
+  changeFunction,
   copy,
   css,
-  disabled,
   maxLength = 250,
-  onChange,
-  rows = 5,
-  // inherited
-  value = '',
+  rows = 4,
+
+  disabled,
+  value,
+
   ...props
 }: Props): JSX.Element {
-  const [controlledValue, setControlledValue] = useState(value as string);
-  const [isCopied, setIsCopied] = useState(false);
+  const [isValue, setIsValue] = useState(value || '') as [string, any];
+  const [isCopied, setIsCopied] = useState(false) as [boolean, any];
 
-  const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-    setControlledValue(e.target.value);
-    if (onChange) {
-      onChange(e);
+  function handleChange(e: ChangeEvent<HTMLTextAreaElement>) {
+    setIsValue(e.target.value);
+    if (changeFunction) {
+      changeFunction(e.target.value);
     }
-  };
+  }
 
-  const handleCopy = (): void => {
-    navigator.clipboard.writeText(controlledValue);
-    setIsCopied(true);
-    setTimeout(() => {
-      setIsCopied(false);
-    }, 2_000);
-  };
+  function handleCopy() {
+    if (copy) {
+      navigator.clipboard.writeText(isValue as string);
+      setIsCopied(true);
+      setTimeout(() => {
+        setIsCopied(false);
+      }, 2000);
+    }
+  }
 
   return (
-    <Wrapper css={css}>
-      <InputWrapper rows={rows} value={controlledValue} maxLength={maxLength} onChange={handleChange} disabled={disabled} {...props} />
-      <FunctionWrapper>
-        <Text level={2} inline inlineSpacer={2}>
-          {controlledValue.length} / {maxLength}
+    <TextareaWrapper css={css}>
+      <TextareaInputWrapper disabled={disabled} maxLength={maxLength} onChange={handleChange} rows={rows} value={isValue} {...props} />
+      <TextareaFunctionWrapper>
+        <Text inline inlineSpacer={2} level={2}>
+          {isValue.length} / {maxLength}
         </Text>
         {copy && (
-          <Button theme='navy' onClick={handleCopy}>
+          <Button onClick={handleCopy} theme='navy'>
             {isCopied ? <Check /> : <Clipboard />}
           </Button>
         )}
-      </FunctionWrapper>
-    </Wrapper>
+      </TextareaFunctionWrapper>
+    </TextareaWrapper>
   );
 }

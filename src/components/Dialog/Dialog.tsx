@@ -5,7 +5,7 @@ import { useOnClickOutside } from 'usehooks-ts';
 
 import { Card } from '../Card';
 
-import stitchesShared from './Dialog.stitches';
+import DialogStyles from './Dialog.styles';
 
 export interface Props {
   children: ReactNode;
@@ -14,10 +14,12 @@ export interface Props {
   trigger: ReactNode;
 }
 
+const { Wrapper, TriggerWrapper, OverlayWrapper, CardWrapper, Exit } = DialogStyles();
+
 export default function Dialog({ children, css, id, trigger }: Props): JSX.Element {
   const ref = useRef(null);
 
-  const [isShown, setIsShown] = useState(false);
+  const [isShown, setIsShown] = useState(false as boolean);
 
   useOnClickOutside(ref, () => {
     setIsShown(false);
@@ -26,8 +28,6 @@ export default function Dialog({ children, css, id, trigger }: Props): JSX.Eleme
   useLayoutEffect(() => {
     document.body.style.overflow = isShown ? 'hidden' : 'auto';
   }, [isShown]);
-
-  const { Wrapper, TriggerWrapper, OverlayWrapper, CardWrapper, Exit } = stitchesShared();
 
   return (
     <Wrapper id={id}>
@@ -40,7 +40,7 @@ export default function Dialog({ children, css, id, trigger }: Props): JSX.Eleme
       </TriggerWrapper>
       {isShown && (
         <OverlayWrapper>
-          <CardWrapper ref={ref} css={css}>
+          <CardWrapper css={css} ref={ref}>
             <Exit onClick={() => setIsShown(false)}>
               <X size={18} />
             </Exit>

@@ -6,7 +6,7 @@ import { Button } from '../Button';
 import { Card } from '../Card';
 import { Heading } from '../Typography';
 
-import stitchesShared from './Dialog.stitches';
+import DialogStyles from './Dialog.styles';
 
 export interface Props {
   action: ReactNode;
@@ -18,10 +18,12 @@ export interface Props {
   trigger: ReactNode | string;
 }
 
+const { Wrapper, TriggerWrapper, OverlayWrapper, CardWrapper, CardActionsWrapper, CardPrimaryActionwrapper } = DialogStyles();
+
 export default function Alert({ action, cancel, css, description, id, title, trigger }: Props): JSX.Element {
   const ref = useRef(null);
 
-  const [isShown, setIsShown] = useState(false);
+  const [isShown, setIsShown] = useState(false as boolean);
 
   useOnClickOutside(ref, () => {
     setIsShown(false);
@@ -30,8 +32,6 @@ export default function Alert({ action, cancel, css, description, id, title, tri
   useLayoutEffect(() => {
     document.body.style.overflow = isShown ? 'hidden' : 'auto';
   }, [isShown]);
-
-  const { Wrapper, TriggerWrapper, OverlayWrapper, CardWrapper, CardActionsWrapper, CardPrimaryActionwrapper } = stitchesShared();
 
   return (
     <Wrapper id={id}>
@@ -44,18 +44,18 @@ export default function Alert({ action, cancel, css, description, id, title, tri
       </TriggerWrapper>
       {isShown && (
         <OverlayWrapper>
-          <CardWrapper ref={ref} css={css}>
+          <CardWrapper css={css} ref={ref}>
             <Card>
               <Heading level={3}>{title}</Heading>
               <Heading level={6}>{description}</Heading>
               <CardActionsWrapper>
                 <Button
+                  css={{
+                    mr: '$4',
+                  }}
                   onClick={(e) => {
                     e.persist();
                     setIsShown(false);
-                  }}
-                  css={{
-                    mr: '$4',
                   }}>
                   {cancel}
                 </Button>

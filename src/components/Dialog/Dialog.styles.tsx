@@ -1,6 +1,6 @@
 import { breakpoints, styled } from '../../stitches.config';
 
-export default function stitchesShared() {
+export default function DialogStyles() {
   const Wrapper = styled('div', {
     position: 'initial',
   });

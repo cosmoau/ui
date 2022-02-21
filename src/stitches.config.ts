@@ -184,13 +184,13 @@ export const { theme, css, styled, getCssText } = createStitches({
       lineHeight: `${value as Stitches.ScaleValue<'lineHeights'>}!important`,
 
       [breakpoints.phone]: {
-        fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .875) !important`,
+        fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .85) !important`,
       },
       [breakpoints.tabletX]: {
-        fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .9) !important`,
+        fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .875) !important`,
       },
       [breakpoints.laptopX]: {
-        fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .925) !important`,
+        fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .9) !important`,
       },
       [breakpoints.desktopX]: {
         fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .95) !important`,

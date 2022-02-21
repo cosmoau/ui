@@ -2,9 +2,10 @@ import { CSS } from '@stitches/react/types/css-util';
 import { Check, Circle, Question } from 'phosphor-react';
 import React, { ReactNode, useState } from 'react';
 
-import { styled } from '../../stitches.config';
 import { Button } from '../Button';
 import { Tooltip } from '../Tooltip';
+
+import InputStyles from './Input.styles';
 
 export interface Props {
   checked?: boolean;
@@ -16,8 +17,10 @@ export interface Props {
   tooltip?: string;
 }
 
-export default function Checkbox({ checked = false, children, css, disabled = false, id, size = 1, tooltip }: Props): JSX.Element {
-  const [isChecked, setIsChecked] = useState(checked);
+const { CheckboxWrapper, CheckboxLabelWrapper, CheckboxTooltipWrapper } = InputStyles();
+
+export default function Checkbox({ checked, children, css, disabled, id, size = 1, tooltip }: Props): JSX.Element {
+  const [isChecked, setIsChecked] = useState(checked as boolean);
 
   const handleChange = (): void => {
     if (disabled) {
@@ -26,50 +29,8 @@ export default function Checkbox({ checked = false, children, css, disabled = fa
     setIsChecked(!isChecked);
   };
 
-  const Wrapper = styled('div', {
-    opacity: !disabled ? 1 : 0.5,
-    whiteSpace: 'nowrap',
-    display: 'table-row-group',
-
-    '*': {
-      cursor: !disabled ? 'pointer' : 'not-allowed',
-    },
-
-    svg: {
-      color: !disabled ? 'inherit' : '$navy100',
-    },
-  });
-
-  const LabelWrapper = styled('label', {
-    display: 'table-cell',
-    verticalAlign: 'middle',
-    paddingLeft: '$3',
-
-    whiteSpace: 'pre-wrap',
-    wordBreak: 'break-word',
-    ft: size === 1 ? '$h5' : '$h6',
-  });
-
-  const TooltipWrapper = styled('div', {
-    verticalAlign: 'middle',
-    alignContent: 'center',
-    display: 'table-cell',
-
-    svg: {
-      marginLeft: '$3',
-      cursor: 'pointer',
-      verticalAlign: 'middle !important',
-      opacity: 0.5,
-      transition: '$1',
-
-      '&:hover': {
-        opacity: 1,
-      },
-    },
-  });
-
   return (
-    <Wrapper css={css} id={id} onClick={handleChange}>
+    <CheckboxWrapper css={css} disabled={disabled} id={id} onClick={handleChange}>
       <Button
         css={{
           display: 'flex',
@@ -81,14 +42,14 @@ export default function Checkbox({ checked = false, children, css, disabled = fa
         }}>
         {isChecked ? <Check /> : <Circle opacity={0.15} />}
       </Button>
-      <LabelWrapper>{children}</LabelWrapper>
+      <CheckboxLabelWrapper size={size}>{children}</CheckboxLabelWrapper>
       {tooltip && (
-        <TooltipWrapper>
-          <Tooltip trigger={<Question size={18} />} passKey={`${children}`} type='click'>
+        <CheckboxTooltipWrapper>
+          <Tooltip passKey={`${children}`} trigger={<Question size={18} />} type='click'>
             {tooltip}
           </Tooltip>
-        </TooltipWrapper>
+        </CheckboxTooltipWrapper>
       )}
-    </Wrapper>
+    </CheckboxWrapper>
   );
 }

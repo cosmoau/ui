@@ -3,9 +3,10 @@ import { parseCookies, setCookie } from 'nookies';
 import { X } from 'phosphor-react';
 import React, { useEffect, useState } from 'react';
 
-import { breakpoints, styled } from '../../stitches.config';
 import { Card } from '../Card';
 import { Heading } from '../Typography';
+
+import CookiesStyles from './Cookies.styles';
 
 export interface Props {
   css?: CSS;
@@ -13,8 +14,10 @@ export interface Props {
   token?: string;
 }
 
+const { Wrapper } = CookiesStyles();
+
 export default function Cookies({ css, href = 'https://cosmogroup.io/legal/privacy', token = 'cooookies' }: Props): JSX.Element {
-  const [isShown, setIsShown] = useState(false);
+  const [isShown, setIsShown] = useState(false as boolean);
 
   useEffect(() => {
     const cookies = parseCookies();
@@ -34,31 +37,6 @@ export default function Cookies({ css, href = 'https://cosmogroup.io/legal/priva
     setIsShown(false);
   };
 
-  const Wrapper = styled('div', {
-    position: 'fixed',
-    transition: '$1',
-    zIndex: '$cookies',
-    bottom: '$4',
-    left: 0,
-    right: 0,
-    maxWidth: '100%',
-    margin: 'auto',
-    textAlign: 'center',
-
-    svg: {
-      verticalAlign: 'middle',
-      cursor: 'pointer',
-      transition: '$1',
-
-      '&:hover': {
-        opacity: 0.4,
-      },
-    },
-    [breakpoints.phone]: {
-      maxWidth: '95%',
-    },
-  });
-
   return (
     isShown && (
       <Wrapper css={css}>
@@ -74,16 +52,16 @@ export default function Cookies({ css, href = 'https://cosmogroup.io/legal/priva
               color: '$base100',
             },
           }}>
-          <Heading level={5} inline inlineSpacer={1}>
+          <Heading inline inlineSpacer={1} level={5}>
             🍪
           </Heading>
-          <Heading level={5} inline inlineSpacer={1}>
+          <Heading inline inlineSpacer={1} level={5}>
             We use cookies.{' '}
             <a href={href}>
               <b>Learn more</b>
             </a>
           </Heading>
-          <Heading level={5} inline>
+          <Heading inline level={5}>
             <X onClick={handleAccept} />
           </Heading>
         </Card>

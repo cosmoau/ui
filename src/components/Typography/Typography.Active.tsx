@@ -42,7 +42,7 @@ export default function Active({ children, css, cssActive, cssInactive, hover, h
 
   return (
     <Link href={href} passHref {...props}>
-      <Wrapper css={css} id={id} className={path === href ? 'active' : 'inactive'}>
+      <Wrapper className={path === href ? 'active' : 'inactive'} css={css} id={id}>
         {children}
       </Wrapper>
     </Link>

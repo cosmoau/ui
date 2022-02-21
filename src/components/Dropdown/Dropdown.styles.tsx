@@ -1,6 +1,6 @@
 import { styled } from '../../stitches.config';
 
-export default function stitchesShared({ ...props }) {
+export default function DropdownStyles() {
   const Wrapper = styled('div', {
     position: 'relative',
     display: 'inline-flex',
@@ -14,9 +14,21 @@ export default function stitchesShared({ ...props }) {
     outline: 'none',
     userSelect: 'none',
     transition: '$1',
-    '&:hover': {
-      color: 'inherit',
-      opacity: props.hover ? 0.7 : 1,
+    variants: {
+      hover: {
+        false: {
+          '&:hover': {
+            color: 'inherit',
+            opacity: 1,
+          },
+          true: {
+            '&:hover': {
+              color: 'inherit',
+              opacity: 0.7,
+            },
+          },
+        },
+      },
     },
   });
 
@@ -32,12 +44,8 @@ export default function stitchesShared({ ...props }) {
     top: '120%',
     maxHeight: '50rem',
     width: '100%',
-    minWidth: props.width ? `${props.width}rem` : '15rem',
-    maxWidth: props.width ? `${props.width}rem` : '80rem',
     zIndex: '$dropdown',
     webkitoverflowscrolling: 'touch',
-    left: props.align === 'right' ? 'auto' : 0,
-    right: props.align === 'right' ? 0 : 'auto',
   });
 
   const ItemWrapper = styled('div', {

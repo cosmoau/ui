@@ -5,7 +5,7 @@ import { useOnClickOutside } from 'usehooks-ts';
 import { Button } from '../Button';
 import { Loading } from '../Loading';
 
-import stitchesShared from './Dropdown.stitches';
+import DropdownStyles from './Dropdown.styles';
 
 export interface Props {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -23,9 +23,11 @@ export interface Props {
   width?: number;
 }
 
+const { Wrapper, GroupWrapper, ItemWrapper, IconWrapper } = DropdownStyles();
+
 export default function Dropdown({ actions, align = 'left', css, id, label, options, passKey, width }: Props): JSX.Element {
   const ref = useRef(null);
-  const [isShown, setIsShown] = useState(false);
+  const [isShown, setIsShown] = useState(false as boolean);
 
   const handleClick = (): void => {
     setIsShown(!isShown);
@@ -40,16 +42,17 @@ export default function Dropdown({ actions, align = 'left', css, id, label, opti
     setIsShown(false);
   });
 
-  const { Wrapper, GroupWrapper, ItemWrapper, IconWrapper } = stitchesShared({
-    align,
-    width,
-  });
-
   return (
     <Wrapper css={css} id={id} key={passKey} ref={ref}>
       <Button onClickCapture={handleClick}>{label || <Loading />}</Button>
       {isShown && (
-        <GroupWrapper>
+        <GroupWrapper
+          css={{
+            minWidth: width || '15rem',
+            maxWidth: width || '80rem',
+            left: align === 'right' ? 'auto' : '0',
+            right: align === 'left' ? '0' : 'auto',
+          }}>
           {options.map((option) => (
             <ItemWrapper className={label === option.name ? 'active' : 'inactive'} key={option.value} onClickCapture={() => handleActions(option.value, option.name)}>
               {option.icon && <IconWrapper>{option.icon}</IconWrapper>}
