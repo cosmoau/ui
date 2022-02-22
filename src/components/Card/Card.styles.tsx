@@ -11,35 +11,27 @@ export default function CardStyles() {
       theme: {
         default: {
           backgroundColor: '$baseContrast100',
-          border: '0.1rem solid $border200',
         },
         red: {
           backgroundColor: '$red300',
-          border: '0.1rem solid $red200',
         },
         yellow: {
           backgroundColor: '$yellow300',
-          border: '0.1rem solid $yellow200',
         },
         green: {
           backgroundColor: '$green300',
-          border: '0.1rem solid $green200',
         },
         blue: {
           backgroundColor: '$blue300',
-          border: '0.1rem solid $blue200',
         },
         navy: {
           backgroundColor: '$navy300',
-          border: '0.1rem solid $navy200',
         },
         purple: {
           backgroundColor: '$purple300',
-          border: '0.1rem solid $purple200',
         },
         pink: {
           backgroundColor: '$pink300',
-          border: '0.1rem solid $pink200',
         },
         transparent: {
           backgroundColor: 'transparent',
@@ -47,7 +39,7 @@ export default function CardStyles() {
       },
       border: {
         false: {
-          border: 'none',
+          border: 0,
         },
         default: {
           border: '0.1rem solid $border200',
