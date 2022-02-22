@@ -43,8 +43,8 @@ export default function Alert({ action, cancel, css, description, id, title, tri
         {trigger}
       </TriggerWrapper>
       {isShown && (
-        <OverlayWrapper>
-          <CardWrapper css={css} ref={ref}>
+        <OverlayWrapper animation={isShown}>
+          <CardWrapper animation={isShown} css={css} ref={ref}>
             <Card>
               <Heading level={3}>{title}</Heading>
               <Heading level={6}>{description}</Heading>

@@ -70,6 +70,15 @@ export declare const theme: string & {
         10: import("@stitches/react/types/theme").Token<"10", string, "space", "">;
         11: import("@stitches/react/types/theme").Token<"11", string, "space", "">;
         12: import("@stitches/react/types/theme").Token<"12", string, "space", "">;
+        h1: import("@stitches/react/types/theme").Token<"h1", string, "space", "">;
+        h2: import("@stitches/react/types/theme").Token<"h2", string, "space", "">;
+        h3: import("@stitches/react/types/theme").Token<"h3", string, "space", "">;
+        h4: import("@stitches/react/types/theme").Token<"h4", string, "space", "">;
+        h5: import("@stitches/react/types/theme").Token<"h5", string, "space", "">;
+        h6: import("@stitches/react/types/theme").Token<"h6", string, "space", "">;
+        t1: import("@stitches/react/types/theme").Token<"t1", string, "space", "">;
+        t2: import("@stitches/react/types/theme").Token<"t2", string, "space", "">;
+        t3: import("@stitches/react/types/theme").Token<"t3", string, "space", "">;
     };
     fonts: {
         body: import("@stitches/react/types/theme").Token<"body", string, "fonts", "">;
@@ -191,6 +200,15 @@ export declare const theme: string & {
         10: string;
         11: string;
         12: string;
+        h1: string;
+        h2: string;
+        h3: string;
+        h4: string;
+        h5: string;
+        h6: string;
+        t1: string;
+        t2: string;
+        t3: string;
     };
     fonts: {
         body: string;
@@ -307,12 +325,20 @@ export declare const theme: string & {
     br: (value: Stitches.PropertyValue<'color'>) => {
         borderRight: string;
     };
-    ft: (value: Stitches.ScaleValue<'fontSizes' | 'lineHeights'>) => {
+    ft: (value: Stitches.ScaleValue<'fontSizes' | 'lineHeights' | 'space'>) => {
         [x: string]: string | {
+            marginBottom: number;
+            fontSize?: undefined;
+        } | {
             fontSize: string;
+            marginBottom?: undefined;
         };
         fontSize: string;
         lineHeight: string;
+        marginBottom: string;
+        '&:last-child': {
+            marginBottom: number;
+        };
     };
     hidden: (value: 'phone' | 'tablet' | 'tabletX' | 'laptop' | 'laptopX' | 'desktop' | 'desktopX' | 'wide') => {
         [x: string]: string | {
@@ -425,6 +451,15 @@ export declare const theme: string & {
         10: string;
         11: string;
         12: string;
+        h1: string;
+        h2: string;
+        h3: string;
+        h4: string;
+        h5: string;
+        h6: string;
+        t1: string;
+        t2: string;
+        t3: string;
     };
     fonts: {
         body: string;
@@ -541,12 +576,20 @@ export declare const theme: string & {
     br: (value: Stitches.PropertyValue<'color'>) => {
         borderRight: string;
     };
-    ft: (value: Stitches.ScaleValue<'fontSizes' | 'lineHeights'>) => {
+    ft: (value: Stitches.ScaleValue<'fontSizes' | 'lineHeights' | 'space'>) => {
         [x: string]: string | {
+            marginBottom: number;
+            fontSize?: undefined;
+        } | {
             fontSize: string;
+            marginBottom?: undefined;
         };
         fontSize: string;
         lineHeight: string;
+        marginBottom: string;
+        '&:last-child': {
+            marginBottom: number;
+        };
     };
     hidden: (value: 'phone' | 'tablet' | 'tabletX' | 'laptop' | 'laptopX' | 'desktop' | 'desktopX' | 'wide') => {
         [x: string]: string | {
@@ -657,6 +700,15 @@ export declare const theme: string & {
         10: string;
         11: string;
         12: string;
+        h1: string;
+        h2: string;
+        h3: string;
+        h4: string;
+        h5: string;
+        h6: string;
+        t1: string;
+        t2: string;
+        t3: string;
     };
     fonts: {
         body: string;
@@ -773,12 +825,20 @@ export declare const theme: string & {
     br: (value: Stitches.PropertyValue<'color'>) => {
         borderRight: string;
     };
-    ft: (value: Stitches.ScaleValue<'fontSizes' | 'lineHeights'>) => {
+    ft: (value: Stitches.ScaleValue<'fontSizes' | 'lineHeights' | 'space'>) => {
         [x: string]: string | {
+            marginBottom: number;
+            fontSize?: undefined;
+        } | {
             fontSize: string;
+            marginBottom?: undefined;
         };
         fontSize: string;
         lineHeight: string;
+        marginBottom: string;
+        '&:last-child': {
+            marginBottom: number;
+        };
     };
     hidden: (value: 'phone' | 'tablet' | 'tabletX' | 'laptop' | 'laptopX' | 'desktop' | 'desktopX' | 'wide') => {
         [x: string]: string | {

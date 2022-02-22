@@ -47,6 +47,7 @@ export default function Dropdown({ actions, align = 'left', css, id, label, opti
       <Button onClickCapture={handleClick}>{label || <Loading />}</Button>
       {isShown && (
         <GroupWrapper
+          animation={isShown}
           css={{
             minWidth: width || '15rem',
             maxWidth: width || '80rem',

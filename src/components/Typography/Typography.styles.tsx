@@ -93,6 +93,7 @@ export default function TypographyStyles() {
         },
         true: {
           display: 'inline-block',
+          marginBottom: `${0}!important`,
         },
       },
       inlineSpacer: {
@@ -122,24 +123,13 @@ export default function TypographyStyles() {
     },
 
     '&:last-child': {
-      marginBottom: 0,
+      marginBottom: `${0}!important`,
     },
   };
 
   const HeadingOneWrapper = styled('h1', {
     ft: '$h1',
     fontWeight: 'bold',
-
-    variants: {
-      inline: {
-        false: {
-          marginBottom: '$6',
-        },
-        true: {
-          marginBottom: 0,
-        },
-      },
-    },
 
     ...BaseStyles,
   });
@@ -148,34 +138,12 @@ export default function TypographyStyles() {
     ft: '$h2',
     fontWeight: 'bold',
 
-    variants: {
-      inline: {
-        false: {
-          marginBottom: '$5',
-        },
-        true: {
-          marginBottom: 0,
-        },
-      },
-    },
-
     ...BaseStyles,
   });
 
   const HeadingThreeWrapper = styled('h3', {
     ft: '$h3',
     fontWeight: 'bold',
-
-    variants: {
-      inline: {
-        false: {
-          marginBottom: '$3',
-        },
-        true: {
-          marginBottom: 0,
-        },
-      },
-    },
 
     ...BaseStyles,
   });
@@ -185,17 +153,6 @@ export default function TypographyStyles() {
     fontWeight: 'normal',
     opacity: 0.8,
 
-    variants: {
-      inline: {
-        false: {
-          marginBottom: '$4',
-        },
-        true: {
-          marginBottom: 0,
-        },
-      },
-    },
-
     ...BaseStyles,
   });
 
@@ -203,33 +160,12 @@ export default function TypographyStyles() {
     ft: '$h5',
     fontWeight: 'normal',
 
-    variants: {
-      inline: {
-        false: {
-          marginBottom: '$4',
-        },
-        true: {
-          marginBottom: 0,
-        },
-      },
-    },
-
     ...BaseStyles,
   });
 
   const HeadingSixWrapper = styled('h6', {
     ft: '$h6',
     fontWeight: 'normal',
-    variants: {
-      inline: {
-        false: {
-          marginBottom: '$3',
-        },
-        true: {
-          marginBottom: 0,
-        },
-      },
-    },
 
     opacity: 0.8,
 
@@ -239,16 +175,6 @@ export default function TypographyStyles() {
   const TextOneWrapper = styled('p', {
     ft: '$t1',
     fontWeight: 'normal',
-    variants: {
-      inline: {
-        false: {
-          marginBottom: '$3',
-        },
-        true: {
-          marginBottom: 0,
-        },
-      },
-    },
 
     ...BaseStyles,
   });
@@ -256,16 +182,6 @@ export default function TypographyStyles() {
   const TextTwoWrapper = styled('p', {
     ft: '$t2',
     fontWeight: 'normal',
-    variants: {
-      inline: {
-        false: {
-          marginBottom: '$3',
-        },
-        true: {
-          marginBottom: 0,
-        },
-      },
-    },
 
     ...BaseStyles,
   });
@@ -273,16 +189,6 @@ export default function TypographyStyles() {
   const TextThreeWrapper = styled('p', {
     ft: '$t3',
     fontWeight: 'normal',
-    variants: {
-      inline: {
-        false: {
-          marginBottom: '$3',
-        },
-        true: {
-          marginBottom: 0,
-        },
-      },
-    },
 
     ...BaseStyles,
   });

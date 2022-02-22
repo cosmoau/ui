@@ -19,6 +19,7 @@ export interface Props extends InputHTMLAttributes<HTMLInputElement> {
   inputRef?: any;
   loader?: boolean;
   reset?: boolean;
+  resetFunction?: any;
   reveal?: boolean;
   submit?: boolean;
   submitFunction?: any;
@@ -37,6 +38,7 @@ export default function InputField({
   inputRef,
   loader,
   reset,
+  resetFunction,
   reveal,
   submit,
   submitFunction,
@@ -70,6 +72,13 @@ export default function InputField({
     }
   }
 
+  function handleReset() {
+    setIsValue('');
+    if (resetFunction) {
+      resetFunction();
+    }
+  }
+
   return (
     <FieldWrapper css={css} id={id}>
       {icon && <FieldIconWrapper>{icon}</FieldIconWrapper>}
@@ -94,7 +103,7 @@ export default function InputField({
             </Badge>
           )}
           {reset && (
-            <Button onClick={() => setIsValue('')} theme='navy'>
+            <Button onClick={() => handleReset()} theme='navy'>
               <X weight='duotone' />
             </Button>
           )}

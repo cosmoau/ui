@@ -56,7 +56,7 @@ export default function Input({
     <TextareaWrapper css={css}>
       <TextareaInputWrapper disabled={disabled} maxLength={maxLength} onChange={handleChange} rows={rows} value={isValue} {...props} />
       <TextareaFunctionWrapper>
-        <Text inline inlineSpacer={2} level={2}>
+        <Text inline inlineSpacer={4} level={2}>
           {isValue.length} / {maxLength}
         </Text>
         {copy && (

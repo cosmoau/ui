@@ -18,28 +18,28 @@ const { Wrapper, TriggerWrapper, ContentWrapper } = TooltipStyles();
 
 export default function Tooltip({ align = 'left', children, css, id, passKey, trigger, type = 'hover' }: Props): JSX.Element {
   const ref = useRef(null);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isShown, setIsShown] = useState(false);
 
   const handleClick = (): void => {
     if (type === 'click') {
-      setIsOpen(!isOpen);
+      setIsShown(!isShown);
     }
   };
 
   const handleMouseEnter = (): void => {
     if (type === 'hover') {
-      setIsOpen(true);
+      setIsShown(true);
     }
   };
 
   const handleMouseLeave = (): void => {
     if (type === 'hover') {
-      setIsOpen(false);
+      setIsShown(false);
     }
   };
 
   useOnClickOutside(ref, () => {
-    setIsOpen(false);
+    setIsShown(false);
   });
 
   return (
@@ -47,8 +47,9 @@ export default function Tooltip({ align = 'left', children, css, id, passKey, tr
       <TriggerWrapper onClickCapture={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         {trigger}
       </TriggerWrapper>
-      {isOpen && (
+      {isShown && (
         <ContentWrapper
+          animation={isShown}
           css={{
             left: align === 'left' ? '0' : align === 'right' ? 'auto' : '50%',
             right: align === 'right' ? '0' : align === 'left' ? 'auto' : '50%',

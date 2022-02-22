@@ -1,6 +1,17 @@
+import { keyframes } from '@stitches/react';
+
 import { styled } from '../../stitches.config';
 
 export default function TooltipStyles() {
+  const SoftAnimation = keyframes({
+    '0%': {
+      opacity: 0,
+    },
+
+    '100%': {
+      opacity: 1,
+    },
+  });
   const Wrapper = styled('div', {
     position: 'relative',
     display: 'flex',
@@ -20,16 +31,27 @@ export default function TooltipStyles() {
     boxShadow: '$3',
     position: 'absolute',
     top: '120%',
-    padding: '$1 $3',
+    padding: '$2 $3',
     width: 'max-content',
     maxWidth: '30rem',
-    overflowY: 'scroll',
+    overflowY: 'auto',
     wordBreak: 'break-word',
     lineBreak: 'auto',
     whiteSpace: 'pre-wrap',
     maxHeight: '30rem',
     zIndex: '$tooltip',
     webkitoverflowscrolling: 'touch',
+
+    variants: {
+      animation: {
+        false: {
+          animation: 'none',
+        },
+        true: {
+          animation: `${SoftAnimation} .3s`,
+        },
+      },
+    },
   });
 
   return {

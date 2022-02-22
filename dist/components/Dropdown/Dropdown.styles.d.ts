@@ -55,6 +55,15 @@ export default function DropdownStyles(): {
             10: string;
             11: string;
             12: string;
+            h1: string;
+            h2: string;
+            h3: string;
+            h4: string;
+            h5: string;
+            h6: string;
+            t1: string;
+            t2: string;
+            t3: string;
         };
         fonts: {
             body: string;
@@ -204,13 +213,21 @@ export default function DropdownStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
+                marginBottom: number;
+                fontSize?: undefined;
+            } | {
                 fontSize: string;
+                marginBottom?: undefined;
             };
             fontSize: string;
             lineHeight: string;
+            marginBottom: string;
+            '&:last-child': {
+                marginBottom: number;
+            };
         };
         hidden: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => {
             [x: string]: string | {
@@ -335,6 +352,15 @@ export default function DropdownStyles(): {
             10: string;
             11: string;
             12: string;
+            h1: string;
+            h2: string;
+            h3: string;
+            h4: string;
+            h5: string;
+            h6: string;
+            t1: string;
+            t2: string;
+            t3: string;
         };
         fonts: {
             body: string;
@@ -484,13 +510,21 @@ export default function DropdownStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
+                marginBottom: number;
+                fontSize?: undefined;
+            } | {
                 fontSize: string;
+                marginBottom?: undefined;
             };
             fontSize: string;
             lineHeight: string;
+            marginBottom: string;
+            '&:last-child': {
+                marginBottom: number;
+            };
         };
         hidden: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => {
             [x: string]: string | {
@@ -535,7 +569,31 @@ export default function DropdownStyles(): {
             [x: string]: unknown;
         };
     }>>;
-    GroupWrapper: import("@stitches/react/types/styled-component").StyledComponent<"div", {}, {}, import("@stitches/react/types/css-util").CSS<{}, {
+    GroupWrapper: import("@stitches/react/types/styled-component").StyledComponent<"div", import("@stitches/react/types/styled-component").StyledComponentProps<[{
+        background: string;
+        borderRadius: string;
+        border: string;
+        boxShadow: string;
+        boxSizing: string;
+        overflowY: string;
+        position: string;
+        padding: string;
+        top: string;
+        maxHeight: string;
+        width: string;
+        zIndex: string;
+        webkitoverflowscrolling: string;
+        variants: {
+            animation: {
+                false: {
+                    animation: string;
+                };
+                true: {
+                    animation: string;
+                };
+            };
+        };
+    }]>, {}, import("@stitches/react/types/css-util").CSS<{}, {
         colors: {
             baseBody: string;
             base100: string;
@@ -591,6 +649,15 @@ export default function DropdownStyles(): {
             10: string;
             11: string;
             12: string;
+            h1: string;
+            h2: string;
+            h3: string;
+            h4: string;
+            h5: string;
+            h6: string;
+            t1: string;
+            t2: string;
+            t3: string;
         };
         fonts: {
             body: string;
@@ -740,13 +807,21 @@ export default function DropdownStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
+                marginBottom: number;
+                fontSize?: undefined;
+            } | {
                 fontSize: string;
+                marginBottom?: undefined;
             };
             fontSize: string;
             lineHeight: string;
+            marginBottom: string;
+            '&:last-child': {
+                marginBottom: number;
+            };
         };
         hidden: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => {
             [x: string]: string | {
@@ -847,6 +922,15 @@ export default function DropdownStyles(): {
             10: string;
             11: string;
             12: string;
+            h1: string;
+            h2: string;
+            h3: string;
+            h4: string;
+            h5: string;
+            h6: string;
+            t1: string;
+            t2: string;
+            t3: string;
         };
         fonts: {
             body: string;
@@ -996,13 +1080,21 @@ export default function DropdownStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
+                marginBottom: number;
+                fontSize?: undefined;
+            } | {
                 fontSize: string;
+                marginBottom?: undefined;
             };
             fontSize: string;
             lineHeight: string;
+            marginBottom: string;
+            '&:last-child': {
+                marginBottom: number;
+            };
         };
         hidden: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => {
             [x: string]: string | {
@@ -1103,6 +1195,15 @@ export default function DropdownStyles(): {
             10: string;
             11: string;
             12: string;
+            h1: string;
+            h2: string;
+            h3: string;
+            h4: string;
+            h5: string;
+            h6: string;
+            t1: string;
+            t2: string;
+            t3: string;
         };
         fonts: {
             body: string;
@@ -1252,13 +1353,21 @@ export default function DropdownStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
+                marginBottom: number;
+                fontSize?: undefined;
+            } | {
                 fontSize: string;
+                marginBottom?: undefined;
             };
             fontSize: string;
             lineHeight: string;
+            marginBottom: string;
+            '&:last-child': {
+                marginBottom: number;
+            };
         };
         hidden: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => {
             [x: string]: string | {

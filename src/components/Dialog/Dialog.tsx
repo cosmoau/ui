@@ -39,8 +39,8 @@ export default function Dialog({ children, css, id, trigger }: Props): JSX.Eleme
         {trigger}
       </TriggerWrapper>
       {isShown && (
-        <OverlayWrapper>
-          <CardWrapper css={css} ref={ref}>
+        <OverlayWrapper animation={isShown}>
+          <CardWrapper animation={isShown} css={css} ref={ref}>
             <Exit onClick={() => setIsShown(false)}>
               <X size={18} />
             </Exit>

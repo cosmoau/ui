@@ -55,6 +55,15 @@ export default function TooltipStyles(): {
             10: string;
             11: string;
             12: string;
+            h1: string;
+            h2: string;
+            h3: string;
+            h4: string;
+            h5: string;
+            h6: string;
+            t1: string;
+            t2: string;
+            t3: string;
         };
         fonts: {
             body: string;
@@ -204,13 +213,21 @@ export default function TooltipStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
+                marginBottom: number;
+                fontSize?: undefined;
+            } | {
                 fontSize: string;
+                marginBottom?: undefined;
             };
             fontSize: string;
             lineHeight: string;
+            marginBottom: string;
+            '&:last-child': {
+                marginBottom: number;
+            };
         };
         hidden: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => {
             [x: string]: string | {
@@ -311,6 +328,15 @@ export default function TooltipStyles(): {
             10: string;
             11: string;
             12: string;
+            h1: string;
+            h2: string;
+            h3: string;
+            h4: string;
+            h5: string;
+            h6: string;
+            t1: string;
+            t2: string;
+            t3: string;
         };
         fonts: {
             body: string;
@@ -460,13 +486,21 @@ export default function TooltipStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
+                marginBottom: number;
+                fontSize?: undefined;
+            } | {
                 fontSize: string;
+                marginBottom?: undefined;
             };
             fontSize: string;
             lineHeight: string;
+            marginBottom: string;
+            '&:last-child': {
+                marginBottom: number;
+            };
         };
         hidden: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => {
             [x: string]: string | {
@@ -511,7 +545,35 @@ export default function TooltipStyles(): {
             [x: string]: unknown;
         };
     }>>;
-    ContentWrapper: import("@stitches/react/types/styled-component").StyledComponent<"div", {}, {}, import("@stitches/react/types/css-util").CSS<{}, {
+    ContentWrapper: import("@stitches/react/types/styled-component").StyledComponent<"div", import("@stitches/react/types/styled-component").StyledComponentProps<[{
+        transition: string;
+        borderRadius: string;
+        background: string;
+        border: string;
+        boxShadow: string;
+        position: string;
+        top: string;
+        padding: string;
+        width: string;
+        maxWidth: string;
+        overflowY: string;
+        wordBreak: string;
+        lineBreak: string;
+        whiteSpace: string;
+        maxHeight: string;
+        zIndex: string;
+        webkitoverflowscrolling: string;
+        variants: {
+            animation: {
+                false: {
+                    animation: string;
+                };
+                true: {
+                    animation: string;
+                };
+            };
+        };
+    }]>, {}, import("@stitches/react/types/css-util").CSS<{}, {
         colors: {
             baseBody: string;
             base100: string;
@@ -567,6 +629,15 @@ export default function TooltipStyles(): {
             10: string;
             11: string;
             12: string;
+            h1: string;
+            h2: string;
+            h3: string;
+            h4: string;
+            h5: string;
+            h6: string;
+            t1: string;
+            t2: string;
+            t3: string;
         };
         fonts: {
             body: string;
@@ -716,13 +787,21 @@ export default function TooltipStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
+                marginBottom: number;
+                fontSize?: undefined;
+            } | {
                 fontSize: string;
+                marginBottom?: undefined;
             };
             fontSize: string;
             lineHeight: string;
+            marginBottom: string;
+            '&:last-child': {
+                marginBottom: number;
+            };
         };
         hidden: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => {
             [x: string]: string | {

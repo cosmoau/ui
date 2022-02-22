@@ -1,6 +1,18 @@
+import { keyframes } from '@stitches/react';
+
 import { styled } from '../../stitches.config';
 
 export default function DropdownStyles() {
+  const SoftAnimation = keyframes({
+    '0%': {
+      opacity: 0,
+    },
+
+    '100%': {
+      opacity: 1,
+    },
+  });
+
   const Wrapper = styled('div', {
     position: 'relative',
     display: 'inline-flex',
@@ -46,6 +58,17 @@ export default function DropdownStyles() {
     width: '100%',
     zIndex: '$dropdown',
     webkitoverflowscrolling: 'touch',
+
+    variants: {
+      animation: {
+        false: {
+          animation: 'none',
+        },
+        true: {
+          animation: `${SoftAnimation} .3s`,
+        },
+      },
+    },
   });
 
   const ItemWrapper = styled('div', {

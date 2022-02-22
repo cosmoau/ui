@@ -70,13 +70,22 @@ export const { theme, css, styled, getCssText } = createStitches({
       10: '9rem',
       11: '12rem',
       12: '16rem',
+      h1: '$6',
+      h2: '$5',
+      h3: '$3',
+      h4: '$4',
+      h5: '$4',
+      h6: '$3',
+      t1: '$3',
+      t2: '$2',
+      t3: '$1',
     },
     fonts: {
       body: 'Graphik, system-ui, sans-serif',
     },
     fontSizes: {
-      h1: '3.2rem',
-      h2: '2.6rem',
+      h1: '3.3rem',
+      h2: '2.7rem',
       h3: '2rem',
       h4: '1.9rem',
       h5: '1.8rem',
@@ -179,9 +188,14 @@ export const { theme, css, styled, getCssText } = createStitches({
     br: (value: Stitches.PropertyValue<'color'>) => ({
       borderRight: `0.1rem solid ${value as Stitches.PropertyValue<'color'>}`,
     }),
-    ft: (value: Stitches.ScaleValue<'fontSizes' | 'lineHeights'>) => ({
+    ft: (value: Stitches.ScaleValue<'fontSizes' | 'lineHeights' | 'space'>) => ({
       fontSize: `${value as Stitches.ScaleValue<'fontSizes'>}!important`,
       lineHeight: `${value as Stitches.ScaleValue<'lineHeights'>}!important`,
+      marginBottom: `${value as Stitches.ScaleValue<'space'>}`,
+
+      '&:last-child': {
+        marginBottom: 0,
+      },
 
       [breakpoints.phone]: {
         fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .85) !important`,
@@ -190,10 +204,10 @@ export const { theme, css, styled, getCssText } = createStitches({
         fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .875) !important`,
       },
       [breakpoints.laptopX]: {
-        fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .9) !important`,
+        fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .95) !important`,
       },
       [breakpoints.desktopX]: {
-        fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .95) !important`,
+        fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .975) !important`,
       },
     }),
 

@@ -1,6 +1,18 @@
+import { keyframes } from '@stitches/react';
+
 import { breakpoints, styled } from '../../stitches.config';
 
 export default function DialogStyles() {
+  const SoftAnimation = keyframes({
+    '0%': {
+      opacity: 0,
+    },
+
+    '100%': {
+      opacity: 1,
+    },
+  });
+
   const Wrapper = styled('div', {
     position: 'initial',
   });
@@ -22,6 +34,17 @@ export default function DialogStyles() {
     scrollBehavior: 'smooth',
     overscrollBehavior: 'contain',
     overflowY: 'scroll',
+
+    variants: {
+      animation: {
+        false: {
+          animation: 'none',
+        },
+        true: {
+          animation: `${SoftAnimation} .6s`,
+        },
+      },
+    },
   });
 
   const CardWrapper = styled('div', {
@@ -33,6 +56,18 @@ export default function DialogStyles() {
     maxWidth: '90vw',
     maxHeight: '80vh',
     boxShadow: '$3',
+    transition: '$1',
+
+    variants: {
+      animation: {
+        false: {
+          animation: 'none',
+        },
+        true: {
+          animation: `${SoftAnimation} .3s`,
+        },
+      },
+    },
 
     [breakpoints.phone]: {
       width: '95%',
@@ -47,6 +82,7 @@ export default function DialogStyles() {
     right: 0,
     padding: '1rem',
     cursor: 'pointer',
+    zIndex: '$alert',
   });
 
   const CardActionsWrapper = styled('div', {

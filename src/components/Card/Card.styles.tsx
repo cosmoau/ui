@@ -3,8 +3,6 @@ import { breakpoints, styled } from '../../stitches.config';
 export default function CardStyles() {
   const Wrapper = styled('div', {
     display: 'block',
-    height: '100%',
-    width: 'auto',
     position: 'relative',
     borderRadius: '$2',
     transition: '$1',

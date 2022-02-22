@@ -9,11 +9,12 @@ export interface Props extends InputHTMLAttributes<HTMLInputElement> {
     inputRef?: any;
     loader?: boolean;
     reset?: boolean;
+    resetFunction?: any;
     reveal?: boolean;
     submit?: boolean;
     submitFunction?: any;
     submitOverride?: any;
     width?: 1 | 2 | 3 | 4 | 5;
 }
-export default function InputField({ changeFunction, copy, css, error, icon, inputRef, loader, reset, reveal, submit, submitFunction, submitOverride, width, id, type, value, ...props }: Props): JSX.Element;
+export default function InputField({ changeFunction, copy, css, error, icon, inputRef, loader, reset, resetFunction, reveal, submit, submitFunction, submitOverride, width, id, type, value, ...props }: Props): JSX.Element;
 //# sourceMappingURL=Input.Field.d.ts.map

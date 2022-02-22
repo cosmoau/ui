@@ -28,16 +28,16 @@ const { Wrapper, TriggerWrapper, GroupWrapper, ItemWrapper, IconWrapper } = Drop
 export default function Submenu({ align = 'left', css, hover, id, options, passKey, trigger, width }: Props): JSX.Element {
   const router = useRouter();
   const ref = useRef(null);
-  const [isOpen, setIsOpen] = useState(false as boolean);
+  const [isShown, setIsShown] = useState(false as boolean);
 
   const path = router?.pathname || '/';
 
   const handleClick = (): void => {
-    setIsOpen(!isOpen);
+    setIsShown(!isShown);
   };
 
   useOnClickOutside(ref, () => {
-    setIsOpen(false);
+    setIsShown(false);
   });
 
   return (
@@ -45,8 +45,9 @@ export default function Submenu({ align = 'left', css, hover, id, options, passK
       <TriggerWrapper hover={hover} onClickCapture={handleClick}>
         {trigger}
       </TriggerWrapper>
-      {isOpen && (
+      {isShown && (
         <GroupWrapper
+          animation={isShown}
           css={{
             minWidth: width || '15rem',
             maxWidth: width || '80rem',

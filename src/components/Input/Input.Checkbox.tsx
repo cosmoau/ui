@@ -40,7 +40,7 @@ export default function Checkbox({ checked, children, css, disabled, id, size = 
           aspectRatio: 1,
           padding: '$2',
         }}>
-        {isChecked ? <Check /> : <Circle opacity={0.15} />}
+        {isChecked ? <Check /> : <Circle opacity={0.1} />}
       </Button>
       <CheckboxLabelWrapper size={size}>{children}</CheckboxLabelWrapper>
       {tooltip && (

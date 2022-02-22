@@ -17,6 +17,10 @@ export default function ButtonStyles() {
           backgroundColor: '$baseContrast100',
           color: '$base100',
           border: '0.1rem solid $border100',
+
+          '&:hover': {
+            backgroundColor: '$navy300',
+          },
         },
         red: {
           backgroundColor: '$red300',
@@ -87,7 +91,7 @@ export default function ButtonStyles() {
           border: '0.1rem solid transparent',
 
           '&:hover': {
-            backgroundColor: '$navy200',
+            backgroundColor: '$navy300',
           },
         },
         dark: {

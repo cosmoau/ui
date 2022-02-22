@@ -20,7 +20,7 @@ const { Wrapper, ImageWrapper, ImageChildrenWrapper } = CardStyles();
 
 export default function Card({ css, extra, id, theme, loader, border, image, imageHeight, minimal, children }: Props): JSX.Element {
   return image ? (
-    <Wrapper border={border} css={css} id={id} loader={loader} padding={minimal ? 'none' : image ? 'none' : !image && extra ? 'extra' : 'default'} theme={theme || 'default'}>
+    <Wrapper border={border} css={css} id={id} loader={loader} padding={'none'} theme={theme || 'default'}>
       <ImageWrapper
         css={{
           height: imageHeight || '15rem',
@@ -30,7 +30,7 @@ export default function Card({ css, extra, id, theme, loader, border, image, ima
       <ImageChildrenWrapper padding={minimal ? 'none' : extra ? 'extra' : 'default'}>{children}</ImageChildrenWrapper>
     </Wrapper>
   ) : (
-    <Wrapper css={css} id={id}>
+    <Wrapper css={css} id={id} loader={loader} padding={minimal ? 'none' : extra ? 'extra' : 'default'} theme={theme || 'default'}>
       {children}
     </Wrapper>
   );

@@ -52,10 +52,10 @@ export default function Cookies({ css, href = 'https://cosmogroup.io/legal/priva
               color: '$base100',
             },
           }}>
-          <Heading inline inlineSpacer={1} level={5}>
+          <Heading inline inlineSpacer={3} level={5}>
             🍪
           </Heading>
-          <Heading inline inlineSpacer={1} level={5}>
+          <Heading inline inlineSpacer={3} level={5}>
             We use cookies.{' '}
             <a href={href}>
               <b>Learn more</b>
