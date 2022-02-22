@@ -80,6 +80,15 @@ export default function InputStyles(): {
             10: string;
             11: string;
             12: string;
+            h1: string;
+            h2: string;
+            h3: string;
+            h4: string;
+            h5: string;
+            h6: string;
+            t1: string;
+            t2: string;
+            t3: string;
         };
         fonts: {
             body: string;
@@ -229,13 +238,21 @@ export default function InputStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
+                marginBottom: number;
+                fontSize?: undefined;
+            } | {
                 fontSize: string;
+                marginBottom?: undefined;
             };
             fontSize: string;
             lineHeight: string;
+            marginBottom: string;
+            '&:last-child': {
+                marginBottom: number;
+            };
         };
         hidden: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => {
             [x: string]: string | {
@@ -352,6 +369,15 @@ export default function InputStyles(): {
             10: string;
             11: string;
             12: string;
+            h1: string;
+            h2: string;
+            h3: string;
+            h4: string;
+            h5: string;
+            h6: string;
+            t1: string;
+            t2: string;
+            t3: string;
         };
         fonts: {
             body: string;
@@ -501,13 +527,21 @@ export default function InputStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
+                marginBottom: number;
+                fontSize?: undefined;
+            } | {
                 fontSize: string;
+                marginBottom?: undefined;
             };
             fontSize: string;
             lineHeight: string;
+            marginBottom: string;
+            '&:last-child': {
+                marginBottom: number;
+            };
         };
         hidden: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => {
             [x: string]: string | {
@@ -608,6 +642,15 @@ export default function InputStyles(): {
             10: string;
             11: string;
             12: string;
+            h1: string;
+            h2: string;
+            h3: string;
+            h4: string;
+            h5: string;
+            h6: string;
+            t1: string;
+            t2: string;
+            t3: string;
         };
         fonts: {
             body: string;
@@ -757,13 +800,21 @@ export default function InputStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
+                marginBottom: number;
+                fontSize?: undefined;
+            } | {
                 fontSize: string;
+                marginBottom?: undefined;
             };
             fontSize: string;
             lineHeight: string;
+            marginBottom: string;
+            '&:last-child': {
+                marginBottom: number;
+            };
         };
         hidden: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => {
             [x: string]: string | {
@@ -864,6 +915,15 @@ export default function InputStyles(): {
             10: string;
             11: string;
             12: string;
+            h1: string;
+            h2: string;
+            h3: string;
+            h4: string;
+            h5: string;
+            h6: string;
+            t1: string;
+            t2: string;
+            t3: string;
         };
         fonts: {
             body: string;
@@ -1013,13 +1073,21 @@ export default function InputStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
+                marginBottom: number;
+                fontSize?: undefined;
+            } | {
                 fontSize: string;
+                marginBottom?: undefined;
             };
             fontSize: string;
             lineHeight: string;
+            marginBottom: string;
+            '&:last-child': {
+                marginBottom: number;
+            };
         };
         hidden: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => {
             [x: string]: string | {
@@ -1120,6 +1188,15 @@ export default function InputStyles(): {
             10: string;
             11: string;
             12: string;
+            h1: string;
+            h2: string;
+            h3: string;
+            h4: string;
+            h5: string;
+            h6: string;
+            t1: string;
+            t2: string;
+            t3: string;
         };
         fonts: {
             body: string;
@@ -1269,13 +1346,21 @@ export default function InputStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
+                marginBottom: number;
+                fontSize?: undefined;
+            } | {
                 fontSize: string;
+                marginBottom?: undefined;
             };
             fontSize: string;
             lineHeight: string;
+            marginBottom: string;
+            '&:last-child': {
+                marginBottom: number;
+            };
         };
         hidden: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => {
             [x: string]: string | {
@@ -1417,6 +1502,15 @@ export default function InputStyles(): {
             10: string;
             11: string;
             12: string;
+            h1: string;
+            h2: string;
+            h3: string;
+            h4: string;
+            h5: string;
+            h6: string;
+            t1: string;
+            t2: string;
+            t3: string;
         };
         fonts: {
             body: string;
@@ -1566,13 +1660,21 @@ export default function InputStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
+                marginBottom: number;
+                fontSize?: undefined;
+            } | {
                 fontSize: string;
+                marginBottom?: undefined;
             };
             fontSize: string;
             lineHeight: string;
+            marginBottom: string;
+            '&:last-child': {
+                marginBottom: number;
+            };
         };
         hidden: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => {
             [x: string]: string | {
@@ -1673,6 +1775,15 @@ export default function InputStyles(): {
             10: string;
             11: string;
             12: string;
+            h1: string;
+            h2: string;
+            h3: string;
+            h4: string;
+            h5: string;
+            h6: string;
+            t1: string;
+            t2: string;
+            t3: string;
         };
         fonts: {
             body: string;
@@ -1822,13 +1933,21 @@ export default function InputStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
+                marginBottom: number;
+                fontSize?: undefined;
+            } | {
                 fontSize: string;
+                marginBottom?: undefined;
             };
             fontSize: string;
             lineHeight: string;
+            marginBottom: string;
+            '&:last-child': {
+                marginBottom: number;
+            };
         };
         hidden: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => {
             [x: string]: string | {
@@ -1929,6 +2048,15 @@ export default function InputStyles(): {
             10: string;
             11: string;
             12: string;
+            h1: string;
+            h2: string;
+            h3: string;
+            h4: string;
+            h5: string;
+            h6: string;
+            t1: string;
+            t2: string;
+            t3: string;
         };
         fonts: {
             body: string;
@@ -2078,13 +2206,21 @@ export default function InputStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
+                marginBottom: number;
+                fontSize?: undefined;
+            } | {
                 fontSize: string;
+                marginBottom?: undefined;
             };
             fontSize: string;
             lineHeight: string;
+            marginBottom: string;
+            '&:last-child': {
+                marginBottom: number;
+            };
         };
         hidden: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => {
             [x: string]: string | {
@@ -2185,6 +2321,15 @@ export default function InputStyles(): {
             10: string;
             11: string;
             12: string;
+            h1: string;
+            h2: string;
+            h3: string;
+            h4: string;
+            h5: string;
+            h6: string;
+            t1: string;
+            t2: string;
+            t3: string;
         };
         fonts: {
             body: string;
@@ -2334,13 +2479,21 @@ export default function InputStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
+                marginBottom: number;
+                fontSize?: undefined;
+            } | {
                 fontSize: string;
+                marginBottom?: undefined;
             };
             fontSize: string;
             lineHeight: string;
+            marginBottom: string;
+            '&:last-child': {
+                marginBottom: number;
+            };
         };
         hidden: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => {
             [x: string]: string | {
@@ -2441,6 +2594,15 @@ export default function InputStyles(): {
             10: string;
             11: string;
             12: string;
+            h1: string;
+            h2: string;
+            h3: string;
+            h4: string;
+            h5: string;
+            h6: string;
+            t1: string;
+            t2: string;
+            t3: string;
         };
         fonts: {
             body: string;
@@ -2590,13 +2752,21 @@ export default function InputStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
+                marginBottom: number;
+                fontSize?: undefined;
+            } | {
                 fontSize: string;
+                marginBottom?: undefined;
             };
             fontSize: string;
             lineHeight: string;
+            marginBottom: string;
+            '&:last-child': {
+                marginBottom: number;
+            };
         };
         hidden: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => {
             [x: string]: string | {
