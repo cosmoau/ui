@@ -29,7 +29,7 @@ export default function InputStyles() {
     },
   });
 
-  const CheckboxLabelWrapper = styled('label', {
+  const CheckboxLabelWrapper = styled('div', {
     display: 'table-cell',
     verticalAlign: 'middle',
     paddingLeft: '$3',
@@ -41,9 +41,11 @@ export default function InputStyles() {
       size: {
         1: {
           ft: '$h5',
+          marginBottom: 0 + '!important',
         },
         2: {
           ft: '$h6',
+          marginBottom: 0 + '!important',
         },
       },
     },
