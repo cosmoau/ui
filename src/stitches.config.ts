@@ -204,10 +204,10 @@ export const { theme, css, styled, getCssText } = createStitches({
         fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .875) !important`,
       },
       [breakpoints.laptopX]: {
-        fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .95) !important`,
+        fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .9) !important`,
       },
       [breakpoints.desktopX]: {
-        fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .975) !important`,
+        fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .95) !important`,
       },
     }),
 
