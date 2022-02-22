@@ -9,35 +9,27 @@ export default function CardStyles(): {
             theme: {
                 default: {
                     backgroundColor: string;
-                    border: string;
                 };
                 red: {
                     backgroundColor: string;
-                    border: string;
                 };
                 yellow: {
                     backgroundColor: string;
-                    border: string;
                 };
                 green: {
                     backgroundColor: string;
-                    border: string;
                 };
                 blue: {
                     backgroundColor: string;
-                    border: string;
                 };
                 navy: {
                     backgroundColor: string;
-                    border: string;
                 };
                 purple: {
                     backgroundColor: string;
-                    border: string;
                 };
                 pink: {
                     backgroundColor: string;
-                    border: string;
                 };
                 transparent: {
                     backgroundColor: string;
@@ -45,7 +37,7 @@ export default function CardStyles(): {
             };
             border: {
                 false: {
-                    border: string;
+                    border: number;
                 };
                 default: {
                     border: string;
@@ -324,7 +316,7 @@ export default function CardStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -335,7 +327,6 @@ export default function CardStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -597,7 +588,7 @@ export default function CardStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -608,7 +599,6 @@ export default function CardStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -887,7 +877,7 @@ export default function CardStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -898,7 +888,6 @@ export default function CardStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };

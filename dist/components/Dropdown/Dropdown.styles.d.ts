@@ -213,7 +213,7 @@ export default function DropdownStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -224,7 +224,6 @@ export default function DropdownStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -510,7 +509,7 @@ export default function DropdownStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -521,7 +520,6 @@ export default function DropdownStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -807,7 +805,7 @@ export default function DropdownStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -818,7 +816,6 @@ export default function DropdownStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -1080,7 +1077,7 @@ export default function DropdownStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -1091,7 +1088,6 @@ export default function DropdownStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -1353,7 +1349,7 @@ export default function DropdownStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -1364,7 +1360,6 @@ export default function DropdownStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };

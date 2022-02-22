@@ -25,7 +25,7 @@ export default function BadgeStyles() {
     transition: '$1',
     padding: '$2 calc($4 / 1.5)',
     borderRadius: '$3',
-    ft: '$h6',
+
     variants: {
       theme: {
         default: {

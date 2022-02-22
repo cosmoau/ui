@@ -121,6 +121,7 @@ export default function TypographyStyles(): {
         };
         ft: string;
         fontWeight: string;
+        marginBottom: string;
     }]>, {}, import("@stitches/react/types/css-util").CSS<{}, {
         colors: {
             baseBody: string;
@@ -335,7 +336,7 @@ export default function TypographyStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -346,7 +347,6 @@ export default function TypographyStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -516,6 +516,7 @@ export default function TypographyStyles(): {
         };
         ft: string;
         fontWeight: string;
+        marginBottom: string;
     }]>, {}, import("@stitches/react/types/css-util").CSS<{}, {
         colors: {
             baseBody: string;
@@ -730,7 +731,7 @@ export default function TypographyStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -741,7 +742,6 @@ export default function TypographyStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -911,6 +911,7 @@ export default function TypographyStyles(): {
         };
         ft: string;
         fontWeight: string;
+        marginBottom: string;
     }]>, {}, import("@stitches/react/types/css-util").CSS<{}, {
         colors: {
             baseBody: string;
@@ -1125,7 +1126,7 @@ export default function TypographyStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -1136,7 +1137,6 @@ export default function TypographyStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -1306,6 +1306,7 @@ export default function TypographyStyles(): {
         };
         ft: string;
         fontWeight: string;
+        marginBottom: string;
         opacity: number;
     }]>, {}, import("@stitches/react/types/css-util").CSS<{}, {
         colors: {
@@ -1521,7 +1522,7 @@ export default function TypographyStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -1532,7 +1533,6 @@ export default function TypographyStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -1702,6 +1702,7 @@ export default function TypographyStyles(): {
         };
         ft: string;
         fontWeight: string;
+        marginBottom: string;
     }]>, {}, import("@stitches/react/types/css-util").CSS<{}, {
         colors: {
             baseBody: string;
@@ -1916,7 +1917,7 @@ export default function TypographyStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -1927,7 +1928,6 @@ export default function TypographyStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -2097,6 +2097,7 @@ export default function TypographyStyles(): {
         };
         ft: string;
         fontWeight: string;
+        marginBottom: string;
         opacity: number;
     }]>, {}, import("@stitches/react/types/css-util").CSS<{}, {
         colors: {
@@ -2312,7 +2313,7 @@ export default function TypographyStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -2323,7 +2324,6 @@ export default function TypographyStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -2493,6 +2493,7 @@ export default function TypographyStyles(): {
         };
         ft: string;
         fontWeight: string;
+        marginBottom: string;
     }]>, {}, import("@stitches/react/types/css-util").CSS<{}, {
         colors: {
             baseBody: string;
@@ -2707,7 +2708,7 @@ export default function TypographyStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -2718,7 +2719,6 @@ export default function TypographyStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -2888,6 +2888,7 @@ export default function TypographyStyles(): {
         };
         ft: string;
         fontWeight: string;
+        marginBottom: string;
     }]>, {}, import("@stitches/react/types/css-util").CSS<{}, {
         colors: {
             baseBody: string;
@@ -3102,7 +3103,7 @@ export default function TypographyStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -3113,7 +3114,6 @@ export default function TypographyStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -3283,6 +3283,7 @@ export default function TypographyStyles(): {
         };
         ft: string;
         fontWeight: string;
+        marginBottom: string;
     }]>, {}, import("@stitches/react/types/css-util").CSS<{}, {
         colors: {
             baseBody: string;
@@ -3497,7 +3498,7 @@ export default function TypographyStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -3508,7 +3509,6 @@ export default function TypographyStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };

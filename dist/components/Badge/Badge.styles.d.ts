@@ -6,7 +6,6 @@ export default function BadgeStyles(): {
         transition: string;
         padding: string;
         borderRadius: string;
-        ft: string;
         variants: {
             theme: {
                 default: {
@@ -305,7 +304,7 @@ export default function BadgeStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -316,7 +315,6 @@ export default function BadgeStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -611,7 +609,7 @@ export default function BadgeStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -622,7 +620,6 @@ export default function BadgeStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };

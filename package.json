@@ -1,7 +1,7 @@
 {
   "name": "@cosmo-au/design-system",
   "description": "The Cosmo Design System enforces strict component APIs and performance parameters to streamline development across projects.",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "author": "Jackson Dolman <jackson@cosmogroup.io>",
   "browserslist": {
     "production": [

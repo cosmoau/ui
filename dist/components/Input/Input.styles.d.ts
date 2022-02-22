@@ -238,7 +238,7 @@ export default function InputStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -249,7 +249,6 @@ export default function InputStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -297,7 +296,7 @@ export default function InputStyles(): {
             [x: string]: unknown;
         };
     }>>;
-    CheckboxLabelWrapper: import("@stitches/react/types/styled-component").StyledComponent<"label", import("@stitches/react/types/styled-component").StyledComponentProps<[{
+    CheckboxLabelWrapper: import("@stitches/react/types/styled-component").StyledComponent<"div", import("@stitches/react/types/styled-component").StyledComponentProps<[{
         display: string;
         verticalAlign: string;
         paddingLeft: string;
@@ -307,9 +306,11 @@ export default function InputStyles(): {
             size: {
                 1: {
                     ft: string;
+                    marginBottom: string;
                 };
                 2: {
                     ft: string;
+                    marginBottom: string;
                 };
             };
         };
@@ -527,7 +528,7 @@ export default function InputStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -538,7 +539,6 @@ export default function InputStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -800,7 +800,7 @@ export default function InputStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -811,7 +811,6 @@ export default function InputStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -1073,7 +1072,7 @@ export default function InputStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -1084,7 +1083,6 @@ export default function InputStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -1346,7 +1344,7 @@ export default function InputStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -1357,7 +1355,6 @@ export default function InputStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -1660,7 +1657,7 @@ export default function InputStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -1671,7 +1668,6 @@ export default function InputStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -1933,7 +1929,7 @@ export default function InputStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -1944,7 +1940,6 @@ export default function InputStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -2206,7 +2201,7 @@ export default function InputStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -2217,7 +2212,6 @@ export default function InputStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -2479,7 +2473,7 @@ export default function InputStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -2490,7 +2484,6 @@ export default function InputStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -2752,7 +2745,7 @@ export default function InputStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -2763,7 +2756,6 @@ export default function InputStyles(): {
             };
             fontSize: string;
             lineHeight: string;
-            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };

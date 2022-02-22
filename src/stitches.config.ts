@@ -188,10 +188,9 @@ export const { theme, css, styled, getCssText } = createStitches({
     br: (value: Stitches.PropertyValue<'color'>) => ({
       borderRight: `0.1rem solid ${value as Stitches.PropertyValue<'color'>}`,
     }),
-    ft: (value: Stitches.ScaleValue<'fontSizes' | 'lineHeights' | 'space'>) => ({
+    ft: (value: Stitches.ScaleValue<'fontSizes' | 'lineHeights'>) => ({
       fontSize: `${value as Stitches.ScaleValue<'fontSizes'>}!important`,
       lineHeight: `${value as Stitches.ScaleValue<'lineHeights'>}!important`,
-      marginBottom: `${value as Stitches.ScaleValue<'space'>}`,
 
       '&:last-child': {
         marginBottom: 0,

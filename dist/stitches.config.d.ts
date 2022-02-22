@@ -325,7 +325,7 @@ export declare const theme: string & {
     br: (value: Stitches.PropertyValue<'color'>) => {
         borderRight: string;
     };
-    ft: (value: Stitches.ScaleValue<'fontSizes' | 'lineHeights' | 'space'>) => {
+    ft: (value: Stitches.ScaleValue<'fontSizes' | 'lineHeights'>) => {
         [x: string]: string | {
             marginBottom: number;
             fontSize?: undefined;
@@ -335,7 +335,6 @@ export declare const theme: string & {
         };
         fontSize: string;
         lineHeight: string;
-        marginBottom: string;
         '&:last-child': {
             marginBottom: number;
         };
@@ -576,7 +575,7 @@ export declare const theme: string & {
     br: (value: Stitches.PropertyValue<'color'>) => {
         borderRight: string;
     };
-    ft: (value: Stitches.ScaleValue<'fontSizes' | 'lineHeights' | 'space'>) => {
+    ft: (value: Stitches.ScaleValue<'fontSizes' | 'lineHeights'>) => {
         [x: string]: string | {
             marginBottom: number;
             fontSize?: undefined;
@@ -586,7 +585,6 @@ export declare const theme: string & {
         };
         fontSize: string;
         lineHeight: string;
-        marginBottom: string;
         '&:last-child': {
             marginBottom: number;
         };
@@ -825,7 +823,7 @@ export declare const theme: string & {
     br: (value: Stitches.PropertyValue<'color'>) => {
         borderRight: string;
     };
-    ft: (value: Stitches.ScaleValue<'fontSizes' | 'lineHeights' | 'space'>) => {
+    ft: (value: Stitches.ScaleValue<'fontSizes' | 'lineHeights'>) => {
         [x: string]: string | {
             marginBottom: number;
             fontSize?: undefined;
@@ -835,7 +833,6 @@ export declare const theme: string & {
         };
         fontSize: string;
         lineHeight: string;
-        marginBottom: string;
         '&:last-child': {
             marginBottom: number;
         };

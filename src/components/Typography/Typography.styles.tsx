@@ -130,6 +130,7 @@ export default function TypographyStyles() {
   const HeadingOneWrapper = styled('h1', {
     ft: '$h1',
     fontWeight: 'bold',
+    marginBottom: '$h1',
 
     ...BaseStyles,
   });
@@ -137,6 +138,7 @@ export default function TypographyStyles() {
   const HeadingTwoWrapper = styled('h2', {
     ft: '$h2',
     fontWeight: 'bold',
+    marginBottom: '$h2',
 
     ...BaseStyles,
   });
@@ -144,6 +146,7 @@ export default function TypographyStyles() {
   const HeadingThreeWrapper = styled('h3', {
     ft: '$h3',
     fontWeight: 'bold',
+    marginBottom: '$h3',
 
     ...BaseStyles,
   });
@@ -151,6 +154,8 @@ export default function TypographyStyles() {
   const HeadingFourWrapper = styled('h4', {
     ft: '$h4',
     fontWeight: 'normal',
+    marginBottom: '$h4',
+
     opacity: 0.8,
 
     ...BaseStyles,
@@ -159,6 +164,7 @@ export default function TypographyStyles() {
   const HeadingFiveWrapper = styled('h5', {
     ft: '$h5',
     fontWeight: 'normal',
+    marginBottom: '$h5',
 
     ...BaseStyles,
   });
@@ -166,6 +172,7 @@ export default function TypographyStyles() {
   const HeadingSixWrapper = styled('h6', {
     ft: '$h6',
     fontWeight: 'normal',
+    marginBottom: '$h6',
 
     opacity: 0.8,
 
@@ -175,6 +182,7 @@ export default function TypographyStyles() {
   const TextOneWrapper = styled('p', {
     ft: '$t1',
     fontWeight: 'normal',
+    marginBottom: '$t1',
 
     ...BaseStyles,
   });
@@ -182,6 +190,7 @@ export default function TypographyStyles() {
   const TextTwoWrapper = styled('p', {
     ft: '$t2',
     fontWeight: 'normal',
+    marginBottom: '$t2',
 
     ...BaseStyles,
   });
@@ -189,6 +198,7 @@ export default function TypographyStyles() {
   const TextThreeWrapper = styled('p', {
     ft: '$t3',
     fontWeight: 'normal',
+    marginBottom: '$t3',
 
     ...BaseStyles,
   });

@@ -1,8 +1,8 @@
 # @cosmo-au/design-system
 
-The goal of the Cosmo Design System is to streamline our teams ability to build and maintain Cosmo projects, enforcing strict component APIs and performance parameters.
+The Cosmo Design System enforces strict component APIs and performance parameters to streamline development across projects.
 
-The system is built for use within Next.js, using Stitches for styling.
+Next + Stitches 🌈
 
 ### Installation
 
