@@ -1,6 +1,6 @@
 {
   "name": "@cosmo-au/design-system",
-  "description": "The goal of the Cosmo Design System is to streamline our teams ability to build and maintain Cosmo projects, enforcing strict component APIs and performance parameters.",
+  "description": "The Cosmo Design System enforces strict component APIs and performance parameters to streamline development across projects.",
   "version": "0.4.6",
   "author": "Jackson Dolman <jackson@cosmogroup.io>",
   "browserslist": {
