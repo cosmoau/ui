@@ -351,7 +351,7 @@ export default function ButtonStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -362,6 +362,7 @@ export default function ButtonStyles(): {
             };
             fontSize: string;
             lineHeight: string;
+            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };
@@ -641,7 +642,7 @@ export default function ButtonStyles(): {
             borderRight: string;
         };
         ft: (value: {
-            readonly [$$ScaleValue]: "fontSizes" | "lineHeights";
+            readonly [$$ScaleValue]: "space" | "fontSizes" | "lineHeights";
         }) => {
             [x: string]: string | {
                 marginBottom: number;
@@ -652,6 +653,7 @@ export default function ButtonStyles(): {
             };
             fontSize: string;
             lineHeight: string;
+            marginBottom: string;
             '&:last-child': {
                 marginBottom: number;
             };

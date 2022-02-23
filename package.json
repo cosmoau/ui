@@ -70,7 +70,7 @@
   "prettier": "@cosmo-au/eslint-config-cosmo/.prettierrc.json",
   "repository": "https://github.com/cosmo-au/design-system",
   "scripts": {
-    "build": "yarn lint && microbundle --jsx React.createElement --compress",
+    "build": "yarn lint && microbundle --jsx React.createElement --compress --format esm,cjs,modern",
     "clean": "prettier --write '**/*.{js,css,jsx,tsx,ts}' '!node_modules/**' '!.git/**' '!dist/**'",
     "dev": "parcel test/index.html --dist-dir test/dist --open",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
@@ -78,6 +78,5 @@
   },
   "source": "src/index.tsx",
   "types": "dist/index.d.ts",
-  "umd:main": "dist/index.umd.js",
   "packageManager": "yarn@3.1.1"
 }

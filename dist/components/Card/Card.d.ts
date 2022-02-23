@@ -1,7 +1,7 @@
 import { CSS } from '@stitches/react/types/css-util';
 import { ReactNode } from 'react';
 export interface Props {
-    border?: boolean;
+    border?: boolean | 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink';
     children: ReactNode;
     css?: CSS;
     extra?: boolean;

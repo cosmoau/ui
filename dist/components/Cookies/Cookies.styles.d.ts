@@ -1,5 +1,58 @@
 export default function CookiesStyles(): {
-    Wrapper: import("@stitches/react/types/styled-component").StyledComponent<"div", {}, {}, import("@stitches/react/types/css-util").CSS<{}, {
+    Wrapper: import("@stitches/react/types/styled-component").StyledComponent<"div", import("@stitches/react/types/styled-component").StyledComponentProps<[{
+        [x: string]: string | number | {
+            isExiting: {
+                true: {
+                    animation: string;
+                };
+            };
+            verticalAlign?: undefined;
+            cursor?: undefined;
+            transition?: undefined;
+            '&:hover'?: undefined;
+            maxWidth?: undefined;
+        } | {
+            verticalAlign: string;
+            cursor: string;
+            transition: string;
+            '&:hover': {
+                opacity: number;
+            };
+            isExiting?: undefined;
+            maxWidth?: undefined;
+        } | {
+            maxWidth: string;
+            isExiting?: undefined;
+            verticalAlign?: undefined;
+            cursor?: undefined;
+            transition?: undefined;
+            '&:hover'?: undefined;
+        };
+        position: string;
+        transition: string;
+        zIndex: string;
+        bottom: string;
+        left: number;
+        right: number;
+        maxWidth: string;
+        margin: string;
+        textAlign: string;
+        variants: {
+            isExiting: {
+                true: {
+                    animation: string;
+                };
+            };
+        };
+        svg: {
+            verticalAlign: string;
+            cursor: string;
+            transition: string;
+            '&:hover': {
+                opacity: number;
+            };
+        };
+    }]>, {}, import("@stitches/react/types/css-util").CSS<{}, {
         colors: {
             baseBody: string;
             base100: string;
