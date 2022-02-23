@@ -53,9 +53,9 @@ export const { theme, css, styled, getCssText } = createStitches({
       pink200: 'rgb(240, 195, 226)',
       pink300: 'rgb(245, 213, 235)',
       pink400: 'rgba(107, 26, 83, 0.2)',
-      border100: 'rgba(0, 1, 2, 0.133)',
+      border100: 'rgba(0, 1, 2, 0.122)',
       border200: 'rgba(0, 1, 2, 0.088)',
-      border300: 'rgba(0, 1, 2, 0.055)',
+      border300: 'rgba(0, 1, 2, 0.066)',
     },
     space: {
       1: '0.2rem',
@@ -120,7 +120,7 @@ export const { theme, css, styled, getCssText } = createStitches({
     },
     shadows: {
       1: '0 0.2rem 0.1rem rgba(0, 0, 0, 0.01)',
-      2: '0 0.4rem 0.3rem rgba(0, 0, 0, 0.033)',
+      2: '0 0.5rem 0.25rem rgba(0, 0, 0, 0.033)',
       3: '0 1rem 2rem rgba(0, 0, 0, 0.099)',
     },
     zIndices: {

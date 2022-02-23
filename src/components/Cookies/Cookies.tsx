@@ -18,6 +18,7 @@ const { Wrapper } = CookiesStyles();
 
 export default function Cookies({ css, href = 'https://cosmogroup.io/legal/privacy', token = 'cooookies' }: Props): JSX.Element {
   const [isShown, setIsShown] = useState(false as boolean);
+  const [isExiting, setIsExiting] = useState(false as boolean);
 
   useEffect(() => {
     const cookies = parseCookies();
@@ -33,13 +34,15 @@ export default function Cookies({ css, href = 'https://cosmogroup.io/legal/priva
       maxAge: 365 * 24 * 60 * 60,
       path: '/',
     });
-
-    setIsShown(false);
+    setIsExiting(true);
+    setTimeout(() => {
+      setIsShown(false);
+    }, 2500);
   };
 
   return (
     isShown && (
-      <Wrapper css={css}>
+      <Wrapper css={css} isExiting={isExiting}>
         <Card
           border
           css={{

@@ -55,7 +55,12 @@ export default function Submenu({ align = 'left', css, hover, id, options, passK
             right: align === 'left' ? '0' : 'auto',
           }}>
           {options.map(({ value, name, icon }) => (
-            <ItemWrapper className={path === value ? 'active' : ''} key={value}>
+            <ItemWrapper
+              className={path === value ? 'active' : ''}
+              key={value}
+              onClickCapture={(): void => {
+                setIsShown(false);
+              }}>
               <Link href={value} passHref>
                 <a>
                   {icon ? (

@@ -21,7 +21,7 @@ export interface Props extends InputHTMLAttributes<HTMLInputElement> {
   reset?: boolean;
   resetFunction?: any;
   reveal?: boolean;
-  submit?: boolean;
+  submit?: boolean | string;
   submitFunction?: any;
   submitOverride?: any;
   width?: 1 | 2 | 3 | 4 | 5;
