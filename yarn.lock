@@ -1390,7 +1390,7 @@ __metadata:
   resolution: "@cosmo-au/design-system@workspace:."
   dependencies:
     "@cosmo-au/eslint-config-cosmo": ^1.1.9
-    "@stitches/react": ^1.2.6
+    "@stitches/react": ^1.2.7
     "@types/react": ^17.0.39
     "@types/react-dom": ^17.0.11
     eslint: 8.9.0
@@ -2396,12 +2396,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@stitches/react@npm:^1.2.6":
-  version: 1.2.6
-  resolution: "@stitches/react@npm:1.2.6"
+"@stitches/react@npm:^1.2.7":
+  version: 1.2.7
+  resolution: "@stitches/react@npm:1.2.7"
   peerDependencies:
     react: ">= 16.3.0"
-  checksum: 416088cdde17a22d6cdb04cf1cf756c6e5fc291dd7e41f82ce422bb95432ad32b6d990e7264d996d367c40bbc674d61be087e4e1f7b23eea7f81ef6266373a9c
+  checksum: f4a66d208607a5f72d902d06388c0e3c5cec6cccc207e3b01228d3dc8e5b09742f4191fe932fac84c19ece825df174009025ba5939511501914785ed26a2c767
   languageName: node
   linkType: hard
 
