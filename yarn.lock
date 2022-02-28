@@ -1398,7 +1398,7 @@ __metadata:
     next: ^12.1.0
     nookies: ^2.5.2
     parcel: ^2.3.2
-    phosphor-react: ^1.4.0
+    phosphor-react: ^1.4.1
     prettier: ^2.5.1
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -6088,12 +6088,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"phosphor-react@npm:^1.4.0":
-  version: 1.4.0
-  resolution: "phosphor-react@npm:1.4.0"
+"phosphor-react@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "phosphor-react@npm:1.4.1"
   peerDependencies:
     react: ">=16"
-  checksum: 10fbd32a2e5b51259a251059d5afcf6781af95e92ed0e6ce522ecac5c531e3c6b5d38eb1f7b5450725a14d8e4043a4080a99ebdb58bba7041e5c7333a59457a9
+  checksum: 94aa316eca7bc64b09f146f7d3578d8bd66bc7dbec8f92b6407a5ab6e86a5f42ef97eeb5ec678f355037a0eaa08a9a5303f26fe5d7491f102e0af3a4686acf2d
   languageName: node
   linkType: hard
 
