@@ -1,8 +1,7 @@
 import { CSS } from '@stitches/react/types/css-util';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useState, useRef, ReactNode } from 'react';
-import { useOnClickOutside, useUpdateEffect } from 'usehooks-ts';
+import { useOnClickOutside } from 'usehooks-ts';
 
 import { Heading } from '../Typography';
 
@@ -36,15 +35,14 @@ export default function Submenu({ align = 'left', css, hover, id, options, passK
     setIsShown(!isShown);
   };
 
+  const handleNavigate = (value: string): void => {
+    router.push(value);
+    setIsShown(false);
+  };
+
   useOnClickOutside(ref, () => {
     setIsShown(false);
   });
-
-  useUpdateEffect(() => {
-    if (isShown) {
-      setIsShown(false);
-    }
-  }, [isShown]);
 
   return (
     <Wrapper css={css} id={id} key={passKey} ref={ref}>
@@ -62,31 +60,29 @@ export default function Submenu({ align = 'left', css, hover, id, options, passK
           }}>
           {options.map(({ value, name, icon }) => (
             <ItemWrapper className={path === value ? 'active' : ''} key={value}>
-              <Link href={value} passHref>
-                <a>
-                  {icon ? (
-                    <IconWrapper>
-                      {icon}&nbsp;{' '}
-                      <Heading
-                        css={{
-                          opacity: 1,
-                        }}
-                        inline
-                        level={6}>
-                        {name}
-                      </Heading>
-                    </IconWrapper>
-                  ) : (
+              <a onClick={() => handleNavigate(value)}>
+                {icon ? (
+                  <IconWrapper>
+                    {icon}&nbsp;{' '}
                     <Heading
                       css={{
                         opacity: 1,
                       }}
+                      inline
                       level={6}>
                       {name}
                     </Heading>
-                  )}
-                </a>
-              </Link>
+                  </IconWrapper>
+                ) : (
+                  <Heading
+                    css={{
+                      opacity: 1,
+                    }}
+                    level={6}>
+                    {name}
+                  </Heading>
+                )}
+              </a>
             </ItemWrapper>
           ))}
         </GroupWrapper>
