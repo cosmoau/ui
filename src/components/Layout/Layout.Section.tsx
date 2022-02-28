@@ -14,15 +14,16 @@ export interface Props {
 
 const { SectionWrapper } = LayoutStyles();
 
-export default function Section({ align = 'inherit', bottom, children, css, id, top }: Props): JSX.Element {
+export default function Section({ align = 'baseline', bottom, children, css, id, top }: Props): JSX.Element {
   return (
     <SectionWrapper
       bottom={bottom || 'default'}
       css={{
         alignItems: align,
         justifyContent: align,
+
         '*': {
-          verticalAlign: align,
+          alignItems: align,
         },
         ...css,
       }}

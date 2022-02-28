@@ -5,6 +5,7 @@ export default function CardStyles() {
     display: 'block',
     position: 'relative',
     borderRadius: '$2',
+    height: '100%',
     transition: '$1',
     color: 'inherit',
     variants: {

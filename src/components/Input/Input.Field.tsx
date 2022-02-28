@@ -102,7 +102,7 @@ export default function InputField({
               <WarningOctagon weight='duotone' />
             </Badge>
           )}
-          {reset && (
+          {reset && isValue?.length > 2 && (
             <Button onClick={() => handleReset()} theme='navy'>
               <X weight='duotone' />
             </Button>

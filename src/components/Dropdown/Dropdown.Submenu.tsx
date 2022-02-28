@@ -2,7 +2,7 @@ import { CSS } from '@stitches/react/types/css-util';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useState, useRef, ReactNode } from 'react';
-import { useOnClickOutside } from 'usehooks-ts';
+import { useOnClickOutside, useUpdateEffect } from 'usehooks-ts';
 
 import { Heading } from '../Typography';
 
@@ -40,6 +40,12 @@ export default function Submenu({ align = 'left', css, hover, id, options, passK
     setIsShown(false);
   });
 
+  useUpdateEffect(() => {
+    if (isShown) {
+      setIsShown(false);
+    }
+  }, [isShown]);
+
   return (
     <Wrapper css={css} id={id} key={passKey} ref={ref}>
       <TriggerWrapper hover={hover} onClickCapture={handleClick}>
@@ -55,12 +61,7 @@ export default function Submenu({ align = 'left', css, hover, id, options, passK
             right: align === 'left' ? '0' : 'auto',
           }}>
           {options.map(({ value, name, icon }) => (
-            <ItemWrapper
-              className={path === value ? 'active' : ''}
-              key={value}
-              onClickCapture={(): void => {
-                setIsShown(false);
-              }}>
+            <ItemWrapper className={path === value ? 'active' : ''} key={value}>
               <Link href={value} passHref>
                 <a>
                   {icon ? (

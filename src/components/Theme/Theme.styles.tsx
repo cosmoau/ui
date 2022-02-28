@@ -20,7 +20,6 @@ export default function ThemeStyles() {
       fontSize: '1.6rem !important',
       fontFamily: '$body',
       height: '100%',
-      boxSizing: 'border-box;',
       margin: 0,
       padding: 0,
       border: 0,
@@ -29,7 +28,6 @@ export default function ThemeStyles() {
       WebkitFontSmoothing: 'antialiased',
       MozOsxFontSmoothing: 'grayscale',
       WebkitAppearance: 'none',
-      boxSizing: 'border-box',
       outline: 'none',
       letterSpacing: 'normal',
       wordSpacing: 'normal',
@@ -41,6 +39,13 @@ export default function ThemeStyles() {
       paddingBlockEnd: 0,
       paddingInlineStart: 0,
       paddingInlineEnd: 0,
+      boxSizing: 'inherit',
+    },
+    '*:before': {
+      boxSizing: 'inherit',
+    },
+    '*:after': {
+      boxSizing: 'inherit',
     },
     button: {
       appearance: 'none',

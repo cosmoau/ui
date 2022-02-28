@@ -3,6 +3,7 @@ export default function CardStyles(): {
         display: string;
         position: string;
         borderRadius: string;
+        height: string;
         transition: string;
         color: string;
         variants: {

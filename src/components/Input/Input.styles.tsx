@@ -83,6 +83,7 @@ export default function InputStyles() {
     paddingRight: 'calc($5 / 1.5)',
     boxShadow: '$1',
     transition: '$1',
+    maxWidth: '100%',
     '&:hover': {
       boxShadow: '$2',
       border: '0.1rem solid $border100',
