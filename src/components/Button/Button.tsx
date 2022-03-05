@@ -8,6 +8,7 @@ import ButtonStyles from './Button.styles';
 export interface Props extends HTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   css?: CSS;
+  disabled?: boolean;
   icon?: JSX.Element;
   iconPosition?: 'left' | 'right';
   id?: string;
@@ -20,13 +21,13 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
 
 const { Wrapper, IconWrapper } = ButtonStyles();
 
-export default function Button({ children, css, icon, iconPosition = 'left', id, inline = true, inlineSpacer, loader, onClick, theme, ...props }: Props): JSX.Element {
+export default function Button({ children, css, disabled, icon, iconPosition = 'left', id, inline = true, inlineSpacer, loader, onClick, theme, ...props }: Props): JSX.Element {
   return loader ? (
     <Wrapper>
       <Loading />
     </Wrapper>
   ) : (
-    <Wrapper {...props} css={css} id={id || undefined} inline={inline} inlineSpacer={inlineSpacer || 'default'} onClick={onClick} theme={theme || 'default'}>
+    <Wrapper {...props} css={css} disabled={disabled} id={id || undefined} inline={inline} inlineSpacer={inlineSpacer || 'default'} onClick={onClick} theme={theme || 'default'}>
       {icon && iconPosition && iconPosition === 'left' && <IconWrapper iconPosition={iconPosition}>{icon}</IconWrapper>}
       {children}
       {icon && iconPosition && iconPosition === 'right' && <IconWrapper iconPosition={iconPosition}>{icon}</IconWrapper>}

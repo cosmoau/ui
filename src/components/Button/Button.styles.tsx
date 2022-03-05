@@ -148,7 +148,7 @@ export default function ButtonStyles() {
     boxShadow: '$1',
     '&:disabled': {
       opacity: 0.5,
-      cursor: 'wait',
+      cursor: 'not-allowed',
     },
   });
 
