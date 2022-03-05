@@ -14,7 +14,7 @@ export interface Props {
 
 const { SectionWrapper } = LayoutStyles();
 
-export default function Section({ align = 'baseline', bottom, children, css, id, top }: Props): JSX.Element {
+export default function Section({ align = 'initial', bottom, children, css, id, top }: Props): JSX.Element {
   return (
     <SectionWrapper
       bottom={bottom || 'default'}
