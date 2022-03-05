@@ -55,8 +55,8 @@ export default function Submenu({ align = 'left', css, hover, id, options, passK
           css={{
             minWidth: width || '15rem',
             maxWidth: width || '80rem',
-            left: align === 'right' ? 'auto' : '0',
-            right: align === 'left' ? '0' : 'auto',
+            left: align === 'left' ? '0' : 'auto',
+            right: align === 'right' ? '0' : 'auto',
           }}>
           {options.map(({ value, name, icon }) => (
             <ItemWrapper className={path === value ? 'active' : ''} key={value}>

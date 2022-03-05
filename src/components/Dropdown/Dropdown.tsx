@@ -51,8 +51,8 @@ export default function Dropdown({ actions, align = 'left', css, id, label, opti
           css={{
             minWidth: width || '15rem',
             maxWidth: width || '80rem',
-            left: align === 'right' ? 'auto' : '0',
-            right: align === 'left' ? '0' : 'auto',
+            left: align === 'left' ? '0' : 'auto',
+            right: align === 'right' ? '0' : 'auto',
           }}>
           {options.map((option) => (
             <ItemWrapper className={label === option.name ? 'active' : 'inactive'} key={option.value} onClickCapture={() => handleActions(option.value, option.name)}>
