@@ -3,6 +3,7 @@ import { HTMLAttributes, MouseEventHandler, ReactNode } from 'react';
 export interface Props extends HTMLAttributes<HTMLButtonElement> {
     children: ReactNode;
     css?: CSS;
+    disabled?: boolean;
     icon?: JSX.Element;
     iconPosition?: 'left' | 'right';
     id?: string;
@@ -12,5 +13,5 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
     onClick?: MouseEventHandler<HTMLButtonElement>;
     theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'transparent' | 'dark';
 }
-export default function Button({ children, css, icon, iconPosition, id, inline, inlineSpacer, loader, onClick, theme, ...props }: Props): JSX.Element;
+export default function Button({ children, css, disabled, icon, iconPosition, id, inline, inlineSpacer, loader, onClick, theme, ...props }: Props): JSX.Element;
 //# sourceMappingURL=Button.d.ts.map
