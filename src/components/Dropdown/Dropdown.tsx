@@ -20,7 +20,7 @@ export interface Props {
     value: string;
   }>;
   passKey: string;
-  width?: number;
+  width?: number | string;
 }
 
 const { Wrapper, GroupWrapper, ItemWrapper, IconWrapper } = DropdownStyles();

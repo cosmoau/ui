@@ -19,7 +19,7 @@ export interface Props {
   }>;
   passKey: string;
   trigger: ReactNode;
-  width?: number;
+  width?: number | string;
 }
 
 const { Wrapper, TriggerWrapper, GroupWrapper, ItemWrapper, IconWrapper } = DropdownStyles();
