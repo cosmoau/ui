@@ -7,12 +7,11 @@ export interface Props {
     id?: string;
     label: string | ReactNode;
     options: Array<{
-        icon?: ReactNode;
         name: string;
         value: string;
     }>;
     passKey: string;
-    width?: number;
+    width?: number | string;
 }
 export default function Dropdown({ actions, align, css, id, label, options, passKey, width }: Props): JSX.Element;
 //# sourceMappingURL=Dropdown.d.ts.map

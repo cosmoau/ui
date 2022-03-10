@@ -8,6 +8,7 @@ export interface Props {
     id?: string;
     size?: 1 | 2;
     tooltip?: string;
+    type?: 'hover' | 'click';
 }
-export default function Checkbox({ checked, children, css, disabled, id, size, tooltip }: Props): JSX.Element;
+export default function Checkbox({ checked, children, css, disabled, id, size, tooltip, type }: Props): JSX.Element;
 //# sourceMappingURL=Input.Checkbox.d.ts.map

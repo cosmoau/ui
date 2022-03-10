@@ -1,14 +1,26 @@
 export default function ButtonStyles(): {
     Wrapper: import("@stitches/react/types/styled-component").StyledComponent<"button", import("@stitches/react/types/styled-component").StyledComponentProps<[{
         textAlign: string;
-        alignContent: string;
-        verticalAlign: string;
         position: string;
         transition: string;
         fontWeight: string;
         padding: string;
         borderRadius: string;
         ft: string;
+        alignItems: string;
+        horizontalAlign: string;
+        '*': {
+            alignItems: string;
+            display: string;
+            verticalAlign: string;
+            alignSelf: string;
+            lineHeight: string;
+        };
+        boxShadow: string;
+        '&:disabled': {
+            opacity: number;
+            cursor: string;
+        };
         variants: {
             theme: {
                 default: {
@@ -131,11 +143,6 @@ export default function ButtonStyles(): {
                     boxShadow: string;
                 };
             };
-        };
-        boxShadow: string;
-        '&:disabled': {
-            opacity: number;
-            cursor: string;
         };
     }]>, {}, import("@stitches/react/types/css-util").CSS<{}, {
         colors: {
@@ -410,8 +417,10 @@ export default function ButtonStyles(): {
         };
     }>>;
     IconWrapper: import("@stitches/react/types/styled-component").StyledComponent<"div", import("@stitches/react/types/styled-component").StyledComponentProps<[{
-        display: string;
-        verticalAlign: string;
+        svg: {
+            width: string;
+            height: string;
+        };
         variants: {
             iconPosition: {
                 left: {
@@ -421,11 +430,6 @@ export default function ButtonStyles(): {
                     marginLeft: string;
                 };
             };
-        };
-        svg: {
-            verticalAlign: string;
-            width: string;
-            height: string;
         };
     }]>, {}, import("@stitches/react/types/css-util").CSS<{}, {
         colors: {

@@ -6,13 +6,12 @@ export interface Props {
     hover?: boolean;
     id?: string;
     options: Array<{
-        icon?: ReactNode;
         name: string;
         value: string;
     }>;
     passKey: string;
     trigger: ReactNode;
-    width?: number;
+    width?: number | string;
 }
 export default function Submenu({ align, css, hover, id, options, passKey, trigger, width }: Props): JSX.Element;
 //# sourceMappingURL=Dropdown.Submenu.d.ts.map

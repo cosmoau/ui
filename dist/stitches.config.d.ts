@@ -884,6 +884,46 @@ export declare const darkTheme: string & {
     className: string;
     selector: string;
 } & import("@stitches/react/types/stitches").ThemeTokens<{
-    colors: {};
+    colors: {
+        baseBody: string;
+        base100: string;
+        base200: string;
+        base300: string;
+        base400: string;
+        baseContrast100: string;
+        baseContrast200: string;
+        baseContrast300: string;
+        baseContrast400: string;
+        red100: string;
+        red200: string;
+        red300: string;
+        red400: string;
+        yellow100: string;
+        yellow200: string;
+        yellow300: string;
+        yellow400: string;
+        green100: string;
+        green200: string;
+        green300: string;
+        green400: string;
+        blue100: string;
+        blue200: string;
+        blue300: string;
+        blue400: string;
+        navy100: string;
+        navy200: string;
+        navy300: string;
+        navy400: string;
+        purple100: string;
+        purple200: string;
+        purple300: string;
+        purple400: string;
+        pink100: string;
+        pink200: string;
+        pink300: string;
+        pink400: string;
+        border100: string;
+        border200: string;
+    };
 }, "">;
 //# sourceMappingURL=stitches.config.d.ts.map
