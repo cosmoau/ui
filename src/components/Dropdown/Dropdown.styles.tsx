@@ -26,6 +26,7 @@ export default function DropdownStyles() {
     outline: 'none',
     userSelect: 'none',
     transition: '$1',
+
     variants: {
       hover: {
         false: {
@@ -80,6 +81,7 @@ export default function DropdownStyles() {
     cursor: 'pointer',
     borderRadius: '$1',
     ft: '$h5',
+    lineHeight: '1.1 !important',
     opacity: 1,
 
     a: {
@@ -108,16 +110,5 @@ export default function DropdownStyles() {
     },
   });
 
-  const IconWrapper = styled('div', {
-    display: 'inline-flex',
-    alignItems: 'center',
-    width: 'auto',
-    marginRight: '$3',
-    height: '100%',
-    position: 'relative',
-    verticalAlign: 'middle',
-    alignSelf: 'center',
-  });
-
-  return { Wrapper, TriggerWrapper, GroupWrapper, ItemWrapper, IconWrapper };
+  return { Wrapper, TriggerWrapper, GroupWrapper, ItemWrapper };
 }

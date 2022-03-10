@@ -3,8 +3,6 @@ import { useRouter } from 'next/router';
 import React, { useState, useRef, ReactNode } from 'react';
 import { useOnClickOutside } from 'usehooks-ts';
 
-import { Heading } from '../Typography';
-
 import DropdownStyles from './Dropdown.styles';
 
 export interface Props {
@@ -13,7 +11,6 @@ export interface Props {
   hover?: boolean;
   id?: string;
   options: Array<{
-    icon?: ReactNode;
     name: string;
     value: string;
   }>;
@@ -22,7 +19,7 @@ export interface Props {
   width?: number | string;
 }
 
-const { Wrapper, TriggerWrapper, GroupWrapper, ItemWrapper, IconWrapper } = DropdownStyles();
+const { Wrapper, TriggerWrapper, GroupWrapper, ItemWrapper } = DropdownStyles();
 
 export default function Submenu({ align = 'left', css, hover, id, options, passKey, trigger, width }: Props): JSX.Element {
   const router = useRouter();
@@ -58,31 +55,9 @@ export default function Submenu({ align = 'left', css, hover, id, options, passK
             left: align === 'left' ? '0' : 'auto',
             right: align === 'right' ? '0' : 'auto',
           }}>
-          {options.map(({ value, name, icon }) => (
+          {options.map(({ value, name }) => (
             <ItemWrapper className={path === value ? 'active' : ''} key={value}>
-              <a onClickCapture={() => handleNavigate(value)}>
-                {icon ? (
-                  <IconWrapper>
-                    {icon}&nbsp;{' '}
-                    <Heading
-                      css={{
-                        opacity: 1,
-                      }}
-                      inline
-                      level={6}>
-                      {name}
-                    </Heading>
-                  </IconWrapper>
-                ) : (
-                  <Heading
-                    css={{
-                      opacity: 1,
-                    }}
-                    level={6}>
-                    {name}
-                  </Heading>
-                )}
-              </a>
+              <a onClickCapture={() => handleNavigate(value)}>{name}</a>
             </ItemWrapper>
           ))}
         </GroupWrapper>

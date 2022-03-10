@@ -3,14 +3,29 @@ import { styled } from '../../stitches.config';
 export default function ButtonStyles() {
   const Wrapper = styled('button', {
     textAlign: 'center',
-    alignContent: 'center',
-    verticalAlign: 'middle',
     position: 'relative',
     transition: '$1',
     fontWeight: 'normal',
-    padding: '$2 $4',
+    padding: '$2 $3',
     borderRadius: '$1',
     ft: '$h5',
+    alignItems: 'center',
+    horizontalAlign: 'left',
+
+    '*': {
+      alignItems: 'center',
+      display: 'inline-flex',
+      verticalAlign: 'middle',
+      alignSelf: 'center',
+      lineHeight: `1.1 !important`,
+    },
+
+    boxShadow: '$1',
+
+    '&:disabled': {
+      opacity: 0.5,
+      cursor: 'not-allowed',
+    },
     variants: {
       theme: {
         default: {
@@ -145,31 +160,22 @@ export default function ButtonStyles() {
         },
       },
     },
-    boxShadow: '$1',
-    '&:disabled': {
-      opacity: 0.5,
-      cursor: 'not-allowed',
-    },
   });
 
   const IconWrapper = styled('div', {
-    display: 'inline-flex',
-    verticalAlign: 'middle',
-
+    svg: {
+      width: '1.6rem',
+      height: '1.6rem',
+    },
     variants: {
       iconPosition: {
         left: {
-          marginRight: '$3',
+          marginRight: '$2',
         },
         right: {
-          marginLeft: '$3',
+          marginLeft: '$2',
         },
       },
-    },
-    svg: {
-      verticalAlign: 'middle',
-      width: '2.1rem',
-      height: '2.1rem',
     },
   });
 

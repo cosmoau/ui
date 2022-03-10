@@ -107,8 +107,8 @@ export const { theme, css, styled, getCssText } = createStitches({
       t3: '1.3',
     },
     sizes: {
-      1: '98.5%',
-      2: '98%',
+      1: '98%',
+      2: '97%',
       3: '1440px',
       4: '1600px',
       5: '1800px',
@@ -197,13 +197,13 @@ export const { theme, css, styled, getCssText } = createStitches({
       },
 
       [breakpoints.phone]: {
-        fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .85) !important`,
+        fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .8) !important`,
       },
       [breakpoints.tabletX]: {
-        fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .875) !important`,
+        fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .85) !important`,
       },
       [breakpoints.laptopX]: {
-        fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .9) !important`,
+        fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .875) !important`,
       },
       [breakpoints.desktopX]: {
         fontSize: `calc(${value as Stitches.ScaleValue<'fontSizes'>} * .95) !important`,

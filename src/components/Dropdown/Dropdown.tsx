@@ -15,7 +15,6 @@ export interface Props {
   id?: string;
   label: string | ReactNode;
   options: Array<{
-    icon?: ReactNode;
     name: string;
     value: string;
   }>;
@@ -23,7 +22,7 @@ export interface Props {
   width?: number | string;
 }
 
-const { Wrapper, GroupWrapper, ItemWrapper, IconWrapper } = DropdownStyles();
+const { Wrapper, GroupWrapper, ItemWrapper } = DropdownStyles();
 
 export default function Dropdown({ actions, align = 'left', css, id, label, options, passKey, width }: Props): JSX.Element {
   const ref = useRef(null);
@@ -56,7 +55,6 @@ export default function Dropdown({ actions, align = 'left', css, id, label, opti
           }}>
           {options.map((option) => (
             <ItemWrapper className={label === option.name ? 'active' : 'inactive'} key={option.value} onClickCapture={() => handleActions(option.value, option.name)}>
-              {option.icon && <IconWrapper>{option.icon}</IconWrapper>}
               {option.name}
             </ItemWrapper>
           ))}
