@@ -9,7 +9,7 @@ export interface Props {
         name: string;
         value: string;
     }>;
-    passKey: string;
+    passKey?: string;
     trigger: ReactNode;
     width?: number | string;
 }

@@ -9,7 +9,7 @@ import InputStyles from './Input.styles';
 
 export interface Props {
   checked?: boolean;
-  children?: ReactNode;
+  children: ReactNode;
   css?: CSS;
   disabled?: boolean;
   id?: string;

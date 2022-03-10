@@ -76,7 +76,6 @@ export default function DropdownStyles() {
     display: 'flex',
     textAlign: 'left',
     transition: '$1',
-    padding: '$3',
     borderBottom: '0.1rem solid $navy300',
     cursor: 'pointer',
     borderRadius: '$1',
@@ -84,9 +83,21 @@ export default function DropdownStyles() {
     lineHeight: '1.1 !important',
     opacity: 1,
 
+    variants: {
+      submenu: {
+        true: {
+          padding: 0,
+        },
+        false: {
+          padding: '$3',
+        },
+      },
+    },
+
     a: {
       display: 'block',
       width: '100%',
+      padding: '$3',
     },
 
     '&:hover': {

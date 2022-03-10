@@ -863,7 +863,47 @@ export default function DropdownStyles(): {
             [x: string]: unknown;
         };
     }>>;
-    ItemWrapper: import("@stitches/react/types/styled-component").StyledComponent<"div", {}, {}, import("@stitches/react/types/css-util").CSS<{}, {
+    ItemWrapper: import("@stitches/react/types/styled-component").StyledComponent<"div", import("@stitches/react/types/styled-component").StyledComponentProps<[{
+        display: string;
+        textAlign: string;
+        transition: string;
+        borderBottom: string;
+        cursor: string;
+        borderRadius: string;
+        ft: string;
+        lineHeight: string;
+        opacity: number;
+        variants: {
+            submenu: {
+                true: {
+                    padding: number;
+                };
+                false: {
+                    padding: string;
+                };
+            };
+        };
+        a: {
+            display: string;
+            width: string;
+            padding: string;
+        };
+        '&:hover': {
+            backgroundColor: string;
+        };
+        '&:last-child': {
+            borderBottom: number;
+        };
+        '&.active': {
+            backgroundColor: string;
+            '&:hover': {
+                backgroundColor: string;
+            };
+        };
+        phone: {
+            ft: string;
+        };
+    }]>, {}, import("@stitches/react/types/css-util").CSS<{}, {
         colors: {
             baseBody: any;
             base100: any;

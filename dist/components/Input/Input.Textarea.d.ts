@@ -3,7 +3,7 @@ import type { InputHTMLAttributes } from 'react';
 export interface Props extends InputHTMLAttributes<HTMLTextAreaElement> {
     changeFunction?: any;
     copy?: boolean;
-    css: CSS;
+    css?: CSS;
     maxLength?: number;
     rows?: number;
 }

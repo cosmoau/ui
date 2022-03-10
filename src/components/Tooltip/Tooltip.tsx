@@ -9,7 +9,7 @@ export interface Props {
   children: ReactNode;
   css?: CSS;
   id?: string;
-  passKey: string;
+  passKey?: string;
   trigger: ReactNode;
   type?: 'hover' | 'click';
 }

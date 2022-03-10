@@ -14,7 +14,7 @@ export interface Props {
     name: string;
     value: string;
   }>;
-  passKey: string;
+  passKey?: string;
   trigger: ReactNode;
   width?: number | string;
 }
@@ -56,7 +56,7 @@ export default function Submenu({ align = 'left', css, hover, id, options, passK
             right: align === 'right' ? '0' : 'auto',
           }}>
           {options.map(({ value, name }) => (
-            <ItemWrapper className={path === value ? 'active' : ''} key={value}>
+            <ItemWrapper className={path === value ? 'active' : ''} key={value} submenu={true}>
               <a onClickCapture={() => handleNavigate(value)}>{name}</a>
             </ItemWrapper>
           ))}

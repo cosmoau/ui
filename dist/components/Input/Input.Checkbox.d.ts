@@ -2,7 +2,7 @@ import { CSS } from '@stitches/react/types/css-util';
 import { ReactNode } from 'react';
 export interface Props {
     checked?: boolean;
-    children?: ReactNode;
+    children: ReactNode;
     css?: CSS;
     disabled?: boolean;
     id?: string;

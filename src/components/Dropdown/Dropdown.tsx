@@ -18,7 +18,7 @@ export interface Props {
     name: string;
     value: string;
   }>;
-  passKey: string;
+  passKey?: string;
   width?: number | string;
 }
 
@@ -54,7 +54,11 @@ export default function Dropdown({ actions, align = 'left', css, id, label, opti
             right: align === 'right' ? '0' : 'auto',
           }}>
           {options.map((option) => (
-            <ItemWrapper className={label === option.name ? 'active' : 'inactive'} key={option.value} onClickCapture={() => handleActions(option.value, option.name)}>
+            <ItemWrapper
+              className={label === option.name ? 'active' : 'inactive'}
+              key={option.value}
+              onClickCapture={() => handleActions(option.value, option.name)}
+              submenu={false}>
               {option.name}
             </ItemWrapper>
           ))}

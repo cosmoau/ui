@@ -10,7 +10,7 @@ export interface Props {
         name: string;
         value: string;
     }>;
-    passKey: string;
+    passKey?: string;
     width?: number | string;
 }
 export default function Dropdown({ actions, align, css, id, label, options, passKey, width }: Props): JSX.Element;

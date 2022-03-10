@@ -6,7 +6,7 @@ export default function ButtonStyles() {
     position: 'relative',
     transition: '$1',
     fontWeight: 'normal',
-    padding: '$2 $3',
+    padding: '$2 $4',
     borderRadius: '$1',
     ft: '$h5',
     alignItems: 'center',
