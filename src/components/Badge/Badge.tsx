@@ -2,11 +2,13 @@ import { CSS } from '@stitches/react/types/css-util';
 import { Circle } from 'phosphor-react';
 import React, { ReactNode } from 'react';
 
+import { Element } from '../Layout';
 import { Loading } from '../Loading';
 
 import BadgeStyles from './Badge.styles';
 
 export interface Props {
+  border?: boolean;
   children: ReactNode;
   css?: CSS;
   dot?: boolean | 'pulse';
@@ -16,31 +18,26 @@ export interface Props {
   inlineSpacer?: 1 | 2 | 3 | 4 | 5 | 6;
   loader?: boolean;
   shadow?: boolean;
-  theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'border';
+  theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink';
 }
 
-const { Wrapper, PulseWrapper } = BadgeStyles();
+const { Wrapper, DotWrapper } = BadgeStyles();
 
-export default function Badge({ children, css, dot, dotColor, id, inline = true, inlineSpacer, loader, shadow, theme }: Props): JSX.Element {
-  return loader ? (
-    <Wrapper
-      css={{
-        height: '$7',
-      }}
-      id={id || undefined}>
-      <Loading />
-    </Wrapper>
-  ) : (
-    <Wrapper css={css} id={id || undefined} inline={inline} inlineSpacer={inlineSpacer || 'default'} shadow={shadow} theme={theme || 'default'}>
-      {dot &&
-        (dot === 'pulse' ? (
-          <PulseWrapper dotColor={dotColor || 'default'}>
-            <Circle size={10} style={{ marginRight: 3.33 }} weight='fill' />
-          </PulseWrapper>
-        ) : (
-          <Circle size={10} style={{ marginRight: 3.33 }} weight='fill' />
-        ))}
-      {children}
+export default function Badge({ border = true, children, css, dot, dotColor, id, inline = true, inlineSpacer, loader, shadow, theme }: Props): JSX.Element {
+  return (
+    <Wrapper border={border} css={css} id={id || undefined} inline={inline} inlineSpacer={inlineSpacer || 'default'} shadow={shadow} theme={theme || 'default'}>
+      {loader ? (
+        <Loading />
+      ) : (
+        <Element>
+          {dot && (
+            <DotWrapper dotColor={dotColor || 'default'} pulse={dot === 'pulse'}>
+              <Circle size={10} style={{ marginRight: 3.33 }} weight='fill' />
+            </DotWrapper>
+          )}
+          {children}
+        </Element>
+      )}
     </Wrapper>
   );
 }

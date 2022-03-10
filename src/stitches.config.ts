@@ -258,7 +258,6 @@ export const { theme, css, styled, getCssText } = createStitches({
 export const darkTheme = createTheme('dark', {
   colors: {
     ...(theme.colors as object),
-    /*
     baseBody: 'rgb(1, 1, 11)',
     base100: 'rgb(255, 255, 255)',
     base200: '#e2feff5)',
@@ -298,6 +297,5 @@ export const darkTheme = createTheme('dark', {
     pink400: 'rgba(107, 26, 83, 0.2)',
     border100: 'rgba(255, 255, 255, 0.15)',
     border200: 'rgba(255, 255, 255, 0.05)',
-    */
   },
 });

@@ -79,7 +79,7 @@ export default function DropdownStyles() {
     borderBottom: '0.1rem solid $navy300',
     cursor: 'pointer',
     borderRadius: '$1',
-    ft: '$h6',
+    ft: '$h5',
     opacity: 1,
 
     a: {

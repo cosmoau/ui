@@ -25,8 +25,16 @@ export default function BadgeStyles() {
     transition: '$1',
     padding: '$2 calc($4 / 1.5)',
     borderRadius: '$3',
+    ft: '$h6',
 
     variants: {
+      border: {
+        true: {
+          backgroundColor: '$baseContrast100',
+          color: '$base100',
+          border: '0.1rem solid $border200',
+        },
+      },
       theme: {
         default: {
           backgroundColor: '$baseContrast100',
@@ -59,11 +67,6 @@ export default function BadgeStyles() {
         pink: {
           backgroundColor: '$pink300',
           color: '$pink100',
-        },
-        border: {
-          backgroundColor: '$baseContrast100',
-          color: '$base100',
-          border: '0.1rem solid $border200',
         },
       },
       inline: {
@@ -113,9 +116,8 @@ export default function BadgeStyles() {
     },
   });
 
-  const PulseWrapper = styled('div', {
-    animation: `${pulseAnimation} 1.5s infinite`,
-    display: 'inline-flex',
+  const DotWrapper = styled('div', {
+    display: 'inline-block',
     verticalAlign: 'middle',
     marginRight: '$1',
     variants: {
@@ -145,11 +147,16 @@ export default function BadgeStyles() {
           color: '$pink100',
         },
       },
+      pulse: {
+        true: {
+          animation: `${pulseAnimation} 1.5s infinite`,
+        },
+      },
     },
   });
 
   return {
     Wrapper,
-    PulseWrapper,
+    DotWrapper,
   };
 }

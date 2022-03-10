@@ -60,7 +60,7 @@ export default function Submenu({ align = 'left', css, hover, id, options, passK
           }}>
           {options.map(({ value, name, icon }) => (
             <ItemWrapper className={path === value ? 'active' : ''} key={value}>
-              <a onClick={() => handleNavigate(value)}>
+              <a onClickCapture={() => handleNavigate(value)}>
                 {icon ? (
                   <IconWrapper>
                     {icon}&nbsp;{' '}
