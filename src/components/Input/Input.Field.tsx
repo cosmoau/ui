@@ -44,7 +44,6 @@ export default function InputField({
   submitFunction,
   submitOverride,
   width = 2,
-
   id,
   type,
   value,
@@ -76,6 +75,12 @@ export default function InputField({
     setIsValue('');
     if (resetFunction) {
       resetFunction();
+    }
+  }
+
+  function handleSubmit() {
+    if (submitFunction) {
+      submitFunction(isValue);
     }
   }
 
@@ -118,13 +123,7 @@ export default function InputField({
             </Button>
           )}
           {!submitOverride && submit && (
-            <Button
-              onClick={() => ({
-                if(submitFunction) {
-                  submitFunction(isValue);
-                },
-              })}
-              theme='navy'>
+            <Button onClick={() => handleSubmit()} theme='navy'>
               {typeof submit === 'string' ? submit : 'Submit'}
             </Button>
           )}
