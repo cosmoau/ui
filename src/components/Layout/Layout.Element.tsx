@@ -14,7 +14,7 @@ export interface Props {
 
 const { ElementWrapper } = LayoutStyles();
 
-export default function Element({ align = 'inherit', bottom, children, css, id, top }: Props): JSX.Element {
+export default function Element({ align = 'inherit', bottom, children, css, id, top, ...props }: Props): JSX.Element {
   return (
     <ElementWrapper
       bottom={bottom || 'default'}
@@ -23,7 +23,8 @@ export default function Element({ align = 'inherit', bottom, children, css, id, 
         ...css,
       }}
       id={id}
-      top={top || 'default'}>
+      top={top || 'default'}
+      {...props}>
       {children}
     </ElementWrapper>
   );

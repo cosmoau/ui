@@ -41,11 +41,11 @@ export default function InputStyles() {
       size: {
         1: {
           ft: '$h5',
-          marginBottom: 0 + '!important',
+          marginBottom: `${0}!important`,
         },
         2: {
           ft: '$h6',
-          marginBottom: 0 + '!important',
+          marginBottom: `${0}!important`,
         },
       },
     },
@@ -236,6 +236,43 @@ export default function InputStyles() {
     },
   });
 
+  const CodeWrapper = styled('pre', {
+    width: '100%',
+    height: '100%',
+    borderRadius: '$2',
+    backgroundColor: '$baseContrast100 !important',
+    border: '0.1rem solid $border100',
+    padding: '$5',
+    boxShadow: '$1',
+    transition: '$1',
+
+    '&:hover': {
+      boxShadow: '$2',
+      border: '0.1rem solid $border100',
+    },
+    '&:focus-within': {
+      boxShadow: '$2',
+      border: '0.1rem solid $border100',
+    },
+    '&:active': {
+      boxShadow: '$2',
+      border: '0.1rem solid $border100',
+    },
+  });
+
+  const CodeInnerWrapper = styled('code', {
+    display: 'inline-block',
+    width: '80%',
+    margin: '0 auto',
+  });
+
+  const CodeCopyWrapper = styled('div', {
+    display: 'inline-block',
+    width: '20%',
+    textAlign: 'right',
+    verticalAlign: 'top',
+  });
+
   return {
     CheckboxWrapper,
     CheckboxLabelWrapper,
@@ -247,5 +284,8 @@ export default function InputStyles() {
     TextareaWrapper,
     TextareaInputWrapper,
     TextareaFunctionWrapper,
+    CodeWrapper,
+    CodeInnerWrapper,
+    CodeCopyWrapper,
   };
 }
