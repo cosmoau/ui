@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import { CSS } from '@stitches/react/types/css-util';
 export interface Props {
     css?: CSS;

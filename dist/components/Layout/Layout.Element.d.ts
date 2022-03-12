@@ -8,5 +8,5 @@ export interface Props {
     id?: string;
     top?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 }
-export default function Element({ align, bottom, children, css, id, top }: Props): JSX.Element;
+export default function Element({ align, bottom, children, css, id, top, ...props }: Props): JSX.Element;
 //# sourceMappingURL=Layout.Element.d.ts.map
