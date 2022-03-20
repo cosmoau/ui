@@ -21,7 +21,7 @@
   "devDependencies": {
     "@cosmo-au/eslint-config-cosmo": "^1.1.9",
     "@stitches/react": "^1.2.7",
-    "@types/react": "^17.0.40",
+    "@types/react": "^17.0.41",
     "@types/react-dom": "^17.0.13",
     "eslint": "^8.11.0",
     "microbundle": "^0.14.2",
