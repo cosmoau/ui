@@ -271,31 +271,7 @@ export default function DropdownStyles(): {
             [x: string]: unknown;
         };
     }>>;
-    TriggerWrapper: import("@stitches/react/types/styled-component").StyledComponent<"div", import("@stitches/react/types/styled-component").StyledComponentProps<[{
-        display: string;
-        position: string;
-        cursor: string;
-        appearance: string;
-        outline: string;
-        userSelect: string;
-        transition: string;
-        variants: {
-            hover: {
-                false: {
-                    '&:hover': {
-                        color: string;
-                        opacity: number;
-                    };
-                    true: {
-                        '&:hover': {
-                            color: string;
-                            opacity: number;
-                        };
-                    };
-                };
-            };
-        };
-    }]>, {}, import("@stitches/react/types/css-util").CSS<{}, {
+    TriggerWrapper: import("@stitches/react/types/styled-component").StyledComponent<"div", {}, {}, import("@stitches/react/types/css-util").CSS<{}, {
         colors: {
             baseBody: any;
             base100: any;
