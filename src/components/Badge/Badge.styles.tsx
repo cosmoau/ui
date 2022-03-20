@@ -32,7 +32,7 @@ export default function BadgeStyles() {
         true: {
           backgroundColor: '$baseContrast100',
           color: '$base100',
-          border: '0.1rem solid $border200',
+          border: '0.1rem solid $border300',
         },
       },
       theme: {

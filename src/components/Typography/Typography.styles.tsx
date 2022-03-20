@@ -153,7 +153,7 @@ export default function TypographyStyles() {
 
   const HeadingFourWrapper = styled('h4', {
     ft: '$h4',
-    fontWeight: 'normal',
+    fontWeight: 'bold',
     marginBottom: '$h4',
 
     opacity: 0.8,

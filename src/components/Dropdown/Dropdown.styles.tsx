@@ -27,21 +27,8 @@ export default function DropdownStyles() {
     userSelect: 'none',
     transition: '$1',
 
-    variants: {
-      hover: {
-        false: {
-          '&:hover': {
-            color: 'inherit',
-            opacity: 1,
-          },
-          true: {
-            '&:hover': {
-              color: 'inherit',
-              opacity: 0.7,
-            },
-          },
-        },
-      },
+    '&:hover': {
+      opacity: 0.7,
     },
   });
 

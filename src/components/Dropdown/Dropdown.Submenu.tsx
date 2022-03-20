@@ -8,7 +8,6 @@ import DropdownStyles from './Dropdown.styles';
 export interface Props {
   align?: 'left' | 'right' | 'center';
   css?: CSS;
-  hover?: boolean;
   id?: string;
   options: Array<{
     name: string;
@@ -21,7 +20,7 @@ export interface Props {
 
 const { Wrapper, TriggerWrapper, GroupWrapper, ItemWrapper } = DropdownStyles();
 
-export default function Submenu({ align = 'left', css, hover, id, options, passKey, trigger, width }: Props): JSX.Element {
+export default function Submenu({ align = 'left', css, id, options, passKey, trigger, width }: Props): JSX.Element {
   const router = useRouter();
   const ref = useRef(null);
   const [isShown, setIsShown] = useState(false as boolean);
@@ -43,9 +42,7 @@ export default function Submenu({ align = 'left', css, hover, id, options, passK
 
   return (
     <Wrapper css={css} id={id} key={passKey} ref={ref}>
-      <TriggerWrapper hover={hover} onClickCapture={handleClick}>
-        {trigger}
-      </TriggerWrapper>
+      <TriggerWrapper onClickCapture={handleClick}>{trigger}</TriggerWrapper>
       {isShown && (
         <GroupWrapper
           animation={isShown}
