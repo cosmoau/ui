@@ -1391,15 +1391,15 @@ __metadata:
   dependencies:
     "@cosmo-au/eslint-config-cosmo": ^1.1.9
     "@stitches/react": ^1.2.7
-    "@types/react": ^17.0.41
-    "@types/react-dom": ^17.0.14
+    "@types/react": ^17.0.40
+    "@types/react-dom": ^17.0.13
     eslint: ^8.11.0
     microbundle: ^0.14.2
     next: ^12.1.0
     nookies: ^2.5.2
     parcel: ^2.3.2
     phosphor-react: ^1.4.1
-    prettier: ^2.5.1
+    prettier: ^2.6.0
     react: ^17.0.2
     react-dom: ^17.0.2
     typescript: 4.1.6
@@ -2503,7 +2503,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^17.0.14":
+"@types/react-dom@npm:^17.0.13":
   version: 17.0.14
   resolution: "@types/react-dom@npm:17.0.14"
   dependencies:
@@ -2523,7 +2523,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^17.0.41":
+"@types/react@npm:^17.0.40":
   version: 17.0.41
   resolution: "@types/react@npm:17.0.41"
   dependencies:
@@ -6518,6 +6518,15 @@ __metadata:
   bin:
     prettier: bin-prettier.js
   checksum: 21b9408476ea1c544b0e45d51ceb94a84789ff92095abb710942d780c862d0daebdb29972d47f6b4d0f7ebbfb0ffbf56cc2cfa3e3e9d1cca54864af185b15b66
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^2.6.0":
+  version: 2.6.0
+  resolution: "prettier@npm:2.6.0"
+  bin:
+    prettier: bin-prettier.js
+  checksum: 3e527ad62279676778a8404d18174d7ca2365ada4caba6eebbcdd9907d1187afd3bc6ade5b4e5f5d4549bb9fb71e45ca8930d71500017635524f8fc05bc52e93
   languageName: node
   linkType: hard
 
