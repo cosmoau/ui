@@ -1,17 +1,15 @@
-import { CSS } from '@stitches/react/types/css-util';
-import { HTMLAttributes, MouseEventHandler, ReactNode } from 'react';
-export interface Props extends HTMLAttributes<HTMLButtonElement> {
+import { HTMLAttributes, ReactNode } from 'react';
+import { DefaultProps } from '../../stitches.config';
+export interface Props extends HTMLAttributes<HTMLButtonElement>, Omit<DefaultProps, 'spacing'> {
     children: ReactNode;
-    css?: CSS;
+    loading?: boolean;
     disabled?: boolean;
-    icon?: JSX.Element;
+    theme?: 'default' | 'border' | 'minimal' | 'solid';
+    block?: boolean;
+    icon?: ReactNode;
     iconPosition?: 'left' | 'right';
-    id?: string;
-    inline?: boolean;
-    inlineSpacer?: 1 | 2 | 3 | 4 | 5 | 6;
-    loader?: boolean;
-    onClick?: MouseEventHandler<HTMLButtonElement>;
-    theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'transparent' | 'dark';
+    inline?: DefaultProps['spacing'] | 'auto';
+    small?: boolean;
 }
-export default function Button({ children, css, disabled, icon, iconPosition, id, inline, inlineSpacer, loader, onClick, theme, ...props }: Props): JSX.Element;
+export default function Button(props: Props): JSX.Element;
 //# sourceMappingURL=Button.d.ts.map

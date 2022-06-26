@@ -1,10 +1,9 @@
-import { CSS } from '@stitches/react/types/css-util';
 import { ReactNode } from 'react';
-export interface Props {
+import { DefaultProps } from '../../stitches.config';
+export interface Props extends DefaultProps {
     children: ReactNode;
-    css?: CSS;
-    id?: string;
     trigger: ReactNode;
+    locked?: boolean;
 }
-export default function Dialog({ children, css, id, trigger }: Props): JSX.Element;
+export default function Dialog(props: Props): JSX.Element;
 //# sourceMappingURL=Dialog.d.ts.map

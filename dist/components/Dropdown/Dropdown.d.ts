@@ -1,17 +1,17 @@
-import { CSS } from '@stitches/react/types/css-util';
 import { ReactNode } from 'react';
-export interface Props {
-    actions: any;
-    align?: 'left' | 'right' | 'center';
-    css?: CSS;
-    id?: string;
-    label: string | ReactNode;
+import { DefaultProps } from '../../stitches.config';
+export interface Props extends DefaultProps {
     options: Array<{
-        name: string;
+        label: string;
         value: string;
     }>;
-    passKey?: string;
+    align?: 'left' | 'right' | 'center';
     width?: number | string;
+    actions?: any;
+    trigger: ReactNode;
+    active?: string;
+    submenu?: boolean;
+    locked?: boolean;
 }
-export default function Dropdown({ actions, align, css, id, label, options, passKey, width }: Props): JSX.Element;
+export default function Dropdown(props: Props): JSX.Element;
 //# sourceMappingURL=Dropdown.d.ts.map

@@ -1,33 +1,46 @@
-import { CSS } from '@stitches/react/types/css-util';
-import React, { HTMLAttributes, MouseEventHandler, ReactNode } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 
-import { Element } from '../Layout';
+import { breakpoints, DefaultProps } from '../../stitches.config';
 import { Loading } from '../Loading';
 
-import ButtonStyles from './Button.styles';
+import { ButtonIconStyled, ButtonStyled } from './Button.styles';
 
-export interface Props extends HTMLAttributes<HTMLButtonElement> {
+export interface Props extends HTMLAttributes<HTMLButtonElement>, Omit<DefaultProps, 'spacing'> {
   children: ReactNode;
-  css?: CSS;
+  loading?: boolean;
   disabled?: boolean;
-  icon?: JSX.Element;
+  theme?: 'default' | 'border' | 'minimal' | 'solid';
+  block?: boolean;
+  icon?: ReactNode;
   iconPosition?: 'left' | 'right';
-  id?: string;
-  inline?: boolean;
-  inlineSpacer?: 1 | 2 | 3 | 4 | 5 | 6;
-  loader?: boolean;
-  onClick?: MouseEventHandler<HTMLButtonElement>;
-  theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink' | 'transparent' | 'dark';
+  inline?: DefaultProps['spacing'] | 'auto';
+  small?: boolean;
 }
 
-const { Wrapper, IconWrapper } = ButtonStyles();
-
-export default function Button({ children, css, disabled, icon, iconPosition = 'left', id, inline = true, inlineSpacer, loader, onClick, theme, ...props }: Props): JSX.Element {
+export default function Button(props: Props): JSX.Element {
   return (
-    <Wrapper {...props} css={css} disabled={disabled} id={id || undefined} inline={inline} inlineSpacer={inlineSpacer || 'default'} onClick={onClick} theme={theme || 'default'}>
-      {icon && iconPosition && iconPosition === 'left' && <IconWrapper iconPosition={iconPosition}>{icon}</IconWrapper>}
-      <Element>{loader ? <Loading /> : children}</Element>
-      {icon && iconPosition && iconPosition === 'right' && <IconWrapper iconPosition={iconPosition}>{icon}</IconWrapper>}
-    </Wrapper>
+    <ButtonStyled
+      css={{
+        ...props.css,
+        ...(props.inline && {
+          display: 'inline-block',
+          marginBottom: '0 !important',
+          marginRight: props.inline === 'auto' ? 'auto' : `$${props.inline}`,
+          verticalAlign: 'middle',
+          [breakpoints.phone]: {
+            marginRight: props.inline === 'auto' ? 'auto' : `calc($${props.inline} * 0.8)`,
+          },
+        }),
+      }}
+      id={props.id}
+      small={props.small}
+      block={props.block || false}
+      theme={props.theme || 'default'}
+      disabled={props.disabled || false}
+      onClick={props.onClick}>
+      {props.icon && (props.iconPosition === 'left' || !props.iconPosition) && <ButtonIconStyled align='left'>{props.icon}</ButtonIconStyled>}
+      {props.loading ? <Loading /> : props.children}
+      {props.icon && props.iconPosition === 'right' && <ButtonIconStyled align='right'>{props.icon}</ButtonIconStyled>}
+    </ButtonStyled>
   );
 }

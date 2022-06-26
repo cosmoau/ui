@@ -1,69 +1,113 @@
-import { CSS } from '@stitches/react/types/css-util';
-import React, { useState, useRef, ReactNode } from 'react';
-import { useOnClickOutside } from 'usehooks-ts';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useRouter } from 'next/router';
+import React, { ReactNode, useRef, useState } from 'react';
+import { useEventListener, useLockedBody, useOnClickOutside } from 'usehooks-ts';
 
-import { Button } from '../Button';
-import { Loading } from '../Loading';
+import { DefaultProps } from '../../stitches.config';
 
-import DropdownStyles from './Dropdown.styles';
+import { DropdownStyled, DropdownTriggerStyled, DropdownGroupStyled, DropdownItemStyled } from './Dropdown.styles';
 
-export interface Props {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  actions: any;
-  align?: 'left' | 'right' | 'center';
-  css?: CSS;
-  id?: string;
-  label: string | ReactNode;
+export interface Props extends DefaultProps {
   options: Array<{
-    name: string;
+    label: string;
     value: string;
   }>;
-  passKey?: string;
+
+  align?: 'left' | 'right' | 'center';
   width?: number | string;
+  actions?: any;
+  trigger: ReactNode;
+  active?: string;
+  submenu?: boolean;
+  locked?: boolean;
 }
 
-const { Wrapper, GroupWrapper, ItemWrapper } = DropdownStyles();
-
-export default function Dropdown({ actions, align = 'left', css, id, label, options, passKey, width }: Props): JSX.Element {
+export default function Dropdown(props: Props): JSX.Element {
   const ref = useRef(null);
-  const [isShown, setIsShown] = useState(false as boolean);
+  const router = useRouter();
 
-  const handleClick = (): void => {
-    setIsShown(!isShown);
+  const path = router?.pathname || '/';
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  function handleClose(): void {
+    setIsOpen(false);
+    setTimeout(() => {
+      setIsMounted(false);
+    }, 420);
+  }
+
+  function handleClick(): void {
+    if (isOpen) {
+      handleClose();
+    } else {
+      setIsOpen(true);
+      setIsMounted(true);
+    }
+  }
+
+  const handleNavigate = (value: string): void => {
+    router.push(value);
+    handleClose();
   };
 
-  const handleActions = (value: string, name: string) => {
-    actions(value, name);
-    setIsShown(false);
+  const handleActions = (value: string, label: string): any => {
+    props.actions(value, label);
+    handleClose();
   };
 
-  useOnClickOutside(ref, () => {
-    setIsShown(false);
+  useOnClickOutside(ref, () => handleClose());
+
+  useEventListener('keydown', (event: KeyboardEvent) => {
+    if (event.key === 'Escape') {
+      handleClose();
+    }
   });
 
+  useLockedBody(props.locked ? isOpen : false);
+
   return (
-    <Wrapper css={css} id={id} key={passKey} ref={ref}>
-      <Button onClickCapture={handleClick}>{label || <Loading />}</Button>
-      {isShown && (
-        <GroupWrapper
-          animation={isShown}
+    <DropdownStyled css={props.css} id={props.id}>
+      <DropdownTriggerStyled onClickCapture={handleClick} key={props.active || Math.random()}>
+        {props.trigger}
+      </DropdownTriggerStyled>
+      {isMounted && (
+        <DropdownGroupStyled
+          ref={ref}
+          animation={isOpen}
           css={{
-            minWidth: width || '15rem',
-            maxWidth: width || '80rem',
-            left: align === 'left' ? '0' : 'auto',
-            right: align === 'right' ? '0' : 'auto',
+            left: props.align === 'left' ? '0' : 'auto',
+            maxWidth: props.width || '15rem',
+            minWidth: '15rem',
+            right: props.align === 'right' ? '0' : 'auto',
           }}>
-          {options.map((option) => (
-            <ItemWrapper
-              className={label === option.name ? 'active' : 'inactive'}
-              key={option.value}
-              onClickCapture={() => handleActions(option.value, option.name)}
-              submenu={false}>
-              {option.name}
-            </ItemWrapper>
-          ))}
-        </GroupWrapper>
+          {props.options.map(({ label, value }) =>
+            props.submenu ? (
+              <DropdownItemStyled
+                css={{
+                  opacity: path === value ? 0.44 : 1,
+                }}
+                submenu={true}
+                key={value}>
+                <a onClickCapture={(): void => handleNavigate(value)}>{label}</a>
+              </DropdownItemStyled>
+            ) : (
+              <DropdownItemStyled
+                key={value}
+                onClickCapture={(): void => {
+                  handleActions(value, label);
+                }}
+                submenu={false}
+                css={{
+                  opacity: props.active && props.active === value ? 0.44 : 1,
+                }}>
+                {label}
+              </DropdownItemStyled>
+            )
+          )}
+        </DropdownGroupStyled>
       )}
-    </Wrapper>
+    </DropdownStyled>
   );
 }

@@ -1,43 +1,50 @@
-import { CSS } from '@stitches/react/types/css-util';
 import { Circle } from 'phosphor-react';
 import React, { ReactNode } from 'react';
 
-import { Element } from '../Layout';
+import { breakpoints, DefaultProps } from '../../stitches.config';
 import { Loading } from '../Loading';
 
-import BadgeStyles from './Badge.styles';
+import { BadgeIconStyled, BadgeStyled, BadgeDotStyled } from './Badge.styles';
 
-export interface Props {
-  border?: boolean;
+export interface Props extends Omit<DefaultProps, 'spacing'> {
   children: ReactNode;
-  css?: CSS;
+  loading?: boolean;
+  theme?: 'red' | 'orange' | 'pink' | 'purple' | 'blue' | 'green' | 'border';
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  onClick?: any;
+  icon?: ReactNode;
+  iconPosition?: 'left' | 'right';
+  inline?: DefaultProps['spacing'] | 'auto';
   dot?: boolean | 'pulse';
-  dotColor?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink';
-  id?: string;
-  inline?: boolean;
-  inlineSpacer?: 1 | 2 | 3 | 4 | 5 | 6;
-  loader?: boolean;
-  shadow?: boolean;
-  theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink';
+  dotColor?: 'red' | 'orange' | 'pink' | 'purple' | 'blue' | 'green';
 }
 
-const { Wrapper, DotWrapper } = BadgeStyles();
-
-export default function Badge({ border = true, children, css, dot, dotColor, id, inline = true, inlineSpacer, loader, shadow, theme }: Props): JSX.Element {
+export default function Badge(props: Props): JSX.Element {
   return (
-    <Wrapper border={border} css={css} id={id || undefined} inline={inline} inlineSpacer={inlineSpacer || 'default'} shadow={shadow} theme={theme || 'default'}>
-      {loader ? (
-        <Loading />
-      ) : (
-        <Element>
-          {dot && (
-            <DotWrapper dotColor={dotColor || 'default'} pulse={dot === 'pulse'}>
-              <Circle size={10} style={{ marginRight: 3.33 }} weight='fill' />
-            </DotWrapper>
-          )}
-          {children}
-        </Element>
+    <BadgeStyled
+      css={{
+        ...props.css,
+        ...(props.inline && {
+          display: 'inline-block',
+          marginBottom: '0 !important',
+          marginRight: props.inline === 'auto' ? 'auto' : `$${props.inline}`,
+          [breakpoints.phone]: {
+            marginRight: props.inline === 'auto' ? 'auto' : `calc($${props.inline} * 0.8)`,
+          },
+          verticalAlign: 'middle',
+        }),
+      }}
+      id={props.id}
+      onClick={props.onClick}
+      theme={props.theme || 'default'}>
+      {props.icon && (props.iconPosition === 'left' || !props.iconPosition) && <BadgeIconStyled align='left'>{props.icon}</BadgeIconStyled>}
+      {props.dot && (
+        <BadgeDotStyled dotColor={props.dotColor || 'default'} pulse={props.dot === 'pulse'}>
+          <Circle weight='fill' />
+        </BadgeDotStyled>
       )}
-    </Wrapper>
+      {props.loading ? <Loading /> : props.children}
+      {props.icon && props.iconPosition === 'right' && <BadgeIconStyled align='right'>{props.icon}</BadgeIconStyled>}
+    </BadgeStyled>
   );
 }

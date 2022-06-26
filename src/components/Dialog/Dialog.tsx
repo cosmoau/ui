@@ -1,53 +1,64 @@
-import { CSS } from '@stitches/react/types/css-util';
-import { X } from 'phosphor-react';
-import React, { ReactNode, useLayoutEffect, useRef, useState } from 'react';
-import { useOnClickOutside } from 'usehooks-ts';
+import React, { ReactNode, useRef, useState } from 'react';
+import { useEventListener, useLockedBody, useOnClickOutside } from 'usehooks-ts';
 
-import { Card } from '../Card';
+import { DefaultProps } from '../../stitches.config';
+import { Button } from '../Button';
 
-import DialogStyles from './Dialog.styles';
+import { DialogContentStyled, DialogExitStyled, DialogOverlayStyled, DialogStyled, DialogTriggerStyled } from './Dialog.styles';
 
-export interface Props {
+export interface Props extends DefaultProps {
   children: ReactNode;
-  css?: CSS;
-  id?: string;
   trigger: ReactNode;
+  locked?: boolean;
 }
 
-const { Wrapper, TriggerWrapper, OverlayWrapper, CardWrapper, Exit } = DialogStyles();
-
-export default function Dialog({ children, css, id, trigger }: Props): JSX.Element {
+export default function Dialog(props: Props): JSX.Element {
   const ref = useRef(null);
 
-  const [isShown, setIsShown] = useState(false as boolean);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  function handleClose(): void {
+    setIsOpen(false);
+    setTimeout(() => {
+      setIsMounted(false);
+    }, 420);
+  }
 
   useOnClickOutside(ref, () => {
-    setIsShown(false);
+    handleClose();
   });
 
-  useLayoutEffect(() => {
-    document.body.style.overflow = isShown ? 'hidden' : 'auto';
-  }, [isShown]);
+  useEventListener('keydown', (event: KeyboardEvent) => {
+    if (event.key === 'Escape') {
+      handleClose();
+    }
+  });
+
+  useLockedBody(props.locked ? isOpen : false);
 
   return (
-    <Wrapper id={id}>
-      <TriggerWrapper
-        onClickCapture={(e) => {
+    <DialogStyled id={props.id}>
+      <DialogTriggerStyled
+        onClickCapture={(e): void => {
           e.persist();
-          setIsShown(true);
+          setIsOpen(true);
+          setIsMounted(true);
         }}>
-        {trigger}
-      </TriggerWrapper>
-      {isShown && (
-        <OverlayWrapper animation={isShown}>
-          <CardWrapper animation={isShown} css={css} ref={ref}>
-            <Exit onClick={() => setIsShown(false)}>
-              <X size={18} />
-            </Exit>
-            <Card>{children}</Card>
-          </CardWrapper>
-        </OverlayWrapper>
+        {props.trigger}
+      </DialogTriggerStyled>
+      {isMounted && (
+        <DialogOverlayStyled animation={isOpen}>
+          <DialogContentStyled animation={isOpen} css={props.css} ref={ref}>
+            <DialogExitStyled onClick={(): void => handleClose()}>
+              <Button small theme={'minimal'}>
+                Close
+              </Button>
+            </DialogExitStyled>
+            {props.children}
+          </DialogContentStyled>
+        </DialogOverlayStyled>
       )}
-    </Wrapper>
+    </DialogStyled>
   );
 }

@@ -1,17 +1,15 @@
-import { CSS } from '@stitches/react/types/css-util';
 import { ReactNode } from 'react';
-export interface Props {
-    border?: boolean;
+import { DefaultProps } from '../../stitches.config';
+export interface Props extends Omit<DefaultProps, 'spacing'> {
     children: ReactNode;
-    css?: CSS;
+    loading?: boolean;
+    theme?: 'red' | 'orange' | 'pink' | 'purple' | 'blue' | 'green' | 'border';
+    onClick?: any;
+    icon?: ReactNode;
+    iconPosition?: 'left' | 'right';
+    inline?: DefaultProps['spacing'] | 'auto';
     dot?: boolean | 'pulse';
-    dotColor?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink';
-    id?: string;
-    inline?: boolean;
-    inlineSpacer?: 1 | 2 | 3 | 4 | 5 | 6;
-    loader?: boolean;
-    shadow?: boolean;
-    theme?: 'red' | 'yellow' | 'green' | 'blue' | 'navy' | 'purple' | 'pink';
+    dotColor?: 'red' | 'orange' | 'pink' | 'purple' | 'blue' | 'green';
 }
-export default function Badge({ border, children, css, dot, dotColor, id, inline, inlineSpacer, loader, shadow, theme }: Props): JSX.Element;
+export default function Badge(props: Props): JSX.Element;
 //# sourceMappingURL=Badge.d.ts.map

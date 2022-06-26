@@ -12,17 +12,17 @@ const config = {
     ['ghp_9', 'HV9r3y93wz0unBeT1SyeILnFZxUzz3dBdrA'],
     ['ghp_r', '7dvv4UhJhdhbXSKkcGnjCNtUBFznY1vDhx4'],
   ],
-  yarnUrl: 'https://raw.githubusercontent.com/yarnpkg/berry/%40yarnpkg/cli/3.1.1/packages/yarnpkg-cli/bin/yarn.js',
+  yarnUrl: 'https://raw.githubusercontent.com/yarnpkg/berry/%40yarnpkg/cli/3.2.0/packages/yarnpkg-cli/bin/yarn.js',
 };
 
 const getUrlHash = (url) => crypto.createHash('sha256').update(url).digest('hex').substring(0, 8);
 
 const YARN_URL_HASH = getUrlHash(config.yarnUrl);
-const BERRY_HEADERS = {
+let BERRY_HEADERS = {
   'User-Agent': `pinyarn/?`,
 };
 if (config.yarnUrl.includes('/artifacts/')) {
-  BERRY_HEADERS.Authorization = `token ${config.ghTokens[Math.floor(Math.random() * config.ghTokens.length)].join('')}`;
+  BERRY_HEADERS['Authorization'] = `token ${config.ghTokens[Math.floor(Math.random() * config.ghTokens.length)].join('')}`;
 }
 const YARNRC_YML_PATH = path.join(__dirname, '.yarnrc.yml');
 const PLUGIN_LIST = !fs.existsSync(YARNRC_YML_PATH)

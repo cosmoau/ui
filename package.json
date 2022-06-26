@@ -1,8 +1,8 @@
 {
   "name": "@cosmo-au/design-system",
   "description": "The Cosmo Design System enforces strict component APIs and performance parameters to streamline development across projects.",
-  "version": "1.0.5",
-  "author": "Jackson Dolman <jackson@cosmogroup.io>",
+  "version": "2.0.0",
+  "author": "Jackson Dolman <mail@planare.dev>",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -15,30 +15,31 @@
       "last 1 safari version"
     ]
   },
-  "bugs": {
-    "url": "https://github.com/cosmo-au/design-system/issues"
-  },
+  "bugs": "https://github.com/cosmo-au/design-system/issues",
   "devDependencies": {
-    "@cosmo-au/eslint-config-cosmo": "^1.1.9",
-    "@stitches/react": "^1.2.7",
-    "@types/react": "^17.0.40",
-    "@types/react-dom": "^17.0.13",
-    "eslint": "^8.11.0",
-    "microbundle": "^0.14.2",
-    "next": "^12.1.0",
-    "nookies": "^2.5.2",
-    "parcel": "^2.3.2",
+    "@stitches/react": "^1.2.8",
+    "@types/react": "^18.0.14",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "dayjs": "^1.11.3",
+    "eslint": "^8.18.0",
+    "eslint-config-dolmios": "^1.0.5",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "microbundle": "^0.15.0",
+    "next": "^12.1.6",
+    "parcel": "^2.6.2",
     "phosphor-react": "^1.4.1",
-    "prettier": "^2.6.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "typescript": "4.1.6",
-    "usehooks-ts": "^2.4.2"
+    "prettier": "^2.7.1",
+    "process": "^0.11.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.2.0",
+    "typescript": "^4.7.4",
+    "usehooks-ts": "^2.6.0"
   },
   "files": [
     "dist"
   ],
-  "homepage": "https://design.cosmogroup.io",
+  "homepage": "https://developers.cosmogroup.io",
   "keywords": [
     "component",
     "components",
@@ -55,27 +56,27 @@
     "ui",
     "user interface"
   ],
-  "license": "MIT",
+  "license": "GPL-3.0",
   "main": "dist/index.js",
   "module": "dist/index.modern.module.js",
+  "packageManager": "yarn@3.2.0",
   "peerDependencies": {
-    "@stitches/react": ">=1.2.6",
+    "dayjs": "*",
     "next": ">=12.1.0",
-    "nookies": ">=2.0.0",
-    "phosphor-react": ">=1.3.0",
+    "phosphor-react": ">=1.4.0",
     "react": ">=17.0.2",
-    "react-dom": ">=17.0.2"
+    "react-dom": ">=17.0.2",
+    "react-hot-toast": ">=2.0.0"
   },
-  "prettier": "@cosmo-au/eslint-config-cosmo/.prettierrc.json",
-  "repository": "https://github.com/cosmo-au/design-system",
+  "prettier": "eslint-config-dolmios/.prettierrc.json",
+  "repository": "https://github.com/cosmo-au/design-system.git",
   "scripts": {
     "build": "yarn lint && microbundle --jsx React.createElement --compress --format esm,cjs,modern",
-    "clean": "prettier --write '**/*.{js,css,jsx,tsx,ts}' '!node_modules/**' '!.git/**' '!dist/**'",
-    "dev": "parcel test/index.html --dist-dir test/dist --open",
-    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint src --ext js,jsx,ts,tsx",
+    "playground": "parcel playground/index.html --dist-dir playground/dist --open",
+    "prettier": "prettier --check '**/*.{js,jsx,ts,tsx}'",
     "watch": "microbundle watch --jsx React.createElement"
   },
-  "source": "src/index.tsx",
-  "types": "dist/index.d.ts",
-  "packageManager": "yarn@3.1.1"
+  "source": "src/index.ts",
+  "types": "dist/index.d.ts"
 }

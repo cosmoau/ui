@@ -1,16 +1,8 @@
 {
-  "extends": ["@cosmo-au/eslint-config-cosmo"],
-  "globals": {
-    "React": true,
-    "google": true,
-    "mount": true,
-    "mountWithRouter": true,
-    "shallow": true,
-    "shallowWithRouter": true,
-    "context": true,
-    "expect": true,
-    "jsdom": true,
-    "JSX": true
-  },
-  "rules": { "@next/next/no-html-link-for-pages": 0, "import/no-extraneous-dependencies": 0, "react/jsx-sort-props": 1, "react/sort-prop-types": 1 }
+  "extends": ["dolmios"],
+  "plugins": ["sort-keys-fix"],
+  "rules": {
+    "sort-keys-fix/sort-keys-fix": "warn",
+    "import/no-unresolved": "off"
+  }
 }
