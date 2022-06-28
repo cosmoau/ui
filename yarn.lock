@@ -1381,7 +1381,6 @@ __metadata:
     parcel: ^2.6.2
     phosphor-react: ^1.4.1
     prettier: ^2.7.1
-    process: ^0.11.10
     react: ^18.2.0
     react-dom: ^18.2.0
     react-hot-toast: ^2.2.0
@@ -6831,13 +6830,6 @@ __metadata:
   version: 5.6.0
   resolution: "pretty-bytes@npm:5.6.0"
   checksum: 9c082500d1e93434b5b291bd651662936b8bd6204ec9fa17d563116a192d6d86b98f6d328526b4e8d783c07d5499e2614a807520249692da9ec81564b2f439cd
-  languageName: node
-  linkType: hard
-
-"process@npm:^0.11.10":
-  version: 0.11.10
-  resolution: "process@npm:0.11.10"
-  checksum: bfcce49814f7d172a6e6a14d5fa3ac92cc3d0c3b9feb1279774708a719e19acd673995226351a082a9ae99978254e320ccda4240ddc474ba31a76c79491ca7c3
   languageName: node
   linkType: hard
 
