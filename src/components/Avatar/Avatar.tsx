@@ -8,11 +8,18 @@ import { AvatarFallbackStyled, AvatarImageStyled, AvatarStyled } from './Avatar.
 export interface Props extends DefaultProps {
   image?: string;
   fallback: string;
+  width?: number | string;
 }
 
 export default function Avatar(props: Props): JSX.Element {
   return (
-    <AvatarStyled css={props.css} id={props.id}>
+    <AvatarStyled
+      css={{
+        height: props.width || 20,
+        width: props.width || 20,
+        ...props.css,
+      }}
+      id={props.id}>
       {props.image ? (
         <AvatarImageStyled>
           <Image alt={props.fallback} layout='fill' src={props.image} />

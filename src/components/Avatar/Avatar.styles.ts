@@ -4,12 +4,10 @@ export const AvatarStyled = styled('div', {
   alignItems: 'center',
   borderRadius: '100%',
   display: 'inline-flex',
-  height: 20,
   justifyContent: 'center',
   overflow: 'hidden',
   position: 'relative',
   userSelect: 'none',
-  width: 20,
 });
 
 export const AvatarImageStyled = styled('div', {
