@@ -20,7 +20,7 @@ export const DropdownGroupStyled = styled('div', {
   borderRadius: '$1',
   boxShadow: '$3',
   lineBreak: 'auto',
-  marginTop: '.5%',
+  marginTop: '.7%',
   overflowY: 'auto',
   padding: 'calc($2 / 1.5)',
   position: 'absolute',
