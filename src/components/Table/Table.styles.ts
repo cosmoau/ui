@@ -3,7 +3,6 @@ import { breakpoints, styled } from '../../stitches.config';
 export const TableStyled = styled('table', {
   '*': {
     alignContent: 'center',
-    lineHeight: 1.5,
     verticalAlign: 'middle',
   },
   borderRadius: '$1',
@@ -14,8 +13,8 @@ export const TableStyled = styled('table', {
 
   [breakpoints.phone]: {
     display: 'block',
+    minWidth: '100%',
     paddingBottom: '$3',
-    width: '100%',
   },
   width: '100%',
 });
@@ -31,7 +30,11 @@ export const TableBodyStyled = styled('tbody', {
 });
 
 export const TableRowStyled = styled('tr', {
-  borderBottom: '0.1rem solid $border',
+  '&:last-child': {
+    td: {
+      borderBottom: '0 !important',
+    },
+  },
   borderRadius: '$2',
 
   transition: '$default',
@@ -43,8 +46,7 @@ export const TableCellStyled = styled('td', {
   },
   borderBottom: '0.1rem solid $border',
   fontSize: '$h6',
-
-  padding: '$3 $4',
+  padding: '$3 0',
   whiteSpace: 'nowrap',
 });
 
@@ -56,7 +58,7 @@ export const TableHeadCellStyled = styled('th', {
 
   fontSize: '$h6',
   fontWeight: 'bold',
-  padding: '$2 $4',
+  padding: '$3 0',
 });
 
 export default TableStyled;
