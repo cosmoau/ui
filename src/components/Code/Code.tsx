@@ -1,5 +1,5 @@
 import { ClipboardText } from 'phosphor-react';
-import { ReactNode, useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 
 import { DefaultProps } from '../../stitches.config';
 import { Button } from '../Button';

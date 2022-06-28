@@ -1,5 +1,5 @@
 import dayjs from 'dayjs';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { Button } from '../Button';
 import { Stack } from '../Stack';
@@ -11,7 +11,7 @@ export interface Props {
   startDate?: string;
   range?: 'week' | 'month';
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  onChange: any;
+  onChange?: any;
 }
 
 export default function Dates(props: Props): JSX.Element {

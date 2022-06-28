@@ -14,7 +14,7 @@ export const TextStyled = styled('div', {
     },
     bold: {
       true: {
-        fontWeight: 'bold',
+        fontWeight: 'bold !important',
       },
     },
     size: {

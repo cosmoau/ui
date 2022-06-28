@@ -44,7 +44,7 @@ export function App(): ReactElement {
             <img src='https://app.cosmogroup.io/images/vector/logo-light.svg' width='100' />
           </Stack>
           <Stack direction='column' width={33} align='center'>
-            <Text as='h5' inline='4'>
+            <Text as='h5' bold inline='4'>
               Features
             </Text>
 
