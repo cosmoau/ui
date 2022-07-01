@@ -7,6 +7,7 @@ export const DropdownStyled = styled('div', {
 
 export const DropdownTriggerStyled = styled('div', {
   appearance: 'none',
+  cursor: 'pointer',
   display: 'inline-flex',
   outline: 'none',
   position: 'relative',
@@ -20,7 +21,7 @@ export const DropdownGroupStyled = styled('div', {
   borderRadius: '$1',
   boxShadow: '$3',
   lineBreak: 'auto',
-  marginTop: '.7%',
+  marginTop: '.8%',
   overflowY: 'auto',
   padding: 'calc($2 / 1.5)',
   position: 'absolute',
