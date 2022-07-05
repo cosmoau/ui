@@ -360,10 +360,6 @@ export function App(): ReactElement {
                     <TableHeadCell>Hey</TableHeadCell>
                     <TableHeadCell>Hey</TableHeadCell>
                     <TableHeadCell>Hey</TableHeadCell>
-                    <TableHeadCell>Hey</TableHeadCell>
-                    <TableHeadCell>Hey</TableHeadCell>
-                    <TableHeadCell>Hey</TableHeadCell>
-                    <TableHeadCell>Hey</TableHeadCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -371,19 +367,11 @@ export function App(): ReactElement {
                     <TableCell>Hey</TableCell>
                     <TableCell>Hey</TableCell>
                     <TableCell>Hey</TableCell>
-                    <TableCell>Hey</TableCell>
-                    <TableCell>HeHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyy</TableCell>
-                    <TableCell>Hey</TableCell>
-                    <TableCell>Hey</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell>Hey</TableCell>
                     <TableCell>Hey</TableCell>
                     <TableCell>Hey</TableCell>
-                    <TableCell>Hey</TableCell>
-                    <TableCell>HHeyHeyHeyHeyHeyHeyHeyHeyey</TableCell>
-                    <TableCell>Hey</TableCell>
-                    <TableCell>HeHeyHeyHeyHeyHeyHeyHeyHeyy</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>

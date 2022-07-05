@@ -113,13 +113,13 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     }),
     hidden: (value: 'phone' | 'tablet' | 'tabletX' | 'laptop' | 'laptopX' | 'desktop' | 'desktopX' | 'wide') => ({
       [breakpoints[value]]: {
-        display: 'none',
+        display: 'none !important',
       },
     }),
     hiddenInline: (value: 'phone' | 'tablet' | 'tabletX' | 'laptop' | 'laptopX' | 'desktop' | 'desktopX' | 'wide') => ({
-      display: 'inline-block',
+      display: 'inline-block !important',
       [breakpoints[value]]: {
-        display: 'none',
+        display: 'none !important',
       },
     }),
     laptop: (value: unknown) => ({

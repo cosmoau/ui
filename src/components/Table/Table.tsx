@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 
 import { DefaultProps } from '../../stitches.config';
+import { Element } from '../Element';
 
 import { TableBodyStyled, TableCellStyled, TableHeadCellStyled, TableHeadStyled, TableRowStyled, TableStyled } from './Table.styles';
 
@@ -9,7 +10,11 @@ export interface Props extends DefaultProps {
 }
 
 export const Table = (props: Props): JSX.Element => {
-  return <TableStyled {...props} />;
+  return (
+    <Element>
+      <TableStyled {...props} />
+    </Element>
+  );
 };
 
 export const TableHead = (props: Props): JSX.Element => {

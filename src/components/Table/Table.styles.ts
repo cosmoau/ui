@@ -12,7 +12,7 @@ export const TableStyled = styled('table', {
   overflowX: 'auto',
 
   [breakpoints.phone]: {
-    display: 'block',
+    display: 'flex-table',
     minWidth: '100%',
     paddingBottom: '$3',
   },

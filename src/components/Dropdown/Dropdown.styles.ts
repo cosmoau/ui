@@ -6,12 +6,16 @@ export const DropdownStyled = styled('div', {
 });
 
 export const DropdownTriggerStyled = styled('div', {
+  '*': {
+    cursor: 'pointer',
+  },
   appearance: 'none',
   cursor: 'pointer',
   display: 'inline-flex',
   outline: 'none',
   position: 'relative',
   transition: '$default',
+
   userSelect: 'none',
 });
 
