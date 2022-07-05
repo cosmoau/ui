@@ -20,4 +20,16 @@ export const CodeFunctionStyled = styled('div', {
   top: '$2',
 });
 
+export const CodeBlockStyled = styled('code', {
+  fontFamily: '$default',
+  lineBreak: 'auto',
+  maxWidth: '100%',
+
+  pre: {
+    fontFamily: '$default',
+    lineBreak: 'auto',
+    maxWidth: '100%',
+  },
+});
+
 export default CodeStyled;

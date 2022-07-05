@@ -5,7 +5,7 @@ import { DefaultProps } from '../../stitches.config';
 import { Button } from '../Button';
 import { Element } from '../Element';
 
-import { CodeStyled, CodeFunctionStyled } from './Code.styles';
+import { CodeStyled, CodeFunctionStyled, CodeBlockStyled } from './Code.styles';
 
 export interface Props extends DefaultProps {
   children: ReactNode;
@@ -58,9 +58,9 @@ export default function Code(props: Props): JSX.Element {
           </Button>
         )}
       </CodeFunctionStyled>
-      <code>
+      <CodeBlockStyled>
         <pre>{props.children && typeof props.children === 'string' ? handleParse(props.children) : props.children}</pre>
-      </code>
+      </CodeBlockStyled>
     </CodeStyled>
   );
 }
