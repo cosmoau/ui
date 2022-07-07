@@ -296,7 +296,7 @@ export declare const CodeFunctionStyled: import("@stitches/react/types/styled-co
         [x: string]: unknown;
     };
 }>>;
-export declare const CodeBlockStyled: import("@stitches/react/types/styled-component").StyledComponent<"code", {}, {}, import("@stitches/react/types/css-util").CSS<{}, {
+export declare const CodeBlockStyled: import("@stitches/react/types/styled-component").StyledComponent<"pre", {}, {}, import("@stitches/react/types/css-util").CSS<{}, {
     colors: {
         accent: string;
         background: string;

@@ -94,7 +94,6 @@ export default function Dates(props: Props): JSX.Element {
               lineHeight: 0,
             }}>
             <Button
-              theme={selectedDate === date ? 'solid' : 'border'}
               onClick={(): void => handleChange(date)}
               css={{
                 margin: '$2',
@@ -105,6 +104,7 @@ export default function Dates(props: Props): JSX.Element {
                   fontSize: '0.8rem',
                   opacity: selectedDate === date ? 1 : 0.5,
                 }}
+                bold={selectedDate === date}
                 as='small'>
                 {dayjs(date).format('ddd')}
               </Text>

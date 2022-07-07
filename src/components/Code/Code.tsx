@@ -3,7 +3,6 @@ import React, { ReactNode, useState } from 'react';
 
 import { DefaultProps } from '../../stitches.config';
 import { Button } from '../Button';
-import { Element } from '../Element';
 
 import { CodeStyled, CodeFunctionStyled, CodeBlockStyled } from './Code.styles';
 
@@ -25,30 +24,6 @@ export default function Code(props: Props): JSX.Element {
     }
   }
 
-  function handleParse(text: string): ReactNode {
-    const lines = text.split('\n');
-    const newLines = lines.map((line) => {
-      if (line.trim().startsWith('/*')) {
-        return (
-          <Element
-            css={{
-              '&:first-child': {
-                marginTop: 0,
-              },
-              marginBottom: '$2',
-              marginTop: '$3',
-              opacity: 0.5,
-            }}
-            key={line}>
-            {line}
-          </Element>
-        );
-      }
-      return <Element key={line}>{line}</Element>;
-    });
-    return newLines;
-  }
-
   return (
     <CodeStyled css={props.css}>
       <CodeFunctionStyled>
@@ -58,9 +33,7 @@ export default function Code(props: Props): JSX.Element {
           </Button>
         )}
       </CodeFunctionStyled>
-      <CodeBlockStyled>
-        <pre>{props.children && typeof props.children === 'string' ? handleParse(props.children) : props.children}</pre>
-      </CodeBlockStyled>
+      <CodeBlockStyled>{props.children}</CodeBlockStyled>
     </CodeStyled>
   );
 }

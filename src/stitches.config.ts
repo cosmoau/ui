@@ -41,8 +41,8 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       text: 'rgb(255, 255, 255)',
     },
     fontSizes: {
-      h1: '3.6rem',
-      h2: '3.1rem',
+      h1: '3.3rem',
+      h2: '2.9rem',
       h3: '2.3rem',
       h4: '1.9rem',
       h5: '1.7rem',
