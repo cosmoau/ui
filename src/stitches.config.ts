@@ -15,7 +15,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
   theme: {
     colors: {
       accent: 'rgb(170, 177, 201)',
-      background: 'rgb(18, 19, 26)',
+      background: 'rgb(15, 17, 23)',
       blueBorder: 'rgba(115, 172, 255, 0.4)',
       blueCTA: 'rgb(55, 119, 192)',
       blueOverlay: 'rgba(115, 172, 255, 0.2)',
@@ -42,8 +42,8 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     },
     fontSizes: {
       h1: '3.3rem',
-      h2: '2.9rem',
-      h3: '2.3rem',
+      h2: '2.6rem',
+      h3: '2.2rem',
       h4: '1.9rem',
       h5: '1.7rem',
       h6: '1.5rem',
@@ -169,7 +169,7 @@ export const lightTheme = createTheme({
     pinkText: 'rgb(173, 22, 128)',
     purpleText: 'rgb(112, 23, 171)',
     redText: 'rgb(170, 28, 47)',
-    text: 'rgb(14, 8, 29)',
+    text: 'rgb(18, 19, 26)',
   },
   shadows: {
     1: '0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.01)',

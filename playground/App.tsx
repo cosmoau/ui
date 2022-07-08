@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { CurrencyEth, Heart } from 'phosphor-react';
-import { ReactElement, useState } from 'react';
+import React, { useState } from 'react';
 import toast from 'react-hot-toast';
 
 import {
@@ -28,7 +29,7 @@ import {
   Field,
 } from '../src/index';
 
-export function App(): ReactElement {
+export function App(): any {
   const [activeOption, setActiveOption] = useState('Option 1');
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function handleActiveOption(label: string, value: string): any {

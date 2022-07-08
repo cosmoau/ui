@@ -37,7 +37,7 @@ export default function Provider(props: Props): JSX.Element {
 export const ThemeProvider = Provider;
 
 export function ProviderToggle(css: Props['css']): JSX.Element {
-  const { isDarkMode, toggle } = useDarkMode(true);
+  const { isDarkMode, toggle } = useDarkMode(false);
 
   return (
     <Button css={css} onClick={toggle}>

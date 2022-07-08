@@ -3,7 +3,7 @@ import { styled } from '../../stitches.config';
 export const paddingVariants = {
   padding: {
     default: {
-      padding: '$4 $5',
+      padding: '$5',
     },
     none: {
       padding: 0,

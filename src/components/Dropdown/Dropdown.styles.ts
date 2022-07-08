@@ -1,6 +1,7 @@
 import { fadeIn, fadeOut, styled } from '../../stitches.config';
 
 export const DropdownStyled = styled('div', {
+  display: 'inline-block',
   position: 'relative',
   width: 'auto',
 });
@@ -25,10 +26,11 @@ export const DropdownGroupStyled = styled('div', {
   borderRadius: '$1',
   boxShadow: '$3',
   lineBreak: 'auto',
-  marginTop: '.8%',
+  marginTop: '5%',
   overflowY: 'auto',
   padding: 'calc($2 / 1.5)',
   position: 'absolute',
+  textAlign: 'left !important',
   transition: '$default',
   variants: {
     animation: {

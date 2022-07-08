@@ -306,6 +306,7 @@ export declare const DropdownGroupStyled: import("@stitches/react/types/styled-c
     overflowY: string;
     padding: string;
     position: string;
+    textAlign: string;
     transition: string;
     variants: {
         animation: {
