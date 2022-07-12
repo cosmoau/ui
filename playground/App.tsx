@@ -38,7 +38,7 @@ export function App(): any {
     console.log(value);
   }
   return (
-    <Provider>
+    <Provider locked='dark'>
       <View inverted container>
         <Stack direction='row' flex='center' top='4'>
           <Stack direction='column' width={33}>

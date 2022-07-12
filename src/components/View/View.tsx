@@ -18,6 +18,9 @@ export default function View(props: Props): JSX.Element {
       className={props.inverted ? theme.toString() : undefined}
       css={{
         ...props.css,
+        ...(props.inverted && {
+          background: '$inverted !important',
+        }),
         ...(props.top && {
           paddingTop: `$${props.top}`,
           [breakpoints.phone]: {
@@ -25,10 +28,10 @@ export default function View(props: Props): JSX.Element {
           },
         }),
         ...(props.bottom && {
-          paddingBottom: `$${props.bottom}`,
           [breakpoints.phone]: {
             paddingBottom: `calc($${props.bottom} * 0.9)`,
           },
+          paddingBottom: `$${props.bottom}`,
         }),
       }}
       id={props.id}>

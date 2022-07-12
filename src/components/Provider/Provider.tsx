@@ -10,6 +10,7 @@ import { ProviderStyled, reset } from './Provider.styles';
 
 export interface Props extends DefaultProps {
   children: ReactNode | ReactNode[];
+  locked?: 'dark' | 'light';
 }
 
 export default function Provider(props: Props): JSX.Element {
@@ -27,7 +28,9 @@ export default function Provider(props: Props): JSX.Element {
   reset();
 
   return (
-    <ProviderStyled css={props.css} className={isDarkMode ? theme.toString() : lightTheme.toString()}>
+    <ProviderStyled
+      css={props.css}
+      className={!props.locked ? (isDarkMode ? theme.toString() : lightTheme.toString()) : props.locked === 'dark' ? theme.toString() : lightTheme.toString()}>
       <Toast />
       {props.children}
     </ProviderStyled>

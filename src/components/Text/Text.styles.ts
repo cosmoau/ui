@@ -27,7 +27,7 @@ export const TextStyled = styled('div', {
         lineHeight: '$h1',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h1 * 0.8)',
+          fontSize: 'calc($h1 * 0.86)',
         },
         [breakpoints.tabletX]: {
           fontSize: 'calc($h1 * 0.9)',
@@ -45,7 +45,7 @@ export const TextStyled = styled('div', {
         lineHeight: '$h2',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h2 * 0.84)',
+          fontSize: 'calc($h2 * 0.86)',
         },
         [breakpoints.tabletX]: {
           fontSize: 'calc($h2 * 0.9)',
@@ -81,7 +81,7 @@ export const TextStyled = styled('div', {
         lineHeight: '$h4',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h4 * 0.88)',
+          fontSize: 'calc($h4 * 0.9)',
         },
         [breakpoints.tabletX]: {
           fontSize: 'calc($h4 * 0.94)',
@@ -99,13 +99,13 @@ export const TextStyled = styled('div', {
         lineHeight: '$h5',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h5 * 0.92)',
+          fontSize: 'calc($h5 * 0.9)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($h5 * 0.96)',
+          fontSize: 'calc($h5 * 0.94)',
         },
         [breakpoints.laptopX]: {
-          fontSize: 'calc($h5 * 0.98)',
+          fontSize: 'calc($h5 * 0.96)',
         },
       },
       h6: {
@@ -139,10 +139,10 @@ export const TextStyled = styled('div', {
           fontSize: 'calc($p * 0.9)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($p * 0.96)',
+          fontSize: 'calc($p * 0.94)',
         },
         [breakpoints.laptopX]: {
-          fontSize: 'calc($p * 0.98)',
+          fontSize: 'calc($p * 0.96)',
         },
       },
       small: {
@@ -157,10 +157,10 @@ export const TextStyled = styled('div', {
           fontSize: 'calc($small * 0.9)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($small * 0.96)',
+          fontSize: 'calc($small * 0.94)',
         },
         [breakpoints.laptopX]: {
-          fontSize: 'calc($small * 0.98)',
+          fontSize: 'calc($small * 0.96)',
         },
       },
       span: {
