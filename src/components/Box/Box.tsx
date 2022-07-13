@@ -26,8 +26,8 @@ export default function Box(props: Props): JSX.Element {
           <ThreesImage
             css={{
               img: {
-                borderTopLeftRadius: '$3',
-                borderTopRightRadius: '$3',
+                borderTopLeftRadius: '$1 !important',
+                borderTopRightRadius: '$1 !important',
               },
             }}
             fillHeight={props.imageHeight || '20rem'}
@@ -43,8 +43,8 @@ export default function Box(props: Props): JSX.Element {
         <ThreesImage
           css={{
             img: {
-              borderTopLeftRadius: '$3',
-              borderTopRightRadius: '$3',
+              borderTopLeftRadius: '$1 !important',
+              borderTopRightRadius: '$1 !important',
             },
           }}
           fillHeight={props.imageHeight || '20rem'}
