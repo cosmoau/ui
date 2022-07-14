@@ -15,7 +15,7 @@
       "last 1 safari version"
     ]
   },
-  "bugs": "https://github.com/cosmo-au/design-system/issues",
+  "bugs": "https://github.com/withcosmo/design-system/issues",
   "devDependencies": {
     "@stitches/react": "^1.2.8",
     "@types/react": "^18.0.15",
@@ -68,7 +68,7 @@
     "react-hot-toast": ">=2.0.0"
   },
   "prettier": "eslint-config-dolmios/.prettierrc.json",
-  "repository": "https://github.com/cosmo-au/design-system.git",
+  "repository": "https://github.com/withcosmo/design-system.git",
   "scripts": {
     "build": "yarn lint && microbundle --jsx React.createElement --compress --format esm,cjs,modern",
     "lint": "eslint src --ext js,jsx,ts,tsx",

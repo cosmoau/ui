@@ -1365,9 +1365,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cosmo-au/design-system@workspace:.":
+"@withcosmo/design-system@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@cosmo-au/design-system@workspace:."
+  resolution: "@withcosmo/design-system@workspace:."
   dependencies:
     "@stitches/react": "npm:^1.2.8"
     "@types/react": "npm:^18.0.15"

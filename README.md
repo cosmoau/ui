@@ -1,10 +1,10 @@
-# @cosmo-au/design-system
+# @withcosmo/design-system
 
 The Cosmo Design System enforces strict component APIs and performance parameters to streamline development across projects, using Next and Stitches 🌈
 
 ### Installation
 
-    $ yarn add @cosmo-au/design-system
+    $ yarn add @withcosmo/design-system
 
 ### Develop
 
