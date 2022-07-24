@@ -7,9 +7,16 @@ export const ProviderStyled = styled('div', {
   position: 'relative',
 });
 
+export const ProviderTriggerStyled = styled('div', {
+  '*': {
+    cursor: 'pointer',
+  },
+  display: 'inline-block',
+  position: 'relative',
+});
+
 export const reset = globalCss({
   '@import': 'url("https://xxxjddzdqkdtyqtywwfi.supabase.co/storage/v1/object/public/public/webfont.css")',
-  // eslint-disable-next-line sort-keys-fix/sort-keys-fix
   '*': {
     MozOsxFontSmoothing: 'grayscale',
     WebkitAppearance: 'none',

@@ -36,7 +36,7 @@ export default function Box(props: Props): JSX.Element {
             objectPosition={props.imagePosition || 'center'}
             layout='fill'
             src={props.image.toString()}
-            hover
+            hover={props.hover}
           />
         </a>
       ) : (
@@ -53,7 +53,7 @@ export default function Box(props: Props): JSX.Element {
           objectPosition={props.imagePosition || 'center'}
           layout='fill'
           src={props.image.toString()}
-          hover
+          hover={props.hover}
         />
       )}
       <BoxImageChildrenStyled padding={'default'}>{props.children}</BoxImageChildrenStyled>

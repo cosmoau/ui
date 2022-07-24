@@ -12,6 +12,7 @@ export declare const StackRowStyled: import("@stitches/react/types/styled-compon
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -161,6 +162,7 @@ export declare const StackColumnStyled: import("@stitches/react/types/styled-com
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;

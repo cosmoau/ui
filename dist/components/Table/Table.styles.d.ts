@@ -12,6 +12,7 @@ export declare const TableStyled: import("@stitches/react/types/styled-component
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -161,6 +162,7 @@ export declare const TableHeadStyled: import("@stitches/react/types/styled-compo
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -310,6 +312,7 @@ export declare const TableBodyStyled: import("@stitches/react/types/styled-compo
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -459,6 +462,7 @@ export declare const TableRowStyled: import("@stitches/react/types/styled-compon
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -608,6 +612,7 @@ export declare const TableCellStyled: import("@stitches/react/types/styled-compo
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -757,6 +762,7 @@ export declare const TableHeadCellStyled: import("@stitches/react/types/styled-c
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;

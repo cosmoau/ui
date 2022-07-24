@@ -121,6 +121,7 @@ export declare const TextStyled: import("@stitches/react/types/styled-component"
                 fontSize: string;
                 fontWeight: string;
                 lineHeight: string;
+                opacity: string;
             };
             small: {
                 [x: string]: string | {

@@ -38,7 +38,7 @@ export function App(): any {
     console.log(value);
   }
   return (
-    <Provider locked='dark'>
+    <Provider default='light'>
       <View inverted container>
         <Stack direction='row' flex='center' top='4'>
           <Stack direction='column' width={33}>
@@ -48,7 +48,14 @@ export function App(): any {
             <Text as='h5' bold inline='4'>
               Features
             </Text>
-
+            <Dialog
+              trigger={
+                <Text as='h5' inline='4'>
+                  Pricing
+                </Text>
+              }>
+              Test
+            </Dialog>
             <Text as='h5' inline='4'>
               Pricing
             </Text>
@@ -87,7 +94,7 @@ export function App(): any {
             <Text as='h1' bottom='4' top='6'>
               An effortless way to manage, built for all short term investors
             </Text>
-
+            <ProviderToggle trigger={<h1>Switch</h1>} />
             <Text
               accent
               as='h5'
@@ -134,7 +141,6 @@ export function App(): any {
         <Stack direction='row' flex='center' top='6'>
           <Stack direction='column'>
             <Text as='h1'>Switch</Text>
-            <ProviderToggle />
           </Stack>
         </Stack>
         <Stack direction='row' flex='center' top='6'>

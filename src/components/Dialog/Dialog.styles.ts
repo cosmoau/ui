@@ -6,7 +6,10 @@ export const DialogStyled = styled('div', {
 });
 
 export const DialogTriggerStyled = styled('div', {
-  display: 'inline-flex',
+  '*': {
+    cursor: 'pointer',
+  },
+  display: 'inline-block',
   position: 'relative',
 });
 

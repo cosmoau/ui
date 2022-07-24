@@ -1,7 +1,7 @@
 {
   "name": "@withcosmo/design-system",
   "description": "The Cosmo Design System enforces strict component APIs and performance parameters to streamline development across projects.",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "author": "Jackson Dolman <mail@planare.dev>",
   "browserslist": {
     "production": [
@@ -19,21 +19,23 @@
   "devDependencies": {
     "@stitches/react": "^1.2.8",
     "@types/react": "^18.0.15",
-    "@typescript-eslint/eslint-plugin": "^5.30.5",
-    "dayjs": "^1.11.3",
-    "eslint": "^8.19.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "dayjs": "^1.11.4",
+    "eslint": "^8.20.0",
     "eslint-config-dolmios": "^1.0.5",
-    "eslint-plugin-sort-keys-fix": "^1.1.2",
     "microbundle": "^0.15.0",
-    "next": "^12.2.2",
+    "next": "^12.2.3",
     "parcel": "^2.6.2",
+    "path-browserify": "^1.0.1",
     "phosphor-react": "^1.4.1",
     "prettier": "^2.7.1",
+    "process": "^0.11.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.3.0",
     "typescript": "^4.7.4",
-    "usehooks-ts": "^2.6.0"
+    "usehooks-ts": "^2.6.0",
+    "util": "^0.12.4"
   },
   "files": [
     "dist"
@@ -55,22 +57,21 @@
     "ui",
     "user interface"
   ],
-  "license": "GPL-3.0",
   "main": "dist/index.js",
   "module": "dist/index.modern.module.js",
   "packageManager": "yarn@3.2.0",
   "peerDependencies": {
-    "dayjs": "*",
-    "next": ">=12.1.0",
-    "phosphor-react": ">=1.4.0",
-    "react": ">=17.0.2",
-    "react-dom": ">=17.0.2",
-    "react-hot-toast": ">=2.0.0"
+    "dayjs": "~1.11.4",
+    "next": "~12.2.3",
+    "phosphor-react": "~1.4.1",
+    "react": "~18.2.0",
+    "react-dom": "~18.2.0",
+    "react-hot-toast": "~2.3.0"
   },
   "prettier": "eslint-config-dolmios/.prettierrc.json",
   "repository": "https://github.com/withcosmo/design-system.git",
   "scripts": {
-    "build": "yarn lint && microbundle --jsx React.createElement --compress --format esm,cjs,modern",
+    "build": "yarn lint && microbundle --jsx React.createElement --compress --visualize",
     "lint": "eslint src --ext js,jsx,ts,tsx",
     "playground": "parcel playground/index.html --dist-dir playground/dist --open",
     "prettier": "prettier --check '**/*.{js,jsx,ts,tsx}'",

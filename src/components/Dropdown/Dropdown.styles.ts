@@ -10,14 +10,8 @@ export const DropdownTriggerStyled = styled('div', {
   '*': {
     cursor: 'pointer',
   },
-  appearance: 'none',
-  cursor: 'pointer',
-  display: 'inline-flex',
-  outline: 'none',
+  display: 'inline-block',
   position: 'relative',
-  transition: '$default',
-
-  userSelect: 'none',
 });
 
 export const DropdownGroupStyled = styled('div', {

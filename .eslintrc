@@ -1,8 +1,6 @@
 {
   "extends": ["dolmios"],
-  "plugins": ["sort-keys-fix"],
   "rules": {
-    "sort-keys-fix/sort-keys-fix": "warn",
     "import/no-unresolved": "off"
   }
 }

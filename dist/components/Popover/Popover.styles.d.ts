@@ -12,6 +12,7 @@ export declare const PopoverStyled: import("@stitches/react/types/styled-compone
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -161,6 +162,7 @@ export declare const PopoverTriggerStyled: import("@stitches/react/types/styled-
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -340,6 +342,7 @@ export declare const PopoverContentStyled: import("@stitches/react/types/styled-
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;

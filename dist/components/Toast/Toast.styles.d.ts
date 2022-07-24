@@ -51,6 +51,7 @@ export declare const ToastStyled: import("@stitches/react/types/styled-component
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -200,6 +201,7 @@ export declare const ToastContainerStyled: import("@stitches/react/types/styled-
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;

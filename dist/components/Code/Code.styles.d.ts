@@ -12,6 +12,7 @@ export declare const CodeStyled: import("@stitches/react/types/styled-component"
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -161,6 +162,7 @@ export declare const CodeFunctionStyled: import("@stitches/react/types/styled-co
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -310,6 +312,7 @@ export declare const CodeBlockStyled: import("@stitches/react/types/styled-compo
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;

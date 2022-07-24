@@ -6,9 +6,11 @@ export const PopoverStyled = styled('div', {
 });
 
 export const PopoverTriggerStyled = styled('div', {
-  display: 'inline-flex',
+  '*': {
+    cursor: 'pointer',
+  },
+  display: 'inline-block',
   position: 'relative',
-  width: 'auto',
 });
 
 export const PopoverContentStyled = styled('div', {

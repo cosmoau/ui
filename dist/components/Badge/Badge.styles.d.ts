@@ -98,6 +98,7 @@ export declare const BadgeStyled: import("@stitches/react/types/styled-component
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -266,6 +267,7 @@ export declare const BadgeIconStyled: import("@stitches/react/types/styled-compo
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -455,6 +457,7 @@ export declare const BadgeDotStyled: import("@stitches/react/types/styled-compon
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
