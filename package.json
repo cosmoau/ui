@@ -1,7 +1,7 @@
 {
   "name": "@withcosmo/design-system",
-  "description": "The Cosmo Design System enforces strict component APIs and performance parameters to streamline development across projects.",
-  "version": "2.0.7",
+  "description": "The component library used in development across all Cosmo projects.",
+  "version": "2.0.8",
   "author": "Jackson Dolman <mail@planare.dev>",
   "browserslist": {
     "production": [
@@ -19,23 +19,18 @@
   "devDependencies": {
     "@stitches/react": "^1.2.8",
     "@types/react": "^18.0.15",
-    "@typescript-eslint/eslint-plugin": "^5.30.7",
     "dayjs": "^1.11.4",
     "eslint": "^8.20.0",
     "eslint-config-dolmios": "^1.0.5",
     "microbundle": "^0.15.0",
     "next": "^12.2.3",
-    "parcel": "^2.6.2",
-    "path-browserify": "^1.0.1",
     "phosphor-react": "^1.4.1",
     "prettier": "^2.7.1",
-    "process": "^0.11.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.3.0",
     "typescript": "^4.7.4",
-    "usehooks-ts": "^2.6.0",
-    "util": "^0.12.4"
+    "usehooks-ts": "^2.6.0"
   },
   "files": [
     "dist"
@@ -61,17 +56,17 @@
   "module": "dist/index.modern.module.js",
   "packageManager": "yarn@3.2.0",
   "peerDependencies": {
-    "dayjs": "~1.11.4",
-    "next": "~12.2.3",
-    "phosphor-react": "~1.4.1",
-    "react": "~18.2.0",
-    "react-dom": "~18.2.0",
-    "react-hot-toast": "~2.3.0"
+    "dayjs": "*",
+    "next": "*",
+    "phosphor-react": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-hot-toast": "*"
   },
   "prettier": "eslint-config-dolmios/.prettierrc.json",
   "repository": "https://github.com/withcosmo/design-system.git",
   "scripts": {
-    "build": "yarn lint && microbundle --jsx React.createElement --compress --visualize",
+    "build": "yarn lint && microbundle --jsx React.createElement --compress",
     "lint": "eslint src --ext js,jsx,ts,tsx",
     "playground": "parcel playground/index.html --dist-dir playground/dist --open",
     "prettier": "prettier --check '**/*.{js,jsx,ts,tsx}'",

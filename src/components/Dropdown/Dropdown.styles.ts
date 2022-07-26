@@ -3,14 +3,14 @@ import { fadeIn, fadeOut, styled } from '../../stitches.config';
 export const DropdownStyled = styled('div', {
   display: 'inline-block',
   position: 'relative',
-  width: 'auto',
 });
 
 export const DropdownTriggerStyled = styled('div', {
   '*': {
     cursor: 'pointer',
   },
-  display: 'inline-block',
+  display: 'inline-flex',
+  verticalAlign: 'middle',
   position: 'relative',
 });
 

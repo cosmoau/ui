@@ -12,7 +12,6 @@ export declare const ViewStyled: import("@stitches/react/types/styled-component"
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -181,7 +180,6 @@ export declare const ViewContainerStyled: import("@stitches/react/types/styled-c
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;

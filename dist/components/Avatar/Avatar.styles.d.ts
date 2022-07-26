@@ -12,7 +12,6 @@ export declare const AvatarStyled: import("@stitches/react/types/styled-componen
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -162,7 +161,6 @@ export declare const AvatarImageStyled: import("@stitches/react/types/styled-com
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -312,7 +310,6 @@ export declare const AvatarFallbackStyled: import("@stitches/react/types/styled-
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;

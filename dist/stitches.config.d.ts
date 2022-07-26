@@ -27,7 +27,6 @@ export declare const theme: string & {
         greenBorder: import("@stitches/react/types/theme").Token<"greenBorder", string, "colors", "">;
         greenOverlay: import("@stitches/react/types/theme").Token<"greenOverlay", string, "colors", "">;
         greenText: import("@stitches/react/types/theme").Token<"greenText", string, "colors", "">;
-        inverted: import("@stitches/react/types/theme").Token<"inverted", string, "colors", "">;
         orangeBorder: import("@stitches/react/types/theme").Token<"orangeBorder", string, "colors", "">;
         orangeOverlay: import("@stitches/react/types/theme").Token<"orangeOverlay", string, "colors", "">;
         orangeText: import("@stitches/react/types/theme").Token<"orangeText", string, "colors", "">;
@@ -130,7 +129,6 @@ export declare const theme: string & {
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -292,7 +290,6 @@ export declare const theme: string & {
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -452,7 +449,6 @@ export declare const theme: string & {
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -607,7 +603,6 @@ export declare const theme: string & {
             greenBorder: string;
             greenOverlay: string;
             greenText: string;
-            inverted: string;
             orangeBorder: string;
             orangeOverlay: string;
             orangeText: string;
@@ -757,7 +752,6 @@ export declare const theme: string & {
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -907,7 +901,6 @@ export declare const theme: string & {
             greenBorder: string;
             greenOverlay: string;
             greenText: string;
-            inverted: string;
             orangeBorder: string;
             orangeOverlay: string;
             orangeText: string;
@@ -1055,7 +1048,6 @@ export declare const lightTheme: string & {
         accent: string;
         background: string;
         blueText: string;
-        inverted: string;
         border: string;
         default: string;
         defaultHover: string;

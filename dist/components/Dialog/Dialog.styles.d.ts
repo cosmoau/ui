@@ -12,7 +12,6 @@ export declare const DialogStyled: import("@stitches/react/types/styled-componen
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -162,7 +161,6 @@ export declare const DialogTriggerStyled: import("@stitches/react/types/styled-c
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -335,7 +333,6 @@ export declare const DialogOverlayStyled: import("@stitches/react/types/styled-c
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -532,7 +529,6 @@ export declare const DialogContentStyled: import("@stitches/react/types/styled-c
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -682,7 +678,6 @@ export declare const DialogExitStyled: import("@stitches/react/types/styled-comp
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;

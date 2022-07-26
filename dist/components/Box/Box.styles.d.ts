@@ -79,7 +79,6 @@ export declare const BoxStyled: import("@stitches/react/types/styled-component")
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -240,7 +239,6 @@ export declare const BoxImageChildrenStyled: import("@stitches/react/types/style
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;

@@ -25,7 +25,7 @@ export default function Badge(props: Props): JSX.Element {
       css={{
         ...props.css,
         ...(props.inline && {
-          display: 'inline-block',
+          display: 'inline-flex',
           marginBottom: '0 !important',
           marginRight: props.inline === 'auto' ? 'auto' : `$${props.inline}`,
           [breakpoints.phone]: {

@@ -51,7 +51,6 @@ export declare const FieldStyled: import("@stitches/react/types/styled-component
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -201,7 +200,6 @@ export declare const FieldAreaStyled: import("@stitches/react/types/styled-compo
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -351,7 +349,6 @@ export declare const FieldFunctionStyled: import("@stitches/react/types/styled-c
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;

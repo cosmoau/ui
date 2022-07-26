@@ -11,7 +11,8 @@ export const ProviderTriggerStyled = styled('div', {
   '*': {
     cursor: 'pointer',
   },
-  display: 'inline-block',
+  display: 'inline-flex',
+  verticalAlign: 'middle',
   position: 'relative',
 });
 

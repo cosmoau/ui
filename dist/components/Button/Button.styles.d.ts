@@ -170,7 +170,6 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -333,7 +332,6 @@ export declare const ButtonIconStyled: import("@stitches/react/types/styled-comp
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;

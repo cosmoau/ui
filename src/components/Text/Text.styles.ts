@@ -27,10 +27,10 @@ export const TextStyled = styled('div', {
         lineHeight: '$h1',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h1 * 0.8)',
+          fontSize: 'calc($h1 * 0.75)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($h1 * 0.9)',
+          fontSize: 'calc($h1 * 0.85)',
         },
         [breakpoints.laptopX]: {
           fontSize: 'calc($h1 * 0.95)',
@@ -45,13 +45,13 @@ export const TextStyled = styled('div', {
         lineHeight: '$h2',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h2 * 0.85)',
+          fontSize: 'calc($h2 * 0.8)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($h2 * 0.9)',
+          fontSize: 'calc($h2 * 0.85)',
         },
         [breakpoints.laptopX]: {
-          fontSize: 'calc($h2 * 0.95)',
+          fontSize: 'calc($h2 * 0.9)',
         },
       },
       h3: {

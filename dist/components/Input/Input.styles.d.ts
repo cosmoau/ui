@@ -53,7 +53,6 @@ export declare const InputStyled: import("@stitches/react/types/styled-component
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -203,7 +202,6 @@ export declare const InputAreaStyled: import("@stitches/react/types/styled-compo
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -353,7 +351,6 @@ export declare const InputFunctionStyled: import("@stitches/react/types/styled-c
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;

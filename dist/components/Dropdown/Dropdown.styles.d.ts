@@ -12,7 +12,6 @@ export declare const DropdownStyled: import("@stitches/react/types/styled-compon
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -162,7 +161,6 @@ export declare const DropdownTriggerStyled: import("@stitches/react/types/styled
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -338,7 +336,6 @@ export declare const DropdownGroupStyled: import("@stitches/react/types/styled-c
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -523,7 +520,6 @@ export declare const DropdownItemStyled: import("@stitches/react/types/styled-co
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -674,7 +670,6 @@ declare const _default: {
             greenBorder: string;
             greenOverlay: string;
             greenText: string;
-            inverted: string;
             orangeBorder: string;
             orangeOverlay: string;
             orangeText: string;

@@ -33,7 +33,7 @@ export const ButtonStyled = styled('button', {
   variants: {
     block: {
       false: {
-        display: 'inline-block',
+        display: 'inline-flex',
       },
       true: {
         display: 'block',
@@ -71,7 +71,7 @@ export const ButtonStyled = styled('button', {
 });
 
 export const ButtonIconStyled = styled('span', {
-  display: 'inline-flex',
+  display: 'inline-block',
   variants: {
     align: {
       left: {

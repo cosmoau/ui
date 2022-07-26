@@ -32,10 +32,12 @@ export default function Text(props: Props): JSX.Element {
           },
         }),
         ...(props.inline && {
-          display: 'inline-block',
+          display: 'inline-flex',
           marginBottom: '0 !important',
           marginRight: props.inline === 'auto' ? 'auto' : `$${props.inline}`,
           verticalAlign: 'middle',
+          alignSelf: 'center',
+
           [breakpoints.phone]: {
             marginRight: props.inline === 'auto' ? 'auto' : `calc($${props.inline} * 0.8)`,
           },

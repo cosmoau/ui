@@ -12,7 +12,6 @@ export declare const DividerStyled: import("@stitches/react/types/styled-compone
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
-        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
