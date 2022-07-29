@@ -1,7 +1,7 @@
 {
   "name": "@withcosmo/design-system",
   "description": "The component library used in development across all Cosmo projects.",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "author": "Jackson Dolman <mail@planare.dev>",
   "browserslist": {
     "production": [
@@ -68,7 +68,6 @@
   "scripts": {
     "build": "yarn lint && microbundle --jsx React.createElement --compress",
     "lint": "eslint src --ext js,jsx,ts,tsx",
-    "playground": "parcel playground/index.html --dist-dir playground/dist --open",
     "prettier": "prettier --check '**/*.{js,jsx,ts,tsx}'",
     "watch": "microbundle watch --jsx React.createElement"
   },

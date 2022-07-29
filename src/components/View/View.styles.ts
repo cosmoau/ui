@@ -28,7 +28,7 @@ export const ViewContainerStyled = styled('div', {
         },
         [breakpoints.laptopX]: {
           maxWidth: '1440px',
-          width: '97%',
+          width: '96%',
         },
         [breakpoints.desktopX]: {
           maxWidth: '1660px',

@@ -43,6 +43,7 @@ export const PopoverContentStyled = styled('div', {
     },
   },
   width: 'auto',
+  minWidth: '10rem',
   zIndex: '$popover',
 });
 

@@ -325,6 +325,7 @@ export declare const PopoverContentStyled: import("@stitches/react/types/styled-
         };
     };
     width: string;
+    minWidth: string;
     zIndex: string;
 }]>, {}, import("@stitches/react/types/css-util").CSS<{}, {
     colors: {

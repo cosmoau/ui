@@ -21,12 +21,12 @@ export default function View(props: Props): JSX.Element {
         ...(props.top && {
           paddingTop: `$${props.top}`,
           [breakpoints.phone]: {
-            paddingTop: `calc($${props.top} * 0.9)`,
+            paddingTop: props.top !== ('8' || '9') ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.8)`,
           },
         }),
         ...(props.bottom && {
           [breakpoints.phone]: {
-            paddingBottom: `calc($${props.bottom} * 0.9)`,
+            paddingBottom: props.bottom !== ('8' || '9') ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.8)`,
           },
           paddingBottom: `$${props.bottom}`,
         }),

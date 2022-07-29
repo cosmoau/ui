@@ -90,9 +90,9 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       3: '0.75rem',
       4: '1.25rem',
       5: '2rem',
-      6: '3rem',
-      7: '6rem',
-      8: '9rem',
+      6: '4rem',
+      7: '8rem',
+      8: '10rem',
     },
     transitions: {
       default: 'all 0.25s ease-in-out',
