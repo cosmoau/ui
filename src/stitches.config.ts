@@ -1,14 +1,14 @@
 import { createStitches, createTheme, CSS } from '@stitches/react';
 
 export const breakpoints = {
-  desktop: '@media only screen and (max-width: 2160px)',
-  desktopX: '@media only screen and (min-width: 1481px) and (max-width: 2160px)',
-  laptop: '@media only screen and (max-width: 1480px)',
-  laptopX: '@media only screen and (min-width: 961px) and (max-width: 1480px)',
-  phone: '@media only screen and (max-width: 720px)',
+  desktop: '@media only screen and (max-width: 1980px)',
+  desktopX: '@media only screen and (min-width: 1541px) and (max-width: 1980px)',
+  laptop: '@media only screen and (max-width: 1540px)',
+  laptopX: '@media only screen and (min-width: 961px) and (max-width: 1540px)',
+  phone: '@media only screen and (max-width: 780px)',
   tablet: '@media only screen and (max-width: 960px)',
-  tabletX: '@media only screen and (min-width: 721px) and (max-width: 960px)',
-  wide: '@media only screen and (min-width: 2161px)',
+  tabletX: '@media only screen and (min-width: 781px) and (max-width: 960px)',
+  wide: '@media only screen and (min-width: 1981px)',
 };
 
 export const { theme, css, styled, getCssText, globalCss, keyframes } = createStitches({

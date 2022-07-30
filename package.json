@@ -1,7 +1,7 @@
 {
   "name": "@withcosmo/design-system",
   "description": "The component library used in development across all Cosmo projects.",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "author": "Jackson Dolman <mail@planare.dev>",
   "browserslist": {
     "production": [
