@@ -31,8 +31,8 @@ export default function Provider(props: Props): JSX.Element {
 
   return (
     <ProviderStyled
-      css={props.css}
-      className={props.locked ? (props.locked === 'dark' ? theme.toString() : lightTheme.toString()) : isDarkMode ? theme.toString() : lightTheme.toString()}>
+      className={props.locked ? (props.locked === 'dark' ? theme.toString() : lightTheme.toString()) : isDarkMode ? theme.toString() : lightTheme.toString()}
+      css={props.css}>
       <Toast />
       {props.children}
     </ProviderStyled>
@@ -41,12 +41,11 @@ export default function Provider(props: Props): JSX.Element {
 
 export const ThemeProvider = Provider;
 
-// props exclude children
 export function ProviderToggle(props: Omit<Props, 'children'>): JSX.Element {
   const { isDarkMode, toggle } = useDarkMode(false);
 
   return (
-    <ProviderTriggerStyled onClick={toggle} css={props.css}>
+    <ProviderTriggerStyled css={props.css} onClick={toggle}>
       {isDarkMode ? props.triggerActive || props.trigger : props.trigger}
     </ProviderTriggerStyled>
   );

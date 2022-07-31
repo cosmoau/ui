@@ -17,6 +17,9 @@ export interface Props extends Omit<DefaultProps, 'spacing'> {
 export default function Text(props: Props): JSX.Element {
   return (
     <TextStyled
+      accent={props.accent}
+      as={props.as}
+      bold={props.bold}
       css={{
         ...props.css,
         ...(props.top && {
@@ -32,20 +35,17 @@ export default function Text(props: Props): JSX.Element {
           paddingBottom: `$${props.bottom}`,
         }),
         ...(props.inline && {
+          alignSelf: 'center',
           display: 'inline-flex',
           marginBottom: '0 !important',
           marginRight: props.inline === 'auto' ? 'auto' : `$${props.inline}`,
           verticalAlign: 'middle',
-          alignSelf: 'center',
 
           [breakpoints.phone]: {
             marginRight: props.inline === 'auto' ? 'auto' : `calc($${props.inline} * 0.8)`,
           },
         }),
       }}
-      as={props.as}
-      accent={props.accent}
-      bold={props.bold}
       size={props.as}>
       {props.children}
     </TextStyled>

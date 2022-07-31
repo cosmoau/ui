@@ -69,39 +69,39 @@ export default function Dropdown(props: Props): JSX.Element {
 
   return (
     <DropdownStyled css={props.css} id={props.id}>
-      <DropdownTriggerStyled onClickCapture={handleClick} key={props.active || Math.random()}>
+      <DropdownTriggerStyled key={props.active || Math.random()} onClickCapture={handleClick}>
         {props.trigger}
       </DropdownTriggerStyled>
       {isMounted && (
         <DropdownGroupStyled
-          ref={ref}
           animation={isOpen}
           css={{
             left: props.align === 'left' ? '0' : 'auto',
             maxWidth: props.width || '15rem',
             minWidth: '15rem',
             right: props.align === 'right' ? '0' : 'auto',
-          }}>
+          }}
+          ref={ref}>
           {props.options.map(({ label, value }) =>
             props.submenu ? (
               <DropdownItemStyled
                 css={{
                   opacity: path === value ? 0.44 : 1,
                 }}
-                submenu={true}
-                key={value}>
+                key={value}
+                submenu={true}>
                 <a onClickCapture={(): void => handleNavigate(value)}>{label}</a>
               </DropdownItemStyled>
             ) : (
               <DropdownItemStyled
+                css={{
+                  opacity: props.active && props.active === value ? 0.44 : 1,
+                }}
                 key={value}
                 onClickCapture={(): void => {
                   handleActions(value, label);
                 }}
-                submenu={false}
-                css={{
-                  opacity: props.active && props.active === value ? 0.44 : 1,
-                }}>
+                submenu={false}>
                 {label}
               </DropdownItemStyled>
             )

@@ -91,7 +91,7 @@ export default function Field(props: Props): JSX.Element {
           )}
         </FieldFunctionStyled>
       )}
-      <FieldAreaStyled onChange={handleChange} css={props.css} disabled={props.disabled} placeholder={props.placeholder} rows={props.rows} cols={props.cols} value={value} />
+      <FieldAreaStyled cols={props.cols} css={props.css} disabled={props.disabled} onChange={handleChange} placeholder={props.placeholder} rows={props.rows} value={value} />
     </FieldStyled>
   );
 }

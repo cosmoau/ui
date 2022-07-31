@@ -55,11 +55,11 @@ export default function Dates(props: Props): JSX.Element {
 
   return (
     <DatesStyled>
-      <Stack bottom='4' direction='row' align='center' flex='center'>
-        <Stack direction='column' width={20} widthPhone={20} minimal>
+      <Stack align='center' bottom='4' direction='row' flex='center'>
+        <Stack direction='column' minimal width={20} widthPhone={20}>
           <Button onClick={handlePrevious}>-</Button>
         </Stack>
-        <Stack direction='column' width={60} widthPhone={60} minimal align='center'>
+        <Stack align='center' direction='column' minimal width={60} widthPhone={60}>
           <Text
             as='h6'
             bold
@@ -69,43 +69,43 @@ export default function Dates(props: Props): JSX.Element {
             {dayjs(selectedDate).format('DD MMMM, YYYY')}
           </Text>
         </Stack>
-        <Stack direction='column' width={20} widthPhone={20} minimal align='right'>
+        <Stack align='right' direction='column' minimal width={20} widthPhone={20}>
           <Button onClick={handleNext}>+</Button>
         </Stack>
       </Stack>
       <Stack
-        direction='row'
         align='center'
-        flex='stretch'
-        top='1'
         css={{
           border: '1px solid rgba(0,0,0,0.05)',
           padding: '0.5rem',
-        }}>
+        }}
+        direction='row'
+        flex='stretch'
+        top='1'>
         {dates.map((date) => (
           <Stack
             align='center'
-            direction='column'
-            width={25}
-            widthPhone={25}
-            key={date}
-            minimal
             css={{
               lineHeight: 0,
-            }}>
+            }}
+            direction='column'
+            key={date}
+            minimal
+            width={25}
+            widthPhone={25}>
             <Button
-              onClick={(): void => handleChange(date)}
               css={{
                 margin: '$2',
                 verticalAlign: 'middle',
-              }}>
+              }}
+              onClick={(): void => handleChange(date)}>
               <Text
+                as='small'
+                bold={selectedDate === date}
                 css={{
                   fontSize: '0.8rem',
                   opacity: selectedDate === date ? 1 : 0.5,
-                }}
-                bold={selectedDate === date}
-                as='small'>
+                }}>
                 {dayjs(date).format('ddd')}
               </Text>
               {dayjs(date).format('DD/M')}

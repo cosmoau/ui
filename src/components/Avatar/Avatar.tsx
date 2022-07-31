@@ -22,7 +22,7 @@ export default function Avatar(props: Props): JSX.Element {
       id={props.id}>
       {props.image ? (
         <AvatarImageStyled>
-          <Image alt={props.fallback} layout='fill' src={props.image} objectFit='cover' objectPosition='center center' />
+          <Image alt={props.fallback} layout='fill' objectFit='cover' objectPosition='center center' src={props.image} />
         </AvatarImageStyled>
       ) : (
         <AvatarFallbackStyled>{props.fallback}</AvatarFallbackStyled>

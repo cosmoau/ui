@@ -59,12 +59,12 @@ export default function Popover(props: Props): JSX.Element {
       </PopoverTriggerStyled>
       {isMounted && (
         <PopoverContentStyled
+          animation={isOpen}
           css={{
             ...props.css,
             width: props.width || 'auto',
           }}
           minimal={props.minimal}
-          animation={isOpen}
           ref={ref}>
           {props.children}
         </PopoverContentStyled>

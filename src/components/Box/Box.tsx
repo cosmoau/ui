@@ -24,6 +24,7 @@ export default function Box(props: Props): JSX.Element {
       {props.imageCTA ? (
         <a href={props.imageCTA} rel='noopener noreferrer' target={props.imageTarget || '_blank'}>
           <ThreesImage
+            alt={props.imageAlt || ('#' as string)}
             css={{
               img: {
                 borderTopLeftRadius: '$1 !important',
@@ -31,16 +32,16 @@ export default function Box(props: Props): JSX.Element {
               },
             }}
             fillHeight={props.imageHeight || '20rem'}
-            alt={props.imageAlt || ('#' as string)}
+            hover={props.hover}
+            layout='fill'
             objectFit={'cover'}
             objectPosition={props.imagePosition || 'center'}
-            layout='fill'
             src={props.image.toString()}
-            hover={props.hover}
           />
         </a>
       ) : (
         <ThreesImage
+          alt={props.imageAlt || ('#' as string)}
           css={{
             img: {
               borderTopLeftRadius: '$1 !important',
@@ -48,12 +49,11 @@ export default function Box(props: Props): JSX.Element {
             },
           }}
           fillHeight={props.imageHeight || '20rem'}
-          alt={props.imageAlt || ('#' as string)}
+          hover={props.hover}
+          layout='fill'
           objectFit={'cover'}
           objectPosition={props.imagePosition || 'center'}
-          layout='fill'
           src={props.image.toString()}
-          hover={props.hover}
         />
       )}
       <BoxImageChildrenStyled padding={'default'}>{props.children}</BoxImageChildrenStyled>

@@ -9,6 +9,10 @@ export declare const BadgeStyled: import("@stitches/react/types/styled-component
                 border: string;
                 color: string;
             };
+            borderHover: {
+                border: string;
+                color: string;
+            };
             default: {
                 background: string;
                 color: string;
@@ -54,6 +58,10 @@ export declare const BadgeStyled: import("@stitches/react/types/styled-component
                 color: string;
             };
             border: {
+                border: string;
+                color: string;
+            };
+            borderHover: {
                 border: string;
                 color: string;
             };
@@ -415,6 +423,9 @@ export declare const BadgeDotStyled: import("@stitches/react/types/styled-compon
     variants: {
         dotColor: {
             blue: {
+                color: string;
+            };
+            borderHover: {
                 color: string;
             };
             default: {

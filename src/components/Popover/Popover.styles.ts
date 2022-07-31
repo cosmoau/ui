@@ -10,8 +10,8 @@ export const PopoverTriggerStyled = styled('div', {
     cursor: 'pointer',
   },
   display: 'inline-flex',
-  verticalAlign: 'middle',
   position: 'relative',
+  verticalAlign: 'middle',
 });
 
 export const PopoverContentStyled = styled('div', {

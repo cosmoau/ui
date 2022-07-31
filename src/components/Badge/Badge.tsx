@@ -9,14 +9,14 @@ import { BadgeIconStyled, BadgeStyled, BadgeDotStyled } from './Badge.styles';
 export interface Props extends Omit<DefaultProps, 'spacing'> {
   children: ReactNode;
   loading?: boolean;
-  theme?: 'red' | 'orange' | 'pink' | 'purple' | 'blue' | 'green' | 'border';
+  theme?: 'red' | 'orange' | 'pink' | 'purple' | 'blue' | 'green' | 'border' | 'borderHover';
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onClick?: any;
   icon?: ReactNode;
   iconPosition?: 'left' | 'right';
   inline?: DefaultProps['spacing'] | 'auto';
   dot?: boolean | 'pulse';
-  dotColor?: 'red' | 'orange' | 'pink' | 'purple' | 'blue' | 'green';
+  dotColor?: 'red' | 'orange' | 'pink' | 'purple' | 'blue' | 'green' | 'borderHover';
 }
 
 export default function Badge(props: Props): JSX.Element {

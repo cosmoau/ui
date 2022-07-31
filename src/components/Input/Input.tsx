@@ -66,8 +66,8 @@ export default function Input(props: Props): JSX.Element {
         disabled={props.disabled}
         onChange={handleChange}
         placeholder={props.placeholder}
-        value={value}
         type={isRevealed ? 'text' : props.type || 'text'}
+        value={value}
       />
       {(props.error || props.success || props.warning || props.loading || props.submit || props.copy || props.reveal) && (
         <InputFunctionStyled>

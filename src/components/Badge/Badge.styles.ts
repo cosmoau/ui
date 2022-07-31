@@ -35,6 +35,10 @@ export const BadgeStyled = styled('div', {
         border: '0.1rem solid $border',
         color: '$text',
       },
+      borderHover: {
+        border: '0.1rem solid $borderHover',
+        color: '$text',
+      },
       default: {
         background: '$default',
         color: '$text',
@@ -103,6 +107,9 @@ export const BadgeDotStyled = styled('span', {
     dotColor: {
       blue: {
         color: '$blueText',
+      },
+      borderHover: {
+        color: '$borderHover',
       },
       default: {
         color: '$text',

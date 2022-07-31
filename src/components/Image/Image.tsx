@@ -17,11 +17,11 @@ export default function Image(props: Props): JSX.Element {
   return (
     <ImageStyled
       borderRadius={borderRadius}
-      hover={hover}
       css={{
         height: fillHeight || '100%',
         ...css,
-      }}>
+      }}
+      hover={hover}>
       <NextImage {...rest} />
     </ImageStyled>
   );
