@@ -7,6 +7,7 @@ export declare const ViewStyled: import("@stitches/react/types/styled-component"
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -175,6 +176,7 @@ export declare const ViewContainerStyled: import("@stitches/react/types/styled-c
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;

@@ -93,6 +93,7 @@ export declare const BadgeStyled: import("@stitches/react/types/styled-component
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -261,6 +262,7 @@ export declare const BadgeIconStyled: import("@stitches/react/types/styled-compo
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -450,6 +452,7 @@ export declare const BadgeDotStyled: import("@stitches/react/types/styled-compon
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;

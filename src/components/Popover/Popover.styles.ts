@@ -20,7 +20,7 @@ export const PopoverContentStyled = styled('div', {
   borderRadius: '$1',
   boxShadow: '$3',
   lineBreak: 'auto',
-  marginTop: '.5%',
+  marginTop: '.75%',
   overflowY: 'auto',
   padding: '$1 $4',
   position: 'absolute',
@@ -28,11 +28,11 @@ export const PopoverContentStyled = styled('div', {
   variants: {
     animation: {
       false: {
-        animation: `${fadeOut} .2s`,
+        animation: `${fadeOut} .15s`,
         animationFillMode: 'forwards',
       },
       true: {
-        animation: `${fadeIn} .2s`,
+        animation: `${fadeIn} .15s`,
         animationFillMode: 'forwards',
       },
     },
@@ -42,8 +42,6 @@ export const PopoverContentStyled = styled('div', {
       },
     },
   },
-  width: 'auto',
-  minWidth: '10rem',
   zIndex: '$popover',
 });
 

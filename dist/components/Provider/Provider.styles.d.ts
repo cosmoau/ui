@@ -7,6 +7,7 @@ export declare const ProviderStyled: import("@stitches/react/types/styled-compon
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -156,6 +157,7 @@ export declare const ProviderTriggerStyled: import("@stitches/react/types/styled
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;

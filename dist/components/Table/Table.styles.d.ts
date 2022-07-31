@@ -7,6 +7,7 @@ export declare const TableStyled: import("@stitches/react/types/styled-component
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -156,6 +157,7 @@ export declare const TableHeadStyled: import("@stitches/react/types/styled-compo
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -305,6 +307,7 @@ export declare const TableBodyStyled: import("@stitches/react/types/styled-compo
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -454,6 +457,7 @@ export declare const TableRowStyled: import("@stitches/react/types/styled-compon
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -603,6 +607,7 @@ export declare const TableCellStyled: import("@stitches/react/types/styled-compo
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -752,6 +757,7 @@ export declare const TableHeadCellStyled: import("@stitches/react/types/styled-c
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;

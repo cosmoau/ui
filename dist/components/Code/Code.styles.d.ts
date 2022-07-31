@@ -7,6 +7,7 @@ export declare const CodeStyled: import("@stitches/react/types/styled-component"
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -156,6 +157,7 @@ export declare const CodeFunctionStyled: import("@stitches/react/types/styled-co
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -305,6 +307,7 @@ export declare const CodeBlockStyled: import("@stitches/react/types/styled-compo
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;

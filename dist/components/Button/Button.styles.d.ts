@@ -165,6 +165,7 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -327,6 +328,7 @@ export declare const ButtonIconStyled: import("@stitches/react/types/styled-comp
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;

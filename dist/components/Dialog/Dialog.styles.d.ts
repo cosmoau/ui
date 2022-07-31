@@ -7,6 +7,7 @@ export declare const DialogStyled: import("@stitches/react/types/styled-componen
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -156,6 +157,7 @@ export declare const DialogTriggerStyled: import("@stitches/react/types/styled-c
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -328,6 +330,7 @@ export declare const DialogOverlayStyled: import("@stitches/react/types/styled-c
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -524,6 +527,7 @@ export declare const DialogContentStyled: import("@stitches/react/types/styled-c
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -673,6 +677,7 @@ export declare const DialogExitStyled: import("@stitches/react/types/styled-comp
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;

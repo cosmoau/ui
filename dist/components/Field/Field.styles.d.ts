@@ -46,6 +46,7 @@ export declare const FieldStyled: import("@stitches/react/types/styled-component
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -195,6 +196,7 @@ export declare const FieldAreaStyled: import("@stitches/react/types/styled-compo
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -344,6 +346,7 @@ export declare const FieldFunctionStyled: import("@stitches/react/types/styled-c
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;

@@ -71,7 +71,7 @@ export const ButtonStyled = styled('button', {
 });
 
 export const ButtonIconStyled = styled('span', {
-  display: 'inline-block',
+  display: 'inline',
   variants: {
     align: {
       left: {

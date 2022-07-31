@@ -22,6 +22,7 @@ export declare const theme: string & {
         blueOverlay: import("@stitches/react/types/theme").Token<"blueOverlay", string, "colors", "">;
         blueText: import("@stitches/react/types/theme").Token<"blueText", string, "colors", "">;
         border: import("@stitches/react/types/theme").Token<"border", string, "colors", "">;
+        borderHover: import("@stitches/react/types/theme").Token<"borderHover", string, "colors", "">;
         default: import("@stitches/react/types/theme").Token<"default", string, "colors", "">;
         defaultHover: import("@stitches/react/types/theme").Token<"defaultHover", string, "colors", "">;
         greenBorder: import("@stitches/react/types/theme").Token<"greenBorder", string, "colors", "">;
@@ -124,6 +125,7 @@ export declare const theme: string & {
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -285,6 +287,7 @@ export declare const theme: string & {
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -444,6 +447,7 @@ export declare const theme: string & {
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -598,6 +602,7 @@ export declare const theme: string & {
             blueOverlay: string;
             blueText: string;
             border: string;
+            borderHover: string;
             default: string;
             defaultHover: string;
             greenBorder: string;
@@ -747,6 +752,7 @@ export declare const theme: string & {
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -896,6 +902,7 @@ export declare const theme: string & {
             blueOverlay: string;
             blueText: string;
             border: string;
+            borderHover: string;
             default: string;
             defaultHover: string;
             greenBorder: string;

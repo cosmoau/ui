@@ -154,6 +154,7 @@ export declare const TextStyled: import("@stitches/react/types/styled-component"
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;

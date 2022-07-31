@@ -63,18 +63,18 @@ export const BadgeStyled = styled('div', {
   },
 
   [breakpoints.phone]: {
-    fontSize: '$p',
+    fontSize: 'calc($h6 * 0.9)',
   },
 
   verticalAlign: 'middle',
 });
 
 export const BadgeIconStyled = styled('span', {
-  display: 'inline-flex',
+  display: 'inline-block',
   svg: {
     alignSelf: 'center',
     height: '1.5rem',
-    marginTop: '-0.3rem',
+    marginTop: '-0.2rem',
     width: '1.5rem',
   },
   variants: {
@@ -91,7 +91,7 @@ export const BadgeIconStyled = styled('span', {
 });
 
 export const BadgeDotStyled = styled('span', {
-  display: 'inline-flex',
+  display: 'inline',
   paddingRight: '$2',
   svg: {
     alignSelf: 'center',

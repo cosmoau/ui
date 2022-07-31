@@ -66,7 +66,7 @@
   "prettier": "eslint-config-dolmios/.prettierrc.json",
   "repository": "https://github.com/withcosmo/design-system.git",
   "scripts": {
-    "build": "yarn lint && microbundle --jsx React.createElement --compress",
+    "build": "yarn lint && microbundle --jsx React.createElement",
     "lint": "eslint src --ext js,jsx,ts,tsx",
     "prettier": "prettier --check '**/*.{js,jsx,ts,tsx}'",
     "watch": "microbundle watch --jsx React.createElement"

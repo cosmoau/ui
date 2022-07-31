@@ -7,6 +7,7 @@ export declare const DividerStyled: import("@stitches/react/types/styled-compone
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;

@@ -7,6 +7,7 @@ export declare const DatesStyled: import("@stitches/react/types/styled-component
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;

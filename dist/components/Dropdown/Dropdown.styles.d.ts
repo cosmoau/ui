@@ -7,6 +7,7 @@ export declare const DropdownStyled: import("@stitches/react/types/styled-compon
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -156,6 +157,7 @@ export declare const DropdownTriggerStyled: import("@stitches/react/types/styled
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -331,6 +333,7 @@ export declare const DropdownGroupStyled: import("@stitches/react/types/styled-c
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -515,6 +518,7 @@ export declare const DropdownItemStyled: import("@stitches/react/types/styled-co
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -665,6 +669,7 @@ declare const _default: {
             blueOverlay: string;
             blueText: string;
             border: string;
+            borderHover: string;
             default: string;
             defaultHover: string;
             greenBorder: string;

@@ -21,6 +21,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       blueOverlay: 'rgba(115, 172, 255, 0.2)',
       blueText: 'rgb(140, 158, 255)',
       border: 'rgba(165, 170, 200, 0.3)',
+      borderHover: 'rgba(165, 170, 200, 0.15)',
       default: 'rgba(165, 170, 200, 0.1)',
       defaultHover: 'rgba(165, 170, 200, 0.25)',
       greenBorder: 'rgba(0, 200, 83, 0.4)',

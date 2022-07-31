@@ -7,6 +7,7 @@ export declare const AvatarStyled: import("@stitches/react/types/styled-componen
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -156,6 +157,7 @@ export declare const AvatarImageStyled: import("@stitches/react/types/styled-com
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -305,6 +307,7 @@ export declare const AvatarFallbackStyled: import("@stitches/react/types/styled-
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;

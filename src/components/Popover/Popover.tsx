@@ -10,6 +10,7 @@ export interface Props extends DefaultProps {
   type?: 'click' | 'hover';
   trigger: ReactNode;
   minimal?: boolean;
+  width?: number;
 }
 
 export default function Popover(props: Props): JSX.Element {
@@ -52,12 +53,19 @@ export default function Popover(props: Props): JSX.Element {
   useOnClickOutside(ref, () => handleClose());
 
   return (
-    <PopoverStyled css={props.css} id={props.id}>
+    <PopoverStyled id={props.id}>
       <PopoverTriggerStyled onClickCapture={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         {props.trigger}
       </PopoverTriggerStyled>
       {isMounted && (
-        <PopoverContentStyled minimal={props.minimal} animation={isOpen} ref={ref}>
+        <PopoverContentStyled
+          css={{
+            ...props.css,
+            width: props.width || 'auto',
+          }}
+          minimal={props.minimal}
+          animation={isOpen}
+          ref={ref}>
           {props.children}
         </PopoverContentStyled>
       )}

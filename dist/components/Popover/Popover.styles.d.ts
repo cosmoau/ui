@@ -7,6 +7,7 @@ export declare const PopoverStyled: import("@stitches/react/types/styled-compone
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -156,6 +157,7 @@ export declare const PopoverTriggerStyled: import("@stitches/react/types/styled-
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
@@ -324,8 +326,6 @@ export declare const PopoverContentStyled: import("@stitches/react/types/styled-
             };
         };
     };
-    width: string;
-    minWidth: string;
     zIndex: string;
 }]>, {}, import("@stitches/react/types/css-util").CSS<{}, {
     colors: {
@@ -336,6 +336,7 @@ export declare const PopoverContentStyled: import("@stitches/react/types/styled-
         blueOverlay: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenBorder: string;
