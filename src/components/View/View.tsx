@@ -18,6 +18,7 @@ export default function View(props: Props): JSX.Element {
       className={props.inverted ? theme.toString() : undefined}
       css={{
         ...props.css,
+        background: props.inverted ? '$inverted !important' : '$background',
         ...(props.top && {
           paddingTop: `$${props.top}`,
           [breakpoints.phone]: {

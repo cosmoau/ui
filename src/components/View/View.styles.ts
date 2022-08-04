@@ -1,7 +1,6 @@
 import { breakpoints, styled } from '../../stitches.config';
 
 export const ViewStyled = styled('div', {
-  background: '$background',
   boxSizing: 'border-box',
   paddingLeft: '$2',
   paddingRight: '$2',

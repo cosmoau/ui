@@ -16,6 +16,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     colors: {
       accent: 'rgb(170, 177, 201)',
       background: 'rgb(15, 15, 26)',
+      inverted: 'rgb(10, 10, 20)',
       blueBorder: 'rgba(115, 172, 255, 0.4)',
       blueCTA: 'rgb(55, 119, 192)',
       blueOverlay: 'rgba(115, 172, 255, 0.2)',
