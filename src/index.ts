@@ -20,4 +20,4 @@ export * from './components/View/index';
 export * from './components/Code/index';
 export * from './components/Field/index';
 
-export { breakpoints, css, getCssText, lightTheme, styled, theme } from './stitches.config';
+export { breakpoints, css, getCssText, lightTheme, styled, theme, keyframes } from './stitches.config';
