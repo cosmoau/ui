@@ -7,6 +7,7 @@ import { DividerStyled } from './Divider.styles';
 export interface Props extends Omit<DefaultProps, 'spacing'> {
   top?: DefaultProps['spacing'];
   bottom?: DefaultProps['spacing'];
+  theme?: 'border' | 'borderHover';
 }
 
 export default function Divider(props: Props): JSX.Element {
@@ -14,6 +15,7 @@ export default function Divider(props: Props): JSX.Element {
     <DividerStyled
       css={{
         ...props.css,
+        backgroundColor: props.theme ? `$${props.theme}` : '$border',
         ...(props.top && {
           marginTop: `$${props.top}`,
           [breakpoints.phone]: {
