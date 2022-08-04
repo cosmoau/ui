@@ -20,22 +20,22 @@ export const ViewContainerStyled = styled('div', {
         margin: 'auto',
 
         [breakpoints.phone]: {
-          width: '98%',
+          width: '97%',
         },
         [breakpoints.tabletX]: {
           width: '98%',
         },
         [breakpoints.laptopX]: {
           maxWidth: '1440px',
-          width: '96%',
+          width: '95%',
         },
         [breakpoints.desktopX]: {
           maxWidth: '1660px',
-          width: '98%',
+          width: '96%',
         },
         [breakpoints.wide]: {
-          maxWidth: '1850px',
-          width: '95%',
+          maxWidth: '1950px',
+          width: '94%',
         },
       },
     },
