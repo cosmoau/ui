@@ -2,6 +2,7 @@ export declare const DialogStyled: import("@stitches/react/types/styled-componen
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;
@@ -152,6 +153,7 @@ export declare const DialogTriggerStyled: import("@stitches/react/types/styled-c
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;
@@ -325,6 +327,7 @@ export declare const DialogOverlayStyled: import("@stitches/react/types/styled-c
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;
@@ -522,6 +525,7 @@ export declare const DialogContentStyled: import("@stitches/react/types/styled-c
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;
@@ -672,6 +676,7 @@ export declare const DialogExitStyled: import("@stitches/react/types/styled-comp
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;

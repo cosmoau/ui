@@ -162,6 +162,7 @@ export const lightTheme = createTheme({
   colors: {
     accent: 'rgb(63, 67, 81)',
     background: 'rgb(255, 255, 255)',
+    inverted: 'rgb(15, 15, 26)',
     blueText: 'rgb(32, 47, 136)',
     border: 'rgba(59, 61, 72, 0.4)',
     borderHover: 'rgba(59, 61, 72, 0.2)',

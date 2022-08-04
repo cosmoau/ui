@@ -1,7 +1,7 @@
 {
   "name": "@withcosmo/design-system",
   "description": "The component library used in development across all Cosmo projects.",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "author": "Jackson Dolman <mail@planare.dev>",
   "browserslist": {
     "production": [
@@ -21,7 +21,7 @@
     "@types/node": "^18.6.3",
     "@types/react": "^18.0.15",
     "dayjs": "^1.11.4",
-    "eslint": "^8.20.0",
+    "eslint": "^8.21.0",
     "eslint-config-dolmios": "^1.0.5",
     "microbundle": "^0.15.0",
     "next": "^12.2.3",

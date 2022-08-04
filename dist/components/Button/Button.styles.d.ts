@@ -4,10 +4,6 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         opacity: number;
         backgroundColor?: undefined;
         color?: undefined;
-        alignSelf?: undefined;
-        height?: undefined;
-        marginTop?: undefined;
-        width?: undefined;
         fontSize?: undefined;
         block?: undefined;
         small?: undefined;
@@ -17,23 +13,6 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         color: string;
         cursor?: undefined;
         opacity?: undefined;
-        alignSelf?: undefined;
-        height?: undefined;
-        marginTop?: undefined;
-        width?: undefined;
-        fontSize?: undefined;
-        block?: undefined;
-        small?: undefined;
-        theme?: undefined;
-    } | {
-        alignSelf: string;
-        height: string;
-        marginTop: string;
-        width: string;
-        cursor?: undefined;
-        opacity?: undefined;
-        backgroundColor?: undefined;
-        color?: undefined;
         fontSize?: undefined;
         block?: undefined;
         small?: undefined;
@@ -44,10 +23,6 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         opacity?: undefined;
         backgroundColor?: undefined;
         color?: undefined;
-        alignSelf?: undefined;
-        height?: undefined;
-        marginTop?: undefined;
-        width?: undefined;
         block?: undefined;
         small?: undefined;
         theme?: undefined;
@@ -62,8 +37,22 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
             };
         };
         small: {
+            false: {
+                svg: {
+                    alignSelf: string;
+                    height: string;
+                    marginTop: string;
+                    width: string;
+                };
+            };
             true: {
                 fontSize: string;
+                svg: {
+                    alignSelf: string;
+                    height: string;
+                    marginTop: string;
+                    width: string;
+                };
             };
         };
         theme: {
@@ -90,10 +79,6 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         opacity?: undefined;
         backgroundColor?: undefined;
         color?: undefined;
-        alignSelf?: undefined;
-        height?: undefined;
-        marginTop?: undefined;
-        width?: undefined;
         fontSize?: undefined;
     };
     '&:disabled': {
@@ -112,12 +97,6 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
     fontWeight: number;
     lineHeight: string;
     padding: string;
-    svg: {
-        alignSelf: string;
-        height: string;
-        marginTop: string;
-        width: string;
-    };
     transition: string;
     variants: {
         block: {
@@ -130,8 +109,22 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
             };
         };
         small: {
+            false: {
+                svg: {
+                    alignSelf: string;
+                    height: string;
+                    marginTop: string;
+                    width: string;
+                };
+            };
             true: {
                 fontSize: string;
+                svg: {
+                    alignSelf: string;
+                    height: string;
+                    marginTop: string;
+                    width: string;
+                };
             };
         };
         theme: {
@@ -160,6 +153,7 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;
@@ -323,6 +317,7 @@ export declare const ButtonIconStyled: import("@stitches/react/types/styled-comp
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;

@@ -20,6 +20,7 @@ export declare const ElementStyled: import("@stitches/react/types/styled-compone
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;

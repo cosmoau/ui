@@ -17,6 +17,7 @@ export declare const theme: string & {
     colors: {
         accent: import("@stitches/react/types/theme").Token<"accent", string, "colors", "">;
         background: import("@stitches/react/types/theme").Token<"background", string, "colors", "">;
+        inverted: import("@stitches/react/types/theme").Token<"inverted", string, "colors", "">;
         blueBorder: import("@stitches/react/types/theme").Token<"blueBorder", string, "colors", "">;
         blueCTA: import("@stitches/react/types/theme").Token<"blueCTA", string, "colors", "">;
         blueOverlay: import("@stitches/react/types/theme").Token<"blueOverlay", string, "colors", "">;
@@ -120,6 +121,7 @@ export declare const theme: string & {
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;
@@ -282,6 +284,7 @@ export declare const theme: string & {
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;
@@ -442,6 +445,7 @@ export declare const theme: string & {
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;
@@ -597,6 +601,7 @@ export declare const theme: string & {
         colors: {
             accent: string;
             background: string;
+            inverted: string;
             blueBorder: string;
             blueCTA: string;
             blueOverlay: string;
@@ -747,6 +752,7 @@ export declare const theme: string & {
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;
@@ -897,6 +903,7 @@ export declare const theme: string & {
         colors: {
             accent: string;
             background: string;
+            inverted: string;
             blueBorder: string;
             blueCTA: string;
             blueOverlay: string;
@@ -1054,8 +1061,10 @@ export declare const lightTheme: string & {
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueText: string;
         border: string;
+        borderHover: string;
         default: string;
         defaultHover: string;
         greenText: string;

@@ -2,6 +2,7 @@ export declare const DropdownStyled: import("@stitches/react/types/styled-compon
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;
@@ -152,6 +153,7 @@ export declare const DropdownTriggerStyled: import("@stitches/react/types/styled
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;
@@ -328,6 +330,7 @@ export declare const DropdownGroupStyled: import("@stitches/react/types/styled-c
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;
@@ -513,6 +516,7 @@ export declare const DropdownItemStyled: import("@stitches/react/types/styled-co
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;
@@ -664,6 +668,7 @@ declare const _default: {
         colors: {
             accent: string;
             background: string;
+            inverted: string;
             blueBorder: string;
             blueCTA: string;
             blueOverlay: string;

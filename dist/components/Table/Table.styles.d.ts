@@ -2,6 +2,7 @@ export declare const TableStyled: import("@stitches/react/types/styled-component
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;
@@ -152,6 +153,7 @@ export declare const TableHeadStyled: import("@stitches/react/types/styled-compo
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;
@@ -302,6 +304,7 @@ export declare const TableBodyStyled: import("@stitches/react/types/styled-compo
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;
@@ -452,6 +455,7 @@ export declare const TableRowStyled: import("@stitches/react/types/styled-compon
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;
@@ -602,6 +606,7 @@ export declare const TableCellStyled: import("@stitches/react/types/styled-compo
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;
@@ -752,6 +757,7 @@ export declare const TableHeadCellStyled: import("@stitches/react/types/styled-c
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;

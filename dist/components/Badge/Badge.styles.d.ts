@@ -96,6 +96,7 @@ export declare const BadgeStyled: import("@stitches/react/types/styled-component
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;
@@ -265,6 +266,7 @@ export declare const BadgeIconStyled: import("@stitches/react/types/styled-compo
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;
@@ -458,6 +460,7 @@ export declare const BadgeDotStyled: import("@stitches/react/types/styled-compon
     colors: {
         accent: string;
         background: string;
+        inverted: string;
         blueBorder: string;
         blueCTA: string;
         blueOverlay: string;
