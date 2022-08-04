@@ -99,9 +99,9 @@ export const BadgeDotStyled = styled('span', {
   paddingRight: '$2',
   svg: {
     alignSelf: 'center',
-    height: '0.8rem',
-    marginTop: '-0.1rem',
-    width: '0.8rem',
+    height: '0.9rem',
+    marginTop: '-0.2rem',
+    width: '0.9rem',
   },
   variants: {
     dotColor: {

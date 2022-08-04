@@ -17,12 +17,6 @@ export const ButtonStyled = styled('button', {
   fontWeight: 500,
   lineHeight: 'normal',
   padding: '$2 $4',
-  svg: {
-    alignSelf: 'center',
-    height: '1.8rem',
-    marginTop: '-0.3rem',
-    width: '1.8rem',
-  },
 
   [breakpoints.phone]: {
     fontSize: '$p',
@@ -41,8 +35,23 @@ export const ButtonStyled = styled('button', {
       },
     },
     small: {
+      false: {
+        svg: {
+          alignSelf: 'center',
+          height: '1.6rem',
+          marginTop: '-0.3rem',
+          width: '1.6rem',
+        },
+      },
       true: {
         fontSize: '$small',
+
+        svg: {
+          alignSelf: 'center',
+          height: '1.2rem',
+          marginTop: '-0.15rem',
+          width: '1.2rem',
+        },
       },
     },
     theme: {
