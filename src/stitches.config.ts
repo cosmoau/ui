@@ -16,7 +16,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     colors: {
       accent: 'rgb(170, 177, 201)',
       background: 'rgb(15, 15, 26)',
-      inverted: 'rgb(10, 10, 20)',
+      inverted: 'rgb(7, 8, 20)',
       blueBorder: 'rgba(115, 172, 255, 0.4)',
       blueCTA: 'rgb(55, 119, 192)',
       blueOverlay: 'rgba(115, 172, 255, 0.2)',
@@ -162,10 +162,9 @@ export const lightTheme = createTheme({
   colors: {
     accent: 'rgb(63, 67, 81)',
     background: 'rgb(255, 255, 255)',
-    inverted: 'rgb(15, 15, 26)',
     blueText: 'rgb(32, 47, 136)',
-    border: 'rgba(59, 61, 72, 0.4)',
-    borderHover: 'rgba(59, 61, 72, 0.2)',
+    border: 'rgba(184, 187, 203, 0.4)',
+    borderHover: 'rgba(184, 187, 203, 0.2)',
     default: 'rgba(0, 0, 0, 0.06)',
     defaultHover: 'rgba(0, 0, 0, 0.09)',
     greenText: 'rgb(0, 76, 38)',

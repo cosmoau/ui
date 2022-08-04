@@ -22,12 +22,26 @@ export default function Dialog(props: Props): JSX.Element {
     setIsOpen(false);
     setTimeout(() => {
       setIsMounted(false);
-    }, 420);
+    }, 250);
   }
 
-  useOnClickOutside(ref, () => {
-    handleClose();
-  });
+  function handleOpen(): void {
+    setIsOpen(true);
+    setTimeout(() => {
+      setIsMounted(true);
+    }, 25);
+  }
+
+  function handleClick(): void {
+    if (isOpen || isMounted) {
+      setIsOpen(false);
+      setIsMounted(false);
+    } else {
+      handleOpen();
+    }
+  }
+
+  useOnClickOutside(ref, () => handleClose());
 
   useEventListener('keydown', (event: KeyboardEvent) => {
     if (event.key === 'Escape') {
@@ -39,14 +53,7 @@ export default function Dialog(props: Props): JSX.Element {
 
   return (
     <DialogStyled id={props.id}>
-      <DialogTriggerStyled
-        onClickCapture={(e): void => {
-          e.persist();
-          setIsOpen(true);
-          setIsMounted(true);
-        }}>
-        {props.trigger}
-      </DialogTriggerStyled>
+      <DialogTriggerStyled onClickCapture={handleClick}>{props.trigger}</DialogTriggerStyled>
       {isMounted && (
         <DialogOverlayStyled animation={isOpen}>
           <DialogContentStyled animation={isOpen} css={props.css} ref={ref}>

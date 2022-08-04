@@ -1061,7 +1061,6 @@ export declare const lightTheme: string & {
     colors: {
         accent: string;
         background: string;
-        inverted: string;
         blueText: string;
         border: string;
         borderHover: string;

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { ReactNode, useEffect, useState } from 'react';
+import React, { ReactNode } from 'react';
 import { useDarkMode } from 'usehooks-ts';
 
 import { DefaultProps, lightTheme, theme } from '../../stitches.config';
@@ -17,15 +17,6 @@ export interface Props extends DefaultProps {
 
 export default function Provider(props: Props): JSX.Element {
   const { isDarkMode } = useDarkMode(props.default === 'dark');
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return <div />;
-  }
 
   reset();
 

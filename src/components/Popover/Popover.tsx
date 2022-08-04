@@ -23,24 +23,31 @@ export default function Popover(props: Props): JSX.Element {
     setIsOpen(false);
     setTimeout(() => {
       setIsMounted(false);
-    }, 420);
+    }, 250);
+  }
+
+  function handleOpen(): void {
+    setIsOpen(true);
+    setTimeout(() => {
+      setIsMounted(true);
+    }, 25);
   }
 
   function handleClick(): void {
-    if (!props.type || props.type === 'click') {
-      if (isOpen) {
-        handleClose();
-      } else {
-        setIsOpen(true);
-        setIsMounted(true);
-      }
+    if (isOpen || isMounted) {
+      setIsOpen(false);
+      setIsMounted(false);
+    } else if (props.type === 'click' || !props.type) {
+      handleOpen();
     }
   }
 
   function handleMouseEnter(): void {
-    if (props.type === 'hover') {
-      setIsOpen(true);
-      setIsMounted(true);
+    if (isOpen || isMounted) {
+      setIsOpen(false);
+      setIsMounted(false);
+    } else if (props.type === 'hover') {
+      handleOpen();
     }
   }
 
@@ -50,7 +57,7 @@ export default function Popover(props: Props): JSX.Element {
     }
   }
 
-  useOnClickOutside(ref, () => handleClose());
+  useOnClickOutside(ref, props.trigger !== 'hover' && handleClose);
 
   return (
     <PopoverStyled id={props.id}>

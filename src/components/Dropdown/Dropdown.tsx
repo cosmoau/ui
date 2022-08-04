@@ -35,15 +35,22 @@ export default function Dropdown(props: Props): JSX.Element {
     setIsOpen(false);
     setTimeout(() => {
       setIsMounted(false);
-    }, 420);
+    }, 250);
+  }
+
+  function handleOpen(): void {
+    setIsOpen(true);
+    setTimeout(() => {
+      setIsMounted(true);
+    }, 25);
   }
 
   function handleClick(): void {
-    if (isOpen) {
-      handleClose();
+    if (isOpen || isMounted) {
+      setIsOpen(false);
+      setIsMounted(false);
     } else {
-      setIsOpen(true);
-      setIsMounted(true);
+      handleOpen();
     }
   }
 
