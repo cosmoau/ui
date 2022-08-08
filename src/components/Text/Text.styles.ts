@@ -118,10 +118,10 @@ export const TextStyled = styled('div', {
         opacity: '0.85',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h6 * 0.85)',
+          fontSize: 'calc($h6 * 0.9)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($h6 * 0.9)',
+          fontSize: 'calc($h6 * 0.925)',
         },
         [breakpoints.laptopX]: {
           fontSize: 'calc($h6 * 0.95)',

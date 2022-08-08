@@ -15,6 +15,7 @@ export interface Props extends InputHTMLAttributes<HTMLInputElement>, DefaultPro
     warningMessage?: string;
     disabled?: boolean;
     maxWidth?: string;
+    mustRef?: any;
 }
 export default function Input(props: Props): JSX.Element;
 //# sourceMappingURL=Input.d.ts.map

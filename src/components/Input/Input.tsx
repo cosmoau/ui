@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Check, ClipboardText, Eye, EyeClosed, Warning } from 'phosphor-react';
 import React, { InputHTMLAttributes, useState } from 'react';
 
@@ -15,7 +16,6 @@ export interface Props extends InputHTMLAttributes<HTMLInputElement>, DefaultPro
   loading?: boolean;
   reveal?: boolean;
   submit?: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   submitFunction?: any;
   submitValid?: boolean;
   success?: boolean;
@@ -24,6 +24,7 @@ export interface Props extends InputHTMLAttributes<HTMLInputElement>, DefaultPro
   warningMessage?: string;
   disabled?: boolean;
   maxWidth?: string;
+  mustRef?: any;
 }
 
 export default function Input(props: Props): JSX.Element {
@@ -58,6 +59,7 @@ export default function Input(props: Props): JSX.Element {
         maxWidth: props.maxWidth || '80%',
         width: props.maxWidth || '80%',
       }}
+      ref={props.mustRef || undefined}
       disabled={props.disabled}
       id={props.id}
       state={props.success ? 'success' : props.warning ? 'warning' : props.error ? 'error' : 'default'}>
