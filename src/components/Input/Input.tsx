@@ -59,12 +59,12 @@ export default function Input(props: Props): JSX.Element {
         maxWidth: props.maxWidth || '80%',
         width: props.maxWidth || '80%',
       }}
-      ref={props.mustRef || undefined}
       disabled={props.disabled}
       id={props.id}
       state={props.success ? 'success' : props.warning ? 'warning' : props.error ? 'error' : 'default'}>
       <InputAreaStyled
         css={props.css}
+        ref={props.mustRef || undefined}
         disabled={props.disabled}
         onChange={handleChange}
         placeholder={props.placeholder}
