@@ -1,18 +1,22 @@
 # @withcosmo/design-system
 
-The Cosmo Design System enforces strict component APIs and performance parameters to streamline development across projects, using Next and Stitches 🌈
+By [@dolmios](https://github.com/dolmios).
+
+✏️ A modular, flexible library of components and design patterns used to enforce consistency across all internal and subsidiary projects.
+
+### Documentation
+
+✍︎ https://developers.cosmogroup.io
 
 ### Installation
 
-    $ yarn add @withcosmo/design-system
+    yarn add @withcosmo/design-system
 
-### Develop
+### Development
 
-    $ yarn watch
-    $ yarn playground
-    $ yarn lint
-    $ yarn prettier
+    yarn watch
+    yarn playground
 
-### Build
+### Compile
 
-    $ yarn build (microbundle - build)
+    yarn build

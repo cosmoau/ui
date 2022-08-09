@@ -25,6 +25,13 @@ export const BadgeStyled = styled('div', {
   lineHeight: 'normal',
   padding: '$1 $4',
 
+  svg: {
+    alignSelf: 'center',
+    height: '1.6rem',
+    marginTop: '-0.4rem',
+    width: '1.6rem',
+  },
+
   variants: {
     theme: {
       blue: {
@@ -74,20 +81,14 @@ export const BadgeStyled = styled('div', {
 });
 
 export const BadgeIconStyled = styled('span', {
-  display: 'inline-block',
-  svg: {
-    alignSelf: 'center',
-    height: '1.5rem',
-    marginTop: '-0.2rem',
-    width: '1.5rem',
-  },
+  display: 'inline',
   variants: {
     align: {
       left: {
-        marginRight: '$2',
+        marginRight: '$3',
       },
       right: {
-        marginLeft: '$2',
+        marginLeft: '$3',
       },
     },
   },
@@ -97,12 +98,14 @@ export const BadgeIconStyled = styled('span', {
 export const BadgeDotStyled = styled('span', {
   display: 'inline',
   paddingRight: '$2',
+
   svg: {
-    alignSelf: 'center',
-    height: '0.9rem',
+    height: '1rem',
+    width: '1rem',
     marginTop: '-0.2rem',
-    width: '0.9rem',
+    verticalAlign: 'middle',
   },
+
   variants: {
     dotColor: {
       blue: {

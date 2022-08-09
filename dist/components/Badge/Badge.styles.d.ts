@@ -1,5 +1,12 @@
 export declare const BadgeStyled: import("@stitches/react/types/styled-component").StyledComponent<"div", import("@stitches/react/types/styled-component").StyledComponentProps<[{
     [x: string]: string | {
+        alignSelf: string;
+        height: string;
+        marginTop: string;
+        width: string;
+        theme?: undefined;
+        fontSize?: undefined;
+    } | {
         theme: {
             blue: {
                 background: string;
@@ -38,9 +45,17 @@ export declare const BadgeStyled: import("@stitches/react/types/styled-component
                 color: string;
             };
         };
+        alignSelf?: undefined;
+        height?: undefined;
+        marginTop?: undefined;
+        width?: undefined;
         fontSize?: undefined;
     } | {
         fontSize: string;
+        alignSelf?: undefined;
+        height?: undefined;
+        marginTop?: undefined;
+        width?: undefined;
         theme?: undefined;
     };
     alignItems: string;
@@ -51,6 +66,12 @@ export declare const BadgeStyled: import("@stitches/react/types/styled-component
     justifyContent: string;
     lineHeight: string;
     padding: string;
+    svg: {
+        alignSelf: string;
+        height: string;
+        marginTop: string;
+        width: string;
+    };
     variants: {
         theme: {
             blue: {
@@ -245,12 +266,6 @@ export declare const BadgeStyled: import("@stitches/react/types/styled-component
 }>>;
 export declare const BadgeIconStyled: import("@stitches/react/types/styled-component").StyledComponent<"span", import("@stitches/react/types/styled-component").StyledComponentProps<[{
     display: string;
-    svg: {
-        alignSelf: string;
-        height: string;
-        marginTop: string;
-        width: string;
-    };
     variants: {
         align: {
             left: {
@@ -417,10 +432,10 @@ export declare const BadgeDotStyled: import("@stitches/react/types/styled-compon
     display: string;
     paddingRight: string;
     svg: {
-        alignSelf: string;
         height: string;
-        marginTop: string;
         width: string;
+        marginTop: string;
+        verticalAlign: string;
     };
     variants: {
         dotColor: {

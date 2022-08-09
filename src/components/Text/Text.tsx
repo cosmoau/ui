@@ -12,6 +12,7 @@ export interface Props extends Omit<DefaultProps, 'spacing'> {
   top?: DefaultProps['spacing'];
   bottom?: DefaultProps['spacing'];
   inline?: DefaultProps['spacing'] | 'auto';
+  link?: 'border' | 'borderHover';
 }
 
 export default function Text(props: Props): JSX.Element {
@@ -43,6 +44,14 @@ export default function Text(props: Props): JSX.Element {
 
           [breakpoints.phone]: {
             marginRight: props.inline === 'auto' ? 'auto' : `calc($${props.inline} * 0.8)`,
+          },
+        }),
+        ...(props.link && {
+          borderBottom: props.link === 'borderHover' ? '0.1rem solid $borderHover' : '0.1rem solid $border',
+          transition: '$default',
+
+          '&:hover': {
+            opacity: 0.6,
           },
         }),
       }}

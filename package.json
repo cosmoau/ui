@@ -1,6 +1,6 @@
 {
   "name": "@withcosmo/design-system",
-  "description": "The component library used in development across all Cosmo projects.",
+  "description": "✏️ A modular, flexible library of components and design patterns used to enforce consistency across all internal and subsidiary projects.",
   "version": "2.1.0",
   "author": "Jackson Dolman <mail@planare.dev>",
   "browserslist": {

@@ -38,9 +38,9 @@ export const ButtonStyled = styled('button', {
       false: {
         svg: {
           alignSelf: 'center',
-          height: '1.6rem',
-          marginTop: '-0.3rem',
-          width: '1.6rem',
+          height: '1.8rem',
+          marginTop: '-0.5rem',
+          width: '1.8rem',
         },
       },
       true: {

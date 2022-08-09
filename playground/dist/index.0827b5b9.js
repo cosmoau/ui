@@ -35587,8 +35587,8 @@ function hasMatch(domains, remotePatterns, url) {
 }
 
 },{"next/dist/compiled/micromatch":"7gTyg"}],"7gTyg":[function(require,module,exports) {
-var process = require("process");
 var __dirname = "node_modules/next/dist/compiled/micromatch";
+var process = require("process");
 (()=>{
     "use strict";
     var e = {
@@ -40220,19 +40220,19 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
     theme: {
         colors: {
             accent: "rgb(170, 177, 201)",
-            background: "rgb(23, 23, 34)",
-            inverted: "rgb(15, 15, 26)",
+            background: "rgb(15, 15, 26)",
+            inverted: "rgb(23, 23, 34)",
             blueBorder: "rgba(115, 172, 255, 0.4)",
             blueCTA: "rgb(55, 119, 192)",
-            blueOverlay: "rgba(115, 172, 255, 0.2)",
-            blueText: "rgb(140, 158, 255)",
+            blueOverlay: "rgba(151, 193, 255, 0.2)",
+            blueText: "rgb(166, 179, 255)",
             border: "rgba(165, 170, 200, 0.4)",
             borderHover: "rgba(165, 170, 200, 0.2)",
-            default: "rgba(165, 170, 200, 0.1)",
-            defaultHover: "rgba(165, 170, 200, 0.25)",
+            default: "rgba(191, 197, 230, 0.1)",
+            defaultHover: "rgba(191, 197, 230, 0.3)",
             greenBorder: "rgba(0, 200, 83, 0.4)",
             greenOverlay: "rgba(101, 227, 124, 0.2)",
-            greenText: "rgb(124, 241, 183)",
+            greenText: "rgb(124, 241, 151)",
             orangeBorder: "rgba(255, 172, 115, 0.4)",
             orangeOverlay: "rgba(255, 172, 115, 0.2)",
             orangeText: "rgb(254, 177, 141)",
@@ -40370,7 +40370,7 @@ const lightTheme = (0, _react.createTheme)({
         borderHover: "rgba(184, 187, 203, 0.2)",
         default: "rgba(0, 0, 0, 0.06)",
         defaultHover: "rgba(0, 0, 0, 0.09)",
-        greenText: "rgb(0, 76, 38)",
+        greenText: "rgb(0, 76, 6)",
         orangeText: "rgb(199, 84, 30)",
         pinkText: "rgb(173, 22, 128)",
         purpleText: "rgb(112, 23, 171)",
@@ -41633,6 +41633,12 @@ const BadgeStyled = (0, _stitchesConfig.styled)("div", {
     justifyContent: "center",
     lineHeight: "normal",
     padding: "$1 $4",
+    svg: {
+        alignSelf: "center",
+        height: "1.6rem",
+        marginTop: "-0.4rem",
+        width: "1.6rem"
+    },
     variants: {
         theme: {
             blue: {
@@ -41679,20 +41685,14 @@ const BadgeStyled = (0, _stitchesConfig.styled)("div", {
     verticalAlign: "middle"
 });
 const BadgeIconStyled = (0, _stitchesConfig.styled)("span", {
-    display: "inline-block",
-    svg: {
-        alignSelf: "center",
-        height: "1.5rem",
-        marginTop: "-0.2rem",
-        width: "1.5rem"
-    },
+    display: "inline",
     variants: {
         align: {
             left: {
-                marginRight: "$2"
+                marginRight: "$3"
             },
             right: {
-                marginLeft: "$2"
+                marginLeft: "$3"
             }
         }
     },
@@ -41702,10 +41702,10 @@ const BadgeDotStyled = (0, _stitchesConfig.styled)("span", {
     display: "inline",
     paddingRight: "$2",
     svg: {
-        alignSelf: "center",
-        height: "0.9rem",
+        height: "1rem",
+        width: "1rem",
         marginTop: "-0.2rem",
-        width: "0.9rem"
+        verticalAlign: "middle"
     },
     variants: {
         dotColor: {
@@ -42055,9 +42055,9 @@ const ButtonStyled = (0, _stitchesConfig.styled)("button", {
             false: {
                 svg: {
                     alignSelf: "center",
-                    height: "1.6rem",
-                    marginTop: "-0.3rem",
-                    width: "1.6rem"
+                    height: "1.8rem",
+                    marginTop: "-0.5rem",
+                    width: "1.8rem"
                 }
             },
             true: {
@@ -42793,13 +42793,20 @@ function Text(props) {
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     marginRight: props.inline === "auto" ? "auto" : `calc($${props.inline} * 0.8)`
                 }
+            },
+            ...props.link && {
+                borderBottom: props.link === "borderHover" ? "0.1rem solid $borderHover" : "0.1rem solid $border",
+                transition: "$default",
+                "&:hover": {
+                    opacity: 0.6
+                }
             }
         },
         size: props.as,
         children: props.children
     }, void 0, false, {
         fileName: "src/components/Text/Text.tsx",
-        lineNumber: 19,
+        lineNumber: 20,
         columnNumber: 5
     }, this);
 }

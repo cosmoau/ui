@@ -8,6 +8,7 @@ export interface Props extends Omit<DefaultProps, 'spacing'> {
     top?: DefaultProps['spacing'];
     bottom?: DefaultProps['spacing'];
     inline?: DefaultProps['spacing'] | 'auto';
+    link?: 'border' | 'borderHover';
 }
 export default function Text(props: Props): JSX.Element;
 //# sourceMappingURL=Text.d.ts.map
