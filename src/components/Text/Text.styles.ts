@@ -102,10 +102,10 @@ export const TextStyled = styled('div', {
           fontSize: 'calc($h5 * 0.85)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($h5 * 0.9)',
+          fontSize: 'calc($h5 * 0.85)',
         },
         [breakpoints.laptopX]: {
-          fontSize: 'calc($h5 * 0.95)',
+          fontSize: 'calc($h5 * 0.9)',
         },
       },
       h6: {
@@ -121,9 +121,6 @@ export const TextStyled = styled('div', {
           fontSize: 'calc($h6 * 0.9)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($h6 * 0.925)',
-        },
-        [breakpoints.laptopX]: {
           fontSize: 'calc($h6 * 0.95)',
         },
       },
@@ -140,9 +137,6 @@ export const TextStyled = styled('div', {
           fontSize: 'calc($p * 0.9)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($p * 0.925)',
-        },
-        [breakpoints.laptopX]: {
           fontSize: 'calc($p * 0.95)',
         },
       },
@@ -158,9 +152,6 @@ export const TextStyled = styled('div', {
           fontSize: 'calc($small * 0.9)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($small * 0.925)',
-        },
-        [breakpoints.laptopX]: {
           fontSize: 'calc($small * 0.95)',
         },
       },
