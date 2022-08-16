@@ -27,13 +27,13 @@ export const TextStyled = styled('div', {
         lineHeight: '$h1',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h1 * 0.75)',
+          fontSize: 'calc($h1 * 0.8)',
         },
         [breakpoints.tabletX]: {
           fontSize: 'calc($h1 * 0.85)',
         },
         [breakpoints.laptopX]: {
-          fontSize: 'calc($h1 * 0.95)',
+          fontSize: 'calc($h1 * 0.9)',
         },
       },
       h2: {
