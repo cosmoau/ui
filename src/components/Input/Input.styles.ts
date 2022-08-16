@@ -30,13 +30,13 @@ export const InputStyled = styled('div', {
         border: '0.1rem solid $border',
       },
       error: {
-        border: '0.2rem solid $redOverlay',
+        border: '0.1rem solid $redOverlay',
       },
       success: {
-        border: '0.2rem solid $greenOverlay',
+        border: '0.1rem solid $greenOverlay',
       },
       warning: {
-        border: '0.2rem solid $orangeOverlay',
+        border: '0.1rem solid $orangeOverlay',
       },
     },
   },
@@ -68,21 +68,12 @@ export const InputFunctionStyled = styled('div', {
   button: {
     fontSize: '$p',
     marginLeft: '$2',
-    paddingBottom: '$1',
-    paddingLeft: '$3',
-    paddingRight: '$3',
-    paddingTop: '$1',
   },
   display: 'inline-flex',
   height: '100%',
   marginLeft: '$3',
   position: 'relative',
-  svg: {
-    height: '1.8rem',
-    marginTop: '-0.1rem',
-    verticalAlign: 'middle',
-    width: '1.8rem',
-  },
+
   verticalAlign: 'middle',
   width: 'auto',
 });

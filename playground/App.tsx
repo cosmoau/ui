@@ -44,19 +44,11 @@ export function App(): ReactElement {
             <img src='https://app.cosmogroup.io/images/vector/logo-light.svg' width='100' />
           </Stack>
           <Stack direction='column' width={33} align='center'>
-            <Text as='h5' inline='4'>
-              Features
-            </Text>
-
-            <Text as='h5' inline='4'>
-              Pricing
-            </Text>
-            <Text as='h5' inline='4'>
-              Demo
-            </Text>
-            <Text as='h5' inline='4'>
-              Company
-            </Text>
+            <Button inline='4'>Pricing</Button>
+            <Button inline='4'>Platform</Button>
+            <Dialog trigger={<Button inline='4'>Integrations</Button>}>
+              <Text as='h1'>Dialog</Text>
+            </Dialog>
           </Stack>
           <Stack direction='column' width={33} align='right'>
             <Button theme='border' inline='4'>
@@ -337,12 +329,15 @@ export function App(): ReactElement {
           </Stack>
         </Stack>
         <Stack direction='row' flex='center' top='6'>
-          <Stack direction='column'>
+          <Stack direction='column' align='right'>
             <Text as='h1'>Popover</Text>
             <Popover trigger={<Button>Normal Popover (tooltip)</Button>}>This is a popover.</Popover>
             <Divider top='3' bottom='3' />
-            <Popover type='hover' trigger={<Button>Normal Popover + hover (tooltip)</Button>}>
-              This is a popover.
+            <Popover type='hover' width={400} trigger={<Button>Normal Popover + hover (tooltip)</Button>}>
+              This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a
+              popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This
+              is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover.
+              This is a popover. This is a popover. This is a popover.
             </Popover>
             <Divider top='3' bottom='3' />
             <Popover minimal trigger={<Button>Popover with Icon</Button>}>

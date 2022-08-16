@@ -9,7 +9,8 @@ export const ElementStyled = styled('div', {
       true: {
         '*': {
           alignSelf: 'center',
-          margin: '0 !important',
+          marginBottom: '0 !important',
+          marginTOp: '0 !important',
           verticalAlign: 'middle',
         },
         alignItems: 'center',

@@ -5,6 +5,7 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         backgroundColor?: undefined;
         color?: undefined;
         fontSize?: undefined;
+        display?: undefined;
         block?: undefined;
         small?: undefined;
         theme?: undefined;
@@ -14,6 +15,7 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         cursor?: undefined;
         opacity?: undefined;
         fontSize?: undefined;
+        display?: undefined;
         block?: undefined;
         small?: undefined;
         theme?: undefined;
@@ -23,6 +25,17 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         opacity?: undefined;
         backgroundColor?: undefined;
         color?: undefined;
+        display?: undefined;
+        block?: undefined;
+        small?: undefined;
+        theme?: undefined;
+    } | {
+        display: string;
+        cursor?: undefined;
+        opacity?: undefined;
+        backgroundColor?: undefined;
+        color?: undefined;
+        fontSize?: undefined;
         block?: undefined;
         small?: undefined;
         theme?: undefined;
@@ -80,6 +93,7 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         backgroundColor?: undefined;
         color?: undefined;
         fontSize?: undefined;
+        display?: undefined;
     };
     '&:disabled': {
         cursor: string;
@@ -97,6 +111,9 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
     fontWeight: number;
     lineHeight: string;
     padding: string;
+    a: {
+        display: string;
+    };
     transition: string;
     variants: {
         block: {

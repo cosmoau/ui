@@ -3,6 +3,7 @@ import { fadeIn, fadeOut, styled } from '../../stitches.config';
 export const PopoverStyled = styled('div', {
   display: 'inline-block',
   position: 'relative',
+  verticalAlign: 'middle',
 });
 
 export const PopoverTriggerStyled = styled('div', {

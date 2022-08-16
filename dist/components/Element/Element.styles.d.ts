@@ -6,7 +6,8 @@ export declare const ElementStyled: import("@stitches/react/types/styled-compone
             true: {
                 '*': {
                     alignSelf: string;
-                    margin: string;
+                    marginBottom: string;
+                    marginTOp: string;
                     verticalAlign: string;
                 };
                 alignItems: string;

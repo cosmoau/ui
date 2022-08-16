@@ -22,6 +22,10 @@ export const ButtonStyled = styled('button', {
     fontSize: '$p',
   },
 
+  a: {
+    display: 'block',
+  },
+
   transition: '$default',
 
   variants: {

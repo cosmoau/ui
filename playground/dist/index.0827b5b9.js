@@ -27130,40 +27130,38 @@ function App() {
                                 width: 33,
                                 align: "center",
                                 children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                                        as: "h5",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
                                         inline: "4",
-                                        children: "Features"
+                                        children: "Pricing"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
                                         lineNumber: 47,
                                         columnNumber: 13
                                     }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                                        as: "h5",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
                                         inline: "4",
-                                        children: "Pricing"
+                                        children: "Platform"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 51,
+                                        lineNumber: 48,
                                         columnNumber: 13
                                     }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                                        as: "h5",
-                                        inline: "4",
-                                        children: "Demo"
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Dialog), {
+                                        trigger: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
+                                            inline: "4",
+                                            children: "Integrations"
+                                        }, void 0, false, void 0, void 0),
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                            as: "h1",
+                                            children: "Dialog"
+                                        }, void 0, false, {
+                                            fileName: "playground/App.tsx",
+                                            lineNumber: 50,
+                                            columnNumber: 15
+                                        }, this)
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 54,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                                        as: "h5",
-                                        inline: "4",
-                                        children: "Company"
-                                    }, void 0, false, {
-                                        fileName: "playground/App.tsx",
-                                        lineNumber: 57,
+                                        lineNumber: 49,
                                         columnNumber: 13
                                     }, this)
                                 ]
@@ -27183,7 +27181,7 @@ function App() {
                                         children: "App"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 62,
+                                        lineNumber: 54,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27194,13 +27192,13 @@ function App() {
                                         children: "Join Cosmo"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 65,
+                                        lineNumber: 57,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 61,
+                                lineNumber: 53,
                                 columnNumber: 11
                             }, this)
                         ]
@@ -27229,7 +27227,7 @@ function App() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 72,
+                                    lineNumber: 64,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27238,18 +27236,18 @@ function App() {
                                     children: "OpenPhone makes it ridiculously easy to get a separate phone number for work. Want to keep using your existing work numbers? Port them over for free."
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 75,
+                                    lineNumber: 67,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 71,
+                            lineNumber: 63,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 70,
+                        lineNumber: 62,
                         columnNumber: 9
                     }, this)
                 ]
@@ -27276,7 +27274,7 @@ function App() {
                                 children: "Just listed | Comfort on McCrae"
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 85,
+                                lineNumber: 77,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27286,7 +27284,7 @@ function App() {
                                 children: "An effortless way to manage, built for all short term investors"
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 86,
+                                lineNumber: 78,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27299,7 +27297,7 @@ function App() {
                                 children: "Cosmo combines intuitive technology with tailored management services, enabling you to get the most from your investments."
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 90,
+                                lineNumber: 82,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27307,7 +27305,7 @@ function App() {
                                 children: "Test"
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 99,
+                                lineNumber: 91,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27315,23 +27313,23 @@ function App() {
                                 children: "Test"
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 100,
+                                lineNumber: 92,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 84,
+                        lineNumber: 76,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "playground/App.tsx",
-                    lineNumber: 83,
+                    lineNumber: 75,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "playground/App.tsx",
-                lineNumber: 82,
+                lineNumber: 74,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.View), {
@@ -27353,17 +27351,17 @@ function App() {
                                         children: "test"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 108,
+                                        lineNumber: 100,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 107,
+                                    lineNumber: 99,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 106,
+                                lineNumber: 98,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27376,17 +27374,17 @@ function App() {
                                         children: "test"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 113,
+                                        lineNumber: 105,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 112,
+                                    lineNumber: 104,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 111,
+                                lineNumber: 103,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27399,17 +27397,17 @@ function App() {
                                         children: "test"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 118,
+                                        lineNumber: 110,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 117,
+                                    lineNumber: 109,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 116,
+                                lineNumber: 108,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27422,17 +27420,17 @@ function App() {
                                         children: "test"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 123,
+                                        lineNumber: 115,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 122,
+                                    lineNumber: 114,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 121,
+                                lineNumber: 113,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27444,23 +27442,23 @@ function App() {
                                         children: "Housekeeping Services"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 129,
+                                        lineNumber: 121,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 128,
+                                    lineNumber: 120,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 127,
+                                lineNumber: 119,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 105,
+                        lineNumber: 97,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27475,25 +27473,25 @@ function App() {
                                     children: "Switch"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 135,
+                                    lineNumber: 127,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.ProviderToggle), {
                                     trigger: "test"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 136,
+                                    lineNumber: 128,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 134,
+                            lineNumber: 126,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 133,
+                        lineNumber: 125,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27508,7 +27506,7 @@ function App() {
                                     children: "Avatar"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 141,
+                                    lineNumber: 133,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27516,18 +27514,18 @@ function App() {
                                     children: "All good"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 142,
+                                    lineNumber: 134,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 140,
+                            lineNumber: 132,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 139,
+                        lineNumber: 131,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27542,7 +27540,7 @@ function App() {
                                     children: "Badge"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 148,
+                                    lineNumber: 140,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27550,7 +27548,7 @@ function App() {
                                     children: "Normal"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 149,
+                                    lineNumber: 141,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27559,7 +27557,7 @@ function App() {
                                     children: "Red"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 150,
+                                    lineNumber: 142,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27568,7 +27566,7 @@ function App() {
                                     children: "Orange"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 153,
+                                    lineNumber: 145,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27577,7 +27575,7 @@ function App() {
                                     children: "Pink"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 156,
+                                    lineNumber: 148,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27586,7 +27584,7 @@ function App() {
                                     children: "Purple"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 159,
+                                    lineNumber: 151,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27595,7 +27593,7 @@ function App() {
                                     children: "Blue"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 162,
+                                    lineNumber: 154,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27604,7 +27602,7 @@ function App() {
                                     children: "Green"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 165,
+                                    lineNumber: 157,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27613,7 +27611,7 @@ function App() {
                                     children: "Border"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 168,
+                                    lineNumber: 160,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27622,7 +27620,7 @@ function App() {
                                     children: "Dot"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 171,
+                                    lineNumber: 163,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27631,7 +27629,7 @@ function App() {
                                     children: "Dot (Pulsing)"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 174,
+                                    lineNumber: 166,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27642,7 +27640,7 @@ function App() {
                                     children: "Icon (Left)"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 177,
+                                    lineNumber: 169,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27654,18 +27652,18 @@ function App() {
                                     children: "Icon (Right)"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 180,
+                                    lineNumber: 172,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 147,
+                            lineNumber: 139,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 146,
+                        lineNumber: 138,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27680,7 +27678,7 @@ function App() {
                                     children: "Box"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 187,
+                                    lineNumber: 179,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
@@ -27688,12 +27686,76 @@ function App() {
                                         children: "Box"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 189,
+                                        lineNumber: 181,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
+                                    lineNumber: 180,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
+                                    top: "3",
+                                    bottom: "3"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 183,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
+                                    theme: "border",
+                                    children: "Border"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 184,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
+                                    top: "3",
+                                    bottom: "3"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 185,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
+                                    theme: "error",
+                                    children: "Error"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 186,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
+                                    top: "3",
+                                    bottom: "3"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 187,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
+                                    theme: "warning",
+                                    children: "Warning"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
                                     lineNumber: 188,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
+                                    top: "3",
+                                    bottom: "3"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 189,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
+                                    theme: "success",
+                                    children: "Success"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 190,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
@@ -27705,8 +27767,8 @@ function App() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
-                                    theme: "border",
-                                    children: "Border"
+                                    theme: "transparent",
+                                    children: "Transparent"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
                                     lineNumber: 192,
@@ -27721,27 +27783,12 @@ function App() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
-                                    theme: "error",
-                                    children: "Error"
+                                    hover: true,
+                                    theme: "border",
+                                    children: "Border + Hover"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
                                     lineNumber: 194,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
-                                    top: "3",
-                                    bottom: "3"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 195,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
-                                    theme: "warning",
-                                    children: "Warning"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 196,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
@@ -27753,71 +27800,22 @@ function App() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
-                                    theme: "success",
-                                    children: "Success"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 198,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
-                                    top: "3",
-                                    bottom: "3"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 199,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
-                                    theme: "transparent",
-                                    children: "Transparent"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 200,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
-                                    top: "3",
-                                    bottom: "3"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 201,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
-                                    hover: true,
-                                    theme: "border",
-                                    children: "Border + Hover"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 202,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
-                                    top: "3",
-                                    bottom: "3"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 205,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
                                     loading: true,
                                     children: "Loading"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 206,
+                                    lineNumber: 198,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 186,
+                            lineNumber: 178,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 185,
+                        lineNumber: 177,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27832,7 +27830,7 @@ function App() {
                                     children: "Button"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 211,
+                                    lineNumber: 203,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27840,7 +27838,7 @@ function App() {
                                     children: "Default"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 212,
+                                    lineNumber: 204,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27849,7 +27847,7 @@ function App() {
                                     children: "Border"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 213,
+                                    lineNumber: 205,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27858,7 +27856,7 @@ function App() {
                                     children: "Minimal"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 216,
+                                    lineNumber: 208,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27867,7 +27865,7 @@ function App() {
                                     children: "Solid"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 219,
+                                    lineNumber: 211,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27878,7 +27876,7 @@ function App() {
                                     children: "Icon (Left)"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 222,
+                                    lineNumber: 214,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27890,18 +27888,18 @@ function App() {
                                     children: "Icon (Right)"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 225,
+                                    lineNumber: 217,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 210,
+                            lineNumber: 202,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 209,
+                        lineNumber: 201,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27916,7 +27914,7 @@ function App() {
                                     children: "Code"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 232,
+                                    lineNumber: 224,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Code), {
@@ -27924,18 +27922,18 @@ function App() {
                                     children: "/* Must be wrapped in Block, and is the parent of Column */\n<Block>\n   <Section align='stretch'>\n       <Column width={50}>\n           /*...children */ \n       </Column> \n       <Column width={50}>\n           /*...children */ \n       </Column> \n   </Section> \n/Block>\n"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 233,
+                                    lineNumber: 225,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 231,
+                            lineNumber: 223,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 230,
+                        lineNumber: 222,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27950,7 +27948,7 @@ function App() {
                                     children: "Dates"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 250,
+                                    lineNumber: 242,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Popover), {
@@ -27963,12 +27961,12 @@ function App() {
                                         onChange: undefined
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 252,
+                                        lineNumber: 244,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 251,
+                                    lineNumber: 243,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Popover), {
@@ -27981,23 +27979,23 @@ function App() {
                                         onChange: undefined
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 255,
+                                        lineNumber: 247,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 254,
+                                    lineNumber: 246,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 249,
+                            lineNumber: 241,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 248,
+                        lineNumber: 240,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -28012,7 +28010,7 @@ function App() {
                                     children: "Dialog"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 261,
+                                    lineNumber: 253,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Dialog), {
@@ -28022,18 +28020,18 @@ function App() {
                                     children: "This is a dialog."
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 262,
+                                    lineNumber: 254,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 260,
+                            lineNumber: 252,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 259,
+                        lineNumber: 251,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -28048,7 +28046,7 @@ function App() {
                                     children: "Divider"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 267,
+                                    lineNumber: 259,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
@@ -28056,18 +28054,18 @@ function App() {
                                     bottom: "3"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 268,
+                                    lineNumber: 260,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 266,
+                            lineNumber: 258,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 265,
+                        lineNumber: 257,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -28082,7 +28080,7 @@ function App() {
                                     children: "Dropdown"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 273,
+                                    lineNumber: 265,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
@@ -28090,7 +28088,7 @@ function App() {
                                     bottom: "3"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 274,
+                                    lineNumber: 266,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Dropdown), {
@@ -28121,18 +28119,18 @@ function App() {
                                     submenu: false
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 275,
+                                    lineNumber: 267,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 272,
+                            lineNumber: 264,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 271,
+                        lineNumber: 263,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -28147,7 +28145,7 @@ function App() {
                                     children: "Element"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 296,
+                                    lineNumber: 288,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -28155,18 +28153,18 @@ function App() {
                                     children: "All good"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 297,
+                                    lineNumber: 289,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 295,
+                            lineNumber: 287,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 294,
+                        lineNumber: 286,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -28181,7 +28179,7 @@ function App() {
                                     children: "Field"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 302,
+                                    lineNumber: 294,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Field), {
@@ -28190,18 +28188,18 @@ function App() {
                                     reveal: true
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 303,
+                                    lineNumber: 295,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 301,
+                            lineNumber: 293,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 300,
+                        lineNumber: 292,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -28216,7 +28214,7 @@ function App() {
                                     children: "Image"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 309,
+                                    lineNumber: 301,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -28224,18 +28222,18 @@ function App() {
                                     children: "All good"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 310,
+                                    lineNumber: 302,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 308,
+                            lineNumber: 300,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 307,
+                        lineNumber: 299,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -28250,11 +28248,76 @@ function App() {
                                     children: "Input"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 315,
+                                    lineNumber: 307,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
                                     placeholder: "Default"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 308,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
+                                    top: "3",
+                                    bottom: "3"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 309,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
+                                    placeholder: "Copy",
+                                    copy: true
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 310,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
+                                    top: "3",
+                                    bottom: "3"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 311,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
+                                    placeholder: "Password",
+                                    reveal: true,
+                                    type: "password"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 312,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
+                                    top: "3",
+                                    bottom: "3"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 313,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
+                                    placeholder: "Disabled",
+                                    disabled: true
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 314,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
+                                    top: "3",
+                                    bottom: "3"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 315,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
+                                    placeholder: "Error",
+                                    error: true
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
                                     lineNumber: 316,
@@ -28269,8 +28332,8 @@ function App() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
-                                    placeholder: "Copy",
-                                    copy: true
+                                    placeholder: "Success",
+                                    success: true
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
                                     lineNumber: 318,
@@ -28285,9 +28348,8 @@ function App() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
-                                    placeholder: "Password",
-                                    reveal: true,
-                                    type: "password"
+                                    placeholder: "Warning",
+                                    warning: true
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
                                     lineNumber: 320,
@@ -28302,86 +28364,22 @@ function App() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
-                                    placeholder: "Disabled",
-                                    disabled: true
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 322,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
-                                    top: "3",
-                                    bottom: "3"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 323,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
-                                    placeholder: "Error",
-                                    error: true
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 324,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
-                                    top: "3",
-                                    bottom: "3"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 325,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
-                                    placeholder: "Success",
-                                    success: true
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 326,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
-                                    top: "3",
-                                    bottom: "3"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 327,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
-                                    placeholder: "Warning",
-                                    warning: true
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 328,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
-                                    top: "3",
-                                    bottom: "3"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 329,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
                                     placeholder: "Loading",
                                     loading: true
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 330,
+                                    lineNumber: 322,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 314,
+                            lineNumber: 306,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 313,
+                        lineNumber: 305,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -28396,23 +28394,23 @@ function App() {
                                     children: "Loading"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 335,
+                                    lineNumber: 327,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Loading), {}, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 336,
+                                    lineNumber: 328,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 334,
+                            lineNumber: 326,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 333,
+                        lineNumber: 325,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -28421,13 +28419,14 @@ function App() {
                         top: "6",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
                             direction: "column",
+                            align: "right",
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
                                     as: "h1",
                                     children: "Popover"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 341,
+                                    lineNumber: 333,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Popover), {
@@ -28437,7 +28436,7 @@ function App() {
                                     children: "This is a popover."
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 342,
+                                    lineNumber: 334,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
@@ -28445,18 +28444,19 @@ function App() {
                                     bottom: "3"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 343,
+                                    lineNumber: 335,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Popover), {
                                     type: "hover",
+                                    width: 400,
                                     trigger: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
                                         children: "Normal Popover + hover (tooltip)"
                                     }, void 0, false, void 0, void 0),
-                                    children: "This is a popover."
+                                    children: "This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover."
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 344,
+                                    lineNumber: 336,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
@@ -28464,7 +28464,7 @@ function App() {
                                     bottom: "3"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 347,
+                                    lineNumber: 342,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Popover), {
@@ -28477,23 +28477,23 @@ function App() {
                                         children: "This is a big Popover"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 349,
+                                        lineNumber: 344,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 348,
+                                    lineNumber: 343,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 340,
+                            lineNumber: 332,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 339,
+                        lineNumber: 331,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -28508,7 +28508,7 @@ function App() {
                                     children: "Table"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 355,
+                                    lineNumber: 350,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
@@ -28522,6 +28522,41 @@ function App() {
                                                             children: "Hey"
                                                         }, void 0, false, {
                                                             fileName: "playground/App.tsx",
+                                                            lineNumber: 355,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableHeadCell), {
+                                                            children: "Hey"
+                                                        }, void 0, false, {
+                                                            fileName: "playground/App.tsx",
+                                                            lineNumber: 356,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableHeadCell), {
+                                                            children: "Hey"
+                                                        }, void 0, false, {
+                                                            fileName: "playground/App.tsx",
+                                                            lineNumber: 357,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableHeadCell), {
+                                                            children: "Hey"
+                                                        }, void 0, false, {
+                                                            fileName: "playground/App.tsx",
+                                                            lineNumber: 358,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableHeadCell), {
+                                                            children: "Hey"
+                                                        }, void 0, false, {
+                                                            fileName: "playground/App.tsx",
+                                                            lineNumber: 359,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableHeadCell), {
+                                                            children: "Hey"
+                                                        }, void 0, false, {
+                                                            fileName: "playground/App.tsx",
                                                             lineNumber: 360,
                                                             columnNumber: 21
                                                         }, this),
@@ -28531,57 +28566,57 @@ function App() {
                                                             fileName: "playground/App.tsx",
                                                             lineNumber: 361,
                                                             columnNumber: 21
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableHeadCell), {
-                                                            children: "Hey"
-                                                        }, void 0, false, {
-                                                            fileName: "playground/App.tsx",
-                                                            lineNumber: 362,
-                                                            columnNumber: 21
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableHeadCell), {
-                                                            children: "Hey"
-                                                        }, void 0, false, {
-                                                            fileName: "playground/App.tsx",
-                                                            lineNumber: 363,
-                                                            columnNumber: 21
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableHeadCell), {
-                                                            children: "Hey"
-                                                        }, void 0, false, {
-                                                            fileName: "playground/App.tsx",
-                                                            lineNumber: 364,
-                                                            columnNumber: 21
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableHeadCell), {
-                                                            children: "Hey"
-                                                        }, void 0, false, {
-                                                            fileName: "playground/App.tsx",
-                                                            lineNumber: 365,
-                                                            columnNumber: 21
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableHeadCell), {
-                                                            children: "Hey"
-                                                        }, void 0, false, {
-                                                            fileName: "playground/App.tsx",
-                                                            lineNumber: 366,
-                                                            columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "playground/App.tsx",
-                                                    lineNumber: 359,
+                                                    lineNumber: 354,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "playground/App.tsx",
-                                                lineNumber: 358,
+                                                lineNumber: 353,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableBody), {
                                                 children: [
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableRow), {
                                                         children: [
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
+                                                                children: "Hey"
+                                                            }, void 0, false, {
+                                                                fileName: "playground/App.tsx",
+                                                                lineNumber: 366,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
+                                                                children: "Hey"
+                                                            }, void 0, false, {
+                                                                fileName: "playground/App.tsx",
+                                                                lineNumber: 367,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
+                                                                children: "Hey"
+                                                            }, void 0, false, {
+                                                                fileName: "playground/App.tsx",
+                                                                lineNumber: 368,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
+                                                                children: "Hey"
+                                                            }, void 0, false, {
+                                                                fileName: "playground/App.tsx",
+                                                                lineNumber: 369,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
+                                                                children: "HeHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyy"
+                                                            }, void 0, false, {
+                                                                fileName: "playground/App.tsx",
+                                                                lineNumber: 370,
+                                                                columnNumber: 21
+                                                            }, this),
                                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
                                                                 children: "Hey"
                                                             }, void 0, false, {
@@ -28595,23 +28630,17 @@ function App() {
                                                                 fileName: "playground/App.tsx",
                                                                 lineNumber: 372,
                                                                 columnNumber: 21
-                                                            }, this),
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "playground/App.tsx",
+                                                        lineNumber: 365,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableRow), {
+                                                        children: [
                                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
                                                                 children: "Hey"
-                                                            }, void 0, false, {
-                                                                fileName: "playground/App.tsx",
-                                                                lineNumber: 373,
-                                                                columnNumber: 21
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
-                                                                children: "Hey"
-                                                            }, void 0, false, {
-                                                                fileName: "playground/App.tsx",
-                                                                lineNumber: 374,
-                                                                columnNumber: 21
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
-                                                                children: "HeHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyy"
                                                             }, void 0, false, {
                                                                 fileName: "playground/App.tsx",
                                                                 lineNumber: 375,
@@ -28630,15 +28659,21 @@ function App() {
                                                                 fileName: "playground/App.tsx",
                                                                 lineNumber: 377,
                                                                 columnNumber: 21
-                                                            }, this)
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "playground/App.tsx",
-                                                        lineNumber: 370,
-                                                        columnNumber: 19
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableRow), {
-                                                        children: [
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
+                                                                children: "Hey"
+                                                            }, void 0, false, {
+                                                                fileName: "playground/App.tsx",
+                                                                lineNumber: 378,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
+                                                                children: "HHeyHeyHeyHeyHeyHeyHeyHeyey"
+                                                            }, void 0, false, {
+                                                                fileName: "playground/App.tsx",
+                                                                lineNumber: 379,
+                                                                columnNumber: 21
+                                                            }, this),
                                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
                                                                 children: "Hey"
                                                             }, void 0, false, {
@@ -28647,79 +28682,44 @@ function App() {
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
-                                                                children: "Hey"
-                                                            }, void 0, false, {
-                                                                fileName: "playground/App.tsx",
-                                                                lineNumber: 381,
-                                                                columnNumber: 21
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
-                                                                children: "Hey"
-                                                            }, void 0, false, {
-                                                                fileName: "playground/App.tsx",
-                                                                lineNumber: 382,
-                                                                columnNumber: 21
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
-                                                                children: "Hey"
-                                                            }, void 0, false, {
-                                                                fileName: "playground/App.tsx",
-                                                                lineNumber: 383,
-                                                                columnNumber: 21
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
-                                                                children: "HHeyHeyHeyHeyHeyHeyHeyHeyey"
-                                                            }, void 0, false, {
-                                                                fileName: "playground/App.tsx",
-                                                                lineNumber: 384,
-                                                                columnNumber: 21
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
-                                                                children: "Hey"
-                                                            }, void 0, false, {
-                                                                fileName: "playground/App.tsx",
-                                                                lineNumber: 385,
-                                                                columnNumber: 21
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
                                                                 children: "HeHeyHeyHeyHeyHeyHeyHeyHeyy"
                                                             }, void 0, false, {
                                                                 fileName: "playground/App.tsx",
-                                                                lineNumber: 386,
+                                                                lineNumber: 381,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "playground/App.tsx",
-                                                        lineNumber: 379,
+                                                        lineNumber: 374,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "playground/App.tsx",
-                                                lineNumber: 369,
+                                                lineNumber: 364,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 357,
+                                        lineNumber: 352,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 356,
+                                    lineNumber: 351,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 354,
+                            lineNumber: 349,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 353,
+                        lineNumber: 348,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -28734,7 +28734,7 @@ function App() {
                                     children: "Text"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 395,
+                                    lineNumber: 390,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -28742,7 +28742,7 @@ function App() {
                                     children: "H1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eu consectetur consectetur, nisl nisl consectetur nisl, euismod nisl nisl nisl."
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 396,
+                                    lineNumber: 391,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -28750,7 +28750,7 @@ function App() {
                                     children: "H2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eu consectetur consectetur, nisl nisl consectetur nisl, euismod nisl nisl nisl."
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 399,
+                                    lineNumber: 394,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -28758,7 +28758,7 @@ function App() {
                                     children: "H3: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eu consectetur consectetur, nisl nisl consectetur nisl, euismod nisl nisl nisl."
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 402,
+                                    lineNumber: 397,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -28766,7 +28766,7 @@ function App() {
                                     children: "H4: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eu consectetur consectetur, nisl nisl consectetur nisl, euismod nisl nisl nisl."
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 405,
+                                    lineNumber: 400,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -28774,7 +28774,7 @@ function App() {
                                     children: "H5: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eu consectetur consectetur, nisl nisl consectetur nisl, euismod nisl nisl nisl."
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 408,
+                                    lineNumber: 403,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -28782,7 +28782,7 @@ function App() {
                                     children: "H6: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eu consectetur consectetur, nisl nisl consectetur nisl, euismod nisl nisl nisl."
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 411,
+                                    lineNumber: 406,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -28790,7 +28790,7 @@ function App() {
                                     children: "P: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eu consectetur consectetur, nisl nisl consectetur nisl, euismod nisl nisl nisl."
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 414,
+                                    lineNumber: 409,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -28798,18 +28798,18 @@ function App() {
                                     children: "SMALL: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eu consectetur consectetur, nisl nisl consectetur nisl, euismod nisl nisl nisl."
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 417,
+                                    lineNumber: 412,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 394,
+                            lineNumber: 389,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 393,
+                        lineNumber: 388,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -28824,7 +28824,7 @@ function App() {
                                     children: "Toast"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 424,
+                                    lineNumber: 419,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -28835,7 +28835,7 @@ function App() {
                                     children: "Success Toast"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 425,
+                                    lineNumber: 420,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -28846,7 +28846,7 @@ function App() {
                                     children: "Warning/Error Toast"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 432,
+                                    lineNumber: 427,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -28857,24 +28857,24 @@ function App() {
                                     children: "Default Toast"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 439,
+                                    lineNumber: 434,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 423,
+                            lineNumber: 418,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 422,
+                        lineNumber: 417,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "playground/App.tsx",
-                lineNumber: 104,
+                lineNumber: 96,
                 columnNumber: 7
             }, this)
         ]
@@ -34785,7 +34785,8 @@ function imgixLoader({ config , src , width , quality  }) {
     // Demo: https://static.imgix.net/daisy.png?auto=format&fit=max&w=300
     const url = new URL(`${config.path}${normalizeSrc(src)}`);
     const params = url.searchParams;
-    params.set("auto", params.get("auto") || "format");
+    // auto params can be combined with comma separation, or reiteration
+    params.set("auto", params.getAll("auto").join(",") || "format");
     params.set("fit", params.get("fit") || "max");
     params.set("w", params.get("w") || width.toString());
     if (quality) params.set("q", quality.toString());
@@ -35407,6 +35408,8 @@ function useIntersection({ rootRef , rootMargin , disabled  }) {
         resetVisible
     ];
 }
+const observers = new Map();
+const idList = [];
 function observe(element, callback, options) {
     const { id , observer , elements  } = createObserver(options);
     elements.set(element, callback);
@@ -35423,8 +35426,6 @@ function observe(element, callback, options) {
         }
     };
 }
-const observers = new Map();
-const idList = [];
 function createObserver(options) {
     const id = {
         root: options.root || null,
@@ -40220,16 +40221,16 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
     theme: {
         colors: {
             accent: "rgb(170, 177, 201)",
-            background: "rgb(15, 15, 26)",
-            inverted: "rgb(23, 23, 34)",
+            background: "rgb(19, 19, 30)",
+            inverted: "rgb(15, 15, 26)",
             blueBorder: "rgba(115, 172, 255, 0.4)",
             blueCTA: "rgb(55, 119, 192)",
             blueOverlay: "rgba(151, 193, 255, 0.2)",
             blueText: "rgb(166, 179, 255)",
             border: "rgba(165, 170, 200, 0.4)",
             borderHover: "rgba(165, 170, 200, 0.2)",
-            default: "rgba(191, 197, 230, 0.1)",
-            defaultHover: "rgba(191, 197, 230, 0.3)",
+            default: "rgba(255, 255, 255, 0.05)",
+            defaultHover: "rgba(255, 255, 255, 0.1)",
             greenBorder: "rgba(0, 200, 83, 0.4)",
             greenOverlay: "rgba(101, 227, 124, 0.2)",
             greenText: "rgb(124, 241, 151)",
@@ -40251,7 +40252,7 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             h1: "3.4rem",
             h2: "3rem",
             h3: "2.4rem",
-            h4: "2rem",
+            h4: "1.9rem",
             h5: "1.7rem",
             h6: "1.5rem",
             p: "1.4rem",
@@ -40368,8 +40369,8 @@ const lightTheme = (0, _react.createTheme)({
         blueText: "rgb(32, 47, 136)",
         border: "rgba(184, 187, 203, 0.4)",
         borderHover: "rgba(184, 187, 203, 0.2)",
-        default: "rgba(0, 0, 0, 0.06)",
-        defaultHover: "rgba(0, 0, 0, 0.09)",
+        default: "rgba(0, 0, 0, 0.04)",
+        defaultHover: "rgba(0, 0, 0, 0.08)",
         greenText: "rgb(0, 76, 6)",
         orangeText: "rgb(199, 84, 30)",
         pinkText: "rgb(173, 22, 128)",
@@ -42040,6 +42041,9 @@ const ButtonStyled = (0, _stitchesConfig.styled)("button", {
     [(0, _stitchesConfig.breakpoints).phone]: {
         fontSize: "$p"
     },
+    a: {
+        display: "block"
+    },
     transition: "$default",
     variants: {
         block: {
@@ -42851,13 +42855,13 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontWeight: "$h1",
                 lineHeight: "$h1",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h1 * 0.75)"
+                    fontSize: "calc($h1 * 0.8)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h1 * 0.85)"
+                    fontSize: "calc($h1 * 0.8)"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($h1 * 0.95)"
+                    fontSize: "calc($h1 * 0.8)"
                 }
             },
             h2: {
@@ -42871,10 +42875,10 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                     fontSize: "calc($h2 * 0.8)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h2 * 0.85)"
+                    fontSize: "calc($h2 * 0.8)"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($h2 * 0.9)"
+                    fontSize: "calc($h2 * 0.8)"
                 }
             },
             h3: {
@@ -42888,10 +42892,10 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                     fontSize: "calc($h3 * 0.8)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h3 * 0.85)"
+                    fontSize: "calc($h3 * 0.8)"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($h3 * 0.9)"
+                    fontSize: "calc($h3 * 0.8)"
                 }
             },
             h4: {
@@ -42905,7 +42909,7 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                     fontSize: "calc($h4 * 0.8)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h4 * 0.85)"
+                    fontSize: "calc($h4 * 0.8)"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
                     fontSize: "calc($h4 * 0.9)"
@@ -42919,7 +42923,7 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontWeight: "$h5",
                 lineHeight: "$h5",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h5 * 0.85)"
+                    fontSize: "calc($h5 * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h5 * 0.9)"
@@ -42940,7 +42944,7 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                     fontSize: "calc($h6 * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h6 * 0.925)"
+                    fontSize: "calc($h6 * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
                     fontSize: "calc($h6 * 0.95)"
@@ -42958,7 +42962,7 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                     fontSize: "calc($p * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($p * 0.925)"
+                    fontSize: "calc($p * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
                     fontSize: "calc($p * 0.95)"
@@ -42975,7 +42979,7 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                     fontSize: "calc($small * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($small * 0.925)"
+                    fontSize: "calc($small * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
                     fontSize: "calc($small * 0.95)"
@@ -44490,7 +44494,8 @@ parcelHelpers.export(exports, "DialogExitStyled", ()=>DialogExitStyled);
 var _stitchesConfig = require("../../stitches.config");
 const DialogStyled = (0, _stitchesConfig.styled)("div", {
     display: "inline-block",
-    position: "relative"
+    position: "relative",
+    verticalAlign: "middle"
 });
 const DialogTriggerStyled = (0, _stitchesConfig.styled)("div", {
     "*": {
@@ -44721,7 +44726,8 @@ const ElementStyled = (0, _stitchesConfig.styled)("div", {
             true: {
                 "*": {
                     alignSelf: "center",
-                    margin: "0 !important",
+                    marginBottom: "0 !important",
+                    marginTOp: "0 !important",
                     verticalAlign: "middle"
                 },
                 alignItems: "center",
@@ -48594,7 +48600,8 @@ parcelHelpers.export(exports, "DropdownItemStyled", ()=>DropdownItemStyled);
 var _stitchesConfig = require("../../stitches.config");
 const DropdownStyled = (0, _stitchesConfig.styled)("div", {
     display: "inline-block",
-    position: "relative"
+    position: "relative",
+    verticalAlign: "middle"
 });
 const DropdownTriggerStyled = (0, _stitchesConfig.styled)("div", {
     "*": {
@@ -48746,6 +48753,11 @@ function Input(props) {
                             weight: "duotone"
                         }, void 0, false, void 0, void 0),
                         theme: "red",
+                        css: {
+                            paddingTop: "0.5rem",
+                            paddingBottom: "0.5rem",
+                            marginLeft: "$2"
+                        },
                         children: props.errorMessage || "Error"
                     }, void 0, false, {
                         fileName: "src/components/Input/Input.tsx",
@@ -48757,10 +48769,15 @@ function Input(props) {
                             weight: "duotone"
                         }, void 0, false, void 0, void 0),
                         theme: "green",
+                        css: {
+                            paddingTop: "0.5rem",
+                            paddingBottom: "0.5rem",
+                            marginLeft: "$2"
+                        },
                         children: props.successMessage || "Success"
                     }, void 0, false, {
                         fileName: "src/components/Input/Input.tsx",
-                        lineNumber: 82,
+                        lineNumber: 89,
                         columnNumber: 13
                     }, this),
                     props.warning && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badge.Badge), {
@@ -48768,22 +48785,21 @@ function Input(props) {
                             weight: "duotone"
                         }, void 0, false, void 0, void 0),
                         theme: "orange",
+                        css: {
+                            paddingTop: "0.5rem",
+                            paddingBottom: "0.5rem",
+                            marginLeft: "$2"
+                        },
                         children: props.warningMessage || "Warning"
                     }, void 0, false, {
                         fileName: "src/components/Input/Input.tsx",
-                        lineNumber: 87,
+                        lineNumber: 101,
                         columnNumber: 13
                     }, this),
-                    props.loading && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badge.Badge), {
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loading.Loading), {}, void 0, false, {
-                            fileName: "src/components/Input/Input.tsx",
-                            lineNumber: 93,
-                            columnNumber: 15
-                        }, this)
-                    }, void 0, false, {
+                    props.loading && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loading.Loading), {}, void 0, false, {
                         fileName: "src/components/Input/Input.tsx",
-                        lineNumber: 92,
-                        columnNumber: 13
+                        lineNumber: 112,
+                        columnNumber: 29
                     }, this),
                     props.copy && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
                         icon: isCopied ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ClipboardText), {
@@ -48793,10 +48809,16 @@ function Input(props) {
                             weight: "duotone"
                         }, void 0, false, void 0, void 0),
                         onClick: handleCopy,
+                        css: {
+                            paddingTop: "0.3rem !important",
+                            paddingBottom: "0.3rem !important",
+                            lineHeight: "1",
+                            marginLeft: "$2"
+                        },
                         children: "Copy"
                     }, void 0, false, {
                         fileName: "src/components/Input/Input.tsx",
-                        lineNumber: 97,
+                        lineNumber: 114,
                         columnNumber: 13
                     }, this),
                     props.reveal && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
@@ -48806,19 +48828,31 @@ function Input(props) {
                             weight: "duotone"
                         }, void 0, false, void 0, void 0),
                         onClick: handleReveal,
+                        css: {
+                            paddingTop: "0.3rem !important",
+                            paddingBottom: "0.3rem !important",
+                            lineHeight: "1",
+                            marginLeft: "$2"
+                        },
                         children: isRevealed ? "Hide" : "Show"
                     }, void 0, false, {
                         fileName: "src/components/Input/Input.tsx",
-                        lineNumber: 102,
+                        lineNumber: 127,
                         columnNumber: 13
                     }, this),
                     props.submit && props.submitFunction && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
                         disabled: !props.submitValid,
                         onClick: ()=>props.submitFunction(value),
+                        css: {
+                            paddingTop: "0.3rem !important",
+                            paddingBottom: "0.3rem !important",
+                            lineHeight: "1",
+                            marginLeft: "$2"
+                        },
                         children: props.submit
                     }, void 0, false, {
                         fileName: "src/components/Input/Input.tsx",
-                        lineNumber: 108,
+                        lineNumber: 141,
                         columnNumber: 13
                     }, this)
                 ]
@@ -48882,13 +48916,13 @@ const InputStyled = (0, _stitchesConfig.styled)("div", {
                 border: "0.1rem solid $border"
             },
             error: {
-                border: "0.2rem solid $redOverlay"
+                border: "0.1rem solid $redOverlay"
             },
             success: {
-                border: "0.2rem solid $greenOverlay"
+                border: "0.1rem solid $greenOverlay"
             },
             warning: {
-                border: "0.2rem solid $orangeOverlay"
+                border: "0.1rem solid $orangeOverlay"
             }
         }
     },
@@ -48917,22 +48951,12 @@ const InputAreaStyled = (0, _stitchesConfig.styled)("input", {
 const InputFunctionStyled = (0, _stitchesConfig.styled)("div", {
     button: {
         fontSize: "$p",
-        marginLeft: "$2",
-        paddingBottom: "$1",
-        paddingLeft: "$3",
-        paddingRight: "$3",
-        paddingTop: "$1"
+        marginLeft: "$2"
     },
     display: "inline-flex",
     height: "100%",
     marginLeft: "$3",
     position: "relative",
-    svg: {
-        height: "1.8rem",
-        marginTop: "-0.1rem",
-        verticalAlign: "middle",
-        width: "1.8rem"
-    },
     verticalAlign: "middle",
     width: "auto"
 });
@@ -49051,7 +49075,8 @@ parcelHelpers.export(exports, "PopoverContentStyled", ()=>PopoverContentStyled);
 var _stitchesConfig = require("../../stitches.config");
 const PopoverStyled = (0, _stitchesConfig.styled)("div", {
     display: "inline-block",
-    position: "relative"
+    position: "relative",
+    verticalAlign: "middle"
 });
 const PopoverTriggerStyled = (0, _stitchesConfig.styled)("div", {
     "*": {

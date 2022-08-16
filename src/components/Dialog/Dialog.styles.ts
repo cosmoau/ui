@@ -3,6 +3,7 @@ import { breakpoints, fadeIn, fadeOut, styled } from '../../stitches.config';
 export const DialogStyled = styled('div', {
   display: 'inline-block',
   position: 'relative',
+  verticalAlign: 'middle',
 });
 
 export const DialogTriggerStyled = styled('div', {

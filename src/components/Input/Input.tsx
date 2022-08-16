@@ -74,38 +74,79 @@ export default function Input(props: Props): JSX.Element {
       {(props.error || props.success || props.warning || props.loading || props.submit || props.copy || props.reveal) && (
         <InputFunctionStyled>
           {props.error && (
-            <Badge icon={<Warning weight='duotone' />} theme='red'>
+            <Badge
+              icon={<Warning weight='duotone' />}
+              theme='red'
+              css={{
+                paddingTop: '0.5rem',
+                paddingBottom: '0.5rem',
+                marginLeft: '$2',
+              }}>
               {props.errorMessage || 'Error'}
             </Badge>
           )}
           {props.success && (
-            <Badge icon={<Check weight='duotone' />} theme='green'>
+            <Badge
+              icon={<Check weight='duotone' />}
+              theme='green'
+              css={{
+                paddingTop: '0.5rem',
+                paddingBottom: '0.5rem',
+                marginLeft: '$2',
+              }}>
               {props.successMessage || 'Success'}
             </Badge>
           )}
           {props.warning && (
-            <Badge icon={<Warning weight='duotone' />} theme='orange'>
+            <Badge
+              icon={<Warning weight='duotone' />}
+              theme='orange'
+              css={{
+                paddingTop: '0.5rem',
+                paddingBottom: '0.5rem',
+                marginLeft: '$2',
+              }}>
               {props.warningMessage || 'Warning'}
             </Badge>
           )}
-          {props.loading && (
-            <Badge>
-              <Loading />
-            </Badge>
-          )}
+          {props.loading && <Loading />}
           {props.copy && (
-            <Button icon={isCopied ? <ClipboardText opacity={0.4} weight='duotone' /> : <ClipboardText weight='duotone' />} onClick={handleCopy}>
+            <Button
+              icon={isCopied ? <ClipboardText opacity={0.4} weight='duotone' /> : <ClipboardText weight='duotone' />}
+              onClick={handleCopy}
+              css={{
+                paddingTop: '0.3rem !important',
+                paddingBottom: '0.3rem !important',
+                lineHeight: '1',
+                marginLeft: '$2',
+              }}>
               Copy
             </Button>
           )}
           {props.reveal && (
-            <Button icon={!isRevealed ? <Eye weight='duotone' /> : <EyeClosed weight='duotone' />} onClick={handleReveal}>
+            <Button
+              icon={!isRevealed ? <Eye weight='duotone' /> : <EyeClosed weight='duotone' />}
+              onClick={handleReveal}
+              css={{
+                paddingTop: '0.3rem !important',
+                paddingBottom: '0.3rem !important',
+                lineHeight: '1',
+                marginLeft: '$2',
+              }}>
               {isRevealed ? 'Hide' : 'Show'}
             </Button>
           )}
 
           {props.submit && props.submitFunction && (
-            <Button disabled={!props.submitValid} onClick={(): void => props.submitFunction(value)}>
+            <Button
+              disabled={!props.submitValid}
+              onClick={(): void => props.submitFunction(value)}
+              css={{
+                paddingTop: '0.3rem !important',
+                paddingBottom: '0.3rem !important',
+                lineHeight: '1',
+                marginLeft: '$2',
+              }}>
               {props.submit}
             </Button>
           )}
