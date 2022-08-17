@@ -20,61 +20,61 @@ export const TextStyled = styled('div', {
     size: {
       h1: {
         '&:not(:last-child)': {
-          marginBottom: '$5',
+          marginBottom: '$6',
         },
         fontSize: '$h1',
         fontWeight: '$h1',
         lineHeight: '$h1',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h1 * 0.8)',
+          fontSize: 'calc($h1 * 0.85)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($h1 * 0.8)',
+          fontSize: 'calc($h1 * 0.9)',
         },
         [breakpoints.laptopX]: {
-          fontSize: 'calc($h1 * 0.8)',
+          fontSize: 'calc($h1 * 0.95)',
         },
       },
       h2: {
         '&:not(:last-child)': {
-          marginBottom: '$5',
+          marginBottom: '$6',
         },
         fontSize: '$h2',
         fontWeight: '$h2',
         lineHeight: '$h2',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h2 * 0.8)',
+          fontSize: 'calc($h2 * 0.85)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($h2 * 0.8)',
+          fontSize: 'calc($h2 * 0.9)',
         },
         [breakpoints.laptopX]: {
-          fontSize: 'calc($h2 * 0.8)',
+          fontSize: 'calc($h2 * 0.95)',
         },
       },
       h3: {
         '&:not(:last-child)': {
-          marginBottom: '$4',
+          marginBottom: '$5',
         },
         fontSize: '$h3',
         fontWeight: '$h3',
         lineHeight: '$h3',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h3 * 0.8)',
+          fontSize: 'calc($h3 * 0.85)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($h3 * 0.8)',
+          fontSize: 'calc($h3 * 0.9)',
         },
         [breakpoints.laptopX]: {
-          fontSize: 'calc($h3 * 0.8)',
+          fontSize: 'calc($h3 * 0.95)',
         },
       },
       h4: {
         '&:not(:last-child)': {
-          marginBottom: '$3',
+          marginBottom: '$4',
         },
         fontSize: '$h4',
         fontWeight: '$h4',
@@ -84,7 +84,7 @@ export const TextStyled = styled('div', {
           fontSize: 'calc($h4 * 0.8)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($h4 * 0.8)',
+          fontSize: 'calc($h4 * 0.85)',
         },
         [breakpoints.laptopX]: {
           fontSize: 'calc($h4 * 0.9)',
