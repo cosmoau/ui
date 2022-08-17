@@ -20,37 +20,31 @@ export const TextStyled = styled('div', {
     size: {
       h1: {
         '&:not(:last-child)': {
-          marginBottom: '$6',
+          marginBottom: '$5',
         },
         fontSize: '$h1',
         fontWeight: '$h1',
         lineHeight: '$h1',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h1 * 0.85)',
-        },
-        [breakpoints.tabletX]: {
           fontSize: 'calc($h1 * 0.9)',
         },
-        [breakpoints.laptopX]: {
+        [breakpoints.tabletX]: {
           fontSize: 'calc($h1 * 0.95)',
         },
       },
       h2: {
         '&:not(:last-child)': {
-          marginBottom: '$6',
+          marginBottom: '$5',
         },
         fontSize: '$h2',
         fontWeight: '$h2',
         lineHeight: '$h2',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h2 * 0.85)',
-        },
-        [breakpoints.tabletX]: {
           fontSize: 'calc($h2 * 0.9)',
         },
-        [breakpoints.laptopX]: {
+        [breakpoints.tabletX]: {
           fontSize: 'calc($h2 * 0.95)',
         },
       },
@@ -63,12 +57,9 @@ export const TextStyled = styled('div', {
         lineHeight: '$h3',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h3 * 0.85)',
-        },
-        [breakpoints.tabletX]: {
           fontSize: 'calc($h3 * 0.9)',
         },
-        [breakpoints.laptopX]: {
+        [breakpoints.tabletX]: {
           fontSize: 'calc($h3 * 0.95)',
         },
       },

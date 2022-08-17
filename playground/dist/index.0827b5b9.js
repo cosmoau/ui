@@ -35588,8 +35588,8 @@ function hasMatch(domains, remotePatterns, url) {
 }
 
 },{"next/dist/compiled/micromatch":"7gTyg"}],"7gTyg":[function(require,module,exports) {
-var __dirname = "node_modules/next/dist/compiled/micromatch";
 var process = require("process");
+var __dirname = "node_modules/next/dist/compiled/micromatch";
 (()=>{
     "use strict";
     var e = {
@@ -40227,8 +40227,8 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             blueCTA: "rgb(55, 119, 192)",
             blueOverlay: "rgba(151, 193, 255, 0.2)",
             blueText: "rgb(166, 179, 255)",
-            border: "rgba(165, 170, 200, 0.4)",
-            borderHover: "rgba(165, 170, 200, 0.2)",
+            border: "rgba(165, 170, 200, 0.25)",
+            borderHover: "rgba(165, 170, 200, 0.125)",
             default: "rgba(255, 255, 255, 0.05)",
             defaultHover: "rgba(255, 255, 255, 0.1)",
             greenBorder: "rgba(0, 200, 83, 0.4)",
@@ -40297,9 +40297,9 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             2: "0.5rem",
             3: "0.75rem",
             4: "1.25rem",
-            5: "2rem",
-            6: "4rem",
-            7: "8rem",
+            5: "2.25rem",
+            6: "4.5rem",
+            7: "7.5rem",
             8: "10rem"
         },
         transitions: {
@@ -40369,8 +40369,8 @@ const lightTheme = (0, _react.createTheme)({
         blueText: "rgb(32, 47, 136)",
         border: "rgba(184, 187, 203, 0.4)",
         borderHover: "rgba(184, 187, 203, 0.2)",
-        default: "rgba(0, 0, 0, 0.04)",
-        defaultHover: "rgba(0, 0, 0, 0.08)",
+        default: "rgba(0, 0, 0, 0.0475)",
+        defaultHover: "rgba(0, 0, 0, 0.0825)",
         greenText: "rgb(0, 76, 6)",
         orangeText: "rgb(199, 84, 30)",
         pinkText: "rgb(173, 22, 128)",
@@ -42855,13 +42855,10 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontWeight: "$h1",
                 lineHeight: "$h1",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h1 * 0.8)"
+                    fontSize: "calc($h1 * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h1 * 0.8)"
-                },
-                [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($h1 * 0.8)"
+                    fontSize: "calc($h1 * 0.95)"
                 }
             },
             h2: {
@@ -42872,35 +42869,29 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontWeight: "$h2",
                 lineHeight: "$h2",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h2 * 0.8)"
+                    fontSize: "calc($h2 * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h2 * 0.8)"
-                },
-                [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($h2 * 0.8)"
+                    fontSize: "calc($h2 * 0.95)"
                 }
             },
             h3: {
                 "&:not(:last-child)": {
-                    marginBottom: "$4"
+                    marginBottom: "$5"
                 },
                 fontSize: "$h3",
                 fontWeight: "$h3",
                 lineHeight: "$h3",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h3 * 0.8)"
+                    fontSize: "calc($h3 * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h3 * 0.8)"
-                },
-                [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($h3 * 0.8)"
+                    fontSize: "calc($h3 * 0.95)"
                 }
             },
             h4: {
                 "&:not(:last-child)": {
-                    marginBottom: "$3"
+                    marginBottom: "$4"
                 },
                 fontSize: "$h4",
                 fontWeight: "$h4",
@@ -42909,7 +42900,7 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                     fontSize: "calc($h4 * 0.8)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h4 * 0.8)"
+                    fontSize: "calc($h4 * 0.85)"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
                     fontSize: "calc($h4 * 0.9)"
