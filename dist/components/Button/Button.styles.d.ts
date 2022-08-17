@@ -111,6 +111,7 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
     fontWeight: number;
     lineHeight: string;
     padding: string;
+    boxShadow: string;
     a: {
         display: string;
     };

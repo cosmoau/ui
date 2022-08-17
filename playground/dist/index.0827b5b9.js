@@ -27117,12 +27117,12 @@ function App() {
                                     width: "100"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 44,
+                                    lineNumber: 43,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 43,
+                                lineNumber: 42,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27135,7 +27135,7 @@ function App() {
                                         children: "Pricing"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 47,
+                                        lineNumber: 46,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27143,7 +27143,7 @@ function App() {
                                         children: "Platform"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 48,
+                                        lineNumber: 47,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Dialog), {
@@ -27156,18 +27156,18 @@ function App() {
                                             children: "Dialog"
                                         }, void 0, false, {
                                             fileName: "playground/App.tsx",
-                                            lineNumber: 50,
+                                            lineNumber: 49,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 49,
+                                        lineNumber: 48,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 46,
+                                lineNumber: 45,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27181,7 +27181,7 @@ function App() {
                                         children: "App"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 54,
+                                        lineNumber: 53,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27192,19 +27192,19 @@ function App() {
                                         children: "Join Cosmo"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 57,
+                                        lineNumber: 56,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 53,
+                                lineNumber: 52,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 42,
+                        lineNumber: 41,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27227,7 +27227,7 @@ function App() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 64,
+                                    lineNumber: 63,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27236,24 +27236,24 @@ function App() {
                                     children: "OpenPhone makes it ridiculously easy to get a separate phone number for work. Want to keep using your existing work numbers? Port them over for free."
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 67,
+                                    lineNumber: 66,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 63,
+                            lineNumber: 62,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 62,
+                        lineNumber: 61,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "playground/App.tsx",
-                lineNumber: 41,
+                lineNumber: 40,
                 columnNumber: 7
             }, this),
             "'",
@@ -27274,7 +27274,7 @@ function App() {
                                 children: "Just listed | Comfort on McCrae"
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 77,
+                                lineNumber: 76,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27284,7 +27284,7 @@ function App() {
                                 children: "An effortless way to manage, built for all short term investors"
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 78,
+                                lineNumber: 77,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27297,7 +27297,7 @@ function App() {
                                 children: "Cosmo combines intuitive technology with tailored management services, enabling you to get the most from your investments."
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 82,
+                                lineNumber: 81,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27305,7 +27305,7 @@ function App() {
                                 children: "Test"
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 91,
+                                lineNumber: 90,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27313,23 +27313,23 @@ function App() {
                                 children: "Test"
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 92,
+                                lineNumber: 91,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 76,
+                        lineNumber: 75,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "playground/App.tsx",
-                    lineNumber: 75,
+                    lineNumber: 74,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "playground/App.tsx",
-                lineNumber: 74,
+                lineNumber: 73,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.View), {
@@ -27351,17 +27351,17 @@ function App() {
                                         children: "test"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 100,
+                                        lineNumber: 99,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 99,
+                                    lineNumber: 98,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 98,
+                                lineNumber: 97,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27374,17 +27374,17 @@ function App() {
                                         children: "test"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 105,
+                                        lineNumber: 104,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 104,
+                                    lineNumber: 103,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 103,
+                                lineNumber: 102,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27397,17 +27397,17 @@ function App() {
                                         children: "test"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 110,
+                                        lineNumber: 109,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 109,
+                                    lineNumber: 108,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 108,
+                                lineNumber: 107,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27420,17 +27420,17 @@ function App() {
                                         children: "test"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 115,
+                                        lineNumber: 114,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 114,
+                                    lineNumber: 113,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 113,
+                                lineNumber: 112,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27442,23 +27442,23 @@ function App() {
                                         children: "Housekeeping Services"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 121,
+                                        lineNumber: 120,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 120,
+                                    lineNumber: 119,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 119,
+                                lineNumber: 118,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 97,
+                        lineNumber: 96,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27473,25 +27473,25 @@ function App() {
                                     children: "Switch"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 127,
+                                    lineNumber: 126,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.ProviderToggle), {
                                     trigger: "test"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 128,
+                                    lineNumber: 127,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 126,
+                            lineNumber: 125,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 125,
+                        lineNumber: 124,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27506,7 +27506,7 @@ function App() {
                                     children: "Avatar"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 133,
+                                    lineNumber: 132,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27514,18 +27514,18 @@ function App() {
                                     children: "All good"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 134,
+                                    lineNumber: 133,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 132,
+                            lineNumber: 131,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 131,
+                        lineNumber: 130,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27540,7 +27540,7 @@ function App() {
                                     children: "Badge"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 140,
+                                    lineNumber: 139,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27548,7 +27548,7 @@ function App() {
                                     children: "Normal"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 141,
+                                    lineNumber: 140,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27557,7 +27557,7 @@ function App() {
                                     children: "Red"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 142,
+                                    lineNumber: 141,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27566,7 +27566,7 @@ function App() {
                                     children: "Orange"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 145,
+                                    lineNumber: 144,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27575,7 +27575,7 @@ function App() {
                                     children: "Pink"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 148,
+                                    lineNumber: 147,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27584,7 +27584,7 @@ function App() {
                                     children: "Purple"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 151,
+                                    lineNumber: 150,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27593,7 +27593,7 @@ function App() {
                                     children: "Blue"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 154,
+                                    lineNumber: 153,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27602,7 +27602,7 @@ function App() {
                                     children: "Green"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 157,
+                                    lineNumber: 156,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27611,7 +27611,7 @@ function App() {
                                     children: "Border"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 160,
+                                    lineNumber: 159,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27620,7 +27620,7 @@ function App() {
                                     children: "Dot"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 163,
+                                    lineNumber: 162,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27629,7 +27629,7 @@ function App() {
                                     children: "Dot (Pulsing)"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 166,
+                                    lineNumber: 165,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27640,7 +27640,7 @@ function App() {
                                     children: "Icon (Left)"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 169,
+                                    lineNumber: 168,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27652,18 +27652,18 @@ function App() {
                                     children: "Icon (Right)"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 172,
+                                    lineNumber: 171,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 139,
+                            lineNumber: 138,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 138,
+                        lineNumber: 137,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27678,7 +27678,7 @@ function App() {
                                     children: "Box"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 179,
+                                    lineNumber: 178,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
@@ -27686,12 +27686,12 @@ function App() {
                                         children: "Box"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 181,
+                                        lineNumber: 180,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 180,
+                                    lineNumber: 179,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
@@ -27699,7 +27699,7 @@ function App() {
                                     bottom: "3"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 183,
+                                    lineNumber: 182,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
@@ -27707,7 +27707,7 @@ function App() {
                                     children: "Border"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 184,
+                                    lineNumber: 183,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
@@ -27715,7 +27715,7 @@ function App() {
                                     bottom: "3"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 185,
+                                    lineNumber: 184,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
@@ -27723,7 +27723,7 @@ function App() {
                                     children: "Error"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 186,
+                                    lineNumber: 185,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
@@ -27731,7 +27731,7 @@ function App() {
                                     bottom: "3"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 187,
+                                    lineNumber: 186,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
@@ -27739,7 +27739,7 @@ function App() {
                                     children: "Warning"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 188,
+                                    lineNumber: 187,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
@@ -27747,7 +27747,7 @@ function App() {
                                     bottom: "3"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 189,
+                                    lineNumber: 188,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
@@ -27755,7 +27755,7 @@ function App() {
                                     children: "Success"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 190,
+                                    lineNumber: 189,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
@@ -27763,7 +27763,7 @@ function App() {
                                     bottom: "3"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 191,
+                                    lineNumber: 190,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
@@ -27771,7 +27771,7 @@ function App() {
                                     children: "Transparent"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 192,
+                                    lineNumber: 191,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
@@ -27779,7 +27779,7 @@ function App() {
                                     bottom: "3"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 193,
+                                    lineNumber: 192,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
@@ -27788,7 +27788,7 @@ function App() {
                                     children: "Border + Hover"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 194,
+                                    lineNumber: 193,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
@@ -27796,7 +27796,7 @@ function App() {
                                     bottom: "3"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 197,
+                                    lineNumber: 196,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
@@ -27804,18 +27804,18 @@ function App() {
                                     children: "Loading"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 198,
+                                    lineNumber: 197,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 178,
+                            lineNumber: 177,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 177,
+                        lineNumber: 176,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27830,7 +27830,7 @@ function App() {
                                     children: "Button"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 203,
+                                    lineNumber: 202,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27838,7 +27838,7 @@ function App() {
                                     children: "Default"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 204,
+                                    lineNumber: 203,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27847,7 +27847,7 @@ function App() {
                                     children: "Border"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 205,
+                                    lineNumber: 204,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27856,7 +27856,7 @@ function App() {
                                     children: "Minimal"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 208,
+                                    lineNumber: 207,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27865,7 +27865,7 @@ function App() {
                                     children: "Solid"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 211,
+                                    lineNumber: 210,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27876,7 +27876,7 @@ function App() {
                                     children: "Icon (Left)"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 214,
+                                    lineNumber: 213,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27888,18 +27888,18 @@ function App() {
                                     children: "Icon (Right)"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 217,
+                                    lineNumber: 216,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 202,
+                            lineNumber: 201,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 201,
+                        lineNumber: 200,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27914,7 +27914,7 @@ function App() {
                                     children: "Code"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 224,
+                                    lineNumber: 223,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Code), {
@@ -27922,80 +27922,18 @@ function App() {
                                     children: "/* Must be wrapped in Block, and is the parent of Column */\n<Block>\n   <Section align='stretch'>\n       <Column width={50}>\n           /*...children */ \n       </Column> \n       <Column width={50}>\n           /*...children */ \n       </Column> \n   </Section> \n/Block>\n"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 225,
+                                    lineNumber: 224,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 223,
+                            lineNumber: 222,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 222,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
-                        direction: "row",
-                        flex: "center",
-                        top: "6",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
-                            direction: "column",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                                    as: "h1",
-                                    children: "Dates"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 242,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Popover), {
-                                    minimal: true,
-                                    trigger: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
-                                        children: "Select Dates (Week Range)"
-                                    }, void 0, false, void 0, void 0),
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Dates), {
-                                        range: "week",
-                                        onChange: undefined
-                                    }, void 0, false, {
-                                        fileName: "playground/App.tsx",
-                                        lineNumber: 244,
-                                        columnNumber: 15
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 243,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Popover), {
-                                    minimal: true,
-                                    trigger: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
-                                        children: "Select Dates (Month Range)"
-                                    }, void 0, false, void 0, void 0),
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Dates), {
-                                        range: "month",
-                                        onChange: undefined
-                                    }, void 0, false, {
-                                        fileName: "playground/App.tsx",
-                                        lineNumber: 247,
-                                        columnNumber: 15
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 246,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "playground/App.tsx",
-                            lineNumber: 241,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "playground/App.tsx",
-                        lineNumber: 240,
+                        lineNumber: 221,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -28010,7 +27948,7 @@ function App() {
                                     children: "Dialog"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 253,
+                                    lineNumber: 241,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Dialog), {
@@ -28020,18 +27958,18 @@ function App() {
                                     children: "This is a dialog."
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 254,
+                                    lineNumber: 242,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 252,
+                            lineNumber: 240,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 251,
+                        lineNumber: 239,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -28046,7 +27984,7 @@ function App() {
                                     children: "Divider"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 259,
+                                    lineNumber: 247,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
@@ -28054,18 +27992,18 @@ function App() {
                                     bottom: "3"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 260,
+                                    lineNumber: 248,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 258,
+                            lineNumber: 246,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 257,
+                        lineNumber: 245,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -28080,7 +28018,7 @@ function App() {
                                     children: "Dropdown"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 265,
+                                    lineNumber: 253,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
@@ -28088,7 +28026,7 @@ function App() {
                                     bottom: "3"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 266,
+                                    lineNumber: 254,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Dropdown), {
@@ -28119,18 +28057,18 @@ function App() {
                                     submenu: false
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 267,
+                                    lineNumber: 255,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 264,
+                            lineNumber: 252,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 263,
+                        lineNumber: 251,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -28145,7 +28083,7 @@ function App() {
                                     children: "Element"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 288,
+                                    lineNumber: 276,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -28153,18 +28091,18 @@ function App() {
                                     children: "All good"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 289,
+                                    lineNumber: 277,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 287,
+                            lineNumber: 275,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 286,
+                        lineNumber: 274,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -28179,7 +28117,7 @@ function App() {
                                     children: "Field"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 294,
+                                    lineNumber: 282,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Field), {
@@ -28188,18 +28126,18 @@ function App() {
                                     reveal: true
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 295,
+                                    lineNumber: 283,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 293,
+                            lineNumber: 281,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 292,
+                        lineNumber: 280,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -28214,7 +28152,7 @@ function App() {
                                     children: "Image"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 301,
+                                    lineNumber: 289,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -28222,18 +28160,18 @@ function App() {
                                     children: "All good"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 302,
+                                    lineNumber: 290,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 300,
+                            lineNumber: 288,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 299,
+                        lineNumber: 287,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -28248,11 +28186,108 @@ function App() {
                                     children: "Input"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 307,
+                                    lineNumber: 295,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
                                     placeholder: "Default"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 296,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
+                                    top: "3",
+                                    bottom: "3"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 297,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
+                                    placeholder: "Copy",
+                                    copy: true
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 298,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
+                                    top: "3",
+                                    bottom: "3"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 299,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
+                                    placeholder: "Password",
+                                    reveal: true,
+                                    type: "password"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 300,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
+                                    top: "3",
+                                    bottom: "3"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 301,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
+                                    placeholder: "Disabled",
+                                    disabled: true
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 302,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
+                                    top: "3",
+                                    bottom: "3"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 303,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
+                                    placeholder: "Error",
+                                    error: true
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 304,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
+                                    top: "3",
+                                    bottom: "3"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 305,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
+                                    placeholder: "Success",
+                                    success: true
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 306,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
+                                    top: "3",
+                                    bottom: "3"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 307,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
+                                    placeholder: "Warning",
+                                    warning: true
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
                                     lineNumber: 308,
@@ -28267,119 +28302,22 @@ function App() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
-                                    placeholder: "Copy",
-                                    copy: true
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 310,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
-                                    top: "3",
-                                    bottom: "3"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 311,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
-                                    placeholder: "Password",
-                                    reveal: true,
-                                    type: "password"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 312,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
-                                    top: "3",
-                                    bottom: "3"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 313,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
-                                    placeholder: "Disabled",
-                                    disabled: true
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 314,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
-                                    top: "3",
-                                    bottom: "3"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 315,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
-                                    placeholder: "Error",
-                                    error: true
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 316,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
-                                    top: "3",
-                                    bottom: "3"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 317,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
-                                    placeholder: "Success",
-                                    success: true
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 318,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
-                                    top: "3",
-                                    bottom: "3"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 319,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
-                                    placeholder: "Warning",
-                                    warning: true
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 320,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
-                                    top: "3",
-                                    bottom: "3"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 321,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
                                     placeholder: "Loading",
                                     loading: true
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 322,
+                                    lineNumber: 310,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 306,
+                            lineNumber: 294,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 305,
+                        lineNumber: 293,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -28394,23 +28332,23 @@ function App() {
                                     children: "Loading"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 327,
+                                    lineNumber: 315,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Loading), {}, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 328,
+                                    lineNumber: 316,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 326,
+                            lineNumber: 314,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 325,
+                        lineNumber: 313,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -28426,7 +28364,7 @@ function App() {
                                     children: "Popover"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 333,
+                                    lineNumber: 321,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Popover), {
@@ -28436,7 +28374,7 @@ function App() {
                                     children: "This is a popover."
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 334,
+                                    lineNumber: 322,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
@@ -28444,7 +28382,7 @@ function App() {
                                     bottom: "3"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 335,
+                                    lineNumber: 323,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Popover), {
@@ -28456,7 +28394,7 @@ function App() {
                                     children: "This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover. This is a popover."
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 336,
+                                    lineNumber: 324,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
@@ -28464,7 +28402,7 @@ function App() {
                                     bottom: "3"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 342,
+                                    lineNumber: 330,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Popover), {
@@ -28477,23 +28415,23 @@ function App() {
                                         children: "This is a big Popover"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 344,
+                                        lineNumber: 332,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 343,
+                                    lineNumber: 331,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 332,
+                            lineNumber: 320,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 331,
+                        lineNumber: 319,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -28508,7 +28446,7 @@ function App() {
                                     children: "Table"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 350,
+                                    lineNumber: 338,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
@@ -28522,60 +28460,60 @@ function App() {
                                                             children: "Hey"
                                                         }, void 0, false, {
                                                             fileName: "playground/App.tsx",
-                                                            lineNumber: 355,
+                                                            lineNumber: 343,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableHeadCell), {
                                                             children: "Hey"
                                                         }, void 0, false, {
                                                             fileName: "playground/App.tsx",
-                                                            lineNumber: 356,
+                                                            lineNumber: 344,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableHeadCell), {
                                                             children: "Hey"
                                                         }, void 0, false, {
                                                             fileName: "playground/App.tsx",
-                                                            lineNumber: 357,
+                                                            lineNumber: 345,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableHeadCell), {
                                                             children: "Hey"
                                                         }, void 0, false, {
                                                             fileName: "playground/App.tsx",
-                                                            lineNumber: 358,
+                                                            lineNumber: 346,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableHeadCell), {
                                                             children: "Hey"
                                                         }, void 0, false, {
                                                             fileName: "playground/App.tsx",
-                                                            lineNumber: 359,
+                                                            lineNumber: 347,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableHeadCell), {
                                                             children: "Hey"
                                                         }, void 0, false, {
                                                             fileName: "playground/App.tsx",
-                                                            lineNumber: 360,
+                                                            lineNumber: 348,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableHeadCell), {
                                                             children: "Hey"
                                                         }, void 0, false, {
                                                             fileName: "playground/App.tsx",
-                                                            lineNumber: 361,
+                                                            lineNumber: 349,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "playground/App.tsx",
-                                                    lineNumber: 354,
+                                                    lineNumber: 342,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "playground/App.tsx",
-                                                lineNumber: 353,
+                                                lineNumber: 341,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableBody), {
@@ -28586,11 +28524,89 @@ function App() {
                                                                 children: "Hey"
                                                             }, void 0, false, {
                                                                 fileName: "playground/App.tsx",
-                                                                lineNumber: 366,
+                                                                lineNumber: 354,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
                                                                 children: "Hey"
+                                                            }, void 0, false, {
+                                                                fileName: "playground/App.tsx",
+                                                                lineNumber: 355,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
+                                                                children: "Hey"
+                                                            }, void 0, false, {
+                                                                fileName: "playground/App.tsx",
+                                                                lineNumber: 356,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
+                                                                children: "Hey"
+                                                            }, void 0, false, {
+                                                                fileName: "playground/App.tsx",
+                                                                lineNumber: 357,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
+                                                                children: "HeHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyy"
+                                                            }, void 0, false, {
+                                                                fileName: "playground/App.tsx",
+                                                                lineNumber: 358,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
+                                                                children: "Hey"
+                                                            }, void 0, false, {
+                                                                fileName: "playground/App.tsx",
+                                                                lineNumber: 359,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
+                                                                children: "Hey"
+                                                            }, void 0, false, {
+                                                                fileName: "playground/App.tsx",
+                                                                lineNumber: 360,
+                                                                columnNumber: 21
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "playground/App.tsx",
+                                                        lineNumber: 353,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableRow), {
+                                                        children: [
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
+                                                                children: "Hey"
+                                                            }, void 0, false, {
+                                                                fileName: "playground/App.tsx",
+                                                                lineNumber: 363,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
+                                                                children: "Hey"
+                                                            }, void 0, false, {
+                                                                fileName: "playground/App.tsx",
+                                                                lineNumber: 364,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
+                                                                children: "Hey"
+                                                            }, void 0, false, {
+                                                                fileName: "playground/App.tsx",
+                                                                lineNumber: 365,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
+                                                                children: "Hey"
+                                                            }, void 0, false, {
+                                                                fileName: "playground/App.tsx",
+                                                                lineNumber: 366,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
+                                                                children: "HHeyHeyHeyHeyHeyHeyHeyHeyey"
                                                             }, void 0, false, {
                                                                 fileName: "playground/App.tsx",
                                                                 lineNumber: 367,
@@ -28604,122 +28620,44 @@ function App() {
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
-                                                                children: "Hey"
+                                                                children: "HeHeyHeyHeyHeyHeyHeyHeyHeyy"
                                                             }, void 0, false, {
                                                                 fileName: "playground/App.tsx",
                                                                 lineNumber: 369,
                                                                 columnNumber: 21
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
-                                                                children: "HeHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyy"
-                                                            }, void 0, false, {
-                                                                fileName: "playground/App.tsx",
-                                                                lineNumber: 370,
-                                                                columnNumber: 21
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
-                                                                children: "Hey"
-                                                            }, void 0, false, {
-                                                                fileName: "playground/App.tsx",
-                                                                lineNumber: 371,
-                                                                columnNumber: 21
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
-                                                                children: "Hey"
-                                                            }, void 0, false, {
-                                                                fileName: "playground/App.tsx",
-                                                                lineNumber: 372,
-                                                                columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "playground/App.tsx",
-                                                        lineNumber: 365,
-                                                        columnNumber: 19
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableRow), {
-                                                        children: [
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
-                                                                children: "Hey"
-                                                            }, void 0, false, {
-                                                                fileName: "playground/App.tsx",
-                                                                lineNumber: 375,
-                                                                columnNumber: 21
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
-                                                                children: "Hey"
-                                                            }, void 0, false, {
-                                                                fileName: "playground/App.tsx",
-                                                                lineNumber: 376,
-                                                                columnNumber: 21
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
-                                                                children: "Hey"
-                                                            }, void 0, false, {
-                                                                fileName: "playground/App.tsx",
-                                                                lineNumber: 377,
-                                                                columnNumber: 21
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
-                                                                children: "Hey"
-                                                            }, void 0, false, {
-                                                                fileName: "playground/App.tsx",
-                                                                lineNumber: 378,
-                                                                columnNumber: 21
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
-                                                                children: "HHeyHeyHeyHeyHeyHeyHeyHeyey"
-                                                            }, void 0, false, {
-                                                                fileName: "playground/App.tsx",
-                                                                lineNumber: 379,
-                                                                columnNumber: 21
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
-                                                                children: "Hey"
-                                                            }, void 0, false, {
-                                                                fileName: "playground/App.tsx",
-                                                                lineNumber: 380,
-                                                                columnNumber: 21
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.TableCell), {
-                                                                children: "HeHeyHeyHeyHeyHeyHeyHeyHeyy"
-                                                            }, void 0, false, {
-                                                                fileName: "playground/App.tsx",
-                                                                lineNumber: 381,
-                                                                columnNumber: 21
-                                                            }, this)
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "playground/App.tsx",
-                                                        lineNumber: 374,
+                                                        lineNumber: 362,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "playground/App.tsx",
-                                                lineNumber: 364,
+                                                lineNumber: 352,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 352,
+                                        lineNumber: 340,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 351,
+                                    lineNumber: 339,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 349,
+                            lineNumber: 337,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 348,
+                        lineNumber: 336,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -28734,7 +28672,7 @@ function App() {
                                     children: "Text"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 390,
+                                    lineNumber: 378,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -28742,7 +28680,7 @@ function App() {
                                     children: "H1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eu consectetur consectetur, nisl nisl consectetur nisl, euismod nisl nisl nisl."
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 391,
+                                    lineNumber: 379,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -28750,7 +28688,7 @@ function App() {
                                     children: "H2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eu consectetur consectetur, nisl nisl consectetur nisl, euismod nisl nisl nisl."
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 394,
+                                    lineNumber: 382,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -28758,7 +28696,7 @@ function App() {
                                     children: "H3: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eu consectetur consectetur, nisl nisl consectetur nisl, euismod nisl nisl nisl."
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 397,
+                                    lineNumber: 385,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -28766,7 +28704,7 @@ function App() {
                                     children: "H4: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eu consectetur consectetur, nisl nisl consectetur nisl, euismod nisl nisl nisl."
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 400,
+                                    lineNumber: 388,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -28774,7 +28712,7 @@ function App() {
                                     children: "H5: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eu consectetur consectetur, nisl nisl consectetur nisl, euismod nisl nisl nisl."
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 403,
+                                    lineNumber: 391,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -28782,7 +28720,7 @@ function App() {
                                     children: "H6: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eu consectetur consectetur, nisl nisl consectetur nisl, euismod nisl nisl nisl."
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 406,
+                                    lineNumber: 394,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -28790,7 +28728,7 @@ function App() {
                                     children: "P: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eu consectetur consectetur, nisl nisl consectetur nisl, euismod nisl nisl nisl."
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 409,
+                                    lineNumber: 397,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -28798,18 +28736,18 @@ function App() {
                                     children: "SMALL: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eu consectetur consectetur, nisl nisl consectetur nisl, euismod nisl nisl nisl."
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 412,
+                                    lineNumber: 400,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 389,
+                            lineNumber: 377,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 388,
+                        lineNumber: 376,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -28824,7 +28762,7 @@ function App() {
                                     children: "Toast"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 419,
+                                    lineNumber: 407,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -28835,7 +28773,7 @@ function App() {
                                     children: "Success Toast"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 420,
+                                    lineNumber: 408,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -28846,7 +28784,7 @@ function App() {
                                     children: "Warning/Error Toast"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 427,
+                                    lineNumber: 415,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -28857,30 +28795,30 @@ function App() {
                                     children: "Default Toast"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 434,
+                                    lineNumber: 422,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 418,
+                            lineNumber: 406,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 417,
+                        lineNumber: 405,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "playground/App.tsx",
-                lineNumber: 96,
+                lineNumber: 95,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "playground/App.tsx",
-        lineNumber: 40,
+        lineNumber: 39,
         columnNumber: 5
     }, this);
 }
@@ -34000,43 +33938,41 @@ var _index2 = require("./components/Box/index");
 parcelHelpers.exportAll(_index2, exports);
 var _index3 = require("./components/Button/index");
 parcelHelpers.exportAll(_index3, exports);
-var _index4 = require("./components/Dates/index");
+var _index4 = require("./components/Dialog/index");
 parcelHelpers.exportAll(_index4, exports);
-var _index5 = require("./components/Dialog/index");
+var _index5 = require("./components/Divider/index");
 parcelHelpers.exportAll(_index5, exports);
-var _index6 = require("./components/Divider/index");
+var _index6 = require("./components/Element/index");
 parcelHelpers.exportAll(_index6, exports);
-var _index7 = require("./components/Element/index");
+var _index7 = require("./components/Dropdown/index");
 parcelHelpers.exportAll(_index7, exports);
-var _index8 = require("./components/Dropdown/index");
+var _index8 = require("./components/Image/index");
 parcelHelpers.exportAll(_index8, exports);
-var _index9 = require("./components/Image/index");
+var _index9 = require("./components/Input/index");
 parcelHelpers.exportAll(_index9, exports);
-var _index10 = require("./components/Input/index");
+var _index10 = require("./components/Loading/index");
 parcelHelpers.exportAll(_index10, exports);
-var _index11 = require("./components/Loading/index");
+var _index11 = require("./components/Popover/index");
 parcelHelpers.exportAll(_index11, exports);
-var _index12 = require("./components/Popover/index");
+var _index12 = require("./components/Provider/index");
 parcelHelpers.exportAll(_index12, exports);
-var _index13 = require("./components/Provider/index");
+var _index13 = require("./components/Stack/index");
 parcelHelpers.exportAll(_index13, exports);
-var _index14 = require("./components/Stack/index");
+var _index14 = require("./components/Table/index");
 parcelHelpers.exportAll(_index14, exports);
-var _index15 = require("./components/Table/index");
+var _index15 = require("./components/Text/index");
 parcelHelpers.exportAll(_index15, exports);
-var _index16 = require("./components/Text/index");
+var _index16 = require("./components/Toast/index");
 parcelHelpers.exportAll(_index16, exports);
-var _index17 = require("./components/Toast/index");
+var _index17 = require("./components/View/index");
 parcelHelpers.exportAll(_index17, exports);
-var _index18 = require("./components/View/index");
+var _index18 = require("./components/Code/index");
 parcelHelpers.exportAll(_index18, exports);
-var _index19 = require("./components/Code/index");
+var _index19 = require("./components/Field/index");
 parcelHelpers.exportAll(_index19, exports);
-var _index20 = require("./components/Field/index");
-parcelHelpers.exportAll(_index20, exports);
 var _stitchesConfig = require("./stitches.config");
 
-},{"./components/Avatar/index":"iC4G6","./components/Badge/index":"egHOx","./components/Box/index":"8AYsO","./components/Button/index":"i3jlU","./components/Dates/index":"jHQqW","./components/Dialog/index":"7DV0X","./components/Divider/index":"4ujjS","./components/Element/index":"gYRmO","./components/Dropdown/index":"9yvFB","./components/Image/index":"ikXqf","./components/Input/index":"iclCk","./components/Loading/index":"gWqOi","./components/Popover/index":"ayKiy","./components/Provider/index":"gZ9Mc","./components/Stack/index":"6V7Vx","./components/Table/index":"kTnYg","./components/Text/index":"d5OVu","./components/Toast/index":"64Cun","./components/View/index":"fyNq0","./components/Code/index":"99Ces","./components/Field/index":"gaJxM","./stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iC4G6":[function(require,module,exports) {
+},{"./components/Avatar/index":"iC4G6","./components/Badge/index":"egHOx","./components/Box/index":"8AYsO","./components/Button/index":"i3jlU","./components/Dialog/index":"7DV0X","./components/Divider/index":"4ujjS","./components/Element/index":"gYRmO","./components/Dropdown/index":"9yvFB","./components/Image/index":"ikXqf","./components/Input/index":"iclCk","./components/Loading/index":"gWqOi","./components/Popover/index":"ayKiy","./components/Provider/index":"gZ9Mc","./components/Stack/index":"6V7Vx","./components/Table/index":"kTnYg","./components/Text/index":"d5OVu","./components/Toast/index":"64Cun","./components/View/index":"fyNq0","./components/Code/index":"99Ces","./components/Field/index":"gaJxM","./stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iC4G6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Avatar", ()=>(0, _avatarDefault.default));
@@ -35588,8 +35524,8 @@ function hasMatch(domains, remotePatterns, url) {
 }
 
 },{"next/dist/compiled/micromatch":"7gTyg"}],"7gTyg":[function(require,module,exports) {
-var process = require("process");
 var __dirname = "node_modules/next/dist/compiled/micromatch";
+var process = require("process");
 (()=>{
     "use strict";
     var e = {
@@ -40227,10 +40163,10 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             blueCTA: "rgb(55, 119, 192)",
             blueOverlay: "rgba(151, 193, 255, 0.2)",
             blueText: "rgb(166, 179, 255)",
-            border: "rgba(165, 170, 200, 0.125)",
-            borderHover: "rgba(165, 170, 200, 0.075)",
-            default: "rgba(255, 255, 255, 0.05)",
-            defaultHover: "rgba(255, 255, 255, 0.1)",
+            border: "rgba(165, 170, 200, 0.15)",
+            borderHover: "rgba(255, 255, 255, 0.075)",
+            default: "rgba(255, 255, 255, 0.048)",
+            defaultHover: "rgba(255, 255, 255, 0.083)",
             greenBorder: "rgba(0, 200, 83, 0.4)",
             greenOverlay: "rgba(101, 227, 124, 0.2)",
             greenText: "rgb(124, 241, 151)",
@@ -40376,7 +40312,7 @@ const lightTheme = (0, _react.createTheme)({
         pinkText: "rgb(173, 22, 128)",
         purpleText: "rgb(112, 23, 171)",
         redText: "rgb(170, 28, 47)",
-        text: "rgb(15, 15, 26)"
+        text: "rgb(46, 55, 73)"
     },
     shadows: {
         1: "0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.01)",
@@ -42034,10 +41970,11 @@ const ButtonStyled = (0, _stitchesConfig.styled)("button", {
     alignItems: "center",
     border: "0.1rem solid transparent",
     borderRadius: "$2",
-    fontSize: "1.6rem",
-    fontWeight: 500,
-    lineHeight: "normal",
-    padding: "$2 $4",
+    fontSize: "$h6",
+    fontWeight: 400,
+    lineHeight: "$h6",
+    padding: "$1 $4",
+    boxShadow: "$1",
     [(0, _stitchesConfig.breakpoints).phone]: {
         fontSize: "$p"
     },
@@ -42048,7 +41985,7 @@ const ButtonStyled = (0, _stitchesConfig.styled)("button", {
     variants: {
         block: {
             false: {
-                display: "inline-flex"
+                display: "inline"
             },
             true: {
                 display: "block",
@@ -42112,895 +42049,6 @@ const ButtonIconStyled = (0, _stitchesConfig.styled)("span", {
     verticalAlign: "middle"
 });
 exports.default = ButtonStyled;
-
-},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jHQqW":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Dates", ()=>(0, _datesDefault.default));
-var _dates = require("./Dates");
-var _datesDefault = parcelHelpers.interopDefault(_dates);
-
-},{"./Dates":"d4asI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"d4asI":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$42c1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$42c1.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _dayjs = require("dayjs");
-var _dayjsDefault = parcelHelpers.interopDefault(_dayjs);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _button = require("../Button");
-var _stack = require("../Stack");
-var _text = require("../Text");
-var _datesStyles = require("./Dates.styles");
-var _s = $RefreshSig$();
-function Dates(props) {
-    _s();
-    const [startDate, setStartDate] = (0, _react.useState)((0, _dayjsDefault.default)(props.startDate).startOf(props.range));
-    const [dates, setDates] = (0, _react.useState)([]);
-    const [selectedDate, setSelectedDate] = (0, _react.useState)((0, _dayjsDefault.default)(props.startDate).format("YYYY-MM-DD"));
-    const handleChange = (date)=>{
-        setSelectedDate(date);
-        if (props.onChange) props.onChange(selectedDate);
-    };
-    const handlePrevious = ()=>{
-        setStartDate((0, _dayjsDefault.default)(startDate).subtract(1, props.range));
-        setDates([]);
-        setSelectedDate((0, _dayjsDefault.default)(startDate).subtract(1, props.range).format("YYYY-MM-DD"));
-    };
-    const handleNext = ()=>{
-        setStartDate((0, _dayjsDefault.default)(startDate).add(1, props.range));
-        setDates([]);
-        setSelectedDate((0, _dayjsDefault.default)(startDate).add(1, props.range).format("YYYY-MM-DD"));
-    };
-    (0, _react.useEffect)(()=>{
-        if (props.range === "week") // setDates to array of 7 days, starting with startDate
-        for(let i = 0; i < 8; i++)setDates((dates)=>[
-                ...dates,
-                (0, _dayjsDefault.default)(startDate).add(i, "day").format("YYYY-MM-DD")
-            ]);
-        if (props.range === "month") // setDates to array of days in month, starting with startDate - use dayjs.getDaysInMonth() to get number of days in month
-        for(let i1 = 0; i1 < (0, _dayjsDefault.default)(startDate).daysInMonth(); i1++)setDates((dates)=>[
-                ...dates,
-                (0, _dayjsDefault.default)(startDate).add(i1, "day").format("YYYY-MM-DD")
-            ]);
-    }, [
-        startDate,
-        props.range
-    ]);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _datesStyles.DatesStyled), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stack.Stack), {
-                align: "center",
-                bottom: "4",
-                direction: "row",
-                flex: "center",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stack.Stack), {
-                        direction: "column",
-                        minimal: true,
-                        width: 20,
-                        widthPhone: 20,
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
-                            onClick: handlePrevious,
-                            children: "-"
-                        }, void 0, false, {
-                            fileName: "src/components/Dates/Dates.tsx",
-                            lineNumber: 60,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/components/Dates/Dates.tsx",
-                        lineNumber: 59,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stack.Stack), {
-                        align: "center",
-                        direction: "column",
-                        minimal: true,
-                        width: 60,
-                        widthPhone: 60,
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _text.Text), {
-                            as: "h6",
-                            bold: true,
-                            css: {
-                                opacity: 1
-                            },
-                            children: (0, _dayjsDefault.default)(selectedDate).format("DD MMMM, YYYY")
-                        }, void 0, false, {
-                            fileName: "src/components/Dates/Dates.tsx",
-                            lineNumber: 63,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/components/Dates/Dates.tsx",
-                        lineNumber: 62,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stack.Stack), {
-                        align: "right",
-                        direction: "column",
-                        minimal: true,
-                        width: 20,
-                        widthPhone: 20,
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
-                            onClick: handleNext,
-                            children: "+"
-                        }, void 0, false, {
-                            fileName: "src/components/Dates/Dates.tsx",
-                            lineNumber: 73,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/components/Dates/Dates.tsx",
-                        lineNumber: 72,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Dates/Dates.tsx",
-                lineNumber: 58,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stack.Stack), {
-                align: "center",
-                css: {
-                    border: "1px solid rgba(0,0,0,0.05)",
-                    padding: "0.5rem"
-                },
-                direction: "row",
-                flex: "stretch",
-                top: "1",
-                children: dates.map((date)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stack.Stack), {
-                        align: "center",
-                        css: {
-                            lineHeight: 0
-                        },
-                        direction: "column",
-                        minimal: true,
-                        width: 25,
-                        widthPhone: 25,
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
-                            css: {
-                                margin: "$2",
-                                verticalAlign: "middle"
-                            },
-                            onClick: ()=>handleChange(date),
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _text.Text), {
-                                    as: "small",
-                                    bold: selectedDate === date,
-                                    css: {
-                                        fontSize: "0.8rem",
-                                        opacity: selectedDate === date ? 1 : 0.5
-                                    },
-                                    children: (0, _dayjsDefault.default)(date).format("ddd")
-                                }, void 0, false, {
-                                    fileName: "src/components/Dates/Dates.tsx",
-                                    lineNumber: 102,
-                                    columnNumber: 15
-                                }, this),
-                                (0, _dayjsDefault.default)(date).format("DD/M")
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/Dates/Dates.tsx",
-                            lineNumber: 96,
-                            columnNumber: 13
-                        }, this)
-                    }, date, false, {
-                        fileName: "src/components/Dates/Dates.tsx",
-                        lineNumber: 86,
-                        columnNumber: 11
-                    }, this))
-            }, void 0, false, {
-                fileName: "src/components/Dates/Dates.tsx",
-                lineNumber: 76,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Dates/Dates.tsx",
-        lineNumber: 57,
-        columnNumber: 5
-    }, this);
-}
-exports.default = Dates;
-_s(Dates, "dNR1m7eIjuVmjzZx7IHRygS5M0Q=");
-_c = Dates;
-var _c;
-$RefreshReg$(_c, "Dates");
-
-  $parcel$ReactRefreshHelpers$42c1.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","dayjs":"NJZFB","react":"21dqq","../Button":"i3jlU","../Stack":"6V7Vx","../Text":"d5OVu","./Dates.styles":"jTCyu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"NJZFB":[function(require,module,exports) {
-!function(t, e) {
-    module.exports = e();
-}(this, function() {
-    "use strict";
-    var t = 1e3, e = 6e4, n = 36e5, r = "millisecond", i = "second", s = "minute", u = "hour", a = "day", o = "week", f = "month", h = "quarter", c = "year", d = "date", $ = "Invalid Date", l = /^(\d{4})[-/]?(\d{1,2})?[-/]?(\d{0,2})[Tt\s]*(\d{1,2})?:?(\d{1,2})?:?(\d{1,2})?[.:]?(\d+)?$/, y = /\[([^\]]+)]|Y{1,4}|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|a|A|m{1,2}|s{1,2}|Z{1,2}|SSS/g, M = {
-        name: "en",
-        weekdays: "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_"),
-        months: "January_February_March_April_May_June_July_August_September_October_November_December".split("_")
-    }, m = function(t, e, n) {
-        var r = String(t);
-        return !r || r.length >= e ? t : "" + Array(e + 1 - r.length).join(n) + t;
-    }, g = {
-        s: m,
-        z: function(t) {
-            var e = -t.utcOffset(), n = Math.abs(e), r = Math.floor(n / 60), i = n % 60;
-            return (e <= 0 ? "+" : "-") + m(r, 2, "0") + ":" + m(i, 2, "0");
-        },
-        m: function t(e, n) {
-            if (e.date() < n.date()) return -t(n, e);
-            var r = 12 * (n.year() - e.year()) + (n.month() - e.month()), i = e.clone().add(r, f), s = n - i < 0, u = e.clone().add(r + (s ? -1 : 1), f);
-            return +(-(r + (n - i) / (s ? i - u : u - i)) || 0);
-        },
-        a: function(t) {
-            return t < 0 ? Math.ceil(t) || 0 : Math.floor(t);
-        },
-        p: function(t) {
-            return ({
-                M: f,
-                y: c,
-                w: o,
-                d: a,
-                D: d,
-                h: u,
-                m: s,
-                s: i,
-                ms: r,
-                Q: h
-            })[t] || String(t || "").toLowerCase().replace(/s$/, "");
-        },
-        u: function(t) {
-            return void 0 === t;
-        }
-    }, v = "en", D = {};
-    D[v] = M;
-    var p = function(t) {
-        return t instanceof _;
-    }, S = function t(e, n, r) {
-        var i;
-        if (!e) return v;
-        if ("string" == typeof e) {
-            var s = e.toLowerCase();
-            D[s] && (i = s), n && (D[s] = n, i = s);
-            var u = e.split("-");
-            if (!i && u.length > 1) return t(u[0]);
-        } else {
-            var a = e.name;
-            D[a] = e, i = a;
-        }
-        return !r && i && (v = i), i || !r && v;
-    }, w = function(t, e) {
-        if (p(t)) return t.clone();
-        var n = "object" == typeof e ? e : {};
-        return n.date = t, n.args = arguments, new _(n);
-    }, O = g;
-    O.l = S, O.i = p, O.w = function(t, e) {
-        return w(t, {
-            locale: e.$L,
-            utc: e.$u,
-            x: e.$x,
-            $offset: e.$offset
-        });
-    };
-    var _ = function() {
-        function M(t) {
-            this.$L = S(t.locale, null, !0), this.parse(t);
-        }
-        var m = M.prototype;
-        return m.parse = function(t) {
-            this.$d = function(t) {
-                var e = t.date, n = t.utc;
-                if (null === e) return new Date(NaN);
-                if (O.u(e)) return new Date;
-                if (e instanceof Date) return new Date(e);
-                if ("string" == typeof e && !/Z$/i.test(e)) {
-                    var r = e.match(l);
-                    if (r) {
-                        var i = r[2] - 1 || 0, s = (r[7] || "0").substring(0, 3);
-                        return n ? new Date(Date.UTC(r[1], i, r[3] || 1, r[4] || 0, r[5] || 0, r[6] || 0, s)) : new Date(r[1], i, r[3] || 1, r[4] || 0, r[5] || 0, r[6] || 0, s);
-                    }
-                }
-                return new Date(e);
-            }(t), this.$x = t.x || {}, this.init();
-        }, m.init = function() {
-            var t = this.$d;
-            this.$y = t.getFullYear(), this.$M = t.getMonth(), this.$D = t.getDate(), this.$W = t.getDay(), this.$H = t.getHours(), this.$m = t.getMinutes(), this.$s = t.getSeconds(), this.$ms = t.getMilliseconds();
-        }, m.$utils = function() {
-            return O;
-        }, m.isValid = function() {
-            return !(this.$d.toString() === $);
-        }, m.isSame = function(t, e) {
-            var n = w(t);
-            return this.startOf(e) <= n && n <= this.endOf(e);
-        }, m.isAfter = function(t, e) {
-            return w(t) < this.startOf(e);
-        }, m.isBefore = function(t, e) {
-            return this.endOf(e) < w(t);
-        }, m.$g = function(t, e, n) {
-            return O.u(t) ? this[e] : this.set(n, t);
-        }, m.unix = function() {
-            return Math.floor(this.valueOf() / 1e3);
-        }, m.valueOf = function() {
-            return this.$d.getTime();
-        }, m.startOf = function(t, e) {
-            var n = this, r = !!O.u(e) || e, h = O.p(t), $ = function(t, e) {
-                var i = O.w(n.$u ? Date.UTC(n.$y, e, t) : new Date(n.$y, e, t), n);
-                return r ? i : i.endOf(a);
-            }, l = function(t, e) {
-                return O.w(n.toDate()[t].apply(n.toDate("s"), (r ? [
-                    0,
-                    0,
-                    0,
-                    0
-                ] : [
-                    23,
-                    59,
-                    59,
-                    999
-                ]).slice(e)), n);
-            }, y = this.$W, M = this.$M, m = this.$D, g = "set" + (this.$u ? "UTC" : "");
-            switch(h){
-                case c:
-                    return r ? $(1, 0) : $(31, 11);
-                case f:
-                    return r ? $(1, M) : $(0, M + 1);
-                case o:
-                    var v = this.$locale().weekStart || 0, D = (y < v ? y + 7 : y) - v;
-                    return $(r ? m - D : m + (6 - D), M);
-                case a:
-                case d:
-                    return l(g + "Hours", 0);
-                case u:
-                    return l(g + "Minutes", 1);
-                case s:
-                    return l(g + "Seconds", 2);
-                case i:
-                    return l(g + "Milliseconds", 3);
-                default:
-                    return this.clone();
-            }
-        }, m.endOf = function(t) {
-            return this.startOf(t, !1);
-        }, m.$set = function(t, e) {
-            var n, o = O.p(t), h = "set" + (this.$u ? "UTC" : ""), $ = (n = {}, n[a] = h + "Date", n[d] = h + "Date", n[f] = h + "Month", n[c] = h + "FullYear", n[u] = h + "Hours", n[s] = h + "Minutes", n[i] = h + "Seconds", n[r] = h + "Milliseconds", n)[o], l = o === a ? this.$D + (e - this.$W) : e;
-            if (o === f || o === c) {
-                var y = this.clone().set(d, 1);
-                y.$d[$](l), y.init(), this.$d = y.set(d, Math.min(this.$D, y.daysInMonth())).$d;
-            } else $ && this.$d[$](l);
-            return this.init(), this;
-        }, m.set = function(t, e) {
-            return this.clone().$set(t, e);
-        }, m.get = function(t) {
-            return this[O.p(t)]();
-        }, m.add = function(r, h) {
-            var d, $ = this;
-            r = Number(r);
-            var l = O.p(h), y = function(t) {
-                var e = w($);
-                return O.w(e.date(e.date() + Math.round(t * r)), $);
-            };
-            if (l === f) return this.set(f, this.$M + r);
-            if (l === c) return this.set(c, this.$y + r);
-            if (l === a) return y(1);
-            if (l === o) return y(7);
-            var M = (d = {}, d[s] = e, d[u] = n, d[i] = t, d)[l] || 1, m = this.$d.getTime() + r * M;
-            return O.w(m, this);
-        }, m.subtract = function(t, e) {
-            return this.add(-1 * t, e);
-        }, m.format = function(t) {
-            var e = this, n = this.$locale();
-            if (!this.isValid()) return n.invalidDate || $;
-            var r = t || "YYYY-MM-DDTHH:mm:ssZ", i = O.z(this), s = this.$H, u = this.$m, a = this.$M, o = n.weekdays, f = n.months, h = function(t, n, i, s) {
-                return t && (t[n] || t(e, r)) || i[n].slice(0, s);
-            }, c = function(t) {
-                return O.s(s % 12 || 12, t, "0");
-            }, d = n.meridiem || function(t, e, n) {
-                var r = t < 12 ? "AM" : "PM";
-                return n ? r.toLowerCase() : r;
-            }, l = {
-                YY: String(this.$y).slice(-2),
-                YYYY: this.$y,
-                M: a + 1,
-                MM: O.s(a + 1, 2, "0"),
-                MMM: h(n.monthsShort, a, f, 3),
-                MMMM: h(f, a),
-                D: this.$D,
-                DD: O.s(this.$D, 2, "0"),
-                d: String(this.$W),
-                dd: h(n.weekdaysMin, this.$W, o, 2),
-                ddd: h(n.weekdaysShort, this.$W, o, 3),
-                dddd: o[this.$W],
-                H: String(s),
-                HH: O.s(s, 2, "0"),
-                h: c(1),
-                hh: c(2),
-                a: d(s, u, !0),
-                A: d(s, u, !1),
-                m: String(u),
-                mm: O.s(u, 2, "0"),
-                s: String(this.$s),
-                ss: O.s(this.$s, 2, "0"),
-                SSS: O.s(this.$ms, 3, "0"),
-                Z: i
-            };
-            return r.replace(y, function(t, e) {
-                return e || l[t] || i.replace(":", "");
-            });
-        }, m.utcOffset = function() {
-            return 15 * -Math.round(this.$d.getTimezoneOffset() / 15);
-        }, m.diff = function(r, d, $) {
-            var l, y = O.p(d), M = w(r), m = (M.utcOffset() - this.utcOffset()) * e, g = this - M, v = O.m(this, M);
-            return v = (l = {}, l[c] = v / 12, l[f] = v, l[h] = v / 3, l[o] = (g - m) / 6048e5, l[a] = (g - m) / 864e5, l[u] = g / n, l[s] = g / e, l[i] = g / t, l)[y] || g, $ ? v : O.a(v);
-        }, m.daysInMonth = function() {
-            return this.endOf(f).$D;
-        }, m.$locale = function() {
-            return D[this.$L];
-        }, m.locale = function(t, e) {
-            if (!t) return this.$L;
-            var n = this.clone(), r = S(t, e, !0);
-            return r && (n.$L = r), n;
-        }, m.clone = function() {
-            return O.w(this.$d, this);
-        }, m.toDate = function() {
-            return new Date(this.valueOf());
-        }, m.toJSON = function() {
-            return this.isValid() ? this.toISOString() : null;
-        }, m.toISOString = function() {
-            return this.$d.toISOString();
-        }, m.toString = function() {
-            return this.$d.toUTCString();
-        }, M;
-    }(), T = _.prototype;
-    return w.prototype = T, [
-        [
-            "$ms",
-            r
-        ],
-        [
-            "$s",
-            i
-        ],
-        [
-            "$m",
-            s
-        ],
-        [
-            "$H",
-            u
-        ],
-        [
-            "$W",
-            a
-        ],
-        [
-            "$M",
-            f
-        ],
-        [
-            "$y",
-            c
-        ],
-        [
-            "$D",
-            d
-        ]
-    ].forEach(function(t) {
-        T[t[1]] = function(e) {
-            return this.$g(e, t[0], t[1]);
-        };
-    }), w.extend = function(t, e) {
-        return t.$i || (t(e, _, w), t.$i = !0), w;
-    }, w.locale = S, w.isDayjs = p, w.unix = function(t) {
-        return w(1e3 * t);
-    }, w.en = D[v], w.Ls = D, w.p = {}, w;
-});
-
-},{}],"6V7Vx":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Stack", ()=>(0, _stackDefault.default));
-var _stack = require("./Stack");
-var _stackDefault = parcelHelpers.interopDefault(_stack);
-
-},{"./Stack":"fzqaU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fzqaU":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$48e7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$48e7.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _stitchesConfig = require("../../stitches.config");
-var _stackStyles = require("./Stack.styles");
-function Stack(props) {
-    return props.direction === "row" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stackStyles.StackRowStyled), {
-        css: {
-            ...props.css,
-            "*": {
-                alignItems: props.flex || "initial"
-            },
-            alignItems: props.flex || "initial",
-            ...props.top && {
-                paddingTop: `$${props.top}`,
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingTop: `calc($${props.top} * 0.9)`
-                }
-            },
-            ...props.bottom && {
-                paddingBottom: `$${props.bottom}`,
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingBottom: `calc($${props.bottom} * 0.9)`
-                }
-            }
-        },
-        id: props.id,
-        children: props.children
-    }, void 0, false, {
-        fileName: "src/components/Stack/Stack.tsx",
-        lineNumber: 31,
-        columnNumber: 5
-    }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stackStyles.StackColumnStyled), {
-        css: {
-            ...props.top && {
-                paddingTop: `$${props.top}`,
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.8)`
-                }
-            },
-            ...props.bottom && {
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.8)`
-                },
-                paddingBottom: `$${props.bottom}`
-            },
-            ...props.minimal && {
-                paddingLeft: "0!important",
-                paddingRight: "0!important"
-            },
-            textAlign: props.align,
-            [(0, _stitchesConfig.breakpoints).phone]: {
-                flex: props.widthPhone ? `0 0 ${props.widthPhone}%` : `0 0 100%`,
-                marginLeft: props.offsetPhone ? `${props.offsetPhone}%` : 0,
-                width: props.widthPhone ? `${props.widthPhone}%` : `100%`
-            },
-            [(0, _stitchesConfig.breakpoints).tabletX]: {
-                flex: props.widthTablet ? `0 0 ${props.widthTablet}%` : `0 0 ${props.width}%`,
-                marginLeft: props.offsetTablet ? `${props.offsetTablet}%` : `${props.offset}%`,
-                width: props.widthTablet ? `${props.widthTablet}%` : `${props.width}%`
-            },
-            [(0, _stitchesConfig.breakpoints).laptopX]: {
-                flex: props.widthLaptop ? `0 0 ${props.widthLaptop}%` : `0 0 ${props.width}%`,
-                marginLeft: props.offsetLaptop ? `${props.offsetLaptop}%` : `${props.offset}%`,
-                width: props.widthLaptop ? `${props.widthLaptop}%` : `${props.width}%`
-            },
-            [(0, _stitchesConfig.breakpoints).desktopX]: {
-                flex: props.widthDesktop ? `0 0 ${props.widthDesktop}%` : `0 0 ${props.width}%`,
-                marginLeft: props.offsetDesktop ? `${props.offsetDesktop}%` : `${props.offset}%`,
-                width: props.widthDesktop ? `${props.widthDesktop}%` : `${props.width}%`
-            },
-            [(0, _stitchesConfig.breakpoints).wide]: {
-                flex: props.widthWide ? `0 0 ${props.widthWide}%` : `0 0 ${props.width}%`,
-                marginLeft: props.offsetWide ? `${props.offsetWide}%` : `${props.offset}%`,
-                width: props.widthWide ? `${props.widthWide}%` : `${props.width}%`
-            },
-            ...props.css
-        },
-        id: props.id,
-        children: props.children
-    }, void 0, false, {
-        fileName: "src/components/Stack/Stack.tsx",
-        lineNumber: 55,
-        columnNumber: 5
-    }, this);
-}
-exports.default = Stack;
-_c = Stack;
-var _c;
-$RefreshReg$(_c, "Stack");
-
-  $parcel$ReactRefreshHelpers$48e7.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../stitches.config":"iMNz3","./Stack.styles":"77zow","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"77zow":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "StackRowStyled", ()=>StackRowStyled);
-parcelHelpers.export(exports, "StackColumnStyled", ()=>StackColumnStyled);
-var _stitchesConfig = require("../../stitches.config");
-const StackRowStyled = (0, _stitchesConfig.styled)("div", {
-    "*": {
-        boxSizing: "border-box"
-    },
-    display: "flex",
-    flexDirection: "row",
-    flexFlow: "row wrap",
-    maxWidth: "100%",
-    minWidth: "100%",
-    width: "100%"
-});
-const StackColumnStyled = (0, _stitchesConfig.styled)("div", {
-    flex: "1 1 auto",
-    maxWidth: "100%",
-    paddingLeft: "$4",
-    paddingRight: "$4",
-    width: "100%",
-    [(0, _stitchesConfig.breakpoints).tablet]: {
-        paddingLeft: "$3",
-        paddingRight: "$3"
-    }
-});
-exports.default = StackRowStyled;
-
-},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"d5OVu":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Text", ()=>(0, _textDefault.default));
-var _text = require("./Text");
-var _textDefault = parcelHelpers.interopDefault(_text);
-
-},{"./Text":"97kA1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"97kA1":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$7646 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7646.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _stitchesConfig = require("../../stitches.config");
-var _textStyles = require("./Text.styles");
-function Text(props) {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _textStyles.TextStyled), {
-        accent: props.accent,
-        as: props.as,
-        bold: props.bold,
-        css: {
-            ...props.css,
-            ...props.top && {
-                paddingTop: `$${props.top}`,
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.8)`
-                }
-            },
-            ...props.bottom && {
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.8)`
-                },
-                paddingBottom: `$${props.bottom}`
-            },
-            ...props.inline && {
-                alignSelf: "center",
-                display: "inline-flex",
-                marginBottom: "0 !important",
-                marginRight: props.inline === "auto" ? "auto" : `$${props.inline}`,
-                verticalAlign: "middle",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    marginRight: props.inline === "auto" ? "auto" : `calc($${props.inline} * 0.8)`
-                }
-            },
-            ...props.link && {
-                borderBottom: props.link === "borderHover" ? "0.1rem solid $borderHover" : "0.1rem solid $border",
-                transition: "$default",
-                "&:hover": {
-                    opacity: 0.6
-                }
-            }
-        },
-        size: props.as,
-        children: props.children
-    }, void 0, false, {
-        fileName: "src/components/Text/Text.tsx",
-        lineNumber: 20,
-        columnNumber: 5
-    }, this);
-}
-exports.default = Text;
-_c = Text;
-var _c;
-$RefreshReg$(_c, "Text");
-
-  $parcel$ReactRefreshHelpers$7646.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../stitches.config":"iMNz3","./Text.styles":"2hqo9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2hqo9":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "TextStyled", ()=>TextStyled);
-var _stitchesConfig = require("../../stitches.config");
-const TextStyled = (0, _stitchesConfig.styled)("div", {
-    "&:last-child": {
-        marginBottom: `${0}!important`
-    },
-    color: "inherit",
-    display: "block",
-    variants: {
-        accent: {
-            true: {
-                color: "$accent"
-            }
-        },
-        bold: {
-            true: {
-                fontWeight: "bold !important"
-            }
-        },
-        size: {
-            h1: {
-                "&:not(:last-child)": {
-                    marginBottom: "$5"
-                },
-                fontSize: "$h1",
-                fontWeight: "$h1",
-                lineHeight: "$h1",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h1 * 0.9)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h1 * 0.95)"
-                }
-            },
-            h2: {
-                "&:not(:last-child)": {
-                    marginBottom: "$5"
-                },
-                fontSize: "$h2",
-                fontWeight: "$h2",
-                lineHeight: "$h2",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h2 * 0.9)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h2 * 0.95)"
-                }
-            },
-            h3: {
-                "&:not(:last-child)": {
-                    marginBottom: "$5"
-                },
-                fontSize: "$h3",
-                fontWeight: "$h3",
-                lineHeight: "$h3",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h3 * 0.9)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h3 * 0.95)"
-                }
-            },
-            h4: {
-                "&:not(:last-child)": {
-                    marginBottom: "$4"
-                },
-                fontSize: "$h4",
-                fontWeight: "$h4",
-                lineHeight: "$h4",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h4 * 0.8)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h4 * 0.85)"
-                },
-                [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($h4 * 0.9)"
-                }
-            },
-            h5: {
-                "&:not(:last-child)": {
-                    marginBottom: "$4"
-                },
-                fontSize: "$h5",
-                fontWeight: "$h5",
-                lineHeight: "$h5",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h5 * 0.9)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h5 * 0.9)"
-                },
-                [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($h5 * 0.95)"
-                }
-            },
-            h6: {
-                "&:not(:last-child)": {
-                    marginBottom: "$4"
-                },
-                fontSize: "$h6",
-                fontWeight: "$h6",
-                lineHeight: "$h6",
-                opacity: "0.85",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h6 * 0.9)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h6 * 0.9)"
-                },
-                [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($h6 * 0.95)"
-                }
-            },
-            p: {
-                "&:not(:last-child)": {
-                    marginBottom: "$4"
-                },
-                fontSize: "$p",
-                fontWeight: "$p",
-                lineHeight: "$p",
-                opacity: "0.85",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($p * 0.9)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($p * 0.9)"
-                },
-                [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($p * 0.95)"
-                }
-            },
-            small: {
-                "&:not(:last-child)": {
-                    marginBottom: "$4"
-                },
-                fontSize: "$small",
-                fontWeight: "$small",
-                lineHeight: "$small",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($small * 0.9)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($small * 0.9)"
-                },
-                [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($small * 0.95)"
-                }
-            },
-            span: {
-                fontSize: "inherit",
-                fontWeight: "inherit",
-                lineHeight: "inherit"
-            }
-        }
-    }
-});
-exports.default = TextStyled;
-
-},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jTCyu":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "DatesStyled", ()=>DatesStyled);
-var _stitchesConfig = require("../../stitches.config");
-const DatesStyled = (0, _stitchesConfig.styled)("div", {
-    button: {
-        fontSize: "$small",
-        lineHeight: 1
-    },
-    maxWidth: "30rem",
-    padding: "$4",
-    width: "100%"
-});
-exports.default = DatesStyled;
 
 },{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7DV0X":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -49141,8 +48189,9 @@ function Provider(props) {
     _s();
     const { isDarkMode  } = (0, _usehooksTs.useDarkMode)(props.default === "dark");
     (0, _providerStyles.reset)();
+    const activeTheme = props.locked ? props.locked === "dark" ? (0, _stitchesConfig.theme) : (0, _stitchesConfig.lightTheme) : isDarkMode ? (0, _stitchesConfig.theme) : (0, _stitchesConfig.lightTheme);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _providerStyles.ProviderStyled), {
-        className: props.locked ? props.locked === "dark" ? (0, _stitchesConfig.theme).toString() : (0, _stitchesConfig.lightTheme).toString() : isDarkMode ? (0, _stitchesConfig.theme).toString() : (0, _stitchesConfig.lightTheme).toString(),
+        className: activeTheme,
         css: props.css,
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toast.Toast), {}, void 0, false, {
@@ -49154,7 +48203,7 @@ function Provider(props) {
         ]
     }, void 0, true, {
         fileName: "src/components/Provider/Provider.tsx",
-        lineNumber: 24,
+        lineNumber: 26,
         columnNumber: 5
     }, this);
 }
@@ -49429,6 +48478,148 @@ const reset = (0, _stitchesConfig.globalCss)({
 });
 exports.default = ProviderStyled;
 
+},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6V7Vx":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Stack", ()=>(0, _stackDefault.default));
+var _stack = require("./Stack");
+var _stackDefault = parcelHelpers.interopDefault(_stack);
+
+},{"./Stack":"fzqaU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fzqaU":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$48e7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$48e7.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _stitchesConfig = require("../../stitches.config");
+var _stackStyles = require("./Stack.styles");
+function Stack(props) {
+    return props.direction === "row" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stackStyles.StackRowStyled), {
+        css: {
+            ...props.css,
+            "*": {
+                alignItems: props.flex || "initial"
+            },
+            alignItems: props.flex || "initial",
+            ...props.top && {
+                paddingTop: `$${props.top}`,
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    paddingTop: `calc($${props.top} * 0.9)`
+                }
+            },
+            ...props.bottom && {
+                paddingBottom: `$${props.bottom}`,
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    paddingBottom: `calc($${props.bottom} * 0.9)`
+                }
+            }
+        },
+        id: props.id,
+        children: props.children
+    }, void 0, false, {
+        fileName: "src/components/Stack/Stack.tsx",
+        lineNumber: 31,
+        columnNumber: 5
+    }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stackStyles.StackColumnStyled), {
+        css: {
+            ...props.top && {
+                paddingTop: `$${props.top}`,
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.8)`
+                }
+            },
+            ...props.bottom && {
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.8)`
+                },
+                paddingBottom: `$${props.bottom}`
+            },
+            ...props.minimal && {
+                paddingLeft: "0!important",
+                paddingRight: "0!important"
+            },
+            textAlign: props.align,
+            [(0, _stitchesConfig.breakpoints).phone]: {
+                flex: props.widthPhone ? `0 0 ${props.widthPhone}%` : `0 0 100%`,
+                marginLeft: props.offsetPhone ? `${props.offsetPhone}%` : 0,
+                width: props.widthPhone ? `${props.widthPhone}%` : `100%`
+            },
+            [(0, _stitchesConfig.breakpoints).tabletX]: {
+                flex: props.widthTablet ? `0 0 ${props.widthTablet}%` : `0 0 ${props.width}%`,
+                marginLeft: props.offsetTablet ? `${props.offsetTablet}%` : `${props.offset}%`,
+                width: props.widthTablet ? `${props.widthTablet}%` : `${props.width}%`
+            },
+            [(0, _stitchesConfig.breakpoints).laptopX]: {
+                flex: props.widthLaptop ? `0 0 ${props.widthLaptop}%` : `0 0 ${props.width}%`,
+                marginLeft: props.offsetLaptop ? `${props.offsetLaptop}%` : `${props.offset}%`,
+                width: props.widthLaptop ? `${props.widthLaptop}%` : `${props.width}%`
+            },
+            [(0, _stitchesConfig.breakpoints).desktopX]: {
+                flex: props.widthDesktop ? `0 0 ${props.widthDesktop}%` : `0 0 ${props.width}%`,
+                marginLeft: props.offsetDesktop ? `${props.offsetDesktop}%` : `${props.offset}%`,
+                width: props.widthDesktop ? `${props.widthDesktop}%` : `${props.width}%`
+            },
+            [(0, _stitchesConfig.breakpoints).wide]: {
+                flex: props.widthWide ? `0 0 ${props.widthWide}%` : `0 0 ${props.width}%`,
+                marginLeft: props.offsetWide ? `${props.offsetWide}%` : `${props.offset}%`,
+                width: props.widthWide ? `${props.widthWide}%` : `${props.width}%`
+            },
+            ...props.css
+        },
+        id: props.id,
+        children: props.children
+    }, void 0, false, {
+        fileName: "src/components/Stack/Stack.tsx",
+        lineNumber: 55,
+        columnNumber: 5
+    }, this);
+}
+exports.default = Stack;
+_c = Stack;
+var _c;
+$RefreshReg$(_c, "Stack");
+
+  $parcel$ReactRefreshHelpers$48e7.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../stitches.config":"iMNz3","./Stack.styles":"77zow","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"77zow":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "StackRowStyled", ()=>StackRowStyled);
+parcelHelpers.export(exports, "StackColumnStyled", ()=>StackColumnStyled);
+var _stitchesConfig = require("../../stitches.config");
+const StackRowStyled = (0, _stitchesConfig.styled)("div", {
+    "*": {
+        boxSizing: "border-box"
+    },
+    display: "flex",
+    flexDirection: "row",
+    flexFlow: "row wrap",
+    maxWidth: "100%",
+    minWidth: "100%",
+    width: "100%"
+});
+const StackColumnStyled = (0, _stitchesConfig.styled)("div", {
+    flex: "1 1 auto",
+    maxWidth: "100%",
+    paddingLeft: "$4",
+    paddingRight: "$4",
+    width: "100%",
+    [(0, _stitchesConfig.breakpoints).tablet]: {
+        paddingLeft: "$3",
+        paddingRight: "$3"
+    }
+});
+exports.default = StackRowStyled;
+
 },{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kTnYg":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -49605,6 +48796,253 @@ const TableHeadCellStyled = (0, _stitchesConfig.styled)("th", {
 });
 exports.default = TableStyled;
 
+},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"d5OVu":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Text", ()=>(0, _textDefault.default));
+var _text = require("./Text");
+var _textDefault = parcelHelpers.interopDefault(_text);
+
+},{"./Text":"97kA1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"97kA1":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$7646 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7646.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _stitchesConfig = require("../../stitches.config");
+var _textStyles = require("./Text.styles");
+function Text(props) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _textStyles.TextStyled), {
+        accent: props.accent,
+        as: props.as,
+        bold: props.bold,
+        css: {
+            ...props.css,
+            ...props.top && {
+                paddingTop: `$${props.top}`,
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.8)`
+                }
+            },
+            ...props.bottom && {
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.8)`
+                },
+                paddingBottom: `$${props.bottom}`
+            },
+            ...props.inline && {
+                alignSelf: "center",
+                display: "inline-flex",
+                marginBottom: "0 !important",
+                marginRight: props.inline === "auto" ? "auto" : `$${props.inline}`,
+                verticalAlign: "middle",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    marginRight: props.inline === "auto" ? "auto" : `calc($${props.inline} * 0.8)`
+                }
+            },
+            ...props.link && {
+                borderBottom: props.link === "borderHover" ? "0.1rem solid $borderHover" : "0.1rem solid $border",
+                transition: "$default",
+                "&:hover": {
+                    opacity: 0.6
+                }
+            }
+        },
+        size: props.as,
+        children: props.children
+    }, void 0, false, {
+        fileName: "src/components/Text/Text.tsx",
+        lineNumber: 20,
+        columnNumber: 5
+    }, this);
+}
+exports.default = Text;
+_c = Text;
+var _c;
+$RefreshReg$(_c, "Text");
+
+  $parcel$ReactRefreshHelpers$7646.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../stitches.config":"iMNz3","./Text.styles":"2hqo9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2hqo9":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "TextStyled", ()=>TextStyled);
+var _stitchesConfig = require("../../stitches.config");
+const TextStyled = (0, _stitchesConfig.styled)("div", {
+    "&:last-child": {
+        marginBottom: `${0}!important`
+    },
+    color: "inherit",
+    display: "block",
+    variants: {
+        accent: {
+            true: {
+                color: "$accent"
+            }
+        },
+        bold: {
+            true: {
+                fontWeight: "bold !important"
+            }
+        },
+        size: {
+            h1: {
+                "&:not(:last-child)": {
+                    marginBottom: "$5"
+                },
+                fontSize: "$h1",
+                fontWeight: "$h1",
+                lineHeight: "$h1",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($h1 * 0.9)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($h1 * 0.9)"
+                },
+                [(0, _stitchesConfig.breakpoints).laptopX]: {
+                    fontSize: "calc($h1 * 0.95)"
+                }
+            },
+            h2: {
+                "&:not(:last-child)": {
+                    marginBottom: "$5"
+                },
+                fontSize: "$h2",
+                fontWeight: "$h2",
+                lineHeight: "$h2",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($h2 * 0.9)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($h2 * 0.9)"
+                },
+                [(0, _stitchesConfig.breakpoints).laptopX]: {
+                    fontSize: "calc($h2 * 0.95)"
+                }
+            },
+            h3: {
+                "&:not(:last-child)": {
+                    marginBottom: "$5"
+                },
+                fontSize: "$h3",
+                fontWeight: "$h3",
+                lineHeight: "$h3",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($h3 * 0.9)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($h3 * 0.9)"
+                },
+                [(0, _stitchesConfig.breakpoints).laptopX]: {
+                    fontSize: "calc($h3 * 0.95)"
+                }
+            },
+            h4: {
+                "&:not(:last-child)": {
+                    marginBottom: "$4"
+                },
+                fontSize: "$h4",
+                fontWeight: "$h4",
+                lineHeight: "$h4",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($h4 * 0.8)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($h4 * 0.85)"
+                },
+                [(0, _stitchesConfig.breakpoints).laptopX]: {
+                    fontSize: "calc($h4 * 0.9)"
+                }
+            },
+            h5: {
+                "&:not(:last-child)": {
+                    marginBottom: "$4"
+                },
+                fontSize: "$h5",
+                fontWeight: "$h5",
+                lineHeight: "$h5",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($h5 * 0.9)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($h5 * 0.9)"
+                },
+                [(0, _stitchesConfig.breakpoints).laptopX]: {
+                    fontSize: "calc($h5 * 0.95)"
+                }
+            },
+            h6: {
+                "&:not(:last-child)": {
+                    marginBottom: "$4"
+                },
+                fontSize: "$h6",
+                fontWeight: "$h6",
+                lineHeight: "$h6",
+                opacity: "0.85",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($h6 * 0.9)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($h6 * 0.9)"
+                },
+                [(0, _stitchesConfig.breakpoints).laptopX]: {
+                    fontSize: "calc($h6 * 0.95)"
+                }
+            },
+            p: {
+                "&:not(:last-child)": {
+                    marginBottom: "$4"
+                },
+                fontSize: "$p",
+                fontWeight: "$p",
+                lineHeight: "$p",
+                opacity: "0.85",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($p * 0.9)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($p * 0.9)"
+                },
+                [(0, _stitchesConfig.breakpoints).laptopX]: {
+                    fontSize: "calc($p * 0.95)"
+                }
+            },
+            small: {
+                "&:not(:last-child)": {
+                    marginBottom: "$4"
+                },
+                fontSize: "$small",
+                fontWeight: "$small",
+                lineHeight: "$small",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($small * 0.9)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($small * 0.9)"
+                },
+                [(0, _stitchesConfig.breakpoints).laptopX]: {
+                    fontSize: "calc($small * 0.95)"
+                }
+            },
+            span: {
+                fontSize: "inherit",
+                fontWeight: "inherit",
+                lineHeight: "inherit"
+            }
+        }
+    }
+});
+exports.default = TextStyled;
+
 },{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fyNq0":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -49624,18 +49062,14 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _usehooksTs = require("usehooks-ts");
 var _stitchesConfig = require("../../stitches.config");
 var _viewStyles = require("./View.styles");
-var _s = $RefreshSig$();
 function View(props) {
-    _s();
-    const { isDarkMode  } = (0, _usehooksTs.useDarkMode)();
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _viewStyles.ViewStyled), {
         className: props.inverted ? (0, _stitchesConfig.theme).toString() : undefined,
         css: {
             ...props.css,
-            background: props.inverted ? isDarkMode ? "$inverted !important" : "$background" : "$background",
+            background: props.inverted ? "$inverted !important" : "$background",
             ...props.top && {
                 paddingTop: `$${props.top}`,
                 [(0, _stitchesConfig.breakpoints).phone]: {
@@ -49655,21 +49089,16 @@ function View(props) {
             children: props.children
         }, void 0, false, {
             fileName: "src/components/View/View.tsx",
-            lineNumber: 39,
+            lineNumber: 36,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/components/View/View.tsx",
-        lineNumber: 20,
+        lineNumber: 17,
         columnNumber: 5
     }, this);
 }
 exports.default = View;
-_s(View, "lAL/w3sRTeO/2QB/mttQhSQs2QI=", false, function() {
-    return [
-        (0, _usehooksTs.useDarkMode)
-    ];
-});
 _c = View;
 var _c;
 $RefreshReg$(_c, "View");
@@ -49679,7 +49108,7 @@ $RefreshReg$(_c, "View");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","usehooks-ts":"dmUe4","../../stitches.config":"iMNz3","./View.styles":"gmJg2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gmJg2":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../stitches.config":"iMNz3","./View.styles":"gmJg2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gmJg2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ViewStyled", ()=>ViewStyled);

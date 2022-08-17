@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react';
-import { useDarkMode } from 'usehooks-ts';
 
 import { breakpoints, DefaultProps, theme } from '../../stitches.config';
 
@@ -14,14 +13,12 @@ export interface Props extends Omit<DefaultProps, 'spacing'> {
 }
 
 export default function View(props: Props): JSX.Element {
-  const { isDarkMode } = useDarkMode();
-
   return (
     <ViewStyled
       className={props.inverted ? theme.toString() : undefined}
       css={{
         ...props.css,
-        background: props.inverted ? (isDarkMode ? '$inverted !important' : '$background') : '$background',
+        background: props.inverted ? '$inverted !important' : '$background',
         ...(props.top && {
           paddingTop: `$${props.top}`,
           [breakpoints.phone]: {

@@ -22,7 +22,6 @@ import {
   TableHeadCell,
   TableRow,
   TableHead,
-  Dates,
   Dropdown,
   Code,
   Field,
@@ -235,17 +234,6 @@ export function App(): ReactElement {
                 '   </Section> \n' +
                 '/Block>\n'}
             </Code>
-          </Stack>
-        </Stack>
-        <Stack direction='row' flex='center' top='6'>
-          <Stack direction='column'>
-            <Text as='h1'>Dates</Text>
-            <Popover minimal trigger={<Button>Select Dates (Week Range)</Button>}>
-              <Dates range='week' onChange={undefined} />
-            </Popover>
-            <Popover minimal trigger={<Button>Select Dates (Month Range)</Button>}>
-              <Dates range='month' onChange={undefined} />
-            </Popover>
           </Stack>
         </Stack>
         <Stack direction='row' flex='center' top='6'>

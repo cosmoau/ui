@@ -13,10 +13,11 @@ export const ButtonStyled = styled('button', {
   alignItems: 'center',
   border: '0.1rem solid transparent',
   borderRadius: '$2',
-  fontSize: '1.6rem',
-  fontWeight: 500,
-  lineHeight: 'normal',
-  padding: '$2 $4',
+  fontSize: '$h6',
+  fontWeight: 400,
+  lineHeight: '$h6',
+  padding: '$1 $4',
+  boxShadow: '$1',
 
   [breakpoints.phone]: {
     fontSize: '$p',
@@ -31,7 +32,7 @@ export const ButtonStyled = styled('button', {
   variants: {
     block: {
       false: {
-        display: 'inline-flex',
+        display: 'inline',
       },
       true: {
         display: 'block',

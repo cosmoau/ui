@@ -2,7 +2,6 @@ export * from './components/Avatar/index';
 export * from './components/Badge/index';
 export * from './components/Box/index';
 export * from './components/Button/index';
-export * from './components/Dates/index';
 export * from './components/Dialog/index';
 export * from './components/Divider/index';
 export * from './components/Element/index';

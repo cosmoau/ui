@@ -20,10 +20,10 @@ export default function Provider(props: Props): JSX.Element {
 
   reset();
 
+  const activeTheme = props.locked ? (props.locked === 'dark' ? theme : lightTheme) : isDarkMode ? theme : lightTheme;
+
   return (
-    <ProviderStyled
-      className={props.locked ? (props.locked === 'dark' ? theme.toString() : lightTheme.toString()) : isDarkMode ? theme.toString() : lightTheme.toString()}
-      css={props.css}>
+    <ProviderStyled className={activeTheme} css={props.css}>
       <Toast />
       {props.children}
     </ProviderStyled>
