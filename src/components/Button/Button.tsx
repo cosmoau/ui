@@ -34,13 +34,18 @@ export default function Button(props: Props): JSX.Element {
           },
         }),
       }}
-      disabled={props.disabled || false}
+      disabled={props.disabled || props.loading || false}
       id={props.id}
       onClick={props.onClick}
       small={props.small}
       theme={props.theme || 'default'}>
+      {props.loading && (
+        <ButtonIconStyled align='left'>
+          <Loading />
+        </ButtonIconStyled>
+      )}
       {props.icon && (props.iconPosition === 'left' || !props.iconPosition) && <ButtonIconStyled align='left'>{props.icon}</ButtonIconStyled>}
-      {props.loading ? <Loading /> : props.children}
+      {props.children}
       {props.icon && props.iconPosition === 'right' && <ButtonIconStyled align='right'>{props.icon}</ButtonIconStyled>}
     </ButtonStyled>
   );

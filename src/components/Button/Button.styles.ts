@@ -13,14 +13,21 @@ export const ButtonStyled = styled('button', {
   alignItems: 'center',
   border: '0.1rem solid transparent',
   borderRadius: '$2',
-  fontSize: '$h6',
+  fontSize: '1.5rem',
   fontWeight: 400,
-  lineHeight: '$h6',
+  lineHeight: 1.5,
   padding: '$1 $4',
   boxShadow: '$1',
 
+  svg: {
+    alignSelf: 'center',
+    height: '1.8rem',
+    marginTop: '-0.4rem',
+    width: '1.8rem',
+  },
+
   [breakpoints.phone]: {
-    fontSize: '$p',
+    fontSize: '1.45rem',
   },
 
   a: {
@@ -40,23 +47,9 @@ export const ButtonStyled = styled('button', {
       },
     },
     small: {
-      false: {
-        svg: {
-          alignSelf: 'center',
-          height: '1.8rem',
-          marginTop: '-0.5rem',
-          width: '1.8rem',
-        },
-      },
       true: {
-        fontSize: '$small',
-
-        svg: {
-          alignSelf: 'center',
-          height: '1.2rem',
-          marginTop: '-0.15rem',
-          width: '1.2rem',
-        },
+        fontSize: '1.35rem',
+        lineHeight: 1.25,
       },
     },
     theme: {

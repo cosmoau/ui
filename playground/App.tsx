@@ -210,6 +210,11 @@ export function App(): ReactElement {
             <Button inline='3' theme='solid'>
               Solid
             </Button>
+            <Button loading>Icon (Left)</Button>
+            <Button icon={<CurrencyEth weight='duotone' />} small>
+              Icon (Left)
+            </Button>
+
             <Button icon={<CurrencyEth weight='duotone' />} inline='3'>
               Icon (Left)
             </Button>

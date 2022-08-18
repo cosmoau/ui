@@ -4,6 +4,10 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         opacity: number;
         backgroundColor?: undefined;
         color?: undefined;
+        alignSelf?: undefined;
+        height?: undefined;
+        marginTop?: undefined;
+        width?: undefined;
         fontSize?: undefined;
         display?: undefined;
         block?: undefined;
@@ -14,6 +18,24 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         color: string;
         cursor?: undefined;
         opacity?: undefined;
+        alignSelf?: undefined;
+        height?: undefined;
+        marginTop?: undefined;
+        width?: undefined;
+        fontSize?: undefined;
+        display?: undefined;
+        block?: undefined;
+        small?: undefined;
+        theme?: undefined;
+    } | {
+        alignSelf: string;
+        height: string;
+        marginTop: string;
+        width: string;
+        cursor?: undefined;
+        opacity?: undefined;
+        backgroundColor?: undefined;
+        color?: undefined;
         fontSize?: undefined;
         display?: undefined;
         block?: undefined;
@@ -25,6 +47,10 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         opacity?: undefined;
         backgroundColor?: undefined;
         color?: undefined;
+        alignSelf?: undefined;
+        height?: undefined;
+        marginTop?: undefined;
+        width?: undefined;
         display?: undefined;
         block?: undefined;
         small?: undefined;
@@ -35,6 +61,10 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         opacity?: undefined;
         backgroundColor?: undefined;
         color?: undefined;
+        alignSelf?: undefined;
+        height?: undefined;
+        marginTop?: undefined;
+        width?: undefined;
         fontSize?: undefined;
         block?: undefined;
         small?: undefined;
@@ -50,22 +80,9 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
             };
         };
         small: {
-            false: {
-                svg: {
-                    alignSelf: string;
-                    height: string;
-                    marginTop: string;
-                    width: string;
-                };
-            };
             true: {
                 fontSize: string;
-                svg: {
-                    alignSelf: string;
-                    height: string;
-                    marginTop: string;
-                    width: string;
-                };
+                lineHeight: number;
             };
         };
         theme: {
@@ -92,6 +109,10 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         opacity?: undefined;
         backgroundColor?: undefined;
         color?: undefined;
+        alignSelf?: undefined;
+        height?: undefined;
+        marginTop?: undefined;
+        width?: undefined;
         fontSize?: undefined;
         display?: undefined;
     };
@@ -109,9 +130,15 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
     borderRadius: string;
     fontSize: string;
     fontWeight: number;
-    lineHeight: string;
+    lineHeight: number;
     padding: string;
     boxShadow: string;
+    svg: {
+        alignSelf: string;
+        height: string;
+        marginTop: string;
+        width: string;
+    };
     a: {
         display: string;
     };
@@ -127,22 +154,9 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
             };
         };
         small: {
-            false: {
-                svg: {
-                    alignSelf: string;
-                    height: string;
-                    marginTop: string;
-                    width: string;
-                };
-            };
             true: {
                 fontSize: string;
-                svg: {
-                    alignSelf: string;
-                    height: string;
-                    marginTop: string;
-                    width: string;
-                };
+                lineHeight: number;
             };
         };
         theme: {
