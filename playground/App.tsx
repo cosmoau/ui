@@ -211,6 +211,10 @@ export function App(): ReactElement {
               Solid
             </Button>
             <Button loading>Icon (Left)</Button>
+            <Button>
+              <CurrencyEth weight='duotone' />
+            </Button>
+
             <Button icon={<CurrencyEth weight='duotone' />} small>
               Icon (Left)
             </Button>

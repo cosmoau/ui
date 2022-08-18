@@ -48,8 +48,8 @@ export const ButtonStyled = styled('button', {
     },
     small: {
       true: {
-        fontSize: '1.35rem',
-        lineHeight: 1.25,
+        fontSize: '1.3rem',
+        lineHeight: 1.2,
       },
     },
     theme: {

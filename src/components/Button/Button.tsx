@@ -25,8 +25,6 @@ export default function Button(props: Props): JSX.Element {
         ...props.css,
         ...(props.inline && {
           alignSelf: 'center',
-          display: 'inline-flex',
-          marginBottom: '0 !important',
           marginRight: props.inline === 'auto' ? 'auto' : `$${props.inline}`,
           verticalAlign: 'middle',
           [breakpoints.phone]: {
