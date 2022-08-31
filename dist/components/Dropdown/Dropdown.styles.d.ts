@@ -3,30 +3,34 @@ export declare const DropdownStyled: import("@stitches/react/types/styled-compon
         accent: string;
         background: string;
         inverted: string;
-        blueBorder: string;
-        blueCTA: string;
-        blueOverlay: string;
-        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        pinkBorder: string;
-        pinkOverlay: string;
-        pinkText: string;
         purpleBorder: string;
         purpleOverlay: string;
         purpleText: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
+        pinkBorder: string;
+        pinkOverlay: string;
+        pinkText: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         text: string;
+    };
+    shadows: {
+        1: string;
+        2: string;
+        3: string;
     };
     fontSizes: {
         h1: string;
@@ -75,11 +79,6 @@ export declare const DropdownStyled: import("@stitches/react/types/styled-compon
         1: string;
         2: string;
         3: string;
-    };
-    shadows: {
-        1: number;
-        2: number;
-        3: number;
     };
     space: {
         1: string;
@@ -154,30 +153,34 @@ export declare const DropdownTriggerStyled: import("@stitches/react/types/styled
         accent: string;
         background: string;
         inverted: string;
-        blueBorder: string;
-        blueCTA: string;
-        blueOverlay: string;
-        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        pinkBorder: string;
-        pinkOverlay: string;
-        pinkText: string;
         purpleBorder: string;
         purpleOverlay: string;
         purpleText: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
+        pinkBorder: string;
+        pinkOverlay: string;
+        pinkText: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         text: string;
+    };
+    shadows: {
+        1: string;
+        2: string;
+        3: string;
     };
     fontSizes: {
         h1: string;
@@ -226,11 +229,6 @@ export declare const DropdownTriggerStyled: import("@stitches/react/types/styled
         1: string;
         2: string;
         3: string;
-    };
-    shadows: {
-        1: number;
-        2: number;
-        3: number;
     };
     space: {
         1: string;
@@ -301,7 +299,7 @@ export declare const DropdownTriggerStyled: import("@stitches/react/types/styled
     };
 }>>;
 export declare const DropdownGroupStyled: import("@stitches/react/types/styled-component").StyledComponent<"div", import("@stitches/react/types/styled-component").StyledComponentProps<[{
-    background: string;
+    backgroundColor: string;
     border: string;
     borderRadius: string;
     boxShadow: string;
@@ -331,30 +329,34 @@ export declare const DropdownGroupStyled: import("@stitches/react/types/styled-c
         accent: string;
         background: string;
         inverted: string;
-        blueBorder: string;
-        blueCTA: string;
-        blueOverlay: string;
-        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        pinkBorder: string;
-        pinkOverlay: string;
-        pinkText: string;
         purpleBorder: string;
         purpleOverlay: string;
         purpleText: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
+        pinkBorder: string;
+        pinkOverlay: string;
+        pinkText: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         text: string;
+    };
+    shadows: {
+        1: string;
+        2: string;
+        3: string;
     };
     fontSizes: {
         h1: string;
@@ -403,11 +405,6 @@ export declare const DropdownGroupStyled: import("@stitches/react/types/styled-c
         1: string;
         2: string;
         3: string;
-    };
-    shadows: {
-        1: number;
-        2: number;
-        3: number;
     };
     space: {
         1: string;
@@ -484,7 +481,7 @@ export declare const DropdownItemStyled: import("@stitches/react/types/styled-co
         };
     };
     '&:hover': {
-        background: string;
+        backgroundColor: string;
         borderBottomColor: string;
         borderRadius: string;
     };
@@ -517,30 +514,34 @@ export declare const DropdownItemStyled: import("@stitches/react/types/styled-co
         accent: string;
         background: string;
         inverted: string;
-        blueBorder: string;
-        blueCTA: string;
-        blueOverlay: string;
-        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        pinkBorder: string;
-        pinkOverlay: string;
-        pinkText: string;
         purpleBorder: string;
         purpleOverlay: string;
         purpleText: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
+        pinkBorder: string;
+        pinkOverlay: string;
+        pinkText: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         text: string;
+    };
+    shadows: {
+        1: string;
+        2: string;
+        3: string;
     };
     fontSizes: {
         h1: string;
@@ -589,11 +590,6 @@ export declare const DropdownItemStyled: import("@stitches/react/types/styled-co
         1: string;
         2: string;
         3: string;
-    };
-    shadows: {
-        1: number;
-        2: number;
-        3: number;
     };
     space: {
         1: string;
@@ -669,30 +665,34 @@ declare const _default: {
             accent: string;
             background: string;
             inverted: string;
-            blueBorder: string;
-            blueCTA: string;
-            blueOverlay: string;
-            blueText: string;
             border: string;
             borderHover: string;
             default: string;
             defaultHover: string;
+            redBorder: string;
+            redOverlay: string;
+            redText: string;
             greenBorder: string;
             greenOverlay: string;
             greenText: string;
             orangeBorder: string;
             orangeOverlay: string;
             orangeText: string;
-            pinkBorder: string;
-            pinkOverlay: string;
-            pinkText: string;
             purpleBorder: string;
             purpleOverlay: string;
             purpleText: string;
-            redBorder: string;
-            redOverlay: string;
-            redText: string;
+            pinkBorder: string;
+            pinkOverlay: string;
+            pinkText: string;
+            blueBorder: string;
+            blueOverlay: string;
+            blueText: string;
             text: string;
+        };
+        shadows: {
+            1: string;
+            2: string;
+            3: string;
         };
         fontSizes: {
             h1: string;
@@ -741,11 +741,6 @@ declare const _default: {
             1: string;
             2: string;
             3: string;
-        };
-        shadows: {
-            1: number;
-            2: number;
-            3: number;
         };
         space: {
             1: string;

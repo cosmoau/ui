@@ -1,33 +1,33 @@
-import { breakpoints, styled } from '../../stitches.config';
+import { styled } from '../../stitches.config';
 
 export const ButtonStyled = styled('button', {
   '&:disabled': {
     cursor: 'not-allowed',
-    opacity: 0.5,
+    opacity: 0.75,
   },
   '&:hover': {
+    borderColor: '$borderHover',
+    boxShadow: '$2',
     backgroundColor: '$defaultHover',
     color: '$text',
   },
   alignContent: 'center',
   alignItems: 'center',
-  border: '0.1rem solid transparent',
-  borderRadius: '$2',
-  fontSize: '1.5rem',
-  fontWeight: 400,
-  lineHeight: 1.5,
+  border: '0.1rem solid $borderHover',
+  borderRadius: '$1',
+  fontSize: '1.6rem',
+
+  lineHeight: 'normal',
   padding: '$1 $4',
   boxShadow: '$1',
+  color: '$text',
 
   svg: {
     alignSelf: 'center',
-    height: '1.8rem',
-    marginTop: '-0.4rem',
-    width: '1.8rem',
-  },
+    height: '1.7rem',
+    verticalAlign: 'middle',
 
-  [breakpoints.phone]: {
-    fontSize: '1.45rem',
+    width: '1.7rem',
   },
 
   a: {
@@ -48,27 +48,23 @@ export const ButtonStyled = styled('button', {
     },
     small: {
       true: {
-        fontSize: '1.3rem',
-        lineHeight: 1.2,
+        fontSize: '$p',
       },
     },
     theme: {
-      border: {
-        borderColor: '$border',
-        boxShadow: '$1',
-        color: '$text',
-      },
       default: {
-        background: '$default',
-        color: '$text',
+        boxShadow: '$1',
+      },
+      fill: {
+        backgroundColor: '$default',
       },
       minimal: {
-        background: 'transparent',
+        backgroundColor: 'transparent',
         boxShadow: 'none',
-        color: '$text',
+        borderColor: 'transparent',
       },
       solid: {
-        background: '$text',
+        backgroundColor: '$text',
         color: '$background',
       },
     },
@@ -79,6 +75,9 @@ export const ButtonStyled = styled('button', {
 
 export const ButtonIconStyled = styled('span', {
   display: 'inline',
+  svg: {
+    marginTop: '-0.5rem',
+  },
   variants: {
     align: {
       left: {

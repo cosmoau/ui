@@ -16,7 +16,7 @@ export const DropdownTriggerStyled = styled('div', {
 });
 
 export const DropdownGroupStyled = styled('div', {
-  background: '$background',
+  backgroundColor: '$background',
   border: '0.1rem solid $border',
   borderRadius: '$1',
   boxShadow: '$3',
@@ -50,7 +50,7 @@ export const DropdownItemStyled = styled('div', {
     },
   },
   '&:hover': {
-    background: '$default',
+    backgroundColor: '$default',
     borderBottomColor: 'transparent',
     borderRadius: '$1',
   },

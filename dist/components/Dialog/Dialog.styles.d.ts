@@ -3,30 +3,34 @@ export declare const DialogStyled: import("@stitches/react/types/styled-componen
         accent: string;
         background: string;
         inverted: string;
-        blueBorder: string;
-        blueCTA: string;
-        blueOverlay: string;
-        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        pinkBorder: string;
-        pinkOverlay: string;
-        pinkText: string;
         purpleBorder: string;
         purpleOverlay: string;
         purpleText: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
+        pinkBorder: string;
+        pinkOverlay: string;
+        pinkText: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         text: string;
+    };
+    shadows: {
+        1: string;
+        2: string;
+        3: string;
     };
     fontSizes: {
         h1: string;
@@ -75,11 +79,6 @@ export declare const DialogStyled: import("@stitches/react/types/styled-componen
         1: string;
         2: string;
         3: string;
-    };
-    shadows: {
-        1: number;
-        2: number;
-        3: number;
     };
     space: {
         1: string;
@@ -154,30 +153,34 @@ export declare const DialogTriggerStyled: import("@stitches/react/types/styled-c
         accent: string;
         background: string;
         inverted: string;
-        blueBorder: string;
-        blueCTA: string;
-        blueOverlay: string;
-        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        pinkBorder: string;
-        pinkOverlay: string;
-        pinkText: string;
         purpleBorder: string;
         purpleOverlay: string;
         purpleText: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
+        pinkBorder: string;
+        pinkOverlay: string;
+        pinkText: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         text: string;
+    };
+    shadows: {
+        1: string;
+        2: string;
+        3: string;
     };
     fontSizes: {
         h1: string;
@@ -226,11 +229,6 @@ export declare const DialogTriggerStyled: import("@stitches/react/types/styled-c
         1: string;
         2: string;
         3: string;
-    };
-    shadows: {
-        1: number;
-        2: number;
-        3: number;
     };
     space: {
         1: string;
@@ -301,7 +299,7 @@ export declare const DialogTriggerStyled: import("@stitches/react/types/styled-c
     };
 }>>;
 export declare const DialogOverlayStyled: import("@stitches/react/types/styled-component").StyledComponent<"div", import("@stitches/react/types/styled-component").StyledComponentProps<[{
-    background: string;
+    backgroundColor: string;
     bottom: number;
     left: number;
     overflowY: string;
@@ -328,30 +326,34 @@ export declare const DialogOverlayStyled: import("@stitches/react/types/styled-c
         accent: string;
         background: string;
         inverted: string;
-        blueBorder: string;
-        blueCTA: string;
-        blueOverlay: string;
-        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        pinkBorder: string;
-        pinkOverlay: string;
-        pinkText: string;
         purpleBorder: string;
         purpleOverlay: string;
         purpleText: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
+        pinkBorder: string;
+        pinkOverlay: string;
+        pinkText: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         text: string;
+    };
+    shadows: {
+        1: string;
+        2: string;
+        3: string;
     };
     fontSizes: {
         h1: string;
@@ -400,11 +402,6 @@ export declare const DialogOverlayStyled: import("@stitches/react/types/styled-c
         1: string;
         2: string;
         3: string;
-    };
-    shadows: {
-        1: number;
-        2: number;
-        3: number;
     };
     space: {
         1: string;
@@ -497,7 +494,7 @@ export declare const DialogContentStyled: import("@stitches/react/types/styled-c
         width: string;
         animation?: undefined;
     };
-    background: string;
+    backgroundColor: string;
     borderRadius: string;
     left: string;
     maxHeight: string;
@@ -526,30 +523,34 @@ export declare const DialogContentStyled: import("@stitches/react/types/styled-c
         accent: string;
         background: string;
         inverted: string;
-        blueBorder: string;
-        blueCTA: string;
-        blueOverlay: string;
-        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        pinkBorder: string;
-        pinkOverlay: string;
-        pinkText: string;
         purpleBorder: string;
         purpleOverlay: string;
         purpleText: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
+        pinkBorder: string;
+        pinkOverlay: string;
+        pinkText: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         text: string;
+    };
+    shadows: {
+        1: string;
+        2: string;
+        3: string;
     };
     fontSizes: {
         h1: string;
@@ -598,11 +599,6 @@ export declare const DialogContentStyled: import("@stitches/react/types/styled-c
         1: string;
         2: string;
         3: string;
-    };
-    shadows: {
-        1: number;
-        2: number;
-        3: number;
     };
     space: {
         1: string;
@@ -677,30 +673,34 @@ export declare const DialogExitStyled: import("@stitches/react/types/styled-comp
         accent: string;
         background: string;
         inverted: string;
-        blueBorder: string;
-        blueCTA: string;
-        blueOverlay: string;
-        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        pinkBorder: string;
-        pinkOverlay: string;
-        pinkText: string;
         purpleBorder: string;
         purpleOverlay: string;
         purpleText: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
+        pinkBorder: string;
+        pinkOverlay: string;
+        pinkText: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         text: string;
+    };
+    shadows: {
+        1: string;
+        2: string;
+        3: string;
     };
     fontSizes: {
         h1: string;
@@ -749,11 +749,6 @@ export declare const DialogExitStyled: import("@stitches/react/types/styled-comp
         1: string;
         2: string;
         3: string;
-    };
-    shadows: {
-        1: number;
-        2: number;
-        3: number;
     };
     space: {
         1: string;

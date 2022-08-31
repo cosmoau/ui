@@ -9,7 +9,7 @@ export interface Props extends HTMLAttributes<HTMLButtonElement>, Omit<DefaultPr
   children: ReactNode;
   loading?: boolean;
   disabled?: boolean;
-  theme?: 'default' | 'border' | 'minimal' | 'solid';
+  theme?: 'default' | 'fill' | 'minimal' | 'solid';
   block?: boolean;
   icon?: ReactNode;
   iconPosition?: 'left' | 'right';

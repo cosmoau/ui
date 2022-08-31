@@ -1,3 +1,4 @@
+import { X } from 'phosphor-react';
 import React, { ReactNode, useRef, useState } from 'react';
 import { useEventListener, useLockedBody, useOnClickOutside } from 'usehooks-ts';
 
@@ -58,7 +59,7 @@ export default function Dialog(props: Props): JSX.Element {
         <DialogOverlayStyled animation={isOpen}>
           <DialogContentStyled animation={isOpen} css={props.css} ref={ref}>
             <DialogExitStyled onClick={(): void => handleClose()}>
-              <Button small theme={'minimal'} ariaLabel='Close' name='close'>
+              <Button icon={<X />} small theme={'minimal'} ariaLabel='Close' name='close'>
                 Close
               </Button>
             </DialogExitStyled>

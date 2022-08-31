@@ -10,7 +10,9 @@ export const CodeStyled = styled('div', {
   width: '100%',
 });
 
-export const CodeFunctionStyled = styled('div', {});
+export const CodeFunctionStyled = styled('div', {
+  float: 'right',
+});
 
 export const CodeBlockStyled = styled('pre', {
   fontFamily: 'monospace',

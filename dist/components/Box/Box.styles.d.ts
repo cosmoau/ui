@@ -39,28 +39,31 @@ export declare const BoxStyled: import("@stitches/react/types/styled-component")
             };
         };
         theme: {
-            border: {
-                background: string;
+            default: {
+                backgroundColor: string;
                 borderColor: string;
             };
-            default: {
-                background: string;
-            };
             error: {
-                background: string;
+                borderColor: string;
+                backgroundColor: string;
                 color: string;
+            };
+            fill: {
+                backgroundColor: string;
             };
             success: {
-                background: string;
+                backgroundColor: string;
                 color: string;
+                borderColor: string;
             };
             transparent: {
-                background: string;
+                backgroundColor: string;
                 borderColor: string;
             };
             warning: {
-                background: string;
+                backgroundColor: string;
                 color: string;
+                borderColor: string;
             };
         };
     };
@@ -70,30 +73,34 @@ export declare const BoxStyled: import("@stitches/react/types/styled-component")
         accent: string;
         background: string;
         inverted: string;
-        blueBorder: string;
-        blueCTA: string;
-        blueOverlay: string;
-        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        pinkBorder: string;
-        pinkOverlay: string;
-        pinkText: string;
         purpleBorder: string;
         purpleOverlay: string;
         purpleText: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
+        pinkBorder: string;
+        pinkOverlay: string;
+        pinkText: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         text: string;
+    };
+    shadows: {
+        1: string;
+        2: string;
+        3: string;
     };
     fontSizes: {
         h1: string;
@@ -142,11 +149,6 @@ export declare const BoxStyled: import("@stitches/react/types/styled-component")
         1: string;
         2: string;
         3: string;
-    };
-    shadows: {
-        1: number;
-        2: number;
-        3: number;
     };
     space: {
         1: string;
@@ -232,30 +234,34 @@ export declare const BoxImageChildrenStyled: import("@stitches/react/types/style
         accent: string;
         background: string;
         inverted: string;
-        blueBorder: string;
-        blueCTA: string;
-        blueOverlay: string;
-        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        pinkBorder: string;
-        pinkOverlay: string;
-        pinkText: string;
         purpleBorder: string;
         purpleOverlay: string;
         purpleText: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
+        pinkBorder: string;
+        pinkOverlay: string;
+        pinkText: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         text: string;
+    };
+    shadows: {
+        1: string;
+        2: string;
+        3: string;
     };
     fontSizes: {
         h1: string;
@@ -304,11 +310,6 @@ export declare const BoxImageChildrenStyled: import("@stitches/react/types/style
         1: string;
         2: string;
         3: string;
-    };
-    shadows: {
-        1: number;
-        2: number;
-        3: number;
     };
     space: {
         1: string;

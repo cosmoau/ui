@@ -19,7 +19,7 @@ export const AvatarImageStyled = styled('div', {
 
 export const AvatarFallbackStyled = styled('div', {
   alignItems: 'center',
-  background: '$default',
+  backgroundColor: '$default',
   color: '$text',
   display: 'flex',
   height: '100%',

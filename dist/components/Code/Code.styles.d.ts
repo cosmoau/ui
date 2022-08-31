@@ -3,30 +3,34 @@ export declare const CodeStyled: import("@stitches/react/types/styled-component"
         accent: string;
         background: string;
         inverted: string;
-        blueBorder: string;
-        blueCTA: string;
-        blueOverlay: string;
-        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        pinkBorder: string;
-        pinkOverlay: string;
-        pinkText: string;
         purpleBorder: string;
         purpleOverlay: string;
         purpleText: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
+        pinkBorder: string;
+        pinkOverlay: string;
+        pinkText: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         text: string;
+    };
+    shadows: {
+        1: string;
+        2: string;
+        3: string;
     };
     fontSizes: {
         h1: string;
@@ -75,11 +79,6 @@ export declare const CodeStyled: import("@stitches/react/types/styled-component"
         1: string;
         2: string;
         3: string;
-    };
-    shadows: {
-        1: number;
-        2: number;
-        3: number;
     };
     space: {
         1: string;
@@ -154,30 +153,34 @@ export declare const CodeFunctionStyled: import("@stitches/react/types/styled-co
         accent: string;
         background: string;
         inverted: string;
-        blueBorder: string;
-        blueCTA: string;
-        blueOverlay: string;
-        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        pinkBorder: string;
-        pinkOverlay: string;
-        pinkText: string;
         purpleBorder: string;
         purpleOverlay: string;
         purpleText: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
+        pinkBorder: string;
+        pinkOverlay: string;
+        pinkText: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         text: string;
+    };
+    shadows: {
+        1: string;
+        2: string;
+        3: string;
     };
     fontSizes: {
         h1: string;
@@ -226,11 +229,6 @@ export declare const CodeFunctionStyled: import("@stitches/react/types/styled-co
         1: string;
         2: string;
         3: string;
-    };
-    shadows: {
-        1: number;
-        2: number;
-        3: number;
     };
     space: {
         1: string;
@@ -305,30 +303,34 @@ export declare const CodeBlockStyled: import("@stitches/react/types/styled-compo
         accent: string;
         background: string;
         inverted: string;
-        blueBorder: string;
-        blueCTA: string;
-        blueOverlay: string;
-        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        pinkBorder: string;
-        pinkOverlay: string;
-        pinkText: string;
         purpleBorder: string;
         purpleOverlay: string;
         purpleText: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
+        pinkBorder: string;
+        pinkOverlay: string;
+        pinkText: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         text: string;
+    };
+    shadows: {
+        1: string;
+        2: string;
+        3: string;
     };
     fontSizes: {
         h1: string;
@@ -377,11 +379,6 @@ export declare const CodeBlockStyled: import("@stitches/react/types/styled-compo
         1: string;
         2: string;
         3: string;
-    };
-    shadows: {
-        1: number;
-        2: number;
-        3: number;
     };
     space: {
         1: string;

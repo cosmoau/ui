@@ -6,6 +6,7 @@ export const TextStyled = styled('div', {
   },
   color: 'inherit',
   display: 'block',
+  letterSpacing: '-0.01em',
   variants: {
     accent: {
       true: {
@@ -30,9 +31,6 @@ export const TextStyled = styled('div', {
           fontSize: 'calc($h1 * 0.9)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($h1 * 0.925)',
-        },
-        [breakpoints.laptopX]: {
           fontSize: 'calc($h1 * 0.95)',
         },
       },
@@ -48,9 +46,6 @@ export const TextStyled = styled('div', {
           fontSize: 'calc($h2 * 0.9)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($h2 * 0.925)',
-        },
-        [breakpoints.laptopX]: {
           fontSize: 'calc($h2 * 0.95)',
         },
       },
@@ -66,9 +61,6 @@ export const TextStyled = styled('div', {
           fontSize: 'calc($h3 * 0.9)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($h3 * 0.925)',
-        },
-        [breakpoints.laptopX]: {
           fontSize: 'calc($h3 * 0.95)',
         },
       },
@@ -84,9 +76,6 @@ export const TextStyled = styled('div', {
           fontSize: 'calc($h4 * 0.9)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($h4 * 0.925)',
-        },
-        [breakpoints.laptopX]: {
           fontSize: 'calc($h4 * 0.95)',
         },
       },
@@ -138,10 +127,10 @@ export const TextStyled = styled('div', {
         opacity: '0.85',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($p * 0.85)',
+          fontSize: 'calc($p * 0.9)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($p * 0.9)',
+          fontSize: 'calc($p * 0.925)',
         },
         [breakpoints.laptopX]: {
           fontSize: 'calc($p * 0.95)',
@@ -156,10 +145,10 @@ export const TextStyled = styled('div', {
         lineHeight: '$small',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($small * 0.85)',
+          fontSize: 'calc($small * 0.9)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($small * 0.9)',
+          fontSize: 'calc($small * 0.925)',
         },
         [breakpoints.laptopX]: {
           fontSize: 'calc($small * 0.95)',

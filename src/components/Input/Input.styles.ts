@@ -1,6 +1,9 @@
 import { styled } from '../../stitches.config';
 
 export const InputStyled = styled('div', {
+  position: 'relative',
+});
+export const InputCoreStyled = styled('div', {
   '&:focus-within': {
     boxShadow: '$2',
   },
@@ -76,6 +79,11 @@ export const InputFunctionStyled = styled('div', {
 
   verticalAlign: 'middle',
   width: 'auto',
+});
+
+export const InputCallbackStyled = styled('div', {
+  display: 'block',
+  paddingTop: '$2',
 });
 
 export default InputStyled;

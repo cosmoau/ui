@@ -6,7 +6,7 @@ import { Badge } from '../Badge';
 import { Button } from '../Button';
 import { Loading } from '../Loading';
 
-import { InputAreaStyled, InputFunctionStyled, InputStyled } from './Input.styles';
+import { InputAreaStyled, InputCallbackStyled, InputFunctionStyled, InputStyled, InputCoreStyled } from './Input.styles';
 
 export interface Props extends InputHTMLAttributes<HTMLInputElement>, DefaultProps {
   copy?: boolean;
@@ -60,105 +60,83 @@ export default function Input(props: Props): JSX.Element {
         maxWidth: props.maxWidth || '80%',
         width: props.maxWidth || '80%',
       }}
-      disabled={props.disabled}
-      id={props.id}
-      state={props.success ? 'success' : props.warning ? 'warning' : props.error ? 'error' : 'default'}>
-      <InputAreaStyled
-        css={props.css}
-        ref={props.mustRef || undefined}
-        disabled={props.disabled}
-        onChange={handleChange}
-        placeholder={props.placeholder}
-        type={isRevealed ? 'text' : props.type || 'text'}
-        value={value}
-      />
-      {(props.error || props.success || props.warning || props.loading || props.submit || props.copy || props.reveal) && (
-        <InputFunctionStyled>
-          {props.error && (
-            <Badge
-              icon={<Warning weight='duotone' />}
-              theme='red'
-              css={{
-                paddingTop: '0.5rem',
-                paddingBottom: '0.5rem',
-                marginLeft: '$2',
-              }}>
-              {props.errorMessage || 'Error'}
-            </Badge>
-          )}
-          {props.success && (
-            <Badge
-              icon={<Check weight='duotone' />}
-              theme='green'
-              css={{
-                paddingTop: '0.5rem',
-                paddingBottom: '0.5rem',
-                marginLeft: '$2',
-              }}>
-              {props.successMessage || 'Success'}
-            </Badge>
-          )}
-          {props.warning && (
-            <Badge
-              icon={<Warning weight='duotone' />}
-              theme='orange'
-              css={{
-                paddingTop: '0.5rem',
-                paddingBottom: '0.5rem',
-                marginLeft: '$2',
-              }}>
-              {props.warningMessage || 'Warning'}
-            </Badge>
-          )}
-          {props.loading && <Loading />}
-          {props.copy && (
-            <Button
-              ariaLabel='Copy'
-              name='copy'
-              icon={isCopied ? <ClipboardText opacity={0.4} weight='duotone' /> : <ClipboardText weight='duotone' />}
-              onClick={handleCopy}
-              css={{
-                paddingTop: '0.3rem !important',
-                paddingBottom: '0.3rem !important',
-                lineHeight: '1',
-                marginLeft: '$2',
-              }}>
-              Copy
-            </Button>
-          )}
-          {props.reveal && (
-            <Button
-              ariaLabel='Reveal'
-              name='reveal'
-              icon={!isRevealed ? <Eye weight='duotone' /> : <EyeClosed weight='duotone' />}
-              onClick={handleReveal}
-              css={{
-                paddingTop: '0.3rem !important',
-                paddingBottom: '0.3rem !important',
-                lineHeight: '1',
-                marginLeft: '$2',
-              }}>
-              {isRevealed ? 'Hide' : 'Show'}
-            </Button>
-          )}
+      id={props.id}>
+      <InputCoreStyled disabled={props.disabled} state={props.success ? 'success' : props.warning ? 'warning' : props.error ? 'error' : 'default'}>
+        <InputAreaStyled
+          css={props.css}
+          ref={props.mustRef || undefined}
+          disabled={props.disabled}
+          onChange={handleChange}
+          placeholder={props.placeholder}
+          type={isRevealed ? 'text' : props.type || 'text'}
+          value={value}
+        />
+        {(props.loading || props.submit || props.copy || props.reveal) && (
+          <InputFunctionStyled>
+            {props.loading && <Loading />}
+            {props.copy && (
+              <Button
+                small
+                ariaLabel='Copy'
+                name='copy'
+                icon={isCopied ? <ClipboardText opacity={0.4} weight='duotone' /> : <ClipboardText weight='duotone' />}
+                onClick={handleCopy}
+                css={{
+                  lineHeight: '1',
+                  marginLeft: '$2',
+                }}>
+                Copy
+              </Button>
+            )}
+            {props.reveal && (
+              <Button
+                ariaLabel='Reveal'
+                small
+                name='reveal'
+                icon={!isRevealed ? <Eye weight='duotone' /> : <EyeClosed weight='duotone' />}
+                onClick={handleReveal}
+                css={{
+                  lineHeight: '1',
+                  marginLeft: '$2',
+                }}>
+                {isRevealed ? 'Hide' : 'Show'}
+              </Button>
+            )}
 
-          {props.submit && props.submitFunction && (
-            <Button
-              ariaLabel='Submit'
-              name='submit'
-              disabled={!props.submitValid}
-              onClick={(): void => props.submitFunction(value)}
-              css={{
-                paddingTop: '0.3rem !important',
-                paddingBottom: '0.3rem !important',
-                lineHeight: '1',
-                marginLeft: '$2',
-              }}>
-              {props.submit}
-            </Button>
-          )}
-        </InputFunctionStyled>
-      )}
+            {props.submit && props.submitFunction && (
+              <Button
+                small
+                ariaLabel='Submit'
+                name='submit'
+                disabled={!props.submitValid}
+                onClick={(): void => props.submitFunction(value)}
+                css={{
+                  lineHeight: '1',
+                  marginLeft: '$2',
+                }}>
+                {props.submit}
+              </Button>
+            )}
+          </InputFunctionStyled>
+        )}
+      </InputCoreStyled>
+      <InputCallbackStyled>
+        {props.error && !props.success && !props.warning && (
+          <Badge icon={<Warning weight='duotone' />} theme='red' css={{ backgroundColor: 'transparent', padding: 0 }}>
+            {props.errorMessage || 'Error'}
+          </Badge>
+        )}
+        {props.success && !props.error && !props.warning && (
+          <Badge icon={<Check weight='duotone' />} theme='green' css={{ backgroundColor: 'transparent', padding: 0 }}>
+            {props.successMessage || 'Success'}
+          </Badge>
+        )}
+        {props.warning && !props.success && !props.error && (
+          <Badge icon={<Warning weight='duotone' />} theme='orange' css={{ backgroundColor: 'transparent', padding: 0 }}>
+            {props.warningMessage || 'Invalid'}
+          </Badge>
+        )}
+      </InputCallbackStyled>
     </InputStyled>
   );
 }

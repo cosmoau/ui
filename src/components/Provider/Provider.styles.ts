@@ -1,7 +1,7 @@
 import { globalCss, lightTheme, styled, theme } from '../../stitches.config';
 
 export const ProviderStyled = styled('div', {
-  background: '$background',
+  backgroundColor: '$background',
   color: '$text',
   minHeight: '100vh',
   position: 'relative',
@@ -57,11 +57,11 @@ export const reset = globalCss({
     padding: 0,
 
     [`.${theme}`]: {
-      background: '$background',
+      backgroundColor: '$background',
       color: '$text',
     },
     [`.${lightTheme}`]: {
-      background: '$background',
+      backgroundColor: '$background',
       color: '$text',
     },
   },
@@ -82,7 +82,7 @@ export const reset = globalCss({
     WebkitAppearance: 'none',
     WebkitFontSmoothing: 'antialiased',
     appearance: 'none',
-    background: 'transparent',
+    backgroundColor: 'transparent',
     border: 0,
     cursor: 'pointer',
     font: '$default',

@@ -5,22 +5,24 @@ export const TableStyled = styled('table', {
     alignContent: 'center',
     verticalAlign: 'middle',
   },
-  borderRadius: '$1',
-  borderSpacing: 0,
-  display: 'inline-table',
+  borderSpacing: '$1',
   fontSize: '1.5rem',
   overflowX: 'auto',
-
-  [breakpoints.phone]: {
-    display: 'flex-table',
-    minWidth: '100%',
-    paddingBottom: '$3',
-  },
   width: '100%',
+  minWidth: '100%',
+  maxWidth: '100%',
+  tableLayout: 'fixed',
+  borderCollapse: 'separate',
+
+  [breakpoints.tablet]: {
+    display: 'block',
+    tableLayout: 'fixed',
+  },
 });
 
 export const TableHeadStyled = styled('thead', {
-  borderBottom: '0.1rem solid $border',
+  backgroundColor: '$default',
+  borderRadius: '$2 !important',
   textAlign: 'left',
   width: '100%',
 });
@@ -44,21 +46,24 @@ export const TableCellStyled = styled('td', {
   '&:last-child': {
     textAlign: 'right',
   },
-  borderBottom: '0.1rem solid $border',
+  borderBottom: '0.1rem solid $borderHover',
   fontSize: '$h6',
-  padding: '$3 0',
-  whiteSpace: 'nowrap',
+
+  [breakpoints.tablet]: {
+    whiteSpace: 'nowrap',
+  },
+  padding: '$4',
 });
 
 export const TableHeadCellStyled = styled('th', {
   '&:last-child': {
     textAlign: 'right',
   },
-  borderBottom: '0.1rem solid $border',
+  borderBottom: '0.1rem solid $borderHover',
 
   fontSize: '$h6',
   fontWeight: 'bold',
-  padding: '$3 0',
+  padding: '$4 0.5rem',
 });
 
 export default TableStyled;

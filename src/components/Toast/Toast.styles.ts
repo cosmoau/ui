@@ -1,7 +1,7 @@
 import { fadeIn, fadeOut, styled } from '../../stitches.config';
 
 export const ToastStyled = styled('div', {
-  background: '$background',
+  backgroundColor: '$background',
   border: '0.1rem solid $border',
   borderRadius: '$1',
   boxShadow: '$3',
@@ -27,7 +27,7 @@ export const ToastStyled = styled('div', {
     },
     theme: {
       default: {
-        background: '$background',
+        backgroundColor: '$background',
       },
       error: {
         borderColor: '$orangeBorder',

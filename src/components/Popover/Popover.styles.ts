@@ -16,7 +16,7 @@ export const PopoverTriggerStyled = styled('div', {
 });
 
 export const PopoverContentStyled = styled('div', {
-  background: '$background',
+  backgroundColor: '$background',
   border: '0.1rem solid $border',
   borderRadius: '$1',
   boxShadow: '$3',

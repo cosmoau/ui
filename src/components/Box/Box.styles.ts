@@ -12,7 +12,7 @@ export const paddingVariants = {
 };
 export const BoxStyled = styled('div', {
   border: '0.1rem solid transparent',
-  borderRadius: '$1',
+  borderRadius: '$2',
   display: 'block',
   height: '100%',
   margin: 0,
@@ -35,28 +35,31 @@ export const BoxStyled = styled('div', {
     },
 
     theme: {
-      border: {
-        background: 'transparent',
+      default: {
+        backgroundColor: 'transparent',
         borderColor: '$border',
       },
-      default: {
-        background: '$default',
-      },
       error: {
-        background: '$redOverlay',
+        borderColor: '$redBorder',
+        backgroundColor: '$redOverlay',
         color: '$redText',
       },
+      fill: {
+        backgroundColor: '$default',
+      },
       success: {
-        background: '$greenOverlay',
+        backgroundColor: '$greenOverlay',
         color: '$greenText',
+        borderColor: '$greenBorder',
       },
       transparent: {
-        background: 'transparent',
+        backgroundColor: 'transparent',
         borderColor: 'transparent',
       },
       warning: {
-        background: '$orangeOverlay',
+        backgroundColor: '$orangeOverlay',
         color: '$orangeText',
+        borderColor: '$orangeBorder',
       },
     },
     ...paddingVariants,
