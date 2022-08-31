@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 
 import { breakpoints, DefaultProps } from '../../stitches.config';
 
-import { StackColumnStyled, StackRowStyled } from './Stack.styles';
+import { StackColumnStyled, StackRowStyled, StackElementStyled } from './Stack.styles';
 
 export interface Props extends Omit<DefaultProps, 'spacing'> {
   children: ReactNode;
@@ -24,6 +24,7 @@ export interface Props extends Omit<DefaultProps, 'spacing'> {
   widthWide?: number;
   top?: DefaultProps['spacing'];
   bottom?: DefaultProps['spacing'];
+  flexduo?: boolean;
 }
 
 export default function Stack(props: Props): JSX.Element {
@@ -51,7 +52,7 @@ export default function Stack(props: Props): JSX.Element {
       id={props.id}>
       {props.children}
     </StackRowStyled>
-  ) : (
+  ) : props.direction === 'column' ? (
     <StackColumnStyled
       css={{
         ...(props.top && {
@@ -102,5 +103,11 @@ export default function Stack(props: Props): JSX.Element {
       id={props.id}>
       {props.children}
     </StackColumnStyled>
+  ) : (
+    <StackElementStyled css={props.css} id={props.id} flexduo>
+      {props.children}
+    </StackElementStyled>
   );
 }
+
+export const Element = Stack;

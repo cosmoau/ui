@@ -28,7 +28,7 @@ export default function Code(props: Props): JSX.Element {
     <CodeStyled css={props.css}>
       <CodeFunctionStyled>
         {props.copy && (
-          <Button icon={isCopied ? <ClipboardText opacity={0.4} weight='duotone' /> : <ClipboardText weight='duotone' />} onClick={handleCopy}>
+          <Button ariaLabel='Copy' name='copy' icon={isCopied ? <ClipboardText opacity={0.4} weight='duotone' /> : <ClipboardText weight='duotone' />} onClick={handleCopy}>
             Copy
           </Button>
         )}

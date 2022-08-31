@@ -14,7 +14,6 @@ By [@dolmios](https://github.com/dolmios).
 
 ### Development
 
-    yarn watch
     yarn playground
 
 ### Compile

@@ -35,3 +35,6 @@ export default function Toast(props: ToasterProps): JSX.Element {
     </ToastContainerStyled>
   );
 }
+
+// export react-hot-toast to hook
+export { toast };

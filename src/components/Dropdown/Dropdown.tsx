@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useRouter } from 'next/router';
 import React, { ReactNode, useRef, useState } from 'react';
 import { useEventListener, useLockedBody, useOnClickOutside } from 'usehooks-ts';
@@ -15,6 +14,7 @@ export interface Props extends DefaultProps {
 
   align?: 'left' | 'right' | 'center';
   width?: number | string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   actions?: any;
   trigger: ReactNode;
   active?: string;
@@ -59,6 +59,7 @@ export default function Dropdown(props: Props): JSX.Element {
     handleClose();
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleActions = (value: string, label: string): any => {
     props.actions(value, label);
     handleClose();

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { ReactNode } from 'react';
 import { useDarkMode } from 'usehooks-ts';
 
@@ -11,7 +10,9 @@ export interface Props extends DefaultProps {
   children: ReactNode | ReactNode[];
   default?: 'dark' | 'light';
   locked?: 'dark' | 'light';
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   trigger?: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   triggerActive?: any;
 }
 

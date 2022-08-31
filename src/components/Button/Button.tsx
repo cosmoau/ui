@@ -15,11 +15,15 @@ export interface Props extends HTMLAttributes<HTMLButtonElement>, Omit<DefaultPr
   iconPosition?: 'left' | 'right';
   inline?: DefaultProps['spacing'] | 'auto';
   small?: boolean;
+  ariaLabel: string;
+  name: string;
 }
 
 export default function Button(props: Props): JSX.Element {
   return (
     <ButtonStyled
+      aria-label={props.ariaLabel}
+      name={props.name}
       block={props.block || false}
       css={{
         ...props.css,

@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
 import { DefaultProps } from '../../stitches.config';
-import { Element } from '../Element';
 export interface Props extends DefaultProps {
     children: ReactNode;
 }

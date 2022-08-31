@@ -20,6 +20,8 @@ export interface Props extends Omit<DefaultProps, 'spacing'> {
     widthWide?: number;
     top?: DefaultProps['spacing'];
     bottom?: DefaultProps['spacing'];
+    flexduo?: boolean;
 }
 export default function Stack(props: Props): JSX.Element;
+export declare const Element: typeof Stack;
 //# sourceMappingURL=Stack.d.ts.map

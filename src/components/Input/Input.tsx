@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Check, ClipboardText, Eye, EyeClosed, Warning } from 'phosphor-react';
 import React, { InputHTMLAttributes, useState } from 'react';
 
@@ -16,6 +15,7 @@ export interface Props extends InputHTMLAttributes<HTMLInputElement>, DefaultPro
   loading?: boolean;
   reveal?: boolean;
   submit?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   submitFunction?: any;
   submitValid?: boolean;
   success?: boolean;
@@ -24,6 +24,7 @@ export interface Props extends InputHTMLAttributes<HTMLInputElement>, DefaultPro
   warningMessage?: string;
   disabled?: boolean;
   maxWidth?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   mustRef?: any;
 }
 
@@ -112,6 +113,8 @@ export default function Input(props: Props): JSX.Element {
           {props.loading && <Loading />}
           {props.copy && (
             <Button
+              ariaLabel='Copy'
+              name='copy'
               icon={isCopied ? <ClipboardText opacity={0.4} weight='duotone' /> : <ClipboardText weight='duotone' />}
               onClick={handleCopy}
               css={{
@@ -125,6 +128,8 @@ export default function Input(props: Props): JSX.Element {
           )}
           {props.reveal && (
             <Button
+              ariaLabel='Reveal'
+              name='reveal'
               icon={!isRevealed ? <Eye weight='duotone' /> : <EyeClosed weight='duotone' />}
               onClick={handleReveal}
               css={{
@@ -139,6 +144,8 @@ export default function Input(props: Props): JSX.Element {
 
           {props.submit && props.submitFunction && (
             <Button
+              ariaLabel='Submit'
+              name='submit'
               disabled={!props.submitValid}
               onClick={(): void => props.submitFunction(value)}
               css={{
