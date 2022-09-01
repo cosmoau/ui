@@ -104,7 +104,24 @@ export default function Stack(props: Props): JSX.Element {
       {props.children}
     </StackColumnStyled>
   ) : (
-    <StackElementStyled css={props.css} flexduo={props.flexduo} id={props.id}>
+    <StackElementStyled
+      css={{
+        ...props.css,
+        ...(props.top && {
+          paddingTop: `$${props.top}`,
+          [breakpoints.phone]: {
+            paddingTop: props.top !== ('8' || '9') ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.8)`,
+          },
+        }),
+        ...(props.bottom && {
+          [breakpoints.phone]: {
+            paddingBottom: props.bottom !== ('8' || '9') ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.8)`,
+          },
+          paddingBottom: `$${props.bottom}`,
+        }),
+      }}
+      flexduo={props.flexduo}
+      id={props.id}>
       {props.children}
     </StackElementStyled>
   );

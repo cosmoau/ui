@@ -81,13 +81,13 @@ export const TextStyled = styled('div', {
         lineHeight: '$h4',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h4 * 0.85)',
+          fontSize: 'calc($h4 * 0.875)',
         },
         [breakpoints.tabletX]: {
           fontSize: 'calc($h4 * 0.9)',
         },
         [breakpoints.laptopX]: {
-          fontSize: 'calc($h4 * 0.95)',
+          fontSize: 'calc($h4 * 0.925)',
         },
       },
       h5: {
@@ -99,13 +99,13 @@ export const TextStyled = styled('div', {
         lineHeight: '$h5',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h5 * 0.85)',
+          fontSize: 'calc($h5 * 0.9)',
         },
         [breakpoints.tabletX]: {
           fontSize: 'calc($h5 * 0.9)',
         },
         [breakpoints.laptopX]: {
-          fontSize: 'calc($h5 * 0.95)',
+          fontSize: 'calc($h5 * 0.9)',
         },
       },
       h6: {

@@ -307,7 +307,7 @@ export declare const StackElementStyled: import("@stitches/react/types/styled-co
                 '*': {
                     alignSelf: string;
                     marginBottom: string;
-                    marginTop: string;
+                    marginTOp: string;
                     verticalAlign: string;
                 };
                 alignItems: string;
@@ -467,5 +467,5 @@ export declare const StackElementStyled: import("@stitches/react/types/styled-co
         [x: string]: unknown;
     };
 }>>;
-export default StackColumnStyled;
+export default StackElementStyled;
 //# sourceMappingURL=Stack.styles.d.ts.map

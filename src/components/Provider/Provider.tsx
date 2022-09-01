@@ -17,14 +17,15 @@ export interface Props extends DefaultProps {
 }
 
 export default function Provider(props: Props): JSX.Element {
-  const { isDarkMode } = useDarkMode(props.default === 'dark');
+  const { isDarkMode } = useDarkMode(!props.locked && props.default === 'dark');
 
   reset();
-
-  const activeTheme = props.locked ? (props.locked === 'dark' ? theme : lightTheme) : isDarkMode ? theme : lightTheme;
+  const locked = props.locked === 'dark' ? theme : lightTheme;
+  const auto = isDarkMode ? theme : lightTheme;
+  const active = props.locked ? locked : auto;
 
   return (
-    <ProviderStyled className={activeTheme} css={props.css}>
+    <ProviderStyled className={active} css={props.css}>
       <Toast />
       {props.children}
     </ProviderStyled>

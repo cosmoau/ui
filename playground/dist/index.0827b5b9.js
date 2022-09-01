@@ -28798,8 +28798,8 @@ function hasMatch(domains, remotePatterns, url) {
 }
 
 },{"next/dist/compiled/micromatch":"7gTyg"}],"7gTyg":[function(require,module,exports) {
-var process = require("process");
 var __dirname = "node_modules/next/dist/compiled/micromatch";
+var process = require("process");
 (()=>{
     "use strict";
     var e = {
@@ -33437,8 +33437,8 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             blueBorder: "rgba(115, 172, 255, 0.4)",
             blueOverlay: "rgba(151, 193, 255, 0.2)",
             blueText: "rgb(166, 179, 255)",
-            border: "rgba(253, 250, 246, 0.2)",
-            borderHover: "rgba(253, 250, 246, 0.1)",
+            border: "rgba(253, 250, 246, 0.1)",
+            borderHover: "rgba(253, 250, 246, 0.05)",
             default: "rgba(253, 250, 246, 0.04)",
             defaultHover: "rgba(253, 250, 246, 0.08)",
             greenBorder: "rgba(0, 200, 83, 0.4)",
@@ -33499,9 +33499,9 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             3: "1.2rem"
         },
         shadows: {
-            1: "0 0.3rem 0.4rem 0 rgba(253, 250, 246, 0.075)",
-            2: "0 0.3rem 0.4rem 0 rgba(253, 250, 246, 0.15)",
-            3: "0 0.3rem 0.4rem 0.2rem rgba(253, 250, 246, 0.2)"
+            1: "0 0.3rem 0.4rem 0 rgba(253, 250, 246, 0.05)",
+            2: "0 0.3rem 0.4rem 0 rgba(253, 250, 246, 0.075)",
+            3: "0 0.3rem 0.4rem 0.2rem rgba(253, 250, 246, 0.1)"
         },
         space: {
             1: "0.25rem",
@@ -46471,23 +46471,25 @@ var _providerStyles = require("./Provider.styles");
 var _s = $RefreshSig$(), _s1 = $RefreshSig$();
 function Provider(props) {
     _s();
-    const { isDarkMode  } = (0, _usehooksTs.useDarkMode)(props.default === "dark");
+    const { isDarkMode  } = (0, _usehooksTs.useDarkMode)(!props.locked && props.default === "dark");
     (0, _providerStyles.reset)();
-    const activeTheme = props.locked ? props.locked === "dark" ? (0, _stitchesConfig.theme) : (0, _stitchesConfig.lightTheme) : isDarkMode ? (0, _stitchesConfig.theme) : (0, _stitchesConfig.lightTheme);
+    const locked = props.locked === "dark" ? (0, _stitchesConfig.theme) : (0, _stitchesConfig.lightTheme);
+    const auto = isDarkMode ? (0, _stitchesConfig.theme) : (0, _stitchesConfig.lightTheme);
+    const active = props.locked ? locked : auto;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _providerStyles.ProviderStyled), {
-        className: activeTheme,
+        className: active,
         css: props.css,
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toast.Toast), {}, void 0, false, {
                 fileName: "src/components/Provider/Provider.tsx",
-                lineNumber: 28,
+                lineNumber: 29,
                 columnNumber: 7
             }, this),
             props.children
         ]
     }, void 0, true, {
         fileName: "src/components/Provider/Provider.tsx",
-        lineNumber: 27,
+        lineNumber: 28,
         columnNumber: 5
     }, this);
 }
@@ -46508,7 +46510,7 @@ function ProviderToggle(props) {
         children: isDarkMode ? props.triggerActive || props.trigger : props.trigger
     }, void 0, false, {
         fileName: "src/components/Provider/Provider.tsx",
-        lineNumber: 40,
+        lineNumber: 41,
         columnNumber: 5
     }, this);
 }
@@ -46527,7 +46529,7 @@ $RefreshReg$(_c1, "ProviderToggle");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","usehooks-ts":"dmUe4","../../stitches.config":"iMNz3","../Toast":"64Cun","./Provider.styles":"JKoG4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"64Cun":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","usehooks-ts":"dmUe4","../Toast":"64Cun","./Provider.styles":"JKoG4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../stitches.config":"iMNz3"}],"64Cun":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Toast", ()=>(0, _toastDefault.default));
@@ -47520,7 +47522,21 @@ function Stack(props) {
         lineNumber: 56,
         columnNumber: 5
     }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stackStyles.StackElementStyled), {
-        css: props.css,
+        css: {
+            ...props.css,
+            ...props.top && {
+                paddingTop: `$${props.top}`,
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.8)`
+                }
+            },
+            ...props.bottom && {
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.8)`
+                },
+                paddingBottom: `$${props.bottom}`
+            }
+        },
         flexduo: props.flexduo,
         id: props.id,
         children: props.children
@@ -47573,14 +47589,13 @@ const StackColumnStyled = (0, _stitchesConfig.styled)("div", {
 const StackElementStyled = (0, _stitchesConfig.styled)("div", {
     marginBlockEnd: 0,
     marginBlockStart: 0,
-    marginInlineEnd: 0,
     variants: {
         flexduo: {
             true: {
                 "*": {
                     alignSelf: "center",
                     marginBottom: "0 !important",
-                    marginTop: "0 !important",
+                    marginTOp: "0 !important",
                     verticalAlign: "middle"
                 },
                 alignItems: "center",
@@ -47591,7 +47606,7 @@ const StackElementStyled = (0, _stitchesConfig.styled)("div", {
         }
     }
 });
-exports.default = StackColumnStyled;
+exports.default = StackElementStyled;
 
 },{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kTnYg":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -47928,13 +47943,13 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontWeight: "$h4",
                 lineHeight: "$h4",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h4 * 0.85)"
+                    fontSize: "calc($h4 * 0.875)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h4 * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($h4 * 0.95)"
+                    fontSize: "calc($h4 * 0.925)"
                 }
             },
             h5: {
@@ -47945,13 +47960,13 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontWeight: "$h5",
                 lineHeight: "$h5",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h5 * 0.85)"
+                    fontSize: "calc($h5 * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h5 * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($h5 * 0.95)"
+                    fontSize: "calc($h5 * 0.9)"
                 }
             },
             h6: {

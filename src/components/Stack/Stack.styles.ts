@@ -35,7 +35,7 @@ export const StackElementStyled = styled('div', {
         '*': {
           alignSelf: 'center',
           marginBottom: '0 !important',
-          marginTop: '0 !important',
+          marginTOp: '0 !important',
           verticalAlign: 'middle',
         },
         alignItems: 'center',
@@ -47,4 +47,4 @@ export const StackElementStyled = styled('div', {
   },
 });
 
-export default StackColumnStyled;
+export default StackElementStyled;

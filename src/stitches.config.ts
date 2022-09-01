@@ -19,8 +19,8 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       blueBorder: 'rgba(115, 172, 255, 0.4)',
       blueOverlay: 'rgba(151, 193, 255, 0.2)',
       blueText: 'rgb(166, 179, 255)',
-      border: 'rgba(253, 250, 246, 0.2)',
-      borderHover: 'rgba(253, 250, 246, 0.1)',
+      border: 'rgba(253, 250, 246, 0.1)',
+      borderHover: 'rgba(253, 250, 246, 0.05)',
       default: 'rgba(253, 250, 246, 0.04)',
       defaultHover: 'rgba(253, 250, 246, 0.08)',
       greenBorder: 'rgba(0, 200, 83, 0.4)',
@@ -81,9 +81,9 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       3: '1.2rem',
     },
     shadows: {
-      1: '0 0.3rem 0.4rem 0 rgba(253, 250, 246, 0.075)',
-      2: '0 0.3rem 0.4rem 0 rgba(253, 250, 246, 0.15)',
-      3: '0 0.3rem 0.4rem 0.2rem rgba(253, 250, 246, 0.2)',
+      1: '0 0.3rem 0.4rem 0 rgba(253, 250, 246, 0.05)',
+      2: '0 0.3rem 0.4rem 0 rgba(253, 250, 246, 0.075)',
+      3: '0 0.3rem 0.4rem 0.2rem rgba(253, 250, 246, 0.1)',
     },
     space: {
       1: '0.25rem',
