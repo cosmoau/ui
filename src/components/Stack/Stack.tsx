@@ -104,7 +104,7 @@ export default function Stack(props: Props): JSX.Element {
       {props.children}
     </StackColumnStyled>
   ) : (
-    <StackElementStyled css={props.css} id={props.id} flexduo={props.flexduo}>
+    <StackElementStyled css={props.css} flexduo={props.flexduo} id={props.id}>
       {props.children}
     </StackElementStyled>
   );

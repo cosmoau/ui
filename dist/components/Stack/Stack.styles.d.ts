@@ -2,9 +2,7 @@ export declare const StackRowStyled: import("@stitches/react/types/styled-compon
     colors: {
         accent: string;
         background: string;
-        inverted: string;
         blueBorder: string;
-        blueCTA: string;
         blueOverlay: string;
         blueText: string;
         border: string;
@@ -14,6 +12,7 @@ export declare const StackRowStyled: import("@stitches/react/types/styled-compon
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -77,9 +76,9 @@ export declare const StackRowStyled: import("@stitches/react/types/styled-compon
         3: string;
     };
     shadows: {
-        1: number;
-        2: number;
-        3: number;
+        1: string;
+        2: string;
+        3: string;
     };
     space: {
         1: string;
@@ -153,9 +152,7 @@ export declare const StackColumnStyled: import("@stitches/react/types/styled-com
     colors: {
         accent: string;
         background: string;
-        inverted: string;
         blueBorder: string;
-        blueCTA: string;
         blueOverlay: string;
         blueText: string;
         border: string;
@@ -165,6 +162,7 @@ export declare const StackColumnStyled: import("@stitches/react/types/styled-com
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -228,9 +226,9 @@ export declare const StackColumnStyled: import("@stitches/react/types/styled-com
         3: string;
     };
     shadows: {
-        1: number;
-        2: number;
-        3: number;
+        1: string;
+        2: string;
+        3: string;
     };
     space: {
         1: string;
@@ -303,6 +301,7 @@ export declare const StackColumnStyled: import("@stitches/react/types/styled-com
 export declare const StackElementStyled: import("@stitches/react/types/styled-component").StyledComponent<"div", import("@stitches/react/types/styled-component").StyledComponentProps<[{
     marginBlockEnd: number;
     marginBlockStart: number;
+    marginInlineEnd: number;
     variants: {
         flexduo: {
             true: {
@@ -323,9 +322,7 @@ export declare const StackElementStyled: import("@stitches/react/types/styled-co
     colors: {
         accent: string;
         background: string;
-        inverted: string;
         blueBorder: string;
-        blueCTA: string;
         blueOverlay: string;
         blueText: string;
         border: string;
@@ -335,6 +332,7 @@ export declare const StackElementStyled: import("@stitches/react/types/styled-co
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -398,9 +396,9 @@ export declare const StackElementStyled: import("@stitches/react/types/styled-co
         3: string;
     };
     shadows: {
-        1: number;
-        2: number;
-        3: number;
+        1: string;
+        2: string;
+        3: string;
     };
     space: {
         1: string;

@@ -44,16 +44,16 @@ export default function Table(props: Props): JSX.Element {
           {props.headChildren.map((child, index) => (
             <TableHeadCellStyled key={index} onClick={(): void => handleSort(index)}>
               <Button
-                theme='minimal'
                 ariaLabel='Sort'
-                iconPosition='right'
-                name='sort'
-                icon={sortBy === index ? sortDirection === 'asc' ? <SortAscending /> : <SortDescending /> : <FunnelSimple />}
                 css={{
                   svg: {
                     opacity: sortBy === index ? 1 : 0.2,
                   },
-                }}>
+                }}
+                icon={sortBy === index ? sortDirection === 'asc' ? <SortAscending /> : <SortDescending /> : <FunnelSimple />}
+                iconPosition='right'
+                name='sort'
+                theme='minimal'>
                 {child}
               </Button>
             </TableHeadCellStyled>

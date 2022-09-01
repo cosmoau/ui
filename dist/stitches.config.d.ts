@@ -17,35 +17,30 @@ export declare const theme: string & {
     colors: {
         accent: import("@stitches/react/types/theme").Token<"accent", string, "colors", "">;
         background: import("@stitches/react/types/theme").Token<"background", string, "colors", "">;
-        inverted: import("@stitches/react/types/theme").Token<"inverted", string, "colors", "">;
+        blueBorder: import("@stitches/react/types/theme").Token<"blueBorder", string, "colors", "">;
+        blueOverlay: import("@stitches/react/types/theme").Token<"blueOverlay", string, "colors", "">;
+        blueText: import("@stitches/react/types/theme").Token<"blueText", string, "colors", "">;
         border: import("@stitches/react/types/theme").Token<"border", string, "colors", "">;
         borderHover: import("@stitches/react/types/theme").Token<"borderHover", string, "colors", "">;
         default: import("@stitches/react/types/theme").Token<"default", string, "colors", "">;
         defaultHover: import("@stitches/react/types/theme").Token<"defaultHover", string, "colors", "">;
-        redBorder: import("@stitches/react/types/theme").Token<"redBorder", string, "colors", "">;
-        redOverlay: import("@stitches/react/types/theme").Token<"redOverlay", string, "colors", "">;
-        redText: import("@stitches/react/types/theme").Token<"redText", string, "colors", "">;
         greenBorder: import("@stitches/react/types/theme").Token<"greenBorder", string, "colors", "">;
         greenOverlay: import("@stitches/react/types/theme").Token<"greenOverlay", string, "colors", "">;
         greenText: import("@stitches/react/types/theme").Token<"greenText", string, "colors", "">;
+        inverted: import("@stitches/react/types/theme").Token<"inverted", string, "colors", "">;
         orangeBorder: import("@stitches/react/types/theme").Token<"orangeBorder", string, "colors", "">;
         orangeOverlay: import("@stitches/react/types/theme").Token<"orangeOverlay", string, "colors", "">;
         orangeText: import("@stitches/react/types/theme").Token<"orangeText", string, "colors", "">;
-        purpleBorder: import("@stitches/react/types/theme").Token<"purpleBorder", string, "colors", "">;
-        purpleOverlay: import("@stitches/react/types/theme").Token<"purpleOverlay", string, "colors", "">;
-        purpleText: import("@stitches/react/types/theme").Token<"purpleText", string, "colors", "">;
         pinkBorder: import("@stitches/react/types/theme").Token<"pinkBorder", string, "colors", "">;
         pinkOverlay: import("@stitches/react/types/theme").Token<"pinkOverlay", string, "colors", "">;
         pinkText: import("@stitches/react/types/theme").Token<"pinkText", string, "colors", "">;
-        blueBorder: import("@stitches/react/types/theme").Token<"blueBorder", string, "colors", "">;
-        blueOverlay: import("@stitches/react/types/theme").Token<"blueOverlay", string, "colors", "">;
-        blueText: import("@stitches/react/types/theme").Token<"blueText", string, "colors", "">;
+        purpleBorder: import("@stitches/react/types/theme").Token<"purpleBorder", string, "colors", "">;
+        purpleOverlay: import("@stitches/react/types/theme").Token<"purpleOverlay", string, "colors", "">;
+        purpleText: import("@stitches/react/types/theme").Token<"purpleText", string, "colors", "">;
+        redBorder: import("@stitches/react/types/theme").Token<"redBorder", string, "colors", "">;
+        redOverlay: import("@stitches/react/types/theme").Token<"redOverlay", string, "colors", "">;
+        redText: import("@stitches/react/types/theme").Token<"redText", string, "colors", "">;
         text: import("@stitches/react/types/theme").Token<"text", string, "colors", "">;
-    };
-    shadows: {
-        1: import("@stitches/react/types/theme").Token<"1", string, "shadows", "">;
-        2: import("@stitches/react/types/theme").Token<"2", string, "shadows", "">;
-        3: import("@stitches/react/types/theme").Token<"3", string, "shadows", "">;
     };
     fontSizes: {
         h1: import("@stitches/react/types/theme").Token<"h1", string, "fontSizes", "">;
@@ -95,6 +90,11 @@ export declare const theme: string & {
         2: import("@stitches/react/types/theme").Token<"2", string, "radii", "">;
         3: import("@stitches/react/types/theme").Token<"3", string, "radii", "">;
     };
+    shadows: {
+        1: import("@stitches/react/types/theme").Token<"1", string, "shadows", "">;
+        2: import("@stitches/react/types/theme").Token<"2", string, "shadows", "">;
+        3: import("@stitches/react/types/theme").Token<"3", string, "shadows", "">;
+    };
     space: {
         1: import("@stitches/react/types/theme").Token<"1", string, "space", "">;
         2: import("@stitches/react/types/theme").Token<"2", string, "space", "">;
@@ -120,35 +120,30 @@ export declare const theme: string & {
     colors: {
         accent: string;
         background: string;
-        inverted: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        purpleBorder: string;
-        purpleOverlay: string;
-        purpleText: string;
         pinkBorder: string;
         pinkOverlay: string;
         pinkText: string;
-        blueBorder: string;
-        blueOverlay: string;
-        blueText: string;
+        purpleBorder: string;
+        purpleOverlay: string;
+        purpleText: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         text: string;
-    };
-    shadows: {
-        1: string;
-        2: string;
-        3: string;
     };
     fontSizes: {
         h1: string;
@@ -194,6 +189,11 @@ export declare const theme: string & {
         wide: string;
     };
     radii: {
+        1: string;
+        2: string;
+        3: string;
+    };
+    shadows: {
         1: string;
         2: string;
         3: string;
@@ -282,35 +282,30 @@ export declare const theme: string & {
     colors: {
         accent: string;
         background: string;
-        inverted: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        purpleBorder: string;
-        purpleOverlay: string;
-        purpleText: string;
         pinkBorder: string;
         pinkOverlay: string;
         pinkText: string;
-        blueBorder: string;
-        blueOverlay: string;
-        blueText: string;
+        purpleBorder: string;
+        purpleOverlay: string;
+        purpleText: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         text: string;
-    };
-    shadows: {
-        1: string;
-        2: string;
-        3: string;
     };
     fontSizes: {
         h1: string;
@@ -356,6 +351,11 @@ export declare const theme: string & {
         wide: string;
     };
     radii: {
+        1: string;
+        2: string;
+        3: string;
+    };
+    shadows: {
         1: string;
         2: string;
         3: string;
@@ -442,35 +442,30 @@ export declare const theme: string & {
     colors: {
         accent: string;
         background: string;
-        inverted: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        purpleBorder: string;
-        purpleOverlay: string;
-        purpleText: string;
         pinkBorder: string;
         pinkOverlay: string;
         pinkText: string;
-        blueBorder: string;
-        blueOverlay: string;
-        blueText: string;
+        purpleBorder: string;
+        purpleOverlay: string;
+        purpleText: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         text: string;
-    };
-    shadows: {
-        1: string;
-        2: string;
-        3: string;
     };
     fontSizes: {
         h1: string;
@@ -516,6 +511,11 @@ export declare const theme: string & {
         wide: string;
     };
     radii: {
+        1: string;
+        2: string;
+        3: string;
+    };
+    shadows: {
         1: string;
         2: string;
         3: string;
@@ -597,35 +597,30 @@ export declare const theme: string & {
         colors: {
             accent: string;
             background: string;
-            inverted: string;
+            blueBorder: string;
+            blueOverlay: string;
+            blueText: string;
             border: string;
             borderHover: string;
             default: string;
             defaultHover: string;
-            redBorder: string;
-            redOverlay: string;
-            redText: string;
             greenBorder: string;
             greenOverlay: string;
             greenText: string;
+            inverted: string;
             orangeBorder: string;
             orangeOverlay: string;
             orangeText: string;
-            purpleBorder: string;
-            purpleOverlay: string;
-            purpleText: string;
             pinkBorder: string;
             pinkOverlay: string;
             pinkText: string;
-            blueBorder: string;
-            blueOverlay: string;
-            blueText: string;
+            purpleBorder: string;
+            purpleOverlay: string;
+            purpleText: string;
+            redBorder: string;
+            redOverlay: string;
+            redText: string;
             text: string;
-        };
-        shadows: {
-            1: string;
-            2: string;
-            3: string;
         };
         fontSizes: {
             h1: string;
@@ -671,6 +666,11 @@ export declare const theme: string & {
             wide: string;
         };
         radii: {
+            1: string;
+            2: string;
+            3: string;
+        };
+        shadows: {
             1: string;
             2: string;
             3: string;
@@ -747,35 +747,30 @@ export declare const theme: string & {
     colors: {
         accent: string;
         background: string;
-        inverted: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        purpleBorder: string;
-        purpleOverlay: string;
-        purpleText: string;
         pinkBorder: string;
         pinkOverlay: string;
         pinkText: string;
-        blueBorder: string;
-        blueOverlay: string;
-        blueText: string;
+        purpleBorder: string;
+        purpleOverlay: string;
+        purpleText: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         text: string;
-    };
-    shadows: {
-        1: string;
-        2: string;
-        3: string;
     };
     fontSizes: {
         h1: string;
@@ -821,6 +816,11 @@ export declare const theme: string & {
         wide: string;
     };
     radii: {
+        1: string;
+        2: string;
+        3: string;
+    };
+    shadows: {
         1: string;
         2: string;
         3: string;
@@ -897,35 +897,30 @@ export declare const theme: string & {
         colors: {
             accent: string;
             background: string;
-            inverted: string;
+            blueBorder: string;
+            blueOverlay: string;
+            blueText: string;
             border: string;
             borderHover: string;
             default: string;
             defaultHover: string;
-            redBorder: string;
-            redOverlay: string;
-            redText: string;
             greenBorder: string;
             greenOverlay: string;
             greenText: string;
+            inverted: string;
             orangeBorder: string;
             orangeOverlay: string;
             orangeText: string;
-            purpleBorder: string;
-            purpleOverlay: string;
-            purpleText: string;
             pinkBorder: string;
             pinkOverlay: string;
             pinkText: string;
-            blueBorder: string;
-            blueOverlay: string;
-            blueText: string;
+            purpleBorder: string;
+            purpleOverlay: string;
+            purpleText: string;
+            redBorder: string;
+            redOverlay: string;
+            redText: string;
             text: string;
-        };
-        shadows: {
-            1: string;
-            2: string;
-            3: string;
         };
         fontSizes: {
             h1: string;
@@ -971,6 +966,11 @@ export declare const theme: string & {
             wide: string;
         };
         radii: {
+            1: string;
+            2: string;
+            3: string;
+        };
+        shadows: {
             1: string;
             2: string;
             3: string;
@@ -1054,10 +1054,16 @@ export declare const lightTheme: string & {
     colors: {
         accent: string;
         background: string;
+        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
+        greenText: string;
+        orangeText: string;
+        pinkText: string;
+        purpleText: string;
+        redText: string;
         text: string;
     };
     shadows: {

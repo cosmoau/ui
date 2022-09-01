@@ -11,7 +11,7 @@ export interface Props extends HTMLAttributes<HTMLButtonElement>, Omit<DefaultPr
     inline?: DefaultProps['spacing'] | 'auto';
     small?: boolean;
     ariaLabel: string;
-    name: string;
+    name?: string;
 }
 export default function Button(props: Props): JSX.Element;
 //# sourceMappingURL=Button.d.ts.map

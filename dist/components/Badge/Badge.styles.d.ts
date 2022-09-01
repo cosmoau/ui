@@ -117,35 +117,30 @@ export declare const BadgeStyled: import("@stitches/react/types/styled-component
     colors: {
         accent: string;
         background: string;
-        inverted: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        purpleBorder: string;
-        purpleOverlay: string;
-        purpleText: string;
         pinkBorder: string;
         pinkOverlay: string;
         pinkText: string;
-        blueBorder: string;
-        blueOverlay: string;
-        blueText: string;
+        purpleBorder: string;
+        purpleOverlay: string;
+        purpleText: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         text: string;
-    };
-    shadows: {
-        1: string;
-        2: string;
-        3: string;
     };
     fontSizes: {
         h1: string;
@@ -191,6 +186,11 @@ export declare const BadgeStyled: import("@stitches/react/types/styled-component
         wide: string;
     };
     radii: {
+        1: string;
+        2: string;
+        3: string;
+    };
+    shadows: {
         1: string;
         2: string;
         3: string;
@@ -280,35 +280,30 @@ export declare const BadgeIconStyled: import("@stitches/react/types/styled-compo
     colors: {
         accent: string;
         background: string;
-        inverted: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        purpleBorder: string;
-        purpleOverlay: string;
-        purpleText: string;
         pinkBorder: string;
         pinkOverlay: string;
         pinkText: string;
-        blueBorder: string;
-        blueOverlay: string;
-        blueText: string;
+        purpleBorder: string;
+        purpleOverlay: string;
+        purpleText: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         text: string;
-    };
-    shadows: {
-        1: string;
-        2: string;
-        3: string;
     };
     fontSizes: {
         h1: string;
@@ -354,6 +349,11 @@ export declare const BadgeIconStyled: import("@stitches/react/types/styled-compo
         wide: string;
     };
     radii: {
+        1: string;
+        2: string;
+        3: string;
+    };
+    shadows: {
         1: string;
         2: string;
         3: string;
@@ -431,9 +431,9 @@ export declare const BadgeDotStyled: import("@stitches/react/types/styled-compon
     paddingRight: string;
     svg: {
         height: string;
-        width: string;
         marginTop: string;
         verticalAlign: string;
+        width: string;
     };
     variants: {
         dotColor: {
@@ -473,35 +473,30 @@ export declare const BadgeDotStyled: import("@stitches/react/types/styled-compon
     colors: {
         accent: string;
         background: string;
-        inverted: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        purpleBorder: string;
-        purpleOverlay: string;
-        purpleText: string;
         pinkBorder: string;
         pinkOverlay: string;
         pinkText: string;
-        blueBorder: string;
-        blueOverlay: string;
-        blueText: string;
+        purpleBorder: string;
+        purpleOverlay: string;
+        purpleText: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         text: string;
-    };
-    shadows: {
-        1: string;
-        2: string;
-        3: string;
     };
     fontSizes: {
         h1: string;
@@ -547,6 +542,11 @@ export declare const BadgeDotStyled: import("@stitches/react/types/styled-compon
         wide: string;
     };
     radii: {
+        1: string;
+        2: string;
+        3: string;
+    };
+    shadows: {
         1: string;
         2: string;
         3: string;

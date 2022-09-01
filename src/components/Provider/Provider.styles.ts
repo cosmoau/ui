@@ -17,7 +17,6 @@ export const ProviderTriggerStyled = styled('div', {
 });
 
 export const reset = globalCss({
-  '@import': 'url("https://xxxjddzdqkdtyqtywwfi.supabase.co/storage/v1/object/public/public/webfont.css")',
   '*': {
     MozOsxFontSmoothing: 'grayscale',
     WebkitAppearance: 'none',
@@ -41,6 +40,7 @@ export const reset = globalCss({
   '*:before': {
     boxSizing: 'inherit',
   },
+  '@import': 'url("https://xxxjddzdqkdtyqtywwfi.supabase.co/storage/v1/object/public/public/webfont.css")',
   a: {
     color: 'inherit',
     textDecoration: 'none',

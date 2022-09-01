@@ -2,35 +2,30 @@ export declare const PopoverStyled: import("@stitches/react/types/styled-compone
     colors: {
         accent: string;
         background: string;
-        inverted: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        purpleBorder: string;
-        purpleOverlay: string;
-        purpleText: string;
         pinkBorder: string;
         pinkOverlay: string;
         pinkText: string;
-        blueBorder: string;
-        blueOverlay: string;
-        blueText: string;
+        purpleBorder: string;
+        purpleOverlay: string;
+        purpleText: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         text: string;
-    };
-    shadows: {
-        1: string;
-        2: string;
-        3: string;
     };
     fontSizes: {
         h1: string;
@@ -76,6 +71,11 @@ export declare const PopoverStyled: import("@stitches/react/types/styled-compone
         wide: string;
     };
     radii: {
+        1: string;
+        2: string;
+        3: string;
+    };
+    shadows: {
         1: string;
         2: string;
         3: string;
@@ -152,35 +152,30 @@ export declare const PopoverTriggerStyled: import("@stitches/react/types/styled-
     colors: {
         accent: string;
         background: string;
-        inverted: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        purpleBorder: string;
-        purpleOverlay: string;
-        purpleText: string;
         pinkBorder: string;
         pinkOverlay: string;
         pinkText: string;
-        blueBorder: string;
-        blueOverlay: string;
-        blueText: string;
+        purpleBorder: string;
+        purpleOverlay: string;
+        purpleText: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         text: string;
-    };
-    shadows: {
-        1: string;
-        2: string;
-        3: string;
     };
     fontSizes: {
         h1: string;
@@ -226,6 +221,11 @@ export declare const PopoverTriggerStyled: import("@stitches/react/types/styled-
         wide: string;
     };
     radii: {
+        1: string;
+        2: string;
+        3: string;
+    };
+    shadows: {
         1: string;
         2: string;
         3: string;
@@ -331,35 +331,30 @@ export declare const PopoverContentStyled: import("@stitches/react/types/styled-
     colors: {
         accent: string;
         background: string;
-        inverted: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        purpleBorder: string;
-        purpleOverlay: string;
-        purpleText: string;
         pinkBorder: string;
         pinkOverlay: string;
         pinkText: string;
-        blueBorder: string;
-        blueOverlay: string;
-        blueText: string;
+        purpleBorder: string;
+        purpleOverlay: string;
+        purpleText: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         text: string;
-    };
-    shadows: {
-        1: string;
-        2: string;
-        3: string;
     };
     fontSizes: {
         h1: string;
@@ -405,6 +400,11 @@ export declare const PopoverContentStyled: import("@stitches/react/types/styled-
         wide: string;
     };
     radii: {
+        1: string;
+        2: string;
+        3: string;
+    };
+    shadows: {
         1: string;
         2: string;
         3: string;

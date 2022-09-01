@@ -4,28 +4,29 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         opacity: number;
     };
     '&:hover': {
+        backgroundColor: string;
         borderColor: string;
         boxShadow: string;
-        backgroundColor: string;
         color: string;
+    };
+    a: {
+        display: string;
     };
     alignContent: string;
     alignItems: string;
     border: string;
     borderRadius: string;
+    boxShadow: string;
+    color: string;
+    display: string;
     fontSize: string;
     lineHeight: string;
     padding: string;
-    boxShadow: string;
-    color: string;
     svg: {
         alignSelf: string;
         height: string;
         verticalAlign: string;
         width: string;
-    };
-    a: {
-        display: string;
     };
     transition: string;
     variants: {
@@ -45,6 +46,7 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         };
         theme: {
             default: {
+                borderColor: string;
                 boxShadow: string;
             };
             fill: {
@@ -52,8 +54,8 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
             };
             minimal: {
                 backgroundColor: string;
-                boxShadow: string;
                 borderColor: string;
+                boxShadow: string;
             };
             solid: {
                 backgroundColor: string;
@@ -66,35 +68,30 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
     colors: {
         accent: string;
         background: string;
-        inverted: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        purpleBorder: string;
-        purpleOverlay: string;
-        purpleText: string;
         pinkBorder: string;
         pinkOverlay: string;
         pinkText: string;
-        blueBorder: string;
-        blueOverlay: string;
-        blueText: string;
+        purpleBorder: string;
+        purpleOverlay: string;
+        purpleText: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         text: string;
-    };
-    shadows: {
-        1: string;
-        2: string;
-        3: string;
     };
     fontSizes: {
         h1: string;
@@ -140,6 +137,11 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         wide: string;
     };
     radii: {
+        1: string;
+        2: string;
+        3: string;
+    };
+    shadows: {
         1: string;
         2: string;
         3: string;
@@ -232,35 +234,30 @@ export declare const ButtonIconStyled: import("@stitches/react/types/styled-comp
     colors: {
         accent: string;
         background: string;
-        inverted: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        purpleBorder: string;
-        purpleOverlay: string;
-        purpleText: string;
         pinkBorder: string;
         pinkOverlay: string;
         pinkText: string;
-        blueBorder: string;
-        blueOverlay: string;
-        blueText: string;
+        purpleBorder: string;
+        purpleOverlay: string;
+        purpleText: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         text: string;
-    };
-    shadows: {
-        1: string;
-        2: string;
-        3: string;
     };
     fontSizes: {
         h1: string;
@@ -306,6 +303,11 @@ export declare const ButtonIconStyled: import("@stitches/react/types/styled-comp
         wide: string;
     };
     radii: {
+        1: string;
+        2: string;
+        3: string;
+    };
+    shadows: {
         1: string;
         2: string;
         3: string;

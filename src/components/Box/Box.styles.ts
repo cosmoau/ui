@@ -40,8 +40,8 @@ export const BoxStyled = styled('div', {
         borderColor: '$border',
       },
       error: {
-        borderColor: '$redBorder',
         backgroundColor: '$redOverlay',
+        borderColor: '$redBorder',
         color: '$redText',
       },
       fill: {
@@ -49,8 +49,8 @@ export const BoxStyled = styled('div', {
       },
       success: {
         backgroundColor: '$greenOverlay',
-        color: '$greenText',
         borderColor: '$greenBorder',
+        color: '$greenText',
       },
       transparent: {
         backgroundColor: 'transparent',
@@ -58,8 +58,8 @@ export const BoxStyled = styled('div', {
       },
       warning: {
         backgroundColor: '$orangeOverlay',
-        color: '$orangeText',
         borderColor: '$orangeBorder',
+        color: '$orangeText',
       },
     },
     ...paddingVariants,

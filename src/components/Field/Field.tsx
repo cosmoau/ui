@@ -79,13 +79,13 @@ export default function Field(props: Props): JSX.Element {
             </Badge>
           )}
           {props.copy && (
-            <Button ariaLabel='Copy' name='copy' icon={isCopied ? <ClipboardText opacity={0.4} weight='duotone' /> : <ClipboardText weight='duotone' />} onClick={handleCopy}>
+            <Button ariaLabel='Copy' icon={isCopied ? <ClipboardText opacity={0.4} weight='duotone' /> : <ClipboardText weight='duotone' />} name='copy' onClick={handleCopy}>
               Copy
             </Button>
           )}
 
           {props.submit && props.submitFunction && (
-            <Button ariaLabel='Submit' name='submit' disabled={!props.submitValid} onClick={(): void => props.submitFunction(value)}>
+            <Button ariaLabel='Submit' disabled={!props.submitValid} name='submit' onClick={(): void => props.submitFunction(value)}>
               {props.submit}
             </Button>
           )}

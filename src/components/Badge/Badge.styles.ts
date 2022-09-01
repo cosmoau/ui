@@ -101,9 +101,9 @@ export const BadgeDotStyled = styled('span', {
 
   svg: {
     height: '1rem',
-    width: '1rem',
     marginTop: '-0.2rem',
     verticalAlign: 'middle',
+    width: '1rem',
   },
 
   variants: {

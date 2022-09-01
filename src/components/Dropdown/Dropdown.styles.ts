@@ -81,4 +81,4 @@ export const DropdownItemStyled = styled('div', {
   },
 });
 
-export default { DropdownStyled };
+export default DropdownStyled;

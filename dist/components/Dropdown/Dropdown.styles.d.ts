@@ -2,35 +2,30 @@ export declare const DropdownStyled: import("@stitches/react/types/styled-compon
     colors: {
         accent: string;
         background: string;
-        inverted: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        purpleBorder: string;
-        purpleOverlay: string;
-        purpleText: string;
         pinkBorder: string;
         pinkOverlay: string;
         pinkText: string;
-        blueBorder: string;
-        blueOverlay: string;
-        blueText: string;
+        purpleBorder: string;
+        purpleOverlay: string;
+        purpleText: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         text: string;
-    };
-    shadows: {
-        1: string;
-        2: string;
-        3: string;
     };
     fontSizes: {
         h1: string;
@@ -76,6 +71,11 @@ export declare const DropdownStyled: import("@stitches/react/types/styled-compon
         wide: string;
     };
     radii: {
+        1: string;
+        2: string;
+        3: string;
+    };
+    shadows: {
         1: string;
         2: string;
         3: string;
@@ -152,35 +152,30 @@ export declare const DropdownTriggerStyled: import("@stitches/react/types/styled
     colors: {
         accent: string;
         background: string;
-        inverted: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        purpleBorder: string;
-        purpleOverlay: string;
-        purpleText: string;
         pinkBorder: string;
         pinkOverlay: string;
         pinkText: string;
-        blueBorder: string;
-        blueOverlay: string;
-        blueText: string;
+        purpleBorder: string;
+        purpleOverlay: string;
+        purpleText: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         text: string;
-    };
-    shadows: {
-        1: string;
-        2: string;
-        3: string;
     };
     fontSizes: {
         h1: string;
@@ -226,6 +221,11 @@ export declare const DropdownTriggerStyled: import("@stitches/react/types/styled
         wide: string;
     };
     radii: {
+        1: string;
+        2: string;
+        3: string;
+    };
+    shadows: {
         1: string;
         2: string;
         3: string;
@@ -328,35 +328,30 @@ export declare const DropdownGroupStyled: import("@stitches/react/types/styled-c
     colors: {
         accent: string;
         background: string;
-        inverted: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        purpleBorder: string;
-        purpleOverlay: string;
-        purpleText: string;
         pinkBorder: string;
         pinkOverlay: string;
         pinkText: string;
-        blueBorder: string;
-        blueOverlay: string;
-        blueText: string;
+        purpleBorder: string;
+        purpleOverlay: string;
+        purpleText: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         text: string;
-    };
-    shadows: {
-        1: string;
-        2: string;
-        3: string;
     };
     fontSizes: {
         h1: string;
@@ -402,6 +397,11 @@ export declare const DropdownGroupStyled: import("@stitches/react/types/styled-c
         wide: string;
     };
     radii: {
+        1: string;
+        2: string;
+        3: string;
+    };
+    shadows: {
         1: string;
         2: string;
         3: string;
@@ -513,35 +513,30 @@ export declare const DropdownItemStyled: import("@stitches/react/types/styled-co
     colors: {
         accent: string;
         background: string;
-        inverted: string;
+        blueBorder: string;
+        blueOverlay: string;
+        blueText: string;
         border: string;
         borderHover: string;
         default: string;
         defaultHover: string;
-        redBorder: string;
-        redOverlay: string;
-        redText: string;
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
-        purpleBorder: string;
-        purpleOverlay: string;
-        purpleText: string;
         pinkBorder: string;
         pinkOverlay: string;
         pinkText: string;
-        blueBorder: string;
-        blueOverlay: string;
-        blueText: string;
+        purpleBorder: string;
+        purpleOverlay: string;
+        purpleText: string;
+        redBorder: string;
+        redOverlay: string;
+        redText: string;
         text: string;
-    };
-    shadows: {
-        1: string;
-        2: string;
-        3: string;
     };
     fontSizes: {
         h1: string;
@@ -587,6 +582,11 @@ export declare const DropdownItemStyled: import("@stitches/react/types/styled-co
         wide: string;
     };
     radii: {
+        1: string;
+        2: string;
+        3: string;
+    };
+    shadows: {
         1: string;
         2: string;
         3: string;
@@ -659,157 +659,5 @@ export declare const DropdownItemStyled: import("@stitches/react/types/styled-co
         [x: string]: unknown;
     };
 }>>;
-declare const _default: {
-    DropdownStyled: import("@stitches/react/types/styled-component").StyledComponent<"div", {}, {}, import("@stitches/react/types/css-util").CSS<{}, {
-        colors: {
-            accent: string;
-            background: string;
-            inverted: string;
-            border: string;
-            borderHover: string;
-            default: string;
-            defaultHover: string;
-            redBorder: string;
-            redOverlay: string;
-            redText: string;
-            greenBorder: string;
-            greenOverlay: string;
-            greenText: string;
-            orangeBorder: string;
-            orangeOverlay: string;
-            orangeText: string;
-            purpleBorder: string;
-            purpleOverlay: string;
-            purpleText: string;
-            pinkBorder: string;
-            pinkOverlay: string;
-            pinkText: string;
-            blueBorder: string;
-            blueOverlay: string;
-            blueText: string;
-            text: string;
-        };
-        shadows: {
-            1: string;
-            2: string;
-            3: string;
-        };
-        fontSizes: {
-            h1: string;
-            h2: string;
-            h3: string;
-            h4: string;
-            h5: string;
-            h6: string;
-            p: string;
-            small: string;
-        };
-        fontWeights: {
-            h1: string;
-            h2: string;
-            h3: string;
-            h4: string;
-            h5: string;
-            h6: string;
-            p: string;
-            small: string;
-        };
-        fonts: {
-            default: string;
-        };
-        lineHeights: {
-            h1: string;
-            h2: string;
-            h3: string;
-            h4: string;
-            h5: string;
-            h6: string;
-            p: string;
-            small: string;
-        };
-        media: {
-            desktop: string;
-            desktopX: string;
-            laptop: string;
-            laptopX: string;
-            phone: string;
-            tablet: string;
-            tabletX: string;
-            wide: string;
-        };
-        radii: {
-            1: string;
-            2: string;
-            3: string;
-        };
-        space: {
-            1: string;
-            2: string;
-            3: string;
-            4: string;
-            5: string;
-            6: string;
-            7: string;
-            8: string;
-        };
-        transitions: {
-            default: string;
-        };
-        zIndices: {
-            dialog: number;
-            dropdown: number;
-            popover: number;
-            toast: number;
-        };
-    }, import("@stitches/react/types/config").DefaultThemeMap, {
-        desktop: (value: unknown) => {
-            [x: string]: unknown;
-        };
-        desktopX: (value: unknown) => {
-            [x: string]: unknown;
-        };
-        hidden: (value: "desktop" | "desktopX" | "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "wide") => {
-            [x: string]: {
-                display: string;
-            };
-        };
-        hiddenInline: (value: "desktop" | "desktopX" | "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "wide") => {
-            [x: string]: string | {
-                display: string;
-            };
-            display: string;
-        };
-        laptop: (value: unknown) => {
-            [x: string]: unknown;
-        };
-        laptopX: (value: unknown) => {
-            [x: string]: unknown;
-        };
-        phone: (value: unknown) => {
-            [x: string]: unknown;
-        };
-        tablet: (value: unknown) => {
-            [x: string]: unknown;
-        };
-        tabletX: (value: unknown) => {
-            [x: string]: unknown;
-        };
-        visible: (value: "desktop" | "desktopX" | "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "wide") => {
-            [x: string]: string | {
-                display: string;
-            };
-            display: string;
-        };
-        visibleInline: (value: "desktop" | "desktopX" | "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "wide") => {
-            [x: string]: string | {
-                display: string;
-            };
-            display: string;
-        };
-        wide: (value: unknown) => {
-            [x: string]: unknown;
-        };
-    }>>;
-};
-export default _default;
+export default DropdownStyled;
 //# sourceMappingURL=Dropdown.styles.d.ts.map

@@ -41,9 +41,7 @@ export declare const ImageStyled: import("@stitches/react/types/styled-component
     colors: {
         accent: string;
         background: string;
-        inverted: string;
         blueBorder: string;
-        blueCTA: string;
         blueOverlay: string;
         blueText: string;
         border: string;
@@ -53,6 +51,7 @@ export declare const ImageStyled: import("@stitches/react/types/styled-component
         greenBorder: string;
         greenOverlay: string;
         greenText: string;
+        inverted: string;
         orangeBorder: string;
         orangeOverlay: string;
         orangeText: string;
@@ -116,9 +115,9 @@ export declare const ImageStyled: import("@stitches/react/types/styled-component
         3: string;
     };
     shadows: {
-        1: number;
-        2: number;
-        3: number;
+        1: string;
+        2: string;
+        3: string;
     };
     space: {
         1: string;

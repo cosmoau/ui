@@ -27088,7 +27088,6 @@ var _index = require("../src/index");
 function App() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Provider), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.View), {
-            inverted: true,
             container: true,
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
                 direction: "row",
@@ -27096,60 +27095,77 @@ function App() {
                 top: "4",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
                     direction: "column",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Table), {
-                        bodyChildren: [
-                            [
-                                "John DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn Doe",
-                                "32",
-                                "United States"
-                            ],
-                            [
-                                "Jane Doe",
-                                "25",
-                                "United States"
-                            ],
-                            [
-                                "John Doe",
-                                "32",
-                                "United States"
-                            ],
-                            [
-                                "Jane Doe",
-                                "25",
-                                "United States"
-                            ],
-                            [
-                                "Jane Doe",
-                                "25",
-                                "United States"
-                            ],
-                            [
-                                "Jane Doe",
-                                "25",
-                                "United States"
-                            ],
-                            [
-                                "Jane Doe",
-                                "25",
-                                "United States"
-                            ],
-                            [
-                                "Jane Doe",
-                                "25",
-                                "United States"
-                            ],
-                            [
-                                "Jane Doe",
-                                "25",
-                                "United States"
-                            ], 
-                        ]
-                    }, void 0, false, {
-                        fileName: "playground/App.tsx",
-                        lineNumber: 11,
-                        columnNumber: 13
-                    }, this)
-                }, void 0, false, {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
+                            children: "Button"
+                        }, void 0, false, {
+                            fileName: "playground/App.tsx",
+                            lineNumber: 11,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
+                            theme: "border",
+                            children: "Hey"
+                        }, void 0, false, {
+                            fileName: "playground/App.tsx",
+                            lineNumber: 12,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Table), {
+                            bodyChildren: [
+                                [
+                                    "John DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn Doe",
+                                    "32",
+                                    "United States"
+                                ],
+                                [
+                                    "Jane Doe",
+                                    "25",
+                                    "United States"
+                                ],
+                                [
+                                    "John Doe",
+                                    "32",
+                                    "United States"
+                                ],
+                                [
+                                    "Jane Doe",
+                                    "25",
+                                    "United States"
+                                ],
+                                [
+                                    "Jane Doe",
+                                    "25",
+                                    "United States"
+                                ],
+                                [
+                                    "Jane Doe",
+                                    "25",
+                                    "United States"
+                                ],
+                                [
+                                    "Jane Doe",
+                                    "25",
+                                    "United States"
+                                ],
+                                [
+                                    "Jane Doe",
+                                    "25",
+                                    "United States"
+                                ],
+                                [
+                                    "Jane Doe",
+                                    "25",
+                                    "United States"
+                                ], 
+                            ]
+                        }, void 0, false, {
+                            fileName: "playground/App.tsx",
+                            lineNumber: 13,
+                            columnNumber: 13
+                        }, this)
+                    ]
+                }, void 0, true, {
                     fileName: "playground/App.tsx",
                     lineNumber: 10,
                     columnNumber: 11
@@ -28781,8 +28797,8 @@ function hasMatch(domains, remotePatterns, url) {
 }
 
 },{"next/dist/compiled/micromatch":"7gTyg"}],"7gTyg":[function(require,module,exports) {
-var __dirname = "node_modules/next/dist/compiled/micromatch";
 var process = require("process");
+var __dirname = "node_modules/next/dist/compiled/micromatch";
 (()=>{
     "use strict";
     var e = {
@@ -33416,38 +33432,38 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             accent: "rgba(246, 250, 253, 0.7)",
             background: "rgb(10, 13, 31)",
             inverted: "rgb(8, 10, 27)",
-            border: "rgba(253, 250, 246, 0.12)",
+            border: "rgba(253, 250, 246, 0.2)",
             borderHover: "rgba(253, 250, 246, 0.1)",
             default: "rgba(253, 250, 246, 0.04)",
             defaultHover: "rgba(253, 250, 246, 0.08)",
+            greenBorder: "rgba(0, 200, 83, 0.4)",
+            greenOverlay: "rgba(101, 227, 124, 0.2)",
+            greenText: "rgb(124, 241, 151)",
+            orangeBorder: "rgba(255, 172, 115, 0.4)",
+            orangeOverlay: "rgba(255, 172, 115, 0.2)",
+            orangeText: "rgb(254, 177, 141)",
+            pinkBorder: "rgba(255, 115, 172, 0.4)",
+            pinkOverlay: "rgba(255, 115, 172, 0.2)",
+            pinkText: "rgb(255, 142, 221)",
+            purpleBorder: "rgba(172, 115, 255, 0.4)",
+            purpleOverlay: "rgba(172, 115, 255, 0.2)",
+            purpleText: "rgb(210, 142, 255)",
             redBorder: "rgba(255, 115, 115, 0.4)",
             redOverlay: "rgba(255, 115, 115, 0.2)",
-            redText: "rgb(227, 67, 52)",
-            greenBorder: "rgba(115, 255, 115, 0.4)",
-            greenOverlay: "rgba(115, 255, 115, 0.2)",
-            greenText: "rgb(55, 192, 192)",
-            orangeBorder: "rgba(255, 170, 115, 0.4)",
-            orangeOverlay: "rgba(255, 170, 115, 0.2)",
-            orangeText: "rgb(255, 166, 55)",
-            purpleBorder: "rgba(115, 115, 255, 0.4)",
-            purpleOverlay: "rgba(115, 115, 255, 0.2)",
-            purpleText: "rgb(192, 192, 255)",
-            pinkBorder: "rgba(255, 115, 255, 0.4)",
-            pinkOverlay: "rgba(255, 115, 255, 0.2)",
-            pinkText: "rgb(255, 166, 166)",
-            blueBorder: "rgba(115, 115, 255, 0.4)",
-            blueOverlay: "rgba(115, 115, 255, 0.2)",
-            blueText: "rgb(166, 166, 255)",
+            redText: "rgb(251, 127, 143)",
+            blueBorder: "rgba(115, 172, 255, 0.4)",
+            blueOverlay: "rgba(151, 193, 255, 0.2)",
+            blueText: "rgb(166, 179, 255)",
             text: "rgb(255, 255, 255)"
         },
         shadows: {
-            1: "0 0.3rem 0.4rem 0 rgba(253, 250, 246, 0.02)",
-            2: "0 0.3rem 0.4rem 0 rgba(253, 250, 246, 0.05)",
-            3: "0 0.3rem 0.4rem 0.2rem rgba(253, 250, 246, 0.05)"
+            1: "0 0.3rem 0.4rem 0 rgba(253, 250, 246, 0.075)",
+            2: "0 0.3rem 0.4rem 0 rgba(253, 250, 246, 0.15)",
+            3: "0 0.3rem 0.4rem 0.2rem rgba(253, 250, 246, 0.2)"
         },
         fontSizes: {
-            h1: "3.4rem",
-            h2: "3rem",
+            h1: "3rem",
+            h2: "2.6rem",
             h3: "2.2rem",
             h4: "1.9rem",
             h5: "1.8rem",
@@ -33472,7 +33488,7 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             h1: "1.3",
             h2: "1.3",
             h3: "1.3",
-            h4: "1.35",
+            h4: "1.3",
             h5: "1.4",
             h6: "1.4",
             p: "1.45",
@@ -33480,22 +33496,22 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
         },
         media: breakpoints,
         radii: {
-            1: "0.66rem",
-            2: "0.88rem",
-            3: "1.33rem"
+            1: "0.6rem",
+            2: "0.9rem",
+            3: "1.2rem"
         },
         space: {
-            1: "0.3rem",
+            1: "0.25rem",
             2: "0.5rem",
             3: "0.75rem",
             4: "1.25rem",
-            5: "2.25rem",
+            5: "2.5rem",
             6: "4.5rem",
-            7: "7.5rem",
-            8: "9.5rem"
+            7: "7rem",
+            8: "9rem"
         },
         transitions: {
-            default: "all 0.2s ease-in-out"
+            default: "all 0.13s ease-in-out"
         },
         zIndices: {
             dialog: 100,
@@ -33562,12 +33578,18 @@ const lightTheme = (0, _react.createTheme)({
         borderHover: "rgba(8, 10, 27, 0.12)",
         default: "rgba(8, 10, 27, 0.05)",
         defaultHover: "rgba(21, 35, 68, 0.1)",
-        text: "rgb(36, 42, 60)"
+        text: "rgb(36, 42, 60)",
+        greenText: "rgb(0, 76, 6)",
+        orangeText: "rgb(199, 84, 30)",
+        pinkText: "rgb(173, 22, 128)",
+        purpleText: "rgb(112, 23, 171)",
+        redText: "rgb(170, 28, 47)",
+        blueText: "rgb(32, 47, 136)"
     },
     shadows: {
-        1: "0 0.3rem 0.4rem 0 rgba(8, 10, 27, 0.02)",
-        2: "0 0.3rem 0.4rem 0 rgba(8, 10, 27, 0.05)",
-        3: "0 0.3rem 0.4rem 0.2rem rgba(8, 10, 27, 0.05)"
+        1: "0 0.3rem 0.4rem 0 rgba(8, 10, 27, 0.05)",
+        2: "0 0.3rem 0.4rem 0 rgba(8, 10, 27, 0.075)",
+        3: "0 0.3rem 0.4rem 0.2rem rgba(8, 10, 27, 0.1)"
     }
 });
 const fadeIn = keyframes({
@@ -40875,6 +40897,7 @@ const ButtonStyled = (0, _stitchesConfig.styled)("button", {
     border: "0.1rem solid $borderHover",
     borderRadius: "$1",
     fontSize: "1.6rem",
+    display: "inline-flex",
     lineHeight: "normal",
     padding: "$1 $4",
     boxShadow: "$1",
@@ -40906,7 +40929,8 @@ const ButtonStyled = (0, _stitchesConfig.styled)("button", {
         },
         theme: {
             default: {
-                boxShadow: "$1"
+                boxShadow: "$1",
+                borderColor: "$border"
             },
             fill: {
                 backgroundColor: "$default"
@@ -47976,7 +48000,6 @@ exports.default = ProviderStyled;
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Stack", ()=>(0, _stackDefault.default));
-parcelHelpers.export(exports, "Element", ()=>(0, _stack.Element));
 var _stack = require("./Stack");
 var _stackDefault = parcelHelpers.interopDefault(_stack);
 
@@ -48077,7 +48100,7 @@ function Stack(props) {
     }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stackStyles.StackElementStyled), {
         css: props.css,
         id: props.id,
-        flexduo: true,
+        flexduo: props.flexduo,
         children: props.children
     }, void 0, false, {
         fileName: "src/components/Stack/Stack.tsx",
@@ -48128,6 +48151,7 @@ const StackColumnStyled = (0, _stitchesConfig.styled)("div", {
 const StackElementStyled = (0, _stitchesConfig.styled)("div", {
     marginBlockEnd: 0,
     marginBlockStart: 0,
+    marginInlineEnd: 0,
     variants: {
         flexduo: {
             true: {
@@ -48411,7 +48435,6 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
     },
     color: "inherit",
     display: "block",
-    letterSpacing: "-0.01em",
     variants: {
         accent: {
             true: {
@@ -48432,10 +48455,13 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontWeight: "$h1",
                 lineHeight: "$h1",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h1 * 0.9)"
+                    fontSize: "calc($h1 * 0.925)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h1 * 0.95)"
+                },
+                [(0, _stitchesConfig.breakpoints).laptopX]: {
+                    fontSize: "calc($h1 * 0.975)"
                 }
             },
             h2: {
@@ -48446,24 +48472,30 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontWeight: "$h2",
                 lineHeight: "$h2",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h2 * 0.9)"
+                    fontSize: "calc($h2 * 0.925)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h2 * 0.95)"
+                },
+                [(0, _stitchesConfig.breakpoints).laptopX]: {
+                    fontSize: "calc($h2 * 0.975)"
                 }
             },
             h3: {
                 "&:not(:last-child)": {
-                    marginBottom: "$4"
+                    marginBottom: "$5"
                 },
                 fontSize: "$h3",
                 fontWeight: "$h3",
                 lineHeight: "$h3",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h3 * 0.9)"
+                    fontSize: "calc($h3 * 0.925)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h3 * 0.95)"
+                },
+                [(0, _stitchesConfig.breakpoints).laptopX]: {
+                    fontSize: "calc($h3 * 0.975)"
                 }
             },
             h4: {
@@ -48474,9 +48506,12 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontWeight: "$h4",
                 lineHeight: "$h4",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h4 * 0.9)"
+                    fontSize: "calc($h4 * 0.85)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($h4 * 0.9)"
+                },
+                [(0, _stitchesConfig.breakpoints).laptopX]: {
                     fontSize: "calc($h4 * 0.95)"
                 }
             },
@@ -48488,10 +48523,10 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontWeight: "$h5",
                 lineHeight: "$h5",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h5 * 0.9)"
+                    fontSize: "calc($h5 * 0.85)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h5 * 0.925)"
+                    fontSize: "calc($h5 * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
                     fontSize: "calc($h5 * 0.95)"
@@ -48505,10 +48540,10 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontWeight: "$h6",
                 lineHeight: "$h6",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h6 * 0.9)"
+                    fontSize: "calc($h6 * 0.85)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h6 * 0.925)"
+                    fontSize: "calc($h6 * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
                     fontSize: "calc($h6 * 0.95)"
@@ -48524,10 +48559,10 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 lineHeight: "$p",
                 opacity: "0.85",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($p * 0.9)"
+                    fontSize: "calc($p * 0.85)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($p * 0.925)"
+                    fontSize: "calc($p * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
                     fontSize: "calc($p * 0.95)"
@@ -48541,10 +48576,10 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontWeight: "$small",
                 lineHeight: "$small",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($small * 0.9)"
+                    fontSize: "calc($small * 0.85)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($small * 0.925)"
+                    fontSize: "calc($small * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
                     fontSize: "calc($small * 0.95)"

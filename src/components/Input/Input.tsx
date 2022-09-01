@@ -64,10 +64,10 @@ export default function Input(props: Props): JSX.Element {
       <InputCoreStyled disabled={props.disabled} state={props.success ? 'success' : props.warning ? 'warning' : props.error ? 'error' : 'default'}>
         <InputAreaStyled
           css={props.css}
-          ref={props.mustRef || undefined}
           disabled={props.disabled}
           onChange={handleChange}
           placeholder={props.placeholder}
+          ref={props.mustRef || undefined}
           type={isRevealed ? 'text' : props.type || 'text'}
           value={value}
         />
@@ -76,44 +76,44 @@ export default function Input(props: Props): JSX.Element {
             {props.loading && <Loading />}
             {props.copy && (
               <Button
-                small
                 ariaLabel='Copy'
-                name='copy'
-                icon={isCopied ? <ClipboardText opacity={0.4} weight='duotone' /> : <ClipboardText weight='duotone' />}
-                onClick={handleCopy}
                 css={{
                   lineHeight: '1',
                   marginLeft: '$2',
-                }}>
+                }}
+                icon={isCopied ? <ClipboardText opacity={0.4} weight='duotone' /> : <ClipboardText weight='duotone' />}
+                name='copy'
+                onClick={handleCopy}
+                small>
                 Copy
               </Button>
             )}
             {props.reveal && (
               <Button
                 ariaLabel='Reveal'
-                small
-                name='reveal'
-                icon={!isRevealed ? <Eye weight='duotone' /> : <EyeClosed weight='duotone' />}
-                onClick={handleReveal}
                 css={{
                   lineHeight: '1',
                   marginLeft: '$2',
-                }}>
+                }}
+                icon={!isRevealed ? <Eye weight='duotone' /> : <EyeClosed weight='duotone' />}
+                name='reveal'
+                onClick={handleReveal}
+                small>
                 {isRevealed ? 'Hide' : 'Show'}
               </Button>
             )}
 
             {props.submit && props.submitFunction && (
               <Button
-                small
                 ariaLabel='Submit'
-                name='submit'
-                disabled={!props.submitValid}
-                onClick={(): void => props.submitFunction(value)}
                 css={{
                   lineHeight: '1',
                   marginLeft: '$2',
-                }}>
+                }}
+                disabled={!props.submitValid}
+                name='submit'
+                onClick={(): void => props.submitFunction(value)}
+                small>
                 {props.submit}
               </Button>
             )}
@@ -122,17 +122,17 @@ export default function Input(props: Props): JSX.Element {
       </InputCoreStyled>
       <InputCallbackStyled>
         {props.error && !props.success && !props.warning && (
-          <Badge icon={<Warning weight='duotone' />} theme='red' css={{ backgroundColor: 'transparent', padding: 0 }}>
+          <Badge css={{ backgroundColor: 'transparent', padding: 0 }} icon={<Warning weight='duotone' />} theme='red'>
             {props.errorMessage || 'Error'}
           </Badge>
         )}
         {props.success && !props.error && !props.warning && (
-          <Badge icon={<Check weight='duotone' />} theme='green' css={{ backgroundColor: 'transparent', padding: 0 }}>
+          <Badge css={{ backgroundColor: 'transparent', padding: 0 }} icon={<Check weight='duotone' />} theme='green'>
             {props.successMessage || 'Success'}
           </Badge>
         )}
         {props.warning && !props.success && !props.error && (
-          <Badge icon={<Warning weight='duotone' />} theme='orange' css={{ backgroundColor: 'transparent', padding: 0 }}>
+          <Badge css={{ backgroundColor: 'transparent', padding: 0 }} icon={<Warning weight='duotone' />} theme='orange'>
             {props.warningMessage || 'Invalid'}
           </Badge>
         )}

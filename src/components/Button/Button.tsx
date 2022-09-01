@@ -16,14 +16,13 @@ export interface Props extends HTMLAttributes<HTMLButtonElement>, Omit<DefaultPr
   inline?: DefaultProps['spacing'] | 'auto';
   small?: boolean;
   ariaLabel: string;
-  name: string;
+  name?: string;
 }
 
 export default function Button(props: Props): JSX.Element {
   return (
     <ButtonStyled
       aria-label={props.ariaLabel}
-      name={props.name}
       block={props.block || false}
       css={{
         ...props.css,
@@ -38,6 +37,7 @@ export default function Button(props: Props): JSX.Element {
       }}
       disabled={props.disabled || props.loading || false}
       id={props.id}
+      name={props.name}
       onClick={props.onClick}
       small={props.small}
       theme={props.theme || 'default'}>

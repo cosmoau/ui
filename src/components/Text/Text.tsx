@@ -47,12 +47,12 @@ export default function Text(props: Props): JSX.Element {
           },
         }),
         ...(props.link && {
-          borderBottom: props.link === 'borderHover' ? '0.1rem solid $borderHover' : '0.1rem solid $border',
-          transition: '$default',
-
           '&:hover': {
             opacity: 0.6,
           },
+          borderBottom: props.link === 'borderHover' ? '0.1rem solid $borderHover' : '0.1rem solid $border',
+
+          transition: '$default',
         }),
       }}
       size={props.as}>

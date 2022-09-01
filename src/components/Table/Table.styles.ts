@@ -5,14 +5,14 @@ export const TableStyled = styled('table', {
     alignContent: 'center',
     verticalAlign: 'middle',
   },
+  borderCollapse: 'separate',
   borderSpacing: '$1',
   fontSize: '1.5rem',
-  overflowX: 'auto',
-  width: '100%',
-  minWidth: '100%',
   maxWidth: '100%',
+  minWidth: '100%',
+  overflowX: 'auto',
   tableLayout: 'fixed',
-  borderCollapse: 'separate',
+  width: '100%',
 
   [breakpoints.tablet]: {
     display: 'block',
