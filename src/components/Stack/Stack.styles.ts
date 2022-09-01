@@ -28,6 +28,7 @@ export const StackColumnStyled = styled('div', {
 export const StackElementStyled = styled('div', {
   marginBlockEnd: 0,
   marginBlockStart: 0,
+  marginInlineEnd: 0,
 
   variants: {
     flexduo: {

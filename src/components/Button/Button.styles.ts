@@ -16,7 +16,7 @@ export const ButtonStyled = styled('button', {
   border: '0.1rem solid $borderHover',
   borderRadius: '$1',
   fontSize: '1.6rem',
-
+  display: 'inline-flex',
   lineHeight: 'normal',
   padding: '$1 $4',
   boxShadow: '$1',
