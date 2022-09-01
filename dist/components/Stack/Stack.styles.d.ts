@@ -301,7 +301,6 @@ export declare const StackColumnStyled: import("@stitches/react/types/styled-com
 export declare const StackElementStyled: import("@stitches/react/types/styled-component").StyledComponent<"div", import("@stitches/react/types/styled-component").StyledComponentProps<[{
     marginBlockEnd: number;
     marginBlockStart: number;
-    marginInlineEnd: number;
     variants: {
         flexduo: {
             true: {
