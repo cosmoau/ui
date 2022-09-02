@@ -90,9 +90,9 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     space: {
       1: '0.25rem',
       2: '0.5rem',
-      3: '1rem',
-      4: '1.5rem',
-      5: '2.5rem',
+      3: '0.75rem',
+      4: '1rem',
+      5: '2rem',
       6: '4rem',
       7: '8rem',
       8: '10rem',
