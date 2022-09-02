@@ -48,7 +48,9 @@ export declare const ProviderStyled: import("@stitches/react/types/styled-compon
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -198,7 +200,9 @@ export declare const ProviderTriggerStyled: import("@stitches/react/types/styled
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;

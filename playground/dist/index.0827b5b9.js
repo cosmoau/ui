@@ -27096,12 +27096,20 @@ function App() {
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
                     direction: "column",
                     children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                            as: "h1",
+                            children: "Pricing"
+                        }, void 0, false, {
+                            fileName: "playground/App.tsx",
+                            lineNumber: 11,
+                            columnNumber: 13
+                        }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
                             ariaLabel: "button",
                             children: "Button"
                         }, void 0, false, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 11,
+                            lineNumber: 12,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27109,7 +27117,7 @@ function App() {
                             children: "Hey"
                         }, void 0, false, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 12,
+                            lineNumber: 13,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Table), {
@@ -27162,7 +27170,7 @@ function App() {
                             ]
                         }, void 0, false, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 13,
+                            lineNumber: 14,
                             columnNumber: 13
                         }, this)
                     ]
@@ -28798,8 +28806,8 @@ function hasMatch(domains, remotePatterns, url) {
 }
 
 },{"next/dist/compiled/micromatch":"7gTyg"}],"7gTyg":[function(require,module,exports) {
-var __dirname = "node_modules/next/dist/compiled/micromatch";
 var process = require("process");
+var __dirname = "node_modules/next/dist/compiled/micromatch";
 (()=>{
     "use strict";
     var e = {
@@ -33457,10 +33465,10 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             redBorder: "rgba(255, 115, 115, 0.4)",
             redOverlay: "rgba(255, 115, 115, 0.2)",
             redText: "rgb(251, 127, 143)",
-            text: "rgb(255, 255, 255)"
+            text: "rgb(253, 250, 246)"
         },
         fontSizes: {
-            h1: "3rem",
+            h1: "3.6rem",
             h2: "2.6rem",
             h3: "2.2rem",
             h4: "1.9rem",
@@ -33470,8 +33478,8 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             small: "1.25rem"
         },
         fontWeights: {
-            h1: "bold",
-            h2: "bold",
+            h1: "300",
+            h2: "300",
             h3: "bold",
             h4: "bold",
             h5: "normal",
@@ -33480,7 +33488,9 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             small: "normal"
         },
         fonts: {
-            default: "Untitled Sans, apple-system, sans-serif"
+            sans: "Untitled Sans, apple-system, sans-serif",
+            default: "$sans",
+            serif: "Tiempos Fine"
         },
         lineHeights: {
             h1: "1.3",
@@ -33576,7 +33586,7 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
 const lightTheme = (0, _react.createTheme)({
     colors: {
         accent: "rgb(51, 58, 82)",
-        background: "#fdfaf6",
+        background: "rgb(253, 250, 246)",
         blueText: "rgb(32, 47, 136)",
         border: "rgba(8, 10, 27,0.1)",
         borderHover: "rgba(8, 10, 27, 0.12)",
@@ -46255,7 +46265,7 @@ const InputAreaStyled = (0, _stitchesConfig.styled)("input", {
     backgroundColor: "transparent",
     border: "none",
     color: "$text",
-    fontFamily: "$default !important",
+    fontFamily: "$sans !important",
     fontSize: "16px !important",
     letterSpacing: "0",
     lineHeight: "normal",
@@ -47363,7 +47373,7 @@ const reset = (0, _stitchesConfig.globalCss)({
         backgroundColor: "inherit",
         border: 0,
         color: "$text",
-        fontFamily: "$default, sans-serif",
+        fontFamily: "$sans, sans-serif",
         fontSize: "1.6rem",
         margin: 0,
         overflowX: "hidden",
@@ -47891,6 +47901,8 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontSize: "$h1",
                 fontWeight: "$h1",
                 lineHeight: "$h1",
+                fontFamily: "$serif",
+                letterSpacing: "-0.033rem",
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     fontSize: "calc($h1 * 0.925)"
                 },
@@ -47908,6 +47920,7 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontSize: "$h2",
                 fontWeight: "$h2",
                 lineHeight: "$h2",
+                letterSpacing: "-0.033rem",
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     fontSize: "calc($h2 * 0.925)"
                 },
@@ -47925,6 +47938,7 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontSize: "$h3",
                 fontWeight: "$h3",
                 lineHeight: "$h3",
+                letterSpacing: "-0.033rem",
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     fontSize: "calc($h3 * 0.925)"
                 },
@@ -47942,6 +47956,7 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontSize: "$h4",
                 fontWeight: "$h4",
                 lineHeight: "$h4",
+                letterSpacing: "-0.033rem",
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     fontSize: "calc($h4 * 0.875)"
                 },
@@ -48479,7 +48494,7 @@ const FieldAreaStyled = (0, _stitchesConfig.styled)("textarea", {
     border: "none",
     color: "$text",
     display: "block",
-    fontFamily: "$default !important",
+    fontFamily: "$sans !important",
     fontSize: "16px !important",
     margin: "0 auto",
     padding: "$3 $4",

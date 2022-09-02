@@ -87,7 +87,9 @@ export declare const FieldStyled: import("@stitches/react/types/styled-component
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -237,7 +239,9 @@ export declare const FieldAreaStyled: import("@stitches/react/types/styled-compo
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -387,7 +391,9 @@ export declare const FieldFunctionStyled: import("@stitches/react/types/styled-c
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;

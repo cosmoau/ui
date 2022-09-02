@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 
-import { Provider, Stack, View, Table, Badge, Button } from '../src/index';
+import { Provider, Stack, View, Table, Badge, Button, Text } from '../src/index';
 
 export function App(): ReactElement {
   return (
@@ -8,6 +8,7 @@ export function App(): ReactElement {
       <View container>
         <Stack direction='row' flex='center' top='4'>
           <Stack direction='column'>
+            <Text as='h1'>Pricing</Text>
             <Button ariaLabel='button'>Button</Button>
             <Badge theme='border'>Hey</Badge>
             <Table

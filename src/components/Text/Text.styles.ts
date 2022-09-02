@@ -25,6 +25,8 @@ export const TextStyled = styled('div', {
         fontSize: '$h1',
         fontWeight: '$h1',
         lineHeight: '$h1',
+        fontFamily: '$serif',
+        letterSpacing: '-0.033rem',
 
         [breakpoints.phone]: {
           fontSize: 'calc($h1 * 0.925)',
@@ -43,6 +45,7 @@ export const TextStyled = styled('div', {
         fontSize: '$h2',
         fontWeight: '$h2',
         lineHeight: '$h2',
+        letterSpacing: '-0.033rem',
 
         [breakpoints.phone]: {
           fontSize: 'calc($h2 * 0.925)',
@@ -61,6 +64,7 @@ export const TextStyled = styled('div', {
         fontSize: '$h3',
         fontWeight: '$h3',
         lineHeight: '$h3',
+        letterSpacing: '-0.033rem',
 
         [breakpoints.phone]: {
           fontSize: 'calc($h3 * 0.925)',
@@ -79,6 +83,7 @@ export const TextStyled = styled('div', {
         fontSize: '$h4',
         fontWeight: '$h4',
         lineHeight: '$h4',
+        letterSpacing: '-0.033rem',
 
         [breakpoints.phone]: {
           fontSize: 'calc($h4 * 0.875)',

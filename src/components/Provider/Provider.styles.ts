@@ -49,7 +49,7 @@ export const reset = globalCss({
     backgroundColor: 'inherit',
     border: 0,
     color: '$text',
-    fontFamily: '$default, sans-serif',
+    fontFamily: '$sans, sans-serif',
     fontSize: '1.6rem',
     margin: 0,
     overflowX: 'hidden',

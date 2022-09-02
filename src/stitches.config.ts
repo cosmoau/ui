@@ -39,10 +39,10 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       redBorder: 'rgba(255, 115, 115, 0.4)',
       redOverlay: 'rgba(255, 115, 115, 0.2)',
       redText: 'rgb(251, 127, 143)',
-      text: 'rgb(255, 255, 255)',
+      text: 'rgb(253, 250, 246)',
     },
     fontSizes: {
-      h1: '3rem',
+      h1: '3.6rem',
       h2: '2.6rem',
       h3: '2.2rem',
       h4: '1.9rem',
@@ -52,8 +52,8 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       small: '1.25rem',
     },
     fontWeights: {
-      h1: 'bold',
-      h2: 'bold',
+      h1: '300',
+      h2: '300',
       h3: 'bold',
       h4: 'bold',
       h5: 'normal',
@@ -62,7 +62,9 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       small: 'normal',
     },
     fonts: {
-      default: 'Untitled Sans, apple-system, sans-serif',
+      sans: 'Untitled Sans, apple-system, sans-serif',
+      default: '$sans',
+      serif: 'Tiempos Fine',
     },
     lineHeights: {
       h1: '1.3',
@@ -160,7 +162,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
 export const lightTheme = createTheme({
   colors: {
     accent: 'rgb(51, 58, 82)',
-    background: '#fdfaf6',
+    background: 'rgb(253, 250, 246)',
     blueText: 'rgb(32, 47, 136)',
     border: 'rgba(8, 10, 27,0.1)',
     borderHover: 'rgba(8, 10, 27, 0.12)',

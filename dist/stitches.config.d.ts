@@ -63,7 +63,9 @@ export declare const theme: string & {
         small: import("@stitches/react/types/theme").Token<"small", string, "fontWeights", "">;
     };
     fonts: {
+        sans: import("@stitches/react/types/theme").Token<"sans", string, "fonts", "">;
         default: import("@stitches/react/types/theme").Token<"default", string, "fonts", "">;
+        serif: import("@stitches/react/types/theme").Token<"serif", string, "fonts", "">;
     };
     lineHeights: {
         h1: import("@stitches/react/types/theme").Token<"h1", string, "lineHeights", "">;
@@ -166,7 +168,9 @@ export declare const theme: string & {
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -328,7 +332,9 @@ export declare const theme: string & {
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -488,7 +494,9 @@ export declare const theme: string & {
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -643,7 +651,9 @@ export declare const theme: string & {
             small: string;
         };
         fonts: {
+            sans: string;
             default: string;
+            serif: string;
         };
         lineHeights: {
             h1: string;
@@ -793,7 +803,9 @@ export declare const theme: string & {
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -943,7 +955,9 @@ export declare const theme: string & {
             small: string;
         };
         fonts: {
+            sans: string;
             default: string;
+            serif: string;
         };
         lineHeights: {
             h1: string;

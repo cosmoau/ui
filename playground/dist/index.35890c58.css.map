@@ -1,0 +1,1 @@
+{"mappings":"AAAA","sources":["temp/index.css"],"sourcesContent":["@font-face {\n  font-family: 'Domaine';\n  src: url('./test8.woff2');\n  font-weight: 300;\n  font-style: normal;\n  font-display: swap;\n}\n"],"names":[],"version":3,"file":"index.35890c58.css.map","sourceRoot":"/__parcel_source_root/"}
