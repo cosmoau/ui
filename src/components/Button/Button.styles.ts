@@ -62,6 +62,11 @@ export const ButtonStyled = styled('button', {
       true: {
         fontSize: '$p',
         fontWeight: '$p',
+
+        svg: {
+          height: '1.5rem',
+          width: '1.5rem',
+        },
       },
     },
     theme: {
@@ -89,7 +94,7 @@ export const ButtonStyled = styled('button', {
 export const ButtonIconStyled = styled('span', {
   display: 'inline',
   svg: {
-    marginTop: '-0.5rem',
+    marginTop: '-0.6rem',
   },
   variants: {
     align: {

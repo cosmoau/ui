@@ -93,6 +93,10 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
             true: {
                 fontSize: string;
                 fontWeight: string;
+                svg: {
+                    height: string;
+                    width: string;
+                };
             };
         };
         theme: {
@@ -170,6 +174,10 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
             true: {
                 fontSize: string;
                 fontWeight: string;
+                svg: {
+                    height: string;
+                    width: string;
+                };
             };
         };
         theme: {
