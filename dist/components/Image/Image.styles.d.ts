@@ -87,7 +87,9 @@ export declare const ImageStyled: import("@stitches/react/types/styled-component
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;

@@ -24,23 +24,22 @@ export default function Text(props: Props): JSX.Element {
       css={{
         ...props.css,
         ...(props.top && {
-          paddingTop: `$${props.top}`,
+          marginTop: `$${props.top}`,
           [breakpoints.phone]: {
-            paddingTop: props.top !== ('8' || '9') ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.8)`,
+            marginTop: props.top !== ('8' || '9') ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.8)`,
           },
         }),
         ...(props.bottom && {
           [breakpoints.phone]: {
-            paddingBottom: props.bottom !== ('8' || '9') ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.8)`,
+            marginBottom: props.bottom !== ('8' || '9') ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.8)`,
           },
-          paddingBottom: `$${props.bottom}`,
+          marginBottom: `$${props.bottom}`,
         }),
         ...(props.inline && {
           alignSelf: 'center',
           display: 'inline-flex',
           marginBottom: '0 !important',
           marginRight: props.inline === 'auto' ? 'auto' : `$${props.inline}`,
-          verticalAlign: 'middle',
 
           [breakpoints.phone]: {
             marginRight: props.inline === 'auto' ? 'auto' : `calc($${props.inline} * 0.8)`,
@@ -48,10 +47,9 @@ export default function Text(props: Props): JSX.Element {
         }),
         ...(props.link && {
           '&:hover': {
-            opacity: 0.6,
+            opacity: 0.75,
           },
           borderBottom: props.link === 'borderHover' ? '0.1rem solid $borderHover' : '0.1rem solid $border',
-
           transition: '$default',
         }),
       }}

@@ -137,7 +137,6 @@ export const TextStyled = styled('div', {
         fontSize: '$p',
         fontWeight: '$p',
         lineHeight: '$p',
-        color: '$accent',
 
         [breakpoints.phone]: {
           fontSize: 'calc($p * 0.9)',
@@ -156,7 +155,6 @@ export const TextStyled = styled('div', {
         fontSize: '$small',
         fontWeight: '$small',
         lineHeight: '$small',
-        color: '$accent',
 
         [breakpoints.phone]: {
           fontSize: 'calc($small * 0.9)',
