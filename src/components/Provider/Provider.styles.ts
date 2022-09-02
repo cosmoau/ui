@@ -40,7 +40,7 @@ export const reset = globalCss({
   '*:before': {
     boxSizing: 'inherit',
   },
-  '@import': 'url("https://xxxjddzdqkdtyqtywwfi.supabase.co/storage/v1/object/public/public/webfont.css")',
+  '@import': 'url("https://xxxjddzdqkdtyqtywwfi.supabase.co/storage/v1/object/public/public/webfonts.css")',
   a: {
     color: 'inherit',
     textDecoration: 'none',

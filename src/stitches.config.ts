@@ -42,9 +42,9 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       text: 'rgb(253, 250, 246)',
     },
     fontSizes: {
-      h1: '3.6rem',
-      h2: '2.6rem',
-      h3: '2.2rem',
+      h1: '3.5rem',
+      h2: '2.7rem',
+      h3: '2.3rem',
       h4: '1.9rem',
       h5: '1.8rem',
       h6: '1.5rem',

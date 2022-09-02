@@ -19,10 +19,7 @@ export const BadgeStyled = styled('div', {
   alignItems: 'center',
   borderRadius: '$3',
   display: 'inline-flex',
-  fontSize: '1.5rem',
-  fontWeight: 'normal',
   justifyContent: 'center',
-  lineHeight: 'normal',
   padding: '$1 $4',
 
   svg: {
@@ -73,8 +70,18 @@ export const BadgeStyled = styled('div', {
     },
   },
 
+  fontSize: '$h6',
+  fontWeight: '$h6',
+  lineHeight: '$h6',
+
   [breakpoints.phone]: {
+    fontSize: 'calc($h6 * 0.875)',
+  },
+  [breakpoints.tabletX]: {
     fontSize: 'calc($h6 * 0.9)',
+  },
+  [breakpoints.laptopX]: {
+    fontSize: 'calc($h6 * 0.925)',
   },
 
   verticalAlign: 'middle',

@@ -1,4 +1,4 @@
-import { styled } from '../../stitches.config';
+import { breakpoints, styled } from '../../stitches.config';
 
 export const ButtonStyled = styled('button', {
   '&:disabled': {
@@ -21,8 +21,19 @@ export const ButtonStyled = styled('button', {
   boxShadow: '$1',
   color: '$text',
   display: 'inline-flex',
-  fontSize: '1.6rem',
-  lineHeight: 'normal',
+  fontSize: '$h5',
+  fontWeight: '$h5',
+  lineHeight: '$h5',
+
+  [breakpoints.phone]: {
+    fontSize: 'calc($h5 * 0.875)',
+  },
+  [breakpoints.tabletX]: {
+    fontSize: 'calc($h5 * 0.9)',
+  },
+  [breakpoints.laptopX]: {
+    fontSize: 'calc($h5 * 0.95)',
+  },
 
   padding: '$1 $4',
 
@@ -49,6 +60,18 @@ export const ButtonStyled = styled('button', {
     small: {
       true: {
         fontSize: '$p',
+        fontWeight: '$p',
+        lineHeight: '$p',
+
+        [breakpoints.phone]: {
+          fontSize: 'calc($p * 0.875)',
+        },
+        [breakpoints.tabletX]: {
+          fontSize: 'calc($p * 0.9)',
+        },
+        [breakpoints.laptopX]: {
+          fontSize: 'calc($p * 0.925)',
+        },
       },
     },
     theme: {

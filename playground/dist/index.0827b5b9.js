@@ -27098,7 +27098,7 @@ function App() {
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
                             as: "h1",
-                            children: "Pricing"
+                            children: "Airbnb, Stayz, Booking.com and Homes & Villas Management"
                         }, void 0, false, {
                             fileName: "playground/App.tsx",
                             lineNumber: 11,
@@ -27114,7 +27114,7 @@ function App() {
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
                             theme: "border",
-                            children: "Hey"
+                            children: "Make your short-term rental listings work for you, without the hassle"
                         }, void 0, false, {
                             fileName: "playground/App.tsx",
                             lineNumber: 13,
@@ -28806,8 +28806,8 @@ function hasMatch(domains, remotePatterns, url) {
 }
 
 },{"next/dist/compiled/micromatch":"7gTyg"}],"7gTyg":[function(require,module,exports) {
-var process = require("process");
 var __dirname = "node_modules/next/dist/compiled/micromatch";
+var process = require("process");
 (()=>{
     "use strict";
     var e = {
@@ -39911,10 +39911,7 @@ const BadgeStyled = (0, _stitchesConfig.styled)("div", {
     alignItems: "center",
     borderRadius: "$3",
     display: "inline-flex",
-    fontSize: "1.5rem",
-    fontWeight: "normal",
     justifyContent: "center",
-    lineHeight: "normal",
     padding: "$1 $4",
     svg: {
         alignSelf: "center",
@@ -39962,8 +39959,17 @@ const BadgeStyled = (0, _stitchesConfig.styled)("div", {
             }
         }
     },
+    fontSize: "$h6",
+    fontWeight: "$h6",
+    lineHeight: "$h6",
     [(0, _stitchesConfig.breakpoints).phone]: {
+        fontSize: "calc($h6 * 0.875)"
+    },
+    [(0, _stitchesConfig.breakpoints).tabletX]: {
         fontSize: "calc($h6 * 0.9)"
+    },
+    [(0, _stitchesConfig.breakpoints).laptopX]: {
+        fontSize: "calc($h6 * 0.925)"
     },
     verticalAlign: "middle"
 });
@@ -40335,8 +40341,18 @@ const ButtonStyled = (0, _stitchesConfig.styled)("button", {
     boxShadow: "$1",
     color: "$text",
     display: "inline-flex",
-    fontSize: "1.6rem",
-    lineHeight: "normal",
+    fontSize: "$h5",
+    fontWeight: "$h5",
+    lineHeight: "$h5",
+    [(0, _stitchesConfig.breakpoints).phone]: {
+        fontSize: "calc($h5 * 0.875)"
+    },
+    [(0, _stitchesConfig.breakpoints).tabletX]: {
+        fontSize: "calc($h5 * 0.9)"
+    },
+    [(0, _stitchesConfig.breakpoints).laptopX]: {
+        fontSize: "calc($h5 * 0.95)"
+    },
     padding: "$1 $4",
     svg: {
         alignSelf: "center",
@@ -40357,7 +40373,18 @@ const ButtonStyled = (0, _stitchesConfig.styled)("button", {
         },
         small: {
             true: {
-                fontSize: "$p"
+                fontSize: "$p",
+                fontWeight: "$p",
+                lineHeight: "$p",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($p * 0.875)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($p * 0.9)"
+                },
+                [(0, _stitchesConfig.breakpoints).laptopX]: {
+                    fontSize: "calc($p * 0.925)"
+                }
             }
         },
         theme: {
@@ -47364,7 +47391,7 @@ const reset = (0, _stitchesConfig.globalCss)({
     "*:before": {
         boxSizing: "inherit"
     },
-    "@import": 'url("https://xxxjddzdqkdtyqtywwfi.supabase.co/storage/v1/object/public/public/webfont.css")',
+    "@import": 'url("https://xxxjddzdqkdtyqtywwfi.supabase.co/storage/v1/object/public/public/webfonts.css")',
     a: {
         color: "inherit",
         textDecoration: "none"
@@ -47904,13 +47931,13 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontFamily: "$serif",
                 letterSpacing: "-0.033rem",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h1 * 0.925)"
+                    fontSize: "calc($h1 * 0.8)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h1 * 0.95)"
+                    fontSize: "calc($h1 * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($h1 * 0.975)"
+                    fontSize: "calc($h1 * 0.95)"
                 }
             },
             h2: {
@@ -47920,15 +47947,16 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontSize: "$h2",
                 fontWeight: "$h2",
                 lineHeight: "$h2",
+                fontFamily: "$serif",
                 letterSpacing: "-0.033rem",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h2 * 0.925)"
+                    fontSize: "calc($h2 * 0.8)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h2 * 0.95)"
+                    fontSize: "calc($h2 * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($h2 * 0.975)"
+                    fontSize: "calc($h2 * 0.95)"
                 }
             },
             h3: {
@@ -47938,6 +47966,7 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontSize: "$h3",
                 fontWeight: "$h3",
                 lineHeight: "$h3",
+                fontFamily: "$serif",
                 letterSpacing: "-0.033rem",
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     fontSize: "calc($h3 * 0.925)"
@@ -47956,7 +47985,6 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontSize: "$h4",
                 fontWeight: "$h4",
                 lineHeight: "$h4",
-                letterSpacing: "-0.033rem",
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     fontSize: "calc($h4 * 0.875)"
                 },
@@ -47975,13 +48003,13 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontWeight: "$h5",
                 lineHeight: "$h5",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h5 * 0.9)"
+                    fontSize: "calc($h5 * 0.875)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h5 * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($h5 * 0.9)"
+                    fontSize: "calc($h5 * 0.95)"
                 }
             },
             h6: {
@@ -47992,13 +48020,13 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontWeight: "$h6",
                 lineHeight: "$h6",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h6 * 0.85)"
+                    fontSize: "calc($h6 * 0.875)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h6 * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($h6 * 0.95)"
+                    fontSize: "calc($h6 * 0.925)"
                 },
                 opacity: "0.85"
             },
@@ -48011,13 +48039,13 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 lineHeight: "$p",
                 opacity: "0.85",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($p * 0.85)"
+                    fontSize: "calc($p * 0.875)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($p * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($p * 0.95)"
+                    fontSize: "calc($p * 0.925)"
                 }
             },
             small: {
@@ -48028,13 +48056,13 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontWeight: "$small",
                 lineHeight: "$small",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($small * 0.85)"
+                    fontSize: "calc($small * 0.875)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($small * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($small * 0.95)"
+                    fontSize: "calc($small * 0.925)"
                 }
             },
             span: {
