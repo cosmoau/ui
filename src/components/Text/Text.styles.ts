@@ -26,7 +26,6 @@ export const TextStyled = styled('div', {
         fontWeight: '$h1',
         lineHeight: '$h1',
         fontFamily: '$serif',
-        letterSpacing: '-0.033rem',
 
         [breakpoints.phone]: {
           fontSize: 'calc($h1 * 0.8)',
@@ -46,7 +45,6 @@ export const TextStyled = styled('div', {
         fontWeight: '$h2',
         lineHeight: '$h2',
         fontFamily: '$serif',
-        letterSpacing: '-0.033rem',
 
         [breakpoints.phone]: {
           fontSize: 'calc($h2 * 0.8)',
@@ -66,7 +64,6 @@ export const TextStyled = styled('div', {
         fontWeight: '$h3',
         lineHeight: '$h3',
         fontFamily: '$serif',
-        letterSpacing: '-0.033rem',
 
         [breakpoints.phone]: {
           fontSize: 'calc($h3 * 0.925)',
@@ -85,6 +82,7 @@ export const TextStyled = styled('div', {
         fontSize: '$h4',
         fontWeight: '$h4',
         lineHeight: '$h4',
+        fontFamily: '$serif',
 
         [breakpoints.phone]: {
           fontSize: 'calc($h4 * 0.875)',
@@ -111,7 +109,7 @@ export const TextStyled = styled('div', {
           fontSize: 'calc($h5 * 0.9)',
         },
         [breakpoints.laptopX]: {
-          fontSize: 'calc($h5 * 0.95)',
+          fontSize: 'calc($h5 * 0.925)',
         },
       },
       h6: {
@@ -131,8 +129,6 @@ export const TextStyled = styled('div', {
         [breakpoints.laptopX]: {
           fontSize: 'calc($h6 * 0.925)',
         },
-
-        opacity: '0.85',
       },
       p: {
         '&:not(:last-child)': {

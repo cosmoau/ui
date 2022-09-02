@@ -27104,12 +27104,68 @@ function App() {
                             lineNumber: 11,
                             columnNumber: 13
                         }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                            as: "h2",
+                            children: "No technical setup required."
+                        }, void 0, false, {
+                            fileName: "playground/App.tsx",
+                            lineNumber: 12,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                            as: "h3",
+                            children: "No technical setup required."
+                        }, void 0, false, {
+                            fileName: "playground/App.tsx",
+                            lineNumber: 13,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                            as: "h4",
+                            children: "No technical setup required."
+                        }, void 0, false, {
+                            fileName: "playground/App.tsx",
+                            lineNumber: 14,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                            as: "h5",
+                            children: "No technical setup required."
+                        }, void 0, false, {
+                            fileName: "playground/App.tsx",
+                            lineNumber: 15,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                            as: "h6",
+                            children: "No technical setup required."
+                        }, void 0, false, {
+                            fileName: "playground/App.tsx",
+                            lineNumber: 16,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                            as: "p",
+                            children: "No technical setup required."
+                        }, void 0, false, {
+                            fileName: "playground/App.tsx",
+                            lineNumber: 17,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                            as: "small",
+                            children: "No technical setup required."
+                        }, void 0, false, {
+                            fileName: "playground/App.tsx",
+                            lineNumber: 18,
+                            columnNumber: 13
+                        }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
                             ariaLabel: "button",
                             children: "Button"
                         }, void 0, false, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 12,
+                            lineNumber: 20,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27117,7 +27173,7 @@ function App() {
                             children: "Make your short-term rental listings work for you, without the hassle"
                         }, void 0, false, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 13,
+                            lineNumber: 21,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Table), {
@@ -27170,7 +27226,7 @@ function App() {
                             ]
                         }, void 0, false, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 14,
+                            lineNumber: 22,
                             columnNumber: 13
                         }, this)
                     ]
@@ -28806,8 +28862,8 @@ function hasMatch(domains, remotePatterns, url) {
 }
 
 },{"next/dist/compiled/micromatch":"7gTyg"}],"7gTyg":[function(require,module,exports) {
-var __dirname = "node_modules/next/dist/compiled/micromatch";
 var process = require("process");
+var __dirname = "node_modules/next/dist/compiled/micromatch";
 (()=>{
     "use strict";
     var e = {
@@ -33468,10 +33524,10 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             text: "rgb(253, 250, 246)"
         },
         fontSizes: {
-            h1: "3.6rem",
-            h2: "2.6rem",
-            h3: "2.2rem",
-            h4: "1.9rem",
+            h1: "4rem",
+            h2: "3rem",
+            h3: "2.5rem",
+            h4: "2rem",
             h5: "1.8rem",
             h6: "1.5rem",
             p: "1.4rem",
@@ -33480,12 +33536,12 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
         fontWeights: {
             h1: "300",
             h2: "300",
-            h3: "bold",
-            h4: "bold",
-            h5: "normal",
-            h6: "normal",
-            p: "normal",
-            small: "normal"
+            h3: "300",
+            h4: "300",
+            h5: "400",
+            h6: "400",
+            p: "400",
+            small: "400"
         },
         fonts: {
             sans: "Untitled Sans, apple-system, sans-serif",
@@ -33588,8 +33644,8 @@ const lightTheme = (0, _react.createTheme)({
         accent: "rgb(51, 58, 82)",
         background: "rgb(253, 250, 246)",
         blueText: "rgb(32, 47, 136)",
-        border: "rgba(8, 10, 27,0.1)",
-        borderHover: "rgba(8, 10, 27, 0.12)",
+        border: "rgba(8, 10, 27,0.12)",
+        borderHover: "rgba(8, 10, 27, 0.14)",
         default: "rgba(8, 10, 27, 0.05)",
         defaultHover: "rgba(21, 35, 68, 0.1)",
         greenText: "rgb(0, 76, 6)",
@@ -33597,12 +33653,12 @@ const lightTheme = (0, _react.createTheme)({
         pinkText: "rgb(173, 22, 128)",
         purpleText: "rgb(112, 23, 171)",
         redText: "rgb(170, 28, 47)",
-        text: "rgb(36, 42, 60)"
+        text: "rgb(10, 37, 64)"
     },
     shadows: {
-        1: "0 0.3rem 0.4rem 0 rgba(8, 10, 27, 0.05)",
-        2: "0 0.3rem 0.4rem 0 rgba(8, 10, 27, 0.075)",
-        3: "0 0.3rem 0.4rem 0.2rem rgba(8, 10, 27, 0.1)"
+        1: "0 0.2rem 0.3rem 0 rgba(8, 10, 27, 0.1)",
+        2: "0 0.4rem 0.6rem 0 rgba(8, 10, 27, 0.1)",
+        3: "0 0.6rem 0.8rem 0 rgba(8, 10, 27, 0.1)"
     }
 });
 const fadeIn = keyframes({
@@ -40339,20 +40395,12 @@ const ButtonStyled = (0, _stitchesConfig.styled)("button", {
     border: "0.1rem solid $borderHover",
     borderRadius: "$1",
     boxShadow: "$1",
+    letterSpacing: "-0.01rem",
     color: "$text",
     display: "inline-flex",
-    fontSize: "$h5",
-    fontWeight: "$h5",
-    lineHeight: "$h5",
-    [(0, _stitchesConfig.breakpoints).phone]: {
-        fontSize: "calc($h5 * 0.875)"
-    },
-    [(0, _stitchesConfig.breakpoints).tabletX]: {
-        fontSize: "calc($h5 * 0.9)"
-    },
-    [(0, _stitchesConfig.breakpoints).laptopX]: {
-        fontSize: "calc($h5 * 0.95)"
-    },
+    fontSize: "$h6",
+    fontWeight: "$h6",
+    lineHeight: "$h6",
     padding: "$1 $4",
     svg: {
         alignSelf: "center",
@@ -40389,8 +40437,7 @@ const ButtonStyled = (0, _stitchesConfig.styled)("button", {
         },
         theme: {
             default: {
-                borderColor: "$border",
-                boxShadow: "$1"
+                borderColor: "$border"
             },
             fill: {
                 backgroundColor: "$default"
@@ -47929,7 +47976,6 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontWeight: "$h1",
                 lineHeight: "$h1",
                 fontFamily: "$serif",
-                letterSpacing: "-0.033rem",
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     fontSize: "calc($h1 * 0.8)"
                 },
@@ -47948,7 +47994,6 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontWeight: "$h2",
                 lineHeight: "$h2",
                 fontFamily: "$serif",
-                letterSpacing: "-0.033rem",
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     fontSize: "calc($h2 * 0.8)"
                 },
@@ -47967,7 +48012,6 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontWeight: "$h3",
                 lineHeight: "$h3",
                 fontFamily: "$serif",
-                letterSpacing: "-0.033rem",
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     fontSize: "calc($h3 * 0.925)"
                 },
@@ -47985,6 +48029,7 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontSize: "$h4",
                 fontWeight: "$h4",
                 lineHeight: "$h4",
+                fontFamily: "$serif",
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     fontSize: "calc($h4 * 0.875)"
                 },
@@ -48009,7 +48054,7 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                     fontSize: "calc($h5 * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($h5 * 0.95)"
+                    fontSize: "calc($h5 * 0.925)"
                 }
             },
             h6: {
@@ -48027,8 +48072,7 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
                     fontSize: "calc($h6 * 0.925)"
-                },
-                opacity: "0.85"
+                }
             },
             p: {
                 "&:not(:last-child)": {
