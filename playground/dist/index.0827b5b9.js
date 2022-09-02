@@ -27096,68 +27096,88 @@ function App() {
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
                     direction: "column",
                     children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                            as: "h1",
-                            children: "Airbnb, Stayz, Booking.com and Homes & Villas Management"
-                        }, void 0, false, {
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                    as: "h1",
+                                    children: "Airbnb, Stayz, Booking.com and Homes & Villas Management"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 12,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                    as: "h2",
+                                    children: "No technical setup required."
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 13,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                    as: "h3",
+                                    children: "No technical setup required."
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 14,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                    as: "h4",
+                                    children: "No technical setup required."
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 15,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                    as: "h5",
+                                    children: "No technical setup required."
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 16,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                    as: "h6",
+                                    children: "No technical setup required."
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 17,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                    as: "p",
+                                    children: "No technical setup required."
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 18,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                    as: "small",
+                                    children: "No technical setup required."
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 19,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
+                                    align: "center",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {}, void 0, false, {
+                                        fileName: "playground/App.tsx",
+                                        lineNumber: 21,
+                                        columnNumber: 17
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 20,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
                             fileName: "playground/App.tsx",
                             lineNumber: 11,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                            as: "h2",
-                            children: "No technical setup required."
-                        }, void 0, false, {
-                            fileName: "playground/App.tsx",
-                            lineNumber: 12,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                            as: "h3",
-                            children: "No technical setup required."
-                        }, void 0, false, {
-                            fileName: "playground/App.tsx",
-                            lineNumber: 13,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                            as: "h4",
-                            children: "No technical setup required."
-                        }, void 0, false, {
-                            fileName: "playground/App.tsx",
-                            lineNumber: 14,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                            as: "h5",
-                            children: "No technical setup required."
-                        }, void 0, false, {
-                            fileName: "playground/App.tsx",
-                            lineNumber: 15,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                            as: "h6",
-                            children: "No technical setup required."
-                        }, void 0, false, {
-                            fileName: "playground/App.tsx",
-                            lineNumber: 16,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                            as: "p",
-                            children: "No technical setup required."
-                        }, void 0, false, {
-                            fileName: "playground/App.tsx",
-                            lineNumber: 17,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                            as: "small",
-                            children: "No technical setup required."
-                        }, void 0, false, {
-                            fileName: "playground/App.tsx",
-                            lineNumber: 18,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27165,7 +27185,7 @@ function App() {
                             children: "Button"
                         }, void 0, false, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 20,
+                            lineNumber: 24,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27173,7 +27193,7 @@ function App() {
                             children: "Make your short-term rental listings work for you, without the hassle"
                         }, void 0, false, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 21,
+                            lineNumber: 25,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Table), {
@@ -27226,7 +27246,7 @@ function App() {
                             ]
                         }, void 0, false, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 22,
+                            lineNumber: 26,
                             columnNumber: 13
                         }, this)
                     ]
@@ -33524,9 +33544,9 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             text: "rgb(253, 250, 246)"
         },
         fontSizes: {
-            h1: "4rem",
-            h2: "3rem",
-            h3: "2.5rem",
+            h1: "3.8rem",
+            h2: "3.2rem",
+            h3: "2.4rem",
             h4: "2rem",
             h5: "1.8rem",
             h6: "1.5rem",
@@ -33537,11 +33557,11 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             h1: "300",
             h2: "300",
             h3: "300",
-            h4: "300",
-            h5: "400",
-            h6: "400",
-            p: "400",
-            small: "400"
+            h4: "normal",
+            h5: "normal",
+            h6: "normal",
+            p: "normal",
+            small: "normal"
         },
         fonts: {
             sans: "Untitled Sans, apple-system, sans-serif",
@@ -33565,9 +33585,9 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             3: "1.2rem"
         },
         shadows: {
-            1: "0 0.3rem 0.4rem 0 rgba(253, 250, 246, 0.05)",
-            2: "0 0.3rem 0.4rem 0 rgba(253, 250, 246, 0.075)",
-            3: "0 0.3rem 0.4rem 0.2rem rgba(253, 250, 246, 0.1)"
+            1: "0 0.2rem 0.3rem 0 rgba(253, 250, 246, 0.05)",
+            2: "0 0.4rem 0.6rem 0 rgba(253, 250, 246, 0.05)",
+            3: "0 0.6rem 0.9rem 0 rgba(253, 250, 246, 0.05)"
         },
         space: {
             1: "0.25rem",
@@ -33576,8 +33596,8 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             4: "1.25rem",
             5: "2.5rem",
             6: "4.5rem",
-            7: "7rem",
-            8: "9rem"
+            7: "8.5rem",
+            8: "11rem"
         },
         transitions: {
             default: "all 0.13s ease-in-out"
@@ -33644,8 +33664,8 @@ const lightTheme = (0, _react.createTheme)({
         accent: "rgb(51, 58, 82)",
         background: "rgb(253, 250, 246)",
         blueText: "rgb(32, 47, 136)",
-        border: "rgba(8, 10, 27,0.12)",
-        borderHover: "rgba(8, 10, 27, 0.14)",
+        border: "rgba(8, 10, 27,0.1)",
+        borderHover: "rgba(8, 10, 27, 0.125)",
         default: "rgba(8, 10, 27, 0.05)",
         defaultHover: "rgba(21, 35, 68, 0.1)",
         greenText: "rgb(0, 76, 6)",
@@ -40019,13 +40039,13 @@ const BadgeStyled = (0, _stitchesConfig.styled)("div", {
     fontWeight: "$h6",
     lineHeight: "$h6",
     [(0, _stitchesConfig.breakpoints).phone]: {
-        fontSize: "calc($h6 * 0.875)"
+        fontSize: "calc($h6 * 0.925)"
     },
     [(0, _stitchesConfig.breakpoints).tabletX]: {
-        fontSize: "calc($h6 * 0.9)"
+        fontSize: "calc($h6 * 0.925)"
     },
     [(0, _stitchesConfig.breakpoints).laptopX]: {
-        fontSize: "calc($h6 * 0.925)"
+        fontSize: "calc($h6 * 0.95)"
     },
     verticalAlign: "middle"
 });
@@ -40395,12 +40415,20 @@ const ButtonStyled = (0, _stitchesConfig.styled)("button", {
     border: "0.1rem solid $borderHover",
     borderRadius: "$1",
     boxShadow: "$1",
-    letterSpacing: "-0.01rem",
     color: "$text",
     display: "inline-flex",
-    fontSize: "$h6",
-    fontWeight: "$h6",
-    lineHeight: "$h6",
+    fontSize: "$h5",
+    fontWeight: "$h5",
+    lineHeight: "normal !important",
+    [(0, _stitchesConfig.breakpoints).phone]: {
+        fontSize: "calc($h5 * 0.85)"
+    },
+    [(0, _stitchesConfig.breakpoints).tabletX]: {
+        fontSize: "calc($h5 * 0.875)"
+    },
+    [(0, _stitchesConfig.breakpoints).laptopX]: {
+        fontSize: "calc($h5 * 0.9)"
+    },
     padding: "$1 $4",
     svg: {
         alignSelf: "center",
@@ -40423,15 +40451,9 @@ const ButtonStyled = (0, _stitchesConfig.styled)("button", {
             true: {
                 fontSize: "$p",
                 fontWeight: "$p",
-                lineHeight: "$p",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($p * 0.875)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($p * 0.9)"
-                },
-                [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($p * 0.925)"
+                svg: {
+                    height: "1.5rem",
+                    width: "1.5rem"
                 }
             }
         },
@@ -40458,7 +40480,7 @@ const ButtonStyled = (0, _stitchesConfig.styled)("button", {
 const ButtonIconStyled = (0, _stitchesConfig.styled)("span", {
     display: "inline",
     svg: {
-        marginTop: "-0.5rem"
+        marginTop: "-0.6rem"
     },
     variants: {
         align: {
@@ -46277,7 +46299,7 @@ $RefreshReg$(_c, "Input");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","../Badge":"egHOx","../Button":"i3jlU","../Loading":"gWqOi","./Input.styles":"crIMc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"crIMc":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","../Button":"i3jlU","../Loading":"gWqOi","./Input.styles":"crIMc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Badge":"egHOx"}],"crIMc":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "InputStyled", ()=>InputStyled);
@@ -46546,6 +46568,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ThemeProvider", ()=>ThemeProvider);
 parcelHelpers.export(exports, "ProviderToggle", ()=>ProviderToggle);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _phosphorReact = require("phosphor-react");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _usehooksTs = require("usehooks-ts");
@@ -46563,17 +46586,27 @@ function Provider(props) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _providerStyles.ProviderStyled), {
         className: active,
         css: props.css,
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toast.Toast), {}, void 0, false, {
-                fileName: "src/components/Provider/Provider.tsx",
-                lineNumber: 29,
-                columnNumber: 7
-            }, this),
-            props.children
-        ]
-    }, void 0, true, {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.IconContext).Provider, {
+            value: {
+                weight: "duotone",
+                mirrored: false
+            },
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toast.Toast), {}, void 0, false, {
+                    fileName: "src/components/Provider/Provider.tsx",
+                    lineNumber: 31,
+                    columnNumber: 9
+                }, this),
+                props.children
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Provider/Provider.tsx",
+            lineNumber: 30,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
         fileName: "src/components/Provider/Provider.tsx",
-        lineNumber: 28,
+        lineNumber: 29,
         columnNumber: 5
     }, this);
 }
@@ -46594,7 +46627,7 @@ function ProviderToggle(props) {
         children: isDarkMode ? props.triggerActive || props.trigger : props.trigger
     }, void 0, false, {
         fileName: "src/components/Provider/Provider.tsx",
-        lineNumber: 41,
+        lineNumber: 44,
         columnNumber: 5
     }, this);
 }
@@ -46613,7 +46646,7 @@ $RefreshReg$(_c1, "ProviderToggle");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","usehooks-ts":"dmUe4","../Toast":"64Cun","./Provider.styles":"JKoG4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../stitches.config":"iMNz3"}],"64Cun":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","usehooks-ts":"dmUe4","../Toast":"64Cun","./Provider.styles":"JKoG4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../stitches.config":"iMNz3","phosphor-react":"zkmAe"}],"64Cun":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Toast", ()=>(0, _toastDefault.default));
@@ -47608,6 +47641,7 @@ function Stack(props) {
     }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stackStyles.StackElementStyled), {
         css: {
             ...props.css,
+            textAlign: props.align,
             ...props.top && {
                 paddingTop: `$${props.top}`,
                 [(0, _stitchesConfig.breakpoints).phone]: {
@@ -47977,7 +48011,7 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 lineHeight: "$h1",
                 fontFamily: "$serif",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h1 * 0.8)"
+                    fontSize: "calc($h1 * 0.85)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h1 * 0.9)"
@@ -47995,7 +48029,7 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 lineHeight: "$h2",
                 fontFamily: "$serif",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h2 * 0.8)"
+                    fontSize: "calc($h2 * 0.85)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h2 * 0.9)"
@@ -48013,13 +48047,13 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 lineHeight: "$h3",
                 fontFamily: "$serif",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h3 * 0.925)"
+                    fontSize: "calc($h3 * 0.85)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h3 * 0.95)"
+                    fontSize: "calc($h3 * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($h3 * 0.975)"
+                    fontSize: "calc($h3 * 0.95)"
                 }
             },
             h4: {
@@ -48030,13 +48064,13 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontWeight: "$h4",
                 lineHeight: "$h4",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h4 * 0.875)"
+                    fontSize: "calc($h4 * 0.85)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h4 * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($h4 * 0.925)"
+                    fontSize: "calc($h4 * 0.95)"
                 }
             },
             h5: {
@@ -48047,30 +48081,31 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontWeight: "$h5",
                 lineHeight: "$h5",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h5 * 0.875)"
+                    fontSize: "calc($h5 * 0.85)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h5 * 0.9)"
+                    fontSize: "calc($h5 * 0.875)"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($h5 * 0.925)"
+                    fontSize: "calc($h5 * 0.9)"
                 }
             },
             h6: {
                 "&:not(:last-child)": {
                     marginBottom: "$4"
                 },
+                color: "$accent",
                 fontSize: "$h6",
                 fontWeight: "$h6",
                 lineHeight: "$h6",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h6 * 0.875)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h6 * 0.9)"
                 },
-                [(0, _stitchesConfig.breakpoints).laptopX]: {
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h6 * 0.925)"
+                },
+                [(0, _stitchesConfig.breakpoints).laptopX]: {
+                    fontSize: "calc($h6 * 0.95)"
                 }
             },
             p: {
@@ -48080,15 +48115,15 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontSize: "$p",
                 fontWeight: "$p",
                 lineHeight: "$p",
-                opacity: "0.85",
+                color: "$accent",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($p * 0.875)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($p * 0.9)"
                 },
-                [(0, _stitchesConfig.breakpoints).laptopX]: {
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($p * 0.925)"
+                },
+                [(0, _stitchesConfig.breakpoints).laptopX]: {
+                    fontSize: "calc($p * 0.95)"
                 }
             },
             small: {
@@ -48098,14 +48133,15 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontSize: "$small",
                 fontWeight: "$small",
                 lineHeight: "$small",
+                color: "$accent",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($small * 0.875)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($small * 0.9)"
                 },
-                [(0, _stitchesConfig.breakpoints).laptopX]: {
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($small * 0.925)"
+                },
+                [(0, _stitchesConfig.breakpoints).laptopX]: {
+                    fontSize: "calc($small * 0.95)"
                 }
             },
             span: {
@@ -48206,7 +48242,7 @@ const ViewContainerStyled = (0, _stitchesConfig.styled)("div", {
             true: {
                 margin: "auto",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    width: "96%"
+                    width: "95%"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
                     width: "98%"

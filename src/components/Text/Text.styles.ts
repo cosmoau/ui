@@ -28,7 +28,7 @@ export const TextStyled = styled('div', {
         fontFamily: '$serif',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h1 * 0.8)',
+          fontSize: 'calc($h1 * 0.85)',
         },
         [breakpoints.tabletX]: {
           fontSize: 'calc($h1 * 0.9)',
@@ -47,7 +47,7 @@ export const TextStyled = styled('div', {
         fontFamily: '$serif',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h2 * 0.8)',
+          fontSize: 'calc($h2 * 0.85)',
         },
         [breakpoints.tabletX]: {
           fontSize: 'calc($h2 * 0.9)',
@@ -66,13 +66,13 @@ export const TextStyled = styled('div', {
         fontFamily: '$serif',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h3 * 0.925)',
+          fontSize: 'calc($h3 * 0.85)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($h3 * 0.95)',
+          fontSize: 'calc($h3 * 0.9)',
         },
         [breakpoints.laptopX]: {
-          fontSize: 'calc($h3 * 0.975)',
+          fontSize: 'calc($h3 * 0.95)',
         },
       },
       h4: {
@@ -87,10 +87,10 @@ export const TextStyled = styled('div', {
           fontSize: 'calc($h4 * 0.85)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($h4 * 0.875)',
+          fontSize: 'calc($h4 * 0.9)',
         },
         [breakpoints.laptopX]: {
-          fontSize: 'calc($h4 * 0.9)',
+          fontSize: 'calc($h4 * 0.95)',
         },
       },
       h5: {

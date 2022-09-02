@@ -107,6 +107,7 @@ export default function Stack(props: Props): JSX.Element {
     <StackElementStyled
       css={{
         ...props.css,
+        textAlign: props.align,
         ...(props.top && {
           paddingTop: `$${props.top}`,
           [breakpoints.phone]: {

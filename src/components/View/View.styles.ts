@@ -20,7 +20,7 @@ export const ViewContainerStyled = styled('div', {
         margin: 'auto',
 
         [breakpoints.phone]: {
-          width: '96%',
+          width: '95%',
         },
         [breakpoints.tabletX]: {
           width: '98%',

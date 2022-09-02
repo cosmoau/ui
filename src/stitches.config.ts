@@ -44,8 +44,8 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     fontSizes: {
       h1: '3.8rem',
       h2: '3.2rem',
-      h3: '2.6rem',
-      h4: '1.9rem',
+      h3: '2.4rem',
+      h4: '2rem',
       h5: '1.8rem',
       h6: '1.5rem',
       p: '1.4rem',
@@ -83,9 +83,9 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       3: '1.2rem',
     },
     shadows: {
-      1: '0 0.3rem 0.4rem 0 rgba(253, 250, 246, 0.05)',
-      2: '0 0.3rem 0.4rem 0 rgba(253, 250, 246, 0.075)',
-      3: '0 0.3rem 0.4rem 0.2rem rgba(253, 250, 246, 0.1)',
+      1: '0 0.2rem 0.3rem 0 rgba(253, 250, 246, 0.05)',
+      2: '0 0.4rem 0.6rem 0 rgba(253, 250, 246, 0.05)',
+      3: '0 0.6rem 0.9rem 0 rgba(253, 250, 246, 0.05)',
     },
     space: {
       1: '0.25rem',
@@ -94,8 +94,8 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       4: '1.25rem',
       5: '2.5rem',
       6: '4.5rem',
-      7: '7rem',
-      8: '10rem',
+      7: '8.5rem',
+      8: '11rem',
     },
     transitions: {
       default: 'all 0.13s ease-in-out',
