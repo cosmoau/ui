@@ -55,7 +55,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       h1: '300',
       h2: '300',
       h3: '300',
-      h4: '300',
+      h4: '400',
       h5: '400',
       h6: '400',
       p: '400',

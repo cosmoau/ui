@@ -31,7 +31,6 @@ export declare const TextStyled: import("@stitches/react/types/styled-component"
                 fontWeight: string;
                 lineHeight: string;
                 fontFamily: string;
-                letterSpacing: string;
             };
             h2: {
                 [x: string]: string | {
@@ -48,7 +47,6 @@ export declare const TextStyled: import("@stitches/react/types/styled-component"
                 fontWeight: string;
                 lineHeight: string;
                 fontFamily: string;
-                letterSpacing: string;
             };
             h3: {
                 [x: string]: string | {
@@ -65,7 +63,6 @@ export declare const TextStyled: import("@stitches/react/types/styled-component"
                 fontWeight: string;
                 lineHeight: string;
                 fontFamily: string;
-                letterSpacing: string;
             };
             h4: {
                 [x: string]: string | {
@@ -111,7 +108,6 @@ export declare const TextStyled: import("@stitches/react/types/styled-component"
                 fontSize: string;
                 fontWeight: string;
                 lineHeight: string;
-                opacity: string;
             };
             p: {
                 [x: string]: string | {

@@ -48029,7 +48029,6 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontSize: "$h4",
                 fontWeight: "$h4",
                 lineHeight: "$h4",
-                fontFamily: "$serif",
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     fontSize: "calc($h4 * 0.875)"
                 },
@@ -48207,7 +48206,7 @@ const ViewContainerStyled = (0, _stitchesConfig.styled)("div", {
             true: {
                 margin: "auto",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    width: "97%"
+                    width: "96%"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
                     width: "98%"

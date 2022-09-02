@@ -82,7 +82,6 @@ export const TextStyled = styled('div', {
         fontSize: '$h4',
         fontWeight: '$h4',
         lineHeight: '$h4',
-        fontFamily: '$serif',
 
         [breakpoints.phone]: {
           fontSize: 'calc($h4 * 0.875)',
