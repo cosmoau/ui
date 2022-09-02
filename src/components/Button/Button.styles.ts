@@ -19,12 +19,22 @@ export const ButtonStyled = styled('button', {
   border: '0.1rem solid $borderHover',
   borderRadius: '$1',
   boxShadow: '$1',
-  letterSpacing: '-0.01rem',
+
   color: '$text',
   display: 'inline-flex',
-  fontSize: '$h6',
-  fontWeight: '$h6',
-  lineHeight: '$h6',
+  fontSize: '$h5',
+  fontWeight: '$h5',
+  lineHeight: '$h5',
+
+  [breakpoints.phone]: {
+    fontSize: 'calc($h5 * 0.85)',
+  },
+  [breakpoints.tabletX]: {
+    fontSize: 'calc($h5 * 0.875)',
+  },
+  [breakpoints.laptopX]: {
+    fontSize: 'calc($h5 * 0.9)',
+  },
 
   padding: '$1 $4',
 

@@ -1,4 +1,134 @@
 export declare const ButtonStyled: import("@stitches/react/types/styled-component").StyledComponent<"button", import("@stitches/react/types/styled-component").StyledComponentProps<[{
+    [x: string]: string | {
+        cursor: string;
+        opacity: number;
+        backgroundColor?: undefined;
+        borderColor?: undefined;
+        boxShadow?: undefined;
+        color?: undefined;
+        display?: undefined;
+        fontSize?: undefined;
+        alignSelf?: undefined;
+        height?: undefined;
+        verticalAlign?: undefined;
+        width?: undefined;
+        block?: undefined;
+        small?: undefined;
+        theme?: undefined;
+    } | {
+        backgroundColor: string;
+        borderColor: string;
+        boxShadow: string;
+        color: string;
+        cursor?: undefined;
+        opacity?: undefined;
+        display?: undefined;
+        fontSize?: undefined;
+        alignSelf?: undefined;
+        height?: undefined;
+        verticalAlign?: undefined;
+        width?: undefined;
+        block?: undefined;
+        small?: undefined;
+        theme?: undefined;
+    } | {
+        display: string;
+        cursor?: undefined;
+        opacity?: undefined;
+        backgroundColor?: undefined;
+        borderColor?: undefined;
+        boxShadow?: undefined;
+        color?: undefined;
+        fontSize?: undefined;
+        alignSelf?: undefined;
+        height?: undefined;
+        verticalAlign?: undefined;
+        width?: undefined;
+        block?: undefined;
+        small?: undefined;
+        theme?: undefined;
+    } | {
+        fontSize: string;
+        cursor?: undefined;
+        opacity?: undefined;
+        backgroundColor?: undefined;
+        borderColor?: undefined;
+        boxShadow?: undefined;
+        color?: undefined;
+        display?: undefined;
+        alignSelf?: undefined;
+        height?: undefined;
+        verticalAlign?: undefined;
+        width?: undefined;
+        block?: undefined;
+        small?: undefined;
+        theme?: undefined;
+    } | {
+        alignSelf: string;
+        height: string;
+        verticalAlign: string;
+        width: string;
+        cursor?: undefined;
+        opacity?: undefined;
+        backgroundColor?: undefined;
+        borderColor?: undefined;
+        boxShadow?: undefined;
+        color?: undefined;
+        display?: undefined;
+        fontSize?: undefined;
+        block?: undefined;
+        small?: undefined;
+        theme?: undefined;
+    } | {
+        block: {
+            false: {
+                display: string;
+            };
+            true: {
+                display: string;
+                width: string;
+            };
+        };
+        small: {
+            true: {
+                [x: string]: string | {
+                    fontSize: string;
+                };
+                fontSize: string;
+                fontWeight: string;
+                lineHeight: string;
+            };
+        };
+        theme: {
+            default: {
+                borderColor: string;
+            };
+            fill: {
+                backgroundColor: string;
+            };
+            minimal: {
+                backgroundColor: string;
+                borderColor: string;
+                boxShadow: string;
+            };
+            solid: {
+                backgroundColor: string;
+                color: string;
+            };
+        };
+        cursor?: undefined;
+        opacity?: undefined;
+        backgroundColor?: undefined;
+        borderColor?: undefined;
+        boxShadow?: undefined;
+        color?: undefined;
+        display?: undefined;
+        fontSize?: undefined;
+        alignSelf?: undefined;
+        height?: undefined;
+        verticalAlign?: undefined;
+        width?: undefined;
+    };
     '&:disabled': {
         cursor: string;
         opacity: number;
@@ -17,7 +147,6 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
     border: string;
     borderRadius: string;
     boxShadow: string;
-    letterSpacing: string;
     color: string;
     display: string;
     fontSize: string;

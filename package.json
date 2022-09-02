@@ -1,7 +1,7 @@
 {
   "name": "@withcosmo/design-system",
   "description": "✏️ A modular, flexible library of components and design patterns used to enforce consistency across all internal and subsidiary projects.",
-  "version": "2.1.13",
+  "version": "2.1.14",
   "author": "Jackson Dolman <mail@planare.dev>",
   "browserslist": {
     "production": [
