@@ -105,6 +105,7 @@ export declare const TextStyled: import("@stitches/react/types/styled-component"
                 '&:not(:last-child)': {
                     marginBottom: string;
                 };
+                color: string;
                 fontSize: string;
                 fontWeight: string;
                 lineHeight: string;
@@ -124,6 +125,7 @@ export declare const TextStyled: import("@stitches/react/types/styled-component"
                 fontWeight: string;
                 lineHeight: string;
                 opacity: string;
+                color: string;
             };
             small: {
                 [x: string]: string | {
@@ -139,6 +141,7 @@ export declare const TextStyled: import("@stitches/react/types/styled-component"
                 fontSize: string;
                 fontWeight: string;
                 lineHeight: string;
+                color: string;
             };
             span: {
                 fontSize: string;

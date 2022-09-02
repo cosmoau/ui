@@ -91,12 +91,8 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         };
         small: {
             true: {
-                [x: string]: string | {
-                    fontSize: string;
-                };
                 fontSize: string;
                 fontWeight: string;
-                lineHeight: string;
             };
         };
         theme: {
@@ -172,12 +168,8 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         };
         small: {
             true: {
-                [x: string]: string | {
-                    fontSize: string;
-                };
                 fontSize: string;
                 fontWeight: string;
-                lineHeight: string;
             };
         };
         theme: {
