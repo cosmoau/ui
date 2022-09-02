@@ -74,12 +74,9 @@ export const BadgeStyled = styled('div', {
   lineHeight: '$h6',
 
   [breakpoints.phone]: {
-    fontSize: 'calc($h6 * 0.925)',
+    fontSize: 'calc($h6 * 0.95)',
   },
   [breakpoints.tabletX]: {
-    fontSize: 'calc($h6 * 0.925)',
-  },
-  [breakpoints.laptopX]: {
     fontSize: 'calc($h6 * 0.95)',
   },
 
