@@ -48,7 +48,9 @@ export declare const DropdownStyled: import("@stitches/react/types/styled-compon
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -198,7 +200,9 @@ export declare const DropdownTriggerStyled: import("@stitches/react/types/styled
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -374,7 +378,9 @@ export declare const DropdownGroupStyled: import("@stitches/react/types/styled-c
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -559,7 +565,9 @@ export declare const DropdownItemStyled: import("@stitches/react/types/styled-co
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;

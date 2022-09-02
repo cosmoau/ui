@@ -48,7 +48,9 @@ export declare const DialogStyled: import("@stitches/react/types/styled-componen
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -198,7 +200,9 @@ export declare const DialogTriggerStyled: import("@stitches/react/types/styled-c
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -371,7 +375,9 @@ export declare const DialogOverlayStyled: import("@stitches/react/types/styled-c
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -568,7 +574,9 @@ export declare const DialogContentStyled: import("@stitches/react/types/styled-c
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -718,7 +726,9 @@ export declare const DialogExitStyled: import("@stitches/react/types/styled-comp
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;

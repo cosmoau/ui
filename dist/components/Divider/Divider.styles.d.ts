@@ -48,7 +48,9 @@ export declare const DividerStyled: import("@stitches/react/types/styled-compone
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;

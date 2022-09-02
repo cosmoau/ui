@@ -48,7 +48,9 @@ export declare const CodeStyled: import("@stitches/react/types/styled-component"
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -198,7 +200,9 @@ export declare const CodeFunctionStyled: import("@stitches/react/types/styled-co
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -348,7 +352,9 @@ export declare const CodeBlockStyled: import("@stitches/react/types/styled-compo
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;

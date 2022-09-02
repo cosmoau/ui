@@ -87,7 +87,9 @@ export declare const ToastStyled: import("@stitches/react/types/styled-component
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -237,7 +239,9 @@ export declare const ToastContainerStyled: import("@stitches/react/types/styled-
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;

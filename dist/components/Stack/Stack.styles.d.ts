@@ -48,7 +48,9 @@ export declare const StackRowStyled: import("@stitches/react/types/styled-compon
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -198,7 +200,9 @@ export declare const StackColumnStyled: import("@stitches/react/types/styled-com
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -367,7 +371,9 @@ export declare const StackElementStyled: import("@stitches/react/types/styled-co
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;

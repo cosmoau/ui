@@ -1,7 +1,7 @@
 {
   "name": "@withcosmo/design-system",
   "description": "✏️ A modular, flexible library of components and design patterns used to enforce consistency across all internal and subsidiary projects.",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "author": "Jackson Dolman <mail@planare.dev>",
   "browserslist": {
     "production": [
@@ -61,7 +61,7 @@
   "license": "BSD-3-Clause",
   "main": "dist/index.js",
   "module": "dist/index.modern.module.js",
-  "packageManager": "yarn@3.2.0",
+  "packageManager": "yarn@3.2.3",
   "peerDependencies": {
     "@stitches/react": "^1.2.8",
     "next": "^12.2.5",

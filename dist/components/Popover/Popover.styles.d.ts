@@ -48,7 +48,9 @@ export declare const PopoverStyled: import("@stitches/react/types/styled-compone
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -198,7 +200,9 @@ export declare const PopoverTriggerStyled: import("@stitches/react/types/styled-
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -377,7 +381,9 @@ export declare const PopoverContentStyled: import("@stitches/react/types/styled-
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;

@@ -48,7 +48,9 @@ export declare const TableStyled: import("@stitches/react/types/styled-component
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -198,7 +200,9 @@ export declare const TableHeadStyled: import("@stitches/react/types/styled-compo
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -348,7 +352,9 @@ export declare const TableBodyStyled: import("@stitches/react/types/styled-compo
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -498,7 +504,9 @@ export declare const TableRowStyled: import("@stitches/react/types/styled-compon
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -648,7 +656,9 @@ export declare const TableCellStyled: import("@stitches/react/types/styled-compo
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -798,7 +808,9 @@ export declare const TableHeadCellStyled: import("@stitches/react/types/styled-c
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;

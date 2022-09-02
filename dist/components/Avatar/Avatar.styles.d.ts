@@ -48,7 +48,9 @@ export declare const AvatarStyled: import("@stitches/react/types/styled-componen
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -198,7 +200,9 @@ export declare const AvatarImageStyled: import("@stitches/react/types/styled-com
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;
@@ -348,7 +352,9 @@ export declare const AvatarFallbackStyled: import("@stitches/react/types/styled-
         small: string;
     };
     fonts: {
+        sans: string;
         default: string;
+        serif: string;
     };
     lineHeights: {
         h1: string;

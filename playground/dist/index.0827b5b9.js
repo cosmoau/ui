@@ -33454,21 +33454,21 @@ const ImageStyled = (0, _stitchesConfig.styled)("div", {
     variants: {
         borderRadius: {
             1: {
-                borderRadius: "$1",
+                borderRadius: "$1 !important",
                 img: {
-                    borderRadius: "$1"
+                    borderRadius: "$1 !important"
                 }
             },
             2: {
-                borderRadius: "$2",
+                borderRadius: "$2 !important",
                 img: {
-                    borderRadius: "$2"
+                    borderRadius: "$2 !important"
                 }
             },
             3: {
-                borderRadius: "$2",
+                borderRadius: "$3 !important",
                 img: {
-                    borderRadius: "$2"
+                    borderRadius: "$3 !important"
                 }
             }
         },
@@ -33480,7 +33480,7 @@ const ImageStyled = (0, _stitchesConfig.styled)("div", {
             },
             true: {
                 "&:hover": {
-                    opacity: 0.7
+                    opacity: 0.8
                 }
             }
         }
@@ -33507,10 +33507,10 @@ const breakpoints = {
     desktop: "@media only screen and (max-width: 1980px)",
     desktopX: "@media only screen and (min-width: 1541px) and (max-width: 1980px)",
     laptop: "@media only screen and (max-width: 1540px)",
-    laptopX: "@media only screen and (min-width: 961px) and (max-width: 1540px)",
-    phone: "@media only screen and (max-width: 780px)",
-    tablet: "@media only screen and (max-width: 960px)",
-    tabletX: "@media only screen and (min-width: 781px) and (max-width: 960px)",
+    laptopX: "@media only screen and (min-width: 921px) and (max-width: 1540px)",
+    phone: "@media only screen and (max-width: 740px)",
+    tablet: "@media only screen and (max-width: 920px)",
+    tabletX: "@media only screen and (min-width: 741px) and (max-width: 920px)",
     wide: "@media only screen and (min-width: 1981px)"
 };
 const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _react.createStitches)({
@@ -33544,10 +33544,10 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             text: "rgb(253, 250, 246)"
         },
         fontSizes: {
-            h1: "3.8rem",
-            h2: "3.2rem",
-            h3: "2.4rem",
-            h4: "2rem",
+            h1: "3.6rem",
+            h2: "3.3rem",
+            h3: "2.6rem",
+            h4: "1.9rem",
             h5: "1.8rem",
             h6: "1.5rem",
             p: "1.4rem",
@@ -33592,12 +33592,12 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
         space: {
             1: "0.25rem",
             2: "0.5rem",
-            3: "0.75rem",
-            4: "1.25rem",
+            3: "1rem",
+            4: "1.5rem",
             5: "2.5rem",
-            6: "4.5rem",
-            7: "8.5rem",
-            8: "11rem"
+            6: "4rem",
+            7: "8rem",
+            8: "10rem"
         },
         transitions: {
             default: "all 0.13s ease-in-out"
@@ -40038,15 +40038,6 @@ const BadgeStyled = (0, _stitchesConfig.styled)("div", {
     fontSize: "$h6",
     fontWeight: "$h6",
     lineHeight: "$h6",
-    [(0, _stitchesConfig.breakpoints).phone]: {
-        fontSize: "calc($h6 * 0.925)"
-    },
-    [(0, _stitchesConfig.breakpoints).tabletX]: {
-        fontSize: "calc($h6 * 0.925)"
-    },
-    [(0, _stitchesConfig.breakpoints).laptopX]: {
-        fontSize: "calc($h6 * 0.95)"
-    },
     verticalAlign: "middle"
 });
 const BadgeIconStyled = (0, _stitchesConfig.styled)("span", {
@@ -47934,11 +47925,13 @@ function Text(props) {
             ...props.top && {
                 paddingTop: `$${props.top}`,
                 [(0, _stitchesConfig.breakpoints).phone]: {
+                    marginTop: props.top ? "0 !important" : "inherit",
                     paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.8)`
                 }
             },
             ...props.bottom && {
                 [(0, _stitchesConfig.breakpoints).phone]: {
+                    marginBottom: props.bottom ? "0 !important" : "inherit",
                     paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.8)`
                 },
                 paddingBottom: `$${props.bottom}`
@@ -47948,14 +47941,13 @@ function Text(props) {
                 display: "inline-flex",
                 marginBottom: "0 !important",
                 marginRight: props.inline === "auto" ? "auto" : `$${props.inline}`,
-                verticalAlign: "middle",
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     marginRight: props.inline === "auto" ? "auto" : `calc($${props.inline} * 0.8)`
                 }
             },
             ...props.link && {
                 "&:hover": {
-                    opacity: 0.6
+                    opacity: 0.75
                 },
                 borderBottom: props.link === "borderHover" ? "0.1rem solid $borderHover" : "0.1rem solid $border",
                 transition: "$default"
@@ -48115,7 +48107,6 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontSize: "$p",
                 fontWeight: "$p",
                 lineHeight: "$p",
-                color: "$accent",
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     fontSize: "calc($p * 0.9)"
                 },
@@ -48133,7 +48124,6 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontSize: "$small",
                 fontWeight: "$small",
                 lineHeight: "$small",
-                color: "$accent",
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     fontSize: "calc($small * 0.9)"
                 },
