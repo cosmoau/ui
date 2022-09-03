@@ -72,7 +72,7 @@
     "typescript": "^4.8.2"
   },
   "prettier": "eslint-config-dolmios/.prettierrc.json",
-  "repository": "https://github.com/withcosmo/design-system.git",
+  "repository": "git://github.com/withcosmo/design-system.git",
   "scripts": {
     "build": "yarn lint && microbundle --jsx React.createElement --compress --format esm,cjs,modern",
     "lint": "eslint src --ext js,jsx,ts,tsx",
