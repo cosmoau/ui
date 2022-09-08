@@ -36,6 +36,7 @@ export function App(): ReactElement {
                 ['Jane Doe', '25', 'United States'],
                 ['Jane Doe', '25', 'United States'],
               ]}
+              headChildren={['Name', 'Age', 'Country']}
             />
           </Stack>
         </Stack>

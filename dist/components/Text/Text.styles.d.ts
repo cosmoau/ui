@@ -78,6 +78,7 @@ export declare const TextStyled: import("@stitches/react/types/styled-component"
                 fontSize: string;
                 fontWeight: string;
                 lineHeight: string;
+                fontFamily: string;
             };
             h5: {
                 [x: string]: string | {

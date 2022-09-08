@@ -27243,6 +27243,11 @@ function App() {
                                     "25",
                                     "United States"
                                 ], 
+                            ],
+                            headChildren: [
+                                "Name",
+                                "Age",
+                                "Country"
                             ]
                         }, void 0, false, {
                             fileName: "playground/App.tsx",
@@ -27557,7 +27562,7 @@ function Image(_param) {
         isLazy = false;
     }
     if (typeof window !== "undefined" && loadedImageURLs.has(src)) isLazy = false;
-    if (experimentalUnoptimized) unoptimized = true;
+    if (config.unoptimized) unoptimized = true;
     const [blurComplete, setBlurComplete] = _react.useState(false);
     const [setIntersection, isIntersected, resetIntersected] = _useIntersection.useIntersection({
         rootRef: lazyRoot,
@@ -27836,7 +27841,9 @@ function Image(_param) {
         href: imgAttributes.srcSet ? undefined : imgAttributes.src
     }, linkProps))) : null);
 }
-const { experimentalRemotePatterns =[] , experimentalUnoptimized  } = {};
+function normalizeSrc(src) {
+    return src[0] === "/" ? src.slice(1) : src;
+}
 const configEnv = undefined;
 const loadedImageURLs = new Set();
 const allImgs = new Map();
@@ -27848,6 +27855,66 @@ const VALID_LOADING_VALUES = [
     "eager",
     undefined
 ];
+function imgixLoader({ config , src , width , quality  }) {
+    // Demo: https://static.imgix.net/daisy.png?auto=format&fit=max&w=300
+    const url = new URL(`${config.path}${normalizeSrc(src)}`);
+    const params = url.searchParams;
+    // auto params can be combined with comma separation, or reiteration
+    params.set("auto", params.getAll("auto").join(",") || "format");
+    params.set("fit", params.get("fit") || "max");
+    params.set("w", params.get("w") || width.toString());
+    if (quality) params.set("q", quality.toString());
+    return url.href;
+}
+function akamaiLoader({ config , src , width  }) {
+    return `${config.path}${normalizeSrc(src)}?imwidth=${width}`;
+}
+function cloudinaryLoader({ config , src , width , quality  }) {
+    // Demo: https://res.cloudinary.com/demo/image/upload/w_300,c_limit,q_auto/turtles.jpg
+    const params = [
+        "f_auto",
+        "c_limit",
+        "w_" + width,
+        "q_" + (quality || "auto")
+    ];
+    const paramsString = params.join(",") + "/";
+    return `${config.path}${paramsString}${normalizeSrc(src)}`;
+}
+function customLoader({ src  }) {
+    throw new Error(`Image with src "${src}" is missing "loader" prop.` + `\nRead more: https://nextjs.org/docs/messages/next-image-missing-loader`);
+}
+function defaultLoader({ config , src , width , quality  }) {
+    {
+        const missingValues = [];
+        // these should always be provided but make sure they are
+        if (!src) missingValues.push("src");
+        if (!width) missingValues.push("width");
+        if (missingValues.length > 0) throw new Error(`Next Image Optimization requires ${missingValues.join(", ")} to be provided. Make sure you pass them as props to the \`next/image\` component. Received: ${JSON.stringify({
+            src,
+            width,
+            quality
+        })}`);
+        if (src.startsWith("//")) throw new Error(`Failed to parse src "${src}" on \`next/image\`, protocol-relative URL (//) must be changed to an absolute URL (http:// or https://)`);
+        if (!src.startsWith("/") && (config.domains || config.remotePatterns)) {
+            let parsedSrc;
+            try {
+                parsedSrc = new URL(src);
+            } catch (err) {
+                console.error(err);
+                throw new Error(`Failed to parse src "${src}" on \`next/image\`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)`);
+            }
+            {
+                // We use dynamic require because this should only error in development
+                const { hasMatch  } = require("../shared/lib/match-remote-pattern");
+                if (!hasMatch(config.domains, config.remotePatterns, parsedSrc)) throw new Error(`Invalid src prop (${src}) on \`next/image\`, hostname "${parsedSrc.hostname}" is not configured under images in your \`next.config.js\`\n` + `See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host`);
+            }
+        }
+    }
+    if (src.endsWith(".svg") && !config.dangerouslyAllowSVG) // Special case to make svg serve as-is to avoid proxying
+    // through the built-in Image Optimization API.
+    return src;
+    return `${_normalizeTrailingSlash.normalizePathTrailingSlash(config.path)}?url=${encodeURIComponent(src)}&w=${width}&q=${quality || 75}`;
+}
 const loaders = new Map([
     [
         "default",
@@ -28072,69 +28139,6 @@ const ImageElement = (_param)=>{
         loading: loading
     }))));
 };
-function normalizeSrc(src) {
-    return src[0] === "/" ? src.slice(1) : src;
-}
-function imgixLoader({ config , src , width , quality  }) {
-    // Demo: https://static.imgix.net/daisy.png?auto=format&fit=max&w=300
-    const url = new URL(`${config.path}${normalizeSrc(src)}`);
-    const params = url.searchParams;
-    // auto params can be combined with comma separation, or reiteration
-    params.set("auto", params.getAll("auto").join(",") || "format");
-    params.set("fit", params.get("fit") || "max");
-    params.set("w", params.get("w") || width.toString());
-    if (quality) params.set("q", quality.toString());
-    return url.href;
-}
-function akamaiLoader({ config , src , width  }) {
-    return `${config.path}${normalizeSrc(src)}?imwidth=${width}`;
-}
-function cloudinaryLoader({ config , src , width , quality  }) {
-    // Demo: https://res.cloudinary.com/demo/image/upload/w_300,c_limit,q_auto/turtles.jpg
-    const params = [
-        "f_auto",
-        "c_limit",
-        "w_" + width,
-        "q_" + (quality || "auto")
-    ];
-    const paramsString = params.join(",") + "/";
-    return `${config.path}${paramsString}${normalizeSrc(src)}`;
-}
-function customLoader({ src  }) {
-    throw new Error(`Image with src "${src}" is missing "loader" prop.` + `\nRead more: https://nextjs.org/docs/messages/next-image-missing-loader`);
-}
-function defaultLoader({ config , src , width , quality  }) {
-    {
-        const missingValues = [];
-        // these should always be provided but make sure they are
-        if (!src) missingValues.push("src");
-        if (!width) missingValues.push("width");
-        if (missingValues.length > 0) throw new Error(`Next Image Optimization requires ${missingValues.join(", ")} to be provided. Make sure you pass them as props to the \`next/image\` component. Received: ${JSON.stringify({
-            src,
-            width,
-            quality
-        })}`);
-        if (src.startsWith("//")) throw new Error(`Failed to parse src "${src}" on \`next/image\`, protocol-relative URL (//) must be changed to an absolute URL (http:// or https://)`);
-        if (!src.startsWith("/") && (config.domains || experimentalRemotePatterns)) {
-            let parsedSrc;
-            try {
-                parsedSrc = new URL(src);
-            } catch (err) {
-                console.error(err);
-                throw new Error(`Failed to parse src "${src}" on \`next/image\`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)`);
-            }
-            {
-                // We use dynamic require because this should only error in development
-                const { hasMatch  } = require("../shared/lib/match-remote-pattern");
-                if (!hasMatch(config.domains, experimentalRemotePatterns, parsedSrc)) throw new Error(`Invalid src prop (${src}) on \`next/image\`, hostname "${parsedSrc.hostname}" is not configured under images in your \`next.config.js\`\n` + `See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host`);
-            }
-        }
-    }
-    if (src.endsWith(".svg") && !config.dangerouslyAllowSVG) // Special case to make svg serve as-is to avoid proxying
-    // through the built-in Image Optimization API.
-    return src;
-    return `${_normalizeTrailingSlash.normalizePathTrailingSlash(config.path)}?url=${encodeURIComponent(src)}&w=${width}&q=${quality || 75}`;
-}
 if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
     Object.defineProperty(exports.default, "__esModule", {
         value: true
@@ -28181,16 +28185,16 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.default = _interopRequireWildcard;
-function _interopRequireWildcard(obj) {
-    if (obj && obj.__esModule) return obj;
+function _interopRequireWildcard(obj, nodeInterop) {
+    if (!nodeInterop && obj && obj.__esModule) return obj;
     if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
         default: obj
     };
-    var cache = _getRequireWildcardCache();
+    var cache = _getRequireWildcardCache(nodeInterop);
     if (cache && cache.has(obj)) return cache.get(obj);
     var newObj = {};
     var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-    for(var key in obj)if (Object.prototype.hasOwnProperty.call(obj, key)) {
+    for(var key in obj)if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
         var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
         if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
         else newObj[key] = obj[key];
@@ -28199,13 +28203,13 @@ function _interopRequireWildcard(obj) {
     if (cache) cache.set(obj, newObj);
     return newObj;
 }
-function _getRequireWildcardCache() {
+function _getRequireWildcardCache(nodeInterop1) {
     if (typeof WeakMap !== "function") return null;
-    var cache = new WeakMap();
-    _getRequireWildcardCache = function() {
-        return cache;
-    };
-    return cache;
+    var cacheBabelInterop = new WeakMap();
+    var cacheNodeInterop = new WeakMap();
+    return (_getRequireWildcardCache = function(nodeInterop) {
+        return nodeInterop ? cacheNodeInterop : cacheBabelInterop;
+    })(nodeInterop1);
 }
 
 },{}],"6DnfI":[function(require,module,exports) {
@@ -28322,7 +28326,8 @@ const METATYPES = [
  *
  * @param headChildrenElements List of children of <Head>
  */ function reduceComponents(headChildrenElements, props) {
-    return headChildrenElements.reduce(onlyReactElement, []).reverse().concat(defaultHead(props.inAmpMode).reverse()).filter(unique()).reverse().map((c, i)=>{
+    const { inAmpMode  } = props;
+    return headChildrenElements.reduce(onlyReactElement, []).reverse().concat(defaultHead(inAmpMode).reverse()).filter(unique()).reverse().map((c, i)=>{
         const key = c.key || i;
         var url;
         return /*#__PURE__*/ _react.default.cloneElement(c, {
@@ -28649,7 +28654,9 @@ const imageConfigDefault = {
         "image/webp"
     ],
     dangerouslyAllowSVG: false,
-    contentSecurityPolicy: `script-src 'none'; frame-src 'none'; sandbox;`
+    contentSecurityPolicy: `script-src 'none'; frame-src 'none'; sandbox;`,
+    remotePatterns: [],
+    unoptimized: false
 };
 exports.imageConfigDefault = imageConfigDefault;
 
@@ -28662,64 +28669,8 @@ exports.useIntersection = useIntersection;
 var _react = require("react");
 var _requestIdleCallback = require("./request-idle-callback");
 const hasIntersectionObserver = typeof IntersectionObserver === "function";
-function useIntersection({ rootRef , rootMargin , disabled  }) {
-    const isDisabled = disabled || !hasIntersectionObserver;
-    const unobserve = _react.useRef();
-    const [visible, setVisible] = _react.useState(false);
-    const [element, setElement] = _react.useState(null);
-    _react.useEffect(()=>{
-        if (hasIntersectionObserver) {
-            if (unobserve.current) {
-                unobserve.current();
-                unobserve.current = undefined;
-            }
-            if (isDisabled || visible) return;
-            if (element && element.tagName) unobserve.current = observe(element, (isVisible)=>isVisible && setVisible(isVisible), {
-                root: rootRef == null ? void 0 : rootRef.current,
-                rootMargin
-            });
-            return ()=>{
-                unobserve.current == null || unobserve.current();
-                unobserve.current = undefined;
-            };
-        } else if (!visible) {
-            const idleCallback = _requestIdleCallback.requestIdleCallback(()=>setVisible(true));
-            return ()=>_requestIdleCallback.cancelIdleCallback(idleCallback);
-        }
-    }, [
-        element,
-        isDisabled,
-        rootMargin,
-        rootRef,
-        visible
-    ]);
-    const resetVisible = _react.useCallback(()=>{
-        setVisible(false);
-    }, []);
-    return [
-        setElement,
-        visible,
-        resetVisible
-    ];
-}
 const observers = new Map();
 const idList = [];
-function observe(element, callback, options) {
-    const { id , observer , elements  } = createObserver(options);
-    elements.set(element, callback);
-    observer.observe(element);
-    return function unobserve() {
-        elements.delete(element);
-        observer.unobserve(element);
-        // Destroy observer when there's nothing left to watch:
-        if (elements.size === 0) {
-            observer.disconnect();
-            observers.delete(id);
-            const index = idList.findIndex((obj)=>obj.root === id.root && obj.margin === id.margin);
-            if (index > -1) idList.splice(index, 1);
-        }
-    };
-}
 function createObserver(options) {
     const id = {
         root: options.root || null,
@@ -28747,6 +28698,56 @@ function createObserver(options) {
     idList.push(id);
     observers.set(id, instance);
     return instance;
+}
+function observe(element, callback, options) {
+    const { id , observer , elements  } = createObserver(options);
+    elements.set(element, callback);
+    observer.observe(element);
+    return function unobserve() {
+        elements.delete(element);
+        observer.unobserve(element);
+        // Destroy observer when there's nothing left to watch:
+        if (elements.size === 0) {
+            observer.disconnect();
+            observers.delete(id);
+            const index = idList.findIndex((obj)=>obj.root === id.root && obj.margin === id.margin);
+            if (index > -1) idList.splice(index, 1);
+        }
+    };
+}
+function useIntersection({ rootRef , rootMargin , disabled  }) {
+    const isDisabled = disabled || !hasIntersectionObserver;
+    const [visible, setVisible] = _react.useState(false);
+    const [element, setElement] = _react.useState(null);
+    _react.useEffect(()=>{
+        if (hasIntersectionObserver) {
+            if (isDisabled || visible) return;
+            if (element && element.tagName) {
+                const unobserve = observe(element, (isVisible)=>isVisible && setVisible(isVisible), {
+                    root: rootRef == null ? void 0 : rootRef.current,
+                    rootMargin
+                });
+                return unobserve;
+            }
+        } else if (!visible) {
+            const idleCallback = _requestIdleCallback.requestIdleCallback(()=>setVisible(true));
+            return ()=>_requestIdleCallback.cancelIdleCallback(idleCallback);
+        }
+    }, [
+        element,
+        isDisabled,
+        rootMargin,
+        rootRef,
+        visible
+    ]);
+    const resetVisible = _react.useCallback(()=>{
+        setVisible(false);
+    }, []);
+    return [
+        setElement,
+        visible,
+        resetVisible
+    ];
 }
 if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
     Object.defineProperty(exports.default, "__esModule", {
@@ -28882,16 +28883,16 @@ function hasMatch(domains, remotePatterns, url) {
 }
 
 },{"next/dist/compiled/micromatch":"7gTyg"}],"7gTyg":[function(require,module,exports) {
-var process = require("process");
 var __dirname = "node_modules/next/dist/compiled/micromatch";
+var process = require("process");
 (()=>{
     "use strict";
     var e = {
-        526: (e, t, r)=>{
-            const n = r(119);
-            const u = r(769);
-            const s = r(722);
-            const o = r(407);
+        333: (e, t, r)=>{
+            const n = r(137);
+            const u = r(179);
+            const s = r(13);
+            const o = r(719);
             const braces = (e, t = {})=>{
                 let r = [];
                 if (Array.isArray(e)) for (let n of e){
@@ -28931,9 +28932,9 @@ var __dirname = "node_modules/next/dist/compiled/micromatch";
             };
             e.exports = braces;
         },
-        769: (e, t, r)=>{
-            const n = r(789);
-            const u = r(15);
+        179: (e, t, r)=>{
+            const n = r(783);
+            const u = r(617);
             const compile = (e, t = {})=>{
                 let walk = (e, r = {})=>{
                     let s = u.isInvalidBrace(r);
@@ -28963,7 +28964,7 @@ var __dirname = "node_modules/next/dist/compiled/micromatch";
             };
             e.exports = compile;
         },
-        262: (e)=>{
+        457: (e)=>{
             e.exports = {
                 MAX_LENGTH: 65536,
                 CHAR_0: "0",
@@ -29012,10 +29013,10 @@ var __dirname = "node_modules/next/dist/compiled/micromatch";
                 CHAR_ZERO_WIDTH_NOBREAK_SPACE: "\uFEFF"
             };
         },
-        722: (e, t, r)=>{
-            const n = r(789);
-            const u = r(119);
-            const s = r(15);
+        13: (e, t, r)=>{
+            const n = r(783);
+            const u = r(137);
+            const s = r(617);
             const append = (e = "", t = "", r = false)=>{
                 let n = [];
                 e = [].concat(e);
@@ -29090,9 +29091,9 @@ var __dirname = "node_modules/next/dist/compiled/micromatch";
             };
             e.exports = expand;
         },
-        407: (e, t, r)=>{
-            const n = r(119);
-            const { MAX_LENGTH: u , CHAR_BACKSLASH: s , CHAR_BACKTICK: o , CHAR_COMMA: i , CHAR_DOT: a , CHAR_LEFT_PARENTHESES: l , CHAR_RIGHT_PARENTHESES: c , CHAR_LEFT_CURLY_BRACE: p , CHAR_RIGHT_CURLY_BRACE: f , CHAR_LEFT_SQUARE_BRACKET: A , CHAR_RIGHT_SQUARE_BRACKET: R , CHAR_DOUBLE_QUOTE: _ , CHAR_SINGLE_QUOTE: h , CHAR_NO_BREAK_SPACE: g , CHAR_ZERO_WIDTH_NOBREAK_SPACE: E  } = r(262);
+        719: (e, t, r)=>{
+            const n = r(137);
+            const { MAX_LENGTH: u , CHAR_BACKSLASH: s , CHAR_BACKTICK: o , CHAR_COMMA: i , CHAR_DOT: a , CHAR_LEFT_PARENTHESES: l , CHAR_RIGHT_PARENTHESES: c , CHAR_LEFT_CURLY_BRACE: p , CHAR_RIGHT_CURLY_BRACE: f , CHAR_LEFT_SQUARE_BRACKET: A , CHAR_RIGHT_SQUARE_BRACKET: R , CHAR_DOUBLE_QUOTE: _ , CHAR_SINGLE_QUOTE: h , CHAR_NO_BREAK_SPACE: g , CHAR_ZERO_WIDTH_NOBREAK_SPACE: E  } = r(457);
             const parse = (e, t = {})=>{
                 if (typeof e !== "string") throw new TypeError("Expected a string");
                 let r = t || {};
@@ -29346,8 +29347,8 @@ var __dirname = "node_modules/next/dist/compiled/micromatch";
             };
             e.exports = parse;
         },
-        119: (e, t, r)=>{
-            const n = r(15);
+        137: (e, t, r)=>{
+            const n = r(617);
             e.exports = (e, t = {})=>{
                 let stringify = (e, r = {})=>{
                     let u = t.escapeInvalid && n.isInvalidBrace(r);
@@ -29364,7 +29365,7 @@ var __dirname = "node_modules/next/dist/compiled/micromatch";
                 return stringify(e);
             };
         },
-        15: (e, t)=>{
+        617: (e, t)=>{
             t.isInteger = (e)=>{
                 if (typeof e === "number") return Number.isInteger(e);
                 if (typeof e === "string" && e.trim() !== "") return Number.isInteger(Number(e));
@@ -29429,14 +29430,14 @@ var __dirname = "node_modules/next/dist/compiled/micromatch";
                 return t;
             };
         },
-        789: (e, t, r)=>{
+        783: (e, t, r)=>{
             /*!
  * fill-range <https://github.com/jonschlinkert/fill-range>
  *
  * Copyright (c) 2014-present, Jon Schlinkert.
  * Licensed under the MIT License.
  */ const n = r(837);
-            const u = r(368);
+            const u = r(492);
             const isObject = (e)=>e !== null && typeof e === "object" && !Array.isArray(e);
             const transform = (e)=>(t)=>e === true ? Number(t) : String(t);
             const isValidValue = (e)=>typeof e === "number" || typeof e === "string" && e !== "";
@@ -29601,7 +29602,7 @@ var __dirname = "node_modules/next/dist/compiled/micromatch";
             };
             e.exports = fill;
         },
-        773: (e)=>{
+        357: (e)=>{
             /*!
  * is-number <https://github.com/jonschlinkert/is-number>
  *
@@ -29613,11 +29614,11 @@ var __dirname = "node_modules/next/dist/compiled/micromatch";
                 return false;
             };
         },
-        888: (e, t, r)=>{
+        971: (e, t, r)=>{
             const n = r(837);
-            const u = r(526);
-            const s = r(601);
-            const o = r(243);
+            const u = r(333);
+            const s = r(251);
+            const o = r(513);
             const isEmptyString = (e)=>e === "" || e === "./";
             const micromatch = (e, t, r)=>{
                 t = [].concat(t);
@@ -29752,10 +29753,10 @@ var __dirname = "node_modules/next/dist/compiled/micromatch";
             };
             e.exports = micromatch;
         },
-        601: (e, t, r)=>{
-            e.exports = r(509);
+        251: (e, t, r)=>{
+            e.exports = r(683);
         },
-        871: (e, t, r)=>{
+        356: (e, t, r)=>{
             const n = r(17);
             const u = "\\\\/";
             const s = `[^${u}]`;
@@ -29913,9 +29914,9 @@ var __dirname = "node_modules/next/dist/compiled/micromatch";
                 }
             };
         },
-        821: (e, t, r)=>{
-            const n = r(871);
-            const u = r(243);
+        754: (e, t, r)=>{
+            const n = r(356);
+            const u = r(513);
             const { MAX_LENGTH: s , POSIX_REGEX_SOURCE: o , REGEX_NON_SPECIAL_CHARS: i , REGEX_SPECIAL_CHARS_BACKREF: a , REPLACEMENTS: l  } = n;
             const expandRange = (e, t)=>{
                 if (typeof t.expandRange === "function") return t.expandRange(...e, t);
@@ -30698,12 +30699,12 @@ var __dirname = "node_modules/next/dist/compiled/micromatch";
             };
             e.exports = parse;
         },
-        509: (e, t, r)=>{
+        683: (e, t, r)=>{
             const n = r(17);
-            const u = r(216);
-            const s = r(821);
-            const o = r(243);
-            const i = r(871);
+            const u = r(700);
+            const s = r(754);
+            const o = r(513);
+            const i = r(356);
             const isObject = (e)=>e && typeof e === "object" && !Array.isArray(e);
             const picomatch = (e, t, r = false)=>{
                 if (Array.isArray(e)) {
@@ -30845,9 +30846,9 @@ var __dirname = "node_modules/next/dist/compiled/micromatch";
             picomatch.constants = i;
             e.exports = picomatch;
         },
-        216: (e, t, r)=>{
-            const n = r(243);
-            const { CHAR_ASTERISK: u , CHAR_AT: s , CHAR_BACKWARD_SLASH: o , CHAR_COMMA: i , CHAR_DOT: a , CHAR_EXCLAMATION_MARK: l , CHAR_FORWARD_SLASH: c , CHAR_LEFT_CURLY_BRACE: p , CHAR_LEFT_PARENTHESES: f , CHAR_LEFT_SQUARE_BRACKET: A , CHAR_PLUS: R , CHAR_QUESTION_MARK: _ , CHAR_RIGHT_CURLY_BRACE: h , CHAR_RIGHT_PARENTHESES: g , CHAR_RIGHT_SQUARE_BRACKET: E  } = r(871);
+        700: (e, t, r)=>{
+            const n = r(513);
+            const { CHAR_ASTERISK: u , CHAR_AT: s , CHAR_BACKWARD_SLASH: o , CHAR_COMMA: i , CHAR_DOT: a , CHAR_EXCLAMATION_MARK: l , CHAR_FORWARD_SLASH: c , CHAR_LEFT_CURLY_BRACE: p , CHAR_LEFT_PARENTHESES: f , CHAR_LEFT_SQUARE_BRACKET: A , CHAR_PLUS: R , CHAR_QUESTION_MARK: _ , CHAR_RIGHT_CURLY_BRACE: h , CHAR_RIGHT_PARENTHESES: g , CHAR_RIGHT_SQUARE_BRACKET: E  } = r(356);
             const isPathSeparator = (e)=>e === c || e === o;
             const depth = (e)=>{
                 if (e.isPrefix !== true) e.depth = e.isGlobstar ? Infinity : 1;
@@ -31110,10 +31111,10 @@ var __dirname = "node_modules/next/dist/compiled/micromatch";
             };
             e.exports = scan;
         },
-        243: (e, t, r)=>{
+        513: (e, t, r)=>{
             const n = r(17);
             const u = process.platform === "win32";
-            const { REGEX_BACKSLASH: s , REGEX_REMOVE_BACKSLASH: o , REGEX_SPECIAL_CHARS: i , REGEX_SPECIAL_CHARS_GLOBAL: a  } = r(871);
+            const { REGEX_BACKSLASH: s , REGEX_REMOVE_BACKSLASH: o , REGEX_SPECIAL_CHARS: i , REGEX_SPECIAL_CHARS_GLOBAL: a  } = r(356);
             t.isObject = (e)=>e !== null && typeof e === "object" && !Array.isArray(e);
             t.hasRegexChars = (e)=>i.test(e);
             t.isRegexChar = (e)=>e.length === 1 && t.hasRegexChars(e);
@@ -31151,13 +31152,13 @@ var __dirname = "node_modules/next/dist/compiled/micromatch";
                 return s;
             };
         },
-        368: (e, t, r)=>{
+        492: (e, t, r)=>{
             /*!
  * to-regex-range <https://github.com/micromatch/to-regex-range>
  *
  * Copyright (c) 2015-present, Jon Schlinkert.
  * Released under the MIT License.
- */ const n = r(773);
+ */ const n = r(357);
             const toRegexRange = (e, t, r)=>{
                 if (n(e) === false) throw new TypeError("toRegexRange: expected the first argument to be a number");
                 if (t === void 0 || e === t) return String(e);
@@ -31371,7 +31372,7 @@ var __dirname = "node_modules/next/dist/compiled/micromatch";
         return u.exports;
     }
     if (typeof __nccwpck_require__ !== "undefined") __nccwpck_require__.ab = __dirname + "/";
-    var r = __nccwpck_require__(888);
+    var r = __nccwpck_require__(971);
     module.exports = r;
 })();
 
@@ -33544,20 +33545,20 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             text: "rgb(253, 250, 246)"
         },
         fontSizes: {
-            h1: "3.6rem",
-            h2: "3.3rem",
-            h3: "2.6rem",
-            h4: "1.9rem",
+            h1: "4rem",
+            h2: "3rem",
+            h3: "2.5rem",
+            h4: "2.0rem",
             h5: "1.8rem",
-            h6: "1.5rem",
+            h6: "1.6rem",
             p: "1.4rem",
-            small: "1.25rem"
+            small: "1.2rem"
         },
         fontWeights: {
             h1: "300",
             h2: "300",
             h3: "300",
-            h4: "normal",
+            h4: "300",
             h5: "normal",
             h6: "normal",
             p: "normal",
@@ -33592,9 +33593,9 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
         space: {
             1: "0.25rem",
             2: "0.5rem",
-            3: "1rem",
-            4: "1.5rem",
-            5: "2.5rem",
+            3: "0.75rem",
+            4: "1rem",
+            5: "2rem",
             6: "4rem",
             7: "8rem",
             8: "10rem"
@@ -33665,9 +33666,9 @@ const lightTheme = (0, _react.createTheme)({
         background: "rgb(253, 250, 246)",
         blueText: "rgb(32, 47, 136)",
         border: "rgba(8, 10, 27,0.1)",
-        borderHover: "rgba(8, 10, 27, 0.125)",
-        default: "rgba(8, 10, 27, 0.05)",
-        defaultHover: "rgba(21, 35, 68, 0.1)",
+        borderHover: "rgba(8, 10, 27, 0.075)",
+        default: "rgba(8, 10, 27, 0.035)",
+        defaultHover: "rgba(21, 35, 68, 0.07)",
         greenText: "rgb(0, 76, 6)",
         orangeText: "rgb(199, 84, 30)",
         pinkText: "rgb(173, 22, 128)",
@@ -42357,6 +42358,13 @@ Object.defineProperty(singletonRouter, "events", {
         return _router.default.events;
     }
 });
+function getRouter() {
+    if (!singletonRouter.router) {
+        const message = 'No router instance found.\nYou should only use "next/router" on the client side of your app.\n';
+        throw new Error(message);
+    }
+    return singletonRouter.router;
+}
 urlPropertyFields.forEach((field)=>{
     // Here we need to use Object.defineProperty because we need to return
     // the property assigned to the actual router
@@ -42389,13 +42397,6 @@ routerEvents.forEach((event)=>{
         });
     });
 });
-function getRouter() {
-    if (!singletonRouter.router) {
-        const message = 'No router instance found.\nYou should only use "next/router" on the client side of your app.\n';
-        throw new Error(message);
-    }
-    return singletonRouter.router;
-}
 var _default = singletonRouter;
 exports.default = _default;
 function useRouter() {
@@ -42440,6 +42441,7 @@ if ((typeof exports.default === "function" || typeof exports.default === "object
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+exports.matchesMiddleware = matchesMiddleware;
 exports.isLocalURL = isLocalURL;
 exports.interpolateAs = interpolateAs;
 exports.resolveHref = resolveHref;
@@ -42479,6 +42481,34 @@ function buildCancellationError() {
     return Object.assign(new Error("Route Cancelled"), {
         cancelled: true
     });
+}
+function matchesMiddleware(options) {
+    return _matchesMiddleware.apply(this, arguments);
+}
+function _matchesMiddleware() {
+    _matchesMiddleware = _async_to_generator(function*(options) {
+        const matchers = yield Promise.resolve(options.router.pageLoader.getMiddleware());
+        if (!matchers) return false;
+        const { pathname: asPathname  } = _parsePath.parsePath(options.asPath);
+        // remove basePath first since path prefix has to be in the order of `/${basePath}/${locale}`
+        const cleanedAs = _hasBasePath.hasBasePath(asPathname) ? _removeBasePath.removeBasePath(asPathname) : asPathname;
+        const asWithBasePathAndLocale = _addBasePath.addBasePath(_addLocale.addLocale(cleanedAs, options.locale));
+        // Check only path match on client. Matching "has" should be done on server
+        // where we can access more info such as headers, HttpOnly cookie, etc.
+        return matchers.some((m)=>new RegExp(m.regexp).test(asWithBasePathAndLocale));
+    });
+    return _matchesMiddleware.apply(this, arguments);
+}
+function stripOrigin(url) {
+    const origin = _utils.getLocationOrigin();
+    return url.startsWith(origin) ? url.substring(origin.length) : url;
+}
+function omit(object, keys) {
+    const omitted = {};
+    Object.keys(object).forEach((key)=>{
+        if (!keys.includes(key)) omitted[key] = object[key];
+    });
+    return omitted;
 }
 function isLocalURL(url) {
     // prevent a hydration mismatch on href for url with anchor refs
@@ -42520,13 +42550,6 @@ function interpolateAs(route, asPathname, query) {
         params,
         result: interpolatedRoute
     };
-}
-function omit(object, keys) {
-    const omitted = {};
-    Object.keys(object).forEach((key)=>{
-        if (!keys.includes(key)) omitted[key] = object[key];
-    });
-    return omitted;
 }
 function resolveHref(router, href, resolveAs) {
     // we use a dummy base url for relative urls
@@ -42577,10 +42600,6 @@ function resolveHref(router, href, resolveAs) {
         ] : urlAsString;
     }
 }
-function stripOrigin(url) {
-    const origin = _utils.getLocationOrigin();
-    return url.startsWith(origin) ? url.substring(origin.length) : url;
-}
 function prepareUrlAs(router, url, as) {
     // If url and as provided as an object representation,
     // we'll format them into the string version here.
@@ -42610,6 +42629,113 @@ function resolveDynamicRoute(pathname, pages) {
     });
     return _removeTrailingSlash.removeTrailingSlash(pathname);
 }
+function getMiddlewareData(source, response, options) {
+    const nextConfig = {
+        basePath: options.router.basePath,
+        i18n: {
+            locales: options.router.locales
+        },
+        trailingSlash: Boolean(undefined)
+    };
+    const rewriteHeader = response.headers.get("x-nextjs-rewrite");
+    let rewriteTarget = rewriteHeader || response.headers.get("x-nextjs-matched-path");
+    const matchedPath = response.headers.get("x-matched-path");
+    if (matchedPath && !rewriteTarget && !matchedPath.includes("__next_data_catchall") && !matchedPath.includes("/_error") && !matchedPath.includes("/404")) // leverage x-matched-path to detect next.config.js rewrites
+    rewriteTarget = matchedPath;
+    if (rewriteTarget) {
+        if (rewriteTarget.startsWith("/")) {
+            const parsedRewriteTarget = _parseRelativeUrl.parseRelativeUrl(rewriteTarget);
+            const pathnameInfo = _getNextPathnameInfo.getNextPathnameInfo(parsedRewriteTarget.pathname, {
+                nextConfig,
+                parseData: true
+            });
+            let fsPathname = _removeTrailingSlash.removeTrailingSlash(pathnameInfo.pathname);
+            return Promise.all([
+                options.router.pageLoader.getPageList(),
+                _routeLoader.getClientBuildManifest(), 
+            ]).then(([pages, { __rewrites: rewrites  }])=>{
+                let as = _addLocale.addLocale(pathnameInfo.pathname, pathnameInfo.locale);
+                if (_isDynamic.isDynamicRoute(as) || !rewriteHeader && pages.includes(_normalizeLocalePath.normalizeLocalePath(_removeBasePath.removeBasePath(as), options.router.locales).pathname)) {
+                    const parsedSource = _getNextPathnameInfo.getNextPathnameInfo(_parseRelativeUrl.parseRelativeUrl(source).pathname, {
+                        parseData: true
+                    });
+                    as = _addBasePath.addBasePath(parsedSource.pathname);
+                    parsedRewriteTarget.pathname = as;
+                }
+                if (!pages.includes(fsPathname)) {
+                    const resolvedPathname = resolveDynamicRoute(fsPathname, pages);
+                    if (resolvedPathname !== fsPathname) fsPathname = resolvedPathname;
+                }
+                const resolvedHref = !pages.includes(fsPathname) ? resolveDynamicRoute(_normalizeLocalePath.normalizeLocalePath(_removeBasePath.removeBasePath(parsedRewriteTarget.pathname), options.router.locales).pathname, pages) : fsPathname;
+                if (_isDynamic.isDynamicRoute(resolvedHref)) {
+                    const matches = _routeMatcher.getRouteMatcher(_routeRegex.getRouteRegex(resolvedHref))(as);
+                    Object.assign(parsedRewriteTarget.query, matches || {});
+                }
+                return {
+                    type: "rewrite",
+                    parsedAs: parsedRewriteTarget,
+                    resolvedHref
+                };
+            });
+        }
+        const src = _parsePath.parsePath(source);
+        const pathname = _formatNextPathnameInfo.formatNextPathnameInfo(_extends({}, _getNextPathnameInfo.getNextPathnameInfo(src.pathname, {
+            nextConfig,
+            parseData: true
+        }), {
+            defaultLocale: options.router.defaultLocale,
+            buildId: ""
+        }));
+        return Promise.resolve({
+            type: "redirect-external",
+            destination: `${pathname}${src.query}${src.hash}`
+        });
+    }
+    const redirectTarget = response.headers.get("x-nextjs-redirect");
+    if (redirectTarget) {
+        if (redirectTarget.startsWith("/")) {
+            const src1 = _parsePath.parsePath(redirectTarget);
+            const pathname1 = _formatNextPathnameInfo.formatNextPathnameInfo(_extends({}, _getNextPathnameInfo.getNextPathnameInfo(src1.pathname, {
+                nextConfig,
+                parseData: true
+            }), {
+                defaultLocale: options.router.defaultLocale,
+                buildId: ""
+            }));
+            return Promise.resolve({
+                type: "redirect-internal",
+                newAs: `${pathname1}${src1.query}${src1.hash}`,
+                newUrl: `${pathname1}${src1.query}${src1.hash}`
+            });
+        }
+        return Promise.resolve({
+            type: "redirect-external",
+            destination: redirectTarget
+        });
+    }
+    return Promise.resolve({
+        type: "next"
+    });
+}
+function withMiddlewareEffects(options) {
+    return matchesMiddleware(options).then((matches)=>{
+        if (matches && options.fetchData) return options.fetchData().then((data)=>getMiddlewareData(data.dataHref, data.response, options).then((effect)=>({
+                    dataHref: data.dataHref,
+                    cacheKey: data.cacheKey,
+                    json: data.json,
+                    response: data.response,
+                    text: data.text,
+                    effect
+                }))).catch((_err)=>{
+            /**
+           * TODO: Revisit this in the future.
+           * For now we will not consider middleware data errors to be fatal.
+           * maybe we should revisit in the future.
+           */ return null;
+        });
+        return null;
+    });
+}
 const manualScrollRestoration = undefined;
 const SSG_DATA_NOT_FOUND = Symbol("SSG_DATA_NOT_FOUND");
 function fetchRetry(url, attempts, options) {
@@ -42635,6 +42761,13 @@ function fetchRetry(url, attempts, options) {
     });
 }
 const backgroundCache = {};
+function tryToParseAsJSON(text) {
+    try {
+        return JSON.parse(text);
+    } catch (error) {
+        return null;
+    }
+}
 function fetchNextData({ dataHref , inflightCache , isPrefetch , hasMiddleware , isServerRender , parseJSON , persistCache , isBackground , unstable_skipClientCache  }) {
     const { href: cacheKey  } = new URL(dataHref, window.location.href);
     var ref1;
@@ -42649,7 +42782,8 @@ function fetchNextData({ dataHref , inflightCache , isPrefetch , hasMiddleware ,
                 dataHref,
                 response,
                 text: "",
-                json: {}
+                json: {},
+                cacheKey
             };
             return response.text().then((text)=>{
                 if (!response.ok) {
@@ -42667,7 +42801,8 @@ function fetchNextData({ dataHref , inflightCache , isPrefetch , hasMiddleware ,
                         dataHref,
                         response,
                         text,
-                        json: {}
+                        json: {},
+                        cacheKey
                     };
                     if (!hasMiddleware && response.status === 404) {
                         var ref;
@@ -42677,7 +42812,8 @@ function fetchNextData({ dataHref , inflightCache , isPrefetch , hasMiddleware ,
                                 notFound: SSG_DATA_NOT_FOUND
                             },
                             response,
-                            text
+                            text,
+                            cacheKey
                         };
                     }
                     const error = new Error(`Failed to load static props`);
@@ -42692,7 +42828,8 @@ function fetchNextData({ dataHref , inflightCache , isPrefetch , hasMiddleware ,
                     dataHref,
                     json: parseJSON ? tryToParseAsJSON(text) : null,
                     response,
-                    text
+                    text,
+                    cacheKey
                 };
             });
         }).then((data)=>{
@@ -42715,13 +42852,6 @@ function fetchNextData({ dataHref , inflightCache , isPrefetch , hasMiddleware ,
     return inflightCache[cacheKey] = getData(isBackground ? {
         method: "HEAD"
     } : {});
-}
-function tryToParseAsJSON(text) {
-    try {
-        return JSON.parse(text);
-    } catch (error) {
-        return null;
-    }
 }
 function createKey() {
     return Math.random().toString(36).slice(2, 10);
@@ -43207,9 +43337,9 @@ class Router {
        * will always have the real-time generated and streamed flight data.
        */ const useStreamedFlightData = routeInfo.__N_RSC && true;
                 const shouldFetchData = routeInfo.__N_SSG || routeInfo.__N_SSP || routeInfo.__N_RSC;
-                const { props  } = yield _this._getData(_async_to_generator(function*() {
+                const { props , cacheKey  } = yield _this._getData(_async_to_generator(function*() {
                     if (shouldFetchData && !useStreamedFlightData) {
-                        const { json  } = (data == null ? void 0 : data.json) ? data : yield fetchNextData({
+                        const { json , cacheKey: _cacheKey  } = (data == null ? void 0 : data.json) ? data : yield fetchNextData({
                             dataHref: _this.pageLoader.getDataHref({
                                 href: _formatUrl.formatWithValidation({
                                     pathname,
@@ -43226,11 +43356,13 @@ class Router {
                             unstable_skipClientCache
                         });
                         return {
+                            cacheKey: _cacheKey,
                             props: json || {}
                         };
                     }
                     return {
                         headers: {},
+                        cacheKey: "",
                         props: yield _this.getInitialProps(routeInfo.Component, {
                             pathname,
                             query,
@@ -43244,10 +43376,7 @@ class Router {
                 // Only bust the data cache for SSP routes although
                 // middleware can skip cache per request with
                 // x-middleware-cache: no-cache as well
-                if (routeInfo.__N_SSP && fetchNextDataParams.dataHref) {
-                    const cacheKey = new URL(fetchNextDataParams.dataHref, window.location.href).href;
-                    delete _this.sdc[cacheKey];
-                }
+                if (routeInfo.__N_SSP && fetchNextDataParams.dataHref) delete _this.sdc[cacheKey];
                 !_this.isPreview && routeInfo.__N_SSG;
                 let flightInfo;
                 if (routeInfo.__N_RSC) flightInfo = {
@@ -43331,17 +43460,12 @@ class Router {
             const pages = yield _this.pageLoader.getPageList();
             let resolvedAs = asPath;
             const locale = typeof options.locale !== "undefined" ? options.locale || undefined : _this.locale;
-            const isMiddlewareMatch = yield matchesMiddleware({
-                asPath: asPath,
-                locale: locale,
-                router: _this
-            });
             parsed.pathname = resolveDynamicRoute(parsed.pathname, pages);
             if (_isDynamic.isDynamicRoute(parsed.pathname)) {
                 pathname = parsed.pathname;
                 parsed.pathname = pathname;
                 Object.assign(query, _routeMatcher.getRouteMatcher(_routeRegex.getRouteRegex(parsed.pathname))(_parsePath.parsePath(asPath).pathname) || {});
-                if (!isMiddlewareMatch) url = _formatUrl.formatWithValidation(parsed);
+                url = _formatUrl.formatWithValidation(parsed);
             }
             var isSsg;
             return;
@@ -43551,120 +43675,6 @@ class Router {
     }
 }
 Router.events = _mitt.default();
-function matchesMiddleware(options) {
-    return Promise.resolve(options.router.pageLoader.getMiddleware()).then((middleware)=>{
-        const { pathname: asPathname  } = _parsePath.parsePath(options.asPath);
-        const cleanedAs = _hasBasePath.hasBasePath(asPathname) ? _removeBasePath.removeBasePath(asPathname) : asPathname;
-        const regex = middleware == null ? void 0 : middleware.location;
-        return !!regex && new RegExp(regex).test(_addLocale.addLocale(cleanedAs, options.locale));
-    });
-}
-function withMiddlewareEffects(options) {
-    return matchesMiddleware(options).then((matches)=>{
-        if (matches && options.fetchData) return options.fetchData().then((data)=>getMiddlewareData(data.dataHref, data.response, options).then((effect)=>({
-                    dataHref: data.dataHref,
-                    json: data.json,
-                    response: data.response,
-                    text: data.text,
-                    effect
-                }))).catch((_err)=>{
-            /**
-           * TODO: Revisit this in the future.
-           * For now we will not consider middleware data errors to be fatal.
-           * maybe we should revisit in the future.
-           */ return null;
-        });
-        return null;
-    });
-}
-function getMiddlewareData(source, response, options) {
-    const nextConfig = {
-        basePath: options.router.basePath,
-        i18n: {
-            locales: options.router.locales
-        },
-        trailingSlash: Boolean(undefined)
-    };
-    const rewriteHeader = response.headers.get("x-nextjs-rewrite");
-    let rewriteTarget = rewriteHeader || response.headers.get("x-nextjs-matched-path");
-    const matchedPath = response.headers.get("x-matched-path");
-    if (matchedPath && !rewriteTarget && !matchedPath.includes("__next_data_catchall") && !matchedPath.includes("/_error") && !matchedPath.includes("/404")) // leverage x-matched-path to detect next.config.js rewrites
-    rewriteTarget = matchedPath;
-    if (rewriteTarget) {
-        if (rewriteTarget.startsWith("/")) {
-            const parsedRewriteTarget = _parseRelativeUrl.parseRelativeUrl(rewriteTarget);
-            const pathnameInfo = _getNextPathnameInfo.getNextPathnameInfo(parsedRewriteTarget.pathname, {
-                nextConfig,
-                parseData: true
-            });
-            let fsPathname = _removeTrailingSlash.removeTrailingSlash(pathnameInfo.pathname);
-            return Promise.all([
-                options.router.pageLoader.getPageList(),
-                _routeLoader.getClientBuildManifest(), 
-            ]).then(([pages, { __rewrites: rewrites  }])=>{
-                let as = _addLocale.addLocale(pathnameInfo.pathname, pathnameInfo.locale);
-                if (_isDynamic.isDynamicRoute(as) || !rewriteHeader && pages.includes(_normalizeLocalePath.normalizeLocalePath(_removeBasePath.removeBasePath(as), options.router.locales).pathname)) {
-                    const parsedSource = _getNextPathnameInfo.getNextPathnameInfo(_parseRelativeUrl.parseRelativeUrl(source).pathname, {
-                        parseData: true
-                    });
-                    as = _addBasePath.addBasePath(parsedSource.pathname);
-                    parsedRewriteTarget.pathname = as;
-                }
-                if (!pages.includes(fsPathname)) {
-                    const resolvedPathname = resolveDynamicRoute(fsPathname, pages);
-                    if (resolvedPathname !== fsPathname) fsPathname = resolvedPathname;
-                }
-                const resolvedHref = !pages.includes(fsPathname) ? resolveDynamicRoute(_normalizeLocalePath.normalizeLocalePath(_removeBasePath.removeBasePath(parsedRewriteTarget.pathname), options.router.locales).pathname, pages) : fsPathname;
-                if (_isDynamic.isDynamicRoute(resolvedHref)) {
-                    const matches = _routeMatcher.getRouteMatcher(_routeRegex.getRouteRegex(resolvedHref))(as);
-                    Object.assign(parsedRewriteTarget.query, matches || {});
-                }
-                return {
-                    type: "rewrite",
-                    parsedAs: parsedRewriteTarget,
-                    resolvedHref
-                };
-            });
-        }
-        const src = _parsePath.parsePath(source);
-        const pathname = _formatNextPathnameInfo.formatNextPathnameInfo(_extends({}, _getNextPathnameInfo.getNextPathnameInfo(src.pathname, {
-            nextConfig,
-            parseData: true
-        }), {
-            defaultLocale: options.router.defaultLocale,
-            buildId: ""
-        }));
-        return Promise.resolve({
-            type: "redirect-external",
-            destination: `${pathname}${src.query}${src.hash}`
-        });
-    }
-    const redirectTarget = response.headers.get("x-nextjs-redirect");
-    if (redirectTarget) {
-        if (redirectTarget.startsWith("/")) {
-            const src1 = _parsePath.parsePath(redirectTarget);
-            const pathname1 = _formatNextPathnameInfo.formatNextPathnameInfo(_extends({}, _getNextPathnameInfo.getNextPathnameInfo(src1.pathname, {
-                nextConfig,
-                parseData: true
-            }), {
-                defaultLocale: options.router.defaultLocale,
-                buildId: ""
-            }));
-            return Promise.resolve({
-                type: "redirect-internal",
-                newAs: `${pathname1}${src1.query}${src1.hash}`,
-                newUrl: `${pathname1}${src1.query}${src1.hash}`
-            });
-        }
-        return Promise.resolve({
-            type: "redirect-external",
-            destination: redirectTarget
-        });
-    }
-    return Promise.resolve({
-        type: "next"
-    });
-}
 exports.default = Router;
 
 },{"@swc/helpers/lib/_async_to_generator.js":"687bf","@swc/helpers/lib/_extends.js":"4vU6g","@swc/helpers/lib/_interop_require_default.js":"k1iFV","@swc/helpers/lib/_interop_require_wildcard.js":"frrjo","../../../client/normalize-trailing-slash":"a5Qce","./utils/remove-trailing-slash":"ltEax","../../../client/route-loader":"i5Qrh","../../../client/script":"58Hib","../../../lib/is-error":"6h17E","../page-path/denormalize-page-path":"cW08D","../i18n/normalize-locale-path":"iF0G9","../mitt":"1O1Fg","../utils":"cHiay","./utils/is-dynamic":"6rybP","./utils/parse-relative-url":"lDl7e","./utils/querystring":"PeN2l","./utils/resolve-rewrites":"ezgoA","./utils/route-matcher":"hBdpi","./utils/route-regex":"7W7zJ","./utils/format-url":"aBY4l","../../../client/detect-domain-locale":"ld5PD","./utils/parse-path":"9lS3k","../../../client/add-locale":"8fuhH","../../../client/remove-locale":"d72mY","../../../client/remove-base-path":"gS7mU","../../../client/add-base-path":"7l5aF","../../../client/has-base-path":"6NT5g","./utils/get-next-pathname-info":"24hnY","./utils/format-next-pathname-info":"b08uw","./utils/compare-states":"i3HBc","next/dist/compiled/react-is":"8mz76"}],"i5Qrh":[function(require,module,exports) {
@@ -43996,13 +44006,18 @@ const loadScript = (props)=>{
         ScriptCache.get(src).then(onLoad, onError);
         return;
     }
+    /** Execute after the script first loaded */ const afterLoad = ()=>{
+        // Run onReady for the first time after load event
+        if (onReady) onReady();
+        // add cacheKey to LoadCache when load successfully
+        LoadCache.add(cacheKey);
+    };
     const el = document.createElement("script");
     const loadPromise = new Promise((resolve, reject)=>{
         el.addEventListener("load", function(e) {
             resolve();
             if (onLoad) onLoad.call(this, e);
-            // Run onReady for the first time after load event
-            if (onReady) onReady();
+            afterLoad();
         });
         el.addEventListener("error", function(e) {
             reject(e);
@@ -44010,11 +44025,18 @@ const loadScript = (props)=>{
     }).catch(function(e) {
         if (onError) onError(e);
     });
-    if (src) ScriptCache.set(src, loadPromise);
-    LoadCache.add(cacheKey);
-    if (dangerouslySetInnerHTML) el.innerHTML = dangerouslySetInnerHTML.__html || "";
-    else if (children) el.textContent = typeof children === "string" ? children : Array.isArray(children) ? children.join("") : "";
-    else if (src) el.src = src;
+    if (dangerouslySetInnerHTML) {
+        el.innerHTML = dangerouslySetInnerHTML.__html || "";
+        afterLoad();
+    } else if (children) {
+        el.textContent = typeof children === "string" ? children : Array.isArray(children) ? children.join("") : "";
+        afterLoad();
+    } else if (src) {
+        el.src = src;
+        // do not add cacheKey into LoadCache for remote script here
+        // cacheKey will be added to LoadCache when it is actually loaded (see loadPromise above)
+        ScriptCache.set(src, loadPromise);
+    }
     for (const [k, value] of Object.entries(props)){
         if (value === undefined || ignoreProps.includes(k)) continue;
         const attr = _headManager.DOMAttributeNames[k] || k.toLowerCase();
@@ -44062,10 +44084,38 @@ function Script(props) {
     ]);
     // Context is available only during SSR
     const { updateScripts , scripts , getIsSsr  } = _react.useContext(_headManagerContext.HeadManagerContext);
+    /**
+   * - First mount:
+   *   1. The useEffect for onReady executes
+   *   2. hasOnReadyEffectCalled.current is false, but the script hasn't loaded yet (not in LoadCache)
+   *      onReady is skipped, set hasOnReadyEffectCalled.current to true
+   *   3. The useEffect for loadScript executes
+   *      Once the script is loaded, the onReady will be called by then
+   *   [If strict mode is enabled / is wrapped in <OffScreen /> component]
+   *   5. The useEffect for onReady executes again
+   *   6. hasOnReadyEffectCalled.current is true, so entire effect is skipped
+   *   7. The useEffect for loadScript executes again
+   *   8. The script is already loaded/loading, loadScript bails out
+   *
+   * - Second mount:
+   *   1. The useEffect for onReady executes
+   *   2. hasOnReadyEffectCalled.current is false, but the script has already loaded (found in LoadCache)
+   *      onReady is called, set hasOnReadyEffectCalled.current to true
+   *   3. The useEffect for loadScript executes
+   *   4. The script is already loaded, loadScript bails out
+   *   [If strict mode is enabled / is wrapped in <OffScreen /> component]
+   *   5. The useEffect for onReady executes again
+   *   6. hasOnReadyEffectCalled.current is true, so entire effect is skipped
+   *   7. The useEffect for loadScript executes again
+   *   8. The script is already loaded, loadScript will bail out
+   */ const hasOnReadyEffectCalled = _react.useRef(false);
     _react.useEffect(()=>{
         const cacheKey = id || src;
-        // Run onReady if script has loaded before but component is re-mounted
-        if (onReady && cacheKey && LoadCache.has(cacheKey)) onReady();
+        if (!hasOnReadyEffectCalled.current) {
+            // Run onReady if script has loaded before but component is re-mounted
+            if (onReady && cacheKey && LoadCache.has(cacheKey)) onReady();
+            hasOnReadyEffectCalled.current = true;
+        }
     }, [
         onReady,
         id,
@@ -44096,6 +44146,9 @@ function Script(props) {
     }
     return null;
 }
+Object.defineProperty(Script, "__nextScript", {
+    value: true
+});
 var _default = Script;
 exports.default = _default;
 if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
@@ -45092,6 +45145,24 @@ var _extends = require("@swc/helpers/lib/_extends.js").default;
 var _pathToRegexp = require("next/dist/compiled/path-to-regexp");
 var _escapeRegexp = require("../../escape-regexp");
 var _parseUrl = require("./parse-url");
+/**
+ * Ensure only a-zA-Z are used for param names for proper interpolating
+ * with path-to-regexp
+ */ function getSafeParamName(paramName) {
+    let newParamName = "";
+    for(let i = 0; i < paramName.length; i++){
+        const charCode = paramName.charCodeAt(i);
+        if (charCode > 64 && charCode < 91 || charCode > 96 && charCode < 123 // a-z
+        ) newParamName += paramName[i];
+    }
+    return newParamName;
+}
+function escapeSegment(str, segmentName) {
+    return str.replace(new RegExp(`:${_escapeRegexp.escapeStringRegexp(segmentName)}`, "g"), `__ESC_COLON_${segmentName}`);
+}
+function unescapeSegments(str) {
+    return str.replace(/__ESC_COLON_/gi, ":");
+}
 function matchHas(req, has, query) {
     const params = {};
     const allMatch = has.every((hasItem)=>{
@@ -45212,24 +45283,6 @@ function prepareDestination(args) {
         destQuery,
         parsedDestination
     };
-}
-/**
- * Ensure only a-zA-Z are used for param names for proper interpolating
- * with path-to-regexp
- */ function getSafeParamName(paramName) {
-    let newParamName = "";
-    for(let i = 0; i < paramName.length; i++){
-        const charCode = paramName.charCodeAt(i);
-        if (charCode > 64 && charCode < 91 || charCode > 96 && charCode < 123 // a-z
-        ) newParamName += paramName[i];
-    }
-    return newParamName;
-}
-function escapeSegment(str, segmentName) {
-    return str.replace(new RegExp(`:${_escapeRegexp.escapeStringRegexp(segmentName)}`, "g"), `__ESC_COLON_${segmentName}`);
-}
-function unescapeSegments(str) {
-    return str.replace(/__ESC_COLON_/gi, ":");
 }
 
 },{"@swc/helpers/lib/_extends.js":"4vU6g","next/dist/compiled/path-to-regexp":"575Oc","../../escape-regexp":"g4TDV","./parse-url":"58L73"}],"g4TDV":[function(require,module,exports) {
@@ -45360,24 +45413,26 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getRouteRegex = getRouteRegex;
 exports.getNamedRouteRegex = getNamedRouteRegex;
-exports.getMiddlewareRegex = getMiddlewareRegex;
 exports.getNamedMiddlewareRegex = getNamedMiddlewareRegex;
 var _extends = require("@swc/helpers/lib/_extends.js").default;
 var _escapeRegexp = require("../../escape-regexp");
 var _removeTrailingSlash = require("./remove-trailing-slash");
-function getRouteRegex(normalizedRoute) {
-    const { parameterizedRoute , groups  } = getParametrizedRoute(normalizedRoute);
+/**
+ * Parses a given parameter from a route to a data structure that can be used
+ * to generate the parametrized route. Examples:
+ *   - `[...slug]` -> `{ name: 'slug', repeat: true, optional: true }`
+ *   - `[foo]` -> `{ name: 'foo', repeat: false, optional: true }`
+ *   - `bar` -> `{ name: 'bar', repeat: false, optional: false }`
+ */ function parseParameter(param) {
+    const optional = param.startsWith("[") && param.endsWith("]");
+    if (optional) param = param.slice(1, -1);
+    const repeat = param.startsWith("...");
+    if (repeat) param = param.slice(3);
     return {
-        re: new RegExp(`^${parameterizedRoute}(?:/)?$`),
-        groups: groups
+        key: param,
+        repeat,
+        optional
     };
-}
-function getNamedRouteRegex(normalizedRoute) {
-    const result = getNamedParametrizedRoute(normalizedRoute);
-    return _extends({}, getRouteRegex(normalizedRoute), {
-        namedRegex: `^${result.namedParameterizedRoute}(?:/)?$`,
-        routeKeys: result.routeKeys
-    });
 }
 function getParametrizedRoute(route) {
     const segments = _removeTrailingSlash.removeTrailingSlash(route).slice(1).split("/");
@@ -45396,6 +45451,32 @@ function getParametrizedRoute(route) {
             } else return `/${_escapeRegexp.escapeStringRegexp(segment)}`;
         }).join(""),
         groups
+    };
+}
+function getRouteRegex(normalizedRoute) {
+    const { parameterizedRoute , groups  } = getParametrizedRoute(normalizedRoute);
+    return {
+        re: new RegExp(`^${parameterizedRoute}(?:/)?$`),
+        groups: groups
+    };
+}
+/**
+ * Builds a function to generate a minimal routeKey using only a-z and minimal
+ * number of characters.
+ */ function buildGetSafeRouteKey() {
+    let routeKeyCharCode = 97;
+    let routeKeyCharLength = 1;
+    return ()=>{
+        let routeKey = "";
+        for(let i = 0; i < routeKeyCharLength; i++){
+            routeKey += String.fromCharCode(routeKeyCharCode);
+            routeKeyCharCode++;
+            if (routeKeyCharCode > 122) {
+                routeKeyCharLength++;
+                routeKeyCharCode = 97;
+            }
+        }
+        return routeKey;
     };
 }
 function getNamedParametrizedRoute(route) {
@@ -45422,57 +45503,12 @@ function getNamedParametrizedRoute(route) {
         routeKeys
     };
 }
-/**
- * Parses a given parameter from a route to a data structure that can be used
- * to generate the parametrized route. Examples:
- *   - `[...slug]` -> `{ name: 'slug', repeat: true, optional: true }`
- *   - `[foo]` -> `{ name: 'foo', repeat: false, optional: true }`
- *   - `bar` -> `{ name: 'bar', repeat: false, optional: false }`
- */ function parseParameter(param) {
-    const optional = param.startsWith("[") && param.endsWith("]");
-    if (optional) param = param.slice(1, -1);
-    const repeat = param.startsWith("...");
-    if (repeat) param = param.slice(3);
-    return {
-        key: param,
-        repeat,
-        optional
-    };
-}
-/**
- * Builds a function to generate a minimal routeKey using only a-z and minimal
- * number of characters.
- */ function buildGetSafeRouteKey() {
-    let routeKeyCharCode = 97;
-    let routeKeyCharLength = 1;
-    return ()=>{
-        let routeKey = "";
-        for(let i = 0; i < routeKeyCharLength; i++){
-            routeKey += String.fromCharCode(routeKeyCharCode);
-            routeKeyCharCode++;
-            if (routeKeyCharCode > 122) {
-                routeKeyCharLength++;
-                routeKeyCharCode = 97;
-            }
-        }
-        return routeKey;
-    };
-}
-function getMiddlewareRegex(normalizedRoute, options) {
-    const { parameterizedRoute , groups  } = getParametrizedRoute(normalizedRoute);
-    const { catchAll =true  } = options != null ? options : {};
-    if (parameterizedRoute === "/") {
-        let catchAllRegex = catchAll ? ".*" : "";
-        return {
-            groups: {},
-            re: new RegExp(`^/${catchAllRegex}$`)
-        };
-    }
-    let catchAllGroupedRegex = catchAll ? "(?:(/.*)?)" : "";
-    return {
-        groups: groups,
-        re: new RegExp(`^${parameterizedRoute}${catchAllGroupedRegex}$`)
-    };
+function getNamedRouteRegex(normalizedRoute) {
+    const result = getNamedParametrizedRoute(normalizedRoute);
+    return _extends({}, getRouteRegex(normalizedRoute), {
+        namedRegex: `^${result.namedParameterizedRoute}(?:/)?$`,
+        routeKeys: result.routeKeys
+    });
 }
 function getNamedMiddlewareRegex(normalizedRoute, options) {
     const { parameterizedRoute  } = getParametrizedRoute(normalizedRoute);
@@ -47760,30 +47796,36 @@ function Table(props) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tableStyles.TableStyled), {
         children: [
             props.headChildren && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tableStyles.TableHeadStyled), {
-                children: props.headChildren.map((child, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tableStyles.TableHeadCellStyled), {
-                        onClick: ()=>handleSort(index),
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
-                            ariaLabel: "Sort",
-                            css: {
-                                svg: {
-                                    opacity: sortBy === index ? 1 : 0.2
-                                }
-                            },
-                            icon: sortBy === index ? sortDirection === "asc" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.SortAscending), {}, void 0, false, void 0, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.SortDescending), {}, void 0, false, void 0, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.FunnelSimple), {}, void 0, false, void 0, void 0),
-                            iconPosition: "right",
-                            name: "sort",
-                            theme: "minimal",
-                            children: child
-                        }, void 0, false, {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tableStyles.TableRowStyled), {
+                    children: props.headChildren.map((child, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tableStyles.TableHeadCellStyled), {
+                            onClick: ()=>handleSort(index),
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
+                                ariaLabel: "Sort",
+                                css: {
+                                    svg: {
+                                        opacity: sortBy === index ? 1 : 0.2
+                                    }
+                                },
+                                icon: sortBy === index ? sortDirection === "asc" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.SortAscending), {}, void 0, false, void 0, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.SortDescending), {}, void 0, false, void 0, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.FunnelSimple), {}, void 0, false, void 0, void 0),
+                                iconPosition: "right",
+                                name: "sort",
+                                theme: "minimal",
+                                children: child
+                            }, void 0, false, {
+                                fileName: "src/components/Table/Table.tsx",
+                                lineNumber: 47,
+                                columnNumber: 17
+                            }, this)
+                        }, index, false, {
                             fileName: "src/components/Table/Table.tsx",
                             lineNumber: 46,
                             columnNumber: 15
-                        }, this)
-                    }, index, false, {
-                        fileName: "src/components/Table/Table.tsx",
-                        lineNumber: 45,
-                        columnNumber: 13
-                    }, this))
+                        }, this))
+                }, void 0, false, {
+                    fileName: "src/components/Table/Table.tsx",
+                    lineNumber: 44,
+                    columnNumber: 11
+                }, this)
             }, void 0, false, {
                 fileName: "src/components/Table/Table.tsx",
                 lineNumber: 43,
@@ -47795,17 +47837,17 @@ function Table(props) {
                                 children: cell
                             }, index, false, {
                                 fileName: "src/components/Table/Table.tsx",
-                                lineNumber: 67,
+                                lineNumber: 69,
                                 columnNumber: 15
                             }, this))
                     }, index, false, {
                         fileName: "src/components/Table/Table.tsx",
-                        lineNumber: 65,
+                        lineNumber: 67,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "src/components/Table/Table.tsx",
-                lineNumber: 63,
+                lineNumber: 65,
                 columnNumber: 7
             }, this)
         ]
@@ -48055,6 +48097,7 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 fontSize: "$h4",
                 fontWeight: "$h4",
                 lineHeight: "$h4",
+                fontFamily: "$serif",
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     fontSize: "calc($h4 * 0.85)"
                 },

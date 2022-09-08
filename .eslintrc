@@ -1,6 +1,8 @@
 {
-  "extends": ["dolmios"],
+  "extends": ["next", "dolmios"],
   "rules": {
-    "import/no-unresolved": "off"
+    "import/no-unresolved": "off",
+    "react/jsx-sort-props": "error",
+    "@next/next/no-html-link-for-pages": "off"
   }
 }
