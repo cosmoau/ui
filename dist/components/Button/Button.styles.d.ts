@@ -253,16 +253,6 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         default: string;
         serif: string;
     };
-    lineHeights: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-        p: string;
-        small: string;
-    };
     media: {
         desktop: string;
         desktopX: string;
@@ -420,16 +410,6 @@ export declare const ButtonIconStyled: import("@stitches/react/types/styled-comp
         sans: string;
         default: string;
         serif: string;
-    };
-    lineHeights: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-        p: string;
-        small: string;
     };
     media: {
         desktop: string;

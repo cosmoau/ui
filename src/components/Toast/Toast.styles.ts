@@ -8,7 +8,7 @@ export const ToastStyled = styled('div', {
   cursor: 'pointer',
   fontSize: '$h6',
   height: 'auto',
-  lineHeight: '$h6',
+  lineHeight: 'normal !important',
   marginTop: '$3',
   overflow: 'hidden',
   padding: '$1 $3',

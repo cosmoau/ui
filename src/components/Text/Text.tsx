@@ -27,13 +27,21 @@ export default function Text(props: Props): JSX.Element {
           paddingTop: `$${props.top}`,
           [breakpoints.phone]: {
             marginTop: props.top ? '0 !important' : 'inherit',
-            paddingTop: props.top !== ('8' || '9') ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.8)`,
+            paddingTop: props.top !== ('8' || '9') ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`,
+          },
+          [breakpoints.tabletX]: {
+            marginTop: props.top ? '0 !important' : 'inherit',
+            paddingTop: props.top !== ('8' || '9') ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`,
           },
         }),
         ...(props.bottom && {
           [breakpoints.phone]: {
             marginBottom: props.bottom ? '0 !important' : 'inherit',
-            paddingBottom: props.bottom !== ('8' || '9') ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.8)`,
+            paddingBottom: props.bottom !== ('8' || '9') ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`,
+          },
+          [breakpoints.tabletX]: {
+            marginBottom: props.bottom ? '0 !important' : 'inherit',
+            paddingBottom: props.bottom !== ('8' || '9') ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`,
           },
           paddingBottom: `$${props.bottom}`,
         }),

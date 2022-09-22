@@ -57,7 +57,6 @@ export const InputAreaStyled = styled('input', {
   fontFamily: '$sans !important',
   fontSize: '16px !important',
   letterSpacing: '0',
-  lineHeight: 'normal',
   margin: '0',
   minHeight: '2.4rem',
   outline: 'none',

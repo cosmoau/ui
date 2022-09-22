@@ -52,16 +52,6 @@ export declare const InputStyled: import("@stitches/react/types/styled-component
         default: string;
         serif: string;
     };
-    lineHeights: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-        p: string;
-        small: string;
-    };
     media: {
         desktop: string;
         desktopX: string;
@@ -245,16 +235,6 @@ export declare const InputCoreStyled: import("@stitches/react/types/styled-compo
         default: string;
         serif: string;
     };
-    lineHeights: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-        p: string;
-        small: string;
-    };
     media: {
         desktop: string;
         desktopX: string;
@@ -396,16 +376,6 @@ export declare const InputAreaStyled: import("@stitches/react/types/styled-compo
         sans: string;
         default: string;
         serif: string;
-    };
-    lineHeights: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-        p: string;
-        small: string;
     };
     media: {
         desktop: string;
@@ -549,16 +519,6 @@ export declare const InputFunctionStyled: import("@stitches/react/types/styled-c
         default: string;
         serif: string;
     };
-    lineHeights: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-        p: string;
-        small: string;
-    };
     media: {
         desktop: string;
         desktopX: string;
@@ -700,16 +660,6 @@ export declare const InputCallbackStyled: import("@stitches/react/types/styled-c
         sans: string;
         default: string;
         serif: string;
-    };
-    lineHeights: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-        p: string;
-        small: string;
     };
     media: {
         desktop: string;

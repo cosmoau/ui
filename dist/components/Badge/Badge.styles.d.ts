@@ -1,4 +1,63 @@
 export declare const BadgeStyled: import("@stitches/react/types/styled-component").StyledComponent<"div", import("@stitches/react/types/styled-component").StyledComponentProps<[{
+    [x: string]: string | {
+        alignSelf: string;
+        height: string;
+        marginTop: string;
+        width: string;
+        theme?: undefined;
+        fontSize?: undefined;
+    } | {
+        theme: {
+            blue: {
+                backgroundColor: string;
+                color: string;
+            };
+            border: {
+                border: string;
+                color: string;
+            };
+            borderHover: {
+                border: string;
+                color: string;
+            };
+            default: {
+                backgroundColor: string;
+                color: string;
+            };
+            green: {
+                backgroundColor: string;
+                color: string;
+            };
+            orange: {
+                backgroundColor: string;
+                color: string;
+            };
+            pink: {
+                backgroundColor: string;
+                color: string;
+            };
+            purple: {
+                backgroundColor: string;
+                color: string;
+            };
+            red: {
+                backgroundColor: string;
+                color: string;
+            };
+        };
+        alignSelf?: undefined;
+        height?: undefined;
+        marginTop?: undefined;
+        width?: undefined;
+        fontSize?: undefined;
+    } | {
+        fontSize: string;
+        alignSelf?: undefined;
+        height?: undefined;
+        marginTop?: undefined;
+        width?: undefined;
+        theme?: undefined;
+    };
     alignItems: string;
     borderRadius: string;
     display: string;
@@ -107,16 +166,6 @@ export declare const BadgeStyled: import("@stitches/react/types/styled-component
         sans: string;
         default: string;
         serif: string;
-    };
-    lineHeights: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-        p: string;
-        small: string;
     };
     media: {
         desktop: string;
@@ -272,16 +321,6 @@ export declare const BadgeIconStyled: import("@stitches/react/types/styled-compo
         sans: string;
         default: string;
         serif: string;
-    };
-    lineHeights: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-        p: string;
-        small: string;
     };
     media: {
         desktop: string;
@@ -467,16 +506,6 @@ export declare const BadgeDotStyled: import("@stitches/react/types/styled-compon
         sans: string;
         default: string;
         serif: string;
-    };
-    lineHeights: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-        p: string;
-        small: string;
     };
     media: {
         desktop: string;

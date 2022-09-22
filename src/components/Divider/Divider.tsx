@@ -19,26 +19,18 @@ export default function Divider(props: Props): JSX.Element {
         ...(props.top && {
           marginTop: `$${props.top}`,
           [breakpoints.phone]: {
-            marginTop: props.top !== ('8' || '9') ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.8)`,
+            marginTop: props.top !== ('8' || '9') ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`,
+          },
+          [breakpoints.tabletX]: {
+            marginTop: props.top !== ('8' || '9') ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`,
           },
         }),
         ...(props.bottom && {
           [breakpoints.phone]: {
-            marginBottom: props.bottom !== ('8' || '9') ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.8)`,
+            marginBottom: props.bottom !== ('8' || '9') ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`,
           },
-          marginBottom: `$${props.bottom}`,
-        }),
-
-        ...(props.top && {
-          marginTop: `$${props.top}`,
-          [breakpoints.phone]: {
-            marginTop: `calc($${props.top} * 0.9)`,
-          },
-        }),
-        ...(props.bottom && {
-          marginBottom: `$${props.bottom}`,
-          [breakpoints.phone]: {
-            marginBottom: `calc($${props.bottom} * 0.9)`,
+          [breakpoints.tabletX]: {
+            marginBottom: props.bottom !== ('8' || '9') ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`,
           },
         }),
       }}

@@ -24,16 +24,13 @@ export const ButtonStyled = styled('button', {
   display: 'inline-flex',
   fontSize: '$h5',
   fontWeight: '$h5',
-  lineHeight: 'normal !important',
+  lineHeight: '1.5 !important',
 
   [breakpoints.phone]: {
-    fontSize: 'calc($h5 * 0.85)',
+    fontSize: 'calc($h5 * 0.9)',
   },
   [breakpoints.tabletX]: {
-    fontSize: 'calc($h5 * 0.875)',
-  },
-  [breakpoints.laptopX]: {
-    fontSize: 'calc($h5 * 0.9)',
+    fontSize: 'calc($h5 * 0.925)',
   },
 
   padding: '$1 $4',
@@ -42,7 +39,6 @@ export const ButtonStyled = styled('button', {
     alignSelf: 'center',
     height: '1.7rem',
     verticalAlign: 'middle',
-
     width: '1.7rem',
   },
 

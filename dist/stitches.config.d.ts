@@ -67,16 +67,6 @@ export declare const theme: string & {
         default: import("@stitches/react/types/theme").Token<"default", string, "fonts", "">;
         serif: import("@stitches/react/types/theme").Token<"serif", string, "fonts", "">;
     };
-    lineHeights: {
-        h1: import("@stitches/react/types/theme").Token<"h1", string, "lineHeights", "">;
-        h2: import("@stitches/react/types/theme").Token<"h2", string, "lineHeights", "">;
-        h3: import("@stitches/react/types/theme").Token<"h3", string, "lineHeights", "">;
-        h4: import("@stitches/react/types/theme").Token<"h4", string, "lineHeights", "">;
-        h5: import("@stitches/react/types/theme").Token<"h5", string, "lineHeights", "">;
-        h6: import("@stitches/react/types/theme").Token<"h6", string, "lineHeights", "">;
-        p: import("@stitches/react/types/theme").Token<"p", string, "lineHeights", "">;
-        small: import("@stitches/react/types/theme").Token<"small", string, "lineHeights", "">;
-    };
     media: {
         desktop: import("@stitches/react/types/theme").Token<"desktop", string, "media", "">;
         desktopX: import("@stitches/react/types/theme").Token<"desktopX", string, "media", "">;
@@ -171,16 +161,6 @@ export declare const theme: string & {
         sans: string;
         default: string;
         serif: string;
-    };
-    lineHeights: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-        p: string;
-        small: string;
     };
     media: {
         desktop: string;
@@ -336,16 +316,6 @@ export declare const theme: string & {
         default: string;
         serif: string;
     };
-    lineHeights: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-        p: string;
-        small: string;
-    };
     media: {
         desktop: string;
         desktopX: string;
@@ -498,16 +468,6 @@ export declare const theme: string & {
         default: string;
         serif: string;
     };
-    lineHeights: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-        p: string;
-        small: string;
-    };
     media: {
         desktop: string;
         desktopX: string;
@@ -655,16 +615,6 @@ export declare const theme: string & {
             default: string;
             serif: string;
         };
-        lineHeights: {
-            h1: string;
-            h2: string;
-            h3: string;
-            h4: string;
-            h5: string;
-            h6: string;
-            p: string;
-            small: string;
-        };
         media: {
             desktop: string;
             desktopX: string;
@@ -807,16 +757,6 @@ export declare const theme: string & {
         default: string;
         serif: string;
     };
-    lineHeights: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-        p: string;
-        small: string;
-    };
     media: {
         desktop: string;
         desktopX: string;
@@ -958,16 +898,6 @@ export declare const theme: string & {
             sans: string;
             default: string;
             serif: string;
-        };
-        lineHeights: {
-            h1: string;
-            h2: string;
-            h3: string;
-            h4: string;
-            h5: string;
-            h6: string;
-            p: string;
-            small: string;
         };
         media: {
             desktop: string;

@@ -6,6 +6,7 @@ export const TextStyled = styled('div', {
   },
   color: 'inherit',
   display: 'block',
+  lineHeight: 'normal !important',
   variants: {
     accent: {
       true: {
@@ -24,16 +25,12 @@ export const TextStyled = styled('div', {
         },
         fontSize: '$h1',
         fontWeight: '$h1',
-        lineHeight: '$h1',
         fontFamily: '$serif',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h1 * 0.85)',
-        },
-        [breakpoints.tabletX]: {
           fontSize: 'calc($h1 * 0.9)',
         },
-        [breakpoints.laptopX]: {
+        [breakpoints.tabletX]: {
           fontSize: 'calc($h1 * 0.95)',
         },
       },
@@ -43,16 +40,13 @@ export const TextStyled = styled('div', {
         },
         fontSize: '$h2',
         fontWeight: '$h2',
-        lineHeight: '$h2',
+
         fontFamily: '$serif',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h2 * 0.85)',
-        },
-        [breakpoints.tabletX]: {
           fontSize: 'calc($h2 * 0.9)',
         },
-        [breakpoints.laptopX]: {
+        [breakpoints.tabletX]: {
           fontSize: 'calc($h2 * 0.95)',
         },
       },
@@ -62,16 +56,13 @@ export const TextStyled = styled('div', {
         },
         fontSize: '$h3',
         fontWeight: '$h3',
-        lineHeight: '$h3',
+
         fontFamily: '$serif',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h3 * 0.85)',
-        },
-        [breakpoints.tabletX]: {
           fontSize: 'calc($h3 * 0.9)',
         },
-        [breakpoints.laptopX]: {
+        [breakpoints.tabletX]: {
           fontSize: 'calc($h3 * 0.95)',
         },
       },
@@ -81,16 +72,11 @@ export const TextStyled = styled('div', {
         },
         fontSize: '$h4',
         fontWeight: '$h4',
-        lineHeight: '$h4',
-        fontFamily: '$serif',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h4 * 0.85)',
-        },
-        [breakpoints.tabletX]: {
           fontSize: 'calc($h4 * 0.9)',
         },
-        [breakpoints.laptopX]: {
+        [breakpoints.tabletX]: {
           fontSize: 'calc($h4 * 0.95)',
         },
       },
@@ -100,16 +86,12 @@ export const TextStyled = styled('div', {
         },
         fontSize: '$h5',
         fontWeight: '$h5',
-        lineHeight: '$h5',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h5 * 0.85)',
+          fontSize: 'calc($h5 * 0.9)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($h5 * 0.875)',
-        },
-        [breakpoints.laptopX]: {
-          fontSize: 'calc($h5 * 0.9)',
+          fontSize: 'calc($h5 * 0.95)',
         },
       },
       h6: {
@@ -119,15 +101,11 @@ export const TextStyled = styled('div', {
         color: '$accent',
         fontSize: '$h6',
         fontWeight: '$h6',
-        lineHeight: '$h6',
 
         [breakpoints.phone]: {
           fontSize: 'calc($h6 * 0.9)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($h6 * 0.925)',
-        },
-        [breakpoints.laptopX]: {
           fontSize: 'calc($h6 * 0.95)',
         },
       },
@@ -137,15 +115,11 @@ export const TextStyled = styled('div', {
         },
         fontSize: '$p',
         fontWeight: '$p',
-        lineHeight: '$p',
 
         [breakpoints.phone]: {
           fontSize: 'calc($p * 0.9)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($p * 0.925)',
-        },
-        [breakpoints.laptopX]: {
           fontSize: 'calc($p * 0.95)',
         },
       },
@@ -155,22 +129,17 @@ export const TextStyled = styled('div', {
         },
         fontSize: '$small',
         fontWeight: '$small',
-        lineHeight: '$small',
 
         [breakpoints.phone]: {
           fontSize: 'calc($small * 0.9)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($small * 0.925)',
-        },
-        [breakpoints.laptopX]: {
           fontSize: 'calc($small * 0.95)',
         },
       },
       span: {
         fontSize: 'inherit',
         fontWeight: 'inherit',
-        lineHeight: 'inherit',
       },
     },
   },

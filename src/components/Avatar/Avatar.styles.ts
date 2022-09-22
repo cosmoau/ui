@@ -24,7 +24,6 @@ export const AvatarFallbackStyled = styled('div', {
   display: 'flex',
   height: '100%',
   justifyContent: 'center',
-  lineHeight: 1,
   textAlign: 'center',
   width: '100%',
 });

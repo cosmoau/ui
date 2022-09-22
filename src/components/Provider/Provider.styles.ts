@@ -98,7 +98,12 @@ export const reset = globalCss({
     MozOsxFontSmoothing: 'grayscale',
     WebkitFontSmoothing: 'antialiased',
     fontSize: '62.5%',
-    lineHeight: '1.5',
+    height: '100%',
+    lineHeight: 1.5,
+    overflowX: 'hidden',
+    overflowY: 'auto',
+    WebkitTextSizeAdjust: '100%',
+    boxSizing: 'border-box',
     textRendering: 'optimizeLegibility',
   },
   svg: {

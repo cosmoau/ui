@@ -1,22 +1,23 @@
 import React, { ReactElement } from 'react';
 
-import { Provider, Stack, View, Table, Badge, Button, Text, Input, Box } from '../src/index';
+import { Provider, Stack, View, Table, Badge, Button, Text, Input, Box, ProviderToggle } from '../src/index';
 
 export function App(): ReactElement {
   return (
     <Provider>
       <View container>
         <Stack direction='row' flex='center' top='4'>
-          <Stack direction='column'>
+          <Stack direction='column' width={25}>
             <Box>
               <Text as='h1'>Airbnb, Stayz, Booking.com and Homes & Villas Management</Text>
-              <Text as='h2'>No technical setup required.</Text>
-              <Text as='h3'>No technical setup required.</Text>
-              <Text as='h4'>No technical setup required.</Text>
-              <Text as='h5'>No technical setup required.</Text>
-              <Text as='h6'>No technical setup required.</Text>
-              <Text as='p'>No technical setup required.</Text>
-              <Text as='small'>No technical setup required.</Text>
+              <Text as='h2'>Make your short-term rental listings work for you, without the hassle</Text>
+              <Text as='h3'>Make your short-term rental listings work for you, without the hassle</Text>
+              <Text as='h4'>Make your short-term rental listings work for you, without the hassle</Text>
+              <Text as='h5'>Make your short-term rental listings work for you, without the hassle</Text>
+              <Text as='h6'>Make your short-term rental listings work for you, without the hassle</Text>
+              <Text as='p'>Make your short-term rental listings work for you, without the hassle</Text>
+              <Text as='small'>Make your short-term rental listings work for you, without the hassle</Text>
+              <ProviderToggle trigger={<Button ariaLabel='Toggle'>Toggle</Button>} />
               <Stack align='center'>
                 <Input />
               </Stack>

@@ -78,7 +78,6 @@ export default function Input(props: Props): JSX.Element {
               <Button
                 ariaLabel='Copy'
                 css={{
-                  lineHeight: '1',
                   marginLeft: '$2',
                 }}
                 icon={isCopied ? <ClipboardText opacity={0.4} weight='duotone' /> : <ClipboardText weight='duotone' />}
@@ -92,7 +91,6 @@ export default function Input(props: Props): JSX.Element {
               <Button
                 ariaLabel='Reveal'
                 css={{
-                  lineHeight: '1',
                   marginLeft: '$2',
                 }}
                 icon={!isRevealed ? <Eye weight='duotone' /> : <EyeClosed weight='duotone' />}
@@ -107,7 +105,6 @@ export default function Input(props: Props): JSX.Element {
               <Button
                 ariaLabel='Submit'
                 css={{
-                  lineHeight: '1',
                   marginLeft: '$2',
                 }}
                 disabled={!props.submitValid}

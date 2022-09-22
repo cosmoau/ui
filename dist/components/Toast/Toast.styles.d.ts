@@ -91,16 +91,6 @@ export declare const ToastStyled: import("@stitches/react/types/styled-component
         default: string;
         serif: string;
     };
-    lineHeights: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-        p: string;
-        small: string;
-    };
     media: {
         desktop: string;
         desktopX: string;
@@ -242,16 +232,6 @@ export declare const ToastContainerStyled: import("@stitches/react/types/styled-
         sans: string;
         default: string;
         serif: string;
-    };
-    lineHeights: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-        p: string;
-        small: string;
     };
     media: {
         desktop: string;

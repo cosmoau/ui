@@ -8,6 +8,7 @@ import { PopoverContentStyled, PopoverStyled, PopoverTriggerStyled } from './Pop
 export interface Props extends DefaultProps {
   children: ReactNode;
   type?: 'click' | 'hover';
+  align?: 'left' | 'right' | 'center';
   trigger: ReactNode;
   minimal?: boolean;
   width?: number;
@@ -69,7 +70,10 @@ export default function Popover(props: Props): JSX.Element {
           animation={isOpen}
           css={{
             ...props.css,
-            width: props.width || 'auto',
+            left: props.align === 'left' ? '0' : 'auto',
+            maxWidth: props.width + ' !important' || '25rem',
+            minWidth: props.width + ' !important' || '15rem',
+            right: props.align === 'right' ? '0' : 'auto',
           }}
           minimal={props.minimal}
           ref={ref}>

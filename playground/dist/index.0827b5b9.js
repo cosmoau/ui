@@ -27095,6 +27095,7 @@ function App() {
                 top: "4",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
                     direction: "column",
+                    width: 25,
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
                             children: [
@@ -27108,7 +27109,7 @@ function App() {
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
                                     as: "h2",
-                                    children: "No technical setup required."
+                                    children: "Make your short-term rental listings work for you, without the hassle"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
                                     lineNumber: 13,
@@ -27116,7 +27117,7 @@ function App() {
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
                                     as: "h3",
-                                    children: "No technical setup required."
+                                    children: "Make your short-term rental listings work for you, without the hassle"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
                                     lineNumber: 14,
@@ -27124,7 +27125,7 @@ function App() {
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
                                     as: "h4",
-                                    children: "No technical setup required."
+                                    children: "Make your short-term rental listings work for you, without the hassle"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
                                     lineNumber: 15,
@@ -27132,7 +27133,7 @@ function App() {
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
                                     as: "h5",
-                                    children: "No technical setup required."
+                                    children: "Make your short-term rental listings work for you, without the hassle"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
                                     lineNumber: 16,
@@ -27140,7 +27141,7 @@ function App() {
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
                                     as: "h6",
-                                    children: "No technical setup required."
+                                    children: "Make your short-term rental listings work for you, without the hassle"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
                                     lineNumber: 17,
@@ -27148,7 +27149,7 @@ function App() {
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
                                     as: "p",
-                                    children: "No technical setup required."
+                                    children: "Make your short-term rental listings work for you, without the hassle"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
                                     lineNumber: 18,
@@ -27156,22 +27157,31 @@ function App() {
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
                                     as: "small",
-                                    children: "No technical setup required."
+                                    children: "Make your short-term rental listings work for you, without the hassle"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
                                     lineNumber: 19,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.ProviderToggle), {
+                                    trigger: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
+                                        children: "Toggle"
+                                    }, void 0, false, void 0, void 0)
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 20,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
                                     align: "center",
                                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {}, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 21,
+                                        lineNumber: 22,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 20,
+                                    lineNumber: 21,
                                     columnNumber: 15
                                 }, this)
                             ]
@@ -27185,7 +27195,7 @@ function App() {
                             children: "Button"
                         }, void 0, false, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 24,
+                            lineNumber: 25,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27193,7 +27203,7 @@ function App() {
                             children: "Make your short-term rental listings work for you, without the hassle"
                         }, void 0, false, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 25,
+                            lineNumber: 26,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Table), {
@@ -27251,7 +27261,7 @@ function App() {
                             ]
                         }, void 0, false, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 26,
+                            lineNumber: 27,
                             columnNumber: 13
                         }, this)
                     ]
@@ -27467,6 +27477,7 @@ module.exports = require("./dist/client/image");
 },{"./dist/client/image":"5nHO8"}],"5nHO8":[function(require,module,exports) {
 "use strict";
 var global = arguments[3];
+"client";
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -27770,7 +27781,8 @@ function Image(_param) {
     const linkProps = {
         // Note: imagesrcset and imagesizes are not in the link element type with react 17.
         [imageSrcSetPropName]: imgAttributes.srcSet,
-        [imageSizesPropName]: imgAttributes.sizes
+        [imageSizesPropName]: imgAttributes.sizes,
+        crossOrigin: rest.crossOrigin
     };
     const useLayoutEffect = typeof window === "undefined" ? _react.default.useEffect : _react.default.useLayoutEffect;
     const onLoadingCompleteRef = _react.useRef(onLoadingComplete);
@@ -27841,6 +27853,7 @@ function Image(_param) {
         href: imgAttributes.srcSet ? undefined : imgAttributes.src
     }, linkProps))) : null);
 }
+"client";
 function normalizeSrc(src) {
     return src[0] === "/" ? src.slice(1) : src;
 }
@@ -28233,6 +28246,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 
 },{}],"1DDNO":[function(require,module,exports) {
 "use strict";
+"client";
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -28247,6 +28261,7 @@ var _ampContext = require("./amp-context");
 var _headManagerContext = require("./head-manager-context");
 var _ampMode = require("./amp-mode");
 var _utils = require("./utils");
+"client";
 function defaultHead(inAmpMode = false) {
     const head = [
         /*#__PURE__*/ _react.default.createElement("meta", {
@@ -28883,8 +28898,8 @@ function hasMatch(domains, remotePatterns, url) {
 }
 
 },{"next/dist/compiled/micromatch":"7gTyg"}],"7gTyg":[function(require,module,exports) {
-var __dirname = "node_modules/next/dist/compiled/micromatch";
 var process = require("process");
+var __dirname = "node_modules/next/dist/compiled/micromatch";
 (()=>{
     "use strict";
     var e = {
@@ -33518,7 +33533,7 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
     theme: {
         colors: {
             accent: "rgba(246, 250, 253, 0.7)",
-            background: "rgb(10, 13, 31)",
+            background: "rgb(16, 21, 33)",
             blueBorder: "rgba(115, 172, 255, 0.4)",
             blueOverlay: "rgba(151, 193, 255, 0.2)",
             blueText: "rgb(166, 179, 255)",
@@ -33545,20 +33560,20 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             text: "rgb(253, 250, 246)"
         },
         fontSizes: {
-            h1: "4rem",
+            h1: "3.5rem",
             h2: "3rem",
             h3: "2.5rem",
-            h4: "2.0rem",
-            h5: "1.8rem",
-            h6: "1.6rem",
-            p: "1.4rem",
+            h4: "1.8rem",
+            h5: "1.6rem",
+            h6: "1.5rem",
+            p: "1.3rem",
             small: "1.2rem"
         },
         fontWeights: {
             h1: "300",
             h2: "300",
             h3: "300",
-            h4: "300",
+            h4: "normal",
             h5: "normal",
             h6: "normal",
             p: "normal",
@@ -33568,16 +33583,6 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             sans: "Untitled Sans, apple-system, sans-serif",
             default: "$sans",
             serif: "Tiempos Fine"
-        },
-        lineHeights: {
-            h1: "1.3",
-            h2: "1.3",
-            h3: "1.3",
-            h4: "1.3",
-            h5: "1.4",
-            h6: "1.4",
-            p: "1.45",
-            small: "1.45"
         },
         media: breakpoints,
         radii: {
@@ -34741,7 +34746,6 @@ const AvatarFallbackStyled = (0, _stitchesConfig.styled)("div", {
     display: "flex",
     height: "100%",
     justifyContent: "center",
-    lineHeight: 1,
     textAlign: "center",
     width: "100%"
 });
@@ -40036,9 +40040,15 @@ const BadgeStyled = (0, _stitchesConfig.styled)("div", {
             }
         }
     },
-    fontSize: "$h6",
-    fontWeight: "$h6",
-    lineHeight: "$h6",
+    fontSize: "$h5",
+    fontWeight: "$h5",
+    lineHeight: "normal !important",
+    [(0, _stitchesConfig.breakpoints).phone]: {
+        fontSize: "calc($h6 * 0.9)"
+    },
+    [(0, _stitchesConfig.breakpoints).tabletX]: {
+        fontSize: "calc($h6 * 0.95)"
+    },
     verticalAlign: "middle"
 });
 const BadgeIconStyled = (0, _stitchesConfig.styled)("span", {
@@ -40411,15 +40421,12 @@ const ButtonStyled = (0, _stitchesConfig.styled)("button", {
     display: "inline-flex",
     fontSize: "$h5",
     fontWeight: "$h5",
-    lineHeight: "normal !important",
+    lineHeight: "1.5 !important",
     [(0, _stitchesConfig.breakpoints).phone]: {
-        fontSize: "calc($h5 * 0.85)"
+        fontSize: "calc($h5 * 0.9)"
     },
     [(0, _stitchesConfig.breakpoints).tabletX]: {
-        fontSize: "calc($h5 * 0.875)"
-    },
-    [(0, _stitchesConfig.breakpoints).laptopX]: {
-        fontSize: "calc($h5 * 0.9)"
+        fontSize: "calc($h5 * 0.925)"
     },
     padding: "$1 $4",
     svg: {
@@ -40616,84 +40623,148 @@ $RefreshReg$(_c, "Dialog");
 },{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","usehooks-ts":"dmUe4","../Button":"i3jlU","./Dialog.styles":"awDkT","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dmUe4":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-var _useBoolean = require("./useBoolean");
-parcelHelpers.exportAll(_useBoolean, exports);
-var _useClickAnyWhere = require("./useClickAnyWhere");
-parcelHelpers.exportAll(_useClickAnyWhere, exports);
-var _useCopyToClipboard = require("./useCopyToClipboard");
-parcelHelpers.exportAll(_useCopyToClipboard, exports);
-var _useCountdown = require("./useCountdown");
-parcelHelpers.exportAll(_useCountdown, exports);
-var _useCounter = require("./useCounter");
-parcelHelpers.exportAll(_useCounter, exports);
-var _useDarkMode = require("./useDarkMode");
-parcelHelpers.exportAll(_useDarkMode, exports);
-var _useDebounce = require("./useDebounce");
-parcelHelpers.exportAll(_useDebounce, exports);
-var _useEffectOnce = require("./useEffectOnce");
-parcelHelpers.exportAll(_useEffectOnce, exports);
-var _useElementSize = require("./useElementSize");
-parcelHelpers.exportAll(_useElementSize, exports);
-var _useEventListener = require("./useEventListener");
-parcelHelpers.exportAll(_useEventListener, exports);
-var _useFetch = require("./useFetch");
-parcelHelpers.exportAll(_useFetch, exports);
-var _useHover = require("./useHover");
-parcelHelpers.exportAll(_useHover, exports);
-var _useImageOnLoad = require("./useImageOnLoad");
-parcelHelpers.exportAll(_useImageOnLoad, exports);
-var _useIntersectionObserver = require("./useIntersectionObserver");
-parcelHelpers.exportAll(_useIntersectionObserver, exports);
-var _useInterval = require("./useInterval");
-parcelHelpers.exportAll(_useInterval, exports);
-var _useIsClient = require("./useIsClient");
-parcelHelpers.exportAll(_useIsClient, exports);
-var _useIsFirstRender = require("./useIsFirstRender");
-parcelHelpers.exportAll(_useIsFirstRender, exports);
-var _useIsMounted = require("./useIsMounted");
-parcelHelpers.exportAll(_useIsMounted, exports);
-var _useIsomorphicLayoutEffect = require("./useIsomorphicLayoutEffect");
-parcelHelpers.exportAll(_useIsomorphicLayoutEffect, exports);
-var _useLocalStorage = require("./useLocalStorage");
-parcelHelpers.exportAll(_useLocalStorage, exports);
-var _useLockedBody = require("./useLockedBody");
-parcelHelpers.exportAll(_useLockedBody, exports);
-var _useMap = require("./useMap");
-parcelHelpers.exportAll(_useMap, exports);
-var _useMediaQuery = require("./useMediaQuery");
-parcelHelpers.exportAll(_useMediaQuery, exports);
-var _useOnClickOutside = require("./useOnClickOutside");
-parcelHelpers.exportAll(_useOnClickOutside, exports);
-var _useReadLocalStorage = require("./useReadLocalStorage");
-parcelHelpers.exportAll(_useReadLocalStorage, exports);
-var _useScreen = require("./useScreen");
-parcelHelpers.exportAll(_useScreen, exports);
-var _useScript = require("./useScript");
-parcelHelpers.exportAll(_useScript, exports);
-var _useSessionStorage = require("./useSessionStorage");
-parcelHelpers.exportAll(_useSessionStorage, exports);
-var _useSsr = require("./useSsr");
-parcelHelpers.exportAll(_useSsr, exports);
-var _useStep = require("./useStep");
-parcelHelpers.exportAll(_useStep, exports);
-var _useTernaryDarkMode = require("./useTernaryDarkMode");
-parcelHelpers.exportAll(_useTernaryDarkMode, exports);
-var _useTimeout = require("./useTimeout");
-parcelHelpers.exportAll(_useTimeout, exports);
-var _useUpdateEffect = require("./useUpdateEffect");
-parcelHelpers.exportAll(_useUpdateEffect, exports);
-var _useWindowSize = require("./useWindowSize");
-parcelHelpers.exportAll(_useWindowSize, exports);
-
-},{"./useBoolean":"1fghQ","./useClickAnyWhere":"7ipqk","./useCopyToClipboard":"asthj","./useCountdown":"lkp4X","./useCounter":"fMCGT","./useDarkMode":"aoPx3","./useDebounce":"2vw5R","./useEffectOnce":"lFy8E","./useElementSize":"9ds6M","./useEventListener":"fjUy4","./useFetch":"aSuhw","./useHover":"aVB0X","./useImageOnLoad":"jSS6D","./useIntersectionObserver":"wuwxM","./useInterval":"8PKcn","./useIsClient":"hFMdz","./useIsFirstRender":"gb8iY","./useIsMounted":"eyySy","./useIsomorphicLayoutEffect":"hBCmk","./useLocalStorage":"gqg4r","./useLockedBody":"aqc1z","./useMap":"oA2FF","./useMediaQuery":"kHqjO","./useOnClickOutside":"83tBa","./useReadLocalStorage":"k0ycN","./useScreen":"j7Rop","./useScript":"ajvvy","./useSessionStorage":"1UwnA","./useSsr":"bl0p9","./useStep":"9TrV9","./useTernaryDarkMode":"cxY9e","./useTimeout":"eK2n7","./useUpdateEffect":"jNsXz","./useWindowSize":"6zzRu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1fghQ":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "useBoolean", ()=>(0, _useBooleanDefault.default));
-var _useBoolean = require("./useBoolean");
+parcelHelpers.export(exports, "useClickAnyWhere", ()=>(0, _useClickAnyWhereDefault.default));
+parcelHelpers.export(exports, "useCopyToClipboard", ()=>(0, _useCopyToClipboardDefault.default));
+parcelHelpers.export(exports, "useCountdown", ()=>(0, _useCountdownDefault.default));
+parcelHelpers.export(exports, "useCounter", ()=>(0, _useCounterDefault.default));
+parcelHelpers.export(exports, "useDarkMode", ()=>(0, _useDarkModeDefault.default));
+parcelHelpers.export(exports, "useDebounce", ()=>(0, _useDebounceDefault.default));
+parcelHelpers.export(exports, "useEffectOnce", ()=>(0, _useEffectOnceDefault.default));
+parcelHelpers.export(exports, "useElementSize", ()=>(0, _useElementSizeDefault.default));
+parcelHelpers.export(exports, "useEventCallback", ()=>(0, _useEventCallbackDefault.default));
+parcelHelpers.export(exports, "useEventListener", ()=>(0, _useEventListenerDefault.default));
+parcelHelpers.export(exports, "useFetch", ()=>(0, _useFetchDefault.default));
+parcelHelpers.export(exports, "useHover", ()=>(0, _useHoverDefault.default));
+parcelHelpers.export(exports, "useImageOnLoad", ()=>(0, _useImageOnLoadDefault.default));
+parcelHelpers.export(exports, "useIntersectionObserver", ()=>(0, _useIntersectionObserverDefault.default));
+parcelHelpers.export(exports, "useInterval", ()=>(0, _useIntervalDefault.default));
+parcelHelpers.export(exports, "useIsClient", ()=>(0, _useIsClientDefault.default));
+parcelHelpers.export(exports, "useIsFirstRender", ()=>(0, _useIsFirstRenderDefault.default));
+parcelHelpers.export(exports, "useIsMounted", ()=>(0, _useIsMountedDefault.default));
+parcelHelpers.export(exports, "useIsomorphicLayoutEffect", ()=>(0, _useIsomorphicLayoutEffectDefault.default));
+parcelHelpers.export(exports, "useLocalStorage", ()=>(0, _useLocalStorageDefault.default));
+parcelHelpers.export(exports, "useLockedBody", ()=>(0, _useLockedBodyDefault.default));
+parcelHelpers.export(exports, "useMap", ()=>(0, _useMapDefault.default));
+parcelHelpers.export(exports, "useMediaQuery", ()=>(0, _useMediaQueryDefault.default));
+parcelHelpers.export(exports, "useOnClickOutside", ()=>(0, _useOnClickOutsideDefault.default));
+parcelHelpers.export(exports, "useReadLocalStorage", ()=>(0, _useReadLocalStorageDefault.default));
+parcelHelpers.export(exports, "useScreen", ()=>(0, _useScreenDefault.default));
+parcelHelpers.export(exports, "useScript", ()=>(0, _useScriptDefault.default));
+parcelHelpers.export(exports, "useSessionStorage", ()=>(0, _useSessionStorageDefault.default));
+parcelHelpers.export(exports, "useSsr", ()=>(0, _useSsrDefault.default));
+parcelHelpers.export(exports, "useStep", ()=>(0, _useStepDefault.default));
+parcelHelpers.export(exports, "useTernaryDarkMode", ()=>(0, _useTernaryDarkModeDefault.default));
+parcelHelpers.export(exports, "useTimeout", ()=>(0, _useTimeoutDefault.default));
+parcelHelpers.export(exports, "useUpdateEffect", ()=>(0, _useUpdateEffectDefault.default));
+parcelHelpers.export(exports, "useWindowSize", ()=>(0, _useWindowSizeDefault.default));
+var _useBoolean = require("./useBoolean/useBoolean");
 var _useBooleanDefault = parcelHelpers.interopDefault(_useBoolean);
 parcelHelpers.exportAll(_useBoolean, exports);
+var _useClickAnyWhere = require("./useClickAnyWhere/useClickAnyWhere");
+var _useClickAnyWhereDefault = parcelHelpers.interopDefault(_useClickAnyWhere);
+parcelHelpers.exportAll(_useClickAnyWhere, exports);
+var _useCopyToClipboard = require("./useCopyToClipboard/useCopyToClipboard");
+var _useCopyToClipboardDefault = parcelHelpers.interopDefault(_useCopyToClipboard);
+parcelHelpers.exportAll(_useCopyToClipboard, exports);
+var _useCountdown = require("./useCountdown/useCountdown");
+var _useCountdownDefault = parcelHelpers.interopDefault(_useCountdown);
+parcelHelpers.exportAll(_useCountdown, exports);
+var _useCounter = require("./useCounter/useCounter");
+var _useCounterDefault = parcelHelpers.interopDefault(_useCounter);
+parcelHelpers.exportAll(_useCounter, exports);
+var _useDarkMode = require("./useDarkMode/useDarkMode");
+var _useDarkModeDefault = parcelHelpers.interopDefault(_useDarkMode);
+parcelHelpers.exportAll(_useDarkMode, exports);
+var _useDebounce = require("./useDebounce/useDebounce");
+var _useDebounceDefault = parcelHelpers.interopDefault(_useDebounce);
+parcelHelpers.exportAll(_useDebounce, exports);
+var _useEffectOnce = require("./useEffectOnce/useEffectOnce");
+var _useEffectOnceDefault = parcelHelpers.interopDefault(_useEffectOnce);
+parcelHelpers.exportAll(_useEffectOnce, exports);
+var _useElementSize = require("./useElementSize/useElementSize");
+var _useElementSizeDefault = parcelHelpers.interopDefault(_useElementSize);
+parcelHelpers.exportAll(_useElementSize, exports);
+var _useEventCallback = require("./useEventCallback/useEventCallback");
+var _useEventCallbackDefault = parcelHelpers.interopDefault(_useEventCallback);
+parcelHelpers.exportAll(_useEventCallback, exports);
+var _useEventListener = require("./useEventListener/useEventListener");
+var _useEventListenerDefault = parcelHelpers.interopDefault(_useEventListener);
+parcelHelpers.exportAll(_useEventListener, exports);
+var _useFetch = require("./useFetch/useFetch");
+var _useFetchDefault = parcelHelpers.interopDefault(_useFetch);
+parcelHelpers.exportAll(_useFetch, exports);
+var _useHover = require("./useHover/useHover");
+var _useHoverDefault = parcelHelpers.interopDefault(_useHover);
+parcelHelpers.exportAll(_useHover, exports);
+var _useImageOnLoad = require("./useImageOnLoad/useImageOnLoad");
+var _useImageOnLoadDefault = parcelHelpers.interopDefault(_useImageOnLoad);
+parcelHelpers.exportAll(_useImageOnLoad, exports);
+var _useIntersectionObserver = require("./useIntersectionObserver/useIntersectionObserver");
+var _useIntersectionObserverDefault = parcelHelpers.interopDefault(_useIntersectionObserver);
+parcelHelpers.exportAll(_useIntersectionObserver, exports);
+var _useInterval = require("./useInterval/useInterval");
+var _useIntervalDefault = parcelHelpers.interopDefault(_useInterval);
+parcelHelpers.exportAll(_useInterval, exports);
+var _useIsClient = require("./useIsClient/useIsClient");
+var _useIsClientDefault = parcelHelpers.interopDefault(_useIsClient);
+parcelHelpers.exportAll(_useIsClient, exports);
+var _useIsFirstRender = require("./useIsFirstRender/useIsFirstRender");
+var _useIsFirstRenderDefault = parcelHelpers.interopDefault(_useIsFirstRender);
+parcelHelpers.exportAll(_useIsFirstRender, exports);
+var _useIsMounted = require("./useIsMounted/useIsMounted");
+var _useIsMountedDefault = parcelHelpers.interopDefault(_useIsMounted);
+parcelHelpers.exportAll(_useIsMounted, exports);
+var _useIsomorphicLayoutEffect = require("./useIsomorphicLayoutEffect/useIsomorphicLayoutEffect");
+var _useIsomorphicLayoutEffectDefault = parcelHelpers.interopDefault(_useIsomorphicLayoutEffect);
+parcelHelpers.exportAll(_useIsomorphicLayoutEffect, exports);
+var _useLocalStorage = require("./useLocalStorage/useLocalStorage");
+var _useLocalStorageDefault = parcelHelpers.interopDefault(_useLocalStorage);
+parcelHelpers.exportAll(_useLocalStorage, exports);
+var _useLockedBody = require("./useLockedBody/useLockedBody");
+var _useLockedBodyDefault = parcelHelpers.interopDefault(_useLockedBody);
+parcelHelpers.exportAll(_useLockedBody, exports);
+var _useMap = require("./useMap/useMap");
+var _useMapDefault = parcelHelpers.interopDefault(_useMap);
+parcelHelpers.exportAll(_useMap, exports);
+var _useMediaQuery = require("./useMediaQuery/useMediaQuery");
+var _useMediaQueryDefault = parcelHelpers.interopDefault(_useMediaQuery);
+parcelHelpers.exportAll(_useMediaQuery, exports);
+var _useOnClickOutside = require("./useOnClickOutside/useOnClickOutside");
+var _useOnClickOutsideDefault = parcelHelpers.interopDefault(_useOnClickOutside);
+parcelHelpers.exportAll(_useOnClickOutside, exports);
+var _useReadLocalStorage = require("./useReadLocalStorage/useReadLocalStorage");
+var _useReadLocalStorageDefault = parcelHelpers.interopDefault(_useReadLocalStorage);
+parcelHelpers.exportAll(_useReadLocalStorage, exports);
+var _useScreen = require("./useScreen/useScreen");
+var _useScreenDefault = parcelHelpers.interopDefault(_useScreen);
+parcelHelpers.exportAll(_useScreen, exports);
+var _useScript = require("./useScript/useScript");
+var _useScriptDefault = parcelHelpers.interopDefault(_useScript);
+parcelHelpers.exportAll(_useScript, exports);
+var _useSessionStorage = require("./useSessionStorage/useSessionStorage");
+var _useSessionStorageDefault = parcelHelpers.interopDefault(_useSessionStorage);
+parcelHelpers.exportAll(_useSessionStorage, exports);
+var _useSsr = require("./useSsr/useSsr");
+var _useSsrDefault = parcelHelpers.interopDefault(_useSsr);
+parcelHelpers.exportAll(_useSsr, exports);
+var _useStep = require("./useStep/useStep");
+var _useStepDefault = parcelHelpers.interopDefault(_useStep);
+parcelHelpers.exportAll(_useStep, exports);
+var _useTernaryDarkMode = require("./useTernaryDarkMode/useTernaryDarkMode");
+var _useTernaryDarkModeDefault = parcelHelpers.interopDefault(_useTernaryDarkMode);
+parcelHelpers.exportAll(_useTernaryDarkMode, exports);
+var _useTimeout = require("./useTimeout/useTimeout");
+var _useTimeoutDefault = parcelHelpers.interopDefault(_useTimeout);
+parcelHelpers.exportAll(_useTimeout, exports);
+var _useUpdateEffect = require("./useUpdateEffect/useUpdateEffect");
+var _useUpdateEffectDefault = parcelHelpers.interopDefault(_useUpdateEffect);
+parcelHelpers.exportAll(_useUpdateEffect, exports);
+var _useWindowSize = require("./useWindowSize/useWindowSize");
+var _useWindowSizeDefault = parcelHelpers.interopDefault(_useWindowSize);
+parcelHelpers.exportAll(_useWindowSize, exports);
 
-},{"./useBoolean":"75OO8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"75OO8":[function(require,module,exports) {
+},{"./useBoolean/useBoolean":"75OO8","./useClickAnyWhere/useClickAnyWhere":"faDbb","./useCopyToClipboard/useCopyToClipboard":"2BS9r","./useCountdown/useCountdown":"fIMZs","./useCounter/useCounter":"kSFgg","./useDarkMode/useDarkMode":"aqL5L","./useDebounce/useDebounce":"lNmEG","./useEffectOnce/useEffectOnce":"3jP3w","./useElementSize/useElementSize":"2iww6","./useEventCallback/useEventCallback":"iwlUo","./useEventListener/useEventListener":"1HJqq","./useFetch/useFetch":"26gvK","./useHover/useHover":"eNC2T","./useImageOnLoad/useImageOnLoad":"fttn3","./useIntersectionObserver/useIntersectionObserver":"9IP75","./useInterval/useInterval":"GPWw2","./useIsClient/useIsClient":"3emvU","./useIsFirstRender/useIsFirstRender":"g3oAw","./useIsMounted/useIsMounted":"2uJb6","./useIsomorphicLayoutEffect/useIsomorphicLayoutEffect":"fWEdC","./useLocalStorage/useLocalStorage":"2Bbwp","./useLockedBody/useLockedBody":"aCXSw","./useMap/useMap":"2ZsJ5","./useMediaQuery/useMediaQuery":"26a3m","./useOnClickOutside/useOnClickOutside":"eLhz8","./useReadLocalStorage/useReadLocalStorage":"4VBoB","./useScreen/useScreen":"6YQVm","./useScript/useScript":"djE9J","./useSessionStorage/useSessionStorage":"jTdlC","./useSsr/useSsr":"9XRLH","./useStep/useStep":"2zb9y","./useTernaryDarkMode/useTernaryDarkMode":"9k0Mg","./useTimeout/useTimeout":"iuWi6","./useUpdateEffect/useUpdateEffect":"Gp0lB","./useWindowSize/useWindowSize":"73GDr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"75OO8":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -40712,85 +40783,18 @@ function useBoolean(defaultValue) {
 }
 exports.default = useBoolean;
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7ipqk":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"faDbb":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useClickAnyWhere", ()=>(0, _useClickAnyWhereDefault.default));
-var _useClickAnyWhere = require("./useClickAnyWhere");
-var _useClickAnyWhereDefault = parcelHelpers.interopDefault(_useClickAnyWhere);
-parcelHelpers.exportAll(_useClickAnyWhere, exports);
-
-},{"./useClickAnyWhere":"faDbb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"faDbb":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _useEventListener = require("../useEventListener");
+var _ = require("..");
 function useClickAnyWhere(handler) {
-    (0, _useEventListener.useEventListener)("click", (event)=>{
+    (0, _.useEventListener)("click", (event)=>{
         handler(event);
     });
 }
 exports.default = useClickAnyWhere;
 
-},{"../useEventListener":"fjUy4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fjUy4":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useEventListener", ()=>(0, _useEventListenerDefault.default));
-var _useEventListener = require("./useEventListener");
-var _useEventListenerDefault = parcelHelpers.interopDefault(_useEventListener);
-parcelHelpers.exportAll(_useEventListener, exports);
-
-},{"./useEventListener":"1HJqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1HJqq":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _useIsomorphicLayoutEffect = require("../useIsomorphicLayoutEffect");
-function useEventListener(eventName, handler, element, options) {
-    const savedHandler = (0, _react.useRef)(handler);
-    (0, _useIsomorphicLayoutEffect.useIsomorphicLayoutEffect)(()=>{
-        savedHandler.current = handler;
-    }, [
-        handler
-    ]);
-    (0, _react.useEffect)(()=>{
-        const targetElement = element?.current || window;
-        if (!(targetElement && targetElement.addEventListener)) return;
-        const eventListener = (event)=>savedHandler.current(event);
-        targetElement.addEventListener(eventName, eventListener, options);
-        return ()=>{
-            targetElement.removeEventListener(eventName, eventListener);
-        };
-    }, [
-        eventName,
-        element,
-        options
-    ]);
-}
-exports.default = useEventListener;
-
-},{"react":"21dqq","../useIsomorphicLayoutEffect":"hBCmk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hBCmk":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useIsomorphicLayoutEffect", ()=>(0, _useIsomorphicLayoutEffectDefault.default));
-var _useIsomorphicLayoutEffect = require("./useIsomorphicLayoutEffect");
-var _useIsomorphicLayoutEffectDefault = parcelHelpers.interopDefault(_useIsomorphicLayoutEffect);
-parcelHelpers.exportAll(_useIsomorphicLayoutEffect, exports);
-
-},{"./useIsomorphicLayoutEffect":"fWEdC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fWEdC":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-const useIsomorphicLayoutEffect = typeof window !== "undefined" ? (0, _react.useLayoutEffect) : (0, _react.useEffect);
-exports.default = useIsomorphicLayoutEffect;
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"asthj":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useCopyToClipboard", ()=>(0, _useCopyToClipboardDefault.default));
-var _useCopyToClipboard = require("./useCopyToClipboard");
-var _useCopyToClipboardDefault = parcelHelpers.interopDefault(_useCopyToClipboard);
-parcelHelpers.exportAll(_useCopyToClipboard, exports);
-
-},{"./useCopyToClipboard":"2BS9r","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2BS9r":[function(require,module,exports) {
+},{"..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2BS9r":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -40818,21 +40822,11 @@ function useCopyToClipboard() {
 }
 exports.default = useCopyToClipboard;
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lkp4X":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useCountdown", ()=>(0, _useCountdownDefault.default));
-var _useCountdown = require("./useCountdown");
-var _useCountdownDefault = parcelHelpers.interopDefault(_useCountdown);
-parcelHelpers.exportAll(_useCountdown, exports);
-
-},{"./useCountdown":"fIMZs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fIMZs":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fIMZs":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
-var _useBoolean = require("../useBoolean");
-var _useCounter = require("../useCounter");
-var _useInterval = require("../useInterval");
+var _ = require("..");
 function useCountdown(countdownOption) {
     let isDeprecated = false;
     let countStart, intervalMs, isIncrement, countStop;
@@ -40846,8 +40840,8 @@ function useCountdown(countdownOption) {
     intervalMs = intervalMs ?? 1000;
     isIncrement = isIncrement ?? false;
     countStop = countStop ?? 0;
-    const { count , increment , decrement , reset: resetCounter ,  } = (0, _useCounter.useCounter)(countStart);
-    const { value: isCountdownRunning , setTrue: startCountdown , setFalse: stopCountdown ,  } = (0, _useBoolean.useBoolean)(false);
+    const { count , increment , decrement , reset: resetCounter ,  } = (0, _.useCounter)(countStart);
+    const { value: isCountdownRunning , setTrue: startCountdown , setFalse: stopCountdown ,  } = (0, _.useBoolean)(false);
     const resetCountdown = ()=>{
         stopCountdown();
         resetCounter();
@@ -40867,7 +40861,7 @@ function useCountdown(countdownOption) {
         isIncrement,
         stopCountdown
     ]);
-    (0, _useInterval.useInterval)(countdownCallback, isCountdownRunning ? intervalMs : null);
+    (0, _.useInterval)(countdownCallback, isCountdownRunning ? intervalMs : null);
     return isDeprecated ? [
         count,
         {
@@ -40886,15 +40880,7 @@ function useCountdown(countdownOption) {
 }
 exports.default = useCountdown;
 
-},{"react":"21dqq","../useBoolean":"1fghQ","../useCounter":"fMCGT","../useInterval":"8PKcn","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fMCGT":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useCounter", ()=>(0, _useCounterDefault.default));
-var _useCounter = require("./useCounter");
-var _useCounterDefault = parcelHelpers.interopDefault(_useCounter);
-parcelHelpers.exportAll(_useCounter, exports);
-
-},{"./useCounter":"kSFgg","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kSFgg":[function(require,module,exports) {
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kSFgg":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -40913,55 +40899,15 @@ function useCounter(initialValue) {
 }
 exports.default = useCounter;
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8PKcn":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aqL5L":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useInterval", ()=>(0, _useIntervalDefault.default));
-var _useInterval = require("./useInterval");
-var _useIntervalDefault = parcelHelpers.interopDefault(_useInterval);
-parcelHelpers.exportAll(_useInterval, exports);
-
-},{"./useInterval":"GPWw2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"GPWw2":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _useIsomorphicLayoutEffect = require("../useIsomorphicLayoutEffect");
-function useInterval(callback, delay) {
-    const savedCallback = (0, _react.useRef)(callback);
-    (0, _useIsomorphicLayoutEffect.useIsomorphicLayoutEffect)(()=>{
-        savedCallback.current = callback;
-    }, [
-        callback
-    ]);
-    (0, _react.useEffect)(()=>{
-        if (!delay && delay !== 0) return;
-        const id = setInterval(()=>savedCallback.current(), delay);
-        return ()=>clearInterval(id);
-    }, [
-        delay
-    ]);
-}
-exports.default = useInterval;
-
-},{"react":"21dqq","../useIsomorphicLayoutEffect":"hBCmk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aoPx3":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useDarkMode", ()=>(0, _useDarkModeDefault.default));
-var _useDarkMode = require("./useDarkMode");
-var _useDarkModeDefault = parcelHelpers.interopDefault(_useDarkMode);
-parcelHelpers.exportAll(_useDarkMode, exports);
-
-},{"./useDarkMode":"aqL5L","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aqL5L":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _useLocalStorage = require("../useLocalStorage");
-var _useMediaQuery = require("../useMediaQuery");
-var _useUpdateEffect = require("../useUpdateEffect");
+var _ = require("..");
 const COLOR_SCHEME_QUERY = "(prefers-color-scheme: dark)";
 function useDarkMode(defaultValue) {
-    const isDarkOS = (0, _useMediaQuery.useMediaQuery)(COLOR_SCHEME_QUERY);
-    const [isDarkMode, setDarkMode] = (0, _useLocalStorage.useLocalStorage)("usehooks-ts-dark-mode", (defaultValue ?? isDarkOS) ?? false);
-    (0, _useUpdateEffect.useUpdateEffect)(()=>{
+    const isDarkOS = (0, _.useMediaQuery)(COLOR_SCHEME_QUERY);
+    const [isDarkMode, setDarkMode] = (0, _.useLocalStorage)("usehooks-ts-dark-mode", (defaultValue ?? isDarkOS) ?? false);
+    (0, _.useUpdateEffect)(()=>{
         setDarkMode(isDarkOS);
     }, [
         isDarkOS
@@ -40975,191 +40921,7 @@ function useDarkMode(defaultValue) {
 }
 exports.default = useDarkMode;
 
-},{"../useLocalStorage":"gqg4r","../useMediaQuery":"kHqjO","../useUpdateEffect":"jNsXz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gqg4r":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useLocalStorage", ()=>(0, _useLocalStorageDefault.default));
-var _useLocalStorage = require("./useLocalStorage");
-var _useLocalStorageDefault = parcelHelpers.interopDefault(_useLocalStorage);
-parcelHelpers.exportAll(_useLocalStorage, exports);
-
-},{"./useLocalStorage":"2Bbwp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2Bbwp":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _useEventCallback = require("../useEventCallback");
-var _useEventListener = require("../useEventListener");
-function useLocalStorage(key, initialValue) {
-    const readValue = (0, _react.useCallback)(()=>{
-        if (typeof window === "undefined") return initialValue;
-        try {
-            const item = window.localStorage.getItem(key);
-            return item ? parseJSON(item) : initialValue;
-        } catch (error) {
-            console.warn(`Error reading localStorage key “${key}”:`, error);
-            return initialValue;
-        }
-    }, [
-        initialValue,
-        key
-    ]);
-    const [storedValue, setStoredValue] = (0, _react.useState)(readValue);
-    const setValue = (0, _useEventCallback.useEventCallback)((value)=>{
-        if (typeof window == "undefined") console.warn(`Tried setting localStorage key “${key}” even though environment is not a client`);
-        try {
-            const newValue = value instanceof Function ? value(storedValue) : value;
-            window.localStorage.setItem(key, JSON.stringify(newValue));
-            setStoredValue(newValue);
-            window.dispatchEvent(new Event("local-storage"));
-        } catch (error) {
-            console.warn(`Error setting localStorage key “${key}”:`, error);
-        }
-    });
-    (0, _react.useEffect)(()=>{
-        setStoredValue(readValue());
-    }, []);
-    const handleStorageChange = (0, _react.useCallback)((event)=>{
-        if (event?.key && event.key !== key) return;
-        setStoredValue(readValue());
-    }, [
-        key,
-        readValue
-    ]);
-    (0, _useEventListener.useEventListener)("storage", handleStorageChange);
-    (0, _useEventListener.useEventListener)("local-storage", handleStorageChange);
-    return [
-        storedValue,
-        setValue
-    ];
-}
-exports.default = useLocalStorage;
-function parseJSON(value) {
-    try {
-        return value === "undefined" ? undefined : JSON.parse(value ?? "");
-    } catch  {
-        console.log("parsing error on", {
-            value
-        });
-        return undefined;
-    }
-}
-
-},{"react":"21dqq","../useEventCallback":"63czr","../useEventListener":"fjUy4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"63czr":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useEventCallback", ()=>(0, _useEventCallbackDefault.default));
-var _useEventCallback = require("./useEventCallback");
-var _useEventCallbackDefault = parcelHelpers.interopDefault(_useEventCallback);
-
-},{"./useEventCallback":"iwlUo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iwlUo":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _useIsomorphicLayoutEffect = require("../useIsomorphicLayoutEffect");
-function useEventCallback(fn) {
-    const ref = (0, _react.useRef)(()=>{
-        throw new Error("Cannot call an event handler while rendering.");
-    });
-    (0, _useIsomorphicLayoutEffect.useIsomorphicLayoutEffect)(()=>{
-        ref.current = fn;
-    }, [
-        fn
-    ]);
-    return (0, _react.useCallback)((...args)=>ref.current(...args), [
-        ref
-    ]);
-}
-exports.default = useEventCallback;
-
-},{"react":"21dqq","../useIsomorphicLayoutEffect":"hBCmk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kHqjO":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useMediaQuery", ()=>(0, _useMediaQueryDefault.default));
-var _useMediaQuery = require("./useMediaQuery");
-var _useMediaQueryDefault = parcelHelpers.interopDefault(_useMediaQuery);
-parcelHelpers.exportAll(_useMediaQuery, exports);
-
-},{"./useMediaQuery":"26a3m","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"26a3m":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-function useMediaQuery(query) {
-    const getMatches = (query)=>{
-        if (typeof window !== "undefined") return window.matchMedia(query).matches;
-        return false;
-    };
-    const [matches, setMatches] = (0, _react.useState)(getMatches(query));
-    function handleChange() {
-        setMatches(getMatches(query));
-    }
-    (0, _react.useEffect)(()=>{
-        const matchMedia = window.matchMedia(query);
-        handleChange();
-        if (matchMedia.addListener) matchMedia.addListener(handleChange);
-        else matchMedia.addEventListener("change", handleChange);
-        return ()=>{
-            if (matchMedia.removeListener) matchMedia.removeListener(handleChange);
-            else matchMedia.removeEventListener("change", handleChange);
-        };
-    }, [
-        query
-    ]);
-    return matches;
-}
-exports.default = useMediaQuery;
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jNsXz":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useUpdateEffect", ()=>(0, _useUpdateEffectDefault.default));
-var _useUpdateEffect = require("./useUpdateEffect");
-var _useUpdateEffectDefault = parcelHelpers.interopDefault(_useUpdateEffect);
-parcelHelpers.exportAll(_useUpdateEffect, exports);
-
-},{"./useUpdateEffect":"Gp0lB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"Gp0lB":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _useIsFirstRender = require("../useIsFirstRender");
-function useUpdateEffect(effect, deps) {
-    const isFirst = (0, _useIsFirstRender.useIsFirstRender)();
-    (0, _react.useEffect)(()=>{
-        if (!isFirst) return effect();
-    }, deps);
-}
-exports.default = useUpdateEffect;
-
-},{"react":"21dqq","../useIsFirstRender":"gb8iY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gb8iY":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useIsFirstRender", ()=>(0, _useIsFirstRenderDefault.default));
-var _useIsFirstRender = require("./useIsFirstRender");
-var _useIsFirstRenderDefault = parcelHelpers.interopDefault(_useIsFirstRender);
-parcelHelpers.exportAll(_useIsFirstRender, exports);
-
-},{"./useIsFirstRender":"g3oAw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"g3oAw":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-function useIsFirstRender() {
-    const isFirst = (0, _react.useRef)(true);
-    if (isFirst.current) {
-        isFirst.current = false;
-        return true;
-    }
-    return isFirst.current;
-}
-exports.default = useIsFirstRender;
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2vw5R":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useDebounce", ()=>(0, _useDebounceDefault.default));
-var _useDebounce = require("./useDebounce");
-var _useDebounceDefault = parcelHelpers.interopDefault(_useDebounce);
-parcelHelpers.exportAll(_useDebounce, exports);
-
-},{"./useDebounce":"lNmEG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lNmEG":[function(require,module,exports) {
+},{"..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lNmEG":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -41178,15 +40940,7 @@ function useDebounce(value, delay) {
 }
 exports.default = useDebounce;
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lFy8E":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useEffectOnce", ()=>(0, _useEffectOnceDefault.default));
-var _useEffectOnce = require("./useEffectOnce");
-var _useEffectOnceDefault = parcelHelpers.interopDefault(_useEffectOnce);
-parcelHelpers.exportAll(_useEffectOnce, exports);
-
-},{"./useEffectOnce":"3jP3w","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3jP3w":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3jP3w":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -41195,20 +40949,11 @@ function useEffectOnce(effect) {
 }
 exports.default = useEffectOnce;
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9ds6M":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useElementSize", ()=>(0, _useElementSizeDefault.default));
-var _useElementSize = require("./useElementSize");
-var _useElementSizeDefault = parcelHelpers.interopDefault(_useElementSize);
-parcelHelpers.exportAll(_useElementSize, exports);
-
-},{"./useElementSize":"2iww6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2iww6":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2iww6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
-var _useEventListener = require("../useEventListener");
-var _useIsomorphicLayoutEffect = require("../useIsomorphicLayoutEffect");
+var _ = require("..");
 function useElementSize() {
     const [ref, setRef] = (0, _react.useState)(null);
     const [size, setSize] = (0, _react.useState)({
@@ -41224,8 +40969,8 @@ function useElementSize() {
         ref?.offsetHeight,
         ref?.offsetWidth
     ]);
-    (0, _useEventListener.useEventListener)("resize", handleSize);
-    (0, _useIsomorphicLayoutEffect.useIsomorphicLayoutEffect)(()=>{
+    (0, _.useEventListener)("resize", handleSize);
+    (0, _.useIsomorphicLayoutEffect)(()=>{
         handleSize();
     }, [
         ref?.offsetHeight,
@@ -41238,15 +40983,55 @@ function useElementSize() {
 }
 exports.default = useElementSize;
 
-},{"react":"21dqq","../useEventListener":"fjUy4","../useIsomorphicLayoutEffect":"hBCmk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aSuhw":[function(require,module,exports) {
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iwlUo":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useFetch", ()=>(0, _useFetchDefault.default));
-var _useFetch = require("./useFetch");
-var _useFetchDefault = parcelHelpers.interopDefault(_useFetch);
-parcelHelpers.exportAll(_useFetch, exports);
+var _react = require("react");
+var _ = require("..");
+function useEventCallback(fn) {
+    const ref = (0, _react.useRef)(()=>{
+        throw new Error("Cannot call an event handler while rendering.");
+    });
+    (0, _.useIsomorphicLayoutEffect)(()=>{
+        ref.current = fn;
+    }, [
+        fn
+    ]);
+    return (0, _react.useCallback)((...args)=>ref.current(...args), [
+        ref
+    ]);
+}
+exports.default = useEventCallback;
 
-},{"./useFetch":"26gvK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"26gvK":[function(require,module,exports) {
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1HJqq":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _ = require("..");
+function useEventListener(eventName, handler, element, options) {
+    const savedHandler = (0, _react.useRef)(handler);
+    (0, _.useIsomorphicLayoutEffect)(()=>{
+        savedHandler.current = handler;
+    }, [
+        handler
+    ]);
+    (0, _react.useEffect)(()=>{
+        const targetElement = element?.current || window;
+        if (!(targetElement && targetElement.addEventListener)) return;
+        const eventListener = (event)=>savedHandler.current(event);
+        targetElement.addEventListener(eventName, eventListener, options);
+        return ()=>{
+            targetElement.removeEventListener(eventName, eventListener);
+        };
+    }, [
+        eventName,
+        element,
+        options
+    ]);
+}
+exports.default = useEventListener;
+
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"26gvK":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -41321,38 +41106,22 @@ function useFetch(url, options) {
 }
 exports.default = useFetch;
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aVB0X":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useHover", ()=>(0, _useHoverDefault.default));
-var _useHover = require("./useHover");
-var _useHoverDefault = parcelHelpers.interopDefault(_useHover);
-parcelHelpers.exportAll(_useHover, exports);
-
-},{"./useHover":"eNC2T","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eNC2T":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eNC2T":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
-var _useEventListener = require("../useEventListener");
+var _ = require("..");
 function useHover(elementRef) {
     const [value, setValue] = (0, _react.useState)(false);
     const handleMouseEnter = ()=>setValue(true);
     const handleMouseLeave = ()=>setValue(false);
-    (0, _useEventListener.useEventListener)("mouseenter", handleMouseEnter, elementRef);
-    (0, _useEventListener.useEventListener)("mouseleave", handleMouseLeave, elementRef);
+    (0, _.useEventListener)("mouseenter", handleMouseEnter, elementRef);
+    (0, _.useEventListener)("mouseleave", handleMouseLeave, elementRef);
     return value;
 }
 exports.default = useHover;
 
-},{"react":"21dqq","../useEventListener":"fjUy4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jSS6D":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useImageOnLoad", ()=>(0, _useImageOnLoadDefault.default));
-var _useImageOnLoad = require("./useImageOnLoad");
-var _useImageOnLoadDefault = parcelHelpers.interopDefault(_useImageOnLoad);
-parcelHelpers.exportAll(_useImageOnLoad, exports);
-
-},{"./useImageOnLoad":"fttn3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fttn3":[function(require,module,exports) {
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fttn3":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -41379,15 +41148,7 @@ function useImageOnLoad() {
 }
 exports.default = useImageOnLoad;
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"wuwxM":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useIntersectionObserver", ()=>(0, _useIntersectionObserverDefault.default));
-var _useIntersectionObserver = require("./useIntersectionObserver");
-var _useIntersectionObserverDefault = parcelHelpers.interopDefault(_useIntersectionObserver);
-parcelHelpers.exportAll(_useIntersectionObserver, exports);
-
-},{"./useIntersectionObserver":"9IP75","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9IP75":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9IP75":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -41420,15 +41181,29 @@ function useIntersectionObserver(elementRef, { threshold =0 , root =null , rootM
 }
 exports.default = useIntersectionObserver;
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hFMdz":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"GPWw2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useIsClient", ()=>(0, _useIsClientDefault.default));
-var _useIsClient = require("./useIsClient");
-var _useIsClientDefault = parcelHelpers.interopDefault(_useIsClient);
-parcelHelpers.exportAll(_useIsClient, exports);
+var _react = require("react");
+var _ = require("..");
+function useInterval(callback, delay) {
+    const savedCallback = (0, _react.useRef)(callback);
+    (0, _.useIsomorphicLayoutEffect)(()=>{
+        savedCallback.current = callback;
+    }, [
+        callback
+    ]);
+    (0, _react.useEffect)(()=>{
+        if (!delay && delay !== 0) return;
+        const id = setInterval(()=>savedCallback.current(), delay);
+        return ()=>clearInterval(id);
+    }, [
+        delay
+    ]);
+}
+exports.default = useInterval;
 
-},{"./useIsClient":"3emvU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3emvU":[function(require,module,exports) {
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3emvU":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -41441,15 +41216,21 @@ function useIsClient() {
 }
 exports.default = useIsClient;
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eyySy":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"g3oAw":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useIsMounted", ()=>(0, _useIsMountedDefault.default));
-var _useIsMounted = require("./useIsMounted");
-var _useIsMountedDefault = parcelHelpers.interopDefault(_useIsMounted);
-parcelHelpers.exportAll(_useIsMounted, exports);
+var _react = require("react");
+function useIsFirstRender() {
+    const isFirst = (0, _react.useRef)(true);
+    if (isFirst.current) {
+        isFirst.current = false;
+        return true;
+    }
+    return isFirst.current;
+}
+exports.default = useIsFirstRender;
 
-},{"./useIsMounted":"2uJb6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2uJb6":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2uJb6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -41465,22 +41246,81 @@ function useIsMounted() {
 }
 exports.default = useIsMounted;
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aqc1z":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useLockedBody", ()=>(0, _useLockedBodyDefault.default));
-var _useLockedBody = require("./useLockedBody");
-var _useLockedBodyDefault = parcelHelpers.interopDefault(_useLockedBody);
-parcelHelpers.exportAll(_useLockedBody, exports);
-
-},{"./useLockedBody":"aCXSw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aCXSw":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fWEdC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
-var _useIsomorphicLayoutEffect = require("../useIsomorphicLayoutEffect");
+const useIsomorphicLayoutEffect = typeof window !== "undefined" ? (0, _react.useLayoutEffect) : (0, _react.useEffect);
+exports.default = useIsomorphicLayoutEffect;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2Bbwp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _ = require("..");
+function useLocalStorage(key, initialValue) {
+    const readValue = (0, _react.useCallback)(()=>{
+        if (typeof window === "undefined") return initialValue;
+        try {
+            const item = window.localStorage.getItem(key);
+            return item ? parseJSON(item) : initialValue;
+        } catch (error) {
+            console.warn(`Error reading localStorage key “${key}”:`, error);
+            return initialValue;
+        }
+    }, [
+        initialValue,
+        key
+    ]);
+    const [storedValue, setStoredValue] = (0, _react.useState)(readValue);
+    const setValue = (0, _.useEventCallback)((value)=>{
+        if (typeof window === "undefined") console.warn(`Tried setting localStorage key “${key}” even though environment is not a client`);
+        try {
+            const newValue = value instanceof Function ? value(storedValue) : value;
+            window.localStorage.setItem(key, JSON.stringify(newValue));
+            setStoredValue(newValue);
+            window.dispatchEvent(new Event("local-storage"));
+        } catch (error) {
+            console.warn(`Error setting localStorage key “${key}”:`, error);
+        }
+    });
+    (0, _react.useEffect)(()=>{
+        setStoredValue(readValue());
+    }, []);
+    const handleStorageChange = (0, _react.useCallback)((event)=>{
+        if (event?.key && event.key !== key) return;
+        setStoredValue(readValue());
+    }, [
+        key,
+        readValue
+    ]);
+    (0, _.useEventListener)("storage", handleStorageChange);
+    (0, _.useEventListener)("local-storage", handleStorageChange);
+    return [
+        storedValue,
+        setValue
+    ];
+}
+exports.default = useLocalStorage;
+function parseJSON(value) {
+    try {
+        return value === "undefined" ? undefined : JSON.parse(value ?? "");
+    } catch  {
+        console.log("parsing error on", {
+            value
+        });
+        return undefined;
+    }
+}
+
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aCXSw":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _ = require("..");
 function useLockedBody(initialLocked = false) {
     const [locked, setLocked] = (0, _react.useState)(initialLocked);
-    (0, _useIsomorphicLayoutEffect.useIsomorphicLayoutEffect)(()=>{
+    (0, _.useIsomorphicLayoutEffect)(()=>{
         if (!locked) return;
         const originalOverflow = document.body.style.overflow;
         const originalPaddingRight = document.body.style.paddingRight;
@@ -41507,15 +41347,7 @@ function useLockedBody(initialLocked = false) {
 }
 exports.default = useLockedBody;
 
-},{"react":"21dqq","../useIsomorphicLayoutEffect":"hBCmk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"oA2FF":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useMap", ()=>(0, _useMapDefault.default));
-var _useMap = require("./useMap");
-var _useMapDefault = parcelHelpers.interopDefault(_useMap);
-parcelHelpers.exportAll(_useMap, exports);
-
-},{"./useMap":"2ZsJ5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2ZsJ5":[function(require,module,exports) {
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2ZsJ5":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -41550,20 +41382,41 @@ function useMap(initialState = new Map()) {
 }
 exports.default = useMap;
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"83tBa":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"26a3m":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useOnClickOutside", ()=>(0, _useOnClickOutsideDefault.default));
-var _useOnClickOutside = require("./useOnClickOutside");
-var _useOnClickOutsideDefault = parcelHelpers.interopDefault(_useOnClickOutside);
-parcelHelpers.exportAll(_useOnClickOutside, exports);
+var _react = require("react");
+function useMediaQuery(query) {
+    const getMatches = (query)=>{
+        if (typeof window !== "undefined") return window.matchMedia(query).matches;
+        return false;
+    };
+    const [matches, setMatches] = (0, _react.useState)(getMatches(query));
+    function handleChange() {
+        setMatches(getMatches(query));
+    }
+    (0, _react.useEffect)(()=>{
+        const matchMedia = window.matchMedia(query);
+        handleChange();
+        if (matchMedia.addListener) matchMedia.addListener(handleChange);
+        else matchMedia.addEventListener("change", handleChange);
+        return ()=>{
+            if (matchMedia.removeListener) matchMedia.removeListener(handleChange);
+            else matchMedia.removeEventListener("change", handleChange);
+        };
+    }, [
+        query
+    ]);
+    return matches;
+}
+exports.default = useMediaQuery;
 
-},{"./useOnClickOutside":"eLhz8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eLhz8":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eLhz8":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-var _useEventListener = require("../useEventListener");
+var _ = require("..");
 function useOnClickOutside(ref, handler, mouseEvent = "mousedown") {
-    (0, _useEventListener.useEventListener)(mouseEvent, (event)=>{
+    (0, _.useEventListener)(mouseEvent, (event)=>{
         const el = ref?.current;
         if (!el || el.contains(event.target)) return;
         handler(event);
@@ -41571,19 +41424,11 @@ function useOnClickOutside(ref, handler, mouseEvent = "mousedown") {
 }
 exports.default = useOnClickOutside;
 
-},{"../useEventListener":"fjUy4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"k0ycN":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useReadLocalStorage", ()=>(0, _useReadLocalStorageDefault.default));
-var _useReadLocalStorage = require("./useReadLocalStorage");
-var _useReadLocalStorageDefault = parcelHelpers.interopDefault(_useReadLocalStorage);
-parcelHelpers.exportAll(_useReadLocalStorage, exports);
-
-},{"./useReadLocalStorage":"4VBoB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4VBoB":[function(require,module,exports) {
+},{"..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4VBoB":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
-var _useEventListener = require("../useEventListener");
+var _ = require("..");
 function useReadLocalStorage(key) {
     const readValue = (0, _react.useCallback)(()=>{
         if (typeof window === "undefined") return null;
@@ -41608,26 +41453,17 @@ function useReadLocalStorage(key) {
         key,
         readValue
     ]);
-    (0, _useEventListener.useEventListener)("storage", handleStorageChange);
-    (0, _useEventListener.useEventListener)("local-storage", handleStorageChange);
+    (0, _.useEventListener)("storage", handleStorageChange);
+    (0, _.useEventListener)("local-storage", handleStorageChange);
     return storedValue;
 }
 exports.default = useReadLocalStorage;
 
-},{"react":"21dqq","../useEventListener":"fjUy4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"j7Rop":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useScreen", ()=>(0, _useScreenDefault.default));
-var _useScreen = require("./useScreen");
-var _useScreenDefault = parcelHelpers.interopDefault(_useScreen);
-parcelHelpers.exportAll(_useScreen, exports);
-
-},{"./useScreen":"6YQVm","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6YQVm":[function(require,module,exports) {
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6YQVm":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
-var _useEventListener = require("../useEventListener");
-var _useIsomorphicLayoutEffect = require("../useIsomorphicLayoutEffect");
+var _ = require("..");
 function useScreen() {
     const getScreen = ()=>{
         if (typeof window !== "undefined" && window.screen) return window.screen;
@@ -41637,23 +41473,15 @@ function useScreen() {
     function handleSize() {
         setScreen(getScreen());
     }
-    (0, _useEventListener.useEventListener)("resize", handleSize);
-    (0, _useIsomorphicLayoutEffect.useIsomorphicLayoutEffect)(()=>{
+    (0, _.useEventListener)("resize", handleSize);
+    (0, _.useIsomorphicLayoutEffect)(()=>{
         handleSize();
     }, []);
     return screen;
 }
 exports.default = useScreen;
 
-},{"react":"21dqq","../useEventListener":"fjUy4","../useIsomorphicLayoutEffect":"hBCmk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ajvvy":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useScript", ()=>(0, _useScriptDefault.default));
-var _useScript = require("./useScript");
-var _useScriptDefault = parcelHelpers.interopDefault(_useScript);
-parcelHelpers.exportAll(_useScript, exports);
-
-},{"./useScript":"djE9J","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"djE9J":[function(require,module,exports) {
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"djE9J":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -41695,20 +41523,11 @@ function useScript(src) {
 }
 exports.default = useScript;
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1UwnA":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useSessionStorage", ()=>(0, _useSessionStorageDefault.default));
-var _useSessionStorage = require("./useSessionStorage");
-var _useSessionStorageDefault = parcelHelpers.interopDefault(_useSessionStorage);
-parcelHelpers.exportAll(_useSessionStorage, exports);
-
-},{"./useSessionStorage":"jTdlC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jTdlC":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jTdlC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
-var _useEventCallback = require("../useEventCallback");
-var _useEventListener = require("../useEventListener");
+var _ = require("..");
 function useSessionStorage(key, initialValue) {
     const readValue = (0, _react.useCallback)(()=>{
         if (typeof window === "undefined") return initialValue;
@@ -41724,7 +41543,7 @@ function useSessionStorage(key, initialValue) {
         key
     ]);
     const [storedValue, setStoredValue] = (0, _react.useState)(readValue);
-    const setValue = (0, _useEventCallback.useEventCallback)((value)=>{
+    const setValue = (0, _.useEventCallback)((value)=>{
         if (typeof window == "undefined") console.warn(`Tried setting sessionStorage key “${key}” even though environment is not a client`);
         try {
             const newValue = value instanceof Function ? value(storedValue) : value;
@@ -41745,8 +41564,8 @@ function useSessionStorage(key, initialValue) {
         key,
         readValue
     ]);
-    (0, _useEventListener.useEventListener)("storage", handleStorageChange);
-    (0, _useEventListener.useEventListener)("session-storage", handleStorageChange);
+    (0, _.useEventListener)("storage", handleStorageChange);
+    (0, _.useEventListener)("session-storage", handleStorageChange);
     return [
         storedValue,
         setValue
@@ -41764,15 +41583,7 @@ function parseJSON(value) {
     }
 }
 
-},{"react":"21dqq","../useEventCallback":"63czr","../useEventListener":"fjUy4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bl0p9":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useSsr", ()=>(0, _useSsrDefault.default));
-var _useSsr = require("./useSsr");
-var _useSsrDefault = parcelHelpers.interopDefault(_useSsr);
-parcelHelpers.exportAll(_useSsr, exports);
-
-},{"./useSsr":"9XRLH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9XRLH":[function(require,module,exports) {
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9XRLH":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 function useSsr() {
@@ -41784,15 +41595,7 @@ function useSsr() {
 }
 exports.default = useSsr;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9TrV9":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useStep", ()=>(0, _useStepDefault.default));
-var _useStep = require("./useStep");
-var _useStepDefault = parcelHelpers.interopDefault(_useStep);
-parcelHelpers.exportAll(_useStep, exports);
-
-},{"./useStep":"2zb9y","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2zb9y":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2zb9y":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -41843,27 +41646,17 @@ function useStep(maxStep) {
 }
 exports.default = useStep;
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cxY9e":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useTernaryDarkMode", ()=>(0, _useTernaryDarkModeDefault.default));
-var _useTernaryDarkMode = require("./useTernaryDarkMode");
-var _useTernaryDarkModeDefault = parcelHelpers.interopDefault(_useTernaryDarkMode);
-parcelHelpers.exportAll(_useTernaryDarkMode, exports);
-
-},{"./useTernaryDarkMode":"9k0Mg","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9k0Mg":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9k0Mg":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
-var _useLocalStorage = require("../useLocalStorage");
-var _useMediaQuery = require("../useMediaQuery");
-var _useUpdateEffect = require("../useUpdateEffect");
+var _ = require("..");
 const COLOR_SCHEME_QUERY = "(prefers-color-scheme: dark)";
 function useTernaryDarkMode() {
-    const isDarkOS = (0, _useMediaQuery.useMediaQuery)(COLOR_SCHEME_QUERY);
-    const [ternaryDarkMode, setTernaryDarkMode] = (0, _useLocalStorage.useLocalStorage)("usehooks-ts-ternary-dark-mode", "system");
+    const isDarkOS = (0, _.useMediaQuery)(COLOR_SCHEME_QUERY);
+    const [ternaryDarkMode, setTernaryDarkMode] = (0, _.useLocalStorage)("usehooks-ts-ternary-dark-mode", "system");
     const [isDarkMode, setDarkMode] = (0, _react.useState)(isDarkOS);
-    (0, _useUpdateEffect.useUpdateEffect)(()=>{
+    (0, _.useUpdateEffect)(()=>{
         if (ternaryDarkMode === "system") setDarkMode(isDarkOS);
     }, [
         isDarkOS
@@ -41901,22 +41694,14 @@ function useTernaryDarkMode() {
 }
 exports.default = useTernaryDarkMode;
 
-},{"react":"21dqq","../useLocalStorage":"gqg4r","../useMediaQuery":"kHqjO","../useUpdateEffect":"jNsXz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eK2n7":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useTimeout", ()=>(0, _useTimeoutDefault.default));
-var _useTimeout = require("./useTimeout");
-var _useTimeoutDefault = parcelHelpers.interopDefault(_useTimeout);
-parcelHelpers.exportAll(_useTimeout, exports);
-
-},{"./useTimeout":"iuWi6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iuWi6":[function(require,module,exports) {
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iuWi6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
-var _useIsomorphicLayoutEffect = require("../useIsomorphicLayoutEffect");
+var _ = require("..");
 function useTimeout(callback, delay) {
     const savedCallback = (0, _react.useRef)(callback);
-    (0, _useIsomorphicLayoutEffect.useIsomorphicLayoutEffect)(()=>{
+    (0, _.useIsomorphicLayoutEffect)(()=>{
         savedCallback.current = callback;
     }, [
         callback
@@ -41931,20 +41716,24 @@ function useTimeout(callback, delay) {
 }
 exports.default = useTimeout;
 
-},{"react":"21dqq","../useIsomorphicLayoutEffect":"hBCmk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6zzRu":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useWindowSize", ()=>(0, _useWindowSizeDefault.default));
-var _useWindowSize = require("./useWindowSize");
-var _useWindowSizeDefault = parcelHelpers.interopDefault(_useWindowSize);
-parcelHelpers.exportAll(_useWindowSize, exports);
-
-},{"./useWindowSize":"73GDr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"73GDr":[function(require,module,exports) {
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"Gp0lB":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
-var _useEventListener = require("../useEventListener");
-var _useIsomorphicLayoutEffect = require("../useIsomorphicLayoutEffect");
+var _ = require("..");
+function useUpdateEffect(effect, deps) {
+    const isFirst = (0, _.useIsFirstRender)();
+    (0, _react.useEffect)(()=>{
+        if (!isFirst) return effect();
+    }, deps);
+}
+exports.default = useUpdateEffect;
+
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"73GDr":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _ = require("..");
 function useWindowSize() {
     const [windowSize, setWindowSize] = (0, _react.useState)({
         width: 0,
@@ -41956,15 +41745,15 @@ function useWindowSize() {
             height: window.innerHeight
         });
     };
-    (0, _useEventListener.useEventListener)("resize", handleSize);
-    (0, _useIsomorphicLayoutEffect.useIsomorphicLayoutEffect)(()=>{
+    (0, _.useEventListener)("resize", handleSize);
+    (0, _.useIsomorphicLayoutEffect)(()=>{
         handleSize();
     }, []);
     return windowSize;
 }
 exports.default = useWindowSize;
 
-},{"react":"21dqq","../useEventListener":"fjUy4","../useIsomorphicLayoutEffect":"hBCmk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"awDkT":[function(require,module,exports) {
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"awDkT":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "DialogStyled", ()=>DialogStyled);
@@ -42085,25 +41874,18 @@ function Divider(props) {
             ...props.top && {
                 marginTop: `$${props.top}`,
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    marginTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.8)`
-                }
-            },
-            ...props.bottom && {
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    marginBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.8)`
+                    marginTop: props.top !== "8" ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`
                 },
-                marginBottom: `$${props.bottom}`
-            },
-            ...props.top && {
-                marginTop: `$${props.top}`,
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    marginTop: `calc($${props.top} * 0.9)`
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    marginTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`
                 }
             },
             ...props.bottom && {
-                marginBottom: `$${props.bottom}`,
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    marginBottom: `calc($${props.bottom} * 0.9)`
+                    marginBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    marginBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`
                 }
             }
         },
@@ -42215,8 +41997,8 @@ function Dropdown(props) {
                 animation: isOpen,
                 css: {
                     left: props.align === "left" ? "0" : "auto",
-                    maxWidth: props.width || "15rem",
-                    minWidth: "15rem",
+                    maxWidth: props.width + " !important",
+                    minWidth: props.width + " !important",
                     right: props.align === "right" ? "0" : "auto"
                 },
                 ref: ref,
@@ -42477,6 +42259,7 @@ var _hasBasePath = require("../../../client/has-base-path");
 var _getNextPathnameInfo = require("./utils/get-next-pathname-info");
 var _formatNextPathnameInfo = require("./utils/format-next-pathname-info");
 var _compareStates = require("./utils/compare-states");
+var _isBot = require("./utils/is-bot");
 function buildCancellationError() {
     return Object.assign(new Error("Route Cancelled"), {
         cancelled: true
@@ -42761,6 +42544,13 @@ function fetchRetry(url, attempts, options) {
     });
 }
 const backgroundCache = {};
+function handleSmoothScroll(fn) {
+    const htmlElement = document.documentElement;
+    const existing = htmlElement.style.scrollBehavior;
+    htmlElement.style.scrollBehavior = "auto";
+    fn();
+    htmlElement.style.scrollBehavior = existing;
+}
 function tryToParseAsJSON(text) {
     try {
         return JSON.parse(text);
@@ -43060,7 +42850,8 @@ class Router {
                     pathname = routeInfo.route || route;
                     route = pathname;
                     if (!routeProps.shallow) query = Object.assign({}, routeInfo.query || {}, query);
-                    if (routeMatch && pathname !== parsed.pathname) Object.keys(routeMatch).forEach((key)=>{
+                    const cleanedParsedPathname = _hasBasePath.hasBasePath(parsed.pathname) ? _removeBasePath.removeBasePath(parsed.pathname) : parsed.pathname;
+                    if (routeMatch && pathname !== cleanedParsedPathname) Object.keys(routeMatch).forEach((key)=>{
                         if (routeMatch && query[key] === routeMatch[key]) delete query[key];
                     });
                     if (_isDynamic.isDynamicRoute(pathname)) {
@@ -43324,21 +43115,15 @@ class Router {
                         Component: res.page,
                         styleSheets: res.styleSheets,
                         __N_SSG: res.mod.__N_SSG,
-                        __N_SSP: res.mod.__N_SSP,
-                        __N_RSC: !!res.mod.__next_rsc__
+                        __N_SSP: res.mod.__N_SSP
                     })));
                 {
                     const { isValidElementType  } = require("next/dist/compiled/react-is");
                     if (!isValidElementType(routeInfo.Component)) throw new Error(`The default export is not a React Component in page: "${pathname}"`);
                 }
-                /**
-       * For server components, non-SSR pages will have statically optimized
-       * flight data in a production build. So only development and SSR pages
-       * will always have the real-time generated and streamed flight data.
-       */ const useStreamedFlightData = routeInfo.__N_RSC && true;
-                const shouldFetchData = routeInfo.__N_SSG || routeInfo.__N_SSP || routeInfo.__N_RSC;
+                const shouldFetchData = routeInfo.__N_SSG || routeInfo.__N_SSP;
                 const { props , cacheKey  } = yield _this._getData(_async_to_generator(function*() {
-                    if (shouldFetchData && !useStreamedFlightData) {
+                    if (shouldFetchData) {
                         const { json , cacheKey: _cacheKey  } = (data == null ? void 0 : data.json) ? data : yield fetchNextData({
                             dataHref: _this.pageLoader.getDataHref({
                                 href: _formatUrl.formatWithValidation({
@@ -43378,16 +43163,7 @@ class Router {
                 // x-middleware-cache: no-cache as well
                 if (routeInfo.__N_SSP && fetchNextDataParams.dataHref) delete _this.sdc[cacheKey];
                 !_this.isPreview && routeInfo.__N_SSG;
-                let flightInfo;
-                if (routeInfo.__N_RSC) flightInfo = {
-                    __flight__: useStreamedFlightData ? (yield _this._getData(()=>_this._getFlightData(_formatUrl.formatWithValidation({
-                            query: _extends({}, query, {
-                                __flight__: "1"
-                            }),
-                            pathname: _isDynamic.isDynamicRoute(route) ? interpolateAs(pathname, _parseRelativeUrl.parseRelativeUrl(resolvedAs).pathname, query).result : pathname
-                        })))).data : props.__flight__
-                };
-                props.pageProps = Object.assign({}, props.pageProps, flightInfo);
+                props.pageProps = Object.assign({}, props.pageProps);
                 routeInfo.props = props;
                 routeInfo.route = route;
                 routeInfo.query = query;
@@ -43428,7 +43204,7 @@ class Router {
         // Scroll to top if the hash is just `#` with no value or `#top`
         // To mirror browsers
         if (hash === "" || hash === "top") {
-            window.scrollTo(0, 0);
+            handleSmoothScroll(()=>window.scrollTo(0, 0));
             return;
         }
         // Decode hash to make non-latin anchor works.
@@ -43436,13 +43212,13 @@ class Router {
         // First we check if the element by id is found
         const idEl = document.getElementById(rawHash);
         if (idEl) {
-            idEl.scrollIntoView();
+            handleSmoothScroll(()=>idEl.scrollIntoView());
             return;
         }
         // If there's no element with the id, we check the `name` property
         // To mirror browsers
         const nameEl = document.getElementsByName(rawHash)[0];
-        if (nameEl) nameEl.scrollIntoView();
+        if (nameEl) handleSmoothScroll(()=>nameEl.scrollIntoView());
     }
     urlIsNew(asPath) {
         return this.asPath !== asPath;
@@ -43455,6 +43231,10 @@ class Router {
    */ prefetch(url, asPath = url, options = {}) {
         var _this = this;
         return _async_to_generator(function*() {
+            if (typeof window !== "undefined" && _isBot.isBot(window.navigator.userAgent)) // No prefetches for bots that render the link since they are typically navigating
+            // links via the equivalent of a hard navigation and hence never utilize these
+            // prefetches.
+            return;
             let parsed = _parseRelativeUrl.parseRelativeUrl(url);
             let { pathname , query  } = parsed;
             const pages = yield _this.pageLoader.getPageList();
@@ -43549,7 +43329,7 @@ class Router {
     get isPreview() {
         return this.state.isPreview;
     }
-    constructor(pathname1, query1, as1, { initialProps , pageLoader , App , wrapApp , Component , err , subscription , isFallback , locale , locales , defaultLocale , domainLocales , isPreview , isRsc  }){
+    constructor(pathname1, query1, as1, { initialProps , pageLoader , App , wrapApp , Component , err , subscription , isFallback , locale , locales , defaultLocale , domainLocales , isPreview  }){
         // Server Data Cache
         this.sdc = {};
         this.isFirstPopStateEvent = true;
@@ -43614,8 +43394,7 @@ class Router {
             props: initialProps,
             err,
             __N_SSG: initialProps && initialProps.__N_SSG,
-            __N_SSP: initialProps && initialProps.__N_SSP,
-            __N_RSC: !!isRsc
+            __N_SSP: initialProps && initialProps.__N_SSP
         };
         this.components["/_app"] = {
             Component: App,
@@ -43677,7 +43456,7 @@ class Router {
 Router.events = _mitt.default();
 exports.default = Router;
 
-},{"@swc/helpers/lib/_async_to_generator.js":"687bf","@swc/helpers/lib/_extends.js":"4vU6g","@swc/helpers/lib/_interop_require_default.js":"k1iFV","@swc/helpers/lib/_interop_require_wildcard.js":"frrjo","../../../client/normalize-trailing-slash":"a5Qce","./utils/remove-trailing-slash":"ltEax","../../../client/route-loader":"i5Qrh","../../../client/script":"58Hib","../../../lib/is-error":"6h17E","../page-path/denormalize-page-path":"cW08D","../i18n/normalize-locale-path":"iF0G9","../mitt":"1O1Fg","../utils":"cHiay","./utils/is-dynamic":"6rybP","./utils/parse-relative-url":"lDl7e","./utils/querystring":"PeN2l","./utils/resolve-rewrites":"ezgoA","./utils/route-matcher":"hBdpi","./utils/route-regex":"7W7zJ","./utils/format-url":"aBY4l","../../../client/detect-domain-locale":"ld5PD","./utils/parse-path":"9lS3k","../../../client/add-locale":"8fuhH","../../../client/remove-locale":"d72mY","../../../client/remove-base-path":"gS7mU","../../../client/add-base-path":"7l5aF","../../../client/has-base-path":"6NT5g","./utils/get-next-pathname-info":"24hnY","./utils/format-next-pathname-info":"b08uw","./utils/compare-states":"i3HBc","next/dist/compiled/react-is":"8mz76"}],"i5Qrh":[function(require,module,exports) {
+},{"@swc/helpers/lib/_async_to_generator.js":"687bf","@swc/helpers/lib/_extends.js":"4vU6g","@swc/helpers/lib/_interop_require_default.js":"k1iFV","@swc/helpers/lib/_interop_require_wildcard.js":"frrjo","../../../client/normalize-trailing-slash":"a5Qce","./utils/remove-trailing-slash":"ltEax","../../../client/route-loader":"i5Qrh","../../../client/script":"58Hib","../../../lib/is-error":"6h17E","../page-path/denormalize-page-path":"cW08D","../i18n/normalize-locale-path":"iF0G9","../mitt":"1O1Fg","../utils":"cHiay","./utils/is-dynamic":"6rybP","./utils/parse-relative-url":"lDl7e","./utils/querystring":"PeN2l","./utils/resolve-rewrites":"ezgoA","./utils/route-matcher":"hBdpi","./utils/route-regex":"7W7zJ","./utils/format-url":"aBY4l","../../../client/detect-domain-locale":"ld5PD","./utils/parse-path":"9lS3k","../../../client/add-locale":"8fuhH","../../../client/remove-locale":"d72mY","../../../client/remove-base-path":"gS7mU","../../../client/add-base-path":"7l5aF","../../../client/has-base-path":"6NT5g","./utils/get-next-pathname-info":"24hnY","./utils/format-next-pathname-info":"b08uw","./utils/compare-states":"i3HBc","./utils/is-bot":"eGU1s","next/dist/compiled/react-is":"8mz76"}],"i5Qrh":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -43971,6 +43750,7 @@ if ((typeof exports.default === "function" || typeof exports.default === "object
 
 },{}],"58Hib":[function(require,module,exports) {
 "use strict";
+"client";
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -43984,6 +43764,7 @@ var _react = _interop_require_wildcard(require("react"));
 var _headManagerContext = require("../shared/lib/head-manager-context");
 var _headManager = require("./head-manager");
 var _requestIdleCallback = require("./request-idle-callback");
+"client";
 const ScriptCache = new Map();
 const LoadCache = new Set();
 const ignoreProps = [
@@ -44002,7 +43783,8 @@ const loadScript = (props)=>{
     // Contents of this script are already loading/loaded
     if (ScriptCache.has(src)) {
         LoadCache.add(cacheKey);
-        // Execute onLoad since the script loading has begun
+        // It is possible that multiple `next/script` components all have same "src", but has different "onLoad"
+        // This is to make sure the same remote script will only load once, but "onLoad" are executed in order
         ScriptCache.get(src).then(onLoad, onError);
         return;
     }
@@ -44090,12 +43872,13 @@ function Script(props) {
    *   2. hasOnReadyEffectCalled.current is false, but the script hasn't loaded yet (not in LoadCache)
    *      onReady is skipped, set hasOnReadyEffectCalled.current to true
    *   3. The useEffect for loadScript executes
-   *      Once the script is loaded, the onReady will be called by then
+   *   4. hasLoadScriptEffectCalled.current is false, loadScript executes
+   *      Once the script is loaded, the onLoad and onReady will be called by then
    *   [If strict mode is enabled / is wrapped in <OffScreen /> component]
    *   5. The useEffect for onReady executes again
    *   6. hasOnReadyEffectCalled.current is true, so entire effect is skipped
    *   7. The useEffect for loadScript executes again
-   *   8. The script is already loaded/loading, loadScript bails out
+   *   8. hasLoadScriptEffectCalled.current is true, so entire effect is skipped
    *
    * - Second mount:
    *   1. The useEffect for onReady executes
@@ -44107,7 +43890,7 @@ function Script(props) {
    *   5. The useEffect for onReady executes again
    *   6. hasOnReadyEffectCalled.current is true, so entire effect is skipped
    *   7. The useEffect for loadScript executes again
-   *   8. The script is already loaded, loadScript will bail out
+   *   8. hasLoadScriptEffectCalled.current is true, so entire effect is skipped
    */ const hasOnReadyEffectCalled = _react.useRef(false);
     _react.useEffect(()=>{
         const cacheKey = id || src;
@@ -44121,9 +43904,13 @@ function Script(props) {
         id,
         src
     ]);
+    const hasLoadScriptEffectCalled = _react.useRef(false);
     _react.useEffect(()=>{
-        if (strategy === "afterInteractive") loadScript(props);
-        else if (strategy === "lazyOnload") loadLazyScript(props);
+        if (!hasLoadScriptEffectCalled.current) {
+            if (strategy === "afterInteractive") loadScript(props);
+            else if (strategy === "lazyOnload") loadLazyScript(props);
+            hasLoadScriptEffectCalled.current = true;
+        }
     }, [
         props,
         strategy
@@ -45786,6 +45573,16 @@ function compareRouterStates(a, b) {
     return true;
 }
 
+},{}],"eGU1s":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.isBot = isBot;
+function isBot(userAgent) {
+    return /Googlebot|Mediapartners-Google|AdsBot-Google|googleweblight|Storebot-Google|Google-PageRenderer|Bingbot|BingPreview|Slurp|DuckDuckBot|baiduspider|yandex|sogou|LinkedInBot|bitlybot|tumblr|vkShare|quora link preview|facebookexternalhit|facebookcatalog|Twitterbot|applebot|redditbot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|ia_archiver/i.test(userAgent);
+}
+
 },{}],"8mz76":[function(require,module,exports) {
 "use strict";
 module.exports = require("./cjs/react-is.development.js");
@@ -46089,7 +45886,7 @@ const DropdownItemStyled = (0, _stitchesConfig.styled)("div", {
     cursor: "pointer",
     display: "flex",
     fontSize: "$h6",
-    lineHeight: "normal",
+    lineHeight: "normal !important",
     transition: "$default",
     variants: {
         submenu: {
@@ -46189,7 +45986,6 @@ function Input(props) {
                             props.copy && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
                                 ariaLabel: "Copy",
                                 css: {
-                                    lineHeight: "1",
                                     marginLeft: "$2"
                                 },
                                 icon: isCopied ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ClipboardText), {
@@ -46210,7 +46006,6 @@ function Input(props) {
                             props.reveal && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
                                 ariaLabel: "Reveal",
                                 css: {
-                                    lineHeight: "1",
                                     marginLeft: "$2"
                                 },
                                 icon: !isRevealed ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.Eye), {
@@ -46224,13 +46019,12 @@ function Input(props) {
                                 children: isRevealed ? "Hide" : "Show"
                             }, void 0, false, {
                                 fileName: "src/components/Input/Input.tsx",
-                                lineNumber: 92,
+                                lineNumber: 91,
                                 columnNumber: 15
                             }, this),
                             props.submit && props.submitFunction && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
                                 ariaLabel: "Submit",
                                 css: {
-                                    lineHeight: "1",
                                     marginLeft: "$2"
                                 },
                                 disabled: !props.submitValid,
@@ -46240,7 +46034,7 @@ function Input(props) {
                                 children: props.submit
                             }, void 0, false, {
                                 fileName: "src/components/Input/Input.tsx",
-                                lineNumber: 107,
+                                lineNumber: 105,
                                 columnNumber: 15
                             }, this)
                         ]
@@ -46269,7 +46063,7 @@ function Input(props) {
                         children: props.errorMessage || "Error"
                     }, void 0, false, {
                         fileName: "src/components/Input/Input.tsx",
-                        lineNumber: 125,
+                        lineNumber: 122,
                         columnNumber: 11
                     }, this),
                     props.success && !props.error && !props.warning && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badge.Badge), {
@@ -46284,7 +46078,7 @@ function Input(props) {
                         children: props.successMessage || "Success"
                     }, void 0, false, {
                         fileName: "src/components/Input/Input.tsx",
-                        lineNumber: 130,
+                        lineNumber: 127,
                         columnNumber: 11
                     }, this),
                     props.warning && !props.success && !props.error && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badge.Badge), {
@@ -46299,13 +46093,13 @@ function Input(props) {
                         children: props.warningMessage || "Invalid"
                     }, void 0, false, {
                         fileName: "src/components/Input/Input.tsx",
-                        lineNumber: 135,
+                        lineNumber: 132,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Input/Input.tsx",
-                lineNumber: 123,
+                lineNumber: 120,
                 columnNumber: 7
             }, this)
         ]
@@ -46326,7 +46120,7 @@ $RefreshReg$(_c, "Input");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","../Button":"i3jlU","../Loading":"gWqOi","./Input.styles":"crIMc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Badge":"egHOx"}],"crIMc":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","../Badge":"egHOx","../Button":"i3jlU","../Loading":"gWqOi","./Input.styles":"crIMc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"crIMc":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "InputStyled", ()=>InputStyled);
@@ -46391,7 +46185,6 @@ const InputAreaStyled = (0, _stitchesConfig.styled)("input", {
     fontFamily: "$sans !important",
     fontSize: "16px !important",
     letterSpacing: "0",
-    lineHeight: "normal",
     margin: "0",
     minHeight: "2.4rem",
     outline: "none",
@@ -46483,27 +46276,30 @@ function Popover(props) {
                 children: props.trigger
             }, void 0, false, {
                 fileName: "src/components/Popover/Popover.tsx",
-                lineNumber: 64,
+                lineNumber: 65,
                 columnNumber: 7
             }, this),
             isMounted && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _popoverStyles.PopoverContentStyled), {
                 animation: isOpen,
                 css: {
                     ...props.css,
-                    width: props.width || "auto"
+                    left: props.align === "left" ? "0" : "auto",
+                    maxWidth: props.width + " !important",
+                    minWidth: props.width + " !important",
+                    right: props.align === "right" ? "0" : "auto"
                 },
                 minimal: props.minimal,
                 ref: ref,
                 children: props.children
             }, void 0, false, {
                 fileName: "src/components/Popover/Popover.tsx",
-                lineNumber: 68,
+                lineNumber: 69,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Popover/Popover.tsx",
-        lineNumber: 63,
+        lineNumber: 64,
         columnNumber: 5
     }, this);
 }
@@ -46673,7 +46469,7 @@ $RefreshReg$(_c1, "ProviderToggle");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","usehooks-ts":"dmUe4","../Toast":"64Cun","./Provider.styles":"JKoG4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../stitches.config":"iMNz3","phosphor-react":"zkmAe"}],"64Cun":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","usehooks-ts":"dmUe4","../../stitches.config":"iMNz3","../Toast":"64Cun","./Provider.styles":"JKoG4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"64Cun":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Toast", ()=>(0, _toastDefault.default));
@@ -46748,54 +46544,49 @@ $RefreshReg$(_c, "Toast");
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-hot-toast":"gi0hv","usehooks-ts":"dmUe4","./Toast.styles":"6Oi9x","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gi0hv":[function(require,module,exports) {
 "use strict";
-var q = Object.create;
-var O = Object.defineProperty;
-var G = Object.getOwnPropertyDescriptor;
-var K = Object.getOwnPropertyNames;
-var Z = Object.getPrototypeOf, ee = Object.prototype.hasOwnProperty;
-var te = (e, t)=>{
-    for(var o in t)O(e, o, {
+var Y = Object.create;
+var E = Object.defineProperty;
+var q = Object.getOwnPropertyDescriptor;
+var G = Object.getOwnPropertyNames;
+var K = Object.getPrototypeOf, Z = Object.prototype.hasOwnProperty;
+var ee = (e, t)=>{
+    for(var o in t)E(e, o, {
         get: t[o],
         enumerable: !0
     });
 }, j = (e, t, o, s)=>{
-    if (t && typeof t == "object" || typeof t == "function") for (let r of K(t))!ee.call(e, r) && r !== o && O(e, r, {
+    if (t && typeof t == "object" || typeof t == "function") for (let r of G(t))!Z.call(e, r) && r !== o && E(e, r, {
         get: ()=>t[r],
-        enumerable: !(s = G(t, r)) || s.enumerable
+        enumerable: !(s = q(t, r)) || s.enumerable
     });
     return e;
 };
-var N = (e, t, o)=>(o = e != null ? q(Z(e)) : {}, j(t || !e || !e.__esModule ? O(o, "default", {
+var W = (e, t, o)=>(o = e != null ? Y(K(e)) : {}, j(t || !e || !e.__esModule ? E(o, "default", {
         value: e,
         enumerable: !0
-    }) : o, e)), oe = (e)=>j(O({}, "__esModule", {
+    }) : o, e)), te = (e)=>j(E({}, "__esModule", {
         value: !0
     }), e);
-var Ie = {};
-te(Ie, {
-    CheckmarkIcon: ()=>U,
-    ErrorIcon: ()=>M,
-    LoaderIcon: ()=>F,
-    ToastBar: ()=>L,
-    ToastIcon: ()=>$,
-    Toaster: ()=>Y,
-    default: ()=>De,
-    resolveValue: ()=>m,
+var Ve = {};
+ee(Ve, {
+    CheckmarkIcon: ()=>F,
+    ErrorIcon: ()=>w,
+    LoaderIcon: ()=>M,
+    ToastBar: ()=>$,
+    ToastIcon: ()=>U,
+    Toaster: ()=>J,
+    default: ()=>_e,
+    resolveValue: ()=>u,
     toast: ()=>n,
-    useToaster: ()=>w,
-    useToasterStore: ()=>V
+    useToaster: ()=>V,
+    useToasterStore: ()=>_
 });
-module.exports = oe(Ie);
-var re = (e)=>typeof e == "function", m = (e, t)=>re(e) ? e(t) : e;
+module.exports = te(Ve);
+var oe = (e)=>typeof e == "function", u = (e, t)=>oe(e) ? e(t) : e;
 var Q = (()=>{
     let e = 0;
     return ()=>(++e).toString();
-})(), J = (e)=>(t)=>{
-        t && setTimeout(()=>{
-            let o = t.getBoundingClientRect();
-            e(o);
-        });
-    }, E = (()=>{
+})(), R = (()=>{
     let e;
     return ()=>{
         if (e === void 0 && typeof window < "u") {
@@ -46805,17 +46596,17 @@ var Q = (()=>{
         return e;
     };
 })();
-var k = require("react"), ae = 20;
-var v = new Map, X = (e)=>{
+var k = require("react"), re = 20;
+var v = new Map, se = 1e3, X = (e)=>{
     if (v.has(e)) return;
     let t = setTimeout(()=>{
-        v.delete(e), u({
+        v.delete(e), l({
             type: 4,
             toastId: e
         });
-    }, 1e3);
+    }, se);
     v.set(e, t);
-}, se = (e)=>{
+}, ae = (e)=>{
     let t = v.get(e);
     t && clearTimeout(t);
 }, H = (e, t)=>{
@@ -46826,10 +46617,10 @@ var v = new Map, X = (e)=>{
                 toasts: [
                     t.toast,
                     ...e.toasts
-                ].slice(0, ae)
+                ].slice(0, re)
             };
         case 1:
-            return t.toast.id && se(t.toast.id), {
+            return t.toast.id && ae(t.toast.id), {
                 ...e,
                 toasts: e.toasts.map((a)=>a.id === t.toast.id ? {
                         ...a,
@@ -46880,12 +46671,12 @@ var v = new Map, X = (e)=>{
                     }))
             };
     }
-}, D = [], I = {
+}, I = [], D = {
     toasts: [],
     pausedAt: void 0
-}, u = (e)=>{
-    I = H(I, e), D.forEach((t)=>{
-        t(I);
+}, l = (e)=>{
+    D = H(D, e), I.forEach((t)=>{
+        t(D);
     });
 }, ie = {
     blank: 4e3,
@@ -46893,16 +46684,16 @@ var v = new Map, X = (e)=>{
     success: 2e3,
     loading: 1 / 0,
     custom: 4e3
-}, V = (e = {})=>{
-    let [t, o] = (0, k.useState)(I);
-    (0, k.useEffect)(()=>(D.push(o), ()=>{
-            let r = D.indexOf(o);
-            r > -1 && D.splice(r, 1);
+}, _ = (e = {})=>{
+    let [t, o] = (0, k.useState)(D);
+    (0, k.useEffect)(()=>(I.push(o), ()=>{
+            let r = I.indexOf(o);
+            r > -1 && I.splice(r, 1);
         }), [
         t
     ]);
     let s = t.toasts.map((r)=>{
-        var a, i;
+        var a, c;
         return {
             ...e,
             ...e[r.type],
@@ -46910,7 +46701,7 @@ var v = new Map, X = (e)=>{
             duration: r.duration || ((a = e[r.type]) == null ? void 0 : a.duration) || (e == null ? void 0 : e.duration) || ie[r.type],
             style: {
                 ...e.style,
-                ...(i = e[r.type]) == null ? void 0 : i.style,
+                ...(c = e[r.type]) == null ? void 0 : c.style,
                 ...r.style
             }
         };
@@ -46932,24 +46723,24 @@ var ce = (e, t = "blank", o)=>({
         pauseDuration: 0,
         ...o,
         id: (o == null ? void 0 : o.id) || Q()
-    }), b = (e)=>(t, o)=>{
+    }), S = (e)=>(t, o)=>{
         let s = ce(t, e, o);
-        return u({
+        return l({
             type: 2,
             toast: s
         }), s.id;
-    }, n = (e, t)=>b("blank")(e, t);
-n.error = b("error");
-n.success = b("success");
-n.loading = b("loading");
-n.custom = b("custom");
+    }, n = (e, t)=>S("blank")(e, t);
+n.error = S("error");
+n.success = S("success");
+n.loading = S("loading");
+n.custom = S("custom");
 n.dismiss = (e)=>{
-    u({
+    l({
         type: 3,
         toastId: e
     });
 };
-n.remove = (e)=>u({
+n.remove = (e)=>l({
         type: 4,
         toastId: e
     });
@@ -46958,80 +46749,83 @@ n.promise = (e, t, o)=>{
         ...o,
         ...o == null ? void 0 : o.loading
     });
-    return e.then((r)=>(n.success(m(t.success, r), {
+    return e.then((r)=>(n.success(u(t.success, r), {
             id: s,
             ...o,
             ...o == null ? void 0 : o.success
         }), r)).catch((r)=>{
-        n.error(m(t.error, r), {
+        n.error(u(t.error, r), {
             id: s,
             ...o,
             ...o == null ? void 0 : o.error
         });
     }), e;
 };
-var _ = require("react");
-var w = (e)=>{
-    let { toasts: t , pausedAt: o  } = V(e);
-    (0, _.useEffect)(()=>{
+var A = require("react");
+var pe = (e, t)=>{
+    l({
+        type: 1,
+        toast: {
+            id: e,
+            height: t
+        }
+    });
+}, de = ()=>{
+    l({
+        type: 5,
+        time: Date.now()
+    });
+}, V = (e)=>{
+    let { toasts: t , pausedAt: o  } = _(e);
+    (0, A.useEffect)(()=>{
         if (o) return;
-        let r = Date.now(), a = t.map((i)=>{
+        let a = Date.now(), c = t.map((i)=>{
             if (i.duration === 1 / 0) return;
-            let T = (i.duration || 0) + i.pauseDuration - (r - i.createdAt);
-            if (T < 0) {
+            let d = (i.duration || 0) + i.pauseDuration - (a - i.createdAt);
+            if (d < 0) {
                 i.visible && n.dismiss(i.id);
                 return;
             }
-            return setTimeout(()=>n.dismiss(i.id), T);
+            return setTimeout(()=>n.dismiss(i.id), d);
         });
         return ()=>{
-            a.forEach((i)=>i && clearTimeout(i));
+            c.forEach((i)=>i && clearTimeout(i));
         };
     }, [
         t,
         o
     ]);
-    let s = (0, _.useMemo)(()=>({
-            startPause: ()=>{
-                u({
-                    type: 5,
-                    time: Date.now()
-                });
-            },
-            endPause: ()=>{
-                o && u({
-                    type: 6,
-                    time: Date.now()
-                });
-            },
-            updateHeight: (r, a)=>u({
-                    type: 1,
-                    toast: {
-                        id: r,
-                        height: a
-                    }
-                }),
-            calculateOffset: (r, a)=>{
-                let { reverseOrder: i = !1 , gutter: T = 8 , defaultPosition: l  } = a || {}, c = t.filter((p)=>(p.position || l) === (r.position || l) && p.height), P = c.findIndex((p)=>p.id === r.id), R = c.filter((p, h)=>h < P && p.visible).length;
-                return c.filter((p)=>p.visible).slice(...i ? [
-                    R + 1
-                ] : [
-                    0,
-                    R
-                ]).reduce((p, h)=>p + (h.height || 0) + T, 0);
-            }
-        }), [
-        t,
+    let s = (0, A.useCallback)(()=>{
+        o && l({
+            type: 6,
+            time: Date.now()
+        });
+    }, [
         o
+    ]), r = (0, A.useCallback)((a, c)=>{
+        let { reverseOrder: i = !1 , gutter: d = 8 , defaultPosition: p  } = c || {}, g = t.filter((m)=>(m.position || p) === (a.position || p) && m.height), z = g.findIndex((m)=>m.id === a.id), O = g.filter((m, B)=>B < z && m.visible).length;
+        return g.filter((m)=>m.visible).slice(...i ? [
+            O + 1
+        ] : [
+            0,
+            O
+        ]).reduce((m, B)=>m + (B.height || 0) + d, 0);
+    }, [
+        t
     ]);
     return {
         toasts: t,
-        handlers: s
+        handlers: {
+            updateHeight: pe,
+            startPause: de,
+            endPause: s,
+            calculateOffset: r
+        }
     };
 };
-var d = N(require("react")), x = require("goober");
-var f = N(require("react")), g = require("goober");
-var y = require("goober"), pe = y.keyframes`
+var T = W(require("react")), b = require("goober");
+var y = W(require("react")), x = require("goober");
+var h = require("goober"), me = h.keyframes`
 from {
   transform: scale(0) rotate(45deg);
 	opacity: 0;
@@ -47039,7 +46833,7 @@ from {
 to {
  transform: scale(1) rotate(45deg);
   opacity: 1;
-}`, de = y.keyframes`
+}`, ue = h.keyframes`
 from {
   transform: scale(0);
   opacity: 0;
@@ -47047,7 +46841,7 @@ from {
 to {
   transform: scale(1);
   opacity: 1;
-}`, me = y.keyframes`
+}`, le = h.keyframes`
 from {
   transform: scale(0) rotate(90deg);
 	opacity: 0;
@@ -47055,7 +46849,7 @@ from {
 to {
   transform: scale(1) rotate(90deg);
 	opacity: 1;
-}`, M = (0, y.styled)("div")`
+}`, w = (0, h.styled)("div")`
   width: 20px;
   opacity: 0;
   height: 20px;
@@ -47064,14 +46858,14 @@ to {
   position: relative;
   transform: rotate(45deg);
 
-  animation: ${pe} 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+  animation: ${me} 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
     forwards;
   animation-delay: 100ms;
 
   &:after,
   &:before {
     content: '';
-    animation: ${de} 0.15s ease-out forwards;
+    animation: ${ue} 0.15s ease-out forwards;
     animation-delay: 150ms;
     position: absolute;
     border-radius: 3px;
@@ -47084,19 +46878,19 @@ to {
   }
 
   &:before {
-    animation: ${me} 0.15s ease-out forwards;
+    animation: ${le} 0.15s ease-out forwards;
     animation-delay: 180ms;
     transform: rotate(90deg);
   }
 `;
-var C = require("goober"), ue = C.keyframes`
+var C = require("goober"), Te = C.keyframes`
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-`, F = (0, C.styled)("div")`
+`, M = (0, C.styled)("div")`
   width: 12px;
   height: 12px;
   box-sizing: border-box;
@@ -47104,9 +46898,9 @@ var C = require("goober"), ue = C.keyframes`
   border-radius: 100%;
   border-color: ${(e)=>e.secondary || "#e0e0e0"};
   border-right-color: ${(e)=>e.primary || "#616161"};
-  animation: ${ue} 1s linear infinite;
+  animation: ${Te} 1s linear infinite;
 `;
-var S = require("goober"), le = S.keyframes`
+var P = require("goober"), fe = P.keyframes`
 from {
   transform: scale(0) rotate(45deg);
 	opacity: 0;
@@ -47114,7 +46908,7 @@ from {
 to {
   transform: scale(1) rotate(45deg);
 	opacity: 1;
-}`, fe = S.keyframes`
+}`, ye = P.keyframes`
 0% {
 	height: 0;
 	width: 0;
@@ -47128,7 +46922,7 @@ to {
 100% {
   opacity: 1;
   height: 10px;
-}`, U = (0, S.styled)("div")`
+}`, F = (0, P.styled)("div")`
   width: 20px;
   opacity: 0;
   height: 20px;
@@ -47137,13 +46931,13 @@ to {
   position: relative;
   transform: rotate(45deg);
 
-  animation: ${le} 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+  animation: ${fe} 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
     forwards;
   animation-delay: 100ms;
   &:after {
     content: '';
     box-sizing: border-box;
-    animation: ${fe} 0.2s ease-out forwards;
+    animation: ${ye} 0.2s ease-out forwards;
     opacity: 0;
     animation-delay: 200ms;
     position: absolute;
@@ -47156,16 +46950,16 @@ to {
     width: 6px;
   }
 `;
-var Te = (0, g.styled)("div")`
+var ge = (0, x.styled)("div")`
   position: absolute;
-`, ye = (0, g.styled)("div")`
+`, he = (0, x.styled)("div")`
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   min-width: 20px;
   min-height: 20px;
-`, ge = g.keyframes`
+`, xe = x.keyframes`
 from {
   transform: scale(0.6);
   opacity: 0.4;
@@ -47173,30 +46967,30 @@ from {
 to {
   transform: scale(1);
   opacity: 1;
-}`, xe = (0, g.styled)("div")`
+}`, be = (0, x.styled)("div")`
   position: relative;
   transform: scale(0.6);
   opacity: 0.4;
   min-width: 20px;
-  animation: ${ge} 0.3s 0.12s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+  animation: ${xe} 0.3s 0.12s cubic-bezier(0.175, 0.885, 0.32, 1.275)
     forwards;
-`, $ = ({ toast: e  })=>{
+`, U = ({ toast: e  })=>{
     let { icon: t , type: o , iconTheme: s  } = e;
-    return t !== void 0 ? typeof t == "string" ? f.createElement(xe, null, t) : t : o === "blank" ? null : f.createElement(ye, null, f.createElement(F, {
+    return t !== void 0 ? typeof t == "string" ? y.createElement(be, null, t) : t : o === "blank" ? null : y.createElement(he, null, y.createElement(M, {
         ...s
-    }), o !== "loading" && f.createElement(Te, null, o === "error" ? f.createElement(M, {
+    }), o !== "loading" && y.createElement(ge, null, o === "error" ? y.createElement(w, {
         ...s
-    }) : f.createElement(U, {
+    }) : y.createElement(F, {
         ...s
     })));
 };
-var he = (e)=>`
+var Se = (e)=>`
 0% {transform: translate3d(0,${e * -200}%,0) scale(.6); opacity:.5;}
 100% {transform: translate3d(0,0,0) scale(1); opacity:1;}
-`, be = (e)=>`
+`, Ae = (e)=>`
 0% {transform: translate3d(0,0,-1px) scale(1); opacity:1;}
 100% {transform: translate3d(0,${e * -150}%,-1px) scale(.6); opacity:0;}
-`, Se = "0%{opacity:0;} 100%{opacity:1;}", Ae = "0%{opacity:1;} 100%{opacity:0;}", Pe = (0, x.styled)("div", d.forwardRef)`
+`, Pe = "0%{opacity:0;} 100%{opacity:1;}", Oe = "0%{opacity:1;} 100%{opacity:0;}", Ee = (0, b.styled)("div")`
   display: flex;
   align-items: center;
   background: #fff;
@@ -47208,33 +47002,33 @@ var he = (e)=>`
   pointer-events: auto;
   padding: 8px 10px;
   border-radius: 8px;
-`, Re = (0, x.styled)("div")`
+`, Re = (0, b.styled)("div")`
   display: flex;
   justify-content: center;
   margin: 4px 10px;
   color: inherit;
   flex: 1 1 auto;
   white-space: pre-line;
-`, Oe = (e, t)=>{
-    let s = e.includes("top") ? 1 : -1, [r, a] = E() ? [
-        Se,
-        Ae
+`, ve = (e, t)=>{
+    let s = e.includes("top") ? 1 : -1, [r, a] = R() ? [
+        Pe,
+        Oe
     ] : [
-        he(s),
-        be(s)
+        Se(s),
+        Ae(s)
     ];
     return {
-        animation: t ? `${(0, x.keyframes)(r)} 0.35s cubic-bezier(.21,1.02,.73,1) forwards` : `${(0, x.keyframes)(a)} 0.4s forwards cubic-bezier(.06,.71,.55,1)`
+        animation: t ? `${(0, b.keyframes)(r)} 0.35s cubic-bezier(.21,1.02,.73,1) forwards` : `${(0, b.keyframes)(a)} 0.4s forwards cubic-bezier(.06,.71,.55,1)`
     };
-}, L = d.memo(({ toast: e , position: t , style: o , children: s  })=>{
-    let r = e != null && e.height ? Oe(e.position || t || "top-center", e.visible) : {
+}, $ = T.memo(({ toast: e , position: t , style: o , children: s  })=>{
+    let r = e.height ? ve(e.position || t || "top-center", e.visible) : {
         opacity: 0
-    }, a = d.createElement($, {
+    }, a = T.createElement(U, {
         toast: e
-    }), i = d.createElement(Re, {
+    }), c = T.createElement(Re, {
         ...e.ariaProps
-    }, m(e.message, e));
-    return d.createElement(Pe, {
+    }, u(e.message, e));
+    return T.createElement(Ee, {
         className: e.className,
         style: {
             ...r,
@@ -47243,12 +47037,34 @@ var he = (e)=>`
         }
     }, typeof s == "function" ? s({
         icon: a,
-        message: i
-    }) : d.createElement(d.Fragment, null, a, i));
+        message: c
+    }) : T.createElement(T.Fragment, null, a, c));
 });
-var B = require("goober"), A = N(require("react"));
-(0, B.setup)(A.createElement);
-var Ee = (e, t)=>{
+var N = require("goober"), f = W(require("react"));
+(0, N.setup)(f.createElement);
+var Ie = ({ id: e , className: t , style: o , onHeightUpdate: s , children: r  })=>{
+    let a = f.useCallback((c)=>{
+        if (c) {
+            let i = ()=>{
+                let d = c.getBoundingClientRect().height;
+                s(e, d);
+            };
+            i(), new MutationObserver(i).observe(c, {
+                subtree: !0,
+                childList: !0,
+                characterData: !0
+            });
+        }
+    }, [
+        e,
+        s
+    ]);
+    return f.createElement("div", {
+        ref: a,
+        className: t,
+        style: o
+    }, r);
+}, De = (e, t)=>{
     let o = e.includes("top"), s = o ? {
         top: 0
     } : {
@@ -47263,52 +47079,51 @@ var Ee = (e, t)=>{
         right: 0,
         display: "flex",
         position: "absolute",
-        transition: E() ? void 0 : "all 230ms cubic-bezier(.21,1.02,.73,1)",
+        transition: R() ? void 0 : "all 230ms cubic-bezier(.21,1.02,.73,1)",
         transform: `translateY(${t * (o ? 1 : -1)}px)`,
         ...s,
         ...r
     };
-}, ve = B.css`
+}, ke = N.css`
   z-index: 9999;
   > * {
     pointer-events: auto;
   }
-`, z = 16, Y = ({ reverseOrder: e , position: t = "top-center" , toastOptions: o , gutter: s , children: r , containerStyle: a , containerClassName: i  })=>{
-    let { toasts: T , handlers: l  } = w(o);
-    return A.createElement("div", {
+`, L = 16, J = ({ reverseOrder: e , position: t = "top-center" , toastOptions: o , gutter: s , children: r , containerStyle: a , containerClassName: c  })=>{
+    let { toasts: i , handlers: d  } = V(o);
+    return f.createElement("div", {
         style: {
             position: "fixed",
             zIndex: 9999,
-            top: z,
-            left: z,
-            right: z,
-            bottom: z,
+            top: L,
+            left: L,
+            right: L,
+            bottom: L,
             pointerEvents: "none",
             ...a
         },
-        className: i,
-        onMouseEnter: l.startPause,
-        onMouseLeave: l.endPause
-    }, T.map((c)=>{
-        let P = c.position || t, R = l.calculateOffset(c, {
+        className: c,
+        onMouseEnter: d.startPause,
+        onMouseLeave: d.endPause
+    }, i.map((p)=>{
+        let g = p.position || t, z = d.calculateOffset(p, {
             reverseOrder: e,
             gutter: s,
             defaultPosition: t
-        }), W = Ee(P, R), p = c.height ? void 0 : J((h)=>{
-            l.updateHeight(c.id, h.height);
-        });
-        return A.createElement("div", {
-            ref: p,
-            className: c.visible ? ve : "",
-            key: c.id,
-            style: W
-        }, c.type === "custom" ? m(c.message, c) : r ? r(c) : A.createElement(L, {
-            toast: c,
-            position: P
+        }), O = De(g, z);
+        return f.createElement(Ie, {
+            id: p.id,
+            key: p.id,
+            onHeightUpdate: d.updateHeight,
+            className: p.visible ? ke : "",
+            style: O
+        }, p.type === "custom" ? u(p.message, p) : r ? r(p) : f.createElement($, {
+            toast: p,
+            position: g
         }));
     }));
 };
-var De = n;
+var _e = n;
 
 },{"react":"21dqq","goober":"gILVw"}],"gILVw":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -47413,7 +47228,7 @@ const ToastStyled = (0, _stitchesConfig.styled)("div", {
     cursor: "pointer",
     fontSize: "$h6",
     height: "auto",
-    lineHeight: "$h6",
+    lineHeight: "normal !important",
     marginTop: "$3",
     overflow: "hidden",
     padding: "$1 $3",
@@ -47555,7 +47370,12 @@ const reset = (0, _stitchesConfig.globalCss)({
         MozOsxFontSmoothing: "grayscale",
         WebkitFontSmoothing: "antialiased",
         fontSize: "62.5%",
-        lineHeight: "1.5",
+        height: "100%",
+        lineHeight: 1.5,
+        overflowX: "hidden",
+        overflowY: "auto",
+        WebkitTextSizeAdjust: "100%",
+        boxSizing: "border-box",
         textRendering: "optimizeLegibility"
     },
     svg: {
@@ -47597,13 +47417,19 @@ function Stack(props) {
             ...props.top && {
                 paddingTop: `$${props.top}`,
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingTop: `calc($${props.top} * 0.9)`
+                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`
                 }
             },
             ...props.bottom && {
                 paddingBottom: `$${props.bottom}`,
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingBottom: `calc($${props.bottom} * 0.9)`
+                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`
                 }
             }
         },
@@ -47618,14 +47444,20 @@ function Stack(props) {
             ...props.top && {
                 paddingTop: `$${props.top}`,
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.8)`
+                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`
                 }
             },
             ...props.bottom && {
+                paddingBottom: `$${props.bottom}`,
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.8)`
+                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`
                 },
-                paddingBottom: `$${props.bottom}`
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`
+                }
             },
             ...props.minimal && {
                 paddingLeft: "0!important",
@@ -47663,7 +47495,7 @@ function Stack(props) {
         children: props.children
     }, void 0, false, {
         fileName: "src/components/Stack/Stack.tsx",
-        lineNumber: 56,
+        lineNumber: 62,
         columnNumber: 5
     }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stackStyles.StackElementStyled), {
         css: {
@@ -47672,14 +47504,20 @@ function Stack(props) {
             ...props.top && {
                 paddingTop: `$${props.top}`,
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.8)`
+                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`
                 }
             },
             ...props.bottom && {
+                paddingBottom: `$${props.bottom}`,
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.8)`
+                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`
                 },
-                paddingBottom: `$${props.bottom}`
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`
+                }
             }
         },
         flexduo: props.flexduo,
@@ -47687,7 +47525,7 @@ function Stack(props) {
         children: props.children
     }, void 0, false, {
         fileName: "src/components/Stack/Stack.tsx",
-        lineNumber: 107,
+        lineNumber: 119,
         columnNumber: 5
     }, this);
 }
@@ -47968,13 +47806,21 @@ function Text(props) {
                 paddingTop: `$${props.top}`,
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     marginTop: props.top ? "0 !important" : "inherit",
-                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.8)`
+                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    marginTop: props.top ? "0 !important" : "inherit",
+                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`
                 }
             },
             ...props.bottom && {
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     marginBottom: props.bottom ? "0 !important" : "inherit",
-                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.8)`
+                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    marginBottom: props.bottom ? "0 !important" : "inherit",
+                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`
                 },
                 paddingBottom: `$${props.bottom}`
             },
@@ -48024,6 +47870,7 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
     },
     color: "inherit",
     display: "block",
+    lineHeight: "normal !important",
     variants: {
         accent: {
             true: {
@@ -48042,15 +47889,11 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 },
                 fontSize: "$h1",
                 fontWeight: "$h1",
-                lineHeight: "$h1",
                 fontFamily: "$serif",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h1 * 0.85)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h1 * 0.9)"
                 },
-                [(0, _stitchesConfig.breakpoints).laptopX]: {
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h1 * 0.95)"
                 }
             },
@@ -48060,15 +47903,11 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 },
                 fontSize: "$h2",
                 fontWeight: "$h2",
-                lineHeight: "$h2",
                 fontFamily: "$serif",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h2 * 0.85)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h2 * 0.9)"
                 },
-                [(0, _stitchesConfig.breakpoints).laptopX]: {
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h2 * 0.95)"
                 }
             },
@@ -48078,15 +47917,11 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 },
                 fontSize: "$h3",
                 fontWeight: "$h3",
-                lineHeight: "$h3",
                 fontFamily: "$serif",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h3 * 0.85)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h3 * 0.9)"
                 },
-                [(0, _stitchesConfig.breakpoints).laptopX]: {
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h3 * 0.95)"
                 }
             },
@@ -48096,15 +47931,10 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 },
                 fontSize: "$h4",
                 fontWeight: "$h4",
-                lineHeight: "$h4",
-                fontFamily: "$serif",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h4 * 0.85)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h4 * 0.9)"
                 },
-                [(0, _stitchesConfig.breakpoints).laptopX]: {
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h4 * 0.95)"
                 }
             },
@@ -48114,15 +47944,11 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 },
                 fontSize: "$h5",
                 fontWeight: "$h5",
-                lineHeight: "$h5",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h5 * 0.85)"
+                    fontSize: "calc($h5 * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h5 * 0.875)"
-                },
-                [(0, _stitchesConfig.breakpoints).laptopX]: {
-                    fontSize: "calc($h5 * 0.9)"
+                    fontSize: "calc($h5 * 0.95)"
                 }
             },
             h6: {
@@ -48132,14 +47958,10 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 color: "$accent",
                 fontSize: "$h6",
                 fontWeight: "$h6",
-                lineHeight: "$h6",
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     fontSize: "calc($h6 * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h6 * 0.925)"
-                },
-                [(0, _stitchesConfig.breakpoints).laptopX]: {
                     fontSize: "calc($h6 * 0.95)"
                 }
             },
@@ -48149,14 +47971,10 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 },
                 fontSize: "$p",
                 fontWeight: "$p",
-                lineHeight: "$p",
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     fontSize: "calc($p * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($p * 0.925)"
-                },
-                [(0, _stitchesConfig.breakpoints).laptopX]: {
                     fontSize: "calc($p * 0.95)"
                 }
             },
@@ -48166,21 +47984,16 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 },
                 fontSize: "$small",
                 fontWeight: "$small",
-                lineHeight: "$small",
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     fontSize: "calc($small * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($small * 0.925)"
-                },
-                [(0, _stitchesConfig.breakpoints).laptopX]: {
                     fontSize: "calc($small * 0.95)"
                 }
             },
             span: {
                 fontSize: "inherit",
-                fontWeight: "inherit",
-                lineHeight: "inherit"
+                fontWeight: "inherit"
             }
         }
     }
@@ -48217,14 +48030,20 @@ function View(props) {
             ...props.top && {
                 paddingTop: `$${props.top}`,
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.8)`
+                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`
                 }
             },
             ...props.bottom && {
+                paddingBottom: `$${props.bottom}`,
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.8)`
+                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`
                 },
-                paddingBottom: `$${props.bottom}`
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`
+                }
             }
         },
         id: props.id,
@@ -48233,7 +48052,7 @@ function View(props) {
             children: props.children
         }, void 0, false, {
             fileName: "src/components/View/View.tsx",
-            lineNumber: 36,
+            lineNumber: 42,
             columnNumber: 7
         }, this)
     }, void 0, false, {
@@ -48275,22 +48094,22 @@ const ViewContainerStyled = (0, _stitchesConfig.styled)("div", {
             true: {
                 margin: "auto",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    width: "95%"
+                    width: "96%"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    width: "98%"
+                    width: "96%"
                 },
                 [(0, _stitchesConfig.breakpoints).laptopX]: {
                     maxWidth: "1440px",
-                    width: "95%"
+                    width: "94%"
                 },
                 [(0, _stitchesConfig.breakpoints).desktopX]: {
                     maxWidth: "1660px",
-                    width: "96%"
+                    width: "92%"
                 },
                 [(0, _stitchesConfig.breakpoints).wide]: {
                     maxWidth: "1950px",
-                    width: "94%"
+                    width: "90%"
                 }
             }
         }

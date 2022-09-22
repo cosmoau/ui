@@ -85,8 +85,8 @@ export default function Dropdown(props: Props): JSX.Element {
           animation={isOpen}
           css={{
             left: props.align === 'left' ? '0' : 'auto',
-            maxWidth: props.width || '15rem',
-            minWidth: '15rem',
+            maxWidth: props.width + ' !important' || '25rem',
+            minWidth: props.width + ' !important' || '15rem',
             right: props.align === 'right' ? '0' : 'auto',
           }}
           ref={ref}>
