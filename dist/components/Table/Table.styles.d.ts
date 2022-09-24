@@ -1,3 +1,4 @@
+/** @format */
 export declare const TableStyled: import("@stitches/react/types/styled-component").StyledComponent<"table", {}, {}, import("@stitches/react/types/css-util").CSS<{}, {
     colors: {
         accent: string;
@@ -48,19 +49,9 @@ export declare const TableStyled: import("@stitches/react/types/styled-component
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
-    };
-    lineHeights: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-        p: string;
-        small: string;
     };
     media: {
         desktop: string;
@@ -200,19 +191,9 @@ export declare const TableHeadStyled: import("@stitches/react/types/styled-compo
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
-    };
-    lineHeights: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-        p: string;
-        small: string;
     };
     media: {
         desktop: string;
@@ -352,19 +333,9 @@ export declare const TableBodyStyled: import("@stitches/react/types/styled-compo
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
-    };
-    lineHeights: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-        p: string;
-        small: string;
     };
     media: {
         desktop: string;
@@ -504,19 +475,9 @@ export declare const TableRowStyled: import("@stitches/react/types/styled-compon
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
-    };
-    lineHeights: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-        p: string;
-        small: string;
     };
     media: {
         desktop: string;
@@ -656,19 +617,9 @@ export declare const TableCellStyled: import("@stitches/react/types/styled-compo
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
-    };
-    lineHeights: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-        p: string;
-        small: string;
     };
     media: {
         desktop: string;
@@ -808,19 +759,9 @@ export declare const TableHeadCellStyled: import("@stitches/react/types/styled-c
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
-    };
-    lineHeights: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-        p: string;
-        small: string;
     };
     media: {
         desktop: string;

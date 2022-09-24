@@ -1,3 +1,5 @@
+/** @format */
+
 export * from './components/Avatar/index';
 export * from './components/Badge/index';
 export * from './components/Box/index';
@@ -18,4 +20,12 @@ export * from './components/View/index';
 export * from './components/Code/index';
 export * from './components/Field/index';
 
-export { breakpoints, css, getCssText, lightTheme, styled, theme, keyframes } from './stitches.config';
+export {
+  breakpoints,
+  css,
+  getCssText,
+  lightTheme,
+  styled,
+  theme,
+  keyframes,
+} from './stitches.config';

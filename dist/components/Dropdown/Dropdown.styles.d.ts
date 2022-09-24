@@ -1,3 +1,4 @@
+/** @format */
 export declare const DropdownStyled: import("@stitches/react/types/styled-component").StyledComponent<"div", {}, {}, import("@stitches/react/types/css-util").CSS<{}, {
     colors: {
         accent: string;
@@ -48,8 +49,8 @@ export declare const DropdownStyled: import("@stitches/react/types/styled-compon
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
     };
     media: {
@@ -190,8 +191,8 @@ export declare const DropdownTriggerStyled: import("@stitches/react/types/styled
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
     };
     media: {
@@ -358,8 +359,8 @@ export declare const DropdownGroupStyled: import("@stitches/react/types/styled-c
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
     };
     media: {
@@ -535,8 +536,8 @@ export declare const DropdownItemStyled: import("@stitches/react/types/styled-co
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
     };
     media: {

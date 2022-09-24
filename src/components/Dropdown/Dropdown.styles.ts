@@ -1,3 +1,5 @@
+/** @format */
+
 import { fadeIn, fadeOut, styled } from '../../stitches.config';
 
 export const DropdownStyled = styled('div', {
@@ -10,9 +12,9 @@ export const DropdownTriggerStyled = styled('div', {
   '*': {
     cursor: 'pointer',
   },
-  display: 'inline-flex',
-  position: 'relative',
-  verticalAlign: 'middle',
+  'display': 'inline-flex',
+  'position': 'relative',
+  'verticalAlign': 'middle',
 });
 
 export const DropdownGroupStyled = styled('div', {
@@ -58,13 +60,13 @@ export const DropdownItemStyled = styled('div', {
     borderBottom: 0,
   },
 
-  borderRadius: 0,
-  cursor: 'pointer',
-  display: 'flex',
-  fontSize: '$h6',
-  lineHeight: 'normal !important',
-  transition: '$default',
-  variants: {
+  'borderRadius': 0,
+  'cursor': 'pointer',
+  'display': 'flex',
+  'fontSize': '$h6',
+  'lineHeight': 'normal !important',
+  'transition': '$default',
+  'variants': {
     submenu: {
       false: {
         padding: '$2 $3',

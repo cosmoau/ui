@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { ReactNode } from 'react';
 
 import { DefaultProps } from '../../stitches.config';
@@ -20,9 +22,18 @@ export interface Props extends DefaultProps {
 
 export default function Box(props: Props): JSX.Element {
   return props?.image ? (
-    <BoxStyled css={props.css} hover={props.hover} id={props.id} loading={props.loading || false} padding={'none'} theme={props.theme || 'default'}>
+    <BoxStyled
+      css={props.css}
+      hover={props.hover}
+      id={props.id}
+      loading={props.loading || false}
+      padding={'none'}
+      theme={props.theme || 'default'}>
       {props.imageCTA ? (
-        <a href={props.imageCTA} rel='noopener noreferrer' target={props.imageTarget || '_blank'}>
+        <a
+          href={props.imageCTA}
+          rel='noopener noreferrer'
+          target={props.imageTarget || '_blank'}>
           <ThreesImage
             alt={props.imageAlt || ('#' as string)}
             css={{
@@ -56,10 +67,18 @@ export default function Box(props: Props): JSX.Element {
           src={props.image.toString()}
         />
       )}
-      <BoxImageChildrenStyled padding={'default'}>{props.children}</BoxImageChildrenStyled>
+      <BoxImageChildrenStyled padding={'default'}>
+        {props.children}
+      </BoxImageChildrenStyled>
     </BoxStyled>
   ) : (
-    <BoxStyled css={props.css} hover={props.hover} id={props.id} loading={props.loading || false} padding={'default'} theme={props.theme || 'default'}>
+    <BoxStyled
+      css={props.css}
+      hover={props.hover}
+      id={props.id}
+      loading={props.loading || false}
+      padding={'default'}
+      theme={props.theme || 'default'}>
       {props.children}
     </BoxStyled>
   );

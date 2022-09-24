@@ -1,9 +1,18 @@
+/** @format */
+
 import { FunnelSimple, SortAscending, SortDescending } from 'phosphor-react';
 import React, { ReactNode, useState } from 'react';
 
 import { Button } from '../Button';
 
-import { TableBodyStyled, TableCellStyled, TableHeadCellStyled, TableHeadStyled, TableRowStyled, TableStyled } from './Table.styles';
+import {
+  TableBodyStyled,
+  TableCellStyled,
+  TableHeadCellStyled,
+  TableHeadStyled,
+  TableRowStyled,
+  TableStyled,
+} from './Table.styles';
 
 export interface Props {
   headChildren?: Array<string>;
@@ -51,7 +60,17 @@ export default function Table(props: Props): JSX.Element {
                       opacity: sortBy === index ? 1 : 0.2,
                     },
                   }}
-                  icon={sortBy === index ? sortDirection === 'asc' ? <SortAscending /> : <SortDescending /> : <FunnelSimple />}
+                  icon={
+                    sortBy === index ? (
+                      sortDirection === 'asc' ? (
+                        <SortAscending />
+                      ) : (
+                        <SortDescending />
+                      )
+                    ) : (
+                      <FunnelSimple />
+                    )
+                  }
                   iconPosition='right'
                   name='sort'
                   theme='minimal'>

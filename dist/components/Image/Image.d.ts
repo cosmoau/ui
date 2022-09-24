@@ -1,3 +1,4 @@
+/** @format */
 /// <reference types="react" />
 import { ImageProps } from 'next/image';
 import { DefaultProps } from '../../stitches.config';

@@ -1,3 +1,4 @@
+/** @format */
 export declare const InputStyled: import("@stitches/react/types/styled-component").StyledComponent<"div", {}, {}, import("@stitches/react/types/css-util").CSS<{}, {
     colors: {
         accent: string;
@@ -48,8 +49,8 @@ export declare const InputStyled: import("@stitches/react/types/styled-component
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
     };
     media: {
@@ -231,8 +232,8 @@ export declare const InputCoreStyled: import("@stitches/react/types/styled-compo
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
     };
     media: {
@@ -373,8 +374,8 @@ export declare const InputAreaStyled: import("@stitches/react/types/styled-compo
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
     };
     media: {
@@ -515,8 +516,8 @@ export declare const InputFunctionStyled: import("@stitches/react/types/styled-c
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
     };
     media: {
@@ -657,8 +658,8 @@ export declare const InputCallbackStyled: import("@stitches/react/types/styled-c
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
     };
     media: {

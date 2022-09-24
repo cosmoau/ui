@@ -1,3 +1,4 @@
+/** @format */
 export declare const ToastStyled: import("@stitches/react/types/styled-component").StyledComponent<"div", import("@stitches/react/types/styled-component").StyledComponentProps<[{
     backgroundColor: string;
     border: string;
@@ -87,8 +88,8 @@ export declare const ToastStyled: import("@stitches/react/types/styled-component
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
     };
     media: {
@@ -229,8 +230,8 @@ export declare const ToastContainerStyled: import("@stitches/react/types/styled-
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
     };
     media: {

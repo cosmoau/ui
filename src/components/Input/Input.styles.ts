@@ -1,3 +1,5 @@
+/** @format */
+
 import { styled } from '../../stitches.config';
 
 export const InputStyled = styled('div', {
@@ -13,15 +15,15 @@ export const InputCoreStyled = styled('div', {
   '*': {
     verticalAlign: 'middle',
   },
-  alignContent: 'center',
-  alignSelf: 'center',
-  borderRadius: '$1',
-  display: 'inline-flex',
-  justifyContent: 'center',
-  padding: '$2 $4',
-  position: 'relative',
-  transition: '$default',
-  variants: {
+  'alignContent': 'center',
+  'alignSelf': 'center',
+  'borderRadius': '$1',
+  'display': 'inline-flex',
+  'justifyContent': 'center',
+  'padding': '$2 $4',
+  'position': 'relative',
+  'transition': '$default',
+  'variants': {
     disabled: {
       true: {
         cursor: 'not-allowed',
@@ -43,27 +45,27 @@ export const InputCoreStyled = styled('div', {
       },
     },
   },
-  width: '100%',
+  'width': '100%',
 });
 
 export const InputAreaStyled = styled('input', {
   '&:focus': {
     outline: 'none',
   },
-  appearance: 'none',
-  backgroundColor: 'transparent',
-  border: 'none',
-  color: '$text',
-  fontFamily: '$sans !important',
-  fontSize: '16px !important',
-  letterSpacing: '0',
-  margin: '0',
-  minHeight: '2.4rem',
-  outline: 'none',
-  padding: '0',
-  textAlign: 'left',
-  transition: '$default',
-  width: '100%',
+  'appearance': 'none',
+  'backgroundColor': 'transparent',
+  'border': 'none',
+  'color': '$text',
+  'fontFamily': '$sans !important',
+  'fontSize': '16px !important',
+  'letterSpacing': '0',
+  'margin': '0',
+  'minHeight': '2.4rem',
+  'outline': 'none',
+  'padding': '0',
+  'textAlign': 'left',
+  'transition': '$default',
+  'width': '100%',
 });
 
 export const InputFunctionStyled = styled('div', {

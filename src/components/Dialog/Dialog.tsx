@@ -1,3 +1,5 @@
+/** @format */
+
 import { X } from 'phosphor-react';
 import React, { ReactNode, useRef, useState } from 'react';
 import { useEventListener, useLockedBody, useOnClickOutside } from 'usehooks-ts';
@@ -5,7 +7,13 @@ import { useEventListener, useLockedBody, useOnClickOutside } from 'usehooks-ts'
 import { DefaultProps } from '../../stitches.config';
 import { Button } from '../Button';
 
-import { DialogContentStyled, DialogExitStyled, DialogOverlayStyled, DialogStyled, DialogTriggerStyled } from './Dialog.styles';
+import {
+  DialogContentStyled,
+  DialogExitStyled,
+  DialogOverlayStyled,
+  DialogStyled,
+  DialogTriggerStyled,
+} from './Dialog.styles';
 
 export interface Props extends DefaultProps {
   children: ReactNode;
@@ -54,7 +62,9 @@ export default function Dialog(props: Props): JSX.Element {
 
   return (
     <DialogStyled id={props.id}>
-      <DialogTriggerStyled onClickCapture={handleClick}>{props.trigger}</DialogTriggerStyled>
+      <DialogTriggerStyled onClickCapture={handleClick}>
+        {props.trigger}
+      </DialogTriggerStyled>
       {isMounted && (
         <DialogOverlayStyled animation={isOpen}>
           <DialogContentStyled animation={isOpen} css={props.css} ref={ref}>

@@ -1,6 +1,7 @@
+import { ArrowRight } from 'phosphor-react';
 import React, { ReactElement } from 'react';
 
-import { Provider, Stack, View, Table, Badge, Button, Text, Input, Box, ProviderToggle } from '../src/index';
+import { Provider, Stack, View, Table, Badge, Button, Text, Input, Box, ProviderToggle, Divider } from '../src/index';
 
 export function App(): ReactElement {
   return (
@@ -9,6 +10,7 @@ export function App(): ReactElement {
         <Stack direction='row' flex='center' top='4'>
           <Stack direction='column' width={25}>
             <Box>
+              <Divider bottom='6' top='6' />
               <Text as='h1'>Airbnb, Stayz, Booking.com and Homes & Villas Management</Text>
               <Text as='h2'>Make your short-term rental listings work for you, without the hassle</Text>
               <Text as='h3'>Make your short-term rental listings work for you, without the hassle</Text>
@@ -22,7 +24,19 @@ export function App(): ReactElement {
                 <Input />
               </Stack>
             </Box>
-            <Button ariaLabel='button'>Button</Button>
+            <Button ariaLabel='button' icon={<ArrowRight />} iconPosition='right'>
+              Button
+            </Button>
+            <Button ariaLabel='button' icon={<ArrowRight />} iconPosition='right' small>
+              Button
+            </Button>
+            <Button ariaLabel='button' block icon={<ArrowRight />} iconPosition='right'>
+              Button
+            </Button>
+            <Stack flexduo>
+              <Button>Test 1</Button>
+              <Button>Test 2</Button>
+            </Stack>
             <Badge theme='border'>Make your short-term rental listings work for you, without the hassle</Badge>
             <Table
               bodyChildren={[

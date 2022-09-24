@@ -1,3 +1,4 @@
+/** @format */
 import { ReactNode } from 'react';
 export interface Props {
     headChildren?: Array<string>;

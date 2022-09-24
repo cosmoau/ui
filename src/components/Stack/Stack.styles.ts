@@ -1,15 +1,17 @@
+/** @format */
+
 import { breakpoints, styled } from '../../stitches.config';
 
 export const StackRowStyled = styled('div', {
   '*': {
     boxSizing: 'border-box',
   },
-  display: 'flex',
-  flexDirection: 'row',
-  flexFlow: 'row wrap',
-  maxWidth: '100%',
-  minWidth: '100%',
-  width: '100%',
+  'display': 'flex',
+  'flexDirection': 'row',
+  'flexFlow': 'row wrap',
+  'maxWidth': '100%',
+  'minWidth': '100%',
+  'width': '100%',
 });
 
 export const StackColumnStyled = styled('div', {
@@ -38,10 +40,10 @@ export const StackElementStyled = styled('div', {
           marginTOp: '0 !important',
           verticalAlign: 'middle',
         },
-        alignItems: 'center',
-        display: 'flex',
-        justifyContent: 'space-between',
-        verticalAlign: 'middle',
+        'alignItems': 'center',
+        'display': 'flex',
+        'justifyContent': 'space-between',
+        'verticalAlign': 'middle',
       },
     },
   },

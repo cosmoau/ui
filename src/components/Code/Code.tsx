@@ -1,3 +1,5 @@
+/** @format */
+
 import { ClipboardText } from 'phosphor-react';
 import React, { ReactNode, useState } from 'react';
 
@@ -28,7 +30,17 @@ export default function Code(props: Props): JSX.Element {
     <CodeStyled css={props.css}>
       <CodeFunctionStyled>
         {props.copy && (
-          <Button ariaLabel='Copy' icon={isCopied ? <ClipboardText opacity={0.4} weight='duotone' /> : <ClipboardText weight='duotone' />} name='copy' onClick={handleCopy}>
+          <Button
+            ariaLabel='Copy'
+            icon={
+              isCopied ? (
+                <ClipboardText opacity={0.4} weight='duotone' />
+              ) : (
+                <ClipboardText weight='duotone' />
+              )
+            }
+            name='copy'
+            onClick={handleCopy}>
             Copy
           </Button>
         )}

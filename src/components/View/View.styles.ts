@@ -1,3 +1,5 @@
+/** @format */
+
 import { breakpoints, styled } from '../../stitches.config';
 
 export const ViewStyled = styled('div', {

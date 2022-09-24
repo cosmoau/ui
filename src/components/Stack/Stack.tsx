@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { ReactNode } from 'react';
 
 import { breakpoints, DefaultProps } from '../../stitches.config';
@@ -7,7 +9,14 @@ import { StackColumnStyled, StackRowStyled, StackElementStyled } from './Stack.s
 export interface Props extends Omit<DefaultProps, 'spacing'> {
   children: ReactNode;
   direction?: 'row' | 'column';
-  flex?: 'stretch' | 'center' | 'flex-start' | 'flex-end' | 'baseline' | 'initial' | 'inherit';
+  flex?:
+    | 'stretch'
+    | 'center'
+    | 'flex-start'
+    | 'flex-end'
+    | 'baseline'
+    | 'initial'
+    | 'inherit';
   align?: 'left' | 'center' | 'right' | 'justify' | 'initial' | 'inherit';
   minimal?: boolean;
   offset?: number;
@@ -35,23 +44,35 @@ export default function Stack(props: Props): JSX.Element {
         '*': {
           alignItems: props.flex || 'initial',
         },
-        alignItems: props.flex || 'initial',
+        'alignItems': props.flex || 'initial',
         ...(props.top && {
           paddingTop: `$${props.top}`,
           [breakpoints.phone]: {
-            paddingTop: props.top !== ('8' || '9') ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`,
+            paddingTop:
+              props.top !== ('8' || '9')
+                ? `calc($${props.top} * 0.8)`
+                : `calc($${props.top} * 0.75)`,
           },
           [breakpoints.tabletX]: {
-            paddingTop: props.top !== ('8' || '9') ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`,
+            paddingTop:
+              props.top !== ('8' || '9')
+                ? `calc($${props.top} * 0.9)`
+                : `calc($${props.top} * 0.85)`,
           },
         }),
         ...(props.bottom && {
           paddingBottom: `$${props.bottom}`,
           [breakpoints.phone]: {
-            paddingBottom: props.bottom !== ('8' || '9') ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`,
+            paddingBottom:
+              props.bottom !== ('8' || '9')
+                ? `calc($${props.bottom} * 0.8)`
+                : `calc($${props.bottom} * 0.75)`,
           },
           [breakpoints.tabletX]: {
-            paddingBottom: props.bottom !== ('8' || '9') ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`,
+            paddingBottom:
+              props.bottom !== ('8' || '9')
+                ? `calc($${props.bottom} * 0.9)`
+                : `calc($${props.bottom} * 0.85)`,
           },
         }),
       }}
@@ -64,19 +85,31 @@ export default function Stack(props: Props): JSX.Element {
         ...(props.top && {
           paddingTop: `$${props.top}`,
           [breakpoints.phone]: {
-            paddingTop: props.top !== ('8' || '9') ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`,
+            paddingTop:
+              props.top !== ('8' || '9')
+                ? `calc($${props.top} * 0.8)`
+                : `calc($${props.top} * 0.75)`,
           },
           [breakpoints.tabletX]: {
-            paddingTop: props.top !== ('8' || '9') ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`,
+            paddingTop:
+              props.top !== ('8' || '9')
+                ? `calc($${props.top} * 0.9)`
+                : `calc($${props.top} * 0.85)`,
           },
         }),
         ...(props.bottom && {
           paddingBottom: `$${props.bottom}`,
           [breakpoints.phone]: {
-            paddingBottom: props.bottom !== ('8' || '9') ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`,
+            paddingBottom:
+              props.bottom !== ('8' || '9')
+                ? `calc($${props.bottom} * 0.8)`
+                : `calc($${props.bottom} * 0.75)`,
           },
           [breakpoints.tabletX]: {
-            paddingBottom: props.bottom !== ('8' || '9') ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`,
+            paddingBottom:
+              props.bottom !== ('8' || '9')
+                ? `calc($${props.bottom} * 0.9)`
+                : `calc($${props.bottom} * 0.85)`,
           },
         }),
         ...(props.minimal && {
@@ -102,7 +135,9 @@ export default function Stack(props: Props): JSX.Element {
         },
         [breakpoints.desktopX]: {
           flex: props.widthDesktop ? `0 0 ${props.widthDesktop}%` : `0 0 ${props.width}%`,
-          marginLeft: props.offsetDesktop ? `${props.offsetDesktop}%` : `${props.offset}%`,
+          marginLeft: props.offsetDesktop
+            ? `${props.offsetDesktop}%`
+            : `${props.offset}%`,
           width: props.widthDesktop ? `${props.widthDesktop}%` : `${props.width}%`,
         },
         [breakpoints.wide]: {
@@ -123,19 +158,31 @@ export default function Stack(props: Props): JSX.Element {
         ...(props.top && {
           paddingTop: `$${props.top}`,
           [breakpoints.phone]: {
-            paddingTop: props.top !== ('8' || '9') ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`,
+            paddingTop:
+              props.top !== ('8' || '9')
+                ? `calc($${props.top} * 0.8)`
+                : `calc($${props.top} * 0.75)`,
           },
           [breakpoints.tabletX]: {
-            paddingTop: props.top !== ('8' || '9') ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`,
+            paddingTop:
+              props.top !== ('8' || '9')
+                ? `calc($${props.top} * 0.9)`
+                : `calc($${props.top} * 0.85)`,
           },
         }),
         ...(props.bottom && {
           paddingBottom: `$${props.bottom}`,
           [breakpoints.phone]: {
-            paddingBottom: props.bottom !== ('8' || '9') ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`,
+            paddingBottom:
+              props.bottom !== ('8' || '9')
+                ? `calc($${props.bottom} * 0.8)`
+                : `calc($${props.bottom} * 0.75)`,
           },
           [breakpoints.tabletX]: {
-            paddingBottom: props.bottom !== ('8' || '9') ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`,
+            paddingBottom:
+              props.bottom !== ('8' || '9')
+                ? `calc($${props.bottom} * 0.9)`
+                : `calc($${props.bottom} * 0.85)`,
           },
         }),
       }}

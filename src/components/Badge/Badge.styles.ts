@@ -1,3 +1,5 @@
+/** @format */
+
 import { styled, keyframes, breakpoints } from '../../stitches.config';
 
 const pulse = keyframes({
@@ -19,16 +21,19 @@ export const BadgeStyled = styled('div', {
   alignItems: 'center',
   borderRadius: '$3',
   display: 'inline-flex',
-  justifyContent: 'center',
-  padding: '$1 $4',
+  fontSize: '$h5',
+  fontWeight: '$h5',
 
+  justifyContent: 'center',
+
+  lineHeight: 'normal !important',
+  padding: '$1 $4',
   svg: {
     alignSelf: 'center',
     height: '1.6rem',
     marginTop: '-0.2rem',
     width: '1.6rem',
   },
-
   variants: {
     theme: {
       blue: {
@@ -69,9 +74,6 @@ export const BadgeStyled = styled('div', {
       },
     },
   },
-  fontSize: '$h5',
-  fontWeight: '$h5',
-  lineHeight: 'normal !important',
 
   [breakpoints.phone]: {
     fontSize: 'calc($h6 * 0.9)',

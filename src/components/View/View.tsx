@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { ReactNode } from 'react';
 
 import { breakpoints, DefaultProps, theme } from '../../stitches.config';
@@ -22,24 +24,38 @@ export default function View(props: Props): JSX.Element {
         ...(props.top && {
           paddingTop: `$${props.top}`,
           [breakpoints.phone]: {
-            paddingTop: props.top !== ('8' || '9') ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`,
+            paddingTop:
+              props.top !== ('8' || '9')
+                ? `calc($${props.top} * 0.8)`
+                : `calc($${props.top} * 0.75)`,
           },
           [breakpoints.tabletX]: {
-            paddingTop: props.top !== ('8' || '9') ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`,
+            paddingTop:
+              props.top !== ('8' || '9')
+                ? `calc($${props.top} * 0.9)`
+                : `calc($${props.top} * 0.85)`,
           },
         }),
         ...(props.bottom && {
           paddingBottom: `$${props.bottom}`,
           [breakpoints.phone]: {
-            paddingBottom: props.bottom !== ('8' || '9') ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`,
+            paddingBottom:
+              props.bottom !== ('8' || '9')
+                ? `calc($${props.bottom} * 0.8)`
+                : `calc($${props.bottom} * 0.75)`,
           },
           [breakpoints.tabletX]: {
-            paddingBottom: props.bottom !== ('8' || '9') ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`,
+            paddingBottom:
+              props.bottom !== ('8' || '9')
+                ? `calc($${props.bottom} * 0.9)`
+                : `calc($${props.bottom} * 0.85)`,
           },
         }),
       }}
       id={props.id}>
-      <ViewContainerStyled container={props.container}>{props.children}</ViewContainerStyled>
+      <ViewContainerStyled container={props.container}>
+        {props.children}
+      </ViewContainerStyled>
     </ViewStyled>
   );
 }

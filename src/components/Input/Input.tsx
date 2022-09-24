@@ -1,3 +1,5 @@
+/** @format */
+
 import { Check, ClipboardText, Eye, EyeClosed, Warning } from 'phosphor-react';
 import React, { InputHTMLAttributes, useState } from 'react';
 
@@ -6,7 +8,13 @@ import { Badge } from '../Badge';
 import { Button } from '../Button';
 import { Loading } from '../Loading';
 
-import { InputAreaStyled, InputCallbackStyled, InputFunctionStyled, InputStyled, InputCoreStyled } from './Input.styles';
+import {
+  InputAreaStyled,
+  InputCallbackStyled,
+  InputFunctionStyled,
+  InputStyled,
+  InputCoreStyled,
+} from './Input.styles';
 
 export interface Props extends InputHTMLAttributes<HTMLInputElement>, DefaultProps {
   copy?: boolean;
@@ -61,7 +69,17 @@ export default function Input(props: Props): JSX.Element {
         width: props.maxWidth || '80%',
       }}
       id={props.id}>
-      <InputCoreStyled disabled={props.disabled} state={props.success ? 'success' : props.warning ? 'warning' : props.error ? 'error' : 'default'}>
+      <InputCoreStyled
+        disabled={props.disabled}
+        state={
+          props.success
+            ? 'success'
+            : props.warning
+            ? 'warning'
+            : props.error
+            ? 'error'
+            : 'default'
+        }>
         <InputAreaStyled
           css={props.css}
           disabled={props.disabled}
@@ -80,7 +98,13 @@ export default function Input(props: Props): JSX.Element {
                 css={{
                   marginLeft: '$2',
                 }}
-                icon={isCopied ? <ClipboardText opacity={0.4} weight='duotone' /> : <ClipboardText weight='duotone' />}
+                icon={
+                  isCopied ? (
+                    <ClipboardText opacity={0.4} weight='duotone' />
+                  ) : (
+                    <ClipboardText weight='duotone' />
+                  )
+                }
                 name='copy'
                 onClick={handleCopy}
                 small>
@@ -93,7 +117,9 @@ export default function Input(props: Props): JSX.Element {
                 css={{
                   marginLeft: '$2',
                 }}
-                icon={!isRevealed ? <Eye weight='duotone' /> : <EyeClosed weight='duotone' />}
+                icon={
+                  !isRevealed ? <Eye weight='duotone' /> : <EyeClosed weight='duotone' />
+                }
                 name='reveal'
                 onClick={handleReveal}
                 small>
@@ -119,17 +145,26 @@ export default function Input(props: Props): JSX.Element {
       </InputCoreStyled>
       <InputCallbackStyled>
         {props.error && !props.success && !props.warning && (
-          <Badge css={{ backgroundColor: 'transparent', padding: 0 }} icon={<Warning weight='duotone' />} theme='red'>
+          <Badge
+            css={{ backgroundColor: 'transparent', padding: 0 }}
+            icon={<Warning weight='duotone' />}
+            theme='red'>
             {props.errorMessage || 'Error'}
           </Badge>
         )}
         {props.success && !props.error && !props.warning && (
-          <Badge css={{ backgroundColor: 'transparent', padding: 0 }} icon={<Check weight='duotone' />} theme='green'>
+          <Badge
+            css={{ backgroundColor: 'transparent', padding: 0 }}
+            icon={<Check weight='duotone' />}
+            theme='green'>
             {props.successMessage || 'Success'}
           </Badge>
         )}
         {props.warning && !props.success && !props.error && (
-          <Badge css={{ backgroundColor: 'transparent', padding: 0 }} icon={<Warning weight='duotone' />} theme='orange'>
+          <Badge
+            css={{ backgroundColor: 'transparent', padding: 0 }}
+            icon={<Warning weight='duotone' />}
+            theme='orange'>
             {props.warningMessage || 'Invalid'}
           </Badge>
         )}

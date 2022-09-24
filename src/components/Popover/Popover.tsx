@@ -1,9 +1,15 @@
+/** @format */
+
 import React, { ReactNode, useRef, useState } from 'react';
 import { useOnClickOutside } from 'usehooks-ts';
 
 import { DefaultProps } from '../../stitches.config';
 
-import { PopoverContentStyled, PopoverStyled, PopoverTriggerStyled } from './Popover.styles';
+import {
+  PopoverContentStyled,
+  PopoverStyled,
+  PopoverTriggerStyled,
+} from './Popover.styles';
 
 export interface Props extends DefaultProps {
   children: ReactNode;
@@ -62,7 +68,10 @@ export default function Popover(props: Props): JSX.Element {
 
   return (
     <PopoverStyled id={props.id}>
-      <PopoverTriggerStyled onClickCapture={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <PopoverTriggerStyled
+        onClickCapture={handleClick}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}>
         {props.trigger}
       </PopoverTriggerStyled>
       {isMounted && (

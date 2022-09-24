@@ -1,3 +1,5 @@
+/** @format */
+
 import React from 'react';
 
 import { DefaultProps } from '../../stitches.config';
@@ -22,7 +24,13 @@ export default function Avatar(props: Props): JSX.Element {
       id={props.id}>
       {props.image ? (
         <AvatarImageStyled>
-          <Image alt={props.fallback} layout='fill' objectFit='cover' objectPosition='center center' src={props.image} />
+          <Image
+            alt={props.fallback}
+            layout='fill'
+            objectFit='cover'
+            objectPosition='center center'
+            src={props.image}
+          />
         </AvatarImageStyled>
       ) : (
         <AvatarFallbackStyled>{props.fallback}</AvatarFallbackStyled>

@@ -1,3 +1,5 @@
+/** @format */
+
 import { IconContext } from 'phosphor-react';
 import React, { ReactNode } from 'react';
 import { useDarkMode } from 'usehooks-ts';
@@ -27,7 +29,7 @@ export default function Provider(props: Props): JSX.Element {
 
   return (
     <ProviderStyled className={active} css={props.css}>
-      <IconContext.Provider value={{ weight: 'duotone', mirrored: false }}>
+      <IconContext.Provider value={{ mirrored: false, weight: 'duotone' }}>
         <Toast />
         {props.children}
       </IconContext.Provider>

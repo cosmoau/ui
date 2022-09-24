@@ -1,7 +1,7 @@
 {
   "name": "@withcosmo/design-system",
   "description": "✏️ A modular, flexible library of components and design patterns used to enforce consistency across all internal and subsidiary projects.",
-  "version": "2.2.7",
+  "version": "2.2.8",
   "author": "Jackson Dolman <mail@planare.dev>",
   "browserslist": {
     "production": [
@@ -18,7 +18,7 @@
   "bugs": "https://github.com/withcosmo/design-system/issues",
   "dependencies": {
     "@stitches/react": "^1.2.8",
-    "@types/node": "^18.7.18",
+    "@types/node": "^18.7.20",
     "@types/react": "^18.0.21",
     "next": "^12.3.1",
     "phosphor-react": "^1.4.1",
@@ -30,8 +30,8 @@
   },
   "devDependencies": {
     "@stitches/react": "^1.2.8",
-    "eslint": "^8.23.1",
-    "eslint-config-dolmios": "^1.0.5",
+    "eslint": "^8.24.0",
+    "eslint-config-dolmios": "^1.1.0",
     "eslint-config-next": "^12.3.1",
     "microbundle": "^0.15.1",
     "parcel": "^2.7.0",
@@ -65,7 +65,7 @@
   "module": "dist/index.modern.module.js",
   "packageManager": "yarn@3.2.3",
   "peerDependencies": {
-    "next": "^12.3.0",
+    "next": "^12.3.1",
     "phosphor-react": "^1.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -74,10 +74,10 @@
   "prettier": "eslint-config-dolmios/.prettierrc.json",
   "repository": "git://github.com/withcosmo/design-system.git",
   "scripts": {
-    "build": "yarn lint && microbundle --jsx React.createElement --compress --format esm,cjs,modern",
+    "build": "yarn lint && microbundle --jsx React.createElement --format esm,cjs,modern",
     "lint": "eslint src --ext js,jsx,ts,tsx",
     "playground": "parcel playground/index.html --dist-dir playground/dist --open",
-    "prettier": "prettier --check '**/*.{js,jsx,ts,tsx}'"
+    "prettier": "prettier --check --write src"
   },
   "source": "src/index.ts",
   "types": "dist/index.d.ts"

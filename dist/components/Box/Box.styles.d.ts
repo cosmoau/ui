@@ -1,3 +1,4 @@
+/** @format */
 export declare const paddingVariants: {
     padding: {
         default: {
@@ -118,19 +119,9 @@ export declare const BoxStyled: import("@stitches/react/types/styled-component")
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
-    };
-    lineHeights: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-        p: string;
-        small: string;
     };
     media: {
         desktop: string;
@@ -281,19 +272,9 @@ export declare const BoxImageChildrenStyled: import("@stitches/react/types/style
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
-    };
-    lineHeights: {
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
-        p: string;
-        small: string;
     };
     media: {
         desktop: string;

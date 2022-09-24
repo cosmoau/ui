@@ -1,3 +1,5 @@
+/** @format */
+
 import { globalCss, lightTheme, styled, theme } from '../../stitches.config';
 
 export const ProviderStyled = styled('div', {
@@ -11,9 +13,9 @@ export const ProviderTriggerStyled = styled('div', {
   '*': {
     cursor: 'pointer',
   },
-  display: 'inline-flex',
-  position: 'relative',
-  verticalAlign: 'middle',
+  'display': 'inline-flex',
+  'position': 'relative',
+  'verticalAlign': 'middle',
 });
 
 export const reset = globalCss({
@@ -40,12 +42,13 @@ export const reset = globalCss({
   '*:before': {
     boxSizing: 'inherit',
   },
-  '@import': 'url("https://xxxjddzdqkdtyqtywwfi.supabase.co/storage/v1/object/public/public/webfonts.css")',
-  a: {
+  '@import':
+    'url("https://xxxjddzdqkdtyqtywwfi.supabase.co/storage/v1/object/public/public/webfonts.css")',
+  'a': {
     color: 'inherit',
     textDecoration: 'none',
   },
-  body: {
+  'body': {
     backgroundColor: 'inherit',
     border: 0,
     color: '$text',
@@ -65,7 +68,7 @@ export const reset = globalCss({
       color: '$text',
     },
   },
-  button: {
+  'button': {
     '&::-moz-focus-inner': {
       border: 0,
       outline: 0,
@@ -78,35 +81,30 @@ export const reset = globalCss({
     '&:focus': {
       outline: 0,
     },
-    MozOsxFontSmoothing: 'grayscale',
-    WebkitAppearance: 'none',
-    WebkitFontSmoothing: 'antialiased',
-    appearance: 'none',
-    backgroundColor: 'transparent',
-    border: 0,
-    cursor: 'pointer',
-    font: '$default',
-    fontFamily: 'inherit',
-    margin: 0,
-    outline: 'none',
-    overflow: 'visible',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
-    width: 'auto',
+    'MozOsxFontSmoothing': 'grayscale',
+    'WebkitAppearance': 'none',
+    'WebkitFontSmoothing': 'antialiased',
+    'appearance': 'none',
+    'backgroundColor': 'transparent',
+    'border': 0,
+    'cursor': 'pointer',
+    'font': '$default',
+    'fontFamily': 'inherit',
+    'margin': 0,
+    'outline': 'none',
+    'overflow': 'visible',
+    'textOverflow': 'ellipsis',
+    'whiteSpace': 'nowrap',
+    'width': 'auto',
   },
-  html: {
+  'html': {
     MozOsxFontSmoothing: 'grayscale',
     WebkitFontSmoothing: 'antialiased',
     fontSize: '62.5%',
-    height: '100%',
-    lineHeight: 1.5,
-    overflowX: 'hidden',
-    overflowY: 'auto',
-    WebkitTextSizeAdjust: '100%',
-    boxSizing: 'border-box',
+    lineHeight: '1.5',
     textRendering: 'optimizeLegibility',
   },
-  svg: {
+  'svg': {
     verticalAlign: 'middle',
   },
 });

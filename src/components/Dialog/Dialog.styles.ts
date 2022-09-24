@@ -1,3 +1,5 @@
+/** @format */
+
 import { breakpoints, fadeIn, fadeOut, styled } from '../../stitches.config';
 
 export const DialogStyled = styled('div', {
@@ -10,9 +12,9 @@ export const DialogTriggerStyled = styled('div', {
   '*': {
     cursor: 'pointer',
   },
-  display: 'inline-flex',
-  position: 'relative',
-  verticalAlign: 'middle',
+  'display': 'inline-flex',
+  'position': 'relative',
+  'verticalAlign': 'middle',
 });
 
 export const DialogOverlayStyled = styled('div', {
@@ -79,13 +81,13 @@ export const DialogExitStyled = styled('div', {
   '&:hover': {
     opacity: 1,
   },
-  cursor: 'pointer',
-  opacity: 0.7,
-  padding: '1rem',
-  position: 'absolute',
-  right: 0,
-  top: 0,
-  transition: '$default',
+  'cursor': 'pointer',
+  'opacity': 0.7,
+  'padding': '1rem',
+  'position': 'absolute',
+  'right': 0,
+  'top': 0,
+  'transition': '$default',
 });
 
 export default DialogStyled;

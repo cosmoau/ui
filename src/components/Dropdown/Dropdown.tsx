@@ -1,10 +1,17 @@
+/** @format */
+
 import { useRouter } from 'next/router';
 import React, { ReactNode, useRef, useState } from 'react';
 import { useEventListener, useLockedBody, useOnClickOutside } from 'usehooks-ts';
 
 import { DefaultProps } from '../../stitches.config';
 
-import { DropdownStyled, DropdownTriggerStyled, DropdownGroupStyled, DropdownItemStyled } from './Dropdown.styles';
+import {
+  DropdownStyled,
+  DropdownTriggerStyled,
+  DropdownGroupStyled,
+  DropdownItemStyled,
+} from './Dropdown.styles';
 
 export interface Props extends DefaultProps {
   options: Array<{
@@ -77,7 +84,9 @@ export default function Dropdown(props: Props): JSX.Element {
 
   return (
     <DropdownStyled css={props.css} id={props.id}>
-      <DropdownTriggerStyled key={props.active || Math.random()} onClickCapture={handleClick}>
+      <DropdownTriggerStyled
+        key={props.active || Math.random()}
+        onClickCapture={handleClick}>
         {props.trigger}
       </DropdownTriggerStyled>
       {isMounted && (
@@ -85,8 +94,8 @@ export default function Dropdown(props: Props): JSX.Element {
           animation={isOpen}
           css={{
             left: props.align === 'left' ? '0' : 'auto',
-            maxWidth: props.width + ' !important' || '25rem',
-            minWidth: props.width + ' !important' || '15rem',
+            maxWidth: props.width + ' !important' || '30rem !important',
+            minWidth: props.width + ' !important' || '20rem !important',
             right: props.align === 'right' ? '0' : 'auto',
           }}
           ref={ref}>

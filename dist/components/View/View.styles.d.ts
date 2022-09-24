@@ -1,3 +1,4 @@
+/** @format */
 export declare const ViewStyled: import("@stitches/react/types/styled-component").StyledComponent<"div", {}, {}, import("@stitches/react/types/css-util").CSS<{}, {
     colors: {
         accent: string;
@@ -48,8 +49,8 @@ export declare const ViewStyled: import("@stitches/react/types/styled-component"
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
     };
     media: {
@@ -209,8 +210,8 @@ export declare const ViewContainerStyled: import("@stitches/react/types/styled-c
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
     };
     media: {

@@ -1,7 +1,8 @@
+/** @format */
 import { HTMLAttributes, ReactNode } from 'react';
 import { DefaultProps } from '../../stitches.config';
 export interface Props extends HTMLAttributes<HTMLButtonElement>, Omit<DefaultProps, 'spacing'> {
-    children: ReactNode;
+    children: ReactNode | string;
     loading?: boolean;
     disabled?: boolean;
     theme?: 'default' | 'fill' | 'minimal' | 'solid';
@@ -10,7 +11,7 @@ export interface Props extends HTMLAttributes<HTMLButtonElement>, Omit<DefaultPr
     iconPosition?: 'left' | 'right';
     inline?: DefaultProps['spacing'] | 'auto';
     small?: boolean;
-    ariaLabel: string;
+    ariaLabel?: string;
     name?: string;
 }
 export default function Button(props: Props): JSX.Element;

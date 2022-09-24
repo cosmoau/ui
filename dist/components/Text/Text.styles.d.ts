@@ -1,3 +1,4 @@
+/** @format */
 export declare const TextStyled: import("@stitches/react/types/styled-component").StyledComponent<"div", import("@stitches/react/types/styled-component").StyledComponentProps<[{
     '&:last-child': {
         marginBottom: string;
@@ -28,9 +29,9 @@ export declare const TextStyled: import("@stitches/react/types/styled-component"
                 '&:not(:last-child)': {
                     marginBottom: string;
                 };
+                fontFamily: string;
                 fontSize: string;
                 fontWeight: string;
-                fontFamily: string;
             };
             h2: {
                 [x: string]: string | {
@@ -43,9 +44,9 @@ export declare const TextStyled: import("@stitches/react/types/styled-component"
                 '&:not(:last-child)': {
                     marginBottom: string;
                 };
+                fontFamily: string;
                 fontSize: string;
                 fontWeight: string;
-                fontFamily: string;
             };
             h3: {
                 [x: string]: string | {
@@ -58,9 +59,9 @@ export declare const TextStyled: import("@stitches/react/types/styled-component"
                 '&:not(:last-child)': {
                     marginBottom: string;
                 };
+                fontFamily: string;
                 fontSize: string;
                 fontWeight: string;
-                fontFamily: string;
             };
             h4: {
                 [x: string]: string | {
@@ -89,6 +90,7 @@ export declare const TextStyled: import("@stitches/react/types/styled-component"
                 };
                 fontSize: string;
                 fontWeight: string;
+                lineHeight: string;
             };
             h6: {
                 [x: string]: string | {
@@ -104,6 +106,7 @@ export declare const TextStyled: import("@stitches/react/types/styled-component"
                 color: string;
                 fontSize: string;
                 fontWeight: string;
+                lineHeight: string;
             };
             p: {
                 [x: string]: string | {
@@ -189,8 +192,8 @@ export declare const TextStyled: import("@stitches/react/types/styled-component"
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
     };
     media: {

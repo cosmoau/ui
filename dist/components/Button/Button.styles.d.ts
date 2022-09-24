@@ -1,3 +1,4 @@
+/** @format */
 export declare const ButtonStyled: import("@stitches/react/types/styled-component").StyledComponent<"button", import("@stitches/react/types/styled-component").StyledComponentProps<[{
     [x: string]: string | {
         cursor: string;
@@ -8,9 +9,8 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         color?: undefined;
         display?: undefined;
         fontSize?: undefined;
-        alignSelf?: undefined;
         height?: undefined;
-        verticalAlign?: undefined;
+        marginTop?: undefined;
         width?: undefined;
         block?: undefined;
         small?: undefined;
@@ -24,9 +24,8 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         opacity?: undefined;
         display?: undefined;
         fontSize?: undefined;
-        alignSelf?: undefined;
         height?: undefined;
-        verticalAlign?: undefined;
+        marginTop?: undefined;
         width?: undefined;
         block?: undefined;
         small?: undefined;
@@ -40,9 +39,8 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         boxShadow?: undefined;
         color?: undefined;
         fontSize?: undefined;
-        alignSelf?: undefined;
         height?: undefined;
-        verticalAlign?: undefined;
+        marginTop?: undefined;
         width?: undefined;
         block?: undefined;
         small?: undefined;
@@ -56,17 +54,15 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         boxShadow?: undefined;
         color?: undefined;
         display?: undefined;
-        alignSelf?: undefined;
         height?: undefined;
-        verticalAlign?: undefined;
+        marginTop?: undefined;
         width?: undefined;
         block?: undefined;
         small?: undefined;
         theme?: undefined;
     } | {
-        alignSelf: string;
         height: string;
-        verticalAlign: string;
+        marginTop: string;
         width: string;
         cursor?: undefined;
         opacity?: undefined;
@@ -95,6 +91,7 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
                 fontWeight: string;
                 svg: {
                     height: string;
+                    marginTop: string;
                     width: string;
                 };
             };
@@ -124,9 +121,8 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         color?: undefined;
         display?: undefined;
         fontSize?: undefined;
-        alignSelf?: undefined;
         height?: undefined;
-        verticalAlign?: undefined;
+        marginTop?: undefined;
         width?: undefined;
     };
     '&:disabled': {
@@ -154,9 +150,8 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
     lineHeight: string;
     padding: string;
     svg: {
-        alignSelf: string;
         height: string;
-        verticalAlign: string;
+        marginTop: string;
         width: string;
     };
     transition: string;
@@ -176,6 +171,7 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
                 fontWeight: string;
                 svg: {
                     height: string;
+                    marginTop: string;
                     width: string;
                 };
             };
@@ -249,8 +245,8 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
     };
     media: {
@@ -342,10 +338,11 @@ export declare const ButtonStyled: import("@stitches/react/types/styled-componen
     };
 }>>;
 export declare const ButtonIconStyled: import("@stitches/react/types/styled-component").StyledComponent<"span", import("@stitches/react/types/styled-component").StyledComponentProps<[{
+    alignContent: string;
+    alignItems: string;
+    alignSelf: string;
     display: string;
-    svg: {
-        marginTop: string;
-    };
+    justifyContent: string;
     variants: {
         align: {
             left: {
@@ -407,8 +404,8 @@ export declare const ButtonIconStyled: import("@stitches/react/types/styled-comp
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
     };
     media: {

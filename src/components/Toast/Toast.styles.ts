@@ -1,3 +1,5 @@
+/** @format */
+
 import { fadeIn, fadeOut, styled } from '../../stitches.config';
 
 export const ToastStyled = styled('div', {

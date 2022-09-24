@@ -1,3 +1,5 @@
+/** @format */
+
 import { breakpoints, styled } from '../../stitches.config';
 
 export const ButtonStyled = styled('button', {
@@ -11,20 +13,20 @@ export const ButtonStyled = styled('button', {
     boxShadow: '$2',
     color: '$text',
   },
-  a: {
+  'a': {
     display: 'block',
   },
-  alignContent: 'center',
-  alignItems: 'center',
-  border: '0.1rem solid $borderHover',
-  borderRadius: '$1',
-  boxShadow: '$1',
+  'alignContent': 'center',
+  'alignItems': 'center',
+  'border': '0.1rem solid $borderHover',
+  'borderRadius': '$1',
+  'boxShadow': '$1',
 
-  color: '$text',
-  display: 'inline-flex',
-  fontSize: '$h5',
-  fontWeight: '$h5',
-  lineHeight: '1.5 !important',
+  'color': '$text',
+  'display': 'inline-flex',
+  'fontSize': '$h5',
+  'fontWeight': '$h5',
+  'lineHeight': '1.3 !important',
 
   [breakpoints.phone]: {
     fontSize: 'calc($h5 * 0.9)',
@@ -33,18 +35,17 @@ export const ButtonStyled = styled('button', {
     fontSize: 'calc($h5 * 0.925)',
   },
 
-  padding: '$1 $4',
+  'padding': '$1 $4',
 
-  svg: {
-    alignSelf: 'center',
-    height: '1.7rem',
-    verticalAlign: 'middle',
-    width: '1.7rem',
+  'svg': {
+    height: '1.75rem',
+    marginTop: '-0.05rem',
+    width: '1.75rem',
   },
 
-  transition: '$default',
+  'transition': '$default',
 
-  variants: {
+  'variants': {
     block: {
       false: {
         display: 'inline',
@@ -61,6 +62,7 @@ export const ButtonStyled = styled('button', {
 
         svg: {
           height: '1.5rem',
+          marginTop: '-0.1rem',
           width: '1.5rem',
         },
       },
@@ -84,24 +86,26 @@ export const ButtonStyled = styled('button', {
     },
   },
 
-  verticalAlign: 'middle',
+  'verticalAlign': 'middle',
 });
 
 export const ButtonIconStyled = styled('span', {
-  display: 'inline',
-  svg: {
-    marginTop: '-0.6rem',
-  },
+  alignContent: 'center',
+  alignItems: 'center',
+  alignSelf: 'center',
+  display: 'inline-flex',
+  justifyContent: 'center',
   variants: {
     align: {
       left: {
-        marginRight: '$3',
+        marginRight: '$2',
       },
       right: {
-        marginLeft: '$3',
+        marginLeft: '$2',
       },
     },
   },
+
   verticalAlign: 'middle',
 });
 

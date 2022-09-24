@@ -1,3 +1,5 @@
+/** @format */
+
 import { Warning, Check, ClipboardText } from 'phosphor-react';
 import React, { TextareaHTMLAttributes, useState } from 'react';
 
@@ -55,8 +57,22 @@ export default function Field(props: Props): JSX.Element {
       }}
       disabled={props.disabled}
       id={props.id}
-      state={props.success ? 'success' : props.warning ? 'warning' : props.error ? 'error' : 'default'}>
-      {(props.error || props.success || props.warning || props.loading || props.submit || props.copy || props.reveal) && (
+      state={
+        props.success
+          ? 'success'
+          : props.warning
+          ? 'warning'
+          : props.error
+          ? 'error'
+          : 'default'
+      }>
+      {(props.error ||
+        props.success ||
+        props.warning ||
+        props.loading ||
+        props.submit ||
+        props.copy ||
+        props.reveal) && (
         <FieldFunctionStyled>
           {props.error && (
             <Badge icon={<Warning weight='duotone' />} theme='red'>
@@ -79,19 +95,41 @@ export default function Field(props: Props): JSX.Element {
             </Badge>
           )}
           {props.copy && (
-            <Button ariaLabel='Copy' icon={isCopied ? <ClipboardText opacity={0.4} weight='duotone' /> : <ClipboardText weight='duotone' />} name='copy' onClick={handleCopy}>
+            <Button
+              ariaLabel='Copy'
+              icon={
+                isCopied ? (
+                  <ClipboardText opacity={0.4} weight='duotone' />
+                ) : (
+                  <ClipboardText weight='duotone' />
+                )
+              }
+              name='copy'
+              onClick={handleCopy}>
               Copy
             </Button>
           )}
 
           {props.submit && props.submitFunction && (
-            <Button ariaLabel='Submit' disabled={!props.submitValid} name='submit' onClick={(): void => props.submitFunction(value)}>
+            <Button
+              ariaLabel='Submit'
+              disabled={!props.submitValid}
+              name='submit'
+              onClick={(): void => props.submitFunction(value)}>
               {props.submit}
             </Button>
           )}
         </FieldFunctionStyled>
       )}
-      <FieldAreaStyled cols={props.cols} css={props.css} disabled={props.disabled} onChange={handleChange} placeholder={props.placeholder} rows={props.rows} value={value} />
+      <FieldAreaStyled
+        cols={props.cols}
+        css={props.css}
+        disabled={props.disabled}
+        onChange={handleChange}
+        placeholder={props.placeholder}
+        rows={props.rows}
+        value={value}
+      />
     </FieldStyled>
   );
 }

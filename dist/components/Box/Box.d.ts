@@ -1,3 +1,4 @@
+/** @format */
 import { ReactNode } from 'react';
 import { DefaultProps } from '../../stitches.config';
 export interface Props extends DefaultProps {

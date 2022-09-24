@@ -1,3 +1,4 @@
+/** @format */
 import { TextareaHTMLAttributes } from 'react';
 import { DefaultProps } from '../../stitches.config';
 export interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement>, DefaultProps {

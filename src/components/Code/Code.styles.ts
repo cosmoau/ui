@@ -1,3 +1,5 @@
+/** @format */
+
 import { styled } from '../../stitches.config';
 
 export const CodeStyled = styled('div', {

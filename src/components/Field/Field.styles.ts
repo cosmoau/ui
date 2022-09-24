@@ -1,3 +1,5 @@
+/** @format */
+
 import { styled } from '../../stitches.config';
 
 export const FieldStyled = styled('div', {
@@ -10,15 +12,15 @@ export const FieldStyled = styled('div', {
   '*': {
     verticalAlign: 'middle',
   },
-  alignContent: 'center',
-  alignSelf: 'center',
-  borderRadius: '$1',
+  'alignContent': 'center',
+  'alignSelf': 'center',
+  'borderRadius': '$1',
 
-  justifyContent: 'center',
+  'justifyContent': 'center',
 
-  position: 'relative',
-  transition: '$default',
-  variants: {
+  'position': 'relative',
+  'transition': '$default',
+  'variants': {
     disabled: {
       true: {
         cursor: 'not-allowed',
@@ -40,7 +42,7 @@ export const FieldStyled = styled('div', {
       },
     },
   },
-  width: '100%',
+  'width': '100%',
 });
 
 export const FieldAreaStyled = styled('textarea', {
@@ -51,16 +53,16 @@ export const FieldAreaStyled = styled('textarea', {
   '&:focus': {
     outline: 'none',
   },
-  appearance: 'none',
-  backgroundColor: 'transparent',
-  border: 'none',
-  color: '$text',
-  display: 'block',
-  fontFamily: '$sans !important',
-  fontSize: '16px !important',
-  margin: '0 auto',
-  padding: '$3 $4',
-  width: '100%',
+  'appearance': 'none',
+  'backgroundColor': 'transparent',
+  'border': 'none',
+  'color': '$text',
+  'display': 'block',
+  'fontFamily': '$sans !important',
+  'fontSize': '16px !important',
+  'margin': '0 auto',
+  'padding': '$3 $4',
+  'width': '100%',
 });
 
 export const FieldFunctionStyled = styled('div', {

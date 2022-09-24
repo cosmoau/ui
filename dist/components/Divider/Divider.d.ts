@@ -1,3 +1,4 @@
+/** @format */
 /// <reference types="react" />
 import { DefaultProps } from '../../stitches.config';
 export interface Props extends Omit<DefaultProps, 'spacing'> {

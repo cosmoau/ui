@@ -1,3 +1,4 @@
+/** @format */
 /// <reference types="react" />
 import { CSS } from '@stitches/react';
 export declare const breakpoints: {
@@ -63,8 +64,8 @@ export declare const theme: string & {
         small: import("@stitches/react/types/theme").Token<"small", string, "fontWeights", "">;
     };
     fonts: {
-        sans: import("@stitches/react/types/theme").Token<"sans", string, "fonts", "">;
         default: import("@stitches/react/types/theme").Token<"default", string, "fonts", "">;
+        sans: import("@stitches/react/types/theme").Token<"sans", string, "fonts", "">;
         serif: import("@stitches/react/types/theme").Token<"serif", string, "fonts", "">;
     };
     media: {
@@ -158,8 +159,8 @@ export declare const theme: string & {
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
     };
     media: {
@@ -312,8 +313,8 @@ export declare const theme: string & {
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
     };
     media: {
@@ -464,8 +465,8 @@ export declare const theme: string & {
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
     };
     media: {
@@ -611,8 +612,8 @@ export declare const theme: string & {
             small: string;
         };
         fonts: {
-            sans: string;
             default: string;
+            sans: string;
             serif: string;
         };
         media: {
@@ -753,8 +754,8 @@ export declare const theme: string & {
         small: string;
     };
     fonts: {
-        sans: string;
         default: string;
+        sans: string;
         serif: string;
     };
     media: {
@@ -895,8 +896,8 @@ export declare const theme: string & {
             small: string;
         };
         fonts: {
-            sans: string;
             default: string;
+            sans: string;
             serif: string;
         };
         media: {

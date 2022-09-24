@@ -1,3 +1,4 @@
+/** @format */
 import { InputHTMLAttributes } from 'react';
 import { DefaultProps } from '../../stitches.config';
 export interface Props extends InputHTMLAttributes<HTMLInputElement>, DefaultProps {

@@ -1,3 +1,5 @@
+/** @format */
+
 import { createStitches, createTheme, CSS } from '@stitches/react';
 
 export const breakpoints = {
@@ -62,8 +64,8 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       small: 'normal',
     },
     fonts: {
-      sans: 'Untitled Sans, apple-system, sans-serif',
       default: '$sans',
+      sans: 'Untitled Sans, apple-system, sans-serif',
       serif: 'Tiempos Fine',
     },
     media: breakpoints,
@@ -104,12 +106,32 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     desktopX: (value: unknown) => ({
       [breakpoints.desktopX]: value,
     }),
-    hidden: (value: 'phone' | 'tablet' | 'tabletX' | 'laptop' | 'laptopX' | 'desktop' | 'desktopX' | 'wide') => ({
+    hidden: (
+      value:
+        | 'phone'
+        | 'tablet'
+        | 'tabletX'
+        | 'laptop'
+        | 'laptopX'
+        | 'desktop'
+        | 'desktopX'
+        | 'wide'
+    ) => ({
       [breakpoints[value]]: {
         display: 'none !important',
       },
     }),
-    hiddenInline: (value: 'phone' | 'tablet' | 'tabletX' | 'laptop' | 'laptopX' | 'desktop' | 'desktopX' | 'wide') => ({
+    hiddenInline: (
+      value:
+        | 'phone'
+        | 'tablet'
+        | 'tabletX'
+        | 'laptop'
+        | 'laptopX'
+        | 'desktop'
+        | 'desktopX'
+        | 'wide'
+    ) => ({
       display: 'inline-block !important',
       [breakpoints[value]]: {
         display: 'none !important',
@@ -131,13 +153,33 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     tabletX: (value: unknown) => ({
       [breakpoints.tabletX]: value,
     }),
-    visible: (value: 'phone' | 'tablet' | 'tabletX' | 'laptop' | 'laptopX' | 'desktop' | 'desktopX' | 'wide') => ({
+    visible: (
+      value:
+        | 'phone'
+        | 'tablet'
+        | 'tabletX'
+        | 'laptop'
+        | 'laptopX'
+        | 'desktop'
+        | 'desktopX'
+        | 'wide'
+    ) => ({
       display: 'none',
       [breakpoints[value]]: {
         display: 'block',
       },
     }),
-    visibleInline: (value: 'phone' | 'tablet' | 'tabletX' | 'laptop' | 'laptopX' | 'desktop' | 'desktopX' | 'wide') => ({
+    visibleInline: (
+      value:
+        | 'phone'
+        | 'tablet'
+        | 'tabletX'
+        | 'laptop'
+        | 'laptopX'
+        | 'desktop'
+        | 'desktopX'
+        | 'wide'
+    ) => ({
       display: 'none',
       [breakpoints[value]]: {
         display: 'inline-block',
