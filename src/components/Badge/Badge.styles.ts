@@ -23,10 +23,15 @@ export const BadgeStyled = styled('div', {
   display: 'inline-flex',
   fontSize: '$h5',
   fontWeight: '$h5',
-
   justifyContent: 'center',
-
   lineHeight: 'normal !important',
+
+  [breakpoints.phone]: {
+    fontSize: 'calc($h5 * 0.925)',
+  },
+  [breakpoints.tabletX]: {
+    fontSize: 'calc($h5 * 0.95)',
+  },
   padding: '$1 $4',
   svg: {
     alignSelf: 'center',

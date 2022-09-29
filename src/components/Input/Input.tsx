@@ -31,7 +31,8 @@ export interface Props extends InputHTMLAttributes<HTMLInputElement>, DefaultPro
   warning?: boolean;
   warningMessage?: string;
   disabled?: boolean;
-  maxWidth?: string;
+  width?: number | string;
+
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   mustRef?: any;
 }
@@ -65,8 +66,8 @@ export default function Input(props: Props): JSX.Element {
   return (
     <InputStyled
       css={{
-        maxWidth: props.maxWidth || '80%',
-        width: props.maxWidth || '80%',
+        maxWidth: props.width || '100%',
+        width: props.width || '100%',
       }}
       id={props.id}>
       <InputCoreStyled

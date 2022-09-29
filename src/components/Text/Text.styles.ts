@@ -30,7 +30,7 @@ export const TextStyled = styled('div', {
         'fontWeight': '$h1',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h1 * 0.95)',
+          fontSize: 'calc($h1 * 0.925)',
         },
         [breakpoints.tabletX]: {
           fontSize: 'calc($h1 * 0.95)',
@@ -46,7 +46,7 @@ export const TextStyled = styled('div', {
         'fontWeight': '$h2',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h2 * 0.95)',
+          fontSize: 'calc($h2 * 0.925)',
         },
         [breakpoints.tabletX]: {
           fontSize: 'calc($h2 * 0.95)',
@@ -62,7 +62,7 @@ export const TextStyled = styled('div', {
         'fontWeight': '$h3',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h3 * 0.95)',
+          fontSize: 'calc($h3 * 0.925)',
         },
         [breakpoints.tabletX]: {
           fontSize: 'calc($h3 * 0.95)',
@@ -76,7 +76,7 @@ export const TextStyled = styled('div', {
         'fontWeight': '$h4',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h4 * 0.95)',
+          fontSize: 'calc($h4 * 0.925)',
         },
         [breakpoints.tabletX]: {
           fontSize: 'calc($h4 * 0.95)',
@@ -91,7 +91,7 @@ export const TextStyled = styled('div', {
         'lineHeight': '1.420 !important',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h5 * 0.95)',
+          fontSize: 'calc($h5 * 0.925)',
         },
         [breakpoints.tabletX]: {
           fontSize: 'calc($h5 * 0.95)',
@@ -107,7 +107,7 @@ export const TextStyled = styled('div', {
         'lineHeight': '1.35 !important',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h6 * 0.95)',
+          fontSize: 'calc($h6 * 0.925)',
         },
         [breakpoints.tabletX]: {
           fontSize: 'calc($h6 * 0.95)',
@@ -121,7 +121,7 @@ export const TextStyled = styled('div', {
         'fontWeight': '$p',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($p * 0.95)',
+          fontSize: 'calc($p * 0.925)',
         },
         [breakpoints.tabletX]: {
           fontSize: 'calc($p * 0.95)',
@@ -135,7 +135,7 @@ export const TextStyled = styled('div', {
         'fontWeight': '$small',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($small * 0.95)',
+          fontSize: 'calc($small * 0.925)',
         },
         [breakpoints.tabletX]: {
           fontSize: 'calc($small * 0.95)',

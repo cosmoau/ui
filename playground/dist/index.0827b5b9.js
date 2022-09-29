@@ -27082,7 +27082,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "App", ()=>App);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _phosphorReact = require("phosphor-react");
+/** @format */ var _phosphorReact = require("phosphor-react");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _index = require("../src/index");
@@ -27105,7 +27105,7 @@ function App() {
                                     top: "6"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 13,
+                                    lineNumber: 28,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27113,7 +27113,7 @@ function App() {
                                     children: "Airbnb, Stayz, Booking.com and Homes & Villas Management"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 14,
+                                    lineNumber: 29,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27121,7 +27121,7 @@ function App() {
                                     children: "Make your short-term rental listings work for you, without the hassle"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 15,
+                                    lineNumber: 32,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27129,7 +27129,7 @@ function App() {
                                     children: "Make your short-term rental listings work for you, without the hassle"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 16,
+                                    lineNumber: 35,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27137,7 +27137,7 @@ function App() {
                                     children: "Make your short-term rental listings work for you, without the hassle"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 17,
+                                    lineNumber: 38,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27145,7 +27145,7 @@ function App() {
                                     children: "Make your short-term rental listings work for you, without the hassle"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 18,
+                                    lineNumber: 41,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27153,7 +27153,7 @@ function App() {
                                     children: "Make your short-term rental listings work for you, without the hassle"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 19,
+                                    lineNumber: 44,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27161,7 +27161,7 @@ function App() {
                                     children: "Make your short-term rental listings work for you, without the hassle"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 20,
+                                    lineNumber: 47,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27169,7 +27169,7 @@ function App() {
                                     children: "Make your short-term rental listings work for you, without the hassle"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 21,
+                                    lineNumber: 50,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.ProviderToggle), {
@@ -27179,80 +27179,84 @@ function App() {
                                     }, void 0, false, void 0, void 0)
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 22,
+                                    lineNumber: 53,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
                                     align: "center",
                                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {}, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 24,
+                                        lineNumber: 55,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 23,
+                                    lineNumber: 54,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
-                            fileName: "playground/App.tsx",
-                            lineNumber: 12,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
-                            ariaLabel: "button",
-                            icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
-                            iconPosition: "right",
-                            children: "Button"
-                        }, void 0, false, {
                             fileName: "playground/App.tsx",
                             lineNumber: 27,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
-                            small: true,
                             ariaLabel: "button",
                             icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
                             iconPosition: "right",
                             children: "Button"
                         }, void 0, false, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 30,
+                            lineNumber: 58,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
-                            block: true,
                             ariaLabel: "button",
+                            icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
+                            iconPosition: "right",
+                            small: true,
+                            children: "Button"
+                        }, void 0, false, {
+                            fileName: "playground/App.tsx",
+                            lineNumber: 61,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Dropdown), {
+                            trigger: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
+                                ariaLabel: "button",
+                                icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
+                                children: "Dropdown Test"
+                            }, void 0, false, void 0, void 0),
+                            filter: true,
+                            options: [
+                                {
+                                    label: "Option 1",
+                                    value: "option-1"
+                                },
+                                {
+                                    label: "Option 2",
+                                    value: "option-2"
+                                },
+                                {
+                                    label: "Option 3",
+                                    value: "option-3"
+                                }, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "playground/App.tsx",
+                            lineNumber: 65,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
+                            theme: "fill",
+                            ariaLabel: "button",
+                            block: true,
                             icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
                             iconPosition: "right",
                             children: "Button"
                         }, void 0, false, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 33,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
-                            flexduo: true,
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
-                                    children: "Test 1"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 37,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
-                                    children: "Test 2"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 38,
-                                    columnNumber: 15
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "playground/App.tsx",
-                            lineNumber: 36,
+                            lineNumber: 79,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27260,7 +27264,7 @@ function App() {
                             children: "Make your short-term rental listings work for you, without the hassle"
                         }, void 0, false, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 40,
+                            lineNumber: 87,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Table), {
@@ -27268,7 +27272,7 @@ function App() {
                                 [
                                     "John DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn Doe",
                                     "32",
-                                    "United States"
+                                    "United States", 
                                 ],
                                 [
                                     "Jane Doe",
@@ -27318,28 +27322,28 @@ function App() {
                             ]
                         }, void 0, false, {
                             fileName: "playground/App.tsx",
-                            lineNumber: 41,
+                            lineNumber: 90,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "playground/App.tsx",
-                    lineNumber: 11,
+                    lineNumber: 26,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "playground/App.tsx",
-                lineNumber: 10,
+                lineNumber: 25,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "playground/App.tsx",
-            lineNumber: 9,
+            lineNumber: 24,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "playground/App.tsx",
-        lineNumber: 8,
+        lineNumber: 23,
         columnNumber: 5
     }, this);
 }
@@ -27362,7 +27366,7 @@ parcelHelpers.export(exports, "lightTheme", ()=>(0, _stitchesConfig.lightTheme))
 parcelHelpers.export(exports, "styled", ()=>(0, _stitchesConfig.styled));
 parcelHelpers.export(exports, "theme", ()=>(0, _stitchesConfig.theme));
 parcelHelpers.export(exports, "keyframes", ()=>(0, _stitchesConfig.keyframes));
-var _index = require("./components/Avatar/index");
+/** @format */ var _index = require("./components/Avatar/index");
 parcelHelpers.exportAll(_index, exports);
 var _index1 = require("./components/Badge/index");
 parcelHelpers.exportAll(_index1, exports);
@@ -27405,7 +27409,7 @@ var _stitchesConfig = require("./stitches.config");
 },{"./components/Avatar/index":"iC4G6","./components/Badge/index":"egHOx","./components/Box/index":"8AYsO","./components/Button/index":"i3jlU","./components/Dialog/index":"7DV0X","./components/Divider/index":"4ujjS","./components/Dropdown/index":"9yvFB","./components/Image/index":"ikXqf","./components/Input/index":"iclCk","./components/Loading/index":"gWqOi","./components/Popover/index":"ayKiy","./components/Provider/index":"gZ9Mc","./components/Stack/index":"6V7Vx","./components/Table/index":"kTnYg","./components/Text/index":"d5OVu","./components/Toast/index":"64Cun","./components/View/index":"fyNq0","./components/Code/index":"99Ces","./components/Field/index":"gaJxM","./stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iC4G6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Avatar", ()=>(0, _avatarDefault.default));
+/** @format */ parcelHelpers.export(exports, "Avatar", ()=>(0, _avatarDefault.default));
 var _avatar = require("./Avatar");
 var _avatarDefault = parcelHelpers.interopDefault(_avatar);
 
@@ -27419,7 +27423,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
+/** @format */ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _image = require("../Image");
 var _avatarStyles = require("./Avatar.styles");
@@ -27440,23 +27444,23 @@ function Avatar(props) {
                 src: props.image
             }, void 0, false, {
                 fileName: "src/components/Avatar/Avatar.tsx",
-                lineNumber: 25,
+                lineNumber: 27,
                 columnNumber: 11
             }, this)
         }, void 0, false, {
             fileName: "src/components/Avatar/Avatar.tsx",
-            lineNumber: 24,
+            lineNumber: 26,
             columnNumber: 9
         }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _avatarStyles.AvatarFallbackStyled), {
             children: props.fallback
         }, void 0, false, {
             fileName: "src/components/Avatar/Avatar.tsx",
-            lineNumber: 28,
+            lineNumber: 36,
             columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "src/components/Avatar/Avatar.tsx",
-        lineNumber: 16,
+        lineNumber: 18,
         columnNumber: 5
     }, this);
 }
@@ -27473,7 +27477,7 @@ $RefreshReg$(_c, "Avatar");
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../Image":"ikXqf","./Avatar.styles":"jdqmG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ikXqf":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-// export default as Image, but also alias ThreesImage
+/** @format */ // export default as Image, but also alias ThreesImage
 parcelHelpers.export(exports, "Image", ()=>(0, _imageDefault.default));
 parcelHelpers.export(exports, "ThreesImage", ()=>(0, _image.ThreesImage));
 var _image = require("./Image");
@@ -27490,7 +27494,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ThreesImage", ()=>ThreesImage);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _image = require("next/image");
+/** @format */ var _image = require("next/image");
 var _imageDefault = parcelHelpers.interopDefault(_image);
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
@@ -27508,12 +27512,12 @@ function Image(props) {
             ...rest
         }, void 0, false, {
             fileName: "src/components/Image/Image.tsx",
-            lineNumber: 25,
+            lineNumber: 27,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/components/Image/Image.tsx",
-        lineNumber: 18,
+        lineNumber: 20,
         columnNumber: 5
     }, this);
 }
@@ -28955,8 +28959,8 @@ function hasMatch(domains, remotePatterns, url) {
 }
 
 },{"next/dist/compiled/micromatch":"7gTyg"}],"7gTyg":[function(require,module,exports) {
-var process = require("process");
 var __dirname = "node_modules/next/dist/compiled/micromatch";
+var process = require("process");
 (()=>{
     "use strict";
     var e = {
@@ -33519,7 +33523,7 @@ module.exports = function inherits(ctor, superCtor) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ImageStyled", ()=>ImageStyled);
-var _stitchesConfig = require("../../stitches.config");
+/** @format */ var _stitchesConfig = require("../../stitches.config");
 const ImageStyled = (0, _stitchesConfig.styled)("div", {
     height: "100%",
     position: "relative",
@@ -33575,7 +33579,7 @@ parcelHelpers.export(exports, "keyframes", ()=>keyframes);
 parcelHelpers.export(exports, "lightTheme", ()=>lightTheme);
 parcelHelpers.export(exports, "fadeIn", ()=>fadeIn);
 parcelHelpers.export(exports, "fadeOut", ()=>fadeOut);
-var _react = require("@stitches/react");
+/** @format */ var _react = require("@stitches/react");
 const breakpoints = {
     desktop: "@media only screen and (max-width: 1980px)",
     desktopX: "@media only screen and (min-width: 1541px) and (max-width: 1980px)",
@@ -33589,15 +33593,15 @@ const breakpoints = {
 const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _react.createStitches)({
     theme: {
         colors: {
-            accent: "rgba(246, 250, 253, 0.7)",
-            background: "rgb(16, 21, 33)",
+            accent: "#a2aac2",
+            background: "rgb(18, 24, 38)",
             blueBorder: "rgba(115, 172, 255, 0.4)",
             blueOverlay: "rgba(151, 193, 255, 0.2)",
             blueText: "rgb(166, 179, 255)",
-            border: "rgba(253, 250, 246, 0.1)",
-            borderHover: "rgba(253, 250, 246, 0.05)",
-            default: "rgba(253, 250, 246, 0.04)",
-            defaultHover: "rgba(253, 250, 246, 0.08)",
+            border: "rgba(253, 250, 246, 0.15)",
+            borderHover: "rgba(253, 250, 246, 0.1)",
+            default: "rgba(253, 250, 246, 0.06)",
+            defaultHover: "rgba(253, 250, 246, 0.09)",
             greenBorder: "rgba(0, 200, 83, 0.4)",
             greenOverlay: "rgba(101, 227, 124, 0.2)",
             greenText: "rgb(124, 241, 151)",
@@ -33617,9 +33621,9 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             text: "rgb(253, 250, 246)"
         },
         fontSizes: {
-            h1: "3.5rem",
+            h1: "3.6rem",
             h2: "3rem",
-            h3: "2.5rem",
+            h3: "2.6rem",
             h4: "1.8rem",
             h5: "1.6rem",
             h6: "1.5rem",
@@ -33637,8 +33641,8 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             small: "normal"
         },
         fonts: {
-            sans: "Untitled Sans, apple-system, sans-serif",
             default: "$sans",
+            sans: "Untitled Sans, apple-system, sans-serif",
             serif: "Tiempos Fine"
         },
         media: breakpoints,
@@ -33657,10 +33661,10 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             2: "0.5rem",
             3: "0.75rem",
             4: "1rem",
-            5: "2rem",
-            6: "4rem",
-            7: "8rem",
-            8: "10rem"
+            5: "2.5rem",
+            6: "5rem",
+            7: "7.5rem",
+            8: "9rem"
         },
         transitions: {
             default: "all 0.13s ease-in-out"
@@ -34780,7 +34784,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "AvatarStyled", ()=>AvatarStyled);
 parcelHelpers.export(exports, "AvatarImageStyled", ()=>AvatarImageStyled);
 parcelHelpers.export(exports, "AvatarFallbackStyled", ()=>AvatarFallbackStyled);
-var _stitchesConfig = require("../../stitches.config");
+/** @format */ var _stitchesConfig = require("../../stitches.config");
 const AvatarStyled = (0, _stitchesConfig.styled)("div", {
     alignItems: "center",
     borderRadius: "100%",
@@ -34811,7 +34815,7 @@ exports.default = AvatarStyled;
 },{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"egHOx":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Badge", ()=>(0, _badgeDefault.default));
+/** @format */ parcelHelpers.export(exports, "Badge", ()=>(0, _badgeDefault.default));
 var _badge = require("./Badge");
 var _badgeDefault = parcelHelpers.interopDefault(_badge);
 
@@ -34825,7 +34829,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _phosphorReact = require("phosphor-react");
+/** @format */ var _phosphorReact = require("phosphor-react");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _stitchesConfig = require("../../stitches.config");
@@ -34854,8 +34858,8 @@ function Badge(props) {
                 children: props.icon
             }, void 0, false, {
                 fileName: "src/components/Badge/Badge.tsx",
-                lineNumber: 40,
-                columnNumber: 80
+                lineNumber: 52,
+                columnNumber: 9
             }, this),
             props.dot && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badgeStyles.BadgeDotStyled), {
                 dotColor: props.dotColor || "default",
@@ -34864,17 +34868,17 @@ function Badge(props) {
                     weight: "fill"
                 }, void 0, false, {
                     fileName: "src/components/Badge/Badge.tsx",
-                    lineNumber: 43,
+                    lineNumber: 58,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/Badge/Badge.tsx",
-                lineNumber: 42,
+                lineNumber: 55,
                 columnNumber: 9
             }, this),
             props.loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loading.Loading), {}, void 0, false, {
                 fileName: "src/components/Badge/Badge.tsx",
-                lineNumber: 46,
+                lineNumber: 61,
                 columnNumber: 24
             }, this) : props.children,
             props.icon && props.iconPosition === "right" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badgeStyles.BadgeIconStyled), {
@@ -34882,13 +34886,13 @@ function Badge(props) {
                 children: props.icon
             }, void 0, false, {
                 fileName: "src/components/Badge/Badge.tsx",
-                lineNumber: 47,
-                columnNumber: 56
+                lineNumber: 63,
+                columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Badge/Badge.tsx",
-        lineNumber: 24,
+        lineNumber: 34,
         columnNumber: 5
     }, this);
 }
@@ -40063,7 +40067,7 @@ exports.default = X;
 },{"react":"21dqq","../lib/index.esm.js":"lWKCH","../lib/IconBase.esm.js":"1HpLI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gWqOi":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Loading", ()=>(0, _loadingDefault.default));
+/** @format */ parcelHelpers.export(exports, "Loading", ()=>(0, _loadingDefault.default));
 var _loading = require("./Loading");
 var _loadingDefault = parcelHelpers.interopDefault(_loading);
 
@@ -40077,7 +40081,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
+/** @format */ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _stitchesConfig = require("../../stitches.config");
 function Loading({ stroke =(0, _stitchesConfig.theme).colors.text.toString() , width =16  }) {
@@ -40101,7 +40105,7 @@ function Loading({ stroke =(0, _stitchesConfig.theme).colors.text.toString() , w
                         strokeOpacity: ".2"
                     }, void 0, false, {
                         fileName: "src/components/Loading/Loading.tsx",
-                        lineNumber: 15,
+                        lineNumber: 25,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
@@ -40116,28 +40120,28 @@ function Loading({ stroke =(0, _stitchesConfig.theme).colors.text.toString() , w
                             type: "rotate"
                         }, void 0, false, {
                             fileName: "src/components/Loading/Loading.tsx",
-                            lineNumber: 17,
+                            lineNumber: 27,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "src/components/Loading/Loading.tsx",
-                        lineNumber: 16,
+                        lineNumber: 26,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Loading/Loading.tsx",
-                lineNumber: 14,
+                lineNumber: 24,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "src/components/Loading/Loading.tsx",
-            lineNumber: 13,
+            lineNumber: 23,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/components/Loading/Loading.tsx",
-        lineNumber: 12,
+        lineNumber: 17,
         columnNumber: 5
     }, this);
 }
@@ -40157,7 +40161,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "BadgeStyled", ()=>BadgeStyled);
 parcelHelpers.export(exports, "BadgeIconStyled", ()=>BadgeIconStyled);
 parcelHelpers.export(exports, "BadgeDotStyled", ()=>BadgeDotStyled);
-var _stitchesConfig = require("../../stitches.config");
+/** @format */ var _stitchesConfig = require("../../stitches.config");
 const pulse = (0, _stitchesConfig.keyframes)({
     "0%": {
         opacity: 0.5,
@@ -40176,7 +40180,16 @@ const BadgeStyled = (0, _stitchesConfig.styled)("div", {
     alignItems: "center",
     borderRadius: "$3",
     display: "inline-flex",
+    fontSize: "$h5",
+    fontWeight: "$h5",
     justifyContent: "center",
+    lineHeight: "normal !important",
+    [(0, _stitchesConfig.breakpoints).phone]: {
+        fontSize: "calc($h5 * 0.925)"
+    },
+    [(0, _stitchesConfig.breakpoints).tabletX]: {
+        fontSize: "calc($h5 * 0.95)"
+    },
     padding: "$1 $4",
     svg: {
         alignSelf: "center",
@@ -40224,9 +40237,6 @@ const BadgeStyled = (0, _stitchesConfig.styled)("div", {
             }
         }
     },
-    fontSize: "$h5",
-    fontWeight: "$h5",
-    lineHeight: "normal !important",
     [(0, _stitchesConfig.breakpoints).phone]: {
         fontSize: "calc($h6 * 0.9)"
     },
@@ -40298,7 +40308,7 @@ exports.default = BadgeStyled;
 },{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8AYsO":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Box", ()=>(0, _boxDefault.default));
+/** @format */ parcelHelpers.export(exports, "Box", ()=>(0, _boxDefault.default));
 var _box = require("./Box");
 var _boxDefault = parcelHelpers.interopDefault(_box);
 
@@ -40312,7 +40322,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
+/** @format */ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _image = require("../Image");
 var _boxStyles = require("./Box.styles");
@@ -40345,12 +40355,12 @@ function Box(props) {
                     src: props.image.toString()
                 }, void 0, false, {
                     fileName: "src/components/Box/Box.tsx",
-                    lineNumber: 26,
+                    lineNumber: 37,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/Box/Box.tsx",
-                lineNumber: 25,
+                lineNumber: 33,
                 columnNumber: 9
             }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _image.ThreesImage), {
                 alt: props.imageAlt || "#",
@@ -40368,7 +40378,7 @@ function Box(props) {
                 src: props.image.toString()
             }, void 0, false, {
                 fileName: "src/components/Box/Box.tsx",
-                lineNumber: 43,
+                lineNumber: 54,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _boxStyles.BoxImageChildrenStyled), {
@@ -40376,13 +40386,13 @@ function Box(props) {
                 children: props.children
             }, void 0, false, {
                 fileName: "src/components/Box/Box.tsx",
-                lineNumber: 59,
+                lineNumber: 70,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Box/Box.tsx",
-        lineNumber: 23,
+        lineNumber: 25,
         columnNumber: 5
     }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _boxStyles.BoxStyled), {
         css: props.css,
@@ -40394,7 +40404,7 @@ function Box(props) {
         children: props.children
     }, void 0, false, {
         fileName: "src/components/Box/Box.tsx",
-        lineNumber: 62,
+        lineNumber: 75,
         columnNumber: 5
     }, this);
 }
@@ -40414,7 +40424,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "paddingVariants", ()=>paddingVariants);
 parcelHelpers.export(exports, "BoxStyled", ()=>BoxStyled);
 parcelHelpers.export(exports, "BoxImageChildrenStyled", ()=>BoxImageChildrenStyled);
-var _stitchesConfig = require("../../stitches.config");
+/** @format */ var _stitchesConfig = require("../../stitches.config");
 const paddingVariants = {
     padding: {
         default: {
@@ -40489,7 +40499,7 @@ exports.default = BoxStyled;
 },{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"i3jlU":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Button", ()=>(0, _buttonDefault.default));
+/** @format */ parcelHelpers.export(exports, "Button", ()=>(0, _buttonDefault.default));
 var _button = require("./Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
 
@@ -40503,14 +40513,14 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
+/** @format */ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _stitchesConfig = require("../../stitches.config");
 var _loading = require("../Loading");
 var _buttonStyles = require("./Button.styles");
 function Button(props) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonStyles.ButtonStyled), {
-        "aria-label": props.ariaLabel,
+        "aria-label": props.ariaLabel || props.name || typeof props.children === "string" ? props.children.toString() : "",
         block: props.block || false,
         css: {
             ...props.css,
@@ -40534,12 +40544,12 @@ function Button(props) {
                 align: "left",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loading.Loading), {}, void 0, false, {
                     fileName: "src/components/Button/Button.tsx",
-                    lineNumber: 46,
+                    lineNumber: 55,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/Button/Button.tsx",
-                lineNumber: 45,
+                lineNumber: 54,
                 columnNumber: 9
             }, this),
             props.icon && (props.iconPosition === "left" || !props.iconPosition) && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonStyles.ButtonIconStyled), {
@@ -40547,8 +40557,8 @@ function Button(props) {
                 children: props.icon
             }, void 0, false, {
                 fileName: "src/components/Button/Button.tsx",
-                lineNumber: 49,
-                columnNumber: 80
+                lineNumber: 59,
+                columnNumber: 9
             }, this),
             props.children,
             props.icon && props.iconPosition === "right" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonStyles.ButtonIconStyled), {
@@ -40556,13 +40566,13 @@ function Button(props) {
                 children: props.icon
             }, void 0, false, {
                 fileName: "src/components/Button/Button.tsx",
-                lineNumber: 51,
-                columnNumber: 56
+                lineNumber: 63,
+                columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Button/Button.tsx",
-        lineNumber: 24,
+        lineNumber: 28,
         columnNumber: 5
     }, this);
 }
@@ -40581,7 +40591,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ButtonStyled", ()=>ButtonStyled);
 parcelHelpers.export(exports, "ButtonIconStyled", ()=>ButtonIconStyled);
-var _stitchesConfig = require("../../stitches.config");
+/** @format */ var _stitchesConfig = require("../../stitches.config");
 const ButtonStyled = (0, _stitchesConfig.styled)("button", {
     "&:disabled": {
         cursor: "not-allowed",
@@ -40593,33 +40603,33 @@ const ButtonStyled = (0, _stitchesConfig.styled)("button", {
         boxShadow: "$2",
         color: "$text"
     },
-    a: {
+    "a": {
         display: "block"
     },
-    alignContent: "center",
-    alignItems: "center",
-    border: "0.1rem solid $borderHover",
-    borderRadius: "$1",
-    boxShadow: "$1",
-    color: "$text",
-    display: "inline-flex",
-    fontSize: "$h5",
-    fontWeight: "$h5",
-    lineHeight: "1.3 !important",
+    "alignContent": "center",
+    "alignItems": "center",
+    "border": "0.1rem solid $borderHover",
+    "borderRadius": "$1",
+    "boxShadow": "$1",
+    "color": "$text",
+    "display": "inline-flex",
+    "fontSize": "$h5",
+    "fontWeight": "$h5",
+    "lineHeight": "1.420 !important",
     [(0, _stitchesConfig.breakpoints).phone]: {
-        fontSize: "calc($h5 * 0.9)"
-    },
-    [(0, _stitchesConfig.breakpoints).tabletX]: {
         fontSize: "calc($h5 * 0.925)"
     },
-    padding: "$1 $4",
-    svg: {
-        height: "1.75rem",
-        width: "1.75rem",
-        marginTop: "-0.05rem"
+    [(0, _stitchesConfig.breakpoints).tabletX]: {
+        fontSize: "calc($h5 * 0.95)"
     },
-    transition: "$default",
-    variants: {
+    "padding": "$1 $4",
+    "svg": {
+        height: "1.75rem",
+        marginTop: "-0.05rem",
+        width: "1.75rem"
+    },
+    "transition": "$default",
+    "variants": {
         block: {
             false: {
                 display: "inline"
@@ -40635,8 +40645,8 @@ const ButtonStyled = (0, _stitchesConfig.styled)("button", {
                 fontWeight: "$p",
                 svg: {
                     height: "1.5rem",
-                    width: "1.5rem",
-                    marginTop: "-0.1rem"
+                    marginTop: "-0.1rem",
+                    width: "1.5rem"
                 }
             }
         },
@@ -40658,15 +40668,14 @@ const ButtonStyled = (0, _stitchesConfig.styled)("button", {
             }
         }
     },
-    verticalAlign: "middle"
+    "verticalAlign": "middle"
 });
 const ButtonIconStyled = (0, _stitchesConfig.styled)("span", {
-    display: "inline-flex",
-    alignSelf: "center",
-    verticalAlign: "middle",
     alignContent: "center",
-    justifyContent: "center",
     alignItems: "center",
+    alignSelf: "center",
+    display: "inline-flex",
+    justifyContent: "center",
     variants: {
         align: {
             left: {
@@ -40676,14 +40685,15 @@ const ButtonIconStyled = (0, _stitchesConfig.styled)("span", {
                 marginLeft: "$2"
             }
         }
-    }
+    },
+    verticalAlign: "middle"
 });
 exports.default = ButtonStyled;
 
 },{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7DV0X":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Dialog", ()=>(0, _dialogDefault.default));
+/** @format */ parcelHelpers.export(exports, "Dialog", ()=>(0, _dialogDefault.default));
 var _dialog = require("./Dialog");
 var _dialogDefault = parcelHelpers.interopDefault(_dialog);
 
@@ -40697,7 +40707,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _phosphorReact = require("phosphor-react");
+/** @format */ var _phosphorReact = require("phosphor-react");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _usehooksTs = require("usehooks-ts");
@@ -40740,7 +40750,7 @@ function Dialog(props) {
                 children: props.trigger
             }, void 0, false, {
                 fileName: "src/components/Dialog/Dialog.tsx",
-                lineNumber: 57,
+                lineNumber: 65,
                 columnNumber: 7
             }, this),
             isMounted && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dialogStyles.DialogOverlayStyled), {
@@ -40761,30 +40771,30 @@ function Dialog(props) {
                                 children: "Close"
                             }, void 0, false, {
                                 fileName: "src/components/Dialog/Dialog.tsx",
-                                lineNumber: 62,
+                                lineNumber: 72,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "src/components/Dialog/Dialog.tsx",
-                            lineNumber: 61,
+                            lineNumber: 71,
                             columnNumber: 13
                         }, this),
                         props.children
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Dialog/Dialog.tsx",
-                    lineNumber: 60,
+                    lineNumber: 70,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/Dialog/Dialog.tsx",
-                lineNumber: 59,
+                lineNumber: 69,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Dialog/Dialog.tsx",
-        lineNumber: 56,
+        lineNumber: 64,
         columnNumber: 5
     }, this);
 }
@@ -41946,7 +41956,7 @@ parcelHelpers.export(exports, "DialogTriggerStyled", ()=>DialogTriggerStyled);
 parcelHelpers.export(exports, "DialogOverlayStyled", ()=>DialogOverlayStyled);
 parcelHelpers.export(exports, "DialogContentStyled", ()=>DialogContentStyled);
 parcelHelpers.export(exports, "DialogExitStyled", ()=>DialogExitStyled);
-var _stitchesConfig = require("../../stitches.config");
+/** @format */ var _stitchesConfig = require("../../stitches.config");
 const DialogStyled = (0, _stitchesConfig.styled)("div", {
     display: "inline-block",
     position: "relative",
@@ -41956,9 +41966,9 @@ const DialogTriggerStyled = (0, _stitchesConfig.styled)("div", {
     "*": {
         cursor: "pointer"
     },
-    display: "inline-flex",
-    position: "relative",
-    verticalAlign: "middle"
+    "display": "inline-flex",
+    "position": "relative",
+    "verticalAlign": "middle"
 });
 const DialogOverlayStyled = (0, _stitchesConfig.styled)("div", {
     backgroundColor: "rgba(3, 5, 18, 0.502)",
@@ -42020,20 +42030,20 @@ const DialogExitStyled = (0, _stitchesConfig.styled)("div", {
     "&:hover": {
         opacity: 1
     },
-    cursor: "pointer",
-    opacity: 0.7,
-    padding: "1rem",
-    position: "absolute",
-    right: 0,
-    top: 0,
-    transition: "$default"
+    "cursor": "pointer",
+    "opacity": 0.7,
+    "padding": "1rem",
+    "position": "absolute",
+    "right": 0,
+    "top": 0,
+    "transition": "$default"
 });
 exports.default = DialogStyled;
 
 },{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4ujjS":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Divider", ()=>(0, _dividerDefault.default));
+/** @format */ parcelHelpers.export(exports, "Divider", ()=>(0, _dividerDefault.default));
 var _divider = require("./Divider");
 var _dividerDefault = parcelHelpers.interopDefault(_divider);
 
@@ -42047,7 +42057,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
+/** @format */ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _stitchesConfig = require("../../stitches.config");
 var _dividerStyles = require("./Divider.styles");
@@ -42078,7 +42088,7 @@ function Divider(props) {
         id: props.id
     }, void 0, false, {
         fileName: "src/components/Divider/Divider.tsx",
-        lineNumber: 15,
+        lineNumber: 17,
         columnNumber: 5
     }, this);
 }
@@ -42096,7 +42106,7 @@ $RefreshReg$(_c, "Divider");
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "DividerStyled", ()=>DividerStyled);
-var _stitchesConfig = require("../../stitches.config");
+/** @format */ var _stitchesConfig = require("../../stitches.config");
 const DividerStyled = (0, _stitchesConfig.styled)("div", {
     height: "0.1rem",
     margin: "0 auto",
@@ -42108,7 +42118,7 @@ exports.default = DividerStyled;
 },{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9yvFB":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Dropdown", ()=>(0, _dropdownDefault.default));
+/** @format */ parcelHelpers.export(exports, "Dropdown", ()=>(0, _dropdownDefault.default));
 var _dropdown = require("./Dropdown");
 var _dropdownDefault = parcelHelpers.interopDefault(_dropdown);
 
@@ -42122,10 +42132,13 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _router = require("next/router");
+/** @format */ var _router = require("next/router");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _usehooksTs = require("usehooks-ts");
+var _input = require("../Input");
+var _stack = require("../Stack");
+var _text = require("../Text");
 var _dropdownStyles = require("./Dropdown.styles");
 var _s = $RefreshSig$();
 function Dropdown(props) {
@@ -42135,6 +42148,7 @@ function Dropdown(props) {
     const path = router?.pathname || "/";
     const [isOpen, setIsOpen] = (0, _react.useState)(false);
     const [isMounted, setIsMounted] = (0, _react.useState)(false);
+    const [filter, setFilter] = (0, _react.useState)("");
     function handleClose() {
         setIsOpen(false);
         setTimeout(()=>{
@@ -42167,6 +42181,7 @@ function Dropdown(props) {
         if (event.key === "Escape") handleClose();
     });
     (0, _usehooksTs.useLockedBody)(props.locked ? isOpen : false);
+    const filteredOptions = props.filter ? props.options.filter((option)=>option.label.toLowerCase().includes(filter.toLowerCase())) : props.options;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownStyles.DropdownStyled), {
         css: props.css,
         id: props.id,
@@ -42176,7 +42191,7 @@ function Dropdown(props) {
                 children: props.trigger
             }, props.active || Math.random(), false, {
                 fileName: "src/components/Dropdown/Dropdown.tsx",
-                lineNumber: 80,
+                lineNumber: 98,
                 columnNumber: 7
             }, this),
             isMounted && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownStyles.DropdownGroupStyled), {
@@ -42188,51 +42203,88 @@ function Dropdown(props) {
                     right: props.align === "right" ? "0" : "auto"
                 },
                 ref: ref,
-                children: props.options.map(({ label , value  })=>props.submenu ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownStyles.DropdownItemStyled), {
-                        css: {
-                            opacity: path === value ? 0.44 : 1
-                        },
-                        submenu: true,
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                            onClickCapture: ()=>handleNavigate(value),
-                            children: label
-                        }, void 0, false, {
+                children: [
+                    props.filter && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stack.Stack), {
+                        top: "1",
+                        bottom: "2",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _input.Input), {
+                                disabled: !props.options,
+                                onChange: (e)=>setFilter(e.target.value),
+                                placeholder: "Search"
+                            }, void 0, false, {
+                                fileName: "src/components/Dropdown/Dropdown.tsx",
+                                lineNumber: 115,
+                                columnNumber: 15
+                            }, this),
+                            filteredOptions.length === 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _text.Text), {
+                                accent: true,
+                                as: "p",
+                                css: {
+                                    padding: "$2 $3 $1 $3"
+                                },
+                                children: [
+                                    "No results found for ",
+                                    filter,
+                                    "."
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/Dropdown/Dropdown.tsx",
+                                lineNumber: 121,
+                                columnNumber: 17
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Dropdown/Dropdown.tsx",
+                        lineNumber: 114,
+                        columnNumber: 13
+                    }, this),
+                    filteredOptions.map(({ label , value  })=>props.submenu ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownStyles.DropdownItemStyled), {
+                            css: {
+                                opacity: path === value ? 0.44 : 1
+                            },
+                            submenu: true,
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                onClickCapture: ()=>handleNavigate(value),
+                                children: label
+                            }, void 0, false, {
+                                fileName: "src/components/Dropdown/Dropdown.tsx",
+                                lineNumber: 135,
+                                columnNumber: 17
+                            }, this)
+                        }, value, false, {
                             fileName: "src/components/Dropdown/Dropdown.tsx",
-                            lineNumber: 101,
-                            columnNumber: 17
-                        }, this)
-                    }, value, false, {
-                        fileName: "src/components/Dropdown/Dropdown.tsx",
-                        lineNumber: 95,
-                        columnNumber: 15
-                    }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownStyles.DropdownItemStyled), {
-                        css: {
-                            opacity: props.active && props.active === value ? 0.44 : 1
-                        },
-                        onClickCapture: ()=>{
-                            handleActions(value, label);
-                        },
-                        submenu: false,
-                        children: label
-                    }, value, false, {
-                        fileName: "src/components/Dropdown/Dropdown.tsx",
-                        lineNumber: 104,
-                        columnNumber: 15
-                    }, this))
-            }, void 0, false, {
+                            lineNumber: 129,
+                            columnNumber: 15
+                        }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownStyles.DropdownItemStyled), {
+                            css: {
+                                opacity: props.active && props.active === value ? 0.44 : 1
+                            },
+                            onClickCapture: ()=>{
+                                handleActions(value, label);
+                            },
+                            submenu: false,
+                            children: label
+                        }, value, false, {
+                            fileName: "src/components/Dropdown/Dropdown.tsx",
+                            lineNumber: 138,
+                            columnNumber: 15
+                        }, this))
+                ]
+            }, void 0, true, {
                 fileName: "src/components/Dropdown/Dropdown.tsx",
-                lineNumber: 84,
+                lineNumber: 104,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Dropdown/Dropdown.tsx",
-        lineNumber: 79,
+        lineNumber: 97,
         columnNumber: 5
     }, this);
 }
 exports.default = Dropdown;
-_s(Dropdown, "aKSbrldDlbC/IuPZqE7OZXwSIzI=", false, function() {
+_s(Dropdown, "Nb5kKGmxLWkuWakGtElAmBfP5wk=", false, function() {
     return [
         (0, _router.useRouter),
         (0, _usehooksTs.useOnClickOutside),
@@ -42249,7 +42301,7 @@ $RefreshReg$(_c, "Dropdown");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","next/router":"hphgm","react":"21dqq","usehooks-ts":"dmUe4","./Dropdown.styles":"jxb92","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hphgm":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","next/router":"hphgm","react":"21dqq","usehooks-ts":"dmUe4","./Dropdown.styles":"jxb92","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Input":"iclCk","../Stack":"6V7Vx","../Text":"d5OVu"}],"hphgm":[function(require,module,exports) {
 module.exports = require("./dist/client/router");
 
 },{"./dist/client/router":"9DVWS"}],"9DVWS":[function(require,module,exports) {
@@ -46013,7 +46065,7 @@ parcelHelpers.export(exports, "DropdownStyled", ()=>DropdownStyled);
 parcelHelpers.export(exports, "DropdownTriggerStyled", ()=>DropdownTriggerStyled);
 parcelHelpers.export(exports, "DropdownGroupStyled", ()=>DropdownGroupStyled);
 parcelHelpers.export(exports, "DropdownItemStyled", ()=>DropdownItemStyled);
-var _stitchesConfig = require("../../stitches.config");
+/** @format */ var _stitchesConfig = require("../../stitches.config");
 const DropdownStyled = (0, _stitchesConfig.styled)("div", {
     display: "inline-block",
     position: "relative",
@@ -46023,9 +46075,9 @@ const DropdownTriggerStyled = (0, _stitchesConfig.styled)("div", {
     "*": {
         cursor: "pointer"
     },
-    display: "inline-flex",
-    position: "relative",
-    verticalAlign: "middle"
+    "display": "inline-flex",
+    "position": "relative",
+    "verticalAlign": "middle"
 });
 const DropdownGroupStyled = (0, _stitchesConfig.styled)("div", {
     backgroundColor: "$background",
@@ -46068,13 +46120,13 @@ const DropdownItemStyled = (0, _stitchesConfig.styled)("div", {
     "&:last-child": {
         borderBottom: 0
     },
-    borderRadius: 0,
-    cursor: "pointer",
-    display: "flex",
-    fontSize: "$h6",
-    lineHeight: "normal !important",
-    transition: "$default",
-    variants: {
+    "borderRadius": 0,
+    "cursor": "pointer",
+    "display": "flex",
+    "fontSize": "$h6",
+    "lineHeight": "normal !important",
+    "transition": "$default",
+    "variants": {
         submenu: {
             false: {
                 padding: "$2 $3"
@@ -46095,7 +46147,7 @@ exports.default = DropdownStyled;
 },{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iclCk":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Input", ()=>(0, _inputDefault.default));
+/** @format */ parcelHelpers.export(exports, "Input", ()=>(0, _inputDefault.default));
 var _input = require("./Input");
 var _inputDefault = parcelHelpers.interopDefault(_input);
 
@@ -46109,7 +46161,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _phosphorReact = require("phosphor-react");
+/** @format */ var _phosphorReact = require("phosphor-react");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _badge = require("../Badge");
@@ -46140,8 +46192,8 @@ function Input(props) {
     }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputStyles.InputStyled), {
         css: {
-            maxWidth: props.maxWidth || "80%",
-            width: props.maxWidth || "80%"
+            maxWidth: props.width || "100%",
+            width: props.width || "100%"
         },
         id: props.id,
         children: [
@@ -46159,14 +46211,14 @@ function Input(props) {
                         value: value
                     }, void 0, false, {
                         fileName: "src/components/Input/Input.tsx",
-                        lineNumber: 65,
+                        lineNumber: 84,
                         columnNumber: 9
                     }, this),
                     (props.loading || props.submit || props.copy || props.reveal) && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputStyles.InputFunctionStyled), {
                         children: [
                             props.loading && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loading.Loading), {}, void 0, false, {
                                 fileName: "src/components/Input/Input.tsx",
-                                lineNumber: 76,
+                                lineNumber: 95,
                                 columnNumber: 31
                             }, this),
                             props.copy && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
@@ -46186,7 +46238,7 @@ function Input(props) {
                                 children: "Copy"
                             }, void 0, false, {
                                 fileName: "src/components/Input/Input.tsx",
-                                lineNumber: 78,
+                                lineNumber: 97,
                                 columnNumber: 15
                             }, this),
                             props.reveal && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
@@ -46205,7 +46257,7 @@ function Input(props) {
                                 children: isRevealed ? "Hide" : "Show"
                             }, void 0, false, {
                                 fileName: "src/components/Input/Input.tsx",
-                                lineNumber: 91,
+                                lineNumber: 116,
                                 columnNumber: 15
                             }, this),
                             props.submit && props.submitFunction && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
@@ -46220,19 +46272,19 @@ function Input(props) {
                                 children: props.submit
                             }, void 0, false, {
                                 fileName: "src/components/Input/Input.tsx",
-                                lineNumber: 105,
+                                lineNumber: 132,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Input/Input.tsx",
-                        lineNumber: 75,
+                        lineNumber: 94,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Input/Input.tsx",
-                lineNumber: 64,
+                lineNumber: 73,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputStyles.InputCallbackStyled), {
@@ -46249,7 +46301,7 @@ function Input(props) {
                         children: props.errorMessage || "Error"
                     }, void 0, false, {
                         fileName: "src/components/Input/Input.tsx",
-                        lineNumber: 122,
+                        lineNumber: 149,
                         columnNumber: 11
                     }, this),
                     props.success && !props.error && !props.warning && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badge.Badge), {
@@ -46264,7 +46316,7 @@ function Input(props) {
                         children: props.successMessage || "Success"
                     }, void 0, false, {
                         fileName: "src/components/Input/Input.tsx",
-                        lineNumber: 127,
+                        lineNumber: 157,
                         columnNumber: 11
                     }, this),
                     props.warning && !props.success && !props.error && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badge.Badge), {
@@ -46279,19 +46331,19 @@ function Input(props) {
                         children: props.warningMessage || "Invalid"
                     }, void 0, false, {
                         fileName: "src/components/Input/Input.tsx",
-                        lineNumber: 132,
+                        lineNumber: 165,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Input/Input.tsx",
-                lineNumber: 120,
+                lineNumber: 147,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Input/Input.tsx",
-        lineNumber: 58,
+        lineNumber: 67,
         columnNumber: 5
     }, this);
 }
@@ -46314,7 +46366,7 @@ parcelHelpers.export(exports, "InputCoreStyled", ()=>InputCoreStyled);
 parcelHelpers.export(exports, "InputAreaStyled", ()=>InputAreaStyled);
 parcelHelpers.export(exports, "InputFunctionStyled", ()=>InputFunctionStyled);
 parcelHelpers.export(exports, "InputCallbackStyled", ()=>InputCallbackStyled);
-var _stitchesConfig = require("../../stitches.config");
+/** @format */ var _stitchesConfig = require("../../stitches.config");
 const InputStyled = (0, _stitchesConfig.styled)("div", {
     position: "relative"
 });
@@ -46328,15 +46380,15 @@ const InputCoreStyled = (0, _stitchesConfig.styled)("div", {
     "*": {
         verticalAlign: "middle"
     },
-    alignContent: "center",
-    alignSelf: "center",
-    borderRadius: "$1",
-    display: "inline-flex",
-    justifyContent: "center",
-    padding: "$2 $4",
-    position: "relative",
-    transition: "$default",
-    variants: {
+    "alignContent": "center",
+    "alignSelf": "center",
+    "borderRadius": "$1",
+    "display": "inline-flex",
+    "justifyContent": "center",
+    "padding": "$2 $4",
+    "position": "relative",
+    "transition": "$default",
+    "variants": {
         disabled: {
             true: {
                 cursor: "not-allowed",
@@ -46358,26 +46410,26 @@ const InputCoreStyled = (0, _stitchesConfig.styled)("div", {
             }
         }
     },
-    width: "100%"
+    "width": "100%"
 });
 const InputAreaStyled = (0, _stitchesConfig.styled)("input", {
     "&:focus": {
         outline: "none"
     },
-    appearance: "none",
-    backgroundColor: "transparent",
-    border: "none",
-    color: "$text",
-    fontFamily: "$sans !important",
-    fontSize: "16px !important",
-    letterSpacing: "0",
-    margin: "0",
-    minHeight: "2.4rem",
-    outline: "none",
-    padding: "0",
-    textAlign: "left",
-    transition: "$default",
-    width: "100%"
+    "appearance": "none",
+    "backgroundColor": "transparent",
+    "border": "none",
+    "color": "$text",
+    "fontFamily": "$sans !important",
+    "fontSize": "16px !important",
+    "letterSpacing": "0",
+    "margin": "0",
+    "minHeight": "2.4rem",
+    "outline": "none",
+    "padding": "0",
+    "textAlign": "left",
+    "transition": "$default",
+    "width": "100%"
 });
 const InputFunctionStyled = (0, _stitchesConfig.styled)("div", {
     button: {
@@ -46397,10 +46449,445 @@ const InputCallbackStyled = (0, _stitchesConfig.styled)("div", {
 });
 exports.default = InputStyled;
 
+},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6V7Vx":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/** @format */ parcelHelpers.export(exports, "Stack", ()=>(0, _stackDefault.default));
+var _stack = require("./Stack");
+var _stackDefault = parcelHelpers.interopDefault(_stack);
+
+},{"./Stack":"fzqaU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fzqaU":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$48e7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$48e7.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Element", ()=>Element);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+/** @format */ var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _stitchesConfig = require("../../stitches.config");
+var _stackStyles = require("./Stack.styles");
+function Stack(props) {
+    return props.direction === "row" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stackStyles.StackRowStyled), {
+        css: {
+            ...props.css,
+            "*": {
+                alignItems: props.flex || "initial"
+            },
+            "alignItems": props.flex || "initial",
+            ...props.top && {
+                paddingTop: `$${props.top}`,
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`
+                }
+            },
+            ...props.bottom && {
+                paddingBottom: `$${props.bottom}`,
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`
+                }
+            }
+        },
+        id: props.id,
+        children: props.children
+    }, void 0, false, {
+        fileName: "src/components/Stack/Stack.tsx",
+        lineNumber: 41,
+        columnNumber: 5
+    }, this) : props.direction === "column" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stackStyles.StackColumnStyled), {
+        css: {
+            ...props.top && {
+                paddingTop: `$${props.top}`,
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`
+                }
+            },
+            ...props.bottom && {
+                paddingBottom: `$${props.bottom}`,
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`
+                }
+            },
+            ...props.minimal && {
+                paddingLeft: "0!important",
+                paddingRight: "0!important"
+            },
+            textAlign: props.align,
+            [(0, _stitchesConfig.breakpoints).phone]: {
+                flex: props.widthPhone ? `0 0 ${props.widthPhone}%` : `0 0 100%`,
+                marginLeft: props.offsetPhone ? `${props.offsetPhone}%` : 0,
+                width: props.widthPhone ? `${props.widthPhone}%` : `100%`
+            },
+            [(0, _stitchesConfig.breakpoints).tabletX]: {
+                flex: props.widthTablet ? `0 0 ${props.widthTablet}%` : `0 0 ${props.width}%`,
+                marginLeft: props.offsetTablet ? `${props.offsetTablet}%` : `${props.offset}%`,
+                width: props.widthTablet ? `${props.widthTablet}%` : `${props.width}%`
+            },
+            [(0, _stitchesConfig.breakpoints).laptopX]: {
+                flex: props.widthLaptop ? `0 0 ${props.widthLaptop}%` : `0 0 ${props.width}%`,
+                marginLeft: props.offsetLaptop ? `${props.offsetLaptop}%` : `${props.offset}%`,
+                width: props.widthLaptop ? `${props.widthLaptop}%` : `${props.width}%`
+            },
+            [(0, _stitchesConfig.breakpoints).desktopX]: {
+                flex: props.widthDesktop ? `0 0 ${props.widthDesktop}%` : `0 0 ${props.width}%`,
+                marginLeft: props.offsetDesktop ? `${props.offsetDesktop}%` : `${props.offset}%`,
+                width: props.widthDesktop ? `${props.widthDesktop}%` : `${props.width}%`
+            },
+            [(0, _stitchesConfig.breakpoints).wide]: {
+                flex: props.widthWide ? `0 0 ${props.widthWide}%` : `0 0 ${props.width}%`,
+                marginLeft: props.offsetWide ? `${props.offsetWide}%` : `${props.offset}%`,
+                width: props.widthWide ? `${props.widthWide}%` : `${props.width}%`
+            },
+            ...props.css
+        },
+        id: props.id,
+        children: props.children
+    }, void 0, false, {
+        fileName: "src/components/Stack/Stack.tsx",
+        lineNumber: 83,
+        columnNumber: 5
+    }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stackStyles.StackElementStyled), {
+        css: {
+            ...props.css,
+            textAlign: props.align,
+            ...props.top && {
+                paddingTop: `$${props.top}`,
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`
+                }
+            },
+            ...props.bottom && {
+                paddingBottom: `$${props.bottom}`,
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`
+                }
+            }
+        },
+        flexduo: props.flexduo,
+        id: props.id,
+        children: props.children
+    }, void 0, false, {
+        fileName: "src/components/Stack/Stack.tsx",
+        lineNumber: 154,
+        columnNumber: 5
+    }, this);
+}
+exports.default = Stack;
+_c = Stack;
+const Element = Stack;
+var _c;
+$RefreshReg$(_c, "Stack");
+
+  $parcel$ReactRefreshHelpers$48e7.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../stitches.config":"iMNz3","./Stack.styles":"77zow","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"77zow":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "StackRowStyled", ()=>StackRowStyled);
+parcelHelpers.export(exports, "StackColumnStyled", ()=>StackColumnStyled);
+parcelHelpers.export(exports, "StackElementStyled", ()=>StackElementStyled);
+/** @format */ var _stitchesConfig = require("../../stitches.config");
+const StackRowStyled = (0, _stitchesConfig.styled)("div", {
+    "*": {
+        boxSizing: "border-box"
+    },
+    "display": "flex",
+    "flexDirection": "row",
+    "flexFlow": "row wrap",
+    "maxWidth": "100%",
+    "minWidth": "100%",
+    "width": "100%"
+});
+const StackColumnStyled = (0, _stitchesConfig.styled)("div", {
+    flex: "1 1 auto",
+    maxWidth: "100%",
+    paddingLeft: "$4",
+    paddingRight: "$4",
+    width: "100%",
+    [(0, _stitchesConfig.breakpoints).tablet]: {
+        paddingLeft: "$3",
+        paddingRight: "$3"
+    }
+});
+const StackElementStyled = (0, _stitchesConfig.styled)("div", {
+    marginBlockEnd: 0,
+    marginBlockStart: 0,
+    variants: {
+        flexduo: {
+            true: {
+                "*": {
+                    alignSelf: "center",
+                    marginBottom: "0 !important",
+                    marginTOp: "0 !important",
+                    verticalAlign: "middle"
+                },
+                "alignItems": "center",
+                "display": "flex",
+                "justifyContent": "space-between",
+                "verticalAlign": "middle"
+            }
+        }
+    }
+});
+exports.default = StackElementStyled;
+
+},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"d5OVu":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/** @format */ parcelHelpers.export(exports, "Text", ()=>(0, _textDefault.default));
+var _text = require("./Text");
+var _textDefault = parcelHelpers.interopDefault(_text);
+
+},{"./Text":"97kA1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"97kA1":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$7646 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7646.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+/** @format */ var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _stitchesConfig = require("../../stitches.config");
+var _textStyles = require("./Text.styles");
+function Text(props) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _textStyles.TextStyled), {
+        accent: props.accent,
+        as: props.as,
+        bold: props.bold,
+        css: {
+            ...props.css,
+            ...props.top && {
+                paddingTop: `$${props.top}`,
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    marginTop: props.top ? "0 !important" : "inherit",
+                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    marginTop: props.top ? "0 !important" : "inherit",
+                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`
+                }
+            },
+            ...props.bottom && {
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    marginBottom: props.bottom ? "0 !important" : "inherit",
+                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    marginBottom: props.bottom ? "0 !important" : "inherit",
+                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`
+                },
+                paddingBottom: `$${props.bottom}`
+            },
+            ...props.inline && {
+                alignSelf: "center",
+                display: "inline-flex",
+                marginBottom: "0 !important",
+                marginRight: props.inline === "auto" ? "auto" : `$${props.inline}`,
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    marginRight: props.inline === "auto" ? "auto" : `calc($${props.inline} * 0.8)`
+                }
+            },
+            ...props.link && {
+                "&:hover": {
+                    opacity: 0.75
+                },
+                "borderBottom": props.link === "borderHover" ? "0.1rem solid $borderHover" : "0.1rem solid $border",
+                "transition": "$default"
+            }
+        },
+        size: props.as,
+        children: props.children
+    }, void 0, false, {
+        fileName: "src/components/Text/Text.tsx",
+        lineNumber: 22,
+        columnNumber: 5
+    }, this);
+}
+exports.default = Text;
+_c = Text;
+var _c;
+$RefreshReg$(_c, "Text");
+
+  $parcel$ReactRefreshHelpers$7646.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../stitches.config":"iMNz3","./Text.styles":"2hqo9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2hqo9":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "TextStyled", ()=>TextStyled);
+/** @format */ var _stitchesConfig = require("../../stitches.config");
+const TextStyled = (0, _stitchesConfig.styled)("div", {
+    "&:last-child": {
+        marginBottom: `${0}!important`
+    },
+    "color": "inherit",
+    "display": "block",
+    "lineHeight": "normal !important",
+    "variants": {
+        accent: {
+            true: {
+                color: "$accent"
+            }
+        },
+        bold: {
+            true: {
+                fontWeight: "bold !important"
+            }
+        },
+        size: {
+            h1: {
+                "&:not(:last-child)": {
+                    marginBottom: "$5"
+                },
+                "fontFamily": "$serif",
+                "fontSize": "$h1",
+                "fontWeight": "$h1",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($h1 * 0.925)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($h1 * 0.95)"
+                }
+            },
+            h2: {
+                "&:not(:last-child)": {
+                    marginBottom: "$5"
+                },
+                "fontFamily": "$serif",
+                "fontSize": "$h2",
+                "fontWeight": "$h2",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($h2 * 0.925)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($h2 * 0.95)"
+                }
+            },
+            h3: {
+                "&:not(:last-child)": {
+                    marginBottom: "$5"
+                },
+                "fontFamily": "$serif",
+                "fontSize": "$h3",
+                "fontWeight": "$h3",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($h3 * 0.925)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($h3 * 0.95)"
+                }
+            },
+            h4: {
+                "&:not(:last-child)": {
+                    marginBottom: "$4"
+                },
+                "fontSize": "$h4",
+                "fontWeight": "$h4",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($h4 * 0.925)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($h4 * 0.95)"
+                }
+            },
+            h5: {
+                "&:not(:last-child)": {
+                    marginBottom: "$4"
+                },
+                "fontSize": "$h5",
+                "fontWeight": "$h5",
+                "lineHeight": "1.420 !important",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($h5 * 0.925)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($h5 * 0.95)"
+                }
+            },
+            h6: {
+                "&:not(:last-child)": {
+                    marginBottom: "$4"
+                },
+                "color": "$accent",
+                "fontSize": "$h6",
+                "fontWeight": "$h6",
+                "lineHeight": "1.35 !important",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($h6 * 0.925)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($h6 * 0.95)"
+                }
+            },
+            p: {
+                "&:not(:last-child)": {
+                    marginBottom: "$4"
+                },
+                "fontSize": "$p",
+                "fontWeight": "$p",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($p * 0.925)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($p * 0.95)"
+                }
+            },
+            small: {
+                "&:not(:last-child)": {
+                    marginBottom: "$4"
+                },
+                "fontSize": "$small",
+                "fontWeight": "$small",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($small * 0.925)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($small * 0.95)"
+                }
+            },
+            span: {
+                fontSize: "inherit",
+                fontWeight: "inherit"
+            }
+        }
+    }
+});
+exports.default = TextStyled;
+
 },{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ayKiy":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Popover", ()=>(0, _popoverDefault.default));
+/** @format */ parcelHelpers.export(exports, "Popover", ()=>(0, _popoverDefault.default));
 var _popover = require("./Popover");
 var _popoverDefault = parcelHelpers.interopDefault(_popover);
 
@@ -46414,7 +46901,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
+/** @format */ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _usehooksTs = require("usehooks-ts");
 var _popoverStyles = require("./Popover.styles");
@@ -46462,7 +46949,7 @@ function Popover(props) {
                 children: props.trigger
             }, void 0, false, {
                 fileName: "src/components/Popover/Popover.tsx",
-                lineNumber: 65,
+                lineNumber: 71,
                 columnNumber: 7
             }, this),
             isMounted && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _popoverStyles.PopoverContentStyled), {
@@ -46479,13 +46966,13 @@ function Popover(props) {
                 children: props.children
             }, void 0, false, {
                 fileName: "src/components/Popover/Popover.tsx",
-                lineNumber: 69,
+                lineNumber: 78,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Popover/Popover.tsx",
-        lineNumber: 64,
+        lineNumber: 70,
         columnNumber: 5
     }, this);
 }
@@ -46510,7 +46997,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "PopoverStyled", ()=>PopoverStyled);
 parcelHelpers.export(exports, "PopoverTriggerStyled", ()=>PopoverTriggerStyled);
 parcelHelpers.export(exports, "PopoverContentStyled", ()=>PopoverContentStyled);
-var _stitchesConfig = require("../../stitches.config");
+/** @format */ var _stitchesConfig = require("../../stitches.config");
 const PopoverStyled = (0, _stitchesConfig.styled)("div", {
     display: "inline-block",
     position: "relative",
@@ -46520,9 +47007,9 @@ const PopoverTriggerStyled = (0, _stitchesConfig.styled)("div", {
     "*": {
         cursor: "pointer"
     },
-    display: "inline-flex",
-    position: "relative",
-    verticalAlign: "middle"
+    "display": "inline-flex",
+    "position": "relative",
+    "verticalAlign": "middle"
 });
 const PopoverContentStyled = (0, _stitchesConfig.styled)("div", {
     backgroundColor: "$background",
@@ -46559,7 +47046,7 @@ exports.default = PopoverStyled;
 },{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gZ9Mc":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Provider", ()=>(0, _providerDefault.default));
+/** @format */ parcelHelpers.export(exports, "Provider", ()=>(0, _providerDefault.default));
 parcelHelpers.export(exports, "ThemeProvider", ()=>(0, _provider.ThemeProvider));
 parcelHelpers.export(exports, "ProviderToggle", ()=>(0, _provider.ProviderToggle));
 var _provider = require("./Provider");
@@ -46577,7 +47064,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ThemeProvider", ()=>ThemeProvider);
 parcelHelpers.export(exports, "ProviderToggle", ()=>ProviderToggle);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _phosphorReact = require("phosphor-react");
+/** @format */ var _phosphorReact = require("phosphor-react");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _usehooksTs = require("usehooks-ts");
@@ -46597,25 +47084,25 @@ function Provider(props) {
         css: props.css,
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.IconContext).Provider, {
             value: {
-                weight: "duotone",
-                mirrored: false
+                mirrored: false,
+                weight: "duotone"
             },
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toast.Toast), {}, void 0, false, {
                     fileName: "src/components/Provider/Provider.tsx",
-                    lineNumber: 31,
+                    lineNumber: 33,
                     columnNumber: 9
                 }, this),
                 props.children
             ]
         }, void 0, true, {
             fileName: "src/components/Provider/Provider.tsx",
-            lineNumber: 30,
+            lineNumber: 32,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/components/Provider/Provider.tsx",
-        lineNumber: 29,
+        lineNumber: 31,
         columnNumber: 5
     }, this);
 }
@@ -46636,7 +47123,7 @@ function ProviderToggle(props) {
         children: isDarkMode ? props.triggerActive || props.trigger : props.trigger
     }, void 0, false, {
         fileName: "src/components/Provider/Provider.tsx",
-        lineNumber: 44,
+        lineNumber: 46,
         columnNumber: 5
     }, this);
 }
@@ -46658,7 +47145,7 @@ $RefreshReg$(_c1, "ProviderToggle");
 },{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","usehooks-ts":"dmUe4","../../stitches.config":"iMNz3","../Toast":"64Cun","./Provider.styles":"JKoG4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"64Cun":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Toast", ()=>(0, _toastDefault.default));
+/** @format */ parcelHelpers.export(exports, "Toast", ()=>(0, _toastDefault.default));
 parcelHelpers.export(exports, "toast", ()=>(0, _toast.toast));
 var _toast = require("./Toast");
 var _toastDefault = parcelHelpers.interopDefault(_toast);
@@ -46675,7 +47162,7 @@ parcelHelpers.defineInteropFlag(exports);
 // export react-hot-toast to hook
 parcelHelpers.export(exports, "toast", ()=>(0, _reactHotToastDefault.default));
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
+/** @format */ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactHotToast = require("react-hot-toast");
 var _reactHotToastDefault = parcelHelpers.interopDefault(_reactHotToast);
@@ -46702,13 +47189,13 @@ function Toast(props) {
                 children: t.message && t.message.toString().length > 50 ? `${t.message.toString().substring(0, 50)}...` : t.message?.toString()
             }, t.id, false, {
                 fileName: "src/components/Toast/Toast.tsx",
-                lineNumber: 26,
+                lineNumber: 32,
                 columnNumber: 11
             }, this);
         })
     }, void 0, false, {
         fileName: "src/components/Toast/Toast.tsx",
-        lineNumber: 22,
+        lineNumber: 28,
         columnNumber: 5
     }, this);
 }
@@ -47405,7 +47892,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ToastStyled", ()=>ToastStyled);
 parcelHelpers.export(exports, "ToastContainerStyled", ()=>ToastContainerStyled);
-var _stitchesConfig = require("../../stitches.config");
+/** @format */ var _stitchesConfig = require("../../stitches.config");
 const ToastStyled = (0, _stitchesConfig.styled)("div", {
     backgroundColor: "$background",
     border: "0.1rem solid $border",
@@ -47460,7 +47947,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ProviderStyled", ()=>ProviderStyled);
 parcelHelpers.export(exports, "ProviderTriggerStyled", ()=>ProviderTriggerStyled);
 parcelHelpers.export(exports, "reset", ()=>reset);
-var _stitchesConfig = require("../../stitches.config");
+/** @format */ var _stitchesConfig = require("../../stitches.config");
 const ProviderStyled = (0, _stitchesConfig.styled)("div", {
     backgroundColor: "$background",
     color: "$text",
@@ -47471,9 +47958,9 @@ const ProviderTriggerStyled = (0, _stitchesConfig.styled)("div", {
     "*": {
         cursor: "pointer"
     },
-    display: "inline-flex",
-    position: "relative",
-    verticalAlign: "middle"
+    "display": "inline-flex",
+    "position": "relative",
+    "verticalAlign": "middle"
 });
 const reset = (0, _stitchesConfig.globalCss)({
     "*": {
@@ -47500,11 +47987,11 @@ const reset = (0, _stitchesConfig.globalCss)({
         boxSizing: "inherit"
     },
     "@import": 'url("https://xxxjddzdqkdtyqtywwfi.supabase.co/storage/v1/object/public/public/webfonts.css")',
-    a: {
+    "a": {
         color: "inherit",
         textDecoration: "none"
     },
-    body: {
+    "body": {
         backgroundColor: "inherit",
         border: 0,
         color: "$text",
@@ -47523,7 +48010,7 @@ const reset = (0, _stitchesConfig.globalCss)({
             color: "$text"
         }
     },
-    button: {
+    "button": {
         "&::-moz-focus-inner": {
             border: 0,
             outline: 0,
@@ -47536,246 +48023,39 @@ const reset = (0, _stitchesConfig.globalCss)({
         "&:focus": {
             outline: 0
         },
-        MozOsxFontSmoothing: "grayscale",
-        WebkitAppearance: "none",
-        WebkitFontSmoothing: "antialiased",
-        appearance: "none",
-        backgroundColor: "transparent",
-        border: 0,
-        cursor: "pointer",
-        font: "$default",
-        fontFamily: "inherit",
-        margin: 0,
-        outline: "none",
-        overflow: "visible",
-        textOverflow: "ellipsis",
-        whiteSpace: "nowrap",
-        width: "auto"
+        "MozOsxFontSmoothing": "grayscale",
+        "WebkitAppearance": "none",
+        "WebkitFontSmoothing": "antialiased",
+        "appearance": "none",
+        "backgroundColor": "transparent",
+        "border": 0,
+        "cursor": "pointer",
+        "font": "$default",
+        "fontFamily": "inherit",
+        "margin": 0,
+        "outline": "none",
+        "overflow": "visible",
+        "textOverflow": "ellipsis",
+        "whiteSpace": "nowrap",
+        "width": "auto"
     },
-    html: {
+    "html": {
         MozOsxFontSmoothing: "grayscale",
         WebkitFontSmoothing: "antialiased",
         fontSize: "62.5%",
         lineHeight: "1.5",
         textRendering: "optimizeLegibility"
     },
-    svg: {
+    "svg": {
         verticalAlign: "middle"
     }
 });
 exports.default = ProviderStyled;
 
-},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6V7Vx":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Stack", ()=>(0, _stackDefault.default));
-var _stack = require("./Stack");
-var _stackDefault = parcelHelpers.interopDefault(_stack);
-
-},{"./Stack":"fzqaU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fzqaU":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$48e7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$48e7.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Element", ()=>Element);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _stitchesConfig = require("../../stitches.config");
-var _stackStyles = require("./Stack.styles");
-function Stack(props) {
-    return props.direction === "row" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stackStyles.StackRowStyled), {
-        css: {
-            ...props.css,
-            "*": {
-                alignItems: props.flex || "initial"
-            },
-            alignItems: props.flex || "initial",
-            ...props.top && {
-                paddingTop: `$${props.top}`,
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`
-                }
-            },
-            ...props.bottom && {
-                paddingBottom: `$${props.bottom}`,
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`
-                }
-            }
-        },
-        id: props.id,
-        children: props.children
-    }, void 0, false, {
-        fileName: "src/components/Stack/Stack.tsx",
-        lineNumber: 32,
-        columnNumber: 5
-    }, this) : props.direction === "column" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stackStyles.StackColumnStyled), {
-        css: {
-            ...props.top && {
-                paddingTop: `$${props.top}`,
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`
-                }
-            },
-            ...props.bottom && {
-                paddingBottom: `$${props.bottom}`,
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`
-                }
-            },
-            ...props.minimal && {
-                paddingLeft: "0!important",
-                paddingRight: "0!important"
-            },
-            textAlign: props.align,
-            [(0, _stitchesConfig.breakpoints).phone]: {
-                flex: props.widthPhone ? `0 0 ${props.widthPhone}%` : `0 0 100%`,
-                marginLeft: props.offsetPhone ? `${props.offsetPhone}%` : 0,
-                width: props.widthPhone ? `${props.widthPhone}%` : `100%`
-            },
-            [(0, _stitchesConfig.breakpoints).tabletX]: {
-                flex: props.widthTablet ? `0 0 ${props.widthTablet}%` : `0 0 ${props.width}%`,
-                marginLeft: props.offsetTablet ? `${props.offsetTablet}%` : `${props.offset}%`,
-                width: props.widthTablet ? `${props.widthTablet}%` : `${props.width}%`
-            },
-            [(0, _stitchesConfig.breakpoints).laptopX]: {
-                flex: props.widthLaptop ? `0 0 ${props.widthLaptop}%` : `0 0 ${props.width}%`,
-                marginLeft: props.offsetLaptop ? `${props.offsetLaptop}%` : `${props.offset}%`,
-                width: props.widthLaptop ? `${props.widthLaptop}%` : `${props.width}%`
-            },
-            [(0, _stitchesConfig.breakpoints).desktopX]: {
-                flex: props.widthDesktop ? `0 0 ${props.widthDesktop}%` : `0 0 ${props.width}%`,
-                marginLeft: props.offsetDesktop ? `${props.offsetDesktop}%` : `${props.offset}%`,
-                width: props.widthDesktop ? `${props.widthDesktop}%` : `${props.width}%`
-            },
-            [(0, _stitchesConfig.breakpoints).wide]: {
-                flex: props.widthWide ? `0 0 ${props.widthWide}%` : `0 0 ${props.width}%`,
-                marginLeft: props.offsetWide ? `${props.offsetWide}%` : `${props.offset}%`,
-                width: props.widthWide ? `${props.widthWide}%` : `${props.width}%`
-            },
-            ...props.css
-        },
-        id: props.id,
-        children: props.children
-    }, void 0, false, {
-        fileName: "src/components/Stack/Stack.tsx",
-        lineNumber: 62,
-        columnNumber: 5
-    }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stackStyles.StackElementStyled), {
-        css: {
-            ...props.css,
-            textAlign: props.align,
-            ...props.top && {
-                paddingTop: `$${props.top}`,
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`
-                }
-            },
-            ...props.bottom && {
-                paddingBottom: `$${props.bottom}`,
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`
-                }
-            }
-        },
-        flexduo: props.flexduo,
-        id: props.id,
-        children: props.children
-    }, void 0, false, {
-        fileName: "src/components/Stack/Stack.tsx",
-        lineNumber: 119,
-        columnNumber: 5
-    }, this);
-}
-exports.default = Stack;
-_c = Stack;
-const Element = Stack;
-var _c;
-$RefreshReg$(_c, "Stack");
-
-  $parcel$ReactRefreshHelpers$48e7.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../stitches.config":"iMNz3","./Stack.styles":"77zow","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"77zow":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "StackRowStyled", ()=>StackRowStyled);
-parcelHelpers.export(exports, "StackColumnStyled", ()=>StackColumnStyled);
-parcelHelpers.export(exports, "StackElementStyled", ()=>StackElementStyled);
-var _stitchesConfig = require("../../stitches.config");
-const StackRowStyled = (0, _stitchesConfig.styled)("div", {
-    "*": {
-        boxSizing: "border-box"
-    },
-    display: "flex",
-    flexDirection: "row",
-    flexFlow: "row wrap",
-    maxWidth: "100%",
-    minWidth: "100%",
-    width: "100%"
-});
-const StackColumnStyled = (0, _stitchesConfig.styled)("div", {
-    flex: "1 1 auto",
-    maxWidth: "100%",
-    paddingLeft: "$4",
-    paddingRight: "$4",
-    width: "100%",
-    [(0, _stitchesConfig.breakpoints).tablet]: {
-        paddingLeft: "$3",
-        paddingRight: "$3"
-    }
-});
-const StackElementStyled = (0, _stitchesConfig.styled)("div", {
-    marginBlockEnd: 0,
-    marginBlockStart: 0,
-    variants: {
-        flexduo: {
-            true: {
-                "*": {
-                    alignSelf: "center",
-                    marginBottom: "0 !important",
-                    marginTOp: "0 !important",
-                    verticalAlign: "middle"
-                },
-                alignItems: "center",
-                display: "flex",
-                justifyContent: "space-between",
-                verticalAlign: "middle"
-            }
-        }
-    }
-});
-exports.default = StackElementStyled;
-
 },{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kTnYg":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Table", ()=>(0, _tableDefault.default));
+/** @format */ parcelHelpers.export(exports, "Table", ()=>(0, _tableDefault.default));
 var _table = require("./Table");
 var _tableDefault = parcelHelpers.interopDefault(_table);
 
@@ -47789,7 +48069,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _phosphorReact = require("phosphor-react");
+/** @format */ var _phosphorReact = require("phosphor-react");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _button = require("../Button");
@@ -47832,22 +48112,22 @@ function Table(props) {
                                 children: child
                             }, void 0, false, {
                                 fileName: "src/components/Table/Table.tsx",
-                                lineNumber: 47,
+                                lineNumber: 56,
                                 columnNumber: 17
                             }, this)
                         }, index, false, {
                             fileName: "src/components/Table/Table.tsx",
-                            lineNumber: 46,
+                            lineNumber: 55,
                             columnNumber: 15
                         }, this))
                 }, void 0, false, {
                     fileName: "src/components/Table/Table.tsx",
-                    lineNumber: 44,
+                    lineNumber: 53,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/Table/Table.tsx",
-                lineNumber: 43,
+                lineNumber: 52,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tableStyles.TableBodyStyled), {
@@ -47856,23 +48136,23 @@ function Table(props) {
                                 children: cell
                             }, index, false, {
                                 fileName: "src/components/Table/Table.tsx",
-                                lineNumber: 69,
+                                lineNumber: 88,
                                 columnNumber: 15
                             }, this))
                     }, index, false, {
                         fileName: "src/components/Table/Table.tsx",
-                        lineNumber: 67,
+                        lineNumber: 86,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "src/components/Table/Table.tsx",
-                lineNumber: 65,
+                lineNumber: 84,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Table/Table.tsx",
-        lineNumber: 41,
+        lineNumber: 50,
         columnNumber: 5
     }, this);
 }
@@ -47896,20 +48176,20 @@ parcelHelpers.export(exports, "TableBodyStyled", ()=>TableBodyStyled);
 parcelHelpers.export(exports, "TableRowStyled", ()=>TableRowStyled);
 parcelHelpers.export(exports, "TableCellStyled", ()=>TableCellStyled);
 parcelHelpers.export(exports, "TableHeadCellStyled", ()=>TableHeadCellStyled);
-var _stitchesConfig = require("../../stitches.config");
+/** @format */ var _stitchesConfig = require("../../stitches.config");
 const TableStyled = (0, _stitchesConfig.styled)("table", {
     "*": {
         alignContent: "center",
         verticalAlign: "middle"
     },
-    borderCollapse: "separate",
-    borderSpacing: "$1",
-    fontSize: "1.5rem",
-    maxWidth: "100%",
-    minWidth: "100%",
-    overflowX: "auto",
-    tableLayout: "fixed",
-    width: "100%",
+    "borderCollapse": "separate",
+    "borderSpacing": "$1",
+    "fontSize": "1.5rem",
+    "maxWidth": "100%",
+    "minWidth": "100%",
+    "overflowX": "auto",
+    "tableLayout": "fixed",
+    "width": "100%",
     [(0, _stitchesConfig.breakpoints).tablet]: {
         display: "block",
         tableLayout: "fixed"
@@ -47930,263 +48210,35 @@ const TableRowStyled = (0, _stitchesConfig.styled)("tr", {
             borderBottom: "0 !important"
         }
     },
-    borderRadius: "$2",
-    transition: "$default"
+    "borderRadius": "$2",
+    "transition": "$default"
 });
 const TableCellStyled = (0, _stitchesConfig.styled)("td", {
     "&:last-child": {
         textAlign: "right"
     },
-    borderBottom: "0.1rem solid $borderHover",
-    fontSize: "$h6",
+    "borderBottom": "0.1rem solid $borderHover",
+    "fontSize": "$h6",
     [(0, _stitchesConfig.breakpoints).tablet]: {
         whiteSpace: "nowrap"
     },
-    padding: "$4"
+    "padding": "$4"
 });
 const TableHeadCellStyled = (0, _stitchesConfig.styled)("th", {
     "&:last-child": {
         textAlign: "right"
     },
-    borderBottom: "0.1rem solid $borderHover",
-    fontSize: "$h6",
-    fontWeight: "bold",
-    padding: "$4 0.5rem"
+    "borderBottom": "0.1rem solid $borderHover",
+    "fontSize": "$h6",
+    "fontWeight": "bold",
+    "padding": "$4 0.5rem"
 });
 exports.default = TableStyled;
-
-},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"d5OVu":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Text", ()=>(0, _textDefault.default));
-var _text = require("./Text");
-var _textDefault = parcelHelpers.interopDefault(_text);
-
-},{"./Text":"97kA1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"97kA1":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$7646 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7646.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _stitchesConfig = require("../../stitches.config");
-var _textStyles = require("./Text.styles");
-function Text(props) {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _textStyles.TextStyled), {
-        accent: props.accent,
-        as: props.as,
-        bold: props.bold,
-        css: {
-            ...props.css,
-            ...props.top && {
-                paddingTop: `$${props.top}`,
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    marginTop: props.top ? "0 !important" : "inherit",
-                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    marginTop: props.top ? "0 !important" : "inherit",
-                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`
-                }
-            },
-            ...props.bottom && {
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    marginBottom: props.bottom ? "0 !important" : "inherit",
-                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    marginBottom: props.bottom ? "0 !important" : "inherit",
-                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`
-                },
-                paddingBottom: `$${props.bottom}`
-            },
-            ...props.inline && {
-                alignSelf: "center",
-                display: "inline-flex",
-                marginBottom: "0 !important",
-                marginRight: props.inline === "auto" ? "auto" : `$${props.inline}`,
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    marginRight: props.inline === "auto" ? "auto" : `calc($${props.inline} * 0.8)`
-                }
-            },
-            ...props.link && {
-                "&:hover": {
-                    opacity: 0.75
-                },
-                borderBottom: props.link === "borderHover" ? "0.1rem solid $borderHover" : "0.1rem solid $border",
-                transition: "$default"
-            }
-        },
-        size: props.as,
-        children: props.children
-    }, void 0, false, {
-        fileName: "src/components/Text/Text.tsx",
-        lineNumber: 20,
-        columnNumber: 5
-    }, this);
-}
-exports.default = Text;
-_c = Text;
-var _c;
-$RefreshReg$(_c, "Text");
-
-  $parcel$ReactRefreshHelpers$7646.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../stitches.config":"iMNz3","./Text.styles":"2hqo9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2hqo9":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "TextStyled", ()=>TextStyled);
-var _stitchesConfig = require("../../stitches.config");
-const TextStyled = (0, _stitchesConfig.styled)("div", {
-    "&:last-child": {
-        marginBottom: `${0}!important`
-    },
-    color: "inherit",
-    display: "block",
-    lineHeight: "normal !important",
-    variants: {
-        accent: {
-            true: {
-                color: "$accent"
-            }
-        },
-        bold: {
-            true: {
-                fontWeight: "bold !important"
-            }
-        },
-        size: {
-            h1: {
-                "&:not(:last-child)": {
-                    marginBottom: "$5"
-                },
-                fontSize: "$h1",
-                fontWeight: "$h1",
-                fontFamily: "$serif",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h1 * 0.95)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h1 * 0.95)"
-                }
-            },
-            h2: {
-                "&:not(:last-child)": {
-                    marginBottom: "$5"
-                },
-                fontSize: "$h2",
-                fontWeight: "$h2",
-                fontFamily: "$serif",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h2 * 0.95)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h2 * 0.95)"
-                }
-            },
-            h3: {
-                "&:not(:last-child)": {
-                    marginBottom: "$5"
-                },
-                fontSize: "$h3",
-                fontWeight: "$h3",
-                fontFamily: "$serif",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h3 * 0.95)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h3 * 0.95)"
-                }
-            },
-            h4: {
-                "&:not(:last-child)": {
-                    marginBottom: "$4"
-                },
-                fontSize: "$h4",
-                fontWeight: "$h4",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h4 * 0.95)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h4 * 0.95)"
-                }
-            },
-            h5: {
-                "&:not(:last-child)": {
-                    marginBottom: "$4"
-                },
-                fontSize: "$h5",
-                fontWeight: "$h5",
-                lineHeight: "1.420 !important",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h5 * 0.95)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h5 * 0.95)"
-                }
-            },
-            h6: {
-                "&:not(:last-child)": {
-                    marginBottom: "$4"
-                },
-                color: "$accent",
-                fontSize: "$h6",
-                fontWeight: "$h6",
-                lineHeight: "1.35 !important",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h6 * 0.95)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h6 * 0.95)"
-                }
-            },
-            p: {
-                "&:not(:last-child)": {
-                    marginBottom: "$4"
-                },
-                fontSize: "$p",
-                fontWeight: "$p",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($p * 0.95)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($p * 0.95)"
-                }
-            },
-            small: {
-                "&:not(:last-child)": {
-                    marginBottom: "$4"
-                },
-                fontSize: "$small",
-                fontWeight: "$small",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($small * 0.95)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($small * 0.95)"
-                }
-            },
-            span: {
-                fontSize: "inherit",
-                fontWeight: "inherit"
-            }
-        }
-    }
-});
-exports.default = TextStyled;
 
 },{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fyNq0":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "View", ()=>(0, _viewDefault.default));
+/** @format */ parcelHelpers.export(exports, "View", ()=>(0, _viewDefault.default));
 var _view = require("./View");
 var _viewDefault = parcelHelpers.interopDefault(_view);
 
@@ -48200,7 +48252,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
+/** @format */ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _stitchesConfig = require("../../stitches.config");
 var _viewStyles = require("./View.styles");
@@ -48235,12 +48287,12 @@ function View(props) {
             children: props.children
         }, void 0, false, {
             fileName: "src/components/View/View.tsx",
-            lineNumber: 42,
+            lineNumber: 56,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/components/View/View.tsx",
-        lineNumber: 17,
+        lineNumber: 19,
         columnNumber: 5
     }, this);
 }
@@ -48259,7 +48311,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ViewStyled", ()=>ViewStyled);
 parcelHelpers.export(exports, "ViewContainerStyled", ()=>ViewContainerStyled);
-var _stitchesConfig = require("../../stitches.config");
+/** @format */ var _stitchesConfig = require("../../stitches.config");
 const ViewStyled = (0, _stitchesConfig.styled)("div", {
     boxSizing: "border-box",
     paddingLeft: "$2",
@@ -48303,7 +48355,7 @@ exports.default = ViewStyled;
 },{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"99Ces":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Code", ()=>(0, _codeDefault.default));
+/** @format */ parcelHelpers.export(exports, "Code", ()=>(0, _codeDefault.default));
 var _code = require("./Code");
 var _codeDefault = parcelHelpers.interopDefault(_code);
 
@@ -48317,7 +48369,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _phosphorReact = require("phosphor-react");
+/** @format */ var _phosphorReact = require("phosphor-react");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _button = require("../Button");
@@ -48352,25 +48404,25 @@ function Code(props) {
                     children: "Copy"
                 }, void 0, false, {
                     fileName: "src/components/Code/Code.tsx",
-                    lineNumber: 31,
+                    lineNumber: 33,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/Code/Code.tsx",
-                lineNumber: 29,
+                lineNumber: 31,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _codeStyles.CodeBlockStyled), {
                 children: props.children
             }, void 0, false, {
                 fileName: "src/components/Code/Code.tsx",
-                lineNumber: 36,
+                lineNumber: 48,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Code/Code.tsx",
-        lineNumber: 28,
+        lineNumber: 30,
         columnNumber: 5
     }, this);
 }
@@ -48391,7 +48443,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CodeStyled", ()=>CodeStyled);
 parcelHelpers.export(exports, "CodeFunctionStyled", ()=>CodeFunctionStyled);
 parcelHelpers.export(exports, "CodeBlockStyled", ()=>CodeBlockStyled);
-var _stitchesConfig = require("../../stitches.config");
+/** @format */ var _stitchesConfig = require("../../stitches.config");
 const CodeStyled = (0, _stitchesConfig.styled)("div", {
     alignContent: "center",
     alignSelf: "center",
@@ -48418,7 +48470,7 @@ exports.default = CodeStyled;
 },{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gaJxM":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Field", ()=>(0, _fieldDefault.default));
+/** @format */ parcelHelpers.export(exports, "Field", ()=>(0, _fieldDefault.default));
 var _field = require("./Field");
 var _fieldDefault = parcelHelpers.interopDefault(_field);
 
@@ -48432,7 +48484,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _phosphorReact = require("phosphor-react");
+/** @format */ var _phosphorReact = require("phosphor-react");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _badge = require("../Badge");
@@ -48459,8 +48511,8 @@ function Field(props) {
     }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fieldStyles.FieldStyled), {
         css: {
-            maxWidth: props.maxWidth || "80%",
-            width: props.maxWidth || "80%"
+            maxWidth: props.width || "80%",
+            width: props.width || "80%"
         },
         disabled: props.disabled,
         id: props.id,
@@ -48476,7 +48528,7 @@ function Field(props) {
                         children: props.errorMessage || "Error"
                     }, void 0, false, {
                         fileName: "src/components/Field/Field.tsx",
-                        lineNumber: 62,
+                        lineNumber: 78,
                         columnNumber: 13
                     }, this),
                     props.success && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badge.Badge), {
@@ -48487,7 +48539,7 @@ function Field(props) {
                         children: props.successMessage || "Success"
                     }, void 0, false, {
                         fileName: "src/components/Field/Field.tsx",
-                        lineNumber: 67,
+                        lineNumber: 83,
                         columnNumber: 13
                     }, this),
                     props.warning && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badge.Badge), {
@@ -48498,18 +48550,18 @@ function Field(props) {
                         children: props.warningMessage || "Warning"
                     }, void 0, false, {
                         fileName: "src/components/Field/Field.tsx",
-                        lineNumber: 72,
+                        lineNumber: 88,
                         columnNumber: 13
                     }, this),
                     props.loading && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badge.Badge), {
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loading.Loading), {}, void 0, false, {
                             fileName: "src/components/Field/Field.tsx",
-                            lineNumber: 78,
+                            lineNumber: 94,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "src/components/Field/Field.tsx",
-                        lineNumber: 77,
+                        lineNumber: 93,
                         columnNumber: 13
                     }, this),
                     props.copy && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
@@ -48525,7 +48577,7 @@ function Field(props) {
                         children: "Copy"
                     }, void 0, false, {
                         fileName: "src/components/Field/Field.tsx",
-                        lineNumber: 82,
+                        lineNumber: 98,
                         columnNumber: 13
                     }, this),
                     props.submit && props.submitFunction && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
@@ -48536,13 +48588,13 @@ function Field(props) {
                         children: props.submit
                     }, void 0, false, {
                         fileName: "src/components/Field/Field.tsx",
-                        lineNumber: 88,
+                        lineNumber: 114,
                         columnNumber: 13
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Field/Field.tsx",
-                lineNumber: 60,
+                lineNumber: 76,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fieldStyles.FieldAreaStyled), {
@@ -48555,13 +48607,13 @@ function Field(props) {
                 value: value
             }, void 0, false, {
                 fileName: "src/components/Field/Field.tsx",
-                lineNumber: 94,
+                lineNumber: 124,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Field/Field.tsx",
-        lineNumber: 51,
+        lineNumber: 53,
         columnNumber: 5
     }, this);
 }
@@ -48582,7 +48634,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "FieldStyled", ()=>FieldStyled);
 parcelHelpers.export(exports, "FieldAreaStyled", ()=>FieldAreaStyled);
 parcelHelpers.export(exports, "FieldFunctionStyled", ()=>FieldFunctionStyled);
-var _stitchesConfig = require("../../stitches.config");
+/** @format */ var _stitchesConfig = require("../../stitches.config");
 const FieldStyled = (0, _stitchesConfig.styled)("div", {
     "&:focus-within": {
         boxShadow: "$2"
@@ -48593,13 +48645,13 @@ const FieldStyled = (0, _stitchesConfig.styled)("div", {
     "*": {
         verticalAlign: "middle"
     },
-    alignContent: "center",
-    alignSelf: "center",
-    borderRadius: "$1",
-    justifyContent: "center",
-    position: "relative",
-    transition: "$default",
-    variants: {
+    "alignContent": "center",
+    "alignSelf": "center",
+    "borderRadius": "$1",
+    "justifyContent": "center",
+    "position": "relative",
+    "transition": "$default",
+    "variants": {
         disabled: {
             true: {
                 cursor: "not-allowed",
@@ -48621,7 +48673,7 @@ const FieldStyled = (0, _stitchesConfig.styled)("div", {
             }
         }
     },
-    width: "100%"
+    "width": "100%"
 });
 const FieldAreaStyled = (0, _stitchesConfig.styled)("textarea", {
     "&:after": {
@@ -48631,16 +48683,16 @@ const FieldAreaStyled = (0, _stitchesConfig.styled)("textarea", {
     "&:focus": {
         outline: "none"
     },
-    appearance: "none",
-    backgroundColor: "transparent",
-    border: "none",
-    color: "$text",
-    display: "block",
-    fontFamily: "$sans !important",
-    fontSize: "16px !important",
-    margin: "0 auto",
-    padding: "$3 $4",
-    width: "100%"
+    "appearance": "none",
+    "backgroundColor": "transparent",
+    "border": "none",
+    "color": "$text",
+    "display": "block",
+    "fontFamily": "$sans !important",
+    "fontSize": "16px !important",
+    "margin": "0 auto",
+    "padding": "$3 $4",
+    "width": "100%"
 });
 const FieldFunctionStyled = (0, _stitchesConfig.styled)("div", {
     borderBottom: "0.1rem solid $border",

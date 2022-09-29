@@ -26,13 +26,13 @@ export const ButtonStyled = styled('button', {
   'display': 'inline-flex',
   'fontSize': '$h5',
   'fontWeight': '$h5',
-  'lineHeight': '1.3 !important',
+  'lineHeight': '1.420 !important',
 
   [breakpoints.phone]: {
-    fontSize: 'calc($h5 * 0.9)',
+    fontSize: 'calc($h5 * 0.925)',
   },
   [breakpoints.tabletX]: {
-    fontSize: 'calc($h5 * 0.925)',
+    fontSize: 'calc($h5 * 0.95)',
   },
 
   'padding': '$1 $4',

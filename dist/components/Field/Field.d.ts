@@ -15,7 +15,7 @@ export interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement>, Defa
     warning?: boolean;
     warningMessage?: string;
     disabled?: boolean;
-    maxWidth?: string;
+    width?: number | string;
 }
 export default function Field(props: Props): JSX.Element;
 //# sourceMappingURL=Field.d.ts.map

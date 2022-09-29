@@ -5,6 +5,9 @@ import React, { ReactNode, useRef, useState } from 'react';
 import { useEventListener, useLockedBody, useOnClickOutside } from 'usehooks-ts';
 
 import { DefaultProps } from '../../stitches.config';
+import { Input } from '../Input';
+import { Stack } from '../Stack';
+import { Text } from '../Text';
 
 import {
   DropdownStyled,
@@ -27,6 +30,7 @@ export interface Props extends DefaultProps {
   active?: string;
   submenu?: boolean;
   locked?: boolean;
+  filter?: boolean;
 }
 
 export default function Dropdown(props: Props): JSX.Element {
@@ -37,6 +41,7 @@ export default function Dropdown(props: Props): JSX.Element {
 
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [filter, setFilter] = useState('');
 
   function handleClose(): void {
     setIsOpen(false);
@@ -82,6 +87,12 @@ export default function Dropdown(props: Props): JSX.Element {
 
   useLockedBody(props.locked ? isOpen : false);
 
+  const filteredOptions = props.filter
+    ? props.options.filter((option) =>
+        option.label.toLowerCase().includes(filter.toLowerCase())
+      )
+    : props.options;
+
   return (
     <DropdownStyled css={props.css} id={props.id}>
       <DropdownTriggerStyled
@@ -99,7 +110,21 @@ export default function Dropdown(props: Props): JSX.Element {
             right: props.align === 'right' ? '0' : 'auto',
           }}
           ref={ref}>
-          {props.options.map(({ label, value }) =>
+          {props.filter && (
+            <Stack bottom={'2'} top={'1'}>
+              <Input
+                disabled={!props.options}
+                onChange={(e): void => setFilter(e.target.value)}
+                placeholder='Search'
+              />
+              {filteredOptions.length === 0 && (
+                <Text accent as='p' css={{ padding: '$2 $3 $1 $3' }}>
+                  No results found for {filter}.
+                </Text>
+              )}
+            </Stack>
+          )}
+          {filteredOptions.map(({ label, value }) =>
             props.submenu ? (
               <DropdownItemStyled
                 css={{

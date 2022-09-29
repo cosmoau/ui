@@ -6,7 +6,7 @@ import { theme } from '../../stitches.config';
 
 export interface Props {
   stroke?: string;
-  width?: number;
+  width?: number | string;
 }
 
 export default function Loading({

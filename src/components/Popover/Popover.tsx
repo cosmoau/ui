@@ -17,7 +17,7 @@ export interface Props extends DefaultProps {
   align?: 'left' | 'right' | 'center';
   trigger: ReactNode;
   minimal?: boolean;
-  width?: number;
+  width?: number | string;
 }
 
 export default function Popover(props: Props): JSX.Element {

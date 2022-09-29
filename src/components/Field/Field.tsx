@@ -25,7 +25,7 @@ export interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement>, Defa
   warning?: boolean;
   warningMessage?: string;
   disabled?: boolean;
-  maxWidth?: string;
+  width?: number | string;
 }
 
 export default function Field(props: Props): JSX.Element {
@@ -52,8 +52,8 @@ export default function Field(props: Props): JSX.Element {
   return (
     <FieldStyled
       css={{
-        maxWidth: props.maxWidth || '80%',
-        width: props.maxWidth || '80%',
+        maxWidth: props.width || '80%',
+        width: props.width || '80%',
       }}
       disabled={props.disabled}
       id={props.id}

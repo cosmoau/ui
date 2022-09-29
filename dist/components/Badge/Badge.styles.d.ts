@@ -1,12 +1,19 @@
 /** @format */
 export declare const BadgeStyled: import("@stitches/react/types/styled-component").StyledComponent<"div", import("@stitches/react/types/styled-component").StyledComponentProps<[{
     [x: string]: string | {
+        fontSize: string;
+        alignSelf?: undefined;
+        height?: undefined;
+        marginTop?: undefined;
+        width?: undefined;
+        theme?: undefined;
+    } | {
         alignSelf: string;
         height: string;
         marginTop: string;
         width: string;
-        theme?: undefined;
         fontSize?: undefined;
+        theme?: undefined;
     } | {
         theme: {
             blue: {
@@ -46,18 +53,11 @@ export declare const BadgeStyled: import("@stitches/react/types/styled-component
                 color: string;
             };
         };
-        alignSelf?: undefined;
-        height?: undefined;
-        marginTop?: undefined;
-        width?: undefined;
         fontSize?: undefined;
-    } | {
-        fontSize: string;
         alignSelf?: undefined;
         height?: undefined;
         marginTop?: undefined;
         width?: undefined;
-        theme?: undefined;
     };
     alignItems: string;
     borderRadius: string;
