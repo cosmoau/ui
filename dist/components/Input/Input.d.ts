@@ -16,6 +16,7 @@ export interface Props extends InputHTMLAttributes<HTMLInputElement>, DefaultPro
     warningMessage?: string;
     disabled?: boolean;
     width?: number | string;
+    listen?: boolean;
     mustRef?: any;
 }
 export default function Input(props: Props): JSX.Element;

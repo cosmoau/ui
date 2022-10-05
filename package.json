@@ -1,7 +1,7 @@
 {
-  "name": "@withcosmo/design-system",
+  "name": "@cosmoau/ui",
   "description": "✏️ A modular, flexible library of components and design patterns used to enforce consistency across all internal and subsidiary projects.",
-  "version": "2.2.9",
+  "version": "1.0.0",
   "author": "Jackson Dolman <mail@planare.dev>",
   "browserslist": {
     "production": [
@@ -15,26 +15,28 @@
       "last 1 safari version"
     ]
   },
-  "bugs": "https://github.com/withcosmo/design-system/issues",
+  "bugs": {
+    "url": "https://github.com/cosmoau/ui/issues"
+  },
   "dependencies": {
-    "@types/node": "^18.7.23",
-    "@types/react": "^18.0.21",
-    "next": "^12.3.1",
-    "phosphor-react": "^1.4.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-hot-toast": "^2.4.0",
-    "typescript": "^4.8.4",
-    "usehooks-ts": "^2.7.1",
     "@stitches/react": "^1.2.8",
+    "@types/node": "^18.8.2",
+    "@types/react": "^18.0.21",
     "eslint": "^8.24.0",
     "eslint-config-dolmios": "^1.1.0",
     "eslint-config-next": "^12.3.1",
     "microbundle": "^0.15.1",
+    "next": "^12.3.1",
     "parcel": "^2.7.0",
     "path-browserify": "^1.0.1",
+    "phosphor-react": "^1.4.1",
     "prettier": "^2.7.1",
     "process": "^0.11.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.0",
+    "typescript": "^4.8.4",
+    "usehooks-ts": "^2.7.2",
     "util": "^0.12.4"
   },
   "files": [
@@ -68,7 +70,10 @@
     "react-dom": "^18.2.0"
   },
   "prettier": "eslint-config-dolmios/.prettierrc.json",
-  "repository": "git://github.com/withcosmo/design-system.git",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cosmoau/ui.git"
+  },
   "scripts": {
     "build": "yarn lint && microbundle --jsx React.createElement --format esm,cjs,modern",
     "lint": "eslint src --ext js,jsx,ts,tsx",
@@ -76,5 +81,6 @@
     "prettier": "prettier --check --write src"
   },
   "source": "src/index.ts",
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "devDependencies": {}
 }

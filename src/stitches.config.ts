@@ -17,7 +17,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
   theme: {
     colors: {
       accent: '#a2aac2',
-      background: 'rgb(18, 24, 38)',
+      background: 'rgb(10, 12, 30)',
       blueBorder: 'rgba(115, 172, 255, 0.4)',
       blueOverlay: 'rgba(151, 193, 255, 0.2)',
       blueText: 'rgb(166, 179, 255)',
@@ -84,10 +84,10 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       2: '0.5rem',
       3: '0.75rem',
       4: '1rem',
-      5: '2.5rem',
-      6: '5rem',
-      7: '7.5rem',
-      8: '9rem',
+      5: '2rem',
+      6: '4rem',
+      7: '8rem',
+      8: '10rem',
     },
     transitions: {
       default: 'all 0.13s ease-in-out',

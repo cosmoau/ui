@@ -6,6 +6,7 @@ import { useEventListener, useLockedBody, useOnClickOutside } from 'usehooks-ts'
 
 import { DefaultProps } from '../../stitches.config';
 import { Input } from '../Input';
+import { Loading } from '../Loading';
 import { Stack } from '../Stack';
 import { Text } from '../Text';
 
@@ -21,7 +22,6 @@ export interface Props extends DefaultProps {
     label: string;
     value: string;
   }>;
-
   align?: 'left' | 'right' | 'center';
   width?: number | string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -31,6 +31,7 @@ export interface Props extends DefaultProps {
   submenu?: boolean;
   locked?: boolean;
   filter?: boolean;
+  loading?: boolean;
 }
 
 export default function Dropdown(props: Props): JSX.Element {
@@ -117,35 +118,38 @@ export default function Dropdown(props: Props): JSX.Element {
                 onChange={(e): void => setFilter(e.target.value)}
                 placeholder='Search'
               />
-              {filteredOptions.length === 0 && (
-                <Text accent as='p' css={{ padding: '$2 $3 $1 $3' }}>
-                  No results found for {filter}.
-                </Text>
-              )}
             </Stack>
           )}
-          {filteredOptions.map(({ label, value }) =>
-            props.submenu ? (
-              <DropdownItemStyled
-                css={{
-                  opacity: path === value ? 0.44 : 1,
-                }}
-                key={value}
-                submenu={true}>
-                <a onClickCapture={(): void => handleNavigate(value)}>{label}</a>
-              </DropdownItemStyled>
-            ) : (
-              <DropdownItemStyled
-                css={{
-                  opacity: props.active && props.active === value ? 0.44 : 1,
-                }}
-                key={value}
-                onClickCapture={(): void => {
-                  handleActions(value, label);
-                }}
-                submenu={false}>
-                {label}
-              </DropdownItemStyled>
+          {props.loading ? (
+            <Loading />
+          ) : !props.options || filteredOptions.length === 0 ? (
+            <Text accent as='p' css={{ padding: '$2 $3 $1 $3' }}>
+              No results found.
+            </Text>
+          ) : (
+            filteredOptions.map(({ label, value }) =>
+              props.submenu ? (
+                <DropdownItemStyled
+                  css={{
+                    opacity: path === value ? 0.44 : 1,
+                  }}
+                  key={value}
+                  submenu={true}>
+                  <a onClickCapture={(): void => handleNavigate(value)}>{label}</a>
+                </DropdownItemStyled>
+              ) : (
+                <DropdownItemStyled
+                  css={{
+                    opacity: props.active && props.active === value ? 0.44 : 1,
+                  }}
+                  key={value}
+                  onClickCapture={(): void => {
+                    handleActions(value, label);
+                  }}
+                  submenu={false}>
+                  {label}
+                </DropdownItemStyled>
+              )
             )
           )}
         </DropdownGroupStyled>

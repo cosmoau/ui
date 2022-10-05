@@ -27088,262 +27088,571 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _index = require("../src/index");
 function App() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Provider), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.View), {
-            container: true,
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
-                direction: "row",
-                flex: "center",
-                top: "4",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.View), {
+                container: true,
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
-                    direction: "column",
-                    width: 25,
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
-                                    bottom: "6",
-                                    top: "6"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 28,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                                    as: "h1",
-                                    children: "Airbnb, Stayz, Booking.com and Homes & Villas Management"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 29,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                                    as: "h2",
-                                    children: "Make your short-term rental listings work for you, without the hassle"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 32,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                                    as: "h3",
-                                    children: "Make your short-term rental listings work for you, without the hassle"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 35,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                                    as: "h4",
-                                    children: "Make your short-term rental listings work for you, without the hassle"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 38,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                                    as: "h5",
-                                    children: "Make your short-term rental listings work for you, without the hassle"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 41,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                                    as: "h6",
-                                    children: "Make your short-term rental listings work for you, without the hassle"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 44,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                                    as: "p",
-                                    children: "Make your short-term rental listings work for you, without the hassle"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 47,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                                    as: "small",
-                                    children: "Make your short-term rental listings work for you, without the hassle"
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 50,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.ProviderToggle), {
-                                    trigger: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
-                                        ariaLabel: "Toggle",
-                                        children: "Toggle"
-                                    }, void 0, false, void 0, void 0)
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 53,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
-                                    align: "center",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {}, void 0, false, {
+                    direction: "row",
+                    flex: "center",
+                    top: "4",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
+                        direction: "column",
+                        width: 25,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
+                                        bottom: "6",
+                                        top: "6"
+                                    }, void 0, false, {
+                                        fileName: "playground/App.tsx",
+                                        lineNumber: 29,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                        as: "h1",
+                                        children: "Airbnb, Stayz, Booking.com and Homes & Villas Management"
+                                    }, void 0, false, {
+                                        fileName: "playground/App.tsx",
+                                        lineNumber: 30,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                        as: "h2",
+                                        children: "Make your short-term rental listings work for you, without the hassle"
+                                    }, void 0, false, {
+                                        fileName: "playground/App.tsx",
+                                        lineNumber: 33,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                        as: "h3",
+                                        children: "Make your short-term rental listings work for you, without the hassle"
+                                    }, void 0, false, {
+                                        fileName: "playground/App.tsx",
+                                        lineNumber: 36,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                        as: "h4",
+                                        children: "Make your short-term rental listings work for you, without the hassle"
+                                    }, void 0, false, {
+                                        fileName: "playground/App.tsx",
+                                        lineNumber: 39,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                        as: "h5",
+                                        children: "Make your short-term rental listings work for you, without the hassle"
+                                    }, void 0, false, {
+                                        fileName: "playground/App.tsx",
+                                        lineNumber: 42,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                        as: "h6",
+                                        children: "Make your short-term rental listings work for you, without the hassle"
+                                    }, void 0, false, {
+                                        fileName: "playground/App.tsx",
+                                        lineNumber: 45,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                        as: "p",
+                                        children: "Make your short-term rental listings work for you, without the hassle"
+                                    }, void 0, false, {
+                                        fileName: "playground/App.tsx",
+                                        lineNumber: 48,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                        as: "small",
+                                        children: "Make your short-term rental listings work for you, without the hassle"
+                                    }, void 0, false, {
+                                        fileName: "playground/App.tsx",
+                                        lineNumber: 51,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.ProviderToggle), {
+                                        trigger: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
+                                            ariaLabel: "Toggle",
+                                            children: "Toggle"
+                                        }, void 0, false, void 0, void 0)
+                                    }, void 0, false, {
+                                        fileName: "playground/App.tsx",
+                                        lineNumber: 54,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
+                                        align: "center",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
+                                            listen: true,
+                                            submit: "Alert",
+                                            submitValid: true,
+                                            submitFunction: ()=>alert("lol")
+                                        }, void 0, false, {
+                                            fileName: "playground/App.tsx",
+                                            lineNumber: 56,
+                                            columnNumber: 17
+                                        }, this)
+                                    }, void 0, false, {
                                         fileName: "playground/App.tsx",
                                         lineNumber: 55,
-                                        columnNumber: 17
+                                        columnNumber: 15
                                     }, this)
-                                }, void 0, false, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 54,
-                                    columnNumber: 15
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "playground/App.tsx",
-                            lineNumber: 27,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
-                            ariaLabel: "button",
-                            icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
-                            iconPosition: "right",
-                            children: "Button"
-                        }, void 0, false, {
-                            fileName: "playground/App.tsx",
-                            lineNumber: 58,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
-                            ariaLabel: "button",
-                            icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
-                            iconPosition: "right",
-                            small: true,
-                            children: "Button"
-                        }, void 0, false, {
-                            fileName: "playground/App.tsx",
-                            lineNumber: 61,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Dropdown), {
-                            trigger: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
+                                ]
+                            }, void 0, true, {
+                                fileName: "playground/App.tsx",
+                                lineNumber: 28,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
                                 ariaLabel: "button",
                                 icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
-                                children: "Dropdown Test"
-                            }, void 0, false, void 0, void 0),
-                            filter: true,
-                            options: [
-                                {
-                                    label: "Option 1",
-                                    value: "option-1"
-                                },
-                                {
-                                    label: "Option 2",
-                                    value: "option-2"
-                                },
-                                {
-                                    label: "Option 3",
-                                    value: "option-3"
-                                }, 
-                            ]
-                        }, void 0, false, {
-                            fileName: "playground/App.tsx",
-                            lineNumber: 65,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
-                            theme: "fill",
-                            ariaLabel: "button",
-                            block: true,
-                            icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
-                            iconPosition: "right",
-                            children: "Button"
-                        }, void 0, false, {
-                            fileName: "playground/App.tsx",
-                            lineNumber: 79,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
-                            theme: "border",
-                            children: "Make your short-term rental listings work for you, without the hassle"
-                        }, void 0, false, {
-                            fileName: "playground/App.tsx",
-                            lineNumber: 87,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Table), {
-                            bodyChildren: [
-                                [
-                                    "John DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn Doe",
-                                    "32",
-                                    "United States", 
+                                iconPosition: "right",
+                                children: "Button"
+                            }, void 0, false, {
+                                fileName: "playground/App.tsx",
+                                lineNumber: 64,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
+                                ariaLabel: "button",
+                                icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
+                                iconPosition: "right",
+                                small: true,
+                                children: "Button"
+                            }, void 0, false, {
+                                fileName: "playground/App.tsx",
+                                lineNumber: 67,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Dialog), {
+                                trigger: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
+                                    ariaLabel: "button",
+                                    icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
+                                    iconPosition: "right",
+                                    small: true,
+                                    children: "Button"
+                                }, void 0, false, void 0, void 0),
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                    as: "h3",
+                                    children: "Test"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 80,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "playground/App.tsx",
+                                lineNumber: 70,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Dropdown), {
+                                trigger: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
+                                    ariaLabel: "button",
+                                    icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
+                                    children: "Dropdown Test"
+                                }, void 0, false, void 0, void 0),
+                                filter: true,
+                                options: [
+                                    {
+                                        label: "Option 1",
+                                        value: "option-1"
+                                    },
+                                    {
+                                        label: "Option 2",
+                                        value: "option-2"
+                                    },
+                                    {
+                                        label: "Option 3",
+                                        value: "option-3"
+                                    }, 
+                                ]
+                            }, void 0, false, {
+                                fileName: "playground/App.tsx",
+                                lineNumber: 82,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
+                                theme: "fill",
+                                ariaLabel: "button",
+                                block: true,
+                                icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
+                                iconPosition: "right",
+                                children: "Button"
+                            }, void 0, false, {
+                                fileName: "playground/App.tsx",
+                                lineNumber: 96,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
+                                theme: "border",
+                                children: "Make your short-term rental listings work for you, without the hassle"
+                            }, void 0, false, {
+                                fileName: "playground/App.tsx",
+                                lineNumber: 104,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Table), {
+                                bodyChildren: [
+                                    [
+                                        "John DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn Doe",
+                                        "32",
+                                        "United States", 
+                                    ],
+                                    [
+                                        "Jane Doe",
+                                        "25",
+                                        "United States"
+                                    ],
+                                    [
+                                        "John Doe",
+                                        "32",
+                                        "United States"
+                                    ],
+                                    [
+                                        "Jane Doe",
+                                        "25",
+                                        "United States"
+                                    ],
+                                    [
+                                        "Jane Doe",
+                                        "25",
+                                        "United States"
+                                    ],
+                                    [
+                                        "Jane Doe",
+                                        "25",
+                                        "United States"
+                                    ],
+                                    [
+                                        "Jane Doe",
+                                        "25",
+                                        "United States"
+                                    ],
+                                    [
+                                        "Jane Doe",
+                                        "25",
+                                        "United States"
+                                    ],
+                                    [
+                                        "Jane Doe",
+                                        "25",
+                                        "United States"
+                                    ], 
                                 ],
-                                [
-                                    "Jane Doe",
-                                    "25",
-                                    "United States"
-                                ],
-                                [
-                                    "John Doe",
-                                    "32",
-                                    "United States"
-                                ],
-                                [
-                                    "Jane Doe",
-                                    "25",
-                                    "United States"
-                                ],
-                                [
-                                    "Jane Doe",
-                                    "25",
-                                    "United States"
-                                ],
-                                [
-                                    "Jane Doe",
-                                    "25",
-                                    "United States"
-                                ],
-                                [
-                                    "Jane Doe",
-                                    "25",
-                                    "United States"
-                                ],
-                                [
-                                    "Jane Doe",
-                                    "25",
-                                    "United States"
-                                ],
-                                [
-                                    "Jane Doe",
-                                    "25",
-                                    "United States"
-                                ], 
-                            ],
-                            headChildren: [
-                                "Name",
-                                "Age",
-                                "Country"
-                            ]
-                        }, void 0, false, {
-                            fileName: "playground/App.tsx",
-                            lineNumber: 90,
-                            columnNumber: 13
-                        }, this)
-                    ]
-                }, void 0, true, {
+                                headChildren: [
+                                    "Name",
+                                    "Age",
+                                    "Country"
+                                ]
+                            }, void 0, false, {
+                                fileName: "playground/App.tsx",
+                                lineNumber: 107,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "playground/App.tsx",
+                        lineNumber: 27,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
                     fileName: "playground/App.tsx",
                     lineNumber: 26,
-                    columnNumber: 11
+                    columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "playground/App.tsx",
                 lineNumber: 25,
-                columnNumber: 9
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.View), {
+                inverted: true,
+                container: true,
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
+                    direction: "row",
+                    flex: "center",
+                    top: "4",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
+                        direction: "column",
+                        width: 25,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
+                                theme: "fill",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
+                                        bottom: "6",
+                                        top: "6"
+                                    }, void 0, false, {
+                                        fileName: "playground/App.tsx",
+                                        lineNumber: 133,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                        as: "h1",
+                                        children: "Airbnb, Stayz, Booking.com and Homes & Villas Management"
+                                    }, void 0, false, {
+                                        fileName: "playground/App.tsx",
+                                        lineNumber: 134,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                        as: "h2",
+                                        children: "Make your short-term rental listings work for you, without the hassle"
+                                    }, void 0, false, {
+                                        fileName: "playground/App.tsx",
+                                        lineNumber: 137,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                        as: "h3",
+                                        children: "Make your short-term rental listings work for you, without the hassle"
+                                    }, void 0, false, {
+                                        fileName: "playground/App.tsx",
+                                        lineNumber: 140,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                        as: "h4",
+                                        children: "Make your short-term rental listings work for you, without the hassle"
+                                    }, void 0, false, {
+                                        fileName: "playground/App.tsx",
+                                        lineNumber: 143,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                        as: "h5",
+                                        children: "Make your short-term rental listings work for you, without the hassle"
+                                    }, void 0, false, {
+                                        fileName: "playground/App.tsx",
+                                        lineNumber: 146,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                        as: "h6",
+                                        children: "Make your short-term rental listings work for you, without the hassle"
+                                    }, void 0, false, {
+                                        fileName: "playground/App.tsx",
+                                        lineNumber: 149,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                        as: "p",
+                                        children: "Make your short-term rental listings work for you, without the hassle"
+                                    }, void 0, false, {
+                                        fileName: "playground/App.tsx",
+                                        lineNumber: 152,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                        as: "small",
+                                        children: "Make your short-term rental listings work for you, without the hassle"
+                                    }, void 0, false, {
+                                        fileName: "playground/App.tsx",
+                                        lineNumber: 155,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.ProviderToggle), {
+                                        trigger: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
+                                            ariaLabel: "Toggle",
+                                            children: "Toggle"
+                                        }, void 0, false, void 0, void 0)
+                                    }, void 0, false, {
+                                        fileName: "playground/App.tsx",
+                                        lineNumber: 158,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
+                                        align: "center",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
+                                            listen: true,
+                                            submit: "Alert",
+                                            submitValid: true,
+                                            submitFunction: ()=>alert("lol")
+                                        }, void 0, false, {
+                                            fileName: "playground/App.tsx",
+                                            lineNumber: 160,
+                                            columnNumber: 17
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "playground/App.tsx",
+                                        lineNumber: 159,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "playground/App.tsx",
+                                lineNumber: 132,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
+                                ariaLabel: "button",
+                                icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
+                                iconPosition: "right",
+                                children: "Button"
+                            }, void 0, false, {
+                                fileName: "playground/App.tsx",
+                                lineNumber: 168,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
+                                ariaLabel: "button",
+                                icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
+                                iconPosition: "right",
+                                small: true,
+                                children: "Button"
+                            }, void 0, false, {
+                                fileName: "playground/App.tsx",
+                                lineNumber: 171,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Dialog), {
+                                trigger: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
+                                    ariaLabel: "button",
+                                    icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
+                                    iconPosition: "right",
+                                    small: true,
+                                    children: "Button"
+                                }, void 0, false, void 0, void 0),
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                    as: "h3",
+                                    children: "Test"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 184,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "playground/App.tsx",
+                                lineNumber: 174,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Dropdown), {
+                                trigger: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
+                                    ariaLabel: "button",
+                                    icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
+                                    children: "Dropdown Test"
+                                }, void 0, false, void 0, void 0),
+                                filter: true,
+                                options: [
+                                    {
+                                        label: "Option 1",
+                                        value: "option-1"
+                                    },
+                                    {
+                                        label: "Option 2",
+                                        value: "option-2"
+                                    },
+                                    {
+                                        label: "Option 3",
+                                        value: "option-3"
+                                    }, 
+                                ]
+                            }, void 0, false, {
+                                fileName: "playground/App.tsx",
+                                lineNumber: 186,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
+                                theme: "fill",
+                                ariaLabel: "button",
+                                block: true,
+                                icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
+                                iconPosition: "right",
+                                children: "Button"
+                            }, void 0, false, {
+                                fileName: "playground/App.tsx",
+                                lineNumber: 200,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
+                                theme: "border",
+                                children: "Make your short-term rental listings work for you, without the hassle"
+                            }, void 0, false, {
+                                fileName: "playground/App.tsx",
+                                lineNumber: 208,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Table), {
+                                bodyChildren: [
+                                    [
+                                        "John DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn Doe",
+                                        "32",
+                                        "United States", 
+                                    ],
+                                    [
+                                        "Jane Doe",
+                                        "25",
+                                        "United States"
+                                    ],
+                                    [
+                                        "John Doe",
+                                        "32",
+                                        "United States"
+                                    ],
+                                    [
+                                        "Jane Doe",
+                                        "25",
+                                        "United States"
+                                    ],
+                                    [
+                                        "Jane Doe",
+                                        "25",
+                                        "United States"
+                                    ],
+                                    [
+                                        "Jane Doe",
+                                        "25",
+                                        "United States"
+                                    ],
+                                    [
+                                        "Jane Doe",
+                                        "25",
+                                        "United States"
+                                    ],
+                                    [
+                                        "Jane Doe",
+                                        "25",
+                                        "United States"
+                                    ],
+                                    [
+                                        "Jane Doe",
+                                        "25",
+                                        "United States"
+                                    ], 
+                                ],
+                                headChildren: [
+                                    "Name",
+                                    "Age",
+                                    "Country"
+                                ]
+                            }, void 0, false, {
+                                fileName: "playground/App.tsx",
+                                lineNumber: 211,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "playground/App.tsx",
+                        lineNumber: 131,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "playground/App.tsx",
+                    lineNumber: 130,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "playground/App.tsx",
+                lineNumber: 129,
+                columnNumber: 7
             }, this)
-        }, void 0, false, {
-            fileName: "playground/App.tsx",
-            lineNumber: 24,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
+        ]
+    }, void 0, true, {
         fileName: "playground/App.tsx",
-        lineNumber: 23,
+        lineNumber: 24,
         columnNumber: 5
     }, this);
 }
@@ -33089,7 +33398,7 @@ var stringToPath = function stringToPath(string) {
 module.exports = function GetIntrinsic(name, allowMissing) {
     if (typeof name !== "string" || name.length === 0) throw new $TypeError("intrinsic name must be a non-empty string");
     if (arguments.length > 1 && typeof allowMissing !== "boolean") throw new $TypeError('"allowMissing" argument must be a boolean');
-    if ($exec(/^%?[^%]*%?$/g, name) === null) throw new $SyntaxError("`%` may not be present anywhere but at the beginning and end of the intrinsic name");
+    if ($exec(/^%?[^%]*%?$/, name) === null) throw new $SyntaxError("`%` may not be present anywhere but at the beginning and end of the intrinsic name");
     var parts = stringToPath(name);
     var intrinsicBaseName = parts.length > 0 ? parts[0] : "";
     var intrinsic = getBaseIntrinsic("%" + intrinsicBaseName + "%", allowMissing);
@@ -33376,30 +33685,52 @@ var tryFunctionObject = function tryFunctionToStr(value) {
     }
 };
 var toStr = Object.prototype.toString;
+var objectClass = "[object Object]";
 var fnClass = "[object Function]";
 var genClass = "[object GeneratorFunction]";
+var ddaClass = "[object HTMLAllCollection]"; // IE 11
+var ddaClass2 = "[object HTML document.all class]";
+var ddaClass3 = "[object HTMLCollection]"; // IE 9-10
 var hasToStringTag = typeof Symbol === "function" && !!Symbol.toStringTag; // better: use `has-tostringtag`
-/* globals document: false */ var documentDotAll = typeof document === "object" && typeof document.all === "undefined" && document.all !== undefined ? document.all : {};
+var isIE68 = !(0 in [
+    , 
+]); // eslint-disable-line no-sparse-arrays, comma-spacing
+var isDDA = function isDocumentDotAll() {
+    return false;
+};
+if (typeof document === "object") {
+    // Firefox 3 canonicalizes DDA to undefined when it's not accessed directly
+    var all = document.all;
+    if (toStr.call(all) === toStr.call(document.all)) isDDA = function isDocumentDotAll(value) {
+        /* globals document: false */ // in IE 6-8, typeof document.all is "object" and it's truthy
+        if ((isIE68 || !value) && (typeof value === "undefined" || typeof value === "object")) try {
+            var str = toStr.call(value);
+            return (str === ddaClass || str === ddaClass2 || str === ddaClass3 // opera 12.16
+             || str === objectClass // IE 6-8
+            ) && value("") == null; // eslint-disable-line eqeqeq
+        } catch (e) {}
+        return false;
+    };
+}
 module.exports = reflectApply ? function isCallable(value) {
-    if (value === documentDotAll) return true;
+    if (isDDA(value)) return true;
     if (!value) return false;
     if (typeof value !== "function" && typeof value !== "object") return false;
-    if (typeof value === "function" && !value.prototype) return true;
     try {
         reflectApply(value, null, badArrayLike);
     } catch (e) {
         if (e !== isCallableMarker) return false;
     }
-    return !isES6ClassFn(value);
+    return !isES6ClassFn(value) && tryFunctionObject(value);
 } : function isCallable(value) {
-    if (value === documentDotAll) return true;
+    if (isDDA(value)) return true;
     if (!value) return false;
     if (typeof value !== "function" && typeof value !== "object") return false;
-    if (typeof value === "function" && !value.prototype) return true;
     if (hasToStringTag) return tryFunctionObject(value);
     if (isES6ClassFn(value)) return false;
     var strClass = toStr.call(value);
-    return strClass === fnClass || strClass === genClass;
+    if (strClass !== fnClass && strClass !== genClass && !/^\[object HTML/.test(strClass)) return false;
+    return tryFunctionObject(value);
 };
 
 },{}],"kfela":[function(require,module,exports) {
@@ -33594,7 +33925,7 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
     theme: {
         colors: {
             accent: "#a2aac2",
-            background: "rgb(18, 24, 38)",
+            background: "rgb(10, 12, 30)",
             blueBorder: "rgba(115, 172, 255, 0.4)",
             blueOverlay: "rgba(151, 193, 255, 0.2)",
             blueText: "rgb(166, 179, 255)",
@@ -33661,10 +33992,10 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             2: "0.5rem",
             3: "0.75rem",
             4: "1rem",
-            5: "2.5rem",
-            6: "5rem",
-            7: "7.5rem",
-            8: "9rem"
+            5: "2rem",
+            6: "4rem",
+            7: "8rem",
+            8: "10rem"
         },
         transitions: {
             default: "all 0.13s ease-in-out"
@@ -40428,7 +40759,10 @@ parcelHelpers.export(exports, "BoxImageChildrenStyled", ()=>BoxImageChildrenStyl
 const paddingVariants = {
     padding: {
         default: {
-            padding: "$5"
+            padding: "$5",
+            [(0, _stitchesConfig.breakpoints).phone]: {
+                padding: "$4"
+            }
         },
         none: {
             padding: 0
@@ -40825,6 +41159,7 @@ parcelHelpers.export(exports, "useCountdown", ()=>(0, _useCountdownDefault.defau
 parcelHelpers.export(exports, "useCounter", ()=>(0, _useCounterDefault.default));
 parcelHelpers.export(exports, "useDarkMode", ()=>(0, _useDarkModeDefault.default));
 parcelHelpers.export(exports, "useDebounce", ()=>(0, _useDebounceDefault.default));
+parcelHelpers.export(exports, "useDocumentTitle", ()=>(0, _useDocumentTitleDefault.default));
 parcelHelpers.export(exports, "useEffectOnce", ()=>(0, _useEffectOnceDefault.default));
 parcelHelpers.export(exports, "useElementSize", ()=>(0, _useElementSizeDefault.default));
 parcelHelpers.export(exports, "useEventCallback", ()=>(0, _useEventCallbackDefault.default));
@@ -40874,6 +41209,9 @@ parcelHelpers.exportAll(_useDarkMode, exports);
 var _useDebounce = require("./useDebounce/useDebounce");
 var _useDebounceDefault = parcelHelpers.interopDefault(_useDebounce);
 parcelHelpers.exportAll(_useDebounce, exports);
+var _useDocumentTitle = require("./useDocumentTitle/useDocumentTitle");
+var _useDocumentTitleDefault = parcelHelpers.interopDefault(_useDocumentTitle);
+parcelHelpers.exportAll(_useDocumentTitle, exports);
 var _useEffectOnce = require("./useEffectOnce/useEffectOnce");
 var _useEffectOnceDefault = parcelHelpers.interopDefault(_useEffectOnce);
 parcelHelpers.exportAll(_useEffectOnce, exports);
@@ -40959,7 +41297,7 @@ var _useWindowSize = require("./useWindowSize/useWindowSize");
 var _useWindowSizeDefault = parcelHelpers.interopDefault(_useWindowSize);
 parcelHelpers.exportAll(_useWindowSize, exports);
 
-},{"./useBoolean/useBoolean":"75OO8","./useClickAnyWhere/useClickAnyWhere":"faDbb","./useCopyToClipboard/useCopyToClipboard":"2BS9r","./useCountdown/useCountdown":"fIMZs","./useCounter/useCounter":"kSFgg","./useDarkMode/useDarkMode":"aqL5L","./useDebounce/useDebounce":"lNmEG","./useEffectOnce/useEffectOnce":"3jP3w","./useElementSize/useElementSize":"2iww6","./useEventCallback/useEventCallback":"iwlUo","./useEventListener/useEventListener":"1HJqq","./useFetch/useFetch":"26gvK","./useHover/useHover":"eNC2T","./useImageOnLoad/useImageOnLoad":"fttn3","./useIntersectionObserver/useIntersectionObserver":"9IP75","./useInterval/useInterval":"GPWw2","./useIsClient/useIsClient":"3emvU","./useIsFirstRender/useIsFirstRender":"g3oAw","./useIsMounted/useIsMounted":"2uJb6","./useIsomorphicLayoutEffect/useIsomorphicLayoutEffect":"fWEdC","./useLocalStorage/useLocalStorage":"2Bbwp","./useLockedBody/useLockedBody":"aCXSw","./useMap/useMap":"2ZsJ5","./useMediaQuery/useMediaQuery":"26a3m","./useOnClickOutside/useOnClickOutside":"eLhz8","./useReadLocalStorage/useReadLocalStorage":"4VBoB","./useScreen/useScreen":"6YQVm","./useScript/useScript":"djE9J","./useSessionStorage/useSessionStorage":"jTdlC","./useSsr/useSsr":"9XRLH","./useStep/useStep":"2zb9y","./useTernaryDarkMode/useTernaryDarkMode":"9k0Mg","./useTimeout/useTimeout":"iuWi6","./useUpdateEffect/useUpdateEffect":"Gp0lB","./useWindowSize/useWindowSize":"73GDr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"75OO8":[function(require,module,exports) {
+},{"./useBoolean/useBoolean":"75OO8","./useClickAnyWhere/useClickAnyWhere":"faDbb","./useCopyToClipboard/useCopyToClipboard":"2BS9r","./useCountdown/useCountdown":"fIMZs","./useCounter/useCounter":"kSFgg","./useDarkMode/useDarkMode":"aqL5L","./useDebounce/useDebounce":"lNmEG","./useEffectOnce/useEffectOnce":"3jP3w","./useElementSize/useElementSize":"2iww6","./useEventCallback/useEventCallback":"iwlUo","./useEventListener/useEventListener":"1HJqq","./useFetch/useFetch":"26gvK","./useHover/useHover":"eNC2T","./useImageOnLoad/useImageOnLoad":"fttn3","./useIntersectionObserver/useIntersectionObserver":"9IP75","./useInterval/useInterval":"GPWw2","./useIsClient/useIsClient":"3emvU","./useIsFirstRender/useIsFirstRender":"g3oAw","./useIsMounted/useIsMounted":"2uJb6","./useIsomorphicLayoutEffect/useIsomorphicLayoutEffect":"fWEdC","./useLocalStorage/useLocalStorage":"2Bbwp","./useLockedBody/useLockedBody":"aCXSw","./useMap/useMap":"2ZsJ5","./useMediaQuery/useMediaQuery":"26a3m","./useOnClickOutside/useOnClickOutside":"eLhz8","./useReadLocalStorage/useReadLocalStorage":"4VBoB","./useScreen/useScreen":"6YQVm","./useScript/useScript":"djE9J","./useSessionStorage/useSessionStorage":"jTdlC","./useSsr/useSsr":"9XRLH","./useStep/useStep":"2zb9y","./useTernaryDarkMode/useTernaryDarkMode":"9k0Mg","./useTimeout/useTimeout":"iuWi6","./useUpdateEffect/useUpdateEffect":"Gp0lB","./useWindowSize/useWindowSize":"73GDr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./useDocumentTitle/useDocumentTitle":"esgc8"}],"75OO8":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -41948,7 +42286,20 @@ function useWindowSize() {
 }
 exports.default = useWindowSize;
 
-},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"awDkT":[function(require,module,exports) {
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"esgc8":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _ = require("..");
+function useDocumentTitle(title) {
+    (0, _.useIsomorphicLayoutEffect)(()=>{
+        window.document.title = title;
+    }, [
+        title
+    ]);
+}
+exports.default = useDocumentTitle;
+
+},{"..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"awDkT":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "DialogStyled", ()=>DialogStyled);
@@ -42137,6 +42488,7 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _usehooksTs = require("usehooks-ts");
 var _input = require("../Input");
+var _loading = require("../Loading");
 var _stack = require("../Stack");
 var _text = require("../Text");
 var _dropdownStyles = require("./Dropdown.styles");
@@ -42191,7 +42543,7 @@ function Dropdown(props) {
                 children: props.trigger
             }, props.active || Math.random(), false, {
                 fileName: "src/components/Dropdown/Dropdown.tsx",
-                lineNumber: 98,
+                lineNumber: 99,
                 columnNumber: 7
             }, this),
             isMounted && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownStyles.DropdownGroupStyled), {
@@ -42205,41 +42557,38 @@ function Dropdown(props) {
                 ref: ref,
                 children: [
                     props.filter && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stack.Stack), {
-                        top: "1",
                         bottom: "2",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _input.Input), {
-                                disabled: !props.options,
-                                onChange: (e)=>setFilter(e.target.value),
-                                placeholder: "Search"
-                            }, void 0, false, {
-                                fileName: "src/components/Dropdown/Dropdown.tsx",
-                                lineNumber: 115,
-                                columnNumber: 15
-                            }, this),
-                            filteredOptions.length === 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _text.Text), {
-                                accent: true,
-                                as: "p",
-                                css: {
-                                    padding: "$2 $3 $1 $3"
-                                },
-                                children: [
-                                    "No results found for ",
-                                    filter,
-                                    "."
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/Dropdown/Dropdown.tsx",
-                                lineNumber: 121,
-                                columnNumber: 17
-                            }, this)
-                        ]
-                    }, void 0, true, {
+                        top: "1",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _input.Input), {
+                            disabled: !props.options,
+                            onChange: (e)=>setFilter(e.target.value),
+                            placeholder: "Search"
+                        }, void 0, false, {
+                            fileName: "src/components/Dropdown/Dropdown.tsx",
+                            lineNumber: 116,
+                            columnNumber: 15
+                        }, this)
+                    }, void 0, false, {
                         fileName: "src/components/Dropdown/Dropdown.tsx",
-                        lineNumber: 114,
+                        lineNumber: 115,
                         columnNumber: 13
                     }, this),
-                    filteredOptions.map(({ label , value  })=>props.submenu ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownStyles.DropdownItemStyled), {
+                    props.loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loading.Loading), {}, void 0, false, {
+                        fileName: "src/components/Dropdown/Dropdown.tsx",
+                        lineNumber: 124,
+                        columnNumber: 13
+                    }, this) : !props.options || filteredOptions.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _text.Text), {
+                        accent: true,
+                        as: "p",
+                        css: {
+                            padding: "$2 $3 $1 $3"
+                        },
+                        children: "No results found."
+                    }, void 0, false, {
+                        fileName: "src/components/Dropdown/Dropdown.tsx",
+                        lineNumber: 126,
+                        columnNumber: 13
+                    }, this) : filteredOptions.map(({ label , value  })=>props.submenu ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownStyles.DropdownItemStyled), {
                             css: {
                                 opacity: path === value ? 0.44 : 1
                             },
@@ -42249,13 +42598,13 @@ function Dropdown(props) {
                                 children: label
                             }, void 0, false, {
                                 fileName: "src/components/Dropdown/Dropdown.tsx",
-                                lineNumber: 135,
-                                columnNumber: 17
+                                lineNumber: 138,
+                                columnNumber: 19
                             }, this)
                         }, value, false, {
                             fileName: "src/components/Dropdown/Dropdown.tsx",
-                            lineNumber: 129,
-                            columnNumber: 15
+                            lineNumber: 132,
+                            columnNumber: 17
                         }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownStyles.DropdownItemStyled), {
                             css: {
                                 opacity: props.active && props.active === value ? 0.44 : 1
@@ -42267,19 +42616,19 @@ function Dropdown(props) {
                             children: label
                         }, value, false, {
                             fileName: "src/components/Dropdown/Dropdown.tsx",
-                            lineNumber: 138,
-                            columnNumber: 15
+                            lineNumber: 141,
+                            columnNumber: 17
                         }, this))
                 ]
             }, void 0, true, {
                 fileName: "src/components/Dropdown/Dropdown.tsx",
-                lineNumber: 104,
+                lineNumber: 105,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Dropdown/Dropdown.tsx",
-        lineNumber: 97,
+        lineNumber: 98,
         columnNumber: 5
     }, this);
 }
@@ -42301,7 +42650,7 @@ $RefreshReg$(_c, "Dropdown");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","next/router":"hphgm","react":"21dqq","usehooks-ts":"dmUe4","./Dropdown.styles":"jxb92","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Input":"iclCk","../Stack":"6V7Vx","../Text":"d5OVu"}],"hphgm":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","next/router":"hphgm","react":"21dqq","usehooks-ts":"dmUe4","./Dropdown.styles":"jxb92","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Input":"iclCk","../Stack":"6V7Vx","../Text":"d5OVu","../Loading":"gWqOi"}],"hphgm":[function(require,module,exports) {
 module.exports = require("./dist/client/router");
 
 },{"./dist/client/router":"9DVWS"}],"9DVWS":[function(require,module,exports) {
@@ -46164,6 +46513,7 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 /** @format */ var _phosphorReact = require("phosphor-react");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _usehooksTs = require("usehooks-ts");
 var _badge = require("../Badge");
 var _button = require("../Button");
 var _loading = require("../Loading");
@@ -46190,6 +46540,9 @@ function Input(props) {
     function handleReveal() {
         setIsRevealed(!isRevealed);
     }
+    (0, _usehooksTs.useEventListener)("keydown", (e)=>{
+        if (props.listen && e.key === "Enter" && props.submitFunction && props.submitValid) props.submitFunction();
+    });
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputStyles.InputStyled), {
         css: {
             maxWidth: props.width || "100%",
@@ -46211,14 +46564,14 @@ function Input(props) {
                         value: value
                     }, void 0, false, {
                         fileName: "src/components/Input/Input.tsx",
-                        lineNumber: 84,
+                        lineNumber: 92,
                         columnNumber: 9
                     }, this),
                     (props.loading || props.submit || props.copy || props.reveal) && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputStyles.InputFunctionStyled), {
                         children: [
                             props.loading && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loading.Loading), {}, void 0, false, {
                                 fileName: "src/components/Input/Input.tsx",
-                                lineNumber: 95,
+                                lineNumber: 103,
                                 columnNumber: 31
                             }, this),
                             props.copy && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
@@ -46238,7 +46591,7 @@ function Input(props) {
                                 children: "Copy"
                             }, void 0, false, {
                                 fileName: "src/components/Input/Input.tsx",
-                                lineNumber: 97,
+                                lineNumber: 105,
                                 columnNumber: 15
                             }, this),
                             props.reveal && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
@@ -46257,7 +46610,7 @@ function Input(props) {
                                 children: isRevealed ? "Hide" : "Show"
                             }, void 0, false, {
                                 fileName: "src/components/Input/Input.tsx",
-                                lineNumber: 116,
+                                lineNumber: 124,
                                 columnNumber: 15
                             }, this),
                             props.submit && props.submitFunction && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
@@ -46272,25 +46625,26 @@ function Input(props) {
                                 children: props.submit
                             }, void 0, false, {
                                 fileName: "src/components/Input/Input.tsx",
-                                lineNumber: 132,
+                                lineNumber: 140,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Input/Input.tsx",
-                        lineNumber: 94,
+                        lineNumber: 102,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Input/Input.tsx",
-                lineNumber: 73,
+                lineNumber: 81,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputStyles.InputCallbackStyled), {
                 children: [
                     props.error && !props.success && !props.warning && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badge.Badge), {
                         css: {
+                            fontSize: "$p !important",
                             backgroundColor: "transparent",
                             padding: 0
                         },
@@ -46301,11 +46655,12 @@ function Input(props) {
                         children: props.errorMessage || "Error"
                     }, void 0, false, {
                         fileName: "src/components/Input/Input.tsx",
-                        lineNumber: 149,
+                        lineNumber: 157,
                         columnNumber: 11
                     }, this),
                     props.success && !props.error && !props.warning && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badge.Badge), {
                         css: {
+                            fontSize: "$p !important",
                             backgroundColor: "transparent",
                             padding: 0
                         },
@@ -46316,11 +46671,12 @@ function Input(props) {
                         children: props.successMessage || "Success"
                     }, void 0, false, {
                         fileName: "src/components/Input/Input.tsx",
-                        lineNumber: 157,
+                        lineNumber: 169,
                         columnNumber: 11
                     }, this),
                     props.warning && !props.success && !props.error && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badge.Badge), {
                         css: {
+                            fontSize: "$p !important",
                             backgroundColor: "transparent",
                             padding: 0
                         },
@@ -46331,24 +46687,28 @@ function Input(props) {
                         children: props.warningMessage || "Invalid"
                     }, void 0, false, {
                         fileName: "src/components/Input/Input.tsx",
-                        lineNumber: 165,
+                        lineNumber: 181,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Input/Input.tsx",
-                lineNumber: 147,
+                lineNumber: 155,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Input/Input.tsx",
-        lineNumber: 67,
+        lineNumber: 75,
         columnNumber: 5
     }, this);
 }
 exports.default = Input;
-_s(Input, "0HFiM8ywWSrlB0PWSMJfO/viX+s=");
+_s(Input, "8h+VdGhhoBI0wcGRRtz8ePx6A9Y=", false, function() {
+    return [
+        (0, _usehooksTs.useEventListener)
+    ];
+});
 _c = Input;
 var _c;
 $RefreshReg$(_c, "Input");
@@ -46358,7 +46718,7 @@ $RefreshReg$(_c, "Input");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","../Badge":"egHOx","../Button":"i3jlU","../Loading":"gWqOi","./Input.styles":"crIMc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"crIMc":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","../Badge":"egHOx","../Button":"i3jlU","../Loading":"gWqOi","./Input.styles":"crIMc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","usehooks-ts":"dmUe4"}],"crIMc":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "InputStyled", ()=>InputStyled);
@@ -46773,7 +47133,7 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 "fontSize": "$h1",
                 "fontWeight": "$h1",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h1 * 0.925)"
+                    fontSize: "calc($h1 * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h1 * 0.95)"
@@ -46787,7 +47147,7 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 "fontSize": "$h2",
                 "fontWeight": "$h2",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h2 * 0.925)"
+                    fontSize: "calc($h2 * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h2 * 0.95)"
@@ -46801,7 +47161,7 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 "fontSize": "$h3",
                 "fontWeight": "$h3",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h3 * 0.925)"
+                    fontSize: "calc($h3 * 0.9)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h3 * 0.95)"
@@ -46838,7 +47198,6 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 "&:not(:last-child)": {
                     marginBottom: "$4"
                 },
-                "color": "$accent",
                 "fontSize": "$h6",
                 "fontWeight": "$h6",
                 "lineHeight": "1.35 !important",
@@ -48717,6 +49076,6 @@ const FieldFunctionStyled = (0, _stitchesConfig.styled)("div", {
     width: "100%"
 });
 
-},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["1xC6H","kNcRP","fCQ4v"], "fCQ4v", "parcelRequire8e9c")
+},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["1xC6H","kNcRP","fCQ4v"], "fCQ4v", "parcelRequired827")
 
 //# sourceMappingURL=index.0827b5b9.js.map

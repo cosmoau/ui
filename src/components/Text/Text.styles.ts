@@ -30,7 +30,7 @@ export const TextStyled = styled('div', {
         'fontWeight': '$h1',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h1 * 0.925)',
+          fontSize: 'calc($h1 * 0.9)',
         },
         [breakpoints.tabletX]: {
           fontSize: 'calc($h1 * 0.95)',
@@ -46,7 +46,7 @@ export const TextStyled = styled('div', {
         'fontWeight': '$h2',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h2 * 0.925)',
+          fontSize: 'calc($h2 * 0.9)',
         },
         [breakpoints.tabletX]: {
           fontSize: 'calc($h2 * 0.95)',
@@ -62,7 +62,7 @@ export const TextStyled = styled('div', {
         'fontWeight': '$h3',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h3 * 0.925)',
+          fontSize: 'calc($h3 * 0.9)',
         },
         [breakpoints.tabletX]: {
           fontSize: 'calc($h3 * 0.95)',
@@ -101,7 +101,6 @@ export const TextStyled = styled('div', {
         '&:not(:last-child)': {
           marginBottom: '$4',
         },
-        'color': '$accent',
         'fontSize': '$h6',
         'fontWeight': '$h6',
         'lineHeight': '1.35 !important',

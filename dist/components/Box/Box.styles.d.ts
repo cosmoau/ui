@@ -2,6 +2,9 @@
 export declare const paddingVariants: {
     padding: {
         default: {
+            [x: string]: string | {
+                padding: string;
+            };
             padding: string;
         };
         none: {
@@ -21,6 +24,9 @@ export declare const BoxStyled: import("@stitches/react/types/styled-component")
     variants: {
         padding: {
             default: {
+                [x: string]: string | {
+                    padding: string;
+                };
                 padding: string;
             };
             none: {
@@ -215,6 +221,9 @@ export declare const BoxImageChildrenStyled: import("@stitches/react/types/style
     variants: {
         padding: {
             default: {
+                [x: string]: string | {
+                    padding: string;
+                };
                 padding: string;
             };
             none: {

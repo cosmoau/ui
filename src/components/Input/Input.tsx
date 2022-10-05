@@ -2,6 +2,7 @@
 
 import { Check, ClipboardText, Eye, EyeClosed, Warning } from 'phosphor-react';
 import React, { InputHTMLAttributes, useState } from 'react';
+import { useEventListener } from 'usehooks-ts';
 
 import { DefaultProps } from '../../stitches.config';
 import { Badge } from '../Badge';
@@ -32,6 +33,7 @@ export interface Props extends InputHTMLAttributes<HTMLInputElement>, DefaultPro
   warningMessage?: string;
   disabled?: boolean;
   width?: number | string;
+  listen?: boolean;
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   mustRef?: any;
@@ -62,6 +64,12 @@ export default function Input(props: Props): JSX.Element {
   function handleReveal(): void {
     setIsRevealed(!isRevealed);
   }
+
+  useEventListener('keydown', (e: KeyboardEvent) => {
+    if (props.listen && e.key === 'Enter' && props.submitFunction && props.submitValid) {
+      props.submitFunction();
+    }
+  });
 
   return (
     <InputStyled
@@ -147,7 +155,11 @@ export default function Input(props: Props): JSX.Element {
       <InputCallbackStyled>
         {props.error && !props.success && !props.warning && (
           <Badge
-            css={{ backgroundColor: 'transparent', padding: 0 }}
+            css={{
+              backgroundColor: 'transparent',
+              fontSize: '$p !important',
+              padding: 0,
+            }}
             icon={<Warning weight='duotone' />}
             theme='red'>
             {props.errorMessage || 'Error'}
@@ -155,7 +167,11 @@ export default function Input(props: Props): JSX.Element {
         )}
         {props.success && !props.error && !props.warning && (
           <Badge
-            css={{ backgroundColor: 'transparent', padding: 0 }}
+            css={{
+              backgroundColor: 'transparent',
+              fontSize: '$p !important',
+              padding: 0,
+            }}
             icon={<Check weight='duotone' />}
             theme='green'>
             {props.successMessage || 'Success'}
@@ -163,7 +179,11 @@ export default function Input(props: Props): JSX.Element {
         )}
         {props.warning && !props.success && !props.error && (
           <Badge
-            css={{ backgroundColor: 'transparent', padding: 0 }}
+            css={{
+              backgroundColor: 'transparent',
+              fontSize: '$p !important',
+              padding: 0,
+            }}
             icon={<Warning weight='duotone' />}
             theme='orange'>
             {props.warningMessage || 'Invalid'}

@@ -1,4 +1,6 @@
-# @withcosmo/design-system
+<!-- @format -->
+
+# @cosmoau/ui
 
 By [@dolmios](https://github.com/dolmios).
 
@@ -10,7 +12,7 @@ By [@dolmios](https://github.com/dolmios).
 
 ### Installation
 
-    yarn add @withcosmo/design-system
+    yarn add @cosmoau/ui
 
 ### Development
 

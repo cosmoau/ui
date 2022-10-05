@@ -14,6 +14,7 @@ export interface Props extends DefaultProps {
     submenu?: boolean;
     locked?: boolean;
     filter?: boolean;
+    loading?: boolean;
 }
 export default function Dropdown(props: Props): JSX.Element;
 //# sourceMappingURL=Dropdown.d.ts.map

@@ -103,7 +103,6 @@ export declare const TextStyled: import("@stitches/react/types/styled-component"
                 '&:not(:last-child)': {
                     marginBottom: string;
                 };
-                color: string;
                 fontSize: string;
                 fontWeight: string;
                 lineHeight: string;
