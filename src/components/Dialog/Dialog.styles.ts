@@ -16,7 +16,7 @@ export const DialogTriggerStyled = styled('div', {
 });
 
 export const DialogOverlayStyled = styled('div', {
-  backgroundColor: 'rgba(2, 2, 16, 0.9)',
+  backgroundColor: 'rgba(116, 116, 121, 0.4)',
   bottom: 0,
   left: 0,
   overflowY: 'scroll',

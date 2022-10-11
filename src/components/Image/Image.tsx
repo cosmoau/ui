@@ -14,17 +14,20 @@ interface Props extends DefaultProps, ImageProps {
 export default function Image(props: Props): JSX.Element {
   const { borderRadius, css, hover, fillHeight, ...rest } = props;
 
-  return (
-    <ImageStyled
-      borderRadius={borderRadius}
-      css={{
-        height: fillHeight || '100%',
-        ...css,
-      }}
-      hover={hover}>
-      <NextImage {...rest} />
-    </ImageStyled>
-  );
-}
+  if (props.src && props.src !== '') {
+    return (
+      <ImageStyled
+        borderRadius={borderRadius}
+        css={{
+          height: fillHeight || '100%',
+          ...css,
+        }}
+        hover={hover}>
+        <NextImage {...rest} />
+      </ImageStyled>
+    );
+  }
 
+  return <></>;
+}
 export const ThreesImage = Image;

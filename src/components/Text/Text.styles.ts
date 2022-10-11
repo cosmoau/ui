@@ -86,10 +86,10 @@ export const TextStyled = styled('div', {
         },
         'fontSize': '$h5',
         'fontWeight': '$h5',
-        'lineHeight': '1.38 !important',
+        'lineHeight': '1.35 !important',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h5 * 0.9)',
+          fontSize: 'calc($h5 * 0.925)',
         },
         [breakpoints.tabletX]: {
           fontSize: 'calc($h5 * 0.95)',
@@ -101,10 +101,10 @@ export const TextStyled = styled('div', {
         },
         'fontSize': '$h6',
         'fontWeight': '$h6',
-        'lineHeight': '1.32 !important',
+        'lineHeight': '1.35 !important',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h6 * 0.9)',
+          fontSize: 'calc($h6 * 0.925)',
         },
         [breakpoints.tabletX]: {
           fontSize: 'calc($h6 * 0.95)',

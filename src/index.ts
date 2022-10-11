@@ -13,7 +13,6 @@ export { Provider, ThemeProvider, ProviderToggle } from './components/Provider/i
 export { Stack } from './components/Stack/index';
 export { Table } from './components/Table/index';
 export { Text } from './components/Text/index';
-export { Toast } from './components/Toast/index';
 export { View } from './components/View/index';
 export { Code } from './components/Code/index';
 export { Field } from './components/Field/index';

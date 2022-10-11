@@ -32877,10 +32877,9 @@ parcelHelpers.export(exports, "ProviderToggle", ()=>(0, _index10.ProviderToggle)
 parcelHelpers.export(exports, "Stack", ()=>(0, _index11.Stack));
 parcelHelpers.export(exports, "Table", ()=>(0, _index12.Table));
 parcelHelpers.export(exports, "Text", ()=>(0, _index13.Text));
-parcelHelpers.export(exports, "Toast", ()=>(0, _index14.Toast));
-parcelHelpers.export(exports, "View", ()=>(0, _index15.View));
-parcelHelpers.export(exports, "Code", ()=>(0, _index16.Code));
-parcelHelpers.export(exports, "Field", ()=>(0, _index17.Field));
+parcelHelpers.export(exports, "View", ()=>(0, _index14.View));
+parcelHelpers.export(exports, "Code", ()=>(0, _index15.Code));
+parcelHelpers.export(exports, "Field", ()=>(0, _index16.Field));
 parcelHelpers.export(exports, "breakpoints", ()=>(0, _stitchesConfig.breakpoints));
 parcelHelpers.export(exports, "css", ()=>(0, _stitchesConfig.css));
 parcelHelpers.export(exports, "getCssText", ()=>(0, _stitchesConfig.getCssText));
@@ -32903,13 +32902,12 @@ var _index10 = require("./components/Provider/index");
 var _index11 = require("./components/Stack/index");
 var _index12 = require("./components/Table/index");
 var _index13 = require("./components/Text/index");
-var _index14 = require("./components/Toast/index");
-var _index15 = require("./components/View/index");
-var _index16 = require("./components/Code/index");
-var _index17 = require("./components/Field/index");
+var _index14 = require("./components/View/index");
+var _index15 = require("./components/Code/index");
+var _index16 = require("./components/Field/index");
 var _stitchesConfig = require("./stitches.config");
 
-},{"./components/Avatar":"iC4G6","./components/Badge/index":"egHOx","./components/Box/index":"8AYsO","./components/Button/index":"i3jlU","./components/Dialog/index":"7DV0X","./components/Divider/index":"4ujjS","./components/Dropdown/index":"9yvFB","./components/Image/index":"ikXqf","./components/Input/index":"iclCk","./components/Loading/index":"gWqOi","./components/Popover/index":"ayKiy","./components/Provider/index":"gZ9Mc","./components/Stack/index":"6V7Vx","./components/Table/index":"kTnYg","./components/Text/index":"d5OVu","./components/Toast/index":"64Cun","./components/View/index":"fyNq0","./components/Code/index":"99Ces","./components/Field/index":"gaJxM","./stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iC4G6":[function(require,module,exports) {
+},{"./components/Avatar":"iC4G6","./components/Badge/index":"egHOx","./components/Box/index":"8AYsO","./components/Button/index":"i3jlU","./components/Dialog/index":"7DV0X","./components/Divider/index":"4ujjS","./components/Dropdown/index":"9yvFB","./components/Image/index":"ikXqf","./components/Input/index":"iclCk","./components/Loading/index":"gWqOi","./components/Popover/index":"ayKiy","./components/Provider/index":"gZ9Mc","./components/Stack/index":"6V7Vx","./components/Table/index":"kTnYg","./components/Text/index":"d5OVu","./components/View/index":"fyNq0","./components/Code/index":"99Ces","./components/Field/index":"gaJxM","./stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iC4G6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Avatar", ()=>(0, _avatarDefault.default));
@@ -33004,7 +33002,7 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _imageStyles = require("./Image.styles");
 function Image(props) {
     const { borderRadius , css , hover , fillHeight , ...rest } = props;
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _imageStyles.ImageStyled), {
+    if (props.src && props.src !== "") return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _imageStyles.ImageStyled), {
         borderRadius: borderRadius,
         css: {
             height: fillHeight || "100%",
@@ -33015,14 +33013,15 @@ function Image(props) {
             ...rest
         }, void 0, false, {
             fileName: "src/components/Image/Image.tsx",
-            lineNumber: 25,
-            columnNumber: 7
+            lineNumber: 26,
+            columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "src/components/Image/Image.tsx",
-        lineNumber: 18,
-        columnNumber: 5
+        lineNumber: 19,
+        columnNumber: 7
     }, this);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {}, void 0, false);
 }
 exports.default = Image;
 _c = Image;
@@ -39125,8 +39124,8 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             blueText: "rgb(166, 179, 255)",
             border: "rgba(253, 250, 246, 0.15)",
             borderHover: "rgba(253, 250, 246, 0.1)",
-            default: "rgba(253, 250, 246, 0.03)",
-            defaultHover: "rgba(253, 250, 246, 0.06)",
+            default: "rgba(253, 250, 246, 0.06)",
+            defaultHover: "rgba(253, 250, 246, 0.1)",
             greenBorder: "rgba(0, 200, 83, 0.4)",
             greenOverlay: "rgba(101, 227, 124, 0.2)",
             greenText: "rgb(124, 241, 151)",
@@ -39147,8 +39146,8 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
         fontSizes: {
             h1: "3.6rem",
             h2: "3rem",
-            h3: "2.8rem",
-            h4: "1.8rem",
+            h3: "2.6rem",
+            h4: "1.7rem",
             h5: "1.6rem",
             h6: "1.5rem",
             p: "1.3rem",
@@ -39252,7 +39251,7 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
 });
 const lightTheme = (0, _react.createTheme)({
     colors: {
-        accent: "rgb(83, 100, 115)",
+        accent: "rgb(40, 57, 73)",
         background: "rgb(253, 250, 246)",
         blueText: "rgb(32, 47, 136)",
         border: "rgba(10, 12, 30,0.11)",
@@ -40663,7 +40662,7 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _image = require("../Image");
 var _boxStyles = require("./Box.styles");
 function Box(props) {
-    return props?.image ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _boxStyles.BoxStyled), {
+    return props.image && props.image !== "" && props.image !== undefined && props.image !== "#" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _boxStyles.BoxStyled), {
         css: props.css,
         hover: props.hover,
         id: props.id,
@@ -40688,15 +40687,15 @@ function Box(props) {
                     layout: "fill",
                     objectFit: "cover",
                     objectPosition: props.imagePosition || "center",
-                    src: props.image.toString()
+                    src: props.image
                 }, void 0, false, {
                     fileName: "src/components/Box/Box.tsx",
-                    lineNumber: 35,
+                    lineNumber: 38,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/Box/Box.tsx",
-                lineNumber: 31,
+                lineNumber: 34,
                 columnNumber: 9
             }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _image.ThreesImage), {
                 alt: props.imageAlt || "#",
@@ -40711,10 +40710,10 @@ function Box(props) {
                 layout: "fill",
                 objectFit: "cover",
                 objectPosition: props.imagePosition || "center",
-                src: props.image.toString()
+                src: props.image
             }, void 0, false, {
                 fileName: "src/components/Box/Box.tsx",
-                lineNumber: 52,
+                lineNumber: 55,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _boxStyles.BoxImageChildrenStyled), {
@@ -40722,13 +40721,13 @@ function Box(props) {
                 children: props.children
             }, void 0, false, {
                 fileName: "src/components/Box/Box.tsx",
-                lineNumber: 68,
+                lineNumber: 71,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Box/Box.tsx",
-        lineNumber: 23,
+        lineNumber: 26,
         columnNumber: 5
     }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _boxStyles.BoxStyled), {
         css: props.css,
@@ -40740,7 +40739,7 @@ function Box(props) {
         children: props.children
     }, void 0, false, {
         fileName: "src/components/Box/Box.tsx",
-        lineNumber: 73,
+        lineNumber: 76,
         columnNumber: 5
     }, this);
 }
@@ -42324,7 +42323,7 @@ const DialogTriggerStyled = (0, _stitchesConfig.styled)("div", {
     "verticalAlign": "middle"
 });
 const DialogOverlayStyled = (0, _stitchesConfig.styled)("div", {
-    backgroundColor: "rgba(2, 2, 16, 0.9)",
+    backgroundColor: "rgba(116, 116, 121, 0.4)",
     bottom: 0,
     left: 0,
     overflowY: "scroll",
@@ -47103,9 +47102,9 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 },
                 "fontSize": "$h5",
                 "fontWeight": "$h5",
-                "lineHeight": "1.38 !important",
+                "lineHeight": "1.35 !important",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h5 * 0.9)"
+                    fontSize: "calc($h5 * 0.925)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h5 * 0.95)"
@@ -47117,9 +47116,9 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 },
                 "fontSize": "$h6",
                 "fontWeight": "$h6",
-                "lineHeight": "1.32 !important",
+                "lineHeight": "1.35 !important",
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h6 * 0.9)"
+                    fontSize: "calc($h6 * 0.925)"
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
                     fontSize: "calc($h6 * 0.95)"
