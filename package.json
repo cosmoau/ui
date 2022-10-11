@@ -1,7 +1,7 @@
 {
   "name": "@cosmoau/ui",
   "description": "A modular, flexible library of components and design patterns used to enforce consistency across all internal and subsidiary projects.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Jackson Dolman <mail@planare.dev>",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "bugs": {
