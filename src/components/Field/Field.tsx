@@ -1,5 +1,3 @@
-/** @format */
-
 import { Warning, Check, ClipboardText } from 'phosphor-react';
 import React, { TextareaHTMLAttributes, useState } from 'react';
 
@@ -99,7 +97,7 @@ export default function Field(props: Props): JSX.Element {
               ariaLabel='Copy'
               icon={
                 isCopied ? (
-                  <ClipboardText opacity={0.4} weight='duotone' />
+                  <ClipboardText opacity={0.5} weight='duotone' />
                 ) : (
                   <ClipboardText weight='duotone' />
                 )

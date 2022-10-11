@@ -1,5 +1,5 @@
-/** @format */
-
+/* eslint-disable no-alert */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { ArrowRight } from 'phosphor-react';
 import React, { ReactElement } from 'react';
 
@@ -24,7 +24,7 @@ export function App(): ReactElement {
     <Provider>
       <View container>
         <Stack direction='row' flex='center' top='4'>
-          <Stack direction='column' width={25}>
+          <Stack direction='column' width={40}>
             <Box>
               <Divider bottom='6' top='6' />
               <Text as='h1'>
@@ -36,7 +36,7 @@ export function App(): ReactElement {
               <Text as='h3'>
                 Make your short-term rental listings work for you, without the hassle
               </Text>
-              <Text as='h4'>
+              <Text accent as='h4'>
                 Make your short-term rental listings work for you, without the hassle
               </Text>
               <Text as='h5'>
@@ -56,8 +56,8 @@ export function App(): ReactElement {
                 <Input
                   listen
                   submit='Alert'
-                  submitValid
                   submitFunction={() => alert('lol')}
+                  submitValid
                 />
               </Stack>
             </Box>
@@ -80,25 +80,25 @@ export function App(): ReactElement {
               <Text as='h3'>Test</Text>
             </Dialog>
             <Dropdown
-              trigger={
-                <Button ariaLabel='button' icon={<ArrowRight />}>
-                  Dropdown Test
-                </Button>
-              }
               filter
               options={[
                 { label: 'Option 1', value: 'option-1' },
                 { label: 'Option 2', value: 'option-2' },
                 { label: 'Option 3', value: 'option-3' },
               ]}
+              trigger={
+                <Button ariaLabel='button' icon={<ArrowRight />}>
+                  Dropdown Test
+                </Button>
+              }
             />
 
             <Button
-              theme='fill'
               ariaLabel='button'
               block
               icon={<ArrowRight />}
-              iconPosition='right'>
+              iconPosition='right'
+              theme='fill'>
               Button
             </Button>
             <Badge theme='border'>
@@ -126,15 +126,15 @@ export function App(): ReactElement {
           </Stack>
         </Stack>
       </View>
-      <View inverted container>
+      <View container inverted>
         <Stack direction='row' flex='center' top='4'>
           <Stack direction='column' width={25}>
             <Box theme='fill'>
               <Divider bottom='6' top='6' />
-              <Text as='h1'>
+              <Text accent as='h1'>
                 Airbnb, Stayz, Booking.com and Homes & Villas Management
               </Text>
-              <Text as='h2'>
+              <Text accent as='h2'>
                 Make your short-term rental listings work for you, without the hassle
               </Text>
               <Text as='h3'>
@@ -160,8 +160,8 @@ export function App(): ReactElement {
                 <Input
                   listen
                   submit='Alert'
-                  submitValid
                   submitFunction={() => alert('lol')}
+                  submitValid
                 />
               </Stack>
             </Box>
@@ -184,25 +184,25 @@ export function App(): ReactElement {
               <Text as='h3'>Test</Text>
             </Dialog>
             <Dropdown
-              trigger={
-                <Button ariaLabel='button' icon={<ArrowRight />}>
-                  Dropdown Test
-                </Button>
-              }
               filter
               options={[
                 { label: 'Option 1', value: 'option-1' },
                 { label: 'Option 2', value: 'option-2' },
                 { label: 'Option 3', value: 'option-3' },
               ]}
+              trigger={
+                <Button ariaLabel='button' icon={<ArrowRight />}>
+                  Dropdown Test
+                </Button>
+              }
             />
 
             <Button
-              theme='fill'
               ariaLabel='button'
               block
               icon={<ArrowRight />}
-              iconPosition='right'>
+              iconPosition='right'
+              theme='fill'>
               Button
             </Button>
             <Badge theme='border'>

@@ -1,5 +1,3 @@
-/** @format */
-
 import React, { ReactNode } from 'react';
 
 import { breakpoints, DefaultProps } from '../../stitches.config';
@@ -14,7 +12,7 @@ export interface Props extends Omit<DefaultProps, 'spacing'> {
   top?: DefaultProps['spacing'];
   bottom?: DefaultProps['spacing'];
   inline?: DefaultProps['spacing'] | 'auto';
-  link?: 'border' | 'borderHover';
+  link?: 'border' | 'borderHover' | 'accent';
 }
 
 export default function Text(props: Props): JSX.Element {
@@ -72,12 +70,16 @@ export default function Text(props: Props): JSX.Element {
         }),
         ...(props.link && {
           '&:hover': {
-            opacity: 0.75,
+            color: '$accent',
+            opacity: 0.7,
           },
           'borderBottom':
             props.link === 'borderHover'
               ? '0.1rem solid $borderHover'
-              : '0.1rem solid $border',
+              : props.link === 'border'
+              ? '0.1rem solid $border'
+              : 'none',
+
           'transition': '$default',
         }),
       }}

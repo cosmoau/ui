@@ -1,5 +1,3 @@
-/** @format */
-
 import { X } from 'phosphor-react';
 import React, { ReactNode, useRef, useState } from 'react';
 import { useEventListener, useLockedBody, useOnClickOutside } from 'usehooks-ts';

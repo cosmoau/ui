@@ -1,5 +1,3 @@
-/** @format */
-
 import { Check, ClipboardText, Eye, EyeClosed, Warning } from 'phosphor-react';
 import React, { InputHTMLAttributes, useState } from 'react';
 import { useEventListener } from 'usehooks-ts';
@@ -109,7 +107,7 @@ export default function Input(props: Props): JSX.Element {
                 }}
                 icon={
                   isCopied ? (
-                    <ClipboardText opacity={0.4} weight='duotone' />
+                    <ClipboardText opacity={0.5} weight='duotone' />
                   ) : (
                     <ClipboardText weight='duotone' />
                   )

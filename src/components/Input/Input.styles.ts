@@ -1,5 +1,3 @@
-/** @format */
-
 import { styled } from '../../stitches.config';
 
 export const InputStyled = styled('div', {
@@ -7,10 +5,10 @@ export const InputStyled = styled('div', {
 });
 export const InputCoreStyled = styled('div', {
   '&:focus-within': {
-    boxShadow: '$2',
+    boxShadow: '$1',
   },
   '&:hover': {
-    boxShadow: '$2',
+    boxShadow: '$1',
   },
   '*': {
     verticalAlign: 'middle',
@@ -27,7 +25,7 @@ export const InputCoreStyled = styled('div', {
     disabled: {
       true: {
         cursor: 'not-allowed',
-        opacity: '0.5',
+        opacity: '0.7',
       },
     },
     state: {

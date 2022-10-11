@@ -1,5 +1,3 @@
-/** @format */
-
 import { breakpoints, fadeIn, fadeOut, styled } from '../../stitches.config';
 
 export const DialogStyled = styled('div', {
@@ -18,7 +16,7 @@ export const DialogTriggerStyled = styled('div', {
 });
 
 export const DialogOverlayStyled = styled('div', {
-  backgroundColor: 'rgba(3, 5, 18, 0.502)',
+  backgroundColor: 'rgba(2, 2, 16, 0.9)',
   bottom: 0,
   left: 0,
   overflowY: 'scroll',

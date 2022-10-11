@@ -1,5 +1,3 @@
-/** @format */
-
 import { default as NextImage, ImageProps } from 'next/image';
 import React from 'react';
 

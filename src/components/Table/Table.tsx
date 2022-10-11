@@ -1,5 +1,3 @@
-/** @format */
-
 import { FunnelSimple, SortAscending, SortDescending } from 'phosphor-react';
 import React, { ReactNode, useState } from 'react';
 
@@ -57,7 +55,7 @@ export default function Table(props: Props): JSX.Element {
                   ariaLabel='Sort'
                   css={{
                     svg: {
-                      opacity: sortBy === index ? 1 : 0.2,
+                      opacity: sortBy === index ? 1 : 0.3,
                     },
                   }}
                   icon={

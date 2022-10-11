@@ -1,5 +1,3 @@
-/** @format */
-
 import { Circle } from 'phosphor-react';
 import React, { ReactNode } from 'react';
 

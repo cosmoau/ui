@@ -1,5 +1,3 @@
-/** @format */
-
 import React from 'react';
 
 import { theme } from '../../stitches.config';
@@ -22,7 +20,7 @@ export default function Loading({
       xmlns={'http://www.w3.org/2000/svg'}>
       <g fill='none' fillRule='nonzero'>
         <g strokeWidth='2' transform='translate(1 1)'>
-          <circle cx='18' cy='18' r='18' strokeOpacity='.2' />
+          <circle cx='18' cy='18' r='18' strokeOpacity='.3' />
           <path d='M36 18c0-9.94-8.06-18-18-18'>
             <animateTransform
               attributeName='transform'

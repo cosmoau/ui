@@ -1,5 +1,3 @@
-/** @format */
-
 import { IconContext } from 'phosphor-react';
 import React, { ReactNode } from 'react';
 import { useDarkMode } from 'usehooks-ts';

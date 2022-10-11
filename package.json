@@ -1,43 +1,38 @@
 {
   "name": "@cosmoau/ui",
-  "description": "✏️ A modular, flexible library of components and design patterns used to enforce consistency across all internal and subsidiary projects.",
-  "version": "1.0.0",
+  "description": "A modular, flexible library of components and design patterns used to enforce consistency across all internal and subsidiary projects.",
+  "version": "1.0.1",
   "author": "Jackson Dolman <mail@planare.dev>",
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "bugs": {
     "url": "https://github.com/cosmoau/ui/issues"
   },
   "dependencies": {
     "@stitches/react": "^1.2.8",
-    "@types/node": "^18.8.2",
+    "@types/node": "^18.8.4",
     "@types/react": "^18.0.21",
-    "eslint": "^8.24.0",
-    "eslint-config-dolmios": "^1.1.0",
-    "eslint-config-next": "^12.3.1",
-    "microbundle": "^0.15.1",
     "next": "^12.3.1",
-    "parcel": "^2.7.0",
-    "path-browserify": "^1.0.1",
     "phosphor-react": "^1.4.1",
-    "prettier": "^2.7.1",
-    "process": "^0.11.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.0",
     "typescript": "^4.8.4",
-    "usehooks-ts": "^2.7.2",
+    "usehooks-ts": "^2.7.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.25.0",
+    "eslint-config-dolmios": "^1.1.1",
+    "eslint-config-next": "^12.3.1",
+    "microbundle": "^0.15.1",
+    "parcel": "^2.7.0",
+    "path-browserify": "^1.0.1",
+    "prettier": "^2.7.1",
+    "process": "^0.11.10",
     "util": "^0.12.4"
+  },
+  "exports": {
+    "require": "./dist/index.js",
+    "default": "./dist/index.modern.mjs"
   },
   "files": [
     "dist"
@@ -60,12 +55,11 @@
     "user interface"
   ],
   "license": "BSD-3-Clause",
-  "main": "dist/index.js",
-  "module": "dist/index.modern.module.js",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
   "packageManager": "yarn@3.2.3",
   "peerDependencies": {
     "next": "^12.3.1",
-    "phosphor-react": "^1.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -76,11 +70,11 @@
   },
   "scripts": {
     "build": "yarn lint && microbundle --jsx React.createElement --format esm,cjs,modern",
-    "lint": "eslint src --ext js,jsx,ts,tsx",
-    "playground": "parcel playground/index.html --dist-dir playground/dist --open",
+    "build:visual": "yarn build --visualize",
+    "dev": "parcel playground/index.html --dist-dir playground/dist --open",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx",
     "prettier": "prettier --check --write src"
   },
   "source": "src/index.ts",
-  "types": "dist/index.d.ts",
-  "devDependencies": {}
+  "types": "dist/types/index.d.ts"
 }

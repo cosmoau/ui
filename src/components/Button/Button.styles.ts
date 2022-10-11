@@ -1,11 +1,9 @@
-/** @format */
-
 import { breakpoints, styled } from '../../stitches.config';
 
 export const ButtonStyled = styled('button', {
   '&:disabled': {
     cursor: 'not-allowed',
-    opacity: 0.75,
+    opacity: 0.7,
   },
   '&:hover': {
     backgroundColor: '$defaultHover',

@@ -1,5 +1,3 @@
-/** @format */
-
 import { globalCss, lightTheme, styled, theme } from '../../stitches.config';
 
 export const ProviderStyled = styled('div', {

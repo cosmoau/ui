@@ -1,5 +1,3 @@
-/** @format */
-
 import { createStitches, createTheme, CSS } from '@stitches/react';
 
 export const breakpoints = {
@@ -16,19 +14,18 @@ export const breakpoints = {
 export const { theme, css, styled, getCssText, globalCss, keyframes } = createStitches({
   theme: {
     colors: {
-      accent: '#a2aac2',
-      background: 'rgb(10, 12, 30)',
+      accent: 'rgb(162, 170, 194)',
+      background: 'rgb(8, 10, 27)',
       blueBorder: 'rgba(115, 172, 255, 0.4)',
       blueOverlay: 'rgba(151, 193, 255, 0.2)',
       blueText: 'rgb(166, 179, 255)',
       border: 'rgba(253, 250, 246, 0.15)',
       borderHover: 'rgba(253, 250, 246, 0.1)',
-      default: 'rgba(253, 250, 246, 0.06)',
-      defaultHover: 'rgba(253, 250, 246, 0.09)',
+      default: 'rgba(253, 250, 246, 0.03)',
+      defaultHover: 'rgba(253, 250, 246, 0.06)',
       greenBorder: 'rgba(0, 200, 83, 0.4)',
       greenOverlay: 'rgba(101, 227, 124, 0.2)',
       greenText: 'rgb(124, 241, 151)',
-      inverted: 'rgb(8, 10, 27)',
       orangeBorder: 'rgba(255, 172, 115, 0.4)',
       orangeOverlay: 'rgba(255, 172, 115, 0.2)',
       orangeText: 'rgb(254, 177, 141)',
@@ -44,9 +41,9 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       text: 'rgb(253, 250, 246)',
     },
     fontSizes: {
-      h1: '3.6rem',
-      h2: '3rem',
-      h3: '2.6rem',
+      h1: '4.2rem',
+      h2: '3.4rem',
+      h3: '2.8rem',
       h4: '1.8rem',
       h5: '1.6rem',
       h6: '1.5rem',
@@ -75,9 +72,9 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       3: '1.2rem',
     },
     shadows: {
-      1: '0 0.2rem 0.3rem 0 rgba(253, 250, 246, 0.05)',
-      2: '0 0.4rem 0.6rem 0 rgba(253, 250, 246, 0.05)',
-      3: '0 0.6rem 0.9rem 0 rgba(253, 250, 246, 0.05)',
+      1: '0 0.2rem 0.3rem 0 rgba(253, 250, 246, 0.03)',
+      2: '0 0.4rem 0.6rem 0 rgba(253, 250, 246, 0.03)',
+      3: '0 0.6rem 0.9rem 0 rgba(253, 250, 246, 0.03)',
     },
     space: {
       1: '0.25rem',
@@ -193,13 +190,13 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
 
 export const lightTheme = createTheme({
   colors: {
-    accent: 'rgb(51, 58, 82)',
+    accent: 'rgb(69, 74, 87)',
     background: 'rgb(253, 250, 246)',
     blueText: 'rgb(32, 47, 136)',
-    border: 'rgba(8, 10, 27,0.1)',
-    borderHover: 'rgba(8, 10, 27, 0.075)',
-    default: 'rgba(8, 10, 27, 0.035)',
-    defaultHover: 'rgba(21, 35, 68, 0.07)',
+    border: 'rgba(10, 12, 30,0.11)',
+    borderHover: 'rgba(10, 12, 30, 0.09)',
+    default: 'rgba(10, 12, 30, 0.04)',
+    defaultHover: 'rgba(10, 12, 30, 0.06)',
     greenText: 'rgb(0, 76, 6)',
     orangeText: 'rgb(199, 84, 30)',
     pinkText: 'rgb(173, 22, 128)',

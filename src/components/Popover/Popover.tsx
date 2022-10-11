@@ -1,5 +1,3 @@
-/** @format */
-
 import React, { ReactNode, useRef, useState } from 'react';
 import { useOnClickOutside } from 'usehooks-ts';
 

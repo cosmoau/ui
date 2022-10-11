@@ -1,14 +1,9 @@
-/** @format */
-
-import { breakpoints, styled } from '../../stitches.config';
+import { styled } from '../../stitches.config';
 
 export const paddingVariants = {
   padding: {
     default: {
       padding: '$5',
-      [breakpoints.phone]: {
-        padding: '$4',
-      },
     },
     none: {
       padding: 0,

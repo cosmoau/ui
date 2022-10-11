@@ -1,5 +1,3 @@
-/** @format */
-
 import { styled } from '../../stitches.config';
 
 export const ImageStyled = styled('div', {
@@ -35,7 +33,7 @@ export const ImageStyled = styled('div', {
       },
       true: {
         '&:hover': {
-          opacity: 0.8,
+          opacity: 0.9,
         },
       },
     },

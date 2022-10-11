@@ -1,5 +1,3 @@
-/** @format */
-
 import { styled, keyframes, breakpoints } from '../../stitches.config';
 
 const pulse = keyframes({

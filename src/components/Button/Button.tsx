@@ -1,5 +1,3 @@
-/** @format */
-
 import React, { HTMLAttributes, ReactNode } from 'react';
 
 import { breakpoints, DefaultProps } from '../../stitches.config';

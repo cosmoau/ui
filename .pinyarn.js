@@ -1,5 +1,3 @@
-/** @format */
-
 // To update this file use `yarn dlx pinyarn <yarn_version>` or `npx pinyarn <yarn_version>`
 const https = require('https');
 const fs = require('fs');

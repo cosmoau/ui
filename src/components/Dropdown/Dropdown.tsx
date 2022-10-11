@@ -1,5 +1,3 @@
-/** @format */
-
 import { useRouter } from 'next/router';
 import React, { ReactNode, useRef, useState } from 'react';
 import { useEventListener, useLockedBody, useOnClickOutside } from 'usehooks-ts';
@@ -131,7 +129,7 @@ export default function Dropdown(props: Props): JSX.Element {
               props.submenu ? (
                 <DropdownItemStyled
                   css={{
-                    opacity: path === value ? 0.44 : 1,
+                    color: path === value ? '$accent' : '$text',
                   }}
                   key={value}
                   submenu={true}>
@@ -140,7 +138,7 @@ export default function Dropdown(props: Props): JSX.Element {
               ) : (
                 <DropdownItemStyled
                   css={{
-                    opacity: props.active && props.active === value ? 0.44 : 1,
+                    color: props.active && props.active === value ? '$accent' : '$text',
                   }}
                   key={value}
                   onClickCapture={(): void => {
