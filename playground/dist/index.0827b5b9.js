@@ -39145,8 +39145,8 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             text: "rgb(253, 250, 246)"
         },
         fontSizes: {
-            h1: "4.2rem",
-            h2: "3.4rem",
+            h1: "3.6rem",
+            h2: "3rem",
             h3: "2.8rem",
             h4: "1.8rem",
             h5: "1.6rem",
@@ -39252,7 +39252,7 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
 });
 const lightTheme = (0, _react.createTheme)({
     colors: {
-        accent: "rgb(69, 74, 87)",
+        accent: "rgb(83, 100, 115)",
         background: "rgb(253, 250, 246)",
         blueText: "rgb(32, 47, 136)",
         border: "rgba(10, 12, 30,0.11)",
@@ -47103,7 +47103,7 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 },
                 "fontSize": "$h5",
                 "fontWeight": "$h5",
-                "lineHeight": "1.4 !important",
+                "lineHeight": "1.38 !important",
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     fontSize: "calc($h5 * 0.9)"
                 },
@@ -47117,7 +47117,7 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 },
                 "fontSize": "$h6",
                 "fontWeight": "$h6",
-                "lineHeight": "1.4 !important",
+                "lineHeight": "1.32 !important",
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     fontSize: "calc($h6 * 0.9)"
                 },
@@ -47131,6 +47131,7 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 },
                 "fontSize": "$p",
                 "fontWeight": "$p",
+                "lineHeight": "1.3 !important",
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     fontSize: "calc($p * 0.925)"
                 },
@@ -47144,6 +47145,7 @@ const TextStyled = (0, _stitchesConfig.styled)("div", {
                 },
                 "fontSize": "$small",
                 "fontWeight": "$small",
+                "lineHeight": "1.3 !important",
                 [(0, _stitchesConfig.breakpoints).phone]: {
                     fontSize: "calc($small * 0.925)"
                 },

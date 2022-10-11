@@ -41,8 +41,8 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       text: 'rgb(253, 250, 246)',
     },
     fontSizes: {
-      h1: '4.2rem',
-      h2: '3.4rem',
+      h1: '3.6rem',
+      h2: '3rem',
       h3: '2.8rem',
       h4: '1.8rem',
       h5: '1.6rem',
@@ -190,7 +190,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
 
 export const lightTheme = createTheme({
   colors: {
-    accent: 'rgb(69, 74, 87)',
+    accent: 'rgb(83, 100, 115)',
     background: 'rgb(253, 250, 246)',
     blueText: 'rgb(32, 47, 136)',
     border: 'rgba(10, 12, 30,0.11)',
