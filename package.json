@@ -1,7 +1,7 @@
 {
   "name": "@cosmoau/ui",
   "description": "A modular, flexible library of components and design patterns used to enforce consistency across all internal and subsidiary projects.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Jackson Dolman <mail@planare.dev>",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "bugs": {
@@ -30,10 +30,6 @@
     "process": "^0.11.10",
     "util": "^0.12.4"
   },
-  "exports": {
-    "require": "./dist/index.js",
-    "default": "./dist/index.modern.mjs"
-  },
   "files": [
     "dist"
   ],
@@ -55,8 +51,8 @@
     "user interface"
   ],
   "license": "BSD-3-Clause",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.module.js",
   "packageManager": "yarn@3.2.3",
   "peerDependencies": {
     "next": "^12.3.1",
@@ -76,5 +72,5 @@
     "prettier": "prettier --check --write src"
   },
   "source": "src/index.ts",
-  "types": "dist/types/index.d.ts"
+  "types": "dist/index.d.ts"
 }
