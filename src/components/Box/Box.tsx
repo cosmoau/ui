@@ -19,7 +19,10 @@ export interface Props extends DefaultProps {
 }
 
 export default function Box(props: Props): JSX.Element {
-  return props?.image ? (
+  return props.image &&
+    props.image !== '' &&
+    props.image !== undefined &&
+    props.image !== '#' ? (
     <BoxStyled
       css={props.css}
       hover={props.hover}
@@ -45,7 +48,7 @@ export default function Box(props: Props): JSX.Element {
             layout='fill'
             objectFit={'cover'}
             objectPosition={props.imagePosition || 'center'}
-            src={props.image.toString()}
+            src={props.image}
           />
         </a>
       ) : (
@@ -62,7 +65,7 @@ export default function Box(props: Props): JSX.Element {
           layout='fill'
           objectFit={'cover'}
           objectPosition={props.imagePosition || 'center'}
-          src={props.image.toString()}
+          src={props.image}
         />
       )}
       <BoxImageChildrenStyled padding={'default'}>
