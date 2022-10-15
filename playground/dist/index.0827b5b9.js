@@ -27088,16 +27088,17 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _index = require("../src/index");
 function App() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Provider), {
+        locked: "light",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.View), {
                 container: true,
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
+                    align: "center",
                     direction: "row",
                     flex: "center",
                     top: "4",
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
                         direction: "column",
-                        width: 40,
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
                                 children: [
@@ -27111,6 +27112,7 @@ function App() {
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
                                         as: "h1",
+                                        bottom: 6,
                                         children: "Airbnb, Stayz, Booking.com and Homes & Villas Management"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
@@ -27134,7 +27136,6 @@ function App() {
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                                        accent: true,
                                         as: "h4",
                                         children: "Make your short-term rental listings work for you, without the hassle"
                                     }, void 0, false, {
@@ -27237,9 +27238,12 @@ function App() {
                                     children: "Button"
                                 }, void 0, false, void 0, void 0),
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                                    as: "h3",
-                                    children: "Test"
-                                }, void 0, false, {
+                                    as: "h1",
+                                    children: [
+                                        " ",
+                                        "Airbnb, Stayz, Booking.com and Homes & Villas Management Airbnb, Stayz, Booking.com and Homes & Villas Management"
+                                    ]
+                                }, void 0, true, {
                                     fileName: "playground/App.tsx",
                                     lineNumber: 80,
                                     columnNumber: 15
@@ -27272,7 +27276,7 @@ function App() {
                                 }, void 0, false, void 0, void 0)
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 82,
+                                lineNumber: 86,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27284,7 +27288,7 @@ function App() {
                                 children: "Button"
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 96,
+                                lineNumber: 100,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27292,7 +27296,7 @@ function App() {
                                 children: "Make your short-term rental listings work for you, without the hassle"
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 104,
+                                lineNumber: 108,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Table), {
@@ -27350,7 +27354,7 @@ function App() {
                                 ]
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 107,
+                                lineNumber: 111,
                                 columnNumber: 13
                             }, this)
                         ]
@@ -27388,7 +27392,7 @@ function App() {
                                         top: "6"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 133,
+                                        lineNumber: 137,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27397,7 +27401,7 @@ function App() {
                                         children: "Airbnb, Stayz, Booking.com and Homes & Villas Management"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 134,
+                                        lineNumber: 138,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27406,7 +27410,7 @@ function App() {
                                         children: "Make your short-term rental listings work for you, without the hassle"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 137,
+                                        lineNumber: 141,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27414,7 +27418,7 @@ function App() {
                                         children: "Make your short-term rental listings work for you, without the hassle"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 140,
+                                        lineNumber: 144,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27422,7 +27426,7 @@ function App() {
                                         children: "Make your short-term rental listings work for you, without the hassle"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 143,
+                                        lineNumber: 147,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27430,7 +27434,7 @@ function App() {
                                         children: "Make your short-term rental listings work for you, without the hassle"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 146,
+                                        lineNumber: 150,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27438,7 +27442,7 @@ function App() {
                                         children: "Make your short-term rental listings work for you, without the hassle"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 149,
+                                        lineNumber: 153,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27446,7 +27450,7 @@ function App() {
                                         children: "Make your short-term rental listings work for you, without the hassle"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 152,
+                                        lineNumber: 156,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27454,7 +27458,7 @@ function App() {
                                         children: "Make your short-term rental listings work for you, without the hassle"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 155,
+                                        lineNumber: 159,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.ProviderToggle), {
@@ -27464,7 +27468,7 @@ function App() {
                                         }, void 0, false, void 0, void 0)
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 158,
+                                        lineNumber: 162,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27476,18 +27480,18 @@ function App() {
                                             submitValid: true
                                         }, void 0, false, {
                                             fileName: "playground/App.tsx",
-                                            lineNumber: 160,
+                                            lineNumber: 164,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 159,
+                                        lineNumber: 163,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 132,
+                                lineNumber: 136,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27497,7 +27501,7 @@ function App() {
                                 children: "Button"
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 168,
+                                lineNumber: 172,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27508,7 +27512,7 @@ function App() {
                                 children: "Button"
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 171,
+                                lineNumber: 175,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Dialog), {
@@ -27524,12 +27528,12 @@ function App() {
                                     children: "Test"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 184,
+                                    lineNumber: 188,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 174,
+                                lineNumber: 178,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Dropdown), {
@@ -27555,7 +27559,7 @@ function App() {
                                 }, void 0, false, void 0, void 0)
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 186,
+                                lineNumber: 190,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27567,7 +27571,7 @@ function App() {
                                 children: "Button"
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 200,
+                                lineNumber: 204,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27575,7 +27579,7 @@ function App() {
                                 children: "Make your short-term rental listings work for you, without the hassle"
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 208,
+                                lineNumber: 212,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Table), {
@@ -27633,23 +27637,23 @@ function App() {
                                 ]
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 211,
+                                lineNumber: 215,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 131,
+                        lineNumber: 135,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "playground/App.tsx",
-                    lineNumber: 130,
+                    lineNumber: 134,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "playground/App.tsx",
-                lineNumber: 129,
+                lineNumber: 133,
                 columnNumber: 7
             }, this)
         ]
@@ -39154,10 +39158,10 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             small: "1.2rem"
         },
         fontWeights: {
-            h1: "300",
-            h2: "300",
-            h3: "300",
-            h4: "normal",
+            h1: "500",
+            h2: "500",
+            h3: "500",
+            h4: "bold",
             h5: "normal",
             h6: "normal",
             p: "normal",
@@ -39166,7 +39170,7 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
         fonts: {
             default: "$sans",
             sans: "Untitled Sans, apple-system, sans-serif",
-            serif: "Tiempos Fine"
+            serif: "Tiempos Headline"
         },
         media: breakpoints,
         radii: {
@@ -42351,6 +42355,8 @@ const DialogContentStyled = (0, _stitchesConfig.styled)("div", {
     borderRadius: "$2",
     left: "50%",
     maxHeight: "80vh",
+    maxWidth: "100%",
+    overflowX: "hidden",
     overflowY: "auto",
     padding: "$6 $5",
     position: "fixed",
@@ -48349,7 +48355,7 @@ const reset = (0, _stitchesConfig.globalCss)({
     "*:before": {
         boxSizing: "inherit"
     },
-    "@import": 'url("https://xxxjddzdqkdtyqtywwfi.supabase.co/storage/v1/object/public/public/webfonts.css")',
+    "@import": 'url("https://xxxjddzdqkdtyqtywwfi.supabase.co/storage/v1/object/public/public/webfonts-test1.css")',
     "a": {
         color: "inherit",
         textDecoration: "none"
@@ -48582,8 +48588,13 @@ const TableCellStyled = (0, _stitchesConfig.styled)("td", {
     },
     "borderBottom": "0.1rem solid $borderHover",
     "fontSize": "$h6",
-    [(0, _stitchesConfig.breakpoints).tablet]: {
-        whiteSpace: "nowrap"
+    "fontWeight": "$h6",
+    "lineHeight": "1.35 !important",
+    [(0, _stitchesConfig.breakpoints).phone]: {
+        fontSize: "calc($h6 * 0.95)"
+    },
+    [(0, _stitchesConfig.breakpoints).tabletX]: {
+        fontSize: "calc($h6 * 0.95)"
     },
     "padding": "$4"
 });
@@ -48593,7 +48604,13 @@ const TableHeadCellStyled = (0, _stitchesConfig.styled)("th", {
     },
     "borderBottom": "0.1rem solid $borderHover",
     "fontSize": "$h6",
-    "fontWeight": "bold",
+    "lineHeight": "1.35 !important",
+    [(0, _stitchesConfig.breakpoints).phone]: {
+        fontSize: "calc($h6 * 0.95)"
+    },
+    [(0, _stitchesConfig.breakpoints).tabletX]: {
+        fontSize: "calc($h6 * 0.95)"
+    },
     "padding": "$4 0.5rem"
 });
 exports.default = TableStyled;

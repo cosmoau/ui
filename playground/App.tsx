@@ -21,13 +21,13 @@ import {
 
 export function App(): ReactElement {
   return (
-    <Provider>
+    <Provider locked='light'>
       <View container>
-        <Stack direction='row' flex='center' top='4'>
-          <Stack direction='column' width={40}>
+        <Stack align='center' direction='row' flex='center' top='4'>
+          <Stack direction='column'>
             <Box>
               <Divider bottom='6' top='6' />
-              <Text as='h1'>
+              <Text as='h1' bottom={6}>
                 Airbnb, Stayz, Booking.com and Homes & Villas Management
               </Text>
               <Text as='h2'>
@@ -36,7 +36,7 @@ export function App(): ReactElement {
               <Text as='h3'>
                 Make your short-term rental listings work for you, without the hassle
               </Text>
-              <Text accent as='h4'>
+              <Text as='h4'>
                 Make your short-term rental listings work for you, without the hassle
               </Text>
               <Text as='h5'>
@@ -77,7 +77,11 @@ export function App(): ReactElement {
                   Button
                 </Button>
               }>
-              <Text as='h3'>Test</Text>
+              <Text as='h1'>
+                {' '}
+                Airbnb, Stayz, Booking.com and Homes & Villas Management Airbnb, Stayz,
+                Booking.com and Homes & Villas Management
+              </Text>
             </Dialog>
             <Dropdown
               filter

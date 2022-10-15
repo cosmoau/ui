@@ -1404,7 +1404,7 @@ __metadata:
   resolution: "@cosmoau/ui@workspace:."
   dependencies:
     "@stitches/react": ^1.2.8
-    "@types/node": ^18.8.4
+    "@types/node": ^18.11.0
     "@types/react": ^18.0.21
     eslint: ^8.25.0
     eslint-config-dolmios: ^1.1.1
@@ -1420,7 +1420,7 @@ __metadata:
     react-dom: ^18.2.0
     react-hot-toast: ^2.4.0
     typescript: ^4.8.4
-    usehooks-ts: ^2.7.2
+    usehooks-ts: ^2.9.1
     util: ^0.12.4
   peerDependencies:
     next: ^12.3.1
@@ -2673,10 +2673,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^18.8.4":
+"@types/node@npm:*":
   version: 18.8.4
   resolution: "@types/node@npm:18.8.4"
   checksum: c2b87f6b0b1f02b2ce61ca7cb93ea287119bda086a3f33e48da8f5e70c24ad7141cc3465946e0e36abb7eba70c7b320c7659842096e4aa573b3a8d557322c818
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^18.11.0":
+  version: 18.11.0
+  resolution: "@types/node@npm:18.11.0"
+  checksum: f27f899ab428e5732f04fadadc9203f44bdf3abf56474540ee27da90e4f2ba133faf87263cada4d2271955f92ee6a142bd50683c86290fe5070c19aac44fd654
   languageName: node
   linkType: hard
 
@@ -8104,13 +8111,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"usehooks-ts@npm:^2.7.2":
-  version: 2.7.2
-  resolution: "usehooks-ts@npm:2.7.2"
+"usehooks-ts@npm:^2.9.1":
+  version: 2.9.1
+  resolution: "usehooks-ts@npm:2.9.1"
   peerDependencies:
     react: ^16.8.0  || ^17.0.0 || ^18.0.0
     react-dom: ^16.8.0  || ^17.0.0 || ^18.0.0
-  checksum: c4edfc53aa60f6c107c8724dbd60c06b5888f1905091797c1639255924dd45ea337355c5d51e4826f7f07c0167742f9f2d3bf23e11fb6d9b15ad7abe01d1d51d
+  checksum: 36f1e4142ce23bc019b81d2e93aefd7f2c350abcf255598c21627114a69a2f2f116b35dc3a353375f09c6e4c9b704a04f104e3d10e98280545c097feca66c30a
   languageName: node
   linkType: hard
 

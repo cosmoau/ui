@@ -471,6 +471,8 @@ export declare const DialogContentStyled: import("@stitches/react/types/styled-c
     borderRadius: string;
     left: string;
     maxHeight: string;
+    maxWidth: string;
+    overflowX: string;
     overflowY: string;
     padding: string;
     position: string;

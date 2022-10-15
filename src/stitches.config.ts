@@ -51,10 +51,10 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       small: '1.2rem',
     },
     fontWeights: {
-      h1: '300',
-      h2: '300',
-      h3: '300',
-      h4: 'normal',
+      h1: '500',
+      h2: '500',
+      h3: '500',
+      h4: 'bold',
       h5: 'normal',
       h6: 'normal',
       p: 'normal',
@@ -63,7 +63,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     fonts: {
       default: '$sans',
       sans: 'Untitled Sans, apple-system, sans-serif',
-      serif: 'Tiempos Fine',
+      serif: 'Tiempos Headline',
     },
     media: breakpoints,
     radii: {

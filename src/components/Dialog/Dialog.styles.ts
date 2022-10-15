@@ -45,6 +45,8 @@ export const DialogContentStyled = styled('div', {
   borderRadius: '$2',
   left: '50%',
   maxHeight: '80vh',
+  maxWidth: '100%',
+  overflowX: 'hidden',
   overflowY: 'auto',
   padding: '$6 $5',
   position: 'fixed',

@@ -48,10 +48,16 @@ export const TableCellStyled = styled('td', {
   },
   'borderBottom': '0.1rem solid $borderHover',
   'fontSize': '$h6',
+  'fontWeight': '$h6',
+  'lineHeight': '1.35 !important',
 
-  [breakpoints.tablet]: {
-    whiteSpace: 'nowrap',
+  [breakpoints.phone]: {
+    fontSize: 'calc($h6 * 0.95)',
   },
+  [breakpoints.tabletX]: {
+    fontSize: 'calc($h6 * 0.95)',
+  },
+
   'padding': '$4',
 });
 
@@ -60,9 +66,15 @@ export const TableHeadCellStyled = styled('th', {
     textAlign: 'right',
   },
   'borderBottom': '0.1rem solid $borderHover',
-
   'fontSize': '$h6',
-  'fontWeight': 'bold',
+  'lineHeight': '1.35 !important',
+
+  [breakpoints.phone]: {
+    fontSize: 'calc($h6 * 0.95)',
+  },
+  [breakpoints.tabletX]: {
+    fontSize: 'calc($h6 * 0.95)',
+  },
   'padding': '$4 0.5rem',
 });
 
