@@ -13,21 +13,21 @@ import {
   Text,
   Input,
   Box,
-  ProviderToggle,
   Divider,
   Dropdown,
   Dialog,
+  Popover,
 } from '../src/index';
 
 export function App(): ReactElement {
   return (
     <Provider locked='light'>
       <View container>
-        <Stack align='center' direction='row' flex='center' top='4'>
+        <Stack direction='row' flex='center' top='4'>
           <Stack direction='column'>
             <Box>
               <Divider bottom='6' top='6' />
-              <Text as='h1' bottom={6}>
+              <Text as='h1' bottom='6' override='h6'>
                 Airbnb, Stayz, Booking.com and Homes & Villas Management
               </Text>
               <Text as='h2'>
@@ -51,7 +51,7 @@ export function App(): ReactElement {
               <Text as='small'>
                 Make your short-term rental listings work for you, without the hassle
               </Text>
-              <ProviderToggle trigger={<Button ariaLabel='Toggle'>Toggle</Button>} />
+
               <Stack align='center'>
                 <Input
                   listen
@@ -159,7 +159,7 @@ export function App(): ReactElement {
               <Text as='small'>
                 Make your short-term rental listings work for you, without the hassle
               </Text>
-              <ProviderToggle trigger={<Button ariaLabel='Toggle'>Toggle</Button>} />
+
               <Stack align='center'>
                 <Input
                   listen
@@ -172,9 +172,31 @@ export function App(): ReactElement {
             <Button ariaLabel='button' icon={<ArrowRight />} iconPosition='right'>
               Button
             </Button>
-            <Button ariaLabel='button' icon={<ArrowRight />} iconPosition='right' small>
-              Button
-            </Button>
+            <Popover
+              trigger={
+                <Button
+                  ariaLabel='button'
+                  icon={<ArrowRight />}
+                  iconPosition='right'
+                  small>
+                  Popover hover
+                </Button>
+              }
+              type='hover'>
+              <Text as='h3'>Test</Text>
+            </Popover>
+            <Popover
+              trigger={
+                <Button
+                  ariaLabel='button'
+                  icon={<ArrowRight />}
+                  iconPosition='right'
+                  small>
+                  Popover hover
+                </Button>
+              }>
+              <Text as='h3'>Test</Text>
+            </Popover>
             <Dialog
               trigger={
                 <Button
@@ -182,7 +204,7 @@ export function App(): ReactElement {
                   icon={<ArrowRight />}
                   iconPosition='right'
                   small>
-                  Button
+                  Dialog
                 </Button>
               }>
               <Text as='h3'>Test</Text>

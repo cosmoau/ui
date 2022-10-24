@@ -1,12 +1,13 @@
+// import React from 'react';
 import { Circle } from 'phosphor-react';
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 
+import { Loading } from '../../index';
 import { breakpoints, DefaultProps } from '../../stitches.config';
-import { Loading } from '../Loading';
 
 import { BadgeIconStyled, BadgeStyled, BadgeDotStyled } from './Badge.styles';
 
-export interface Props extends Omit<DefaultProps, 'spacing'> {
+interface Props extends Omit<DefaultProps, 'spacing'> {
   children: ReactNode;
   loading?: boolean;
   theme?:

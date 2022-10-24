@@ -1,14 +1,16 @@
-import React, { ReactNode } from 'react';
+// import React from 'react';
+import { ReactNode } from 'react';
 
 import { breakpoints, DefaultProps } from '../../stitches.config';
 
 import { TextStyled } from './Text.styles';
 
-export interface Props extends Omit<DefaultProps, 'spacing'> {
+interface Props extends Omit<DefaultProps, 'spacing'> {
   children: ReactNode;
   bold?: boolean;
   accent?: boolean;
   as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'small' | 'span';
+  override?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'small' | 'span';
   top?: DefaultProps['spacing'];
   bottom?: DefaultProps['spacing'];
   inline?: DefaultProps['spacing'] | 'auto';
@@ -19,7 +21,7 @@ export default function Text(props: Props): JSX.Element {
   return (
     <TextStyled
       accent={props.accent}
-      as={props.as}
+      as={props.override || props.as}
       bold={props.bold}
       css={{
         ...props.css,
@@ -28,14 +30,14 @@ export default function Text(props: Props): JSX.Element {
           [breakpoints.phone]: {
             marginTop: props.top ? '0 !important' : 'inherit',
             paddingTop:
-              props.top !== ('8' || '9')
+              props.top !== ('6' || '7' || '8' || '9')
                 ? `calc($${props.top} * 0.8)`
                 : `calc($${props.top} * 0.75)`,
           },
           [breakpoints.tabletX]: {
             marginTop: props.top ? '0 !important' : 'inherit',
             paddingTop:
-              props.top !== ('8' || '9')
+              props.top !== ('6' || '7' || '8' || '9')
                 ? `calc($${props.top} * 0.9)`
                 : `calc($${props.top} * 0.85)`,
           },
@@ -44,16 +46,16 @@ export default function Text(props: Props): JSX.Element {
           [breakpoints.phone]: {
             marginBottom: props.bottom ? '0 !important' : 'inherit',
             paddingBottom:
-              props.bottom !== ('8' || '9')
+              props.bottom !== ('6' || '7' || '8' || '9')
                 ? `calc($${props.bottom} * 0.8)`
                 : `calc($${props.bottom} * 0.75)`,
           },
           [breakpoints.tabletX]: {
             marginBottom: props.bottom ? '0 !important' : 'inherit',
             paddingBottom:
-              props.bottom !== ('8' || '9')
+              props.bottom !== ('6' || '7' || '8' || '9')
                 ? `calc($${props.bottom} * 0.9)`
-                : `calc($${props.bottom} * 0.85)`,
+                : `calc($${props.bottom} * 0.9)`,
           },
           paddingBottom: `$${props.bottom}`,
         }),

@@ -1,9 +1,10 @@
+// import React from 'react';
 import { X } from 'phosphor-react';
-import React, { ReactNode, useRef, useState } from 'react';
+import { ReactNode, useRef, useState } from 'react';
 import { useEventListener, useLockedBody, useOnClickOutside } from 'usehooks-ts';
 
+import { Button } from '../../index';
 import { DefaultProps } from '../../stitches.config';
-import { Button } from '../Button';
 
 import {
   DialogContentStyled,
@@ -13,7 +14,7 @@ import {
   DialogTriggerStyled,
 } from './Dialog.styles';
 
-export interface Props extends DefaultProps {
+interface Props extends DefaultProps {
   children: ReactNode;
   trigger: ReactNode;
   locked?: boolean;

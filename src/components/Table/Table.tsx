@@ -1,7 +1,8 @@
+// import React from 'react';
 import { FunnelSimple, SortAscending, SortDescending } from 'phosphor-react';
-import React, { ReactNode, useState } from 'react';
+import { ReactNode, useState } from 'react';
 
-import { Button } from '../Button';
+import { Button } from '../../index';
 
 import {
   TableBodyStyled,
@@ -12,7 +13,7 @@ import {
   TableStyled,
 } from './Table.styles';
 
-export interface Props {
+interface Props {
   headChildren?: Array<string>;
   bodyChildren: Array<Array<ReactNode | string>>;
   sort?: boolean;
@@ -32,10 +33,13 @@ export default function Table(props: Props): JSX.Element {
   }
 
   function sort(a: Array<ReactNode | string>, b: Array<ReactNode | string>): number {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     if (a[sortBy] < b[sortBy]) {
       return sortDirection === 'asc' ? -1 : 1;
     }
-
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     if (a[sortBy] > b[sortBy]) {
       return sortDirection === 'asc' ? 1 : -1;
     }

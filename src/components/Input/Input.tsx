@@ -1,11 +1,9 @@
-import { Check, ClipboardText, Eye, EyeClosed, Warning } from 'phosphor-react';
+import { Check, ClipboardText, Warning, Eye, EyeClosed } from 'phosphor-react';
 import React, { InputHTMLAttributes, useState } from 'react';
 import { useEventListener } from 'usehooks-ts';
 
+import { Button, Badge, Loading } from '../../index';
 import { DefaultProps } from '../../stitches.config';
-import { Badge } from '../Badge';
-import { Button } from '../Button';
-import { Loading } from '../Loading';
 
 import {
   InputAreaStyled,
@@ -15,7 +13,7 @@ import {
   InputCoreStyled,
 } from './Input.styles';
 
-export interface Props extends InputHTMLAttributes<HTMLInputElement>, DefaultProps {
+interface Props extends InputHTMLAttributes<HTMLInputElement>, DefaultProps {
   copy?: boolean;
   error?: boolean;
   errorMessage?: string;
@@ -32,7 +30,6 @@ export interface Props extends InputHTMLAttributes<HTMLInputElement>, DefaultPro
   disabled?: boolean;
   width?: number | string;
   listen?: boolean;
-
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   mustRef?: any;
 }
@@ -62,6 +59,8 @@ export default function Input(props: Props): JSX.Element {
   function handleReveal(): void {
     setIsRevealed(!isRevealed);
   }
+
+  // event listener
 
   useEventListener('keydown', (e: KeyboardEvent) => {
     if (props.listen && e.key === 'Enter' && props.submitFunction && props.submitValid) {

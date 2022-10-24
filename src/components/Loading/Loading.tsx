@@ -1,8 +1,8 @@
-import React from 'react';
+// import React from 'react';
 
 import { theme } from '../../stitches.config';
 
-export interface Props {
+interface Props {
   stroke?: string;
   width?: number | string;
 }

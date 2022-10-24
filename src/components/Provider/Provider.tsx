@@ -1,13 +1,14 @@
+// import React from 'react';
 import { IconContext } from 'phosphor-react';
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { useDarkMode } from 'usehooks-ts';
 
 import { DefaultProps, lightTheme, theme } from '../../stitches.config';
-import { Toast } from '../Toast';
 
 import { ProviderStyled, ProviderTriggerStyled, reset } from './Provider.styles';
+import Toast from './Toast/Toast';
 
-export interface Props extends DefaultProps {
+interface Props extends DefaultProps {
   children: ReactNode | ReactNode[];
   default?: 'dark' | 'light';
   locked?: 'dark' | 'light';
@@ -35,7 +36,7 @@ export default function Provider(props: Props): JSX.Element {
   );
 }
 
-export const ThemeProvider = Provider;
+export const CosmoProvider = Provider;
 
 export function ProviderToggle(props: Omit<Props, 'children'>): JSX.Element {
   const { isDarkMode, toggle } = useDarkMode(false);

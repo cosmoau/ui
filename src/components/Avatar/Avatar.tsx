@@ -1,11 +1,11 @@
-import React from 'react';
+// import React from 'react';
 
+import { Image } from '../../index';
 import { DefaultProps } from '../../stitches.config';
-import { Image } from '../Image';
 
 import { AvatarFallbackStyled, AvatarImageStyled, AvatarStyled } from './Avatar.styles';
 
-export interface Props extends DefaultProps {
+interface Props extends DefaultProps {
   image?: string;
   fallback: string;
   width?: number | string;

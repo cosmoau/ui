@@ -1,11 +1,12 @@
-import React, { ReactNode } from 'react';
+// import React from 'react';
+import { ReactNode } from 'react';
 
+import { Image } from '../../index';
 import { DefaultProps } from '../../stitches.config';
-import { ThreesImage } from '../Image';
 
 import { BoxImageChildrenStyled, BoxStyled } from './Box.styles';
 
-export interface Props extends DefaultProps {
+interface Props extends DefaultProps {
   children: ReactNode;
   loading?: boolean;
   image?: string;
@@ -35,7 +36,7 @@ export default function Box(props: Props): JSX.Element {
           href={props.imageCTA}
           rel='noopener noreferrer'
           target={props.imageTarget || '_blank'}>
-          <ThreesImage
+          <Image
             alt={props.imageAlt || ('#' as string)}
             css={{
               img: {
@@ -52,7 +53,7 @@ export default function Box(props: Props): JSX.Element {
           />
         </a>
       ) : (
-        <ThreesImage
+        <Image
           alt={props.imageAlt || ('#' as string)}
           css={{
             img: {

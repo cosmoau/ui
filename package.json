@@ -1,37 +1,38 @@
 {
   "name": "@cosmoau/ui",
   "description": "A modular, flexible library of components and design patterns used to enforce consistency across all internal and subsidiary projects.",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": "Jackson Dolman <mail@planare.dev>",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "bugs": {
     "url": "https://github.com/cosmoau/ui/issues"
   },
-  "dependencies": {
+  "sideEffects": false,
+  "devDependencies": {
     "@stitches/react": "^1.2.8",
-    "@types/node": "^18.11.0",
+    "@types/node": "^18.11.4",
     "@types/react": "^18.0.21",
+    "eslint": "^8.26.0",
+    "eslint-config-dolmios": "^1.1.1",
+    "eslint-config-next": "^12.3.1",
     "next": "^12.3.1",
+    "parcel": "^2.7.0",
+    "path-browserify": "^1.0.1",
     "phosphor-react": "^1.4.1",
+    "prettier": "^2.7.1",
+    "process": "^0.11.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.0",
+    "tslib": "^2.4.0",
     "typescript": "^4.8.4",
-    "usehooks-ts": "^2.9.1"
-  },
-  "devDependencies": {
-    "eslint": "^8.25.0",
-    "eslint-config-dolmios": "^1.1.1",
-    "eslint-config-next": "^12.3.1",
-    "microbundle": "^0.15.1",
-    "parcel": "^2.7.0",
-    "path-browserify": "^1.0.1",
-    "prettier": "^2.7.1",
-    "process": "^0.11.10",
-    "util": "^0.12.4"
+    "usehooks-ts": "^2.9.1",
+    "util": "^0.12.5"
   },
   "files": [
-    "dist"
+    "dist",
+    "LICENSE",
+    "README.md"
   ],
   "homepage": "https://github.com/cosmoau/ui",
   "keywords": [
@@ -51,9 +52,10 @@
     "user interface"
   ],
   "license": "BSD-3-Clause",
-  "main": "dist/index.js",
-  "module": "dist/index.modern.module.js",
-  "packageManager": "yarn@3.2.3",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "packageManager": "yarn@3.2.4",
   "peerDependencies": {
     "next": "^12.3.1",
     "react": "^18.2.0",
@@ -65,12 +67,13 @@
     "url": "git://github.com/cosmoau/ui.git"
   },
   "scripts": {
-    "build": "yarn lint && microbundle --jsx React.createElement --format esm,cjs,modern",
-    "build:visual": "yarn build --visualize",
-    "dev": "parcel playground/index.html --dist-dir playground/dist --open",
+    "build": "yarn clean && yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "clean": "rm -rf dist lib",
+    "dev": "parcel playground/index.html --dist-dir playground/dist --open --no-cache",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx",
     "prettier": "prettier --check --write src"
   },
-  "source": "src/index.ts",
-  "types": "dist/index.d.ts"
+  "source": "src/index.tsx"
 }

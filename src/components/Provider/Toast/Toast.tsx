@@ -1,4 +1,5 @@
-import React, { ComponentType, ElementType } from 'react';
+// import React from 'react';
+import { ComponentType, ElementType } from 'react';
 import toast, { Toaster, useToaster } from 'react-hot-toast';
 import { useEventListener } from 'usehooks-ts';
 
@@ -43,6 +44,3 @@ export default function Toast(props: ToasterProps): JSX.Element {
     </ToastContainerStyled>
   );
 }
-
-// export react-hot-toast to hook
-export { toast };

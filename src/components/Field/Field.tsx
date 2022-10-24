@@ -1,14 +1,12 @@
-import { Warning, Check, ClipboardText } from 'phosphor-react';
+import { Check, ClipboardText, Warning } from 'phosphor-react';
 import React, { TextareaHTMLAttributes, useState } from 'react';
 
+import { Button, Badge, Loading } from '../../index';
 import { DefaultProps } from '../../stitches.config';
-import { Badge } from '../Badge';
-import { Button } from '../Button';
-import { Loading } from '../Loading';
 
 import { FieldStyled, FieldAreaStyled, FieldFunctionStyled } from './Field.styles';
 
-export interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement>, DefaultProps {
+interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement>, DefaultProps {
   copy?: boolean;
   error?: boolean;
   errorMessage?: string;

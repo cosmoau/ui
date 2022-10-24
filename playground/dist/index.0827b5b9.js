@@ -27093,7 +27093,6 @@ function App() {
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.View), {
                 container: true,
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
-                    align: "center",
                     direction: "row",
                     flex: "center",
                     top: "4",
@@ -27112,7 +27111,8 @@ function App() {
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
                                         as: "h1",
-                                        bottom: 6,
+                                        bottom: "6",
+                                        override: "h6",
                                         children: "Airbnb, Stayz, Booking.com and Homes & Villas Management"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
@@ -27173,16 +27173,6 @@ function App() {
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
                                         lineNumber: 51,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.ProviderToggle), {
-                                        trigger: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
-                                            ariaLabel: "Toggle",
-                                            children: "Toggle"
-                                        }, void 0, false, void 0, void 0)
-                                    }, void 0, false, {
-                                        fileName: "playground/App.tsx",
-                                        lineNumber: 54,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27461,16 +27451,6 @@ function App() {
                                         lineNumber: 159,
                                         columnNumber: 15
                                     }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.ProviderToggle), {
-                                        trigger: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
-                                            ariaLabel: "Toggle",
-                                            children: "Toggle"
-                                        }, void 0, false, void 0, void 0)
-                                    }, void 0, false, {
-                                        fileName: "playground/App.tsx",
-                                        lineNumber: 162,
-                                        columnNumber: 15
-                                    }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
                                         align: "center",
                                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
@@ -27504,15 +27484,47 @@ function App() {
                                 lineNumber: 172,
                                 columnNumber: 13
                             }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
-                                ariaLabel: "button",
-                                icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
-                                iconPosition: "right",
-                                small: true,
-                                children: "Button"
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Popover), {
+                                trigger: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
+                                    ariaLabel: "button",
+                                    icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
+                                    iconPosition: "right",
+                                    small: true,
+                                    children: "Popover hover"
+                                }, void 0, false, void 0, void 0),
+                                type: "hover",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                    as: "h3",
+                                    children: "Test"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 186,
+                                    columnNumber: 15
+                                }, this)
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
                                 lineNumber: 175,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Popover), {
+                                trigger: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
+                                    ariaLabel: "button",
+                                    icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
+                                    iconPosition: "right",
+                                    small: true,
+                                    children: "Popover hover"
+                                }, void 0, false, void 0, void 0),
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                    as: "h3",
+                                    children: "Test"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 198,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "playground/App.tsx",
+                                lineNumber: 188,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Dialog), {
@@ -27521,19 +27533,19 @@ function App() {
                                     icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
                                     iconPosition: "right",
                                     small: true,
-                                    children: "Button"
+                                    children: "Dialog"
                                 }, void 0, false, void 0, void 0),
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
                                     as: "h3",
                                     children: "Test"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 188,
+                                    lineNumber: 210,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 178,
+                                lineNumber: 200,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Dropdown), {
@@ -27559,7 +27571,7 @@ function App() {
                                 }, void 0, false, void 0, void 0)
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 190,
+                                lineNumber: 212,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27571,7 +27583,7 @@ function App() {
                                 children: "Button"
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 204,
+                                lineNumber: 226,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27579,7 +27591,7 @@ function App() {
                                 children: "Make your short-term rental listings work for you, without the hassle"
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 212,
+                                lineNumber: 234,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Table), {
@@ -27637,7 +27649,7 @@ function App() {
                                 ]
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 215,
+                                lineNumber: 237,
                                 columnNumber: 13
                             }, this)
                         ]
@@ -27672,7 +27684,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","../src/index":"h7u1C","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"zkmAe":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","../src/index":"4aBH6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"zkmAe":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "IconContext", ()=>(0, _indexEsmJs.IconContext));
@@ -32860,56 +32872,47 @@ var X = /*#__PURE__*/ (0, _react.forwardRef)(function(props, ref) {
 X.displayName = "X";
 exports.default = X;
 
-},{"react":"21dqq","../lib/index.esm.js":"lWKCH","../lib/IconBase.esm.js":"1HpLI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"h7u1C":[function(require,module,exports) {
+},{"react":"21dqq","../lib/index.esm.js":"lWKCH","../lib/IconBase.esm.js":"1HpLI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4aBH6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Avatar", ()=>(0, _avatar.Avatar));
-parcelHelpers.export(exports, "Badge", ()=>(0, _index.Badge));
-parcelHelpers.export(exports, "Box", ()=>(0, _index1.Box));
-parcelHelpers.export(exports, "Button", ()=>(0, _index2.Button));
-parcelHelpers.export(exports, "Dialog", ()=>(0, _index3.Dialog));
-parcelHelpers.export(exports, "Divider", ()=>(0, _index4.Divider));
-parcelHelpers.export(exports, "Dropdown", ()=>(0, _index5.Dropdown));
-parcelHelpers.export(exports, "Image", ()=>(0, _index6.Image));
-parcelHelpers.export(exports, "ThreesImage", ()=>(0, _index6.ThreesImage));
-parcelHelpers.export(exports, "Input", ()=>(0, _index7.Input));
-parcelHelpers.export(exports, "Loading", ()=>(0, _index8.Loading));
-parcelHelpers.export(exports, "Popover", ()=>(0, _index9.Popover));
-parcelHelpers.export(exports, "Provider", ()=>(0, _index10.Provider));
-parcelHelpers.export(exports, "ThemeProvider", ()=>(0, _index10.ThemeProvider));
-parcelHelpers.export(exports, "ProviderToggle", ()=>(0, _index10.ProviderToggle));
-parcelHelpers.export(exports, "Stack", ()=>(0, _index11.Stack));
-parcelHelpers.export(exports, "Table", ()=>(0, _index12.Table));
-parcelHelpers.export(exports, "Text", ()=>(0, _index13.Text));
-parcelHelpers.export(exports, "View", ()=>(0, _index14.View));
-parcelHelpers.export(exports, "Code", ()=>(0, _index15.Code));
-parcelHelpers.export(exports, "Field", ()=>(0, _index16.Field));
-parcelHelpers.export(exports, "breakpoints", ()=>(0, _stitchesConfig.breakpoints));
-parcelHelpers.export(exports, "css", ()=>(0, _stitchesConfig.css));
-parcelHelpers.export(exports, "getCssText", ()=>(0, _stitchesConfig.getCssText));
-parcelHelpers.export(exports, "lightTheme", ()=>(0, _stitchesConfig.lightTheme));
-parcelHelpers.export(exports, "styled", ()=>(0, _stitchesConfig.styled));
-parcelHelpers.export(exports, "theme", ()=>(0, _stitchesConfig.theme));
-parcelHelpers.export(exports, "keyframes", ()=>(0, _stitchesConfig.keyframes));
 var _avatar = require("./components/Avatar");
+parcelHelpers.exportAll(_avatar, exports);
 var _index = require("./components/Badge/index");
+parcelHelpers.exportAll(_index, exports);
 var _index1 = require("./components/Box/index");
+parcelHelpers.exportAll(_index1, exports);
 var _index2 = require("./components/Button/index");
+parcelHelpers.exportAll(_index2, exports);
 var _index3 = require("./components/Dialog/index");
+parcelHelpers.exportAll(_index3, exports);
 var _index4 = require("./components/Divider/index");
+parcelHelpers.exportAll(_index4, exports);
 var _index5 = require("./components/Dropdown/index");
+parcelHelpers.exportAll(_index5, exports);
 var _index6 = require("./components/Image/index");
+parcelHelpers.exportAll(_index6, exports);
 var _index7 = require("./components/Input/index");
+parcelHelpers.exportAll(_index7, exports);
 var _index8 = require("./components/Loading/index");
+parcelHelpers.exportAll(_index8, exports);
 var _index9 = require("./components/Popover/index");
+parcelHelpers.exportAll(_index9, exports);
 var _index10 = require("./components/Provider/index");
+parcelHelpers.exportAll(_index10, exports);
 var _index11 = require("./components/Stack/index");
+parcelHelpers.exportAll(_index11, exports);
 var _index12 = require("./components/Table/index");
+parcelHelpers.exportAll(_index12, exports);
 var _index13 = require("./components/Text/index");
+parcelHelpers.exportAll(_index13, exports);
 var _index14 = require("./components/View/index");
+parcelHelpers.exportAll(_index14, exports);
 var _index15 = require("./components/Code/index");
+parcelHelpers.exportAll(_index15, exports);
 var _index16 = require("./components/Field/index");
+parcelHelpers.exportAll(_index16, exports);
 var _stitchesConfig = require("./stitches.config");
+parcelHelpers.exportAll(_stitchesConfig, exports);
 
 },{"./components/Avatar":"iC4G6","./components/Badge/index":"egHOx","./components/Box/index":"8AYsO","./components/Button/index":"i3jlU","./components/Dialog/index":"7DV0X","./components/Divider/index":"4ujjS","./components/Dropdown/index":"9yvFB","./components/Image/index":"ikXqf","./components/Input/index":"iclCk","./components/Loading/index":"gWqOi","./components/Popover/index":"ayKiy","./components/Provider/index":"gZ9Mc","./components/Stack/index":"6V7Vx","./components/Table/index":"kTnYg","./components/Text/index":"d5OVu","./components/View/index":"fyNq0","./components/Code/index":"99Ces","./components/Field/index":"gaJxM","./stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iC4G6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -32928,9 +32931,8 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _image = require("../Image");
+// import React from 'react';
+var _index = require("../../index");
 var _avatarStyles = require("./Avatar.styles");
 function Avatar(props) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _avatarStyles.AvatarStyled), {
@@ -32941,7 +32943,7 @@ function Avatar(props) {
         },
         id: props.id,
         children: props.image ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _avatarStyles.AvatarImageStyled), {
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _image.Image), {
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Image), {
                 alt: props.fallback,
                 layout: "fill",
                 objectFit: "cover",
@@ -32979,12 +32981,7753 @@ $RefreshReg$(_c, "Avatar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../Image":"ikXqf","./Avatar.styles":"jdqmG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ikXqf":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../../index":"4aBH6","./Avatar.styles":"jdqmG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jdqmG":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-// export default as Image, but also alias ThreesImage
+parcelHelpers.export(exports, "AvatarStyled", ()=>AvatarStyled);
+parcelHelpers.export(exports, "AvatarImageStyled", ()=>AvatarImageStyled);
+parcelHelpers.export(exports, "AvatarFallbackStyled", ()=>AvatarFallbackStyled);
+var _stitchesConfig = require("../../stitches.config");
+const AvatarStyled = (0, _stitchesConfig.styled)("div", {
+    alignItems: "center",
+    borderRadius: "100%",
+    display: "inline-flex",
+    justifyContent: "center",
+    overflow: "hidden",
+    position: "relative",
+    userSelect: "none"
+});
+const AvatarImageStyled = (0, _stitchesConfig.styled)("div", {
+    borderRadius: "inherit",
+    height: "100%",
+    position: "relative",
+    width: "100%"
+});
+const AvatarFallbackStyled = (0, _stitchesConfig.styled)("div", {
+    alignItems: "center",
+    backgroundColor: "$default",
+    color: "$text",
+    display: "flex",
+    height: "100%",
+    justifyContent: "center",
+    textAlign: "center",
+    width: "100%"
+});
+exports.default = AvatarStyled;
+
+},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iMNz3":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "breakpoints", ()=>breakpoints);
+parcelHelpers.export(exports, "theme", ()=>theme);
+parcelHelpers.export(exports, "css", ()=>css);
+parcelHelpers.export(exports, "styled", ()=>styled);
+parcelHelpers.export(exports, "getCssText", ()=>getCssText);
+parcelHelpers.export(exports, "globalCss", ()=>globalCss);
+parcelHelpers.export(exports, "keyframes", ()=>keyframes);
+parcelHelpers.export(exports, "lightTheme", ()=>lightTheme);
+parcelHelpers.export(exports, "fadeIn", ()=>fadeIn);
+parcelHelpers.export(exports, "fadeOut", ()=>fadeOut);
+var _react = require("@stitches/react");
+const breakpoints = {
+    desktop: "@media only screen and (max-width: 1980px)",
+    desktopX: "@media only screen and (min-width: 1541px) and (max-width: 1980px)",
+    laptop: "@media only screen and (max-width: 1540px)",
+    laptopX: "@media only screen and (min-width: 921px) and (max-width: 1540px)",
+    phone: "@media only screen and (max-width: 740px)",
+    tablet: "@media only screen and (max-width: 920px)",
+    tabletX: "@media only screen and (min-width: 741px) and (max-width: 920px)",
+    wide: "@media only screen and (min-width: 1981px)"
+};
+const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _react.createStitches)({
+    theme: {
+        colors: {
+            accent: "rgb(162, 170, 194)",
+            background: "rgb(8, 10, 27)",
+            blueBorder: "rgba(115, 172, 255, 0.4)",
+            blueOverlay: "rgba(151, 193, 255, 0.2)",
+            blueText: "rgb(166, 179, 255)",
+            border: "rgba(253, 250, 246, 0.15)",
+            borderHover: "rgba(253, 250, 246, 0.1)",
+            default: "rgba(253, 250, 246, 0.06)",
+            defaultHover: "rgba(253, 250, 246, 0.1)",
+            greenBorder: "rgba(0, 200, 83, 0.4)",
+            greenOverlay: "rgba(101, 227, 124, 0.2)",
+            greenText: "rgb(124, 241, 151)",
+            orangeBorder: "rgba(255, 172, 115, 0.4)",
+            orangeOverlay: "rgba(255, 172, 115, 0.2)",
+            orangeText: "rgb(254, 177, 141)",
+            pinkBorder: "rgba(255, 115, 172, 0.4)",
+            pinkOverlay: "rgba(255, 115, 172, 0.2)",
+            pinkText: "rgb(255, 142, 221)",
+            purpleBorder: "rgba(172, 115, 255, 0.4)",
+            purpleOverlay: "rgba(172, 115, 255, 0.2)",
+            purpleText: "rgb(210, 142, 255)",
+            redBorder: "rgba(255, 115, 115, 0.4)",
+            redOverlay: "rgba(255, 115, 115, 0.2)",
+            redText: "rgb(251, 127, 143)",
+            text: "rgb(253, 250, 246)"
+        },
+        fontSizes: {
+            h1: "3.3rem",
+            h2: "2.7rem",
+            h3: "2.4rem",
+            h4: "1.7rem",
+            h5: "1.6rem",
+            h6: "1.5rem",
+            p: "1.3rem",
+            small: "1.2rem"
+        },
+        fontWeights: {
+            h1: "500",
+            h2: "500",
+            h3: "500",
+            h4: "bold",
+            h5: "normal",
+            h6: "normal",
+            p: "normal",
+            small: "normal"
+        },
+        fonts: {
+            default: "$sans",
+            sans: "Untitled Sans, apple-system, sans-serif",
+            serif: "Tiempos Headline"
+        },
+        media: breakpoints,
+        radii: {
+            1: "0.6rem",
+            2: "0.9rem",
+            3: "1.2rem"
+        },
+        shadows: {
+            1: "0 0.2rem 0.3rem 0 rgba(253, 250, 246, 0.03)",
+            2: "0 0.4rem 0.6rem 0 rgba(253, 250, 246, 0.03)",
+            3: "0 0.6rem 0.9rem 0 rgba(253, 250, 246, 0.03)"
+        },
+        space: {
+            1: "0.25rem",
+            2: "0.5rem",
+            3: "0.75rem",
+            4: "1rem",
+            5: "2rem",
+            6: "4rem",
+            7: "8rem",
+            8: "10rem"
+        },
+        transitions: {
+            default: "all 0.13s ease-in-out"
+        },
+        zIndices: {
+            dialog: 100,
+            dropdown: 125,
+            popover: 150,
+            toast: 1000
+        }
+    },
+    utils: {
+        desktop: (value)=>({
+                [breakpoints.desktop]: value
+            }),
+        desktopX: (value)=>({
+                [breakpoints.desktopX]: value
+            }),
+        hidden: (value)=>({
+                [breakpoints[value]]: {
+                    display: "none !important"
+                }
+            }),
+        hiddenInline: (value)=>({
+                display: "inline-block !important",
+                [breakpoints[value]]: {
+                    display: "none !important"
+                }
+            }),
+        laptop: (value)=>({
+                [breakpoints.laptop]: value
+            }),
+        laptopX: (value)=>({
+                [breakpoints.laptopX]: value
+            }),
+        phone: (value)=>({
+                [breakpoints.phone]: value
+            }),
+        tablet: (value)=>({
+                [breakpoints.tablet]: value
+            }),
+        tabletX: (value)=>({
+                [breakpoints.tabletX]: value
+            }),
+        visible: (value)=>({
+                display: "none",
+                [breakpoints[value]]: {
+                    display: "block"
+                }
+            }),
+        visibleInline: (value)=>({
+                display: "none",
+                [breakpoints[value]]: {
+                    display: "inline-block"
+                }
+            }),
+        wide: (value)=>({
+                [breakpoints.wide]: value
+            })
+    }
+});
+const lightTheme = (0, _react.createTheme)({
+    colors: {
+        accent: "rgb(40, 57, 73)",
+        background: "rgb(253, 250, 246)",
+        blueText: "rgb(32, 47, 136)",
+        border: "rgba(10, 12, 30,0.11)",
+        borderHover: "rgba(10, 12, 30, 0.09)",
+        default: "rgba(10, 12, 30, 0.04)",
+        defaultHover: "rgba(10, 12, 30, 0.06)",
+        greenText: "rgb(0, 76, 6)",
+        orangeText: "rgb(199, 84, 30)",
+        pinkText: "rgb(173, 22, 128)",
+        purpleText: "rgb(112, 23, 171)",
+        redText: "rgb(170, 28, 47)",
+        text: "rgb(10, 37, 64)"
+    },
+    shadows: {
+        1: "0 0.2rem 0.3rem 0 rgba(8, 10, 27, 0.1)",
+        2: "0 0.4rem 0.6rem 0 rgba(8, 10, 27, 0.1)",
+        3: "0 0.6rem 0.8rem 0 rgba(8, 10, 27, 0.1)"
+    }
+});
+const fadeIn = keyframes({
+    "0%": {
+        opacity: 0
+    },
+    "100%": {
+        opacity: 1
+    }
+});
+const fadeOut = keyframes({
+    "0%": {
+        opacity: 1
+    },
+    "100%": {
+        opacity: 0
+    }
+});
+
+},{"@stitches/react":"5m0Or","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5m0Or":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "createStitches", ()=>q) //# sourceMappingUrl=index.map
+;
+parcelHelpers.export(exports, "createTheme", ()=>Q);
+parcelHelpers.export(exports, "css", ()=>te);
+parcelHelpers.export(exports, "defaultThemeMap", ()=>n);
+parcelHelpers.export(exports, "globalCss", ()=>_);
+parcelHelpers.export(exports, "keyframes", ()=>ee);
+parcelHelpers.export(exports, "styled", ()=>re);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var e = "colors", t = "sizes", r = "space", n = {
+    gap: r,
+    gridGap: r,
+    columnGap: r,
+    gridColumnGap: r,
+    rowGap: r,
+    gridRowGap: r,
+    inset: r,
+    insetBlock: r,
+    insetBlockEnd: r,
+    insetBlockStart: r,
+    insetInline: r,
+    insetInlineEnd: r,
+    insetInlineStart: r,
+    margin: r,
+    marginTop: r,
+    marginRight: r,
+    marginBottom: r,
+    marginLeft: r,
+    marginBlock: r,
+    marginBlockEnd: r,
+    marginBlockStart: r,
+    marginInline: r,
+    marginInlineEnd: r,
+    marginInlineStart: r,
+    padding: r,
+    paddingTop: r,
+    paddingRight: r,
+    paddingBottom: r,
+    paddingLeft: r,
+    paddingBlock: r,
+    paddingBlockEnd: r,
+    paddingBlockStart: r,
+    paddingInline: r,
+    paddingInlineEnd: r,
+    paddingInlineStart: r,
+    top: r,
+    right: r,
+    bottom: r,
+    left: r,
+    scrollMargin: r,
+    scrollMarginTop: r,
+    scrollMarginRight: r,
+    scrollMarginBottom: r,
+    scrollMarginLeft: r,
+    scrollMarginX: r,
+    scrollMarginY: r,
+    scrollMarginBlock: r,
+    scrollMarginBlockEnd: r,
+    scrollMarginBlockStart: r,
+    scrollMarginInline: r,
+    scrollMarginInlineEnd: r,
+    scrollMarginInlineStart: r,
+    scrollPadding: r,
+    scrollPaddingTop: r,
+    scrollPaddingRight: r,
+    scrollPaddingBottom: r,
+    scrollPaddingLeft: r,
+    scrollPaddingX: r,
+    scrollPaddingY: r,
+    scrollPaddingBlock: r,
+    scrollPaddingBlockEnd: r,
+    scrollPaddingBlockStart: r,
+    scrollPaddingInline: r,
+    scrollPaddingInlineEnd: r,
+    scrollPaddingInlineStart: r,
+    fontSize: "fontSizes",
+    background: e,
+    backgroundColor: e,
+    backgroundImage: e,
+    borderImage: e,
+    border: e,
+    borderBlock: e,
+    borderBlockEnd: e,
+    borderBlockStart: e,
+    borderBottom: e,
+    borderBottomColor: e,
+    borderColor: e,
+    borderInline: e,
+    borderInlineEnd: e,
+    borderInlineStart: e,
+    borderLeft: e,
+    borderLeftColor: e,
+    borderRight: e,
+    borderRightColor: e,
+    borderTop: e,
+    borderTopColor: e,
+    caretColor: e,
+    color: e,
+    columnRuleColor: e,
+    fill: e,
+    outline: e,
+    outlineColor: e,
+    stroke: e,
+    textDecorationColor: e,
+    fontFamily: "fonts",
+    fontWeight: "fontWeights",
+    lineHeight: "lineHeights",
+    letterSpacing: "letterSpacings",
+    blockSize: t,
+    minBlockSize: t,
+    maxBlockSize: t,
+    inlineSize: t,
+    minInlineSize: t,
+    maxInlineSize: t,
+    width: t,
+    minWidth: t,
+    maxWidth: t,
+    height: t,
+    minHeight: t,
+    maxHeight: t,
+    flexBasis: t,
+    gridTemplateColumns: t,
+    gridTemplateRows: t,
+    borderWidth: "borderWidths",
+    borderTopWidth: "borderWidths",
+    borderRightWidth: "borderWidths",
+    borderBottomWidth: "borderWidths",
+    borderLeftWidth: "borderWidths",
+    borderStyle: "borderStyles",
+    borderTopStyle: "borderStyles",
+    borderRightStyle: "borderStyles",
+    borderBottomStyle: "borderStyles",
+    borderLeftStyle: "borderStyles",
+    borderRadius: "radii",
+    borderTopLeftRadius: "radii",
+    borderTopRightRadius: "radii",
+    borderBottomRightRadius: "radii",
+    borderBottomLeftRadius: "radii",
+    boxShadow: "shadows",
+    textShadow: "shadows",
+    transition: "transitions",
+    zIndex: "zIndices"
+}, i = (e, t)=>"function" == typeof t ? {
+        "()": Function.prototype.toString.call(t)
+    } : t, o = ()=>{
+    const e = Object.create(null);
+    return (t, r, ...n)=>{
+        const o = ((e)=>JSON.stringify(e, i))(t);
+        return o in e ? e[o] : e[o] = r(t, ...n);
+    };
+}, l = Symbol.for("sxs.internal"), s = (e, t)=>Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)), a = (e)=>{
+    for(const t in e)return !0;
+    return !1;
+}, { hasOwnProperty: c  } = Object.prototype, d = (e)=>e.includes("-") ? e : e.replace(/[A-Z]/g, (e)=>"-" + e.toLowerCase()), g = /\s+(?![^()]*\))/, p = (e)=>(t)=>e(..."string" == typeof t ? String(t).split(g) : [
+            t
+        ]), u = {
+    appearance: (e)=>({
+            WebkitAppearance: e,
+            appearance: e
+        }),
+    backfaceVisibility: (e)=>({
+            WebkitBackfaceVisibility: e,
+            backfaceVisibility: e
+        }),
+    backdropFilter: (e)=>({
+            WebkitBackdropFilter: e,
+            backdropFilter: e
+        }),
+    backgroundClip: (e)=>({
+            WebkitBackgroundClip: e,
+            backgroundClip: e
+        }),
+    boxDecorationBreak: (e)=>({
+            WebkitBoxDecorationBreak: e,
+            boxDecorationBreak: e
+        }),
+    clipPath: (e)=>({
+            WebkitClipPath: e,
+            clipPath: e
+        }),
+    content: (e)=>({
+            content: e.includes('"') || e.includes("'") || /^([A-Za-z]+\([^]*|[^]*-quote|inherit|initial|none|normal|revert|unset)$/.test(e) ? e : `"${e}"`
+        }),
+    hyphens: (e)=>({
+            WebkitHyphens: e,
+            hyphens: e
+        }),
+    maskImage: (e)=>({
+            WebkitMaskImage: e,
+            maskImage: e
+        }),
+    maskSize: (e)=>({
+            WebkitMaskSize: e,
+            maskSize: e
+        }),
+    tabSize: (e)=>({
+            MozTabSize: e,
+            tabSize: e
+        }),
+    textSizeAdjust: (e)=>({
+            WebkitTextSizeAdjust: e,
+            textSizeAdjust: e
+        }),
+    userSelect: (e)=>({
+            WebkitUserSelect: e,
+            userSelect: e
+        }),
+    marginBlock: p((e, t)=>({
+            marginBlockStart: e,
+            marginBlockEnd: t || e
+        })),
+    marginInline: p((e, t)=>({
+            marginInlineStart: e,
+            marginInlineEnd: t || e
+        })),
+    maxSize: p((e, t)=>({
+            maxBlockSize: e,
+            maxInlineSize: t || e
+        })),
+    minSize: p((e, t)=>({
+            minBlockSize: e,
+            minInlineSize: t || e
+        })),
+    paddingBlock: p((e, t)=>({
+            paddingBlockStart: e,
+            paddingBlockEnd: t || e
+        })),
+    paddingInline: p((e, t)=>({
+            paddingInlineStart: e,
+            paddingInlineEnd: t || e
+        }))
+}, h = /([\d.]+)([^]*)/, f = (e, t)=>e.length ? e.reduce((e, r)=>(e.push(...t.map((e)=>e.includes("&") ? e.replace(/&/g, /[ +>|~]/.test(r) && /&.*&/.test(e) ? `:is(${r})` : r) : r + " " + e)), e), []) : t, m = (e, t)=>e in b && "string" == typeof t ? t.replace(/^((?:[^]*[^\w-])?)(fit-content|stretch)((?:[^\w-][^]*)?)$/, (t, r, n, i)=>r + ("stretch" === n ? `-moz-available${i};${d(e)}:${r}-webkit-fill-available` : `-moz-fit-content${i};${d(e)}:${r}fit-content`) + i) : String(t), b = {
+    blockSize: 1,
+    height: 1,
+    inlineSize: 1,
+    maxBlockSize: 1,
+    maxHeight: 1,
+    maxInlineSize: 1,
+    maxWidth: 1,
+    minBlockSize: 1,
+    minHeight: 1,
+    minInlineSize: 1,
+    minWidth: 1,
+    width: 1
+}, S = (e)=>e ? e + "-" : "", k = (e, t, r)=>e.replace(/([+-])?((?:\d+(?:\.\d*)?|\.\d+)(?:[Ee][+-]?\d+)?)?(\$|--)([$\w-]+)/g, (e, n, i, o, l)=>"$" == o == !!i ? e : (n || "--" == o ? "calc(" : "") + "var(--" + ("$" === o ? S(t) + (l.includes("$") ? "" : S(r)) + l.replace(/\$/g, "-") : l) + ")" + (n || "--" == o ? "*" + (n || "") + (i || "1") + ")" : "")), y = /\s*,\s*(?![^()]*\))/, B = Object.prototype.toString, $ = (e, t, r, n, i)=>{
+    let o, l, s;
+    const a = (e, t, r)=>{
+        let c, g;
+        const p = (e)=>{
+            for(c in e){
+                const R = 64 === c.charCodeAt(0), z = R && Array.isArray(e[c]) ? e[c] : [
+                    e[c]
+                ];
+                for (g of z){
+                    const e1 = /[A-Z]/.test($ = c) ? $ : $.replace(/-[^]/g, (e)=>e[1].toUpperCase()), z1 = "object" == typeof g && g && g.toString === B && (!n.utils[e1] || !t.length);
+                    if (e1 in n.utils && !z1) {
+                        const t1 = n.utils[e1];
+                        if (t1 !== l) {
+                            l = t1, p(t1(g)), l = null;
+                            continue;
+                        }
+                    } else if (e1 in u) {
+                        const t2 = u[e1];
+                        if (t2 !== s) {
+                            s = t2, p(t2(g)), s = null;
+                            continue;
+                        }
+                    }
+                    if (R && (b = c.slice(1) in n.media ? "@media " + n.media[c.slice(1)] : c, c = b.replace(/\(\s*([\w-]+)\s*(=|<|<=|>|>=)\s*([\w-]+)\s*(?:(<|<=|>|>=)\s*([\w-]+)\s*)?\)/g, (e, t, r, n, i, o)=>{
+                        const l = h.test(t), s = .0625 * (l ? -1 : 1), [a, c] = l ? [
+                            n,
+                            t
+                        ] : [
+                            t,
+                            n
+                        ];
+                        return "(" + ("=" === r[0] ? "" : ">" === r[0] === l ? "max-" : "min-") + a + ":" + ("=" !== r[0] && 1 === r.length ? c.replace(h, (e, t, n)=>Number(t) + s * (">" === r ? 1 : -1) + n) : c) + (i ? ") and (" + (">" === i[0] ? "min-" : "max-") + a + ":" + (1 === i.length ? o.replace(h, (e, t, r)=>Number(t) + s * (">" === i ? -1 : 1) + r) : o) : "") + ")";
+                    })), z1) {
+                        const e2 = R ? r.concat(c) : [
+                            ...r
+                        ], n1 = R ? [
+                            ...t
+                        ] : f(t, c.split(y));
+                        void 0 !== o && i(x(...o)), o = void 0, a(g, n1, e2);
+                    } else void 0 === o && (o = [
+                        [],
+                        t,
+                        r
+                    ]), c = R || 36 !== c.charCodeAt(0) ? c : `--${S(n.prefix)}${c.slice(1).replace(/\$/g, "-")}`, g = z1 ? g : "number" == typeof g ? g && e1 in I ? String(g) + "px" : String(g) : k(m(e1, null == g ? "" : g), n.prefix, n.themeMap[e1]), o[0].push(`${R ? `${c} ` : `${d(c)}:`}${g}`);
+                }
+            }
+            var b, $;
+        };
+        p(e), void 0 !== o && i(x(...o)), o = void 0;
+    };
+    a(e, t, r);
+}, x = (e, t, r)=>`${r.map((e)=>`${e}{`).join("")}${t.length ? `${t.join(",")}{` : ""}${e.join(";")}${t.length ? "}" : ""}${Array(r.length ? r.length + 1 : 0).join("}")}`, I = {
+    animationDelay: 1,
+    animationDuration: 1,
+    backgroundSize: 1,
+    blockSize: 1,
+    border: 1,
+    borderBlock: 1,
+    borderBlockEnd: 1,
+    borderBlockEndWidth: 1,
+    borderBlockStart: 1,
+    borderBlockStartWidth: 1,
+    borderBlockWidth: 1,
+    borderBottom: 1,
+    borderBottomLeftRadius: 1,
+    borderBottomRightRadius: 1,
+    borderBottomWidth: 1,
+    borderEndEndRadius: 1,
+    borderEndStartRadius: 1,
+    borderInlineEnd: 1,
+    borderInlineEndWidth: 1,
+    borderInlineStart: 1,
+    borderInlineStartWidth: 1,
+    borderInlineWidth: 1,
+    borderLeft: 1,
+    borderLeftWidth: 1,
+    borderRadius: 1,
+    borderRight: 1,
+    borderRightWidth: 1,
+    borderSpacing: 1,
+    borderStartEndRadius: 1,
+    borderStartStartRadius: 1,
+    borderTop: 1,
+    borderTopLeftRadius: 1,
+    borderTopRightRadius: 1,
+    borderTopWidth: 1,
+    borderWidth: 1,
+    bottom: 1,
+    columnGap: 1,
+    columnRule: 1,
+    columnRuleWidth: 1,
+    columnWidth: 1,
+    containIntrinsicSize: 1,
+    flexBasis: 1,
+    fontSize: 1,
+    gap: 1,
+    gridAutoColumns: 1,
+    gridAutoRows: 1,
+    gridTemplateColumns: 1,
+    gridTemplateRows: 1,
+    height: 1,
+    inlineSize: 1,
+    inset: 1,
+    insetBlock: 1,
+    insetBlockEnd: 1,
+    insetBlockStart: 1,
+    insetInline: 1,
+    insetInlineEnd: 1,
+    insetInlineStart: 1,
+    left: 1,
+    letterSpacing: 1,
+    margin: 1,
+    marginBlock: 1,
+    marginBlockEnd: 1,
+    marginBlockStart: 1,
+    marginBottom: 1,
+    marginInline: 1,
+    marginInlineEnd: 1,
+    marginInlineStart: 1,
+    marginLeft: 1,
+    marginRight: 1,
+    marginTop: 1,
+    maxBlockSize: 1,
+    maxHeight: 1,
+    maxInlineSize: 1,
+    maxWidth: 1,
+    minBlockSize: 1,
+    minHeight: 1,
+    minInlineSize: 1,
+    minWidth: 1,
+    offsetDistance: 1,
+    offsetRotate: 1,
+    outline: 1,
+    outlineOffset: 1,
+    outlineWidth: 1,
+    overflowClipMargin: 1,
+    padding: 1,
+    paddingBlock: 1,
+    paddingBlockEnd: 1,
+    paddingBlockStart: 1,
+    paddingBottom: 1,
+    paddingInline: 1,
+    paddingInlineEnd: 1,
+    paddingInlineStart: 1,
+    paddingLeft: 1,
+    paddingRight: 1,
+    paddingTop: 1,
+    perspective: 1,
+    right: 1,
+    rowGap: 1,
+    scrollMargin: 1,
+    scrollMarginBlock: 1,
+    scrollMarginBlockEnd: 1,
+    scrollMarginBlockStart: 1,
+    scrollMarginBottom: 1,
+    scrollMarginInline: 1,
+    scrollMarginInlineEnd: 1,
+    scrollMarginInlineStart: 1,
+    scrollMarginLeft: 1,
+    scrollMarginRight: 1,
+    scrollMarginTop: 1,
+    scrollPadding: 1,
+    scrollPaddingBlock: 1,
+    scrollPaddingBlockEnd: 1,
+    scrollPaddingBlockStart: 1,
+    scrollPaddingBottom: 1,
+    scrollPaddingInline: 1,
+    scrollPaddingInlineEnd: 1,
+    scrollPaddingInlineStart: 1,
+    scrollPaddingLeft: 1,
+    scrollPaddingRight: 1,
+    scrollPaddingTop: 1,
+    shapeMargin: 1,
+    textDecoration: 1,
+    textDecorationThickness: 1,
+    textIndent: 1,
+    textUnderlineOffset: 1,
+    top: 1,
+    transitionDelay: 1,
+    transitionDuration: 1,
+    verticalAlign: 1,
+    width: 1,
+    wordSpacing: 1
+}, R = (e)=>String.fromCharCode(e + (e > 25 ? 39 : 97)), z = (e)=>((e)=>{
+        let t, r = "";
+        for(t = Math.abs(e); t > 52; t = t / 52 | 0)r = R(t % 52) + r;
+        return R(t % 52) + r;
+    })(((e, t)=>{
+        let r = t.length;
+        for(; r;)e = 33 * e ^ t.charCodeAt(--r);
+        return e;
+    })(5381, JSON.stringify(e)) >>> 0), W = [
+    "themed",
+    "global",
+    "styled",
+    "onevar",
+    "resonevar",
+    "allvar",
+    "inline"
+], j = (e)=>{
+    if (e.href && !e.href.startsWith(location.origin)) return !1;
+    try {
+        return !!e.cssRules;
+    } catch (e1) {
+        return !1;
+    }
+}, E = (e)=>{
+    let t;
+    const r = ()=>{
+        const { cssRules: e  } = t.sheet;
+        return [].map.call(e, (r, n)=>{
+            const { cssText: i  } = r;
+            let o = "";
+            if (i.startsWith("--sxs")) return "";
+            if (e[n - 1] && (o = e[n - 1].cssText).startsWith("--sxs")) {
+                if (!r.cssRules.length) return "";
+                for(const e1 in t.rules)if (t.rules[e1].group === r) return `--sxs{--sxs:${[
+                    ...t.rules[e1].cache
+                ].join(" ")}}${i}`;
+                return r.cssRules.length ? `${o}${i}` : "";
+            }
+            return i;
+        }).join("");
+    }, n = ()=>{
+        if (t) {
+            const { rules: e1 , sheet: r1  } = t;
+            if (!r1.deleteRule) {
+                for(; 3 === Object(Object(r1.cssRules)[0]).type;)r1.cssRules.splice(0, 1);
+                r1.cssRules = [];
+            }
+            for(const t1 in e1)delete e1[t1];
+        }
+        const i = Object(e).styleSheets || [];
+        for (const e2 of i)if (j(e2)) {
+            for(let i1 = 0, o = e2.cssRules; o[i1]; ++i1){
+                const l = Object(o[i1]);
+                if (1 !== l.type) continue;
+                const s = Object(o[i1 + 1]);
+                if (4 !== s.type) continue;
+                ++i1;
+                const { cssText: a  } = l;
+                if (!a.startsWith("--sxs")) continue;
+                const c = a.slice(14, -3).trim().split(/\s+/), d = W[c[0]];
+                d && (t || (t = {
+                    sheet: e2,
+                    reset: n,
+                    rules: {},
+                    toString: r
+                }), t.rules[d] = {
+                    group: s,
+                    index: i1,
+                    cache: new Set(c)
+                });
+            }
+            if (t) break;
+        }
+        if (!t) {
+            const i2 = (e, t)=>({
+                    type: t,
+                    cssRules: [],
+                    insertRule (e, t) {
+                        this.cssRules.splice(t, 0, i2(e, {
+                            import: 3,
+                            undefined: 1
+                        }[(e.toLowerCase().match(/^@([a-z]+)/) || [])[1]] || 4));
+                    },
+                    get cssText () {
+                        return "@media{}" === e ? `@media{${[].map.call(this.cssRules, (e)=>e.cssText).join("")}}` : e;
+                    }
+                });
+            t = {
+                sheet: e ? (e.head || e).appendChild(document.createElement("style")).sheet : i2("", "text/css"),
+                rules: {},
+                reset: n,
+                toString: r
+            };
+        }
+        const { sheet: o1 , rules: l1  } = t;
+        for(let e3 = W.length - 1; e3 >= 0; --e3){
+            const t2 = W[e3];
+            if (!l1[t2]) {
+                const r2 = W[e3 + 1], n1 = l1[r2] ? l1[r2].index : o1.cssRules.length;
+                o1.insertRule("@media{}", n1), o1.insertRule(`--sxs{--sxs:${e3}}`, n1), l1[t2] = {
+                    group: o1.cssRules[n1 + 1],
+                    index: n1,
+                    cache: new Set([
+                        e3
+                    ])
+                };
+            }
+            v(l1[t2]);
+        }
+    };
+    return n(), t;
+}, v = (e)=>{
+    const t = e.group;
+    let r = t.cssRules.length;
+    e.apply = (e)=>{
+        try {
+            t.insertRule(e, r), ++r;
+        } catch (e1) {}
+    };
+}, T = Symbol(), w = o(), M = (e, t)=>w(e, ()=>(...r)=>{
+            let n = {
+                type: null,
+                composers: new Set
+            };
+            for (const t1 of r)if (null != t1) {
+                if (t1[l]) {
+                    null == n.type && (n.type = t1[l].type);
+                    for (const e1 of t1[l].composers)n.composers.add(e1);
+                } else t1.constructor !== Object || t1.$$typeof ? null == n.type && (n.type = t1) : n.composers.add(C(t1, e));
+            }
+            return null == n.type && (n.type = "span"), n.composers.size || n.composers.add([
+                "PJLV",
+                {},
+                [],
+                [],
+                {},
+                []
+            ]), P(e, n, t);
+        }), C = ({ variants: e , compoundVariants: t , defaultVariants: r , ...n }, i)=>{
+    const o = `${S(i.prefix)}c-${z(n)}`, l = [], s = [], d = Object.create(null), g = [];
+    for(const e1 in r)d[e1] = String(r[e1]);
+    if ("object" == typeof e && e) for(const t1 in e){
+        p = d, u = t1, c.call(p, u) || (d[t1] = "undefined");
+        const r1 = e[t1];
+        for(const e2 in r1){
+            const n1 = {
+                [t1]: String(e2)
+            };
+            "undefined" === String(e2) && g.push(t1);
+            const i1 = r1[e2], o1 = [
+                n1,
+                i1,
+                !a(i1)
+            ];
+            l.push(o1);
+        }
+    }
+    var p, u;
+    if ("object" == typeof t && t) for (const e3 of t){
+        let { css: t2 , ...r2 } = e3;
+        t2 = "object" == typeof t2 && t2 || {};
+        for(const e4 in r2)r2[e4] = String(r2[e4]);
+        const n2 = [
+            r2,
+            t2,
+            !a(t2)
+        ];
+        s.push(n2);
+    }
+    return [
+        o,
+        n,
+        l,
+        s,
+        d,
+        g
+    ];
+}, P = (e, t, r)=>{
+    const [n, i, o, a] = L(t.composers), c = "function" == typeof t.type || t.type.$$typeof ? ((e)=>{
+        function t() {
+            for(let r = 0; r < t[T].length; r++){
+                const [n, i] = t[T][r];
+                e.rules[n].apply(i);
+            }
+            return t[T] = [], null;
+        }
+        return t[T] = [], t.rules = {}, W.forEach((e)=>t.rules[e] = {
+                apply: (r)=>t[T].push([
+                        e,
+                        r
+                    ])
+            }), t;
+    })(r) : null, d = (c || r).rules, g = `.${n}${i.length > 1 ? `:where(.${i.slice(1).join(".")})` : ""}`, p = (l)=>{
+        l = "object" == typeof l && l || A;
+        const { css: s , ...p } = l, u = {};
+        for(const e1 in o)if (delete p[e1], e1 in l) {
+            let t1 = l[e1];
+            "object" == typeof t1 && t1 ? u[e1] = {
+                "@initial": o[e1],
+                ...t1
+            } : (t1 = String(t1), u[e1] = "undefined" !== t1 || a.has(e1) ? t1 : o[e1]);
+        } else u[e1] = o[e1];
+        const h = new Set([
+            ...i
+        ]);
+        for (const [n1, i1, o1, l1] of t.composers){
+            r.rules.styled.cache.has(n1) || (r.rules.styled.cache.add(n1), $(i1, [
+                `.${n1}`
+            ], [], e, (e)=>{
+                d.styled.apply(e);
+            }));
+            const t2 = O(o1, u, e.media), s1 = O(l1, u, e.media, !0);
+            for (const i2 of t2)if (void 0 !== i2) for (const [t3, o2, l2] of i2){
+                const i3 = `${n1}-${z(o2)}-${t3}`;
+                h.add(i3);
+                const s2 = (l2 ? r.rules.resonevar : r.rules.onevar).cache, a1 = l2 ? d.resonevar : d.onevar;
+                s2.has(i3) || (s2.add(i3), $(o2, [
+                    `.${i3}`
+                ], [], e, (e)=>{
+                    a1.apply(e);
+                }));
+            }
+            for (const t4 of s1)if (void 0 !== t4) for (const [i4, o3] of t4){
+                const t5 = `${n1}-${z(o3)}-${i4}`;
+                h.add(t5), r.rules.allvar.cache.has(t5) || (r.rules.allvar.cache.add(t5), $(o3, [
+                    `.${t5}`
+                ], [], e, (e)=>{
+                    d.allvar.apply(e);
+                }));
+            }
+        }
+        if ("object" == typeof s && s) {
+            const t6 = `${n}-i${z(s)}-css`;
+            h.add(t6), r.rules.inline.cache.has(t6) || (r.rules.inline.cache.add(t6), $(s, [
+                `.${t6}`
+            ], [], e, (e)=>{
+                d.inline.apply(e);
+            }));
+        }
+        for (const e2 of String(l.className || "").trim().split(/\s+/))e2 && h.add(e2);
+        const f = p.className = [
+            ...h
+        ].join(" ");
+        return {
+            type: t.type,
+            className: f,
+            selector: g,
+            props: p,
+            toString: ()=>f,
+            deferredInjector: c
+        };
+    };
+    return s(p, {
+        className: n,
+        selector: g,
+        [l]: t,
+        toString: ()=>(r.rules.styled.cache.has(n) || p(), n)
+    });
+}, L = (e)=>{
+    let t = "";
+    const r = [], n = {}, i = [];
+    for (const [o, , , , l, s] of e){
+        "" === t && (t = o), r.push(o), i.push(...s);
+        for(const e1 in l){
+            const t1 = l[e1];
+            (void 0 === n[e1] || "undefined" !== t1 || s.includes(t1)) && (n[e1] = t1);
+        }
+    }
+    return [
+        t,
+        r,
+        n,
+        new Set(i)
+    ];
+}, O = (e, t, r, n)=>{
+    const i = [];
+    e: for (let [o, l, s] of e){
+        if (s) continue;
+        let e1, a = 0, c = !1;
+        for(e1 in o){
+            const n1 = o[e1];
+            let i1 = t[e1];
+            if (i1 !== n1) {
+                if ("object" != typeof i1 || !i1) continue e;
+                {
+                    let e2, t1, o1 = 0;
+                    for(const l1 in i1){
+                        if (n1 === String(i1[l1])) {
+                            if ("@initial" !== l1) {
+                                const e3 = l1.slice(1);
+                                (t1 = t1 || []).push(e3 in r ? r[e3] : l1.replace(/^@media ?/, "")), c = !0;
+                            }
+                            a += o1, e2 = !0;
+                        }
+                        ++o1;
+                    }
+                    if (t1 && t1.length && (l = {
+                        ["@media " + t1.join(", ")]: l
+                    }), !e2) continue e;
+                }
+            }
+        }
+        (i[a] = i[a] || []).push([
+            n ? "cv" : `${e1}-${o[e1]}`,
+            l,
+            c
+        ]);
+    }
+    return i;
+}, A = {}, N = o(), D = (e, t)=>N(e, ()=>(...r)=>{
+            const n = ()=>{
+                for (let n of r){
+                    n = "object" == typeof n && n || {};
+                    let r1 = z(n);
+                    if (!t.rules.global.cache.has(r1)) {
+                        if (t.rules.global.cache.add(r1), "@import" in n) {
+                            let e1 = [].indexOf.call(t.sheet.cssRules, t.rules.themed.group) - 1;
+                            for (let r2 of [].concat(n["@import"]))r2 = r2.includes('"') || r2.includes("'") ? r2 : `"${r2}"`, t.sheet.insertRule(`@import ${r2};`, e1++);
+                            delete n["@import"];
+                        }
+                        $(n, [], [], e, (e)=>{
+                            t.rules.global.apply(e);
+                        });
+                    }
+                }
+                return "";
+            };
+            return s(n, {
+                toString: n
+            });
+        }), H = o(), V = (e, t)=>H(e, ()=>(r)=>{
+            const n = `${S(e.prefix)}k-${z(r)}`, i = ()=>{
+                if (!t.rules.global.cache.has(n)) {
+                    t.rules.global.cache.add(n);
+                    const i = [];
+                    $(r, [], [], e, (e)=>i.push(e));
+                    const o = `@keyframes ${n}{${i.join("")}}`;
+                    t.rules.global.apply(o);
+                }
+                return n;
+            };
+            return s(i, {
+                get name () {
+                    return i();
+                },
+                toString: i
+            });
+        }), G = class {
+    constructor(e, t, r, n){
+        this.token = null == e ? "" : String(e), this.value = null == t ? "" : String(t), this.scale = null == r ? "" : String(r), this.prefix = null == n ? "" : String(n);
+    }
+    get computedValue() {
+        return "var(" + this.variable + ")";
+    }
+    get variable() {
+        return "--" + S(this.prefix) + S(this.scale) + this.token;
+    }
+    toString() {
+        return this.computedValue;
+    }
+}, F = o(), J = (e, t)=>F(e, ()=>(r, n)=>{
+            n = "object" == typeof r && r || Object(n);
+            const i = `.${r = (r = "string" == typeof r ? r : "") || `${S(e.prefix)}t-${z(n)}`}`, o = {}, l = [];
+            for(const t1 in n){
+                o[t1] = {};
+                for(const r1 in n[t1]){
+                    const i1 = `--${S(e.prefix)}${t1}-${r1}`, s = k(String(n[t1][r1]), e.prefix, t1);
+                    o[t1][r1] = new G(r1, s, t1, e.prefix), l.push(`${i1}:${s}`);
+                }
+            }
+            const s1 = ()=>{
+                if (l.length && !t.rules.themed.cache.has(r)) {
+                    t.rules.themed.cache.add(r);
+                    const i = `${n === e.theme ? ":root," : ""}.${r}{${l.join(";")}}`;
+                    t.rules.themed.apply(i);
+                }
+                return r;
+            };
+            return {
+                ...o,
+                get className () {
+                    return s1();
+                },
+                selector: i,
+                toString: s1
+            };
+        }), U = o();
+var X, Y = o(), q = (e)=>{
+    const t = ((e)=>{
+        let t = !1;
+        const r = U(e, (e)=>{
+            t = !0;
+            const r = "prefix" in (e = "object" == typeof e && e || {}) ? String(e.prefix) : "", i = "object" == typeof e.media && e.media || {}, o = "object" == typeof e.root ? e.root || null : globalThis.document || null, l = "object" == typeof e.theme && e.theme || {}, s = {
+                prefix: r,
+                media: i,
+                theme: l,
+                themeMap: "object" == typeof e.themeMap && e.themeMap || {
+                    ...n
+                },
+                utils: "object" == typeof e.utils && e.utils || {}
+            }, a = E(o), c = {
+                css: M(s, a),
+                globalCss: D(s, a),
+                keyframes: V(s, a),
+                createTheme: J(s, a),
+                reset () {
+                    a.reset(), c.theme.toString();
+                },
+                theme: {},
+                sheet: a,
+                config: s,
+                prefix: r,
+                getCssText: a.toString,
+                toString: a.toString
+            };
+            return String(c.theme = c.createTheme(l)), c;
+        });
+        return t || r.reset(), r;
+    })(e);
+    return t.styled = (({ config: e , sheet: t  })=>Y(e, ()=>{
+            const r = M(e, t);
+            return (...e)=>{
+                const t = r(...e), n = t[l].type, i = (0, _reactDefault.default).forwardRef((e, r)=>{
+                    const i = e && e.as || n, { props: o , deferredInjector: l  } = t(e);
+                    return delete o.as, o.ref = r, l ? (0, _reactDefault.default).createElement((0, _reactDefault.default).Fragment, null, (0, _reactDefault.default).createElement(i, o), (0, _reactDefault.default).createElement(l, null)) : (0, _reactDefault.default).createElement(i, o);
+                });
+                return i.className = t.className, i.displayName = `Styled.${n.displayName || n.name || n}`, i.selector = t.selector, i.toString = ()=>t.selector, i[l] = t[l], i;
+            };
+        }))(t), t;
+}, K = ()=>X || (X = q()), Q = (...e)=>K().createTheme(...e), _ = (...e)=>K().globalCss(...e), ee = (...e)=>K().keyframes(...e), te = (...e)=>K().css(...e), re = (...e)=>K().styled(...e);
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"km3Ru":[function(require,module,exports) {
+"use strict";
+var Refresh = require("react-refresh/runtime");
+function debounce(func, delay) {
+    var args;
+    var timeout = undefined;
+    return function(args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(function() {
+            timeout = undefined;
+            func.call(null, args);
+        }, delay);
+    };
+}
+var enqueueUpdate = debounce(function() {
+    Refresh.performReactRefresh();
+}, 30); // Everthing below is either adapted or copied from
+// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
+// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
+module.exports.prelude = function(module1) {
+    window.$RefreshReg$ = function(type, id) {
+        Refresh.register(type, module1.id + " " + id);
+    };
+    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
+};
+module.exports.postlude = function(module1) {
+    if (isReactRefreshBoundary(module1.exports)) {
+        registerExportsForReactRefresh(module1);
+        if (module1.hot) {
+            module1.hot.dispose(function(data) {
+                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
+                data.prevExports = module1.exports;
+            });
+            module1.hot.accept(function(getParents) {
+                var prevExports = module1.hot.data.prevExports;
+                var nextExports = module1.exports; // Since we just executed the code for it, it's possible
+                // that the new exports make it ineligible for being a boundary.
+                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports); // It can also become ineligible if its exports are incompatible
+                // with the previous exports.
+                // For example, if you add/remove/change exports, we'll want
+                // to re-execute the importing modules, and force those components
+                // to re-render. Similarly, if you convert a class component
+                // to a function, we want to invalidate the boundary.
+                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
+                if (isNoLongerABoundary || didInvalidate) {
+                    // We'll be conservative. The only case in which we won't do a full
+                    // reload is if all parent modules are also refresh boundaries.
+                    // In that case we'll add them to the current queue.
+                    var parents = getParents();
+                    if (parents.length === 0) {
+                        // Looks like we bubbled to the root. Can't recover from that.
+                        window.location.reload();
+                        return;
+                    }
+                    return parents;
+                }
+                enqueueUpdate();
+            });
+        }
+    }
+};
+function isReactRefreshBoundary(exports) {
+    if (Refresh.isLikelyComponentType(exports)) return true;
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    return false;
+    var hasExports = false;
+    var areAllExportsComponents = true;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        hasExports = true;
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
+        return false;
+        var exportValue = exports[key];
+        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
+    }
+    return hasExports && areAllExportsComponents;
+}
+function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
+    var prevSignature = getRefreshBoundarySignature(prevExports);
+    var nextSignature = getRefreshBoundarySignature(nextExports);
+    if (prevSignature.length !== nextSignature.length) return true;
+    for(var i = 0; i < nextSignature.length; i++){
+        if (prevSignature[i] !== nextSignature[i]) return true;
+    }
+    return false;
+} // When this signature changes, it's unsafe to stop at this refresh boundary.
+function getRefreshBoundarySignature(exports) {
+    var signature = [];
+    signature.push(Refresh.getFamilyByType(exports));
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return signature;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        signature.push(key);
+        signature.push(Refresh.getFamilyByType(exportValue));
+    }
+    return signature;
+}
+function registerExportsForReactRefresh(module1) {
+    var exports = module1.exports, id = module1.id;
+    Refresh.register(exports, id + " %exports%");
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        Refresh.register(exportValue, id + " %exports% " + key);
+    }
+}
+
+},{"react-refresh/runtime":"786KC"}],"egHOx":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Badge", ()=>(0, _badgeDefault.default));
+var _badge = require("./Badge");
+var _badgeDefault = parcelHelpers.interopDefault(_badge);
+
+},{"./Badge":"lc6Ga","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lc6Ga":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$1291 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$1291.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+// import React from 'react';
+var _phosphorReact = require("phosphor-react");
+var _index = require("../../index");
+var _stitchesConfig = require("../../stitches.config");
+var _badgeStyles = require("./Badge.styles");
+function Badge(props) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badgeStyles.BadgeStyled), {
+        css: {
+            ...props.css,
+            ...props.inline && {
+                display: "inline-flex",
+                marginBottom: "0 !important",
+                marginRight: props.inline === "auto" ? "auto" : `$${props.inline}`,
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    marginRight: props.inline === "auto" ? "auto" : `calc($${props.inline} * 0.8)`
+                },
+                verticalAlign: "middle"
+            }
+        },
+        id: props.id,
+        onClick: props.onClick,
+        theme: props.theme || "default",
+        children: [
+            props.icon && (props.iconPosition === "left" || !props.iconPosition) && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badgeStyles.BadgeIconStyled), {
+                align: "left",
+                children: props.icon
+            }, void 0, false, {
+                fileName: "src/components/Badge/Badge.tsx",
+                lineNumber: 51,
+                columnNumber: 9
+            }, this),
+            props.dot && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badgeStyles.BadgeDotStyled), {
+                dotColor: props.dotColor || "default",
+                pulse: props.dot === "pulse",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.Circle), {
+                    weight: "fill"
+                }, void 0, false, {
+                    fileName: "src/components/Badge/Badge.tsx",
+                    lineNumber: 57,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "src/components/Badge/Badge.tsx",
+                lineNumber: 54,
+                columnNumber: 9
+            }, this),
+            props.loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Loading), {}, void 0, false, {
+                fileName: "src/components/Badge/Badge.tsx",
+                lineNumber: 60,
+                columnNumber: 24
+            }, this) : props.children,
+            props.icon && props.iconPosition === "right" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badgeStyles.BadgeIconStyled), {
+                align: "right",
+                children: props.icon
+            }, void 0, false, {
+                fileName: "src/components/Badge/Badge.tsx",
+                lineNumber: 62,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Badge/Badge.tsx",
+        lineNumber: 33,
+        columnNumber: 5
+    }, this);
+}
+exports.default = Badge;
+_c = Badge;
+var _c;
+$RefreshReg$(_c, "Badge");
+
+  $parcel$ReactRefreshHelpers$1291.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","../../index":"4aBH6","../../stitches.config":"iMNz3","./Badge.styles":"dW7FY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dW7FY":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "BadgeStyled", ()=>BadgeStyled);
+parcelHelpers.export(exports, "BadgeIconStyled", ()=>BadgeIconStyled);
+parcelHelpers.export(exports, "BadgeDotStyled", ()=>BadgeDotStyled);
+var _stitchesConfig = require("../../stitches.config");
+const pulse = (0, _stitchesConfig.keyframes)({
+    "0%": {
+        opacity: 0.5,
+        transform: "scale(0.95)"
+    },
+    "100%": {
+        opacity: 0.5,
+        transform: "scale(0.95)"
+    },
+    "50%": {
+        opacity: 1,
+        transform: "scale(1)"
+    }
+});
+const BadgeStyled = (0, _stitchesConfig.styled)("div", {
+    alignItems: "center",
+    borderRadius: "$3",
+    display: "inline-flex",
+    fontSize: "$h5",
+    fontWeight: "$h5",
+    justifyContent: "center",
+    lineHeight: "normal !important",
+    [(0, _stitchesConfig.breakpoints).phone]: {
+        fontSize: "calc($h5 * 0.925)"
+    },
+    [(0, _stitchesConfig.breakpoints).tabletX]: {
+        fontSize: "calc($h5 * 0.95)"
+    },
+    padding: "$1 $4",
+    svg: {
+        alignSelf: "center",
+        height: "1.6rem",
+        marginTop: "-0.2rem",
+        width: "1.6rem"
+    },
+    variants: {
+        theme: {
+            blue: {
+                backgroundColor: "$blueOverlay",
+                color: "$blueText"
+            },
+            border: {
+                border: "0.1rem solid $border",
+                color: "$text"
+            },
+            borderHover: {
+                border: "0.1rem solid $borderHover",
+                color: "$text"
+            },
+            default: {
+                backgroundColor: "$default",
+                color: "$text"
+            },
+            green: {
+                backgroundColor: "$greenOverlay",
+                color: "$greenText"
+            },
+            orange: {
+                backgroundColor: "$orangeOverlay",
+                color: "$orangeText"
+            },
+            pink: {
+                backgroundColor: "$pinkOverlay",
+                color: "$pinkText"
+            },
+            purple: {
+                backgroundColor: "$purpleOverlay",
+                color: "$purpleText"
+            },
+            red: {
+                backgroundColor: "$redOverlay",
+                color: "$redText"
+            }
+        }
+    },
+    [(0, _stitchesConfig.breakpoints).phone]: {
+        fontSize: "calc($h6 * 0.9)"
+    },
+    [(0, _stitchesConfig.breakpoints).tabletX]: {
+        fontSize: "calc($h6 * 0.95)"
+    },
+    verticalAlign: "middle"
+});
+const BadgeIconStyled = (0, _stitchesConfig.styled)("span", {
+    display: "inline",
+    variants: {
+        align: {
+            left: {
+                marginRight: "$3"
+            },
+            right: {
+                marginLeft: "$3"
+            }
+        }
+    },
+    verticalAlign: "middle"
+});
+const BadgeDotStyled = (0, _stitchesConfig.styled)("span", {
+    display: "inline",
+    paddingRight: "$2",
+    svg: {
+        height: "1rem",
+        marginTop: "-0.2rem",
+        verticalAlign: "middle",
+        width: "1rem"
+    },
+    variants: {
+        dotColor: {
+            blue: {
+                color: "$blueText"
+            },
+            borderHover: {
+                color: "$borderHover"
+            },
+            default: {
+                color: "$text"
+            },
+            green: {
+                color: "$greenText"
+            },
+            orange: {
+                color: "$orangeText"
+            },
+            pink: {
+                color: "$pinkText"
+            },
+            purple: {
+                color: "$purpleText"
+            },
+            red: {
+                color: "$redText"
+            }
+        },
+        pulse: {
+            true: {
+                animation: `${pulse} 1.5s infinite`
+            }
+        }
+    },
+    verticalAlign: "middle"
+});
+exports.default = BadgeStyled;
+
+},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8AYsO":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Box", ()=>(0, _boxDefault.default));
+var _box = require("./Box");
+var _boxDefault = parcelHelpers.interopDefault(_box);
+
+},{"./Box":"eBQnA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eBQnA":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$f51f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$f51f.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _index = require("../../index");
+var _boxStyles = require("./Box.styles");
+function Box(props) {
+    return props.image && props.image !== "" && props.image !== undefined && props.image !== "#" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _boxStyles.BoxStyled), {
+        css: props.css,
+        hover: props.hover,
+        id: props.id,
+        loading: props.loading || false,
+        padding: "none",
+        theme: props.theme || "default",
+        children: [
+            props.imageCTA ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                href: props.imageCTA,
+                rel: "noopener noreferrer",
+                target: props.imageTarget || "_blank",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Image), {
+                    alt: props.imageAlt || "#",
+                    css: {
+                        img: {
+                            borderTopLeftRadius: "$1 !important",
+                            borderTopRightRadius: "$1 !important"
+                        }
+                    },
+                    fillHeight: props.imageHeight || "20rem",
+                    hover: props.hover,
+                    layout: "fill",
+                    objectFit: "cover",
+                    objectPosition: props.imagePosition || "center",
+                    src: props.image
+                }, void 0, false, {
+                    fileName: "src/components/Box/Box.tsx",
+                    lineNumber: 39,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "src/components/Box/Box.tsx",
+                lineNumber: 35,
+                columnNumber: 9
+            }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Image), {
+                alt: props.imageAlt || "#",
+                css: {
+                    img: {
+                        borderTopLeftRadius: "$1 !important",
+                        borderTopRightRadius: "$1 !important"
+                    }
+                },
+                fillHeight: props.imageHeight || "20rem",
+                hover: props.hover,
+                layout: "fill",
+                objectFit: "cover",
+                objectPosition: props.imagePosition || "center",
+                src: props.image
+            }, void 0, false, {
+                fileName: "src/components/Box/Box.tsx",
+                lineNumber: 56,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _boxStyles.BoxImageChildrenStyled), {
+                padding: "default",
+                children: props.children
+            }, void 0, false, {
+                fileName: "src/components/Box/Box.tsx",
+                lineNumber: 72,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Box/Box.tsx",
+        lineNumber: 27,
+        columnNumber: 5
+    }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _boxStyles.BoxStyled), {
+        css: props.css,
+        hover: props.hover,
+        id: props.id,
+        loading: props.loading || false,
+        padding: "default",
+        theme: props.theme || "default",
+        children: props.children
+    }, void 0, false, {
+        fileName: "src/components/Box/Box.tsx",
+        lineNumber: 77,
+        columnNumber: 5
+    }, this);
+}
+exports.default = Box;
+_c = Box;
+var _c;
+$RefreshReg$(_c, "Box");
+
+  $parcel$ReactRefreshHelpers$f51f.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../../index":"4aBH6","./Box.styles":"3P0Da","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3P0Da":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "paddingVariants", ()=>paddingVariants);
+parcelHelpers.export(exports, "BoxStyled", ()=>BoxStyled);
+parcelHelpers.export(exports, "BoxImageChildrenStyled", ()=>BoxImageChildrenStyled);
+var _stitchesConfig = require("../../stitches.config");
+const paddingVariants = {
+    padding: {
+        default: {
+            padding: "$5"
+        },
+        none: {
+            padding: 0
+        }
+    }
+};
+const BoxStyled = (0, _stitchesConfig.styled)("div", {
+    border: "0.1rem solid transparent",
+    borderRadius: "$2",
+    display: "block",
+    height: "100%",
+    margin: 0,
+    paddingBlock: 0,
+    position: "relative",
+    transition: "$default",
+    variants: {
+        hover: {
+            true: {
+                "&:hover": {
+                    boxShadow: "$2"
+                }
+            }
+        },
+        loading: {
+            true: {
+                cursor: "wait"
+            }
+        },
+        theme: {
+            default: {
+                backgroundColor: "transparent",
+                borderColor: "$border"
+            },
+            error: {
+                backgroundColor: "$redOverlay",
+                borderColor: "$redBorder",
+                color: "$redText"
+            },
+            fill: {
+                backgroundColor: "$default"
+            },
+            success: {
+                backgroundColor: "$greenOverlay",
+                borderColor: "$greenBorder",
+                color: "$greenText"
+            },
+            transparent: {
+                backgroundColor: "transparent",
+                borderColor: "transparent"
+            },
+            warning: {
+                backgroundColor: "$orangeOverlay",
+                borderColor: "$orangeBorder",
+                color: "$orangeText"
+            }
+        },
+        ...paddingVariants
+    },
+    width: "auto"
+});
+const BoxImageChildrenStyled = (0, _stitchesConfig.styled)("div", {
+    variants: {
+        ...paddingVariants
+    }
+});
+exports.default = BoxStyled;
+
+},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"i3jlU":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Button", ()=>(0, _buttonDefault.default));
+var _button = require("./Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+
+},{"./Button":"gRY88","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gRY88":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$aa9e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$aa9e.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _index = require("../../index");
+var _stitchesConfig = require("../../stitches.config");
+var _buttonStyles = require("./Button.styles");
+function Button(props) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonStyles.ButtonStyled), {
+        "aria-label": props.ariaLabel || props.name || typeof props.children === "string" ? props?.children?.toString() : "",
+        block: props.block || false,
+        css: {
+            ...props.css,
+            ...props.inline && {
+                alignSelf: "center",
+                marginRight: props.inline === "auto" ? "auto" : `$${props.inline}`,
+                verticalAlign: "middle",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    marginRight: props.inline === "auto" ? "auto" : `calc($${props.inline} * 0.8)`
+                }
+            }
+        },
+        disabled: props.disabled || props.loading || false,
+        id: props.id,
+        name: props.name,
+        onClick: props.onClick,
+        small: props.small,
+        theme: props.theme || "default",
+        children: [
+            props.loading && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonStyles.ButtonIconStyled), {
+                align: "left",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Loading), {}, void 0, false, {
+                    fileName: "src/components/Button/Button.tsx",
+                    lineNumber: 52,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "src/components/Button/Button.tsx",
+                lineNumber: 51,
+                columnNumber: 9
+            }, this),
+            props.icon && (props.iconPosition === "left" || !props.iconPosition) && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonStyles.ButtonIconStyled), {
+                align: "left",
+                children: props.icon
+            }, void 0, false, {
+                fileName: "src/components/Button/Button.tsx",
+                lineNumber: 56,
+                columnNumber: 9
+            }, this),
+            props.children,
+            props.icon && props.iconPosition === "right" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonStyles.ButtonIconStyled), {
+                align: "right",
+                children: props.icon
+            }, void 0, false, {
+                fileName: "src/components/Button/Button.tsx",
+                lineNumber: 60,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Button/Button.tsx",
+        lineNumber: 25,
+        columnNumber: 5
+    }, this);
+}
+exports.default = Button;
+_c = Button;
+var _c;
+$RefreshReg$(_c, "Button");
+
+  $parcel$ReactRefreshHelpers$aa9e.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../../index":"4aBH6","../../stitches.config":"iMNz3","./Button.styles":"8Xn66","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8Xn66":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ButtonStyled", ()=>ButtonStyled);
+parcelHelpers.export(exports, "ButtonIconStyled", ()=>ButtonIconStyled);
+var _stitchesConfig = require("../../stitches.config");
+const ButtonStyled = (0, _stitchesConfig.styled)("button", {
+    "&:disabled": {
+        cursor: "not-allowed",
+        opacity: 0.7
+    },
+    "&:hover": {
+        backgroundColor: "$defaultHover",
+        borderColor: "$borderHover",
+        boxShadow: "$2",
+        color: "$text"
+    },
+    "a": {
+        display: "block"
+    },
+    "alignContent": "center",
+    "alignItems": "center",
+    "border": "0.1rem solid $borderHover",
+    "borderRadius": "$1",
+    "boxShadow": "$1",
+    "color": "$text",
+    "display": "inline-flex",
+    "fontSize": "$h5",
+    "fontWeight": "$h5",
+    "lineHeight": "1.420 !important",
+    [(0, _stitchesConfig.breakpoints).phone]: {
+        fontSize: "calc($h5 * 0.925)"
+    },
+    [(0, _stitchesConfig.breakpoints).tabletX]: {
+        fontSize: "calc($h5 * 0.95)"
+    },
+    "padding": "$1 $4",
+    "svg": {
+        height: "1.75rem",
+        marginTop: "-0.05rem",
+        width: "1.75rem"
+    },
+    "transition": "$default",
+    "variants": {
+        block: {
+            false: {
+                display: "inline"
+            },
+            true: {
+                display: "block",
+                width: "100%"
+            }
+        },
+        small: {
+            true: {
+                fontSize: "$p",
+                fontWeight: "$p",
+                svg: {
+                    height: "1.5rem",
+                    marginTop: "-0.1rem",
+                    width: "1.5rem"
+                }
+            }
+        },
+        theme: {
+            default: {
+                borderColor: "$border"
+            },
+            fill: {
+                backgroundColor: "$default"
+            },
+            minimal: {
+                backgroundColor: "transparent",
+                borderColor: "transparent",
+                boxShadow: "none"
+            },
+            solid: {
+                backgroundColor: "$text",
+                color: "$background"
+            }
+        }
+    },
+    "verticalAlign": "middle"
+});
+const ButtonIconStyled = (0, _stitchesConfig.styled)("span", {
+    alignContent: "center",
+    alignItems: "center",
+    alignSelf: "center",
+    display: "inline-flex",
+    justifyContent: "center",
+    variants: {
+        align: {
+            left: {
+                marginRight: "$2"
+            },
+            right: {
+                marginLeft: "$2"
+            }
+        }
+    },
+    verticalAlign: "middle"
+});
+exports.default = ButtonStyled;
+
+},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7DV0X":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Dialog", ()=>(0, _dialogDefault.default));
+var _dialog = require("./Dialog");
+var _dialogDefault = parcelHelpers.interopDefault(_dialog);
+
+},{"./Dialog":"2wmkg","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2wmkg":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b155 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b155.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+// import React from 'react';
+var _phosphorReact = require("phosphor-react");
+var _react = require("react");
+var _usehooksTs = require("usehooks-ts");
+var _index = require("../../index");
+var _dialogStyles = require("./Dialog.styles");
+var _s = $RefreshSig$();
+function Dialog(props) {
+    _s();
+    const ref = (0, _react.useRef)(null);
+    const [isOpen, setIsOpen] = (0, _react.useState)(false);
+    const [isMounted, setIsMounted] = (0, _react.useState)(false);
+    function handleClose() {
+        setIsOpen(false);
+        setTimeout(()=>{
+            setIsMounted(false);
+        }, 250);
+    }
+    function handleOpen() {
+        setIsOpen(true);
+        setTimeout(()=>{
+            setIsMounted(true);
+        }, 25);
+    }
+    function handleClick() {
+        if (isOpen || isMounted) {
+            setIsOpen(false);
+            setIsMounted(false);
+        } else handleOpen();
+    }
+    (0, _usehooksTs.useOnClickOutside)(ref, ()=>handleClose());
+    (0, _usehooksTs.useEventListener)("keydown", (event)=>{
+        if (event.key === "Escape") handleClose();
+    });
+    (0, _usehooksTs.useLockedBody)(props.locked ? isOpen : false);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dialogStyles.DialogStyled), {
+        id: props.id,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dialogStyles.DialogTriggerStyled), {
+                onClickCapture: handleClick,
+                children: props.trigger
+            }, void 0, false, {
+                fileName: "src/components/Dialog/Dialog.tsx",
+                lineNumber: 64,
+                columnNumber: 7
+            }, this),
+            isMounted && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dialogStyles.DialogOverlayStyled), {
+                animation: isOpen,
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dialogStyles.DialogContentStyled), {
+                    animation: isOpen,
+                    css: props.css,
+                    ref: ref,
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dialogStyles.DialogExitStyled), {
+                            onClick: ()=>handleClose(),
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
+                                ariaLabel: "Close",
+                                icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.X), {}, void 0, false, void 0, void 0),
+                                name: "close",
+                                small: true,
+                                theme: "minimal",
+                                children: "Close"
+                            }, void 0, false, {
+                                fileName: "src/components/Dialog/Dialog.tsx",
+                                lineNumber: 71,
+                                columnNumber: 15
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/components/Dialog/Dialog.tsx",
+                            lineNumber: 70,
+                            columnNumber: 13
+                        }, this),
+                        props.children
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Dialog/Dialog.tsx",
+                    lineNumber: 69,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "src/components/Dialog/Dialog.tsx",
+                lineNumber: 68,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Dialog/Dialog.tsx",
+        lineNumber: 63,
+        columnNumber: 5
+    }, this);
+}
+exports.default = Dialog;
+_s(Dialog, "jtSOqnL57Sd5vSNTmgLKr0xO03o=", false, function() {
+    return [
+        (0, _usehooksTs.useOnClickOutside),
+        (0, _usehooksTs.useEventListener),
+        (0, _usehooksTs.useLockedBody)
+    ];
+});
+_c = Dialog;
+var _c;
+$RefreshReg$(_c, "Dialog");
+
+  $parcel$ReactRefreshHelpers$b155.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","usehooks-ts":"dmUe4","../../index":"4aBH6","./Dialog.styles":"awDkT","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dmUe4":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "useBoolean", ()=>(0, _useBooleanDefault.default));
+parcelHelpers.export(exports, "useClickAnyWhere", ()=>(0, _useClickAnyWhereDefault.default));
+parcelHelpers.export(exports, "useCopyToClipboard", ()=>(0, _useCopyToClipboardDefault.default));
+parcelHelpers.export(exports, "useCountdown", ()=>(0, _useCountdownDefault.default));
+parcelHelpers.export(exports, "useCounter", ()=>(0, _useCounterDefault.default));
+parcelHelpers.export(exports, "useDarkMode", ()=>(0, _useDarkModeDefault.default));
+parcelHelpers.export(exports, "useDebounce", ()=>(0, _useDebounceDefault.default));
+parcelHelpers.export(exports, "useDocumentTitle", ()=>(0, _useDocumentTitleDefault.default));
+parcelHelpers.export(exports, "useEffectOnce", ()=>(0, _useEffectOnceDefault.default));
+parcelHelpers.export(exports, "useElementSize", ()=>(0, _useElementSizeDefault.default));
+parcelHelpers.export(exports, "useEventCallback", ()=>(0, _useEventCallbackDefault.default));
+parcelHelpers.export(exports, "useEventListener", ()=>(0, _useEventListenerDefault.default));
+parcelHelpers.export(exports, "useFetch", ()=>(0, _useFetchDefault.default));
+parcelHelpers.export(exports, "useHover", ()=>(0, _useHoverDefault.default));
+parcelHelpers.export(exports, "useImageOnLoad", ()=>(0, _useImageOnLoadDefault.default));
+parcelHelpers.export(exports, "useIntersectionObserver", ()=>(0, _useIntersectionObserverDefault.default));
+parcelHelpers.export(exports, "useInterval", ()=>(0, _useIntervalDefault.default));
+parcelHelpers.export(exports, "useIsClient", ()=>(0, _useIsClientDefault.default));
+parcelHelpers.export(exports, "useIsFirstRender", ()=>(0, _useIsFirstRenderDefault.default));
+parcelHelpers.export(exports, "useIsMounted", ()=>(0, _useIsMountedDefault.default));
+parcelHelpers.export(exports, "useIsomorphicLayoutEffect", ()=>(0, _useIsomorphicLayoutEffectDefault.default));
+parcelHelpers.export(exports, "useLocalStorage", ()=>(0, _useLocalStorageDefault.default));
+parcelHelpers.export(exports, "useLockedBody", ()=>(0, _useLockedBodyDefault.default));
+parcelHelpers.export(exports, "useMap", ()=>(0, _useMapDefault.default));
+parcelHelpers.export(exports, "useMediaQuery", ()=>(0, _useMediaQueryDefault.default));
+parcelHelpers.export(exports, "useOnClickOutside", ()=>(0, _useOnClickOutsideDefault.default));
+parcelHelpers.export(exports, "useReadLocalStorage", ()=>(0, _useReadLocalStorageDefault.default));
+parcelHelpers.export(exports, "useScreen", ()=>(0, _useScreenDefault.default));
+parcelHelpers.export(exports, "useScript", ()=>(0, _useScriptDefault.default));
+parcelHelpers.export(exports, "useSessionStorage", ()=>(0, _useSessionStorageDefault.default));
+parcelHelpers.export(exports, "useSsr", ()=>(0, _useSsrDefault.default));
+parcelHelpers.export(exports, "useStep", ()=>(0, _useStepDefault.default));
+parcelHelpers.export(exports, "useTernaryDarkMode", ()=>(0, _useTernaryDarkModeDefault.default));
+parcelHelpers.export(exports, "useTimeout", ()=>(0, _useTimeoutDefault.default));
+parcelHelpers.export(exports, "useToggle", ()=>(0, _useToggleDefault.default));
+parcelHelpers.export(exports, "useUpdateEffect", ()=>(0, _useUpdateEffectDefault.default));
+parcelHelpers.export(exports, "useWindowSize", ()=>(0, _useWindowSizeDefault.default));
+var _useBoolean = require("./useBoolean/useBoolean");
+var _useBooleanDefault = parcelHelpers.interopDefault(_useBoolean);
+parcelHelpers.exportAll(_useBoolean, exports);
+var _useClickAnyWhere = require("./useClickAnyWhere/useClickAnyWhere");
+var _useClickAnyWhereDefault = parcelHelpers.interopDefault(_useClickAnyWhere);
+parcelHelpers.exportAll(_useClickAnyWhere, exports);
+var _useCopyToClipboard = require("./useCopyToClipboard/useCopyToClipboard");
+var _useCopyToClipboardDefault = parcelHelpers.interopDefault(_useCopyToClipboard);
+parcelHelpers.exportAll(_useCopyToClipboard, exports);
+var _useCountdown = require("./useCountdown/useCountdown");
+var _useCountdownDefault = parcelHelpers.interopDefault(_useCountdown);
+parcelHelpers.exportAll(_useCountdown, exports);
+var _useCounter = require("./useCounter/useCounter");
+var _useCounterDefault = parcelHelpers.interopDefault(_useCounter);
+parcelHelpers.exportAll(_useCounter, exports);
+var _useDarkMode = require("./useDarkMode/useDarkMode");
+var _useDarkModeDefault = parcelHelpers.interopDefault(_useDarkMode);
+parcelHelpers.exportAll(_useDarkMode, exports);
+var _useDebounce = require("./useDebounce/useDebounce");
+var _useDebounceDefault = parcelHelpers.interopDefault(_useDebounce);
+parcelHelpers.exportAll(_useDebounce, exports);
+var _useDocumentTitle = require("./useDocumentTitle/useDocumentTitle");
+var _useDocumentTitleDefault = parcelHelpers.interopDefault(_useDocumentTitle);
+parcelHelpers.exportAll(_useDocumentTitle, exports);
+var _useEffectOnce = require("./useEffectOnce/useEffectOnce");
+var _useEffectOnceDefault = parcelHelpers.interopDefault(_useEffectOnce);
+parcelHelpers.exportAll(_useEffectOnce, exports);
+var _useElementSize = require("./useElementSize/useElementSize");
+var _useElementSizeDefault = parcelHelpers.interopDefault(_useElementSize);
+parcelHelpers.exportAll(_useElementSize, exports);
+var _useEventCallback = require("./useEventCallback/useEventCallback");
+var _useEventCallbackDefault = parcelHelpers.interopDefault(_useEventCallback);
+parcelHelpers.exportAll(_useEventCallback, exports);
+var _useEventListener = require("./useEventListener/useEventListener");
+var _useEventListenerDefault = parcelHelpers.interopDefault(_useEventListener);
+parcelHelpers.exportAll(_useEventListener, exports);
+var _useFetch = require("./useFetch/useFetch");
+var _useFetchDefault = parcelHelpers.interopDefault(_useFetch);
+parcelHelpers.exportAll(_useFetch, exports);
+var _useHover = require("./useHover/useHover");
+var _useHoverDefault = parcelHelpers.interopDefault(_useHover);
+parcelHelpers.exportAll(_useHover, exports);
+var _useImageOnLoad = require("./useImageOnLoad/useImageOnLoad");
+var _useImageOnLoadDefault = parcelHelpers.interopDefault(_useImageOnLoad);
+parcelHelpers.exportAll(_useImageOnLoad, exports);
+var _useIntersectionObserver = require("./useIntersectionObserver/useIntersectionObserver");
+var _useIntersectionObserverDefault = parcelHelpers.interopDefault(_useIntersectionObserver);
+parcelHelpers.exportAll(_useIntersectionObserver, exports);
+var _useInterval = require("./useInterval/useInterval");
+var _useIntervalDefault = parcelHelpers.interopDefault(_useInterval);
+parcelHelpers.exportAll(_useInterval, exports);
+var _useIsClient = require("./useIsClient/useIsClient");
+var _useIsClientDefault = parcelHelpers.interopDefault(_useIsClient);
+parcelHelpers.exportAll(_useIsClient, exports);
+var _useIsFirstRender = require("./useIsFirstRender/useIsFirstRender");
+var _useIsFirstRenderDefault = parcelHelpers.interopDefault(_useIsFirstRender);
+parcelHelpers.exportAll(_useIsFirstRender, exports);
+var _useIsMounted = require("./useIsMounted/useIsMounted");
+var _useIsMountedDefault = parcelHelpers.interopDefault(_useIsMounted);
+parcelHelpers.exportAll(_useIsMounted, exports);
+var _useIsomorphicLayoutEffect = require("./useIsomorphicLayoutEffect/useIsomorphicLayoutEffect");
+var _useIsomorphicLayoutEffectDefault = parcelHelpers.interopDefault(_useIsomorphicLayoutEffect);
+parcelHelpers.exportAll(_useIsomorphicLayoutEffect, exports);
+var _useLocalStorage = require("./useLocalStorage/useLocalStorage");
+var _useLocalStorageDefault = parcelHelpers.interopDefault(_useLocalStorage);
+parcelHelpers.exportAll(_useLocalStorage, exports);
+var _useLockedBody = require("./useLockedBody/useLockedBody");
+var _useLockedBodyDefault = parcelHelpers.interopDefault(_useLockedBody);
+parcelHelpers.exportAll(_useLockedBody, exports);
+var _useMap = require("./useMap/useMap");
+var _useMapDefault = parcelHelpers.interopDefault(_useMap);
+parcelHelpers.exportAll(_useMap, exports);
+var _useMediaQuery = require("./useMediaQuery/useMediaQuery");
+var _useMediaQueryDefault = parcelHelpers.interopDefault(_useMediaQuery);
+parcelHelpers.exportAll(_useMediaQuery, exports);
+var _useOnClickOutside = require("./useOnClickOutside/useOnClickOutside");
+var _useOnClickOutsideDefault = parcelHelpers.interopDefault(_useOnClickOutside);
+parcelHelpers.exportAll(_useOnClickOutside, exports);
+var _useReadLocalStorage = require("./useReadLocalStorage/useReadLocalStorage");
+var _useReadLocalStorageDefault = parcelHelpers.interopDefault(_useReadLocalStorage);
+parcelHelpers.exportAll(_useReadLocalStorage, exports);
+var _useScreen = require("./useScreen/useScreen");
+var _useScreenDefault = parcelHelpers.interopDefault(_useScreen);
+parcelHelpers.exportAll(_useScreen, exports);
+var _useScript = require("./useScript/useScript");
+var _useScriptDefault = parcelHelpers.interopDefault(_useScript);
+parcelHelpers.exportAll(_useScript, exports);
+var _useSessionStorage = require("./useSessionStorage/useSessionStorage");
+var _useSessionStorageDefault = parcelHelpers.interopDefault(_useSessionStorage);
+parcelHelpers.exportAll(_useSessionStorage, exports);
+var _useSsr = require("./useSsr/useSsr");
+var _useSsrDefault = parcelHelpers.interopDefault(_useSsr);
+parcelHelpers.exportAll(_useSsr, exports);
+var _useStep = require("./useStep/useStep");
+var _useStepDefault = parcelHelpers.interopDefault(_useStep);
+parcelHelpers.exportAll(_useStep, exports);
+var _useTernaryDarkMode = require("./useTernaryDarkMode/useTernaryDarkMode");
+var _useTernaryDarkModeDefault = parcelHelpers.interopDefault(_useTernaryDarkMode);
+parcelHelpers.exportAll(_useTernaryDarkMode, exports);
+var _useTimeout = require("./useTimeout/useTimeout");
+var _useTimeoutDefault = parcelHelpers.interopDefault(_useTimeout);
+parcelHelpers.exportAll(_useTimeout, exports);
+var _useToggle = require("./useToggle/useToggle");
+var _useToggleDefault = parcelHelpers.interopDefault(_useToggle);
+parcelHelpers.exportAll(_useToggle, exports);
+var _useUpdateEffect = require("./useUpdateEffect/useUpdateEffect");
+var _useUpdateEffectDefault = parcelHelpers.interopDefault(_useUpdateEffect);
+parcelHelpers.exportAll(_useUpdateEffect, exports);
+var _useWindowSize = require("./useWindowSize/useWindowSize");
+var _useWindowSizeDefault = parcelHelpers.interopDefault(_useWindowSize);
+parcelHelpers.exportAll(_useWindowSize, exports);
+
+},{"./useBoolean/useBoolean":"75OO8","./useClickAnyWhere/useClickAnyWhere":"faDbb","./useCopyToClipboard/useCopyToClipboard":"2BS9r","./useCountdown/useCountdown":"fIMZs","./useCounter/useCounter":"kSFgg","./useDarkMode/useDarkMode":"aqL5L","./useDebounce/useDebounce":"lNmEG","./useDocumentTitle/useDocumentTitle":"esgc8","./useEffectOnce/useEffectOnce":"3jP3w","./useElementSize/useElementSize":"2iww6","./useEventCallback/useEventCallback":"iwlUo","./useEventListener/useEventListener":"1HJqq","./useFetch/useFetch":"26gvK","./useHover/useHover":"eNC2T","./useImageOnLoad/useImageOnLoad":"fttn3","./useIntersectionObserver/useIntersectionObserver":"9IP75","./useInterval/useInterval":"GPWw2","./useIsClient/useIsClient":"3emvU","./useIsFirstRender/useIsFirstRender":"g3oAw","./useIsMounted/useIsMounted":"2uJb6","./useIsomorphicLayoutEffect/useIsomorphicLayoutEffect":"fWEdC","./useLocalStorage/useLocalStorage":"2Bbwp","./useLockedBody/useLockedBody":"aCXSw","./useMap/useMap":"2ZsJ5","./useMediaQuery/useMediaQuery":"26a3m","./useOnClickOutside/useOnClickOutside":"eLhz8","./useReadLocalStorage/useReadLocalStorage":"4VBoB","./useScreen/useScreen":"6YQVm","./useScript/useScript":"djE9J","./useSessionStorage/useSessionStorage":"jTdlC","./useSsr/useSsr":"9XRLH","./useStep/useStep":"2zb9y","./useTernaryDarkMode/useTernaryDarkMode":"9k0Mg","./useTimeout/useTimeout":"iuWi6","./useToggle/useToggle":"11jhp","./useUpdateEffect/useUpdateEffect":"Gp0lB","./useWindowSize/useWindowSize":"73GDr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"75OO8":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function useBoolean(defaultValue) {
+    const [value, setValue] = (0, _react.useState)(!!defaultValue);
+    const setTrue = (0, _react.useCallback)(()=>setValue(true), []);
+    const setFalse = (0, _react.useCallback)(()=>setValue(false), []);
+    const toggle = (0, _react.useCallback)(()=>setValue((x)=>!x), []);
+    return {
+        value,
+        setValue,
+        setTrue,
+        setFalse,
+        toggle
+    };
+}
+exports.default = useBoolean;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"faDbb":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _ = require("..");
+function useClickAnyWhere(handler) {
+    (0, _.useEventListener)("click", (event)=>{
+        handler(event);
+    });
+}
+exports.default = useClickAnyWhere;
+
+},{"..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2BS9r":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var __awaiter = undefined && undefined.__awaiter || function(thisArg, _arguments, P, generator) {
+    function adopt(value) {
+        return value instanceof P ? value : new P(function(resolve) {
+            resolve(value);
+        });
+    }
+    return new (P || (P = Promise))(function(resolve, reject) {
+        function fulfilled(value) {
+            try {
+                step(generator.next(value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function rejected(value) {
+            try {
+                step(generator["throw"](value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function step(result) {
+            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+function useCopyToClipboard() {
+    const [copiedText, setCopiedText] = (0, _react.useState)(null);
+    const copy = (text)=>__awaiter(this, void 0, void 0, function*() {
+            if (!(navigator === null || navigator === void 0 ? void 0 : navigator.clipboard)) {
+                console.warn("Clipboard not supported");
+                return false;
+            }
+            try {
+                yield navigator.clipboard.writeText(text);
+                setCopiedText(text);
+                return true;
+            } catch (error) {
+                console.warn("Copy failed", error);
+                setCopiedText(null);
+                return false;
+            }
+        });
+    return [
+        copiedText,
+        copy
+    ];
+}
+exports.default = useCopyToClipboard;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fIMZs":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _ = require("..");
+function useCountdown(countdownOption) {
+    let isDeprecated = false;
+    let countStart, intervalMs, isIncrement, countStop;
+    if ("seconds" in countdownOption) {
+        console.warn("[useCountdown:DEPRECATED] new interface is already available (see https://usehooks-ts.com/react-hook/use-countdown), the old version will retire on usehooks-ts@3.");
+        isDeprecated = true;
+        countStart = countdownOption.seconds;
+        intervalMs = countdownOption.interval;
+        isIncrement = countdownOption.isIncrement;
+    } else ({ countStart , intervalMs , isIncrement , countStop  } = countdownOption);
+    intervalMs = intervalMs !== null && intervalMs !== void 0 ? intervalMs : 1000;
+    isIncrement = isIncrement !== null && isIncrement !== void 0 ? isIncrement : false;
+    countStop = countStop !== null && countStop !== void 0 ? countStop : 0;
+    const { count , increment , decrement , reset: resetCounter ,  } = (0, _.useCounter)(countStart);
+    const { value: isCountdownRunning , setTrue: startCountdown , setFalse: stopCountdown ,  } = (0, _.useBoolean)(false);
+    const resetCountdown = ()=>{
+        stopCountdown();
+        resetCounter();
+    };
+    const countdownCallback = (0, _react.useCallback)(()=>{
+        if (count === countStop) {
+            stopCountdown();
+            return;
+        }
+        if (isIncrement) increment();
+        else decrement();
+    }, [
+        count,
+        countStop,
+        decrement,
+        increment,
+        isIncrement,
+        stopCountdown
+    ]);
+    (0, _.useInterval)(countdownCallback, isCountdownRunning ? intervalMs : null);
+    return isDeprecated ? [
+        count,
+        {
+            start: startCountdown,
+            stop: stopCountdown,
+            reset: resetCountdown
+        }, 
+    ] : [
+        count,
+        {
+            startCountdown,
+            stopCountdown,
+            resetCountdown
+        }, 
+    ];
+}
+exports.default = useCountdown;
+
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kSFgg":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function useCounter(initialValue) {
+    const [count, setCount] = (0, _react.useState)(initialValue || 0);
+    const increment = ()=>setCount((x)=>x + 1);
+    const decrement = ()=>setCount((x)=>x - 1);
+    const reset = ()=>setCount(initialValue || 0);
+    return {
+        count,
+        increment,
+        decrement,
+        reset,
+        setCount
+    };
+}
+exports.default = useCounter;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aqL5L":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _ = require("..");
+const COLOR_SCHEME_QUERY = "(prefers-color-scheme: dark)";
+function useDarkMode(defaultValue) {
+    var _a;
+    const isDarkOS = (0, _.useMediaQuery)(COLOR_SCHEME_QUERY);
+    const [isDarkMode, setDarkMode] = (0, _.useLocalStorage)("usehooks-ts-dark-mode", (_a = defaultValue !== null && defaultValue !== void 0 ? defaultValue : isDarkOS) !== null && _a !== void 0 ? _a : false);
+    (0, _.useUpdateEffect)(()=>{
+        setDarkMode(isDarkOS);
+    }, [
+        isDarkOS
+    ]);
+    return {
+        isDarkMode,
+        toggle: ()=>setDarkMode((prev)=>!prev),
+        enable: ()=>setDarkMode(true),
+        disable: ()=>setDarkMode(false)
+    };
+}
+exports.default = useDarkMode;
+
+},{"..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lNmEG":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function useDebounce(value, delay) {
+    const [debouncedValue, setDebouncedValue] = (0, _react.useState)(value);
+    (0, _react.useEffect)(()=>{
+        const timer = setTimeout(()=>setDebouncedValue(value), delay || 500);
+        return ()=>{
+            clearTimeout(timer);
+        };
+    }, [
+        value,
+        delay
+    ]);
+    return debouncedValue;
+}
+exports.default = useDebounce;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"esgc8":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _ = require("..");
+function useDocumentTitle(title) {
+    (0, _.useIsomorphicLayoutEffect)(()=>{
+        window.document.title = title;
+    }, [
+        title
+    ]);
+}
+exports.default = useDocumentTitle;
+
+},{"..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3jP3w":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function useEffectOnce(effect) {
+    (0, _react.useEffect)(effect, []);
+}
+exports.default = useEffectOnce;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2iww6":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _ = require("..");
+function useElementSize() {
+    const [ref, setRef] = (0, _react.useState)(null);
+    const [size, setSize] = (0, _react.useState)({
+        width: 0,
+        height: 0
+    });
+    const handleSize = (0, _react.useCallback)(()=>{
+        setSize({
+            width: (ref === null || ref === void 0 ? void 0 : ref.offsetWidth) || 0,
+            height: (ref === null || ref === void 0 ? void 0 : ref.offsetHeight) || 0
+        });
+    }, [
+        ref === null || ref === void 0 ? void 0 : ref.offsetHeight,
+        ref === null || ref === void 0 ? void 0 : ref.offsetWidth
+    ]);
+    (0, _.useEventListener)("resize", handleSize);
+    (0, _.useIsomorphicLayoutEffect)(()=>{
+        handleSize();
+    }, [
+        ref === null || ref === void 0 ? void 0 : ref.offsetHeight,
+        ref === null || ref === void 0 ? void 0 : ref.offsetWidth
+    ]);
+    return [
+        setRef,
+        size
+    ];
+}
+exports.default = useElementSize;
+
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iwlUo":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _ = require("..");
+function useEventCallback(fn) {
+    const ref = (0, _react.useRef)(()=>{
+        throw new Error("Cannot call an event handler while rendering.");
+    });
+    (0, _.useIsomorphicLayoutEffect)(()=>{
+        ref.current = fn;
+    }, [
+        fn
+    ]);
+    return (0, _react.useCallback)((...args)=>ref.current(...args), [
+        ref
+    ]);
+}
+exports.default = useEventCallback;
+
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1HJqq":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _ = require("..");
+function useEventListener(eventName, handler, element, options) {
+    const savedHandler = (0, _react.useRef)(handler);
+    (0, _.useIsomorphicLayoutEffect)(()=>{
+        savedHandler.current = handler;
+    }, [
+        handler
+    ]);
+    (0, _react.useEffect)(()=>{
+        var _a;
+        const targetElement = (_a = element === null || element === void 0 ? void 0 : element.current) !== null && _a !== void 0 ? _a : window;
+        if (!(targetElement && targetElement.addEventListener)) return;
+        const listener = (event)=>savedHandler.current(event);
+        targetElement.addEventListener(eventName, listener, options);
+        return ()=>{
+            targetElement.removeEventListener(eventName, listener, options);
+        };
+    }, [
+        eventName,
+        element,
+        options
+    ]);
+}
+exports.default = useEventListener;
+
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"26gvK":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var __awaiter = undefined && undefined.__awaiter || function(thisArg, _arguments, P, generator) {
+    function adopt(value) {
+        return value instanceof P ? value : new P(function(resolve) {
+            resolve(value);
+        });
+    }
+    return new (P || (P = Promise))(function(resolve, reject) {
+        function fulfilled(value) {
+            try {
+                step(generator.next(value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function rejected(value) {
+            try {
+                step(generator["throw"](value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function step(result) {
+            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+function useFetch(url, options) {
+    const cache = (0, _react.useRef)({});
+    const cancelRequest = (0, _react.useRef)(false);
+    const initialState = {
+        error: undefined,
+        data: undefined
+    };
+    const fetchReducer = (state, action)=>{
+        switch(action.type){
+            case "loading":
+                return Object.assign({}, initialState);
+            case "fetched":
+                return Object.assign(Object.assign({}, initialState), {
+                    data: action.payload
+                });
+            case "error":
+                return Object.assign(Object.assign({}, initialState), {
+                    error: action.payload
+                });
+            default:
+                return state;
+        }
+    };
+    const [state, dispatch] = (0, _react.useReducer)(fetchReducer, initialState);
+    (0, _react.useEffect)(()=>{
+        if (!url) return;
+        cancelRequest.current = false;
+        const fetchData = ()=>__awaiter(this, void 0, void 0, function*() {
+                dispatch({
+                    type: "loading"
+                });
+                if (cache.current[url]) {
+                    dispatch({
+                        type: "fetched",
+                        payload: cache.current[url]
+                    });
+                    return;
+                }
+                try {
+                    const response = yield fetch(url, options);
+                    if (!response.ok) throw new Error(response.statusText);
+                    const data = yield response.json();
+                    cache.current[url] = data;
+                    if (cancelRequest.current) return;
+                    dispatch({
+                        type: "fetched",
+                        payload: data
+                    });
+                } catch (error) {
+                    if (cancelRequest.current) return;
+                    dispatch({
+                        type: "error",
+                        payload: error
+                    });
+                }
+            });
+        fetchData();
+        return ()=>{
+            cancelRequest.current = true;
+        };
+    }, [
+        url
+    ]);
+    return state;
+}
+exports.default = useFetch;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eNC2T":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _ = require("..");
+function useHover(elementRef) {
+    const [value, setValue] = (0, _react.useState)(false);
+    const handleMouseEnter = ()=>setValue(true);
+    const handleMouseLeave = ()=>setValue(false);
+    (0, _.useEventListener)("mouseenter", handleMouseEnter, elementRef);
+    (0, _.useEventListener)("mouseleave", handleMouseLeave, elementRef);
+    return value;
+}
+exports.default = useHover;
+
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fttn3":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function useImageOnLoad() {
+    const [isLoaded, setIsLoaded] = (0, _react.useState)(false);
+    const handleImageOnLoad = ()=>{
+        setIsLoaded(true);
+    };
+    const css = {
+        thumbnail: {
+            visibility: isLoaded ? "hidden" : "visible",
+            filter: "blur(8px)",
+            transition: "visibility 0ms ease-out 500ms"
+        },
+        fullSize: {
+            opacity: isLoaded ? 1 : 0,
+            transition: "opacity 500ms ease-in 0ms"
+        }
+    };
+    return {
+        handleImageOnLoad,
+        css
+    };
+}
+exports.default = useImageOnLoad;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9IP75":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function useIntersectionObserver(elementRef, { threshold =0 , root =null , rootMargin ="0%" , freezeOnceVisible =false ,  }) {
+    const [entry, setEntry] = (0, _react.useState)();
+    const frozen = (entry === null || entry === void 0 ? void 0 : entry.isIntersecting) && freezeOnceVisible;
+    const updateEntry = ([entry])=>{
+        setEntry(entry);
+    };
+    (0, _react.useEffect)(()=>{
+        const node = elementRef === null || elementRef === void 0 ? void 0 : elementRef.current;
+        const hasIOSupport = !!window.IntersectionObserver;
+        if (!hasIOSupport || frozen || !node) return;
+        const observerParams = {
+            threshold,
+            root,
+            rootMargin
+        };
+        const observer = new IntersectionObserver(updateEntry, observerParams);
+        observer.observe(node);
+        return ()=>observer.disconnect();
+    }, [
+        elementRef === null || elementRef === void 0 ? void 0 : elementRef.current,
+        JSON.stringify(threshold),
+        root,
+        rootMargin,
+        frozen
+    ]);
+    return entry;
+}
+exports.default = useIntersectionObserver;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"GPWw2":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _ = require("..");
+function useInterval(callback, delay) {
+    const savedCallback = (0, _react.useRef)(callback);
+    (0, _.useIsomorphicLayoutEffect)(()=>{
+        savedCallback.current = callback;
+    }, [
+        callback
+    ]);
+    (0, _react.useEffect)(()=>{
+        if (!delay && delay !== 0) return;
+        const id = setInterval(()=>savedCallback.current(), delay);
+        return ()=>clearInterval(id);
+    }, [
+        delay
+    ]);
+}
+exports.default = useInterval;
+
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3emvU":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function useIsClient() {
+    const [isClient, setClient] = (0, _react.useState)(false);
+    (0, _react.useEffect)(()=>{
+        setClient(true);
+    }, []);
+    return isClient;
+}
+exports.default = useIsClient;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"g3oAw":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function useIsFirstRender() {
+    const isFirst = (0, _react.useRef)(true);
+    if (isFirst.current) {
+        isFirst.current = false;
+        return true;
+    }
+    return isFirst.current;
+}
+exports.default = useIsFirstRender;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2uJb6":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function useIsMounted() {
+    const isMounted = (0, _react.useRef)(false);
+    (0, _react.useEffect)(()=>{
+        isMounted.current = true;
+        return ()=>{
+            isMounted.current = false;
+        };
+    }, []);
+    return (0, _react.useCallback)(()=>isMounted.current, []);
+}
+exports.default = useIsMounted;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fWEdC":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+const useIsomorphicLayoutEffect = typeof window !== "undefined" ? (0, _react.useLayoutEffect) : (0, _react.useEffect);
+exports.default = useIsomorphicLayoutEffect;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2Bbwp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _ = require("..");
+function useLocalStorage(key, initialValue) {
+    const readValue = (0, _react.useCallback)(()=>{
+        if (typeof window === "undefined") return initialValue;
+        try {
+            const item = window.localStorage.getItem(key);
+            return item ? parseJSON(item) : initialValue;
+        } catch (error) {
+            console.warn(`Error reading localStorage key “${key}”:`, error);
+            return initialValue;
+        }
+    }, [
+        initialValue,
+        key
+    ]);
+    const [storedValue, setStoredValue] = (0, _react.useState)(readValue);
+    const setValue = (0, _.useEventCallback)((value)=>{
+        if (typeof window === "undefined") console.warn(`Tried setting localStorage key “${key}” even though environment is not a client`);
+        try {
+            const newValue = value instanceof Function ? value(storedValue) : value;
+            window.localStorage.setItem(key, JSON.stringify(newValue));
+            setStoredValue(newValue);
+            window.dispatchEvent(new Event("local-storage"));
+        } catch (error) {
+            console.warn(`Error setting localStorage key “${key}”:`, error);
+        }
+    });
+    (0, _react.useEffect)(()=>{
+        setStoredValue(readValue());
+    }, []);
+    const handleStorageChange = (0, _react.useCallback)((event)=>{
+        if ((event === null || event === void 0 ? void 0 : event.key) && event.key !== key) return;
+        setStoredValue(readValue());
+    }, [
+        key,
+        readValue
+    ]);
+    (0, _.useEventListener)("storage", handleStorageChange);
+    (0, _.useEventListener)("local-storage", handleStorageChange);
+    return [
+        storedValue,
+        setValue
+    ];
+}
+exports.default = useLocalStorage;
+function parseJSON(value) {
+    try {
+        return value === "undefined" ? undefined : JSON.parse(value !== null && value !== void 0 ? value : "");
+    } catch (_a) {
+        console.log("parsing error on", {
+            value
+        });
+        return undefined;
+    }
+}
+
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aCXSw":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _ = require("..");
+function useLockedBody(initialLocked = false, rootId = "___gatsby") {
+    const [locked, setLocked] = (0, _react.useState)(initialLocked);
+    (0, _.useIsomorphicLayoutEffect)(()=>{
+        if (!locked) return;
+        const originalOverflow = document.body.style.overflow;
+        const originalPaddingRight = document.body.style.paddingRight;
+        document.body.style.overflow = "hidden";
+        const root = document.getElementById(rootId);
+        const scrollBarWidth = root ? root.offsetWidth - root.scrollWidth : 0;
+        if (scrollBarWidth) document.body.style.paddingRight = `${scrollBarWidth}px`;
+        return ()=>{
+            document.body.style.overflow = originalOverflow;
+            if (scrollBarWidth) document.body.style.paddingRight = originalPaddingRight;
+        };
+    }, [
+        locked
+    ]);
+    (0, _react.useEffect)(()=>{
+        if (locked !== initialLocked) setLocked(initialLocked);
+    }, [
+        initialLocked
+    ]);
+    return [
+        locked,
+        setLocked
+    ];
+}
+exports.default = useLockedBody;
+
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2ZsJ5":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function useMap(initialState = new Map()) {
+    const [map, setMap] = (0, _react.useState)(new Map(initialState));
+    const actions = {
+        set: (0, _react.useCallback)((key, value)=>{
+            setMap((prev)=>{
+                const copy = new Map(prev);
+                copy.set(key, value);
+                return copy;
+            });
+        }, []),
+        setAll: (0, _react.useCallback)((entries)=>{
+            setMap(()=>new Map(entries));
+        }, []),
+        remove: (0, _react.useCallback)((key)=>{
+            setMap((prev)=>{
+                const copy = new Map(prev);
+                copy.delete(key);
+                return copy;
+            });
+        }, []),
+        reset: (0, _react.useCallback)(()=>{
+            setMap(()=>new Map());
+        }, [])
+    };
+    return [
+        map,
+        actions
+    ];
+}
+exports.default = useMap;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"26a3m":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function useMediaQuery(query) {
+    const getMatches = (query)=>{
+        if (typeof window !== "undefined") return window.matchMedia(query).matches;
+        return false;
+    };
+    const [matches, setMatches] = (0, _react.useState)(getMatches(query));
+    function handleChange() {
+        setMatches(getMatches(query));
+    }
+    (0, _react.useEffect)(()=>{
+        const matchMedia = window.matchMedia(query);
+        handleChange();
+        if (matchMedia.addListener) matchMedia.addListener(handleChange);
+        else matchMedia.addEventListener("change", handleChange);
+        return ()=>{
+            if (matchMedia.removeListener) matchMedia.removeListener(handleChange);
+            else matchMedia.removeEventListener("change", handleChange);
+        };
+    }, [
+        query
+    ]);
+    return matches;
+}
+exports.default = useMediaQuery;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eLhz8":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _ = require("..");
+function useOnClickOutside(ref, handler, mouseEvent = "mousedown") {
+    (0, _.useEventListener)(mouseEvent, (event)=>{
+        const el = ref === null || ref === void 0 ? void 0 : ref.current;
+        if (!el || el.contains(event.target)) return;
+        handler(event);
+    });
+}
+exports.default = useOnClickOutside;
+
+},{"..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4VBoB":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _ = require("..");
+function useReadLocalStorage(key) {
+    const readValue = (0, _react.useCallback)(()=>{
+        if (typeof window === "undefined") return null;
+        try {
+            const item = window.localStorage.getItem(key);
+            return item ? JSON.parse(item) : null;
+        } catch (error) {
+            console.warn(`Error reading localStorage key “${key}”:`, error);
+            return null;
+        }
+    }, [
+        key
+    ]);
+    const [storedValue, setStoredValue] = (0, _react.useState)(readValue);
+    (0, _react.useEffect)(()=>{
+        setStoredValue(readValue());
+    }, []);
+    const handleStorageChange = (0, _react.useCallback)((event)=>{
+        if ((event === null || event === void 0 ? void 0 : event.key) && event.key !== key) return;
+        setStoredValue(readValue());
+    }, [
+        key,
+        readValue
+    ]);
+    (0, _.useEventListener)("storage", handleStorageChange);
+    (0, _.useEventListener)("local-storage", handleStorageChange);
+    return storedValue;
+}
+exports.default = useReadLocalStorage;
+
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6YQVm":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _ = require("..");
+function useScreen() {
+    const getScreen = ()=>{
+        if (typeof window !== "undefined" && window.screen) return window.screen;
+        return undefined;
+    };
+    const [screen, setScreen] = (0, _react.useState)(getScreen());
+    function handleSize() {
+        setScreen(getScreen());
+    }
+    (0, _.useEventListener)("resize", handleSize);
+    (0, _.useIsomorphicLayoutEffect)(()=>{
+        handleSize();
+    }, []);
+    return screen;
+}
+exports.default = useScreen;
+
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"djE9J":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+const cachedScriptStatuses = {};
+function getScriptNode(src) {
+    const node = document.querySelector(`script[src="${src}"]`);
+    const status = node === null || node === void 0 ? void 0 : node.getAttribute("data-status");
+    return {
+        node,
+        status
+    };
+}
+function useScript(src, options) {
+    const [status, setStatus] = (0, _react.useState)(()=>{
+        var _a;
+        if (!src || (options === null || options === void 0 ? void 0 : options.shouldPreventLoad)) return "idle";
+        if (typeof window === "undefined") return "loading";
+        return (_a = cachedScriptStatuses[src]) !== null && _a !== void 0 ? _a : "loading";
+    });
+    (0, _react.useEffect)(()=>{
+        var _a, _b;
+        if (!src || (options === null || options === void 0 ? void 0 : options.shouldPreventLoad)) return;
+        const cachedScriptStatus = cachedScriptStatuses[src];
+        if (cachedScriptStatus === "ready" || cachedScriptStatus === "error") {
+            setStatus(cachedScriptStatus);
+            return;
+        }
+        const script = getScriptNode(src);
+        let scriptNode = script.node;
+        if (!scriptNode) {
+            scriptNode = document.createElement("script");
+            scriptNode.src = src;
+            scriptNode.async = true;
+            scriptNode.setAttribute("data-status", "loading");
+            document.body.appendChild(scriptNode);
+            const setAttributeFromEvent = (event)=>{
+                const scriptStatus = event.type === "load" ? "ready" : "error";
+                scriptNode === null || scriptNode === void 0 || scriptNode.setAttribute("data-status", scriptStatus);
+            };
+            scriptNode.addEventListener("load", setAttributeFromEvent);
+            scriptNode.addEventListener("error", setAttributeFromEvent);
+        } else setStatus((_b = (_a = script.status) !== null && _a !== void 0 ? _a : cachedScriptStatus) !== null && _b !== void 0 ? _b : "loading");
+        const setStateFromEvent = (event)=>{
+            const newStatus = event.type === "load" ? "ready" : "error";
+            setStatus(newStatus);
+            cachedScriptStatuses[src] = newStatus;
+        };
+        scriptNode.addEventListener("load", setStateFromEvent);
+        scriptNode.addEventListener("error", setStateFromEvent);
+        return ()=>{
+            if (scriptNode) {
+                scriptNode.removeEventListener("load", setStateFromEvent);
+                scriptNode.removeEventListener("error", setStateFromEvent);
+            }
+            if (scriptNode && (options === null || options === void 0 ? void 0 : options.removeOnUnmount)) scriptNode.remove();
+        };
+    }, [
+        src,
+        options === null || options === void 0 ? void 0 : options.shouldPreventLoad,
+        options === null || options === void 0 ? void 0 : options.removeOnUnmount
+    ]);
+    return status;
+}
+exports.default = useScript;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jTdlC":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _ = require("..");
+function useSessionStorage(key, initialValue) {
+    const readValue = (0, _react.useCallback)(()=>{
+        if (typeof window === "undefined") return initialValue;
+        try {
+            const item = window.sessionStorage.getItem(key);
+            return item ? parseJSON(item) : initialValue;
+        } catch (error) {
+            console.warn(`Error reading sessionStorage key “${key}”:`, error);
+            return initialValue;
+        }
+    }, [
+        initialValue,
+        key
+    ]);
+    const [storedValue, setStoredValue] = (0, _react.useState)(readValue);
+    const setValue = (0, _.useEventCallback)((value)=>{
+        if (typeof window == "undefined") console.warn(`Tried setting sessionStorage key “${key}” even though environment is not a client`);
+        try {
+            const newValue = value instanceof Function ? value(storedValue) : value;
+            window.sessionStorage.setItem(key, JSON.stringify(newValue));
+            setStoredValue(newValue);
+            window.dispatchEvent(new Event("session-storage"));
+        } catch (error) {
+            console.warn(`Error setting sessionStorage key “${key}”:`, error);
+        }
+    });
+    (0, _react.useEffect)(()=>{
+        setStoredValue(readValue());
+    }, []);
+    const handleStorageChange = (0, _react.useCallback)((event)=>{
+        if ((event === null || event === void 0 ? void 0 : event.key) && event.key !== key) return;
+        setStoredValue(readValue());
+    }, [
+        key,
+        readValue
+    ]);
+    (0, _.useEventListener)("storage", handleStorageChange);
+    (0, _.useEventListener)("session-storage", handleStorageChange);
+    return [
+        storedValue,
+        setValue
+    ];
+}
+exports.default = useSessionStorage;
+function parseJSON(value) {
+    try {
+        return value === "undefined" ? undefined : JSON.parse(value !== null && value !== void 0 ? value : "");
+    } catch (_a) {
+        console.log("parsing error on", {
+            value
+        });
+        return undefined;
+    }
+}
+
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9XRLH":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function useSsr() {
+    const isDOM = typeof window !== "undefined" && window.document && window.document.documentElement;
+    return {
+        isBrowser: isDOM,
+        isServer: !isDOM
+    };
+}
+exports.default = useSsr;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2zb9y":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function useStep(maxStep) {
+    const [currentStep, setCurrentStep] = (0, _react.useState)(1);
+    const canGoToNextStep = (0, _react.useMemo)(()=>currentStep + 1 <= maxStep, [
+        currentStep,
+        maxStep
+    ]);
+    const canGoToPrevStep = (0, _react.useMemo)(()=>currentStep - 1 >= 1, [
+        currentStep
+    ]);
+    const setStep = (0, _react.useCallback)((step)=>{
+        const newStep = step instanceof Function ? step(currentStep) : step;
+        if (newStep >= 1 && newStep <= maxStep) {
+            setCurrentStep(newStep);
+            return;
+        }
+        throw new Error("Step not valid");
+    }, [
+        maxStep,
+        currentStep
+    ]);
+    const goToNextStep = (0, _react.useCallback)(()=>{
+        if (canGoToNextStep) setCurrentStep((step)=>step + 1);
+    }, [
+        canGoToNextStep
+    ]);
+    const goToPrevStep = (0, _react.useCallback)(()=>{
+        if (canGoToPrevStep) setCurrentStep((step)=>step - 1);
+    }, [
+        canGoToPrevStep
+    ]);
+    const reset = (0, _react.useCallback)(()=>{
+        setCurrentStep(1);
+    }, []);
+    return [
+        currentStep,
+        {
+            goToNextStep,
+            goToPrevStep,
+            canGoToNextStep,
+            canGoToPrevStep,
+            setStep,
+            reset
+        }, 
+    ];
+}
+exports.default = useStep;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9k0Mg":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _ = require("..");
+const COLOR_SCHEME_QUERY = "(prefers-color-scheme: dark)";
+function useTernaryDarkMode() {
+    const isDarkOS = (0, _.useMediaQuery)(COLOR_SCHEME_QUERY);
+    const [ternaryDarkMode, setTernaryDarkMode] = (0, _.useLocalStorage)("usehooks-ts-ternary-dark-mode", "system");
+    const [isDarkMode, setDarkMode] = (0, _react.useState)(isDarkOS);
+    (0, _.useUpdateEffect)(()=>{
+        if (ternaryDarkMode === "system") setDarkMode(isDarkOS);
+    }, [
+        isDarkOS
+    ]);
+    (0, _react.useEffect)(()=>{
+        switch(ternaryDarkMode){
+            case "light":
+                setDarkMode(false);
+                break;
+            case "system":
+                setDarkMode(isDarkOS);
+                break;
+            case "dark":
+                setDarkMode(true);
+                break;
+        }
+    }, [
+        ternaryDarkMode,
+        isDarkOS
+    ]);
+    function toggleTernaryDarkMode() {
+        const toggleDict = {
+            light: "system",
+            system: "dark",
+            dark: "light"
+        };
+        setTernaryDarkMode((prevMode)=>toggleDict[prevMode]);
+    }
+    return {
+        isDarkMode,
+        ternaryDarkMode,
+        setTernaryDarkMode,
+        toggleTernaryDarkMode
+    };
+}
+exports.default = useTernaryDarkMode;
+
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iuWi6":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _ = require("..");
+function useTimeout(callback, delay) {
+    const savedCallback = (0, _react.useRef)(callback);
+    (0, _.useIsomorphicLayoutEffect)(()=>{
+        savedCallback.current = callback;
+    }, [
+        callback
+    ]);
+    (0, _react.useEffect)(()=>{
+        if (!delay && delay !== 0) return;
+        const id = setTimeout(()=>savedCallback.current(), delay);
+        return ()=>clearTimeout(id);
+    }, [
+        delay
+    ]);
+}
+exports.default = useTimeout;
+
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"11jhp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function useToggle(defaultValue) {
+    const [value, setValue] = (0, _react.useState)(!!defaultValue);
+    const toggle = (0, _react.useCallback)(()=>setValue((x)=>!x), []);
+    return [
+        value,
+        toggle,
+        setValue
+    ];
+}
+exports.default = useToggle;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"Gp0lB":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _ = require("..");
+function useUpdateEffect(effect, deps) {
+    const isFirst = (0, _.useIsFirstRender)();
+    (0, _react.useEffect)(()=>{
+        if (!isFirst) return effect();
+    }, deps);
+}
+exports.default = useUpdateEffect;
+
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"73GDr":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _ = require("..");
+function useWindowSize() {
+    const [windowSize, setWindowSize] = (0, _react.useState)({
+        width: 0,
+        height: 0
+    });
+    const handleSize = ()=>{
+        setWindowSize({
+            width: window.innerWidth,
+            height: window.innerHeight
+        });
+    };
+    (0, _.useEventListener)("resize", handleSize);
+    (0, _.useIsomorphicLayoutEffect)(()=>{
+        handleSize();
+    }, []);
+    return windowSize;
+}
+exports.default = useWindowSize;
+
+},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"awDkT":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "DialogStyled", ()=>DialogStyled);
+parcelHelpers.export(exports, "DialogTriggerStyled", ()=>DialogTriggerStyled);
+parcelHelpers.export(exports, "DialogOverlayStyled", ()=>DialogOverlayStyled);
+parcelHelpers.export(exports, "DialogContentStyled", ()=>DialogContentStyled);
+parcelHelpers.export(exports, "DialogExitStyled", ()=>DialogExitStyled);
+var _stitchesConfig = require("../../stitches.config");
+const DialogStyled = (0, _stitchesConfig.styled)("div", {
+    display: "inline-block",
+    position: "relative",
+    verticalAlign: "middle"
+});
+const DialogTriggerStyled = (0, _stitchesConfig.styled)("div", {
+    "*": {
+        cursor: "pointer"
+    },
+    "display": "inline-flex",
+    "position": "relative",
+    "verticalAlign": "middle"
+});
+const DialogOverlayStyled = (0, _stitchesConfig.styled)("div", {
+    backgroundColor: "rgba(116, 116, 121, 0.4)",
+    bottom: 0,
+    left: 0,
+    overflowY: "scroll",
+    position: "fixed",
+    right: 0,
+    top: 0,
+    transition: "$default",
+    variants: {
+        animation: {
+            false: {
+                animation: `${(0, _stitchesConfig.fadeOut)} .3s ease-in-out`,
+                animationFillMode: "forwards"
+            },
+            true: {
+                animation: `${(0, _stitchesConfig.fadeIn)} .1s ease-in-out`,
+                animationFillMode: "forwards"
+            }
+        }
+    },
+    width: "100%",
+    zIndex: "$dialog"
+});
+const DialogContentStyled = (0, _stitchesConfig.styled)("div", {
+    backgroundColor: "$background",
+    borderRadius: "$2",
+    left: "50%",
+    maxHeight: "80vh",
+    maxWidth: "100%",
+    overflowX: "hidden",
+    overflowY: "auto",
+    padding: "$6 $5",
+    position: "fixed",
+    textAlign: "left",
+    top: "50%",
+    transform: "translate(-50%, -50%)",
+    transition: "$default",
+    variants: {
+        animation: {
+            false: {
+                animation: `${(0, _stitchesConfig.fadeOut)} .4s ease-in-out`,
+                animationFillMode: "forwards"
+            },
+            true: {
+                animation: `${(0, _stitchesConfig.fadeIn)} .4s ease-in-out`,
+                animationFillMode: "forwards"
+            }
+        }
+    },
+    width: "70rem",
+    [(0, _stitchesConfig.breakpoints).phone]: {
+        maxHeight: "95vh",
+        maxWidth: "90%",
+        padding: "5",
+        width: "90%"
+    }
+});
+const DialogExitStyled = (0, _stitchesConfig.styled)("div", {
+    "&:hover": {
+        opacity: 1
+    },
+    "cursor": "pointer",
+    "opacity": 0.7,
+    "padding": "1rem",
+    "position": "absolute",
+    "right": 0,
+    "top": 0,
+    "transition": "$default"
+});
+exports.default = DialogStyled;
+
+},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4ujjS":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Divider", ()=>(0, _dividerDefault.default));
+var _divider = require("./Divider");
+var _dividerDefault = parcelHelpers.interopDefault(_divider);
+
+},{"./Divider":"jF4Vz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jF4Vz":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5dbe = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5dbe.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+// import React from 'react';
+var _stitchesConfig = require("../../stitches.config");
+var _dividerStyles = require("./Divider.styles");
+var _dividerStylesDefault = parcelHelpers.interopDefault(_dividerStyles);
+function Divider(props) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dividerStylesDefault.default), {
+        css: {
+            ...props.css,
+            backgroundColor: props.theme ? `$${props.theme}` : "$border",
+            ...props.top && {
+                marginTop: `$${props.top}`,
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    marginTop: props.top !== "6" ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    marginTop: props.top !== "6" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`
+                }
+            },
+            ...props.bottom && {
+                marginBottom: `$${props.bottom}`,
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    marginBottom: props.bottom !== "6" ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    marginBottom: props.bottom !== "6" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`
+                }
+            }
+        },
+        id: props.id
+    }, void 0, false, {
+        fileName: "src/components/Divider/Divider.tsx",
+        lineNumber: 15,
+        columnNumber: 5
+    }, this);
+}
+exports.default = Divider;
+_c = Divider;
+var _c;
+$RefreshReg$(_c, "Divider");
+
+  $parcel$ReactRefreshHelpers$5dbe.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../../stitches.config":"iMNz3","./Divider.styles":"8kl7a","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8kl7a":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "DividerStyled", ()=>DividerStyled);
+var _stitchesConfig = require("../../stitches.config");
+const DividerStyled = (0, _stitchesConfig.styled)("div", {
+    height: "0.1rem",
+    margin: "0 auto",
+    maxWidth: "100%",
+    width: "100%"
+});
+exports.default = DividerStyled;
+
+},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9yvFB":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Dropdown", ()=>(0, _dropdownDefault.default));
+var _dropdown = require("./Dropdown");
+var _dropdownDefault = parcelHelpers.interopDefault(_dropdown);
+
+},{"./Dropdown":"kKcMp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kKcMp":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$636e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$636e.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+// import React from 'react';
+var _router = require("next/router");
+var _react = require("react");
+var _usehooksTs = require("usehooks-ts");
+var _index = require("../../index");
+var _dropdownStyles = require("./Dropdown.styles");
+var _s = $RefreshSig$();
+function Dropdown(props) {
+    _s();
+    const ref = (0, _react.useRef)(null);
+    const router = (0, _router.useRouter)();
+    const path = router?.pathname || "/";
+    const [isOpen, setIsOpen] = (0, _react.useState)(false);
+    const [isMounted, setIsMounted] = (0, _react.useState)(false);
+    const [filter, setFilter] = (0, _react.useState)("");
+    function handleClose() {
+        setIsOpen(false);
+        setTimeout(()=>{
+            setIsMounted(false);
+        }, 250);
+    }
+    function handleOpen() {
+        setIsOpen(true);
+        setTimeout(()=>{
+            setIsMounted(true);
+        }, 25);
+    }
+    function handleClick() {
+        if (isOpen || isMounted) {
+            setIsOpen(false);
+            setIsMounted(false);
+        } else handleOpen();
+    }
+    const handleNavigate = (value)=>{
+        router.push(value);
+        handleClose();
+    };
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const handleActions = (value, label)=>{
+        props.actions(value, label);
+        handleClose();
+    };
+    (0, _usehooksTs.useOnClickOutside)(ref, ()=>handleClose());
+    (0, _usehooksTs.useEventListener)("keydown", (event)=>{
+        if (event.key === "Escape") handleClose();
+    });
+    (0, _usehooksTs.useLockedBody)(props.locked ? isOpen : false);
+    const filteredOptions = props.filter ? props.options.filter((option)=>option.label.toLowerCase().includes(filter.toLowerCase())) : props.options;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownStyles.DropdownStyled), {
+        css: props.css,
+        id: props.id,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownStyles.DropdownTriggerStyled), {
+                onClickCapture: handleClick,
+                children: props.trigger
+            }, props.active || Math.random(), false, {
+                fileName: "src/components/Dropdown/Dropdown.tsx",
+                lineNumber: 95,
+                columnNumber: 7
+            }, this),
+            isMounted && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownStyles.DropdownGroupStyled), {
+                animation: isOpen,
+                css: {
+                    left: props.align === "left" ? "0" : "auto",
+                    maxWidth: props.width + " !important",
+                    minWidth: props.width + " !important",
+                    right: props.align === "right" ? "0" : "auto"
+                },
+                ref: ref,
+                children: [
+                    props.filter && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
+                        bottom: "2",
+                        top: "1",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
+                            disabled: !props.options,
+                            onChange: (e)=>setFilter(e.target.value),
+                            placeholder: "Search"
+                        }, void 0, false, {
+                            fileName: "src/components/Dropdown/Dropdown.tsx",
+                            lineNumber: 112,
+                            columnNumber: 15
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/components/Dropdown/Dropdown.tsx",
+                        lineNumber: 111,
+                        columnNumber: 13
+                    }, this),
+                    props.loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Loading), {}, void 0, false, {
+                        fileName: "src/components/Dropdown/Dropdown.tsx",
+                        lineNumber: 120,
+                        columnNumber: 13
+                    }, this) : !props.options || filteredOptions.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                        accent: true,
+                        as: "p",
+                        css: {
+                            padding: "$2 $3 $1 $3"
+                        },
+                        children: "No results found."
+                    }, void 0, false, {
+                        fileName: "src/components/Dropdown/Dropdown.tsx",
+                        lineNumber: 122,
+                        columnNumber: 13
+                    }, this) : filteredOptions.map(({ label , value  })=>props.submenu ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownStyles.DropdownItemStyled), {
+                            css: {
+                                color: path === value ? "$accent" : "$text"
+                            },
+                            submenu: true,
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                onClickCapture: ()=>handleNavigate(value),
+                                children: label
+                            }, void 0, false, {
+                                fileName: "src/components/Dropdown/Dropdown.tsx",
+                                lineNumber: 134,
+                                columnNumber: 19
+                            }, this)
+                        }, value, false, {
+                            fileName: "src/components/Dropdown/Dropdown.tsx",
+                            lineNumber: 128,
+                            columnNumber: 17
+                        }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownStyles.DropdownItemStyled), {
+                            css: {
+                                color: props.active && props.active === value ? "$accent" : "$text"
+                            },
+                            onClickCapture: ()=>{
+                                handleActions(value, label);
+                            },
+                            submenu: false,
+                            children: label
+                        }, value, false, {
+                            fileName: "src/components/Dropdown/Dropdown.tsx",
+                            lineNumber: 137,
+                            columnNumber: 17
+                        }, this))
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Dropdown/Dropdown.tsx",
+                lineNumber: 101,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Dropdown/Dropdown.tsx",
+        lineNumber: 94,
+        columnNumber: 5
+    }, this);
+}
+exports.default = Dropdown;
+_s(Dropdown, "Nb5kKGmxLWkuWakGtElAmBfP5wk=", false, function() {
+    return [
+        (0, _router.useRouter),
+        (0, _usehooksTs.useOnClickOutside),
+        (0, _usehooksTs.useEventListener),
+        (0, _usehooksTs.useLockedBody)
+    ];
+});
+_c = Dropdown;
+var _c;
+$RefreshReg$(_c, "Dropdown");
+
+  $parcel$ReactRefreshHelpers$636e.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","next/router":"hphgm","react":"21dqq","usehooks-ts":"dmUe4","../../index":"4aBH6","./Dropdown.styles":"jxb92","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hphgm":[function(require,module,exports) {
+module.exports = require("./dist/client/router");
+
+},{"./dist/client/router":"9DVWS"}],"9DVWS":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "Router", {
+    enumerable: true,
+    get: function() {
+        return _router.default;
+    }
+});
+Object.defineProperty(exports, "withRouter", {
+    enumerable: true,
+    get: function() {
+        return _withRouter.default;
+    }
+});
+exports.useRouter = useRouter;
+exports.createRouter = createRouter;
+exports.makePublicRouterInstance = makePublicRouterInstance;
+exports.default = void 0;
+var _interop_require_default = require("@swc/helpers/lib/_interop_require_default.js").default;
+var _react = _interop_require_default(require("react"));
+var _router = _interop_require_default(require("../shared/lib/router/router"));
+var _routerContext = require("../shared/lib/router-context");
+var _isError = _interop_require_default(require("../lib/is-error"));
+var _withRouter = _interop_require_default(require("./with-router"));
+const singletonRouter = {
+    router: null,
+    readyCallbacks: [],
+    ready (cb) {
+        if (this.router) return cb();
+        if (typeof window !== "undefined") this.readyCallbacks.push(cb);
+    }
+};
+// Create public properties and methods of the router in the singletonRouter
+const urlPropertyFields = [
+    "pathname",
+    "route",
+    "query",
+    "asPath",
+    "components",
+    "isFallback",
+    "basePath",
+    "locale",
+    "locales",
+    "defaultLocale",
+    "isReady",
+    "isPreview",
+    "isLocaleDomain",
+    "domainLocales", 
+];
+const routerEvents = [
+    "routeChangeStart",
+    "beforeHistoryChange",
+    "routeChangeComplete",
+    "routeChangeError",
+    "hashChangeStart",
+    "hashChangeComplete", 
+];
+const coreMethodFields = [
+    "push",
+    "replace",
+    "reload",
+    "back",
+    "prefetch",
+    "beforePopState", 
+];
+// Events is a static property on the router, the router doesn't have to be initialized to use it
+Object.defineProperty(singletonRouter, "events", {
+    get () {
+        return _router.default.events;
+    }
+});
+function getRouter() {
+    if (!singletonRouter.router) {
+        const message = 'No router instance found.\nYou should only use "next/router" on the client side of your app.\n';
+        throw new Error(message);
+    }
+    return singletonRouter.router;
+}
+urlPropertyFields.forEach((field)=>{
+    // Here we need to use Object.defineProperty because we need to return
+    // the property assigned to the actual router
+    // The value might get changed as we change routes and this is the
+    // proper way to access it
+    Object.defineProperty(singletonRouter, field, {
+        get () {
+            const router = getRouter();
+            return router[field];
+        }
+    });
+});
+coreMethodFields.forEach((field)=>{
+    singletonRouter[field] = (...args)=>{
+        const router = getRouter();
+        return router[field](...args);
+    };
+});
+routerEvents.forEach((event)=>{
+    singletonRouter.ready(()=>{
+        _router.default.events.on(event, (...args)=>{
+            const eventField = `on${event.charAt(0).toUpperCase()}${event.substring(1)}`;
+            const _singletonRouter = singletonRouter;
+            if (_singletonRouter[eventField]) try {
+                _singletonRouter[eventField](...args);
+            } catch (err) {
+                console.error(`Error when running the Router event: ${eventField}`);
+                console.error(_isError.default(err) ? `${err.message}\n${err.stack}` : err + "");
+            }
+        });
+    });
+});
+var _default = singletonRouter;
+exports.default = _default;
+function useRouter() {
+    return _react.default.useContext(_routerContext.RouterContext);
+}
+function createRouter(...args) {
+    singletonRouter.router = new _router.default(...args);
+    singletonRouter.readyCallbacks.forEach((cb)=>cb());
+    singletonRouter.readyCallbacks = [];
+    return singletonRouter.router;
+}
+function makePublicRouterInstance(router) {
+    const scopedRouter = router;
+    const instance = {};
+    for (const property of urlPropertyFields){
+        if (typeof scopedRouter[property] === "object") {
+            instance[property] = Object.assign(Array.isArray(scopedRouter[property]) ? [] : {}, scopedRouter[property]) // makes sure query is not stateful
+            ;
+            continue;
+        }
+        instance[property] = scopedRouter[property];
+    }
+    // Events is a static property on the router, the router doesn't have to be initialized to use it
+    instance.events = _router.default.events;
+    coreMethodFields.forEach((field)=>{
+        instance[field] = (...args)=>{
+            return scopedRouter[field](...args);
+        };
+    });
+    return instance;
+}
+if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
+    Object.defineProperty(exports.default, "__esModule", {
+        value: true
+    });
+    Object.assign(exports.default, exports);
+    module.exports = exports.default;
+}
+
+},{"@swc/helpers/lib/_interop_require_default.js":"k1iFV","react":"21dqq","../shared/lib/router/router":"eKYbI","../shared/lib/router-context":"iJTGy","../lib/is-error":"6h17E","./with-router":"1z2O4"}],"k1iFV":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = _interopRequireDefault;
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+        default: obj
+    };
+}
+
+},{}],"eKYbI":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.matchesMiddleware = matchesMiddleware;
+exports.isLocalURL = isLocalURL;
+exports.interpolateAs = interpolateAs;
+exports.resolveHref = resolveHref;
+exports.createKey = createKey;
+exports.default = void 0;
+var _async_to_generator = require("@swc/helpers/lib/_async_to_generator.js").default;
+var _extends = require("@swc/helpers/lib/_extends.js").default;
+var _interop_require_default = require("@swc/helpers/lib/_interop_require_default.js").default;
+var _interop_require_wildcard = require("@swc/helpers/lib/_interop_require_wildcard.js").default;
+var _normalizeTrailingSlash = require("../../../client/normalize-trailing-slash");
+var _removeTrailingSlash = require("./utils/remove-trailing-slash");
+var _routeLoader = require("../../../client/route-loader");
+var _script = require("../../../client/script");
+var _isError = _interop_require_wildcard(require("../../../lib/is-error"));
+var _denormalizePagePath = require("../page-path/denormalize-page-path");
+var _normalizeLocalePath = require("../i18n/normalize-locale-path");
+var _mitt = _interop_require_default(require("../mitt"));
+var _utils = require("../utils");
+var _isDynamic = require("./utils/is-dynamic");
+var _parseRelativeUrl = require("./utils/parse-relative-url");
+var _querystring = require("./utils/querystring");
+var _resolveRewrites = _interop_require_default(require("./utils/resolve-rewrites"));
+var _routeMatcher = require("./utils/route-matcher");
+var _routeRegex = require("./utils/route-regex");
+var _formatUrl = require("./utils/format-url");
+var _detectDomainLocale = require("../../../client/detect-domain-locale");
+var _parsePath = require("./utils/parse-path");
+var _addLocale = require("../../../client/add-locale");
+var _removeLocale = require("../../../client/remove-locale");
+var _removeBasePath = require("../../../client/remove-base-path");
+var _addBasePath = require("../../../client/add-base-path");
+var _hasBasePath = require("../../../client/has-base-path");
+var _getNextPathnameInfo = require("./utils/get-next-pathname-info");
+var _formatNextPathnameInfo = require("./utils/format-next-pathname-info");
+var _compareStates = require("./utils/compare-states");
+var _isBot = require("./utils/is-bot");
+function buildCancellationError() {
+    return Object.assign(new Error("Route Cancelled"), {
+        cancelled: true
+    });
+}
+function matchesMiddleware(options) {
+    return _matchesMiddleware.apply(this, arguments);
+}
+function _matchesMiddleware() {
+    _matchesMiddleware = _async_to_generator(function*(options) {
+        const matchers = yield Promise.resolve(options.router.pageLoader.getMiddleware());
+        if (!matchers) return false;
+        const { pathname: asPathname  } = _parsePath.parsePath(options.asPath);
+        // remove basePath first since path prefix has to be in the order of `/${basePath}/${locale}`
+        const cleanedAs = _hasBasePath.hasBasePath(asPathname) ? _removeBasePath.removeBasePath(asPathname) : asPathname;
+        const asWithBasePathAndLocale = _addBasePath.addBasePath(_addLocale.addLocale(cleanedAs, options.locale));
+        // Check only path match on client. Matching "has" should be done on server
+        // where we can access more info such as headers, HttpOnly cookie, etc.
+        return matchers.some((m)=>new RegExp(m.regexp).test(asWithBasePathAndLocale));
+    });
+    return _matchesMiddleware.apply(this, arguments);
+}
+function stripOrigin(url) {
+    const origin = _utils.getLocationOrigin();
+    return url.startsWith(origin) ? url.substring(origin.length) : url;
+}
+function omit(object, keys) {
+    const omitted = {};
+    Object.keys(object).forEach((key)=>{
+        if (!keys.includes(key)) omitted[key] = object[key];
+    });
+    return omitted;
+}
+function isLocalURL(url) {
+    // prevent a hydration mismatch on href for url with anchor refs
+    if (!_utils.isAbsoluteUrl(url)) return true;
+    try {
+        // absolute urls can be local if they are on the same origin
+        const locationOrigin = _utils.getLocationOrigin();
+        const resolved = new URL(url, locationOrigin);
+        return resolved.origin === locationOrigin && _hasBasePath.hasBasePath(resolved.pathname);
+    } catch (_) {
+        return false;
+    }
+}
+function interpolateAs(route, asPathname, query) {
+    let interpolatedRoute = "";
+    const dynamicRegex = _routeRegex.getRouteRegex(route);
+    const dynamicGroups = dynamicRegex.groups;
+    const dynamicMatches = (asPathname !== route ? _routeMatcher.getRouteMatcher(dynamicRegex)(asPathname) : "") || // TODO: should this take priority; also need to change in the router.
+    query;
+    interpolatedRoute = route;
+    const params = Object.keys(dynamicGroups);
+    if (!params.every((param)=>{
+        let value = dynamicMatches[param] || "";
+        const { repeat , optional  } = dynamicGroups[param];
+        // support single-level catch-all
+        // TODO: more robust handling for user-error (passing `/`)
+        let replaced = `[${repeat ? "..." : ""}${param}]`;
+        if (optional) replaced = `${!value ? "/" : ""}[${replaced}]`;
+        if (repeat && !Array.isArray(value)) value = [
+            value
+        ];
+        return (optional || param in dynamicMatches) && (interpolatedRoute = interpolatedRoute.replace(replaced, repeat ? value.map(// path delimiter escaped since they are being inserted
+        // into the URL and we expect URL encoded segments
+        // when parsing dynamic route params
+        (segment)=>encodeURIComponent(segment)).join("/") : encodeURIComponent(value)) || "/");
+    })) interpolatedRoute = "" // did not satisfy all requirements
+    ;
+    return {
+        params,
+        result: interpolatedRoute
+    };
+}
+function resolveHref(router, href, resolveAs) {
+    // we use a dummy base url for relative urls
+    let base;
+    let urlAsString = typeof href === "string" ? href : _formatUrl.formatWithValidation(href);
+    // repeated slashes and backslashes in the URL are considered
+    // invalid and will never match a Next.js page/file
+    const urlProtoMatch = urlAsString.match(/^[a-zA-Z]{1,}:\/\//);
+    const urlAsStringNoProto = urlProtoMatch ? urlAsString.slice(urlProtoMatch[0].length) : urlAsString;
+    const urlParts = urlAsStringNoProto.split("?");
+    if ((urlParts[0] || "").match(/(\/\/|\\)/)) {
+        console.error(`Invalid href passed to next/router: ${urlAsString}, repeated forward-slashes (//) or backslashes \\ are not valid in the href`);
+        const normalizedUrl = _utils.normalizeRepeatedSlashes(urlAsStringNoProto);
+        urlAsString = (urlProtoMatch ? urlProtoMatch[0] : "") + normalizedUrl;
+    }
+    // Return because it cannot be routed by the Next.js router
+    if (!isLocalURL(urlAsString)) return resolveAs ? [
+        urlAsString
+    ] : urlAsString;
+    try {
+        base = new URL(urlAsString.startsWith("#") ? router.asPath : router.pathname, "http://n");
+    } catch (_) {
+        // fallback to / for invalid asPath values e.g. //
+        base = new URL("/", "http://n");
+    }
+    try {
+        const finalUrl = new URL(urlAsString, base);
+        finalUrl.pathname = _normalizeTrailingSlash.normalizePathTrailingSlash(finalUrl.pathname);
+        let interpolatedAs = "";
+        if (_isDynamic.isDynamicRoute(finalUrl.pathname) && finalUrl.searchParams && resolveAs) {
+            const query = _querystring.searchParamsToUrlQuery(finalUrl.searchParams);
+            const { result , params  } = interpolateAs(finalUrl.pathname, finalUrl.pathname, query);
+            if (result) interpolatedAs = _formatUrl.formatWithValidation({
+                pathname: result,
+                hash: finalUrl.hash,
+                query: omit(query, params)
+            });
+        }
+        // if the origin didn't change, it means we received a relative href
+        const resolvedHref = finalUrl.origin === base.origin ? finalUrl.href.slice(finalUrl.origin.length) : finalUrl.href;
+        return resolveAs ? [
+            resolvedHref,
+            interpolatedAs || resolvedHref
+        ] : resolvedHref;
+    } catch (_1) {
+        return resolveAs ? [
+            urlAsString
+        ] : urlAsString;
+    }
+}
+function prepareUrlAs(router, url, as) {
+    // If url and as provided as an object representation,
+    // we'll format them into the string version here.
+    let [resolvedHref, resolvedAs] = resolveHref(router, url, true);
+    const origin = _utils.getLocationOrigin();
+    const hrefHadOrigin = resolvedHref.startsWith(origin);
+    const asHadOrigin = resolvedAs && resolvedAs.startsWith(origin);
+    resolvedHref = stripOrigin(resolvedHref);
+    resolvedAs = resolvedAs ? stripOrigin(resolvedAs) : resolvedAs;
+    const preparedUrl = hrefHadOrigin ? resolvedHref : _addBasePath.addBasePath(resolvedHref);
+    const preparedAs = as ? stripOrigin(resolveHref(router, as)) : resolvedAs || resolvedHref;
+    return {
+        url: preparedUrl,
+        as: asHadOrigin ? preparedAs : _addBasePath.addBasePath(preparedAs)
+    };
+}
+function resolveDynamicRoute(pathname, pages) {
+    const cleanPathname = _removeTrailingSlash.removeTrailingSlash(_denormalizePagePath.denormalizePagePath(pathname));
+    if (cleanPathname === "/404" || cleanPathname === "/_error") return pathname;
+    // handle resolving href for dynamic routes
+    if (!pages.includes(cleanPathname)) // eslint-disable-next-line array-callback-return
+    pages.some((page)=>{
+        if (_isDynamic.isDynamicRoute(page) && _routeRegex.getRouteRegex(page).re.test(cleanPathname)) {
+            pathname = page;
+            return true;
+        }
+    });
+    return _removeTrailingSlash.removeTrailingSlash(pathname);
+}
+function getMiddlewareData(source, response, options) {
+    const nextConfig = {
+        basePath: options.router.basePath,
+        i18n: {
+            locales: options.router.locales
+        },
+        trailingSlash: Boolean(undefined)
+    };
+    const rewriteHeader = response.headers.get("x-nextjs-rewrite");
+    let rewriteTarget = rewriteHeader || response.headers.get("x-nextjs-matched-path");
+    const matchedPath = response.headers.get("x-matched-path");
+    if (matchedPath && !rewriteTarget && !matchedPath.includes("__next_data_catchall") && !matchedPath.includes("/_error") && !matchedPath.includes("/404")) // leverage x-matched-path to detect next.config.js rewrites
+    rewriteTarget = matchedPath;
+    if (rewriteTarget) {
+        if (rewriteTarget.startsWith("/")) {
+            const parsedRewriteTarget = _parseRelativeUrl.parseRelativeUrl(rewriteTarget);
+            const pathnameInfo = _getNextPathnameInfo.getNextPathnameInfo(parsedRewriteTarget.pathname, {
+                nextConfig,
+                parseData: true
+            });
+            let fsPathname = _removeTrailingSlash.removeTrailingSlash(pathnameInfo.pathname);
+            return Promise.all([
+                options.router.pageLoader.getPageList(),
+                _routeLoader.getClientBuildManifest(), 
+            ]).then(([pages, { __rewrites: rewrites  }])=>{
+                let as = _addLocale.addLocale(pathnameInfo.pathname, pathnameInfo.locale);
+                if (_isDynamic.isDynamicRoute(as) || !rewriteHeader && pages.includes(_normalizeLocalePath.normalizeLocalePath(_removeBasePath.removeBasePath(as), options.router.locales).pathname)) {
+                    const parsedSource = _getNextPathnameInfo.getNextPathnameInfo(_parseRelativeUrl.parseRelativeUrl(source).pathname, {
+                        parseData: true
+                    });
+                    as = _addBasePath.addBasePath(parsedSource.pathname);
+                    parsedRewriteTarget.pathname = as;
+                }
+                if (!pages.includes(fsPathname)) {
+                    const resolvedPathname = resolveDynamicRoute(fsPathname, pages);
+                    if (resolvedPathname !== fsPathname) fsPathname = resolvedPathname;
+                }
+                const resolvedHref = !pages.includes(fsPathname) ? resolveDynamicRoute(_normalizeLocalePath.normalizeLocalePath(_removeBasePath.removeBasePath(parsedRewriteTarget.pathname), options.router.locales).pathname, pages) : fsPathname;
+                if (_isDynamic.isDynamicRoute(resolvedHref)) {
+                    const matches = _routeMatcher.getRouteMatcher(_routeRegex.getRouteRegex(resolvedHref))(as);
+                    Object.assign(parsedRewriteTarget.query, matches || {});
+                }
+                return {
+                    type: "rewrite",
+                    parsedAs: parsedRewriteTarget,
+                    resolvedHref
+                };
+            });
+        }
+        const src = _parsePath.parsePath(source);
+        const pathname = _formatNextPathnameInfo.formatNextPathnameInfo(_extends({}, _getNextPathnameInfo.getNextPathnameInfo(src.pathname, {
+            nextConfig,
+            parseData: true
+        }), {
+            defaultLocale: options.router.defaultLocale,
+            buildId: ""
+        }));
+        return Promise.resolve({
+            type: "redirect-external",
+            destination: `${pathname}${src.query}${src.hash}`
+        });
+    }
+    const redirectTarget = response.headers.get("x-nextjs-redirect");
+    if (redirectTarget) {
+        if (redirectTarget.startsWith("/")) {
+            const src1 = _parsePath.parsePath(redirectTarget);
+            const pathname1 = _formatNextPathnameInfo.formatNextPathnameInfo(_extends({}, _getNextPathnameInfo.getNextPathnameInfo(src1.pathname, {
+                nextConfig,
+                parseData: true
+            }), {
+                defaultLocale: options.router.defaultLocale,
+                buildId: ""
+            }));
+            return Promise.resolve({
+                type: "redirect-internal",
+                newAs: `${pathname1}${src1.query}${src1.hash}`,
+                newUrl: `${pathname1}${src1.query}${src1.hash}`
+            });
+        }
+        return Promise.resolve({
+            type: "redirect-external",
+            destination: redirectTarget
+        });
+    }
+    return Promise.resolve({
+        type: "next"
+    });
+}
+function withMiddlewareEffects(options) {
+    return matchesMiddleware(options).then((matches)=>{
+        if (matches && options.fetchData) return options.fetchData().then((data)=>getMiddlewareData(data.dataHref, data.response, options).then((effect)=>({
+                    dataHref: data.dataHref,
+                    cacheKey: data.cacheKey,
+                    json: data.json,
+                    response: data.response,
+                    text: data.text,
+                    effect
+                }))).catch((_err)=>{
+            /**
+           * TODO: Revisit this in the future.
+           * For now we will not consider middleware data errors to be fatal.
+           * maybe we should revisit in the future.
+           */ return null;
+        });
+        return null;
+    });
+}
+const manualScrollRestoration = undefined;
+const SSG_DATA_NOT_FOUND = Symbol("SSG_DATA_NOT_FOUND");
+function fetchRetry(url, attempts, options) {
+    return fetch(url, {
+        // Cookies are required to be present for Next.js' SSG "Preview Mode".
+        // Cookies may also be required for `getServerSideProps`.
+        //
+        // > `fetch` won’t send cookies, unless you set the credentials init
+        // > option.
+        // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+        //
+        // > For maximum browser compatibility when it comes to sending &
+        // > receiving cookies, always supply the `credentials: 'same-origin'`
+        // > option instead of relying on the default.
+        // https://github.com/github/fetch#caveats
+        credentials: "same-origin",
+        method: options.method || "GET",
+        headers: Object.assign({}, options.headers, {
+            "x-nextjs-data": "1"
+        })
+    }).then((response)=>{
+        return !response.ok && attempts > 1 && response.status >= 500 ? fetchRetry(url, attempts - 1, options) : response;
+    });
+}
+const backgroundCache = {};
+function handleSmoothScroll(fn) {
+    const htmlElement = document.documentElement;
+    const existing = htmlElement.style.scrollBehavior;
+    htmlElement.style.scrollBehavior = "auto";
+    fn();
+    htmlElement.style.scrollBehavior = existing;
+}
+function tryToParseAsJSON(text) {
+    try {
+        return JSON.parse(text);
+    } catch (error) {
+        return null;
+    }
+}
+function fetchNextData({ dataHref , inflightCache , isPrefetch , hasMiddleware , isServerRender , parseJSON , persistCache , isBackground , unstable_skipClientCache  }) {
+    const { href: cacheKey  } = new URL(dataHref, window.location.href);
+    var ref1;
+    const getData = (params)=>{
+        return fetchRetry(dataHref, isServerRender ? 3 : 1, {
+            headers: isPrefetch ? {
+                purpose: "prefetch"
+            } : {},
+            method: (ref1 = params == null ? void 0 : params.method) != null ? ref1 : "GET"
+        }).then((response)=>{
+            if (response.ok && (params == null ? void 0 : params.method) === "HEAD") return {
+                dataHref,
+                response,
+                text: "",
+                json: {},
+                cacheKey
+            };
+            return response.text().then((text)=>{
+                if (!response.ok) {
+                    /**
+             * When the data response is a redirect because of a middleware
+             * we do not consider it an error. The headers must bring the
+             * mapped location.
+             * TODO: Change the status code in the handler.
+             */ if (hasMiddleware && [
+                        301,
+                        302,
+                        307,
+                        308
+                    ].includes(response.status)) return {
+                        dataHref,
+                        response,
+                        text,
+                        json: {},
+                        cacheKey
+                    };
+                    if (!hasMiddleware && response.status === 404) {
+                        var ref;
+                        if ((ref = tryToParseAsJSON(text)) == null ? void 0 : ref.notFound) return {
+                            dataHref,
+                            json: {
+                                notFound: SSG_DATA_NOT_FOUND
+                            },
+                            response,
+                            text,
+                            cacheKey
+                        };
+                    }
+                    const error = new Error(`Failed to load static props`);
+                    /**
+             * We should only trigger a server-side transition if this was
+             * caused on a client-side transition. Otherwise, we'd get into
+             * an infinite loop.
+             */ if (!isServerRender) _routeLoader.markAssetError(error);
+                    throw error;
+                }
+                return {
+                    dataHref,
+                    json: parseJSON ? tryToParseAsJSON(text) : null,
+                    response,
+                    text,
+                    cacheKey
+                };
+            });
+        }).then((data)=>{
+            delete inflightCache[cacheKey];
+            return data;
+        }).catch((err)=>{
+            delete inflightCache[cacheKey];
+            throw err;
+        });
+    };
+    // when skipping client cache we wait to update
+    // inflight cache until successful data response
+    // this allows racing click event with fetching newer data
+    // without blocking navigation when stale data is available
+    if (unstable_skipClientCache && persistCache) return getData({}).then((data)=>{
+        inflightCache[cacheKey] = Promise.resolve(data);
+        return data;
+    });
+    if (inflightCache[cacheKey] !== undefined) return inflightCache[cacheKey];
+    return inflightCache[cacheKey] = getData(isBackground ? {
+        method: "HEAD"
+    } : {});
+}
+function createKey() {
+    return Math.random().toString(36).slice(2, 10);
+}
+function handleHardNavigation({ url , router  }) {
+    // ensure we don't trigger a hard navigation to the same
+    // URL as this can end up with an infinite refresh
+    if (url === _addBasePath.addBasePath(_addLocale.addLocale(router.asPath, router.locale))) throw new Error(`Invariant: attempted to hard navigate to the same URL ${url} ${location.href}`);
+    window.location.href = url;
+}
+const getCancelledHandler = ({ route , router  })=>{
+    let cancelled = false;
+    const cancel = router.clc = ()=>{
+        cancelled = true;
+    };
+    const handleCancelled = ()=>{
+        if (cancelled) {
+            const error = new Error(`Abort fetching component for route: "${route}"`);
+            error.cancelled = true;
+            throw error;
+        }
+        if (cancel === router.clc) router.clc = null;
+    };
+    return handleCancelled;
+};
+class Router {
+    reload() {
+        window.location.reload();
+    }
+    /**
+   * Go back in history
+   */ back() {
+        window.history.back();
+    }
+    /**
+   * Performs a `pushState` with arguments
+   * @param url of the route
+   * @param as masks `url` for the browser
+   * @param options object you can define `shallow` and other options
+   */ push(url, as, options = {}) {
+        var e;
+        ({ url , as  } = prepareUrlAs(this, url, as));
+        return this.change("pushState", url, as, options);
+    }
+    /**
+   * Performs a `replaceState` with arguments
+   * @param url of the route
+   * @param as masks `url` for the browser
+   * @param options object you can define `shallow` and other options
+   */ replace(url, as, options = {}) {
+        ({ url , as  } = prepareUrlAs(this, url, as));
+        return this.change("replaceState", url, as, options);
+    }
+    change(method, url, as, options, forcedScroll) {
+        var _this = this;
+        return _async_to_generator(function*() {
+            if (!isLocalURL(url)) {
+                handleHardNavigation({
+                    url,
+                    router: _this
+                });
+                return false;
+            }
+            // WARNING: `_h` is an internal option for handing Next.js client-side
+            // hydration. Your app should _never_ use this property. It may change at
+            // any time without notice.
+            const isQueryUpdating = options._h;
+            const shouldResolveHref = isQueryUpdating || options._shouldResolveHref || _parsePath.parsePath(url).pathname === _parsePath.parsePath(as).pathname;
+            const nextState = _extends({}, _this.state);
+            // for static pages with query params in the URL we delay
+            // marking the router ready until after the query is updated
+            // or a navigation has occurred
+            const readyStateChange = _this.isReady !== true;
+            _this.isReady = true;
+            const isSsr = _this.isSsr;
+            if (!isQueryUpdating) _this.isSsr = false;
+            // if a route transition is already in progress before
+            // the query updating is triggered ignore query updating
+            if (isQueryUpdating && _this.clc) return false;
+            const prevLocale = nextState.locale;
+            var ref;
+            // marking route changes as a navigation start entry
+            if (_utils.ST) performance.mark("routeChange");
+            const { shallow =false , scroll =true  } = options;
+            const routeProps = {
+                shallow
+            };
+            if (_this._inFlightRoute && _this.clc) {
+                if (!isSsr) Router.events.emit("routeChangeError", buildCancellationError(), _this._inFlightRoute, routeProps);
+                _this.clc();
+                _this.clc = null;
+            }
+            as = _addBasePath.addBasePath(_addLocale.addLocale(_hasBasePath.hasBasePath(as) ? _removeBasePath.removeBasePath(as) : as, options.locale, _this.defaultLocale));
+            const cleanedAs = _removeLocale.removeLocale(_hasBasePath.hasBasePath(as) ? _removeBasePath.removeBasePath(as) : as, nextState.locale);
+            _this._inFlightRoute = as;
+            const localeChange = prevLocale !== nextState.locale;
+            // If the url change is only related to a hash change
+            // We should not proceed. We should only change the state.
+            if (!isQueryUpdating && _this.onlyAHashChange(cleanedAs) && !localeChange) {
+                nextState.asPath = cleanedAs;
+                Router.events.emit("hashChangeStart", as, routeProps);
+                // TODO: do we need the resolved href when only a hash change?
+                _this.changeState(method, url, as, _extends({}, options, {
+                    scroll: false
+                }));
+                if (scroll) _this.scrollToHash(cleanedAs);
+                try {
+                    yield _this.set(nextState, _this.components[nextState.route], null);
+                } catch (err) {
+                    if (_isError.default(err) && err.cancelled) Router.events.emit("routeChangeError", err, cleanedAs, routeProps);
+                    throw err;
+                }
+                Router.events.emit("hashChangeComplete", as, routeProps);
+                return true;
+            }
+            let parsed = _parseRelativeUrl.parseRelativeUrl(url);
+            let { pathname , query  } = parsed;
+            // The build manifest needs to be loaded before auto-static dynamic pages
+            // get their query parameters to allow ensuring they can be parsed properly
+            // when rewritten to
+            let pages, rewrites;
+            try {
+                [pages, { __rewrites: rewrites  }] = yield Promise.all([
+                    _this.pageLoader.getPageList(),
+                    _routeLoader.getClientBuildManifest(),
+                    _this.pageLoader.getMiddleware(), 
+                ]);
+            } catch (err1) {
+                // If we fail to resolve the page list or client-build manifest, we must
+                // do a server-side transition:
+                handleHardNavigation({
+                    url: as,
+                    router: _this
+                });
+                return false;
+            }
+            // If asked to change the current URL we should reload the current page
+            // (not location.reload() but reload getInitialProps and other Next.js stuffs)
+            // We also need to set the method = replaceState always
+            // as this should not go into the history (That's how browsers work)
+            // We should compare the new asPath to the current asPath, not the url
+            if (!_this.urlIsNew(cleanedAs) && !localeChange) method = "replaceState";
+            // we need to resolve the as value using rewrites for dynamic SSG
+            // pages to allow building the data URL correctly
+            let resolvedAs = as;
+            // url and as should always be prefixed with basePath by this
+            // point by either next/link or router.push/replace so strip the
+            // basePath from the pathname to match the pages dir 1-to-1
+            pathname = pathname ? _removeTrailingSlash.removeTrailingSlash(_removeBasePath.removeBasePath(pathname)) : pathname;
+            // we don't attempt resolve asPath when we need to execute
+            // middleware as the resolving will occur server-side
+            const isMiddlewareMatch = yield matchesMiddleware({
+                asPath: as,
+                locale: nextState.locale,
+                router: _this
+            });
+            if (options.shallow && isMiddlewareMatch) pathname = _this.pathname;
+            if (shouldResolveHref && pathname !== "/_error") {
+                options._shouldResolveHref = true;
+                parsed.pathname = resolveDynamicRoute(pathname, pages);
+                if (parsed.pathname !== pathname) {
+                    pathname = parsed.pathname;
+                    parsed.pathname = _addBasePath.addBasePath(pathname);
+                    if (!isMiddlewareMatch) url = _formatUrl.formatWithValidation(parsed);
+                }
+            }
+            if (!isLocalURL(as)) throw new Error(`Invalid href: "${url}" and as: "${as}", received relative href and external as` + `\nSee more info: https://nextjs.org/docs/messages/invalid-relative-url-external-as`);
+            resolvedAs = _removeLocale.removeLocale(_removeBasePath.removeBasePath(resolvedAs), nextState.locale);
+            let route = _removeTrailingSlash.removeTrailingSlash(pathname);
+            let routeMatch = false;
+            if (_isDynamic.isDynamicRoute(route)) {
+                const parsedAs = _parseRelativeUrl.parseRelativeUrl(resolvedAs);
+                const asPathname = parsedAs.pathname;
+                const routeRegex = _routeRegex.getRouteRegex(route);
+                routeMatch = _routeMatcher.getRouteMatcher(routeRegex)(asPathname);
+                const shouldInterpolate = route === asPathname;
+                const interpolatedAs = shouldInterpolate ? interpolateAs(route, asPathname, query) : {};
+                if (!routeMatch || shouldInterpolate && !interpolatedAs.result) {
+                    const missingParams = Object.keys(routeRegex.groups).filter((param)=>!query[param]);
+                    if (missingParams.length > 0 && !isMiddlewareMatch) {
+                        console.warn(`${shouldInterpolate ? `Interpolating href` : `Mismatching \`as\` and \`href\``} failed to manually provide ` + `the params: ${missingParams.join(", ")} in the \`href\`'s \`query\``);
+                        throw new Error((shouldInterpolate ? `The provided \`href\` (${url}) value is missing query values (${missingParams.join(", ")}) to be interpolated properly. ` : `The provided \`as\` value (${asPathname}) is incompatible with the \`href\` value (${route}). `) + `Read more: https://nextjs.org/docs/messages/${shouldInterpolate ? "href-interpolation-failed" : "incompatible-href-as"}`);
+                    }
+                } else if (shouldInterpolate) as = _formatUrl.formatWithValidation(Object.assign({}, parsedAs, {
+                    pathname: interpolatedAs.result,
+                    query: omit(query, interpolatedAs.params)
+                }));
+                else // Merge params into `query`, overwriting any specified in search
+                Object.assign(query, routeMatch);
+            }
+            if (!isQueryUpdating) Router.events.emit("routeChangeStart", as, routeProps);
+            try {
+                var ref2, ref3;
+                let routeInfo = yield _this.getRouteInfo({
+                    route,
+                    pathname,
+                    query,
+                    as,
+                    resolvedAs,
+                    routeProps,
+                    locale: nextState.locale,
+                    isPreview: nextState.isPreview,
+                    hasMiddleware: isMiddlewareMatch
+                });
+                if ("route" in routeInfo && isMiddlewareMatch) {
+                    pathname = routeInfo.route || route;
+                    route = pathname;
+                    if (!routeProps.shallow) query = Object.assign({}, routeInfo.query || {}, query);
+                    const cleanedParsedPathname = _hasBasePath.hasBasePath(parsed.pathname) ? _removeBasePath.removeBasePath(parsed.pathname) : parsed.pathname;
+                    if (routeMatch && pathname !== cleanedParsedPathname) Object.keys(routeMatch).forEach((key)=>{
+                        if (routeMatch && query[key] === routeMatch[key]) delete query[key];
+                    });
+                    if (_isDynamic.isDynamicRoute(pathname)) {
+                        const prefixedAs = !routeProps.shallow && routeInfo.resolvedAs ? routeInfo.resolvedAs : _addBasePath.addBasePath(_addLocale.addLocale(new URL(as, location.href).pathname, nextState.locale), true);
+                        let rewriteAs = prefixedAs;
+                        if (_hasBasePath.hasBasePath(rewriteAs)) rewriteAs = _removeBasePath.removeBasePath(rewriteAs);
+                        const routeRegex1 = _routeRegex.getRouteRegex(pathname);
+                        const curRouteMatch = _routeMatcher.getRouteMatcher(routeRegex1)(rewriteAs);
+                        if (curRouteMatch) Object.assign(query, curRouteMatch);
+                    }
+                }
+                // If the routeInfo brings a redirect we simply apply it.
+                if ("type" in routeInfo) {
+                    if (routeInfo.type === "redirect-internal") return _this.change(method, routeInfo.newUrl, routeInfo.newAs, options);
+                    else {
+                        handleHardNavigation({
+                            url: routeInfo.destination,
+                            router: _this
+                        });
+                        return new Promise(()=>{});
+                    }
+                }
+                let { error , props , __N_SSG , __N_SSP  } = routeInfo;
+                const component = routeInfo.Component;
+                if (component && component.unstable_scriptLoader) {
+                    const scripts = [].concat(component.unstable_scriptLoader());
+                    scripts.forEach((script)=>{
+                        _script.handleClientScriptLoad(script.props);
+                    });
+                }
+                // handle redirect on client-transition
+                if ((__N_SSG || __N_SSP) && props) {
+                    if (props.pageProps && props.pageProps.__N_REDIRECT) {
+                        // Use the destination from redirect without adding locale
+                        options.locale = false;
+                        const destination = props.pageProps.__N_REDIRECT;
+                        // check if destination is internal (resolves to a page) and attempt
+                        // client-navigation if it is falling back to hard navigation if
+                        // it's not
+                        if (destination.startsWith("/") && props.pageProps.__N_REDIRECT_BASE_PATH !== false) {
+                            const parsedHref = _parseRelativeUrl.parseRelativeUrl(destination);
+                            parsedHref.pathname = resolveDynamicRoute(parsedHref.pathname, pages);
+                            const { url: newUrl , as: newAs  } = prepareUrlAs(_this, destination, destination);
+                            return _this.change(method, newUrl, newAs, options);
+                        }
+                        handleHardNavigation({
+                            url: destination,
+                            router: _this
+                        });
+                        return new Promise(()=>{});
+                    }
+                    nextState.isPreview = !!props.__N_PREVIEW;
+                    // handle SSG data 404
+                    if (props.notFound === SSG_DATA_NOT_FOUND) {
+                        let notFoundRoute;
+                        try {
+                            yield _this.fetchComponent("/404");
+                            notFoundRoute = "/404";
+                        } catch (_) {
+                            notFoundRoute = "/_error";
+                        }
+                        routeInfo = yield _this.getRouteInfo({
+                            route: notFoundRoute,
+                            pathname: notFoundRoute,
+                            query,
+                            as,
+                            resolvedAs,
+                            routeProps: {
+                                shallow: false
+                            },
+                            locale: nextState.locale,
+                            isPreview: nextState.isPreview
+                        });
+                        if ("type" in routeInfo) throw new Error(`Unexpected middleware effect on /404`);
+                    }
+                }
+                Router.events.emit("beforeHistoryChange", as, routeProps);
+                _this.changeState(method, url, as, options);
+                if (isQueryUpdating && pathname === "/_error" && ((ref2 = self.__NEXT_DATA__.props) == null ? void 0 : (ref3 = ref2.pageProps) == null ? void 0 : ref3.statusCode) === 500 && (props == null ? void 0 : props.pageProps)) // ensure statusCode is still correct for static 500 page
+                // when updating query information
+                props.pageProps.statusCode = 500;
+                var _route;
+                // shallow routing is only allowed for same page URL changes.
+                const isValidShallowRoute = options.shallow && nextState.route === ((_route = routeInfo.route) != null ? _route : route);
+                var _scroll;
+                const shouldScroll = (_scroll = options.scroll) != null ? _scroll : !options._h && !isValidShallowRoute;
+                const resetScroll = shouldScroll ? {
+                    x: 0,
+                    y: 0
+                } : null;
+                // the new state that the router gonna set
+                const upcomingRouterState = _extends({}, nextState, {
+                    route,
+                    pathname,
+                    query,
+                    asPath: cleanedAs,
+                    isFallback: false
+                });
+                const upcomingScrollState = forcedScroll != null ? forcedScroll : resetScroll;
+                // for query updates we can skip it if the state is unchanged and we don't
+                // need to scroll
+                // https://github.com/vercel/next.js/issues/37139
+                const canSkipUpdating = options._h && !upcomingScrollState && !readyStateChange && !localeChange && _compareStates.compareRouterStates(upcomingRouterState, _this.state);
+                if (!canSkipUpdating) {
+                    yield _this.set(upcomingRouterState, routeInfo, upcomingScrollState).catch((e)=>{
+                        if (e.cancelled) error = error || e;
+                        else throw e;
+                    });
+                    if (error) {
+                        if (!isQueryUpdating) Router.events.emit("routeChangeError", error, cleanedAs, routeProps);
+                        throw error;
+                    }
+                    if (!isQueryUpdating) Router.events.emit("routeChangeComplete", as, routeProps);
+                    // A hash mark # is the optional last part of a URL
+                    const hashRegex = /#.+$/;
+                    if (shouldScroll && hashRegex.test(as)) _this.scrollToHash(as);
+                }
+                return true;
+            } catch (err11) {
+                if (_isError.default(err11) && err11.cancelled) return false;
+                throw err11;
+            }
+        })();
+    }
+    changeState(method, url, as, options = {}) {
+        if (typeof window.history === "undefined") {
+            console.error(`Warning: window.history is not available.`);
+            return;
+        }
+        if (typeof window.history[method] === "undefined") {
+            console.error(`Warning: window.history.${method} is not available`);
+            return;
+        }
+        if (method !== "pushState" || _utils.getURL() !== as) {
+            this._shallow = options.shallow;
+            window.history[method]({
+                url,
+                as,
+                options,
+                __N: true,
+                key: this._key = method !== "pushState" ? this._key : createKey()
+            }, // Passing the empty string here should be safe against future changes to the method.
+            // https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState
+            "", as);
+        }
+    }
+    handleRouteInfoError(err, pathname, query, as, routeProps, loadErrorFail) {
+        var _this = this;
+        return _async_to_generator(function*() {
+            console.error(err);
+            if (err.cancelled) // bubble up cancellation errors
+            throw err;
+            if (_routeLoader.isAssetError(err) || loadErrorFail) {
+                Router.events.emit("routeChangeError", err, as, routeProps);
+                // If we can't load the page it could be one of following reasons
+                //  1. Page doesn't exists
+                //  2. Page does exist in a different zone
+                //  3. Internal error while loading the page
+                // So, doing a hard reload is the proper way to deal with this.
+                handleHardNavigation({
+                    url: as,
+                    router: _this
+                });
+                // Changing the URL doesn't block executing the current code path.
+                // So let's throw a cancellation error stop the routing logic.
+                throw buildCancellationError();
+            }
+            try {
+                let props;
+                const { page: Component , styleSheets  } = yield _this.fetchComponent("/_error");
+                const routeInfo = {
+                    props,
+                    Component,
+                    styleSheets,
+                    err,
+                    error: err
+                };
+                if (!routeInfo.props) try {
+                    routeInfo.props = yield _this.getInitialProps(Component, {
+                        err,
+                        pathname,
+                        query
+                    });
+                } catch (gipErr) {
+                    console.error("Error in error page `getInitialProps`: ", gipErr);
+                    routeInfo.props = {};
+                }
+                return routeInfo;
+            } catch (routeInfoErr) {
+                return _this.handleRouteInfoError(_isError.default(routeInfoErr) ? routeInfoErr : new Error(routeInfoErr + ""), pathname, query, as, routeProps, true);
+            }
+        })();
+    }
+    getRouteInfo({ route: requestedRoute , pathname , query , as , resolvedAs , routeProps , locale , hasMiddleware , isPreview , unstable_skipClientCache  }) {
+        var _this = this;
+        return _async_to_generator(function*() {
+            /**
+     * This `route` binding can change if there's a rewrite
+     * so we keep a reference to the original requested route
+     * so we can store the cache for it and avoid re-requesting every time
+     * for shallow routing purposes.
+     */ let route = requestedRoute;
+            try {
+                var ref, ref4, ref5;
+                const handleCancelled = getCancelledHandler({
+                    route,
+                    router: _this
+                });
+                let existingInfo = _this.components[route];
+                if (routeProps.shallow && existingInfo && _this.route === route) return existingInfo;
+                if (hasMiddleware) existingInfo = undefined;
+                let cachedRouteInfo = undefined;
+                const fetchNextDataParams = {
+                    dataHref: _this.pageLoader.getDataHref({
+                        href: _formatUrl.formatWithValidation({
+                            pathname,
+                            query
+                        }),
+                        skipInterpolation: true,
+                        asPath: resolvedAs,
+                        locale
+                    }),
+                    hasMiddleware: true,
+                    isServerRender: _this.isSsr,
+                    parseJSON: true,
+                    inflightCache: _this.sdc,
+                    persistCache: !isPreview,
+                    isPrefetch: false,
+                    unstable_skipClientCache
+                };
+                const data = yield withMiddlewareEffects({
+                    fetchData: ()=>fetchNextData(fetchNextDataParams),
+                    asPath: resolvedAs,
+                    locale: locale,
+                    router: _this
+                });
+                handleCancelled();
+                if ((data == null ? void 0 : (ref = data.effect) == null ? void 0 : ref.type) === "redirect-internal" || (data == null ? void 0 : (ref4 = data.effect) == null ? void 0 : ref4.type) === "redirect-external") return data.effect;
+                if ((data == null ? void 0 : (ref5 = data.effect) == null ? void 0 : ref5.type) === "rewrite") {
+                    route = _removeTrailingSlash.removeTrailingSlash(data.effect.resolvedHref);
+                    pathname = data.effect.resolvedHref;
+                    query = _extends({}, query, data.effect.parsedAs.query);
+                    resolvedAs = _removeBasePath.removeBasePath(_normalizeLocalePath.normalizeLocalePath(data.effect.parsedAs.pathname, _this.locales).pathname);
+                    // Check again the cache with the new destination.
+                    existingInfo = _this.components[route];
+                    if (routeProps.shallow && existingInfo && _this.route === route && !hasMiddleware) // If we have a match with the current route due to rewrite,
+                    // we can copy the existing information to the rewritten one.
+                    // Then, we return the information along with the matched route.
+                    return _extends({}, existingInfo, {
+                        route
+                    });
+                }
+                if (route === "/api" || route.startsWith("/api/")) {
+                    handleHardNavigation({
+                        url: as,
+                        router: _this
+                    });
+                    return new Promise(()=>{});
+                }
+                const routeInfo = cachedRouteInfo || (yield _this.fetchComponent(route).then((res)=>({
+                        Component: res.page,
+                        styleSheets: res.styleSheets,
+                        __N_SSG: res.mod.__N_SSG,
+                        __N_SSP: res.mod.__N_SSP
+                    })));
+                {
+                    const { isValidElementType  } = require("next/dist/compiled/react-is");
+                    if (!isValidElementType(routeInfo.Component)) throw new Error(`The default export is not a React Component in page: "${pathname}"`);
+                }
+                const shouldFetchData = routeInfo.__N_SSG || routeInfo.__N_SSP;
+                const { props , cacheKey  } = yield _this._getData(_async_to_generator(function*() {
+                    if (shouldFetchData) {
+                        const { json , cacheKey: _cacheKey  } = (data == null ? void 0 : data.json) ? data : yield fetchNextData({
+                            dataHref: _this.pageLoader.getDataHref({
+                                href: _formatUrl.formatWithValidation({
+                                    pathname,
+                                    query
+                                }),
+                                asPath: resolvedAs,
+                                locale
+                            }),
+                            isServerRender: _this.isSsr,
+                            parseJSON: true,
+                            inflightCache: _this.sdc,
+                            persistCache: !isPreview,
+                            isPrefetch: false,
+                            unstable_skipClientCache
+                        });
+                        return {
+                            cacheKey: _cacheKey,
+                            props: json || {}
+                        };
+                    }
+                    return {
+                        headers: {},
+                        cacheKey: "",
+                        props: yield _this.getInitialProps(routeInfo.Component, {
+                            pathname,
+                            query,
+                            asPath: as,
+                            locale,
+                            locales: _this.locales,
+                            defaultLocale: _this.defaultLocale
+                        })
+                    };
+                }));
+                // Only bust the data cache for SSP routes although
+                // middleware can skip cache per request with
+                // x-middleware-cache: no-cache as well
+                if (routeInfo.__N_SSP && fetchNextDataParams.dataHref) delete _this.sdc[cacheKey];
+                !_this.isPreview && routeInfo.__N_SSG;
+                props.pageProps = Object.assign({}, props.pageProps);
+                routeInfo.props = props;
+                routeInfo.route = route;
+                routeInfo.query = query;
+                routeInfo.resolvedAs = resolvedAs;
+                _this.components[route] = routeInfo;
+                return routeInfo;
+            } catch (err) {
+                return _this.handleRouteInfoError(_isError.getProperError(err), pathname, query, as, routeProps);
+            }
+        })();
+    }
+    set(state, data, resetScroll) {
+        this.state = state;
+        return this.sub(data, this.components["/_app"].Component, resetScroll);
+    }
+    /**
+   * Callback to execute before replacing router state
+   * @param cb callback to be executed
+   */ beforePopState(cb) {
+        this._bps = cb;
+    }
+    onlyAHashChange(as) {
+        if (!this.asPath) return false;
+        const [oldUrlNoHash, oldHash] = this.asPath.split("#");
+        const [newUrlNoHash, newHash] = as.split("#");
+        // Makes sure we scroll to the provided hash if the url/hash are the same
+        if (newHash && oldUrlNoHash === newUrlNoHash && oldHash === newHash) return true;
+        // If the urls are change, there's more than a hash change
+        if (oldUrlNoHash !== newUrlNoHash) return false;
+        // If the hash has changed, then it's a hash only change.
+        // This check is necessary to handle both the enter and
+        // leave hash === '' cases. The identity case falls through
+        // and is treated as a next reload.
+        return oldHash !== newHash;
+    }
+    scrollToHash(as) {
+        const [, hash = ""] = as.split("#");
+        // Scroll to top if the hash is just `#` with no value or `#top`
+        // To mirror browsers
+        if (hash === "" || hash === "top") {
+            handleSmoothScroll(()=>window.scrollTo(0, 0));
+            return;
+        }
+        // Decode hash to make non-latin anchor works.
+        const rawHash = decodeURIComponent(hash);
+        // First we check if the element by id is found
+        const idEl = document.getElementById(rawHash);
+        if (idEl) {
+            handleSmoothScroll(()=>idEl.scrollIntoView());
+            return;
+        }
+        // If there's no element with the id, we check the `name` property
+        // To mirror browsers
+        const nameEl = document.getElementsByName(rawHash)[0];
+        if (nameEl) handleSmoothScroll(()=>nameEl.scrollIntoView());
+    }
+    urlIsNew(asPath) {
+        return this.asPath !== asPath;
+    }
+    /**
+   * Prefetch page code, you may wait for the data during page rendering.
+   * This feature only works in production!
+   * @param url the href of prefetched page
+   * @param asPath the as path of the prefetched page
+   */ prefetch(url, asPath = url, options = {}) {
+        var _this = this;
+        return _async_to_generator(function*() {
+            if (typeof window !== "undefined" && _isBot.isBot(window.navigator.userAgent)) // No prefetches for bots that render the link since they are typically navigating
+            // links via the equivalent of a hard navigation and hence never utilize these
+            // prefetches.
+            return;
+            let parsed = _parseRelativeUrl.parseRelativeUrl(url);
+            let { pathname , query  } = parsed;
+            const pages = yield _this.pageLoader.getPageList();
+            let resolvedAs = asPath;
+            const locale = typeof options.locale !== "undefined" ? options.locale || undefined : _this.locale;
+            parsed.pathname = resolveDynamicRoute(parsed.pathname, pages);
+            if (_isDynamic.isDynamicRoute(parsed.pathname)) {
+                pathname = parsed.pathname;
+                parsed.pathname = pathname;
+                Object.assign(query, _routeMatcher.getRouteMatcher(_routeRegex.getRouteRegex(parsed.pathname))(_parsePath.parsePath(asPath).pathname) || {});
+                url = _formatUrl.formatWithValidation(parsed);
+            }
+            var isSsg;
+            return;
+        })();
+    }
+    fetchComponent(route) {
+        var _this = this;
+        return _async_to_generator(function*() {
+            const handleCancelled = getCancelledHandler({
+                route,
+                router: _this
+            });
+            try {
+                const componentResult = yield _this.pageLoader.loadPage(route);
+                handleCancelled();
+                return componentResult;
+            } catch (err) {
+                handleCancelled();
+                throw err;
+            }
+        })();
+    }
+    _getData(fn) {
+        let cancelled = false;
+        const cancel = ()=>{
+            cancelled = true;
+        };
+        this.clc = cancel;
+        return fn().then((data)=>{
+            if (cancel === this.clc) this.clc = null;
+            if (cancelled) {
+                const err = new Error("Loading initial props cancelled");
+                err.cancelled = true;
+                throw err;
+            }
+            return data;
+        });
+    }
+    _getFlightData(dataHref) {
+        // Do not cache RSC flight response since it's not a static resource
+        return fetchNextData({
+            dataHref,
+            isServerRender: true,
+            parseJSON: false,
+            inflightCache: this.sdc,
+            persistCache: false,
+            isPrefetch: false
+        }).then(({ text  })=>({
+                data: text
+            }));
+    }
+    getInitialProps(Component, ctx) {
+        const { Component: App  } = this.components["/_app"];
+        const AppTree = this._wrapApp(App);
+        ctx.AppTree = AppTree;
+        return _utils.loadGetInitialProps(App, {
+            AppTree,
+            Component,
+            router: this,
+            ctx
+        });
+    }
+    get route() {
+        return this.state.route;
+    }
+    get pathname() {
+        return this.state.pathname;
+    }
+    get query() {
+        return this.state.query;
+    }
+    get asPath() {
+        return this.state.asPath;
+    }
+    get locale() {
+        return this.state.locale;
+    }
+    get isFallback() {
+        return this.state.isFallback;
+    }
+    get isPreview() {
+        return this.state.isPreview;
+    }
+    constructor(pathname1, query1, as1, { initialProps , pageLoader , App , wrapApp , Component , err , subscription , isFallback , locale , locales , defaultLocale , domainLocales , isPreview  }){
+        // Server Data Cache
+        this.sdc = {};
+        this.isFirstPopStateEvent = true;
+        this._key = createKey();
+        this.onPopState = (e)=>{
+            const { isFirstPopStateEvent  } = this;
+            this.isFirstPopStateEvent = false;
+            const state = e.state;
+            if (!state) {
+                // We get state as undefined for two reasons.
+                //  1. With older safari (< 8) and older chrome (< 34)
+                //  2. When the URL changed with #
+                //
+                // In the both cases, we don't need to proceed and change the route.
+                // (as it's already changed)
+                // But we can simply replace the state with the new changes.
+                // Actually, for (1) we don't need to nothing. But it's hard to detect that event.
+                // So, doing the following for (1) does no harm.
+                const { pathname , query  } = this;
+                this.changeState("replaceState", _formatUrl.formatWithValidation({
+                    pathname: _addBasePath.addBasePath(pathname),
+                    query
+                }), _utils.getURL());
+                return;
+            }
+            // __NA is used to identify if the history entry can be handled by the app-router.
+            if (state.__NA) {
+                window.location.reload();
+                return;
+            }
+            if (!state.__N) return;
+            // Safari fires popstateevent when reopening the browser.
+            if (isFirstPopStateEvent && this.locale === state.options.locale && state.as === this.asPath) return;
+            let forcedScroll;
+            const { url , as , options , key  } = state;
+            var e1, e11;
+            this._key = key;
+            const { pathname: pathname1  } = _parseRelativeUrl.parseRelativeUrl(url);
+            // Make sure we don't re-render on initial load,
+            // can be caused by navigating back from an external site
+            if (this.isSsr && as === _addBasePath.addBasePath(this.asPath) && pathname1 === _addBasePath.addBasePath(this.pathname)) return;
+            // If the downstream application returns falsy, return.
+            // They will then be responsible for handling the event.
+            if (this._bps && !this._bps(state)) return;
+            this.change("replaceState", url, as, Object.assign({}, options, {
+                shallow: options.shallow && this._shallow,
+                locale: options.locale || this.defaultLocale,
+                // @ts-ignore internal value not exposed on types
+                _h: 0
+            }), forcedScroll);
+        };
+        // represents the current component key
+        const route = _removeTrailingSlash.removeTrailingSlash(pathname1);
+        // set up the component cache (by route keys)
+        this.components = {};
+        // We should not keep the cache, if there's an error
+        // Otherwise, this cause issues when when going back and
+        // come again to the errored page.
+        if (pathname1 !== "/_error") this.components[route] = {
+            Component,
+            initial: true,
+            props: initialProps,
+            err,
+            __N_SSG: initialProps && initialProps.__N_SSG,
+            __N_SSP: initialProps && initialProps.__N_SSP
+        };
+        this.components["/_app"] = {
+            Component: App,
+            styleSheets: []
+        };
+        // Backwards compat for Router.router.events
+        // TODO: Should be remove the following major version as it was never documented
+        this.events = Router.events;
+        this.pageLoader = pageLoader;
+        // if auto prerendered and dynamic route wait to update asPath
+        // until after mount to prevent hydration mismatch
+        const autoExportDynamic = _isDynamic.isDynamicRoute(pathname1) && self.__NEXT_DATA__.autoExport;
+        this.basePath = "";
+        this.sub = subscription;
+        this.clc = null;
+        this._wrapApp = wrapApp;
+        // make sure to ignore extra popState in safari on navigating
+        // back from external site
+        this.isSsr = true;
+        this.isLocaleDomain = false;
+        this.isReady = !!(self.__NEXT_DATA__.gssp || self.__NEXT_DATA__.gip || self.__NEXT_DATA__.appGip && !self.__NEXT_DATA__.gsp || !autoExportDynamic && !self.location.search && true);
+        this.state = {
+            route,
+            pathname: pathname1,
+            query: query1,
+            asPath: autoExportDynamic ? pathname1 : as1,
+            isPreview: !!isPreview,
+            locale: undefined,
+            isFallback
+        };
+        this._initialMatchesMiddlewarePromise = Promise.resolve(false);
+        if (typeof window !== "undefined") {
+            // make sure "as" doesn't start with double slashes or else it can
+            // throw an error as it's considered invalid
+            if (!as1.startsWith("//")) {
+                // in order for `e.state` to work on the `onpopstate` event
+                // we have to register the initial route upon initialization
+                const options = {
+                    locale
+                };
+                const asPath = _utils.getURL();
+                this._initialMatchesMiddlewarePromise = matchesMiddleware({
+                    router: this,
+                    locale,
+                    asPath
+                }).then((matches)=>{
+                    options._shouldResolveHref = as1 !== pathname1;
+                    this.changeState("replaceState", matches ? asPath : _formatUrl.formatWithValidation({
+                        pathname: _addBasePath.addBasePath(pathname1),
+                        query: query1
+                    }), asPath, options);
+                    return matches;
+                });
+            }
+            window.addEventListener("popstate", this.onPopState);
+        }
+    }
+}
+Router.events = _mitt.default();
+exports.default = Router;
+
+},{"@swc/helpers/lib/_async_to_generator.js":"687bf","@swc/helpers/lib/_extends.js":"4vU6g","@swc/helpers/lib/_interop_require_default.js":"k1iFV","@swc/helpers/lib/_interop_require_wildcard.js":"frrjo","../../../client/normalize-trailing-slash":"a5Qce","./utils/remove-trailing-slash":"ltEax","../../../client/route-loader":"i5Qrh","../../../client/script":"58Hib","../../../lib/is-error":"6h17E","../page-path/denormalize-page-path":"cW08D","../i18n/normalize-locale-path":"iF0G9","../mitt":"1O1Fg","../utils":"cHiay","./utils/is-dynamic":"6rybP","./utils/parse-relative-url":"lDl7e","./utils/querystring":"PeN2l","./utils/resolve-rewrites":"ezgoA","./utils/route-matcher":"hBdpi","./utils/route-regex":"7W7zJ","./utils/format-url":"aBY4l","../../../client/detect-domain-locale":"ld5PD","./utils/parse-path":"9lS3k","../../../client/add-locale":"8fuhH","../../../client/remove-locale":"d72mY","../../../client/remove-base-path":"gS7mU","../../../client/add-base-path":"7l5aF","../../../client/has-base-path":"6NT5g","./utils/get-next-pathname-info":"24hnY","./utils/format-next-pathname-info":"b08uw","./utils/compare-states":"i3HBc","./utils/is-bot":"eGU1s","next/dist/compiled/react-is":"8mz76"}],"687bf":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = _asyncToGenerator;
+function _asyncToGenerator(fn) {
+    return function() {
+        var self = this, args = arguments;
+        return new Promise(function(resolve, reject) {
+            var gen = fn.apply(self, args);
+            function _next(value) {
+                asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+            }
+            function _throw(err) {
+                asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+            }
+            _next(undefined);
+        });
+    };
+}
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+    try {
+        var info = gen[key](arg);
+        var value = info.value;
+    } catch (error) {
+        reject(error);
+        return;
+    }
+    if (info.done) resolve(value);
+    else Promise.resolve(value).then(_next, _throw);
+}
+
+},{}],"4vU6g":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = _extends;
+function _extends() {
+    return extends_.apply(this, arguments);
+}
+function extends_() {
+    extends_ = Object.assign || function(target) {
+        for(var i = 1; i < arguments.length; i++){
+            var source = arguments[i];
+            for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+        }
+        return target;
+    };
+    return extends_.apply(this, arguments);
+}
+
+},{}],"frrjo":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = _interopRequireWildcard;
+function _interopRequireWildcard(obj, nodeInterop) {
+    if (!nodeInterop && obj && obj.__esModule) return obj;
+    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
+        default: obj
+    };
+    var cache = _getRequireWildcardCache(nodeInterop);
+    if (cache && cache.has(obj)) return cache.get(obj);
+    var newObj = {};
+    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+    for(var key in obj)if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
+        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+        if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
+        else newObj[key] = obj[key];
+    }
+    newObj.default = obj;
+    if (cache) cache.set(obj, newObj);
+    return newObj;
+}
+function _getRequireWildcardCache(nodeInterop1) {
+    if (typeof WeakMap !== "function") return null;
+    var cacheBabelInterop = new WeakMap();
+    var cacheNodeInterop = new WeakMap();
+    return (_getRequireWildcardCache = function(nodeInterop) {
+        return nodeInterop ? cacheNodeInterop : cacheBabelInterop;
+    })(nodeInterop1);
+}
+
+},{}],"a5Qce":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.normalizePathTrailingSlash = void 0;
+var _removeTrailingSlash = require("../shared/lib/router/utils/remove-trailing-slash");
+var _parsePath = require("../shared/lib/router/utils/parse-path");
+const normalizePathTrailingSlash = (path)=>{
+    if (!path.startsWith("/")) return path;
+    const { pathname , query , hash  } = _parsePath.parsePath(path);
+    return `${_removeTrailingSlash.removeTrailingSlash(pathname)}${query}${hash}`;
+};
+exports.normalizePathTrailingSlash = normalizePathTrailingSlash;
+if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
+    Object.defineProperty(exports.default, "__esModule", {
+        value: true
+    });
+    Object.assign(exports.default, exports);
+    module.exports = exports.default;
+}
+
+},{"../shared/lib/router/utils/remove-trailing-slash":"ltEax","../shared/lib/router/utils/parse-path":"9lS3k"}],"ltEax":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.removeTrailingSlash = removeTrailingSlash;
+function removeTrailingSlash(route) {
+    return route.replace(/\/$/, "") || "/";
+}
+
+},{}],"9lS3k":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.parsePath = parsePath;
+function parsePath(path) {
+    const hashIndex = path.indexOf("#");
+    const queryIndex = path.indexOf("?");
+    const hasQuery = queryIndex > -1 && (hashIndex < 0 || queryIndex < hashIndex);
+    if (hasQuery || hashIndex > -1) return {
+        pathname: path.substring(0, hasQuery ? queryIndex : hashIndex),
+        query: hasQuery ? path.substring(queryIndex, hashIndex > -1 ? hashIndex : undefined) : "",
+        hash: hashIndex > -1 ? path.slice(hashIndex) : ""
+    };
+    return {
+        pathname: path,
+        query: "",
+        hash: ""
+    };
+}
+
+},{}],"i5Qrh":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.markAssetError = markAssetError;
+exports.isAssetError = isAssetError;
+exports.getClientBuildManifest = getClientBuildManifest;
+exports.createRouteLoader = createRouteLoader;
+var _interop_require_default = require("@swc/helpers/lib/_interop_require_default.js").default;
+var _getAssetPathFromRoute = _interop_require_default(require("../shared/lib/router/utils/get-asset-path-from-route"));
+var _trustedTypes = require("./trusted-types");
+var _requestIdleCallback = require("./request-idle-callback");
+// 3.8s was arbitrarily chosen as it's what https://web.dev/interactive
+// considers as "Good" time-to-interactive. We must assume something went
+// wrong beyond this point, and then fall-back to a full page transition to
+// show the user something of value.
+const MS_MAX_IDLE_DELAY = 3800;
+function withFuture(key, map, generator) {
+    let entry = map.get(key);
+    if (entry) {
+        if ("future" in entry) return entry.future;
+        return Promise.resolve(entry);
+    }
+    let resolver;
+    const prom = new Promise((resolve)=>{
+        resolver = resolve;
+    });
+    map.set(key, entry = {
+        resolve: resolver,
+        future: prom
+    });
+    return generator ? generator() // eslint-disable-next-line no-sequences
+    .then((value)=>(resolver(value), value)).catch((err)=>{
+        map.delete(key);
+        throw err;
+    }) : prom;
+}
+function hasPrefetch(link) {
+    try {
+        link = document.createElement("link");
+        return(// with relList.support
+        !!window.MSInputMethodContext && !!document.documentMode || link.relList.supports("prefetch"));
+    } catch (e) {
+        return false;
+    }
+}
+const canPrefetch = hasPrefetch();
+function prefetchViaDom(href, as, link) {
+    return new Promise((res, rej)=>{
+        const selector = `
+      link[rel="prefetch"][href^="${href}"],
+      link[rel="preload"][href^="${href}"],
+      script[src^="${href}"]`;
+        if (document.querySelector(selector)) return res();
+        link = document.createElement("link");
+        // The order of property assignment here is intentional:
+        if (as) link.as = as;
+        link.rel = `prefetch`;
+        link.crossOrigin = undefined;
+        link.onload = res;
+        link.onerror = rej;
+        // `href` should always be last:
+        link.href = href;
+        document.head.appendChild(link);
+    });
+}
+const ASSET_LOAD_ERROR = Symbol("ASSET_LOAD_ERROR");
+function markAssetError(err) {
+    return Object.defineProperty(err, ASSET_LOAD_ERROR, {});
+}
+function isAssetError(err) {
+    return err && ASSET_LOAD_ERROR in err;
+}
+function appendScript(src, script) {
+    return new Promise((resolve, reject)=>{
+        script = document.createElement("script");
+        // The order of property assignment here is intentional.
+        // 1. Setup success/failure hooks in case the browser synchronously
+        //    executes when `src` is set.
+        script.onload = resolve;
+        script.onerror = ()=>reject(markAssetError(new Error(`Failed to load script: ${src}`)));
+        // 2. Configure the cross-origin attribute before setting `src` in case the
+        //    browser begins to fetch.
+        script.crossOrigin = undefined;
+        // 3. Finally, set the source and inject into the DOM in case the child
+        //    must be appended for fetching to start.
+        script.src = src;
+        document.body.appendChild(script);
+    });
+}
+// We wait for pages to be built in dev before we start the route transition
+// timeout to prevent an un-necessary hard navigation in development.
+let devBuildPromise;
+// Resolve a promise that times out after given amount of milliseconds.
+function resolvePromiseWithTimeout(p, ms, err) {
+    return new Promise((resolve, reject)=>{
+        let cancelled = false;
+        p.then((r)=>{
+            // Resolved, cancel the timeout
+            cancelled = true;
+            resolve(r);
+        }).catch(reject);
+        (devBuildPromise || Promise.resolve()).then(()=>{
+            _requestIdleCallback.requestIdleCallback(()=>setTimeout(()=>{
+                    if (!cancelled) reject(err);
+                }, ms));
+        });
+    });
+}
+function getClientBuildManifest() {
+    if (self.__BUILD_MANIFEST) return Promise.resolve(self.__BUILD_MANIFEST);
+    const onBuildManifest = new Promise((resolve)=>{
+        // Mandatory because this is not concurrent safe:
+        const cb = self.__BUILD_MANIFEST_CB;
+        self.__BUILD_MANIFEST_CB = ()=>{
+            resolve(self.__BUILD_MANIFEST);
+            cb && cb();
+        };
+    });
+    return resolvePromiseWithTimeout(onBuildManifest, MS_MAX_IDLE_DELAY, markAssetError(new Error("Failed to load client build manifest")));
+}
+function getFilesForRoute(assetPrefix, route) {
+    {
+        const scriptUrl = assetPrefix + "/_next/static/chunks/pages" + encodeURI(_getAssetPathFromRoute.default(route, ".js"));
+        return Promise.resolve({
+            scripts: [
+                _trustedTypes.__unsafeCreateTrustedScriptURL(scriptUrl)
+            ],
+            // Styles are handled by `style-loader` in development:
+            css: []
+        });
+    }
+    return getClientBuildManifest().then((manifest)=>{
+        if (!(route in manifest)) throw markAssetError(new Error(`Failed to lookup route: ${route}`));
+        const allFiles = manifest[route].map((entry)=>assetPrefix + "/_next/" + encodeURI(entry));
+        return {
+            scripts: allFiles.filter((v)=>v.endsWith(".js")).map((v)=>_trustedTypes.__unsafeCreateTrustedScriptURL(v)),
+            css: allFiles.filter((v)=>v.endsWith(".css"))
+        };
+    });
+}
+function createRouteLoader(assetPrefix) {
+    const entrypoints = new Map();
+    const loadedScripts = new Map();
+    const styleSheets = new Map();
+    const routes = new Map();
+    function maybeExecuteScript(src) {
+        return appendScript(src);
+    }
+    function fetchStyleSheet(href) {
+        let prom = styleSheets.get(href);
+        if (prom) return prom;
+        styleSheets.set(href, prom = fetch(href).then((res)=>{
+            if (!res.ok) throw new Error(`Failed to load stylesheet: ${href}`);
+            return res.text().then((text)=>({
+                    href: href,
+                    content: text
+                }));
+        }).catch((err)=>{
+            throw markAssetError(err);
+        }));
+        return prom;
+    }
+    return {
+        whenEntrypoint (route) {
+            return withFuture(route, entrypoints);
+        },
+        onEntrypoint (route, execute) {
+            (execute ? Promise.resolve().then(()=>execute()).then((exports1)=>({
+                    component: exports1 && exports1.default || exports1,
+                    exports: exports1
+                }), (err)=>({
+                    error: err
+                })) : Promise.resolve(undefined)).then((input)=>{
+                const old = entrypoints.get(route);
+                if (old && "resolve" in old) {
+                    if (input) {
+                        entrypoints.set(route, input);
+                        old.resolve(input);
+                    }
+                } else {
+                    if (input) entrypoints.set(route, input);
+                    else entrypoints.delete(route);
+                    // when this entrypoint has been resolved before
+                    // the route is outdated and we want to invalidate
+                    // this cache entry
+                    routes.delete(route);
+                }
+            });
+        },
+        loadRoute (route, prefetch) {
+            return withFuture(route, routes, ()=>{
+                let devBuildPromiseResolve;
+                devBuildPromise = new Promise((resolve)=>{
+                    devBuildPromiseResolve = resolve;
+                });
+                return resolvePromiseWithTimeout(getFilesForRoute(assetPrefix, route).then(({ scripts , css  })=>{
+                    return Promise.all([
+                        entrypoints.has(route) ? [] : Promise.all(scripts.map(maybeExecuteScript)),
+                        Promise.all(css.map(fetchStyleSheet)), 
+                    ]);
+                }).then((res)=>{
+                    return this.whenEntrypoint(route).then((entrypoint)=>({
+                            entrypoint,
+                            styles: res[1]
+                        }));
+                }), MS_MAX_IDLE_DELAY, markAssetError(new Error(`Route did not complete loading: ${route}`))).then(({ entrypoint , styles  })=>{
+                    const res = Object.assign({
+                        styles: styles
+                    }, entrypoint);
+                    return "error" in entrypoint ? entrypoint : res;
+                }).catch((err)=>{
+                    if (prefetch) // we don't want to cache errors during prefetch
+                    throw err;
+                    return {
+                        error: err
+                    };
+                }).finally(()=>{
+                    return devBuildPromiseResolve == null ? void 0 : devBuildPromiseResolve();
+                });
+            });
+        },
+        prefetch (route) {
+            // https://github.com/GoogleChromeLabs/quicklink/blob/453a661fa1fa940e2d2e044452398e38c67a98fb/src/index.mjs#L115-L118
+            // License: Apache 2.0
+            let cn;
+            if (cn = navigator.connection) {
+                // Don't prefetch if using 2G or if Save-Data is enabled.
+                if (cn.saveData || /2g/.test(cn.effectiveType)) return Promise.resolve();
+            }
+            return getFilesForRoute(assetPrefix, route).then((output)=>Promise.all(canPrefetch ? output.scripts.map((script)=>prefetchViaDom(script.toString(), "script")) : [])).then(()=>{
+                _requestIdleCallback.requestIdleCallback(()=>this.loadRoute(route, true).catch(()=>{}));
+            }).catch(()=>{});
+        }
+    };
+}
+if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
+    Object.defineProperty(exports.default, "__esModule", {
+        value: true
+    });
+    Object.assign(exports.default, exports);
+    module.exports = exports.default;
+}
+
+},{"@swc/helpers/lib/_interop_require_default.js":"k1iFV","../shared/lib/router/utils/get-asset-path-from-route":"aWNSG","./trusted-types":"yQZri","./request-idle-callback":"5zsyF"}],"aWNSG":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = getAssetPathFromRoute;
+function getAssetPathFromRoute(route, ext = "") {
+    const path = route === "/" ? "/index" : /^\/index(\/|$)/.test(route) ? `/index${route}` : `${route}`;
+    return path + ext;
+}
+
+},{}],"yQZri":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.__unsafeCreateTrustedScriptURL = __unsafeCreateTrustedScriptURL;
+/**
+ * Stores the Trusted Types Policy. Starts as undefined and can be set to null
+ * if Trusted Types is not supported in the browser.
+ */ let policy;
+/**
+ * Getter for the Trusted Types Policy. If it is undefined, it is instantiated
+ * here or set to null if Trusted Types is not supported in the browser.
+ */ function getPolicy() {
+    if (typeof policy === "undefined" && typeof window !== "undefined") {
+        var ref;
+        policy = ((ref = window.trustedTypes) == null ? void 0 : ref.createPolicy("nextjs", {
+            createHTML: (input)=>input,
+            createScript: (input)=>input,
+            createScriptURL: (input)=>input
+        })) || null;
+    }
+    return policy;
+}
+function __unsafeCreateTrustedScriptURL(url) {
+    var ref;
+    return ((ref = getPolicy()) == null ? void 0 : ref.createScriptURL(url)) || url;
+}
+if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
+    Object.defineProperty(exports.default, "__esModule", {
+        value: true
+    });
+    Object.assign(exports.default, exports);
+    module.exports = exports.default;
+}
+
+},{}],"5zsyF":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.cancelIdleCallback = exports.requestIdleCallback = void 0;
+const requestIdleCallback = typeof self !== "undefined" && self.requestIdleCallback && self.requestIdleCallback.bind(window) || function(cb) {
+    let start = Date.now();
+    return setTimeout(function() {
+        cb({
+            didTimeout: false,
+            timeRemaining: function() {
+                return Math.max(0, 50 - (Date.now() - start));
+            }
+        });
+    }, 1);
+};
+exports.requestIdleCallback = requestIdleCallback;
+const cancelIdleCallback = typeof self !== "undefined" && self.cancelIdleCallback && self.cancelIdleCallback.bind(window) || function(id) {
+    return clearTimeout(id);
+};
+exports.cancelIdleCallback = cancelIdleCallback;
+if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
+    Object.defineProperty(exports.default, "__esModule", {
+        value: true
+    });
+    Object.assign(exports.default, exports);
+    module.exports = exports.default;
+}
+
+},{}],"58Hib":[function(require,module,exports) {
+"use strict";
+"client";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.handleClientScriptLoad = handleClientScriptLoad;
+exports.initScriptLoader = initScriptLoader;
+exports.default = void 0;
+var _extends = require("@swc/helpers/lib/_extends.js").default;
+var _interop_require_wildcard = require("@swc/helpers/lib/_interop_require_wildcard.js").default;
+var _object_without_properties_loose = require("@swc/helpers/lib/_object_without_properties_loose.js").default;
+var _react = _interop_require_wildcard(require("react"));
+var _headManagerContext = require("../shared/lib/head-manager-context");
+var _headManager = require("./head-manager");
+var _requestIdleCallback = require("./request-idle-callback");
+"client";
+const ScriptCache = new Map();
+const LoadCache = new Set();
+const ignoreProps = [
+    "onLoad",
+    "onReady",
+    "dangerouslySetInnerHTML",
+    "children",
+    "onError",
+    "strategy", 
+];
+const loadScript = (props)=>{
+    const { src , id , onLoad =()=>{} , onReady =null , dangerouslySetInnerHTML , children ="" , strategy ="afterInteractive" , onError ,  } = props;
+    const cacheKey = id || src;
+    // Script has already loaded
+    if (cacheKey && LoadCache.has(cacheKey)) return;
+    // Contents of this script are already loading/loaded
+    if (ScriptCache.has(src)) {
+        LoadCache.add(cacheKey);
+        // It is possible that multiple `next/script` components all have same "src", but has different "onLoad"
+        // This is to make sure the same remote script will only load once, but "onLoad" are executed in order
+        ScriptCache.get(src).then(onLoad, onError);
+        return;
+    }
+    /** Execute after the script first loaded */ const afterLoad = ()=>{
+        // Run onReady for the first time after load event
+        if (onReady) onReady();
+        // add cacheKey to LoadCache when load successfully
+        LoadCache.add(cacheKey);
+    };
+    const el = document.createElement("script");
+    const loadPromise = new Promise((resolve, reject)=>{
+        el.addEventListener("load", function(e) {
+            resolve();
+            if (onLoad) onLoad.call(this, e);
+            afterLoad();
+        });
+        el.addEventListener("error", function(e) {
+            reject(e);
+        });
+    }).catch(function(e) {
+        if (onError) onError(e);
+    });
+    if (dangerouslySetInnerHTML) {
+        el.innerHTML = dangerouslySetInnerHTML.__html || "";
+        afterLoad();
+    } else if (children) {
+        el.textContent = typeof children === "string" ? children : Array.isArray(children) ? children.join("") : "";
+        afterLoad();
+    } else if (src) {
+        el.src = src;
+        // do not add cacheKey into LoadCache for remote script here
+        // cacheKey will be added to LoadCache when it is actually loaded (see loadPromise above)
+        ScriptCache.set(src, loadPromise);
+    }
+    for (const [k, value] of Object.entries(props)){
+        if (value === undefined || ignoreProps.includes(k)) continue;
+        const attr = _headManager.DOMAttributeNames[k] || k.toLowerCase();
+        el.setAttribute(attr, value);
+    }
+    if (strategy === "worker") el.setAttribute("type", "text/partytown");
+    el.setAttribute("data-nscript", strategy);
+    document.body.appendChild(el);
+};
+function handleClientScriptLoad(props) {
+    const { strategy ="afterInteractive"  } = props;
+    if (strategy === "lazyOnload") window.addEventListener("load", ()=>{
+        _requestIdleCallback.requestIdleCallback(()=>loadScript(props));
+    });
+    else loadScript(props);
+}
+function loadLazyScript(props) {
+    if (document.readyState === "complete") _requestIdleCallback.requestIdleCallback(()=>loadScript(props));
+    else window.addEventListener("load", ()=>{
+        _requestIdleCallback.requestIdleCallback(()=>loadScript(props));
+    });
+}
+function addBeforeInteractiveToCache() {
+    const scripts = [
+        ...document.querySelectorAll('[data-nscript="beforeInteractive"]'),
+        ...document.querySelectorAll('[data-nscript="beforePageRender"]'), 
+    ];
+    scripts.forEach((script)=>{
+        const cacheKey = script.id || script.getAttribute("src");
+        LoadCache.add(cacheKey);
+    });
+}
+function initScriptLoader(scriptLoaderItems) {
+    scriptLoaderItems.forEach(handleClientScriptLoad);
+    addBeforeInteractiveToCache();
+}
+function Script(props) {
+    const { id , src ="" , onLoad =()=>{} , onReady =null , strategy ="afterInteractive" , onError  } = props, restProps = _object_without_properties_loose(props, [
+        "id",
+        "src",
+        "onLoad",
+        "onReady",
+        "strategy",
+        "onError"
+    ]);
+    // Context is available only during SSR
+    const { updateScripts , scripts , getIsSsr  } = _react.useContext(_headManagerContext.HeadManagerContext);
+    /**
+   * - First mount:
+   *   1. The useEffect for onReady executes
+   *   2. hasOnReadyEffectCalled.current is false, but the script hasn't loaded yet (not in LoadCache)
+   *      onReady is skipped, set hasOnReadyEffectCalled.current to true
+   *   3. The useEffect for loadScript executes
+   *   4. hasLoadScriptEffectCalled.current is false, loadScript executes
+   *      Once the script is loaded, the onLoad and onReady will be called by then
+   *   [If strict mode is enabled / is wrapped in <OffScreen /> component]
+   *   5. The useEffect for onReady executes again
+   *   6. hasOnReadyEffectCalled.current is true, so entire effect is skipped
+   *   7. The useEffect for loadScript executes again
+   *   8. hasLoadScriptEffectCalled.current is true, so entire effect is skipped
+   *
+   * - Second mount:
+   *   1. The useEffect for onReady executes
+   *   2. hasOnReadyEffectCalled.current is false, but the script has already loaded (found in LoadCache)
+   *      onReady is called, set hasOnReadyEffectCalled.current to true
+   *   3. The useEffect for loadScript executes
+   *   4. The script is already loaded, loadScript bails out
+   *   [If strict mode is enabled / is wrapped in <OffScreen /> component]
+   *   5. The useEffect for onReady executes again
+   *   6. hasOnReadyEffectCalled.current is true, so entire effect is skipped
+   *   7. The useEffect for loadScript executes again
+   *   8. hasLoadScriptEffectCalled.current is true, so entire effect is skipped
+   */ const hasOnReadyEffectCalled = _react.useRef(false);
+    _react.useEffect(()=>{
+        const cacheKey = id || src;
+        if (!hasOnReadyEffectCalled.current) {
+            // Run onReady if script has loaded before but component is re-mounted
+            if (onReady && cacheKey && LoadCache.has(cacheKey)) onReady();
+            hasOnReadyEffectCalled.current = true;
+        }
+    }, [
+        onReady,
+        id,
+        src
+    ]);
+    const hasLoadScriptEffectCalled = _react.useRef(false);
+    _react.useEffect(()=>{
+        if (!hasLoadScriptEffectCalled.current) {
+            if (strategy === "afterInteractive") loadScript(props);
+            else if (strategy === "lazyOnload") loadLazyScript(props);
+            hasLoadScriptEffectCalled.current = true;
+        }
+    }, [
+        props,
+        strategy
+    ]);
+    if (strategy === "beforeInteractive" || strategy === "worker") {
+        if (updateScripts) {
+            scripts[strategy] = (scripts[strategy] || []).concat([
+                _extends({
+                    id,
+                    src,
+                    onLoad,
+                    onReady,
+                    onError
+                }, restProps), 
+            ]);
+            updateScripts(scripts);
+        } else if (getIsSsr && getIsSsr()) // Script has already loaded during SSR
+        LoadCache.add(id || src);
+        else if (getIsSsr && !getIsSsr()) loadScript(props);
+    }
+    return null;
+}
+Object.defineProperty(Script, "__nextScript", {
+    value: true
+});
+var _default = Script;
+exports.default = _default;
+if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
+    Object.defineProperty(exports.default, "__esModule", {
+        value: true
+    });
+    Object.assign(exports.default, exports);
+    module.exports = exports.default;
+}
+
+},{"@swc/helpers/lib/_extends.js":"4vU6g","@swc/helpers/lib/_interop_require_wildcard.js":"frrjo","@swc/helpers/lib/_object_without_properties_loose.js":"6DnfI","react":"21dqq","../shared/lib/head-manager-context":"4Wc5J","./head-manager":"6zmW2","./request-idle-callback":"5zsyF"}],"6DnfI":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = _objectWithoutPropertiesLoose;
+function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {};
+    var target = {};
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+    }
+    return target;
+}
+
+},{}],"4Wc5J":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.HeadManagerContext = void 0;
+var _interop_require_default = require("@swc/helpers/lib/_interop_require_default.js").default;
+var _react = _interop_require_default(require("react"));
+const HeadManagerContext = _react.default.createContext({});
+exports.HeadManagerContext = HeadManagerContext;
+HeadManagerContext.displayName = "HeadManagerContext";
+
+},{"@swc/helpers/lib/_interop_require_default.js":"k1iFV","react":"21dqq"}],"6zmW2":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = initHeadManager;
+exports.isEqualNode = isEqualNode;
+exports.DOMAttributeNames = void 0;
+function initHeadManager() {
+    return {
+        mountedInstances: new Set(),
+        updateHead: (head)=>{
+            const tags = {};
+            head.forEach((h)=>{
+                if (// it won't be inlined. In this case revert to the original behavior
+                h.type === "link" && h.props["data-optimized-fonts"]) {
+                    if (document.querySelector(`style[data-href="${h.props["data-href"]}"]`)) return;
+                    else {
+                        h.props.href = h.props["data-href"];
+                        h.props["data-href"] = undefined;
+                    }
+                }
+                const components = tags[h.type] || [];
+                components.push(h);
+                tags[h.type] = components;
+            });
+            const titleComponent = tags.title ? tags.title[0] : null;
+            let title = "";
+            if (titleComponent) {
+                const { children  } = titleComponent.props;
+                title = typeof children === "string" ? children : Array.isArray(children) ? children.join("") : "";
+            }
+            if (title !== document.title) document.title = title;
+            [
+                "meta",
+                "base",
+                "link",
+                "style",
+                "script"
+            ].forEach((type)=>{
+                updateElements(type, tags[type] || []);
+            });
+        }
+    };
+}
+const DOMAttributeNames = {
+    acceptCharset: "accept-charset",
+    className: "class",
+    htmlFor: "for",
+    httpEquiv: "http-equiv",
+    noModule: "noModule"
+};
+exports.DOMAttributeNames = DOMAttributeNames;
+function reactElementToDOM({ type , props  }) {
+    const el = document.createElement(type);
+    for(const p in props){
+        if (!props.hasOwnProperty(p)) continue;
+        if (p === "children" || p === "dangerouslySetInnerHTML") continue;
+        // we don't render undefined props to the DOM
+        if (props[p] === undefined) continue;
+        const attr = DOMAttributeNames[p] || p.toLowerCase();
+        if (type === "script" && (attr === "async" || attr === "defer" || attr === "noModule")) el[attr] = !!props[p];
+        else el.setAttribute(attr, props[p]);
+    }
+    const { children , dangerouslySetInnerHTML  } = props;
+    if (dangerouslySetInnerHTML) el.innerHTML = dangerouslySetInnerHTML.__html || "";
+    else if (children) el.textContent = typeof children === "string" ? children : Array.isArray(children) ? children.join("") : "";
+    return el;
+}
+function isEqualNode(oldTag, newTag) {
+    if (oldTag instanceof HTMLElement && newTag instanceof HTMLElement) {
+        const nonce = newTag.getAttribute("nonce");
+        // Only strip the nonce if `oldTag` has had it stripped. An element's nonce attribute will not
+        // be stripped if there is no content security policy response header that includes a nonce.
+        if (nonce && !oldTag.getAttribute("nonce")) {
+            const cloneTag = newTag.cloneNode(true);
+            cloneTag.setAttribute("nonce", "");
+            cloneTag.nonce = nonce;
+            return nonce === oldTag.nonce && oldTag.isEqualNode(cloneTag);
+        }
+    }
+    return oldTag.isEqualNode(newTag);
+}
+function updateElements(type, components) {
+    const headEl = document.getElementsByTagName("head")[0];
+    const headCountEl = headEl.querySelector("meta[name=next-head-count]");
+    if (!headCountEl) {
+        console.error("Warning: next-head-count is missing. https://nextjs.org/docs/messages/next-head-count-missing");
+        return;
+    }
+    const headCount = Number(headCountEl.content);
+    const oldTags = [];
+    for(let i = 0, j = headCountEl.previousElementSibling; i < headCount; i++, j = (j == null ? void 0 : j.previousElementSibling) || null){
+        var ref;
+        if ((j == null ? void 0 : (ref = j.tagName) == null ? void 0 : ref.toLowerCase()) === type) oldTags.push(j);
+    }
+    const newTags = components.map(reactElementToDOM).filter((newTag)=>{
+        for(let k = 0, len = oldTags.length; k < len; k++){
+            const oldTag = oldTags[k];
+            if (isEqualNode(oldTag, newTag)) {
+                oldTags.splice(k, 1);
+                return false;
+            }
+        }
+        return true;
+    });
+    oldTags.forEach((t)=>{
+        var ref;
+        return (ref = t.parentNode) == null ? void 0 : ref.removeChild(t);
+    });
+    newTags.forEach((t)=>headEl.insertBefore(t, headCountEl));
+    headCountEl.content = (headCount - oldTags.length + newTags.length).toString();
+}
+if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
+    Object.defineProperty(exports.default, "__esModule", {
+        value: true
+    });
+    Object.assign(exports.default, exports);
+    module.exports = exports.default;
+}
+
+},{}],"6h17E":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = isError;
+exports.getProperError = getProperError;
+var _isPlainObject = require("../shared/lib/is-plain-object");
+function isError(err) {
+    return typeof err === "object" && err !== null && "name" in err && "message" in err;
+}
+function getProperError(err) {
+    if (isError(err)) return err;
+    // provide better error for case where `throw undefined`
+    // is called in development
+    if (typeof err === "undefined") return new Error("An undefined error was thrown, see here for more info: https://nextjs.org/docs/messages/threw-undefined");
+    if (err === null) return new Error("A null error was thrown, see here for more info: https://nextjs.org/docs/messages/threw-undefined");
+    return new Error(_isPlainObject.isPlainObject(err) ? JSON.stringify(err) : err + "");
+}
+
+},{"../shared/lib/is-plain-object":"6SYHW"}],"6SYHW":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.getObjectClassLabel = getObjectClassLabel;
+exports.isPlainObject = isPlainObject;
+function getObjectClassLabel(value) {
+    return Object.prototype.toString.call(value);
+}
+function isPlainObject(value) {
+    if (getObjectClassLabel(value) !== "[object Object]") return false;
+    const prototype = Object.getPrototypeOf(value);
+    /**
+   * this used to be previously:
+   *
+   * `return prototype === null || prototype === Object.prototype`
+   *
+   * but Edge Runtime expose Object from vm, being that kind of type-checking wrongly fail.
+   *
+   * It was changed to the current implementation since it's resilient to serialization.
+   */ return prototype === null || prototype.hasOwnProperty("isPrototypeOf");
+}
+
+},{}],"cW08D":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.denormalizePagePath = denormalizePagePath;
+var _utils = require("../router/utils");
+var _normalizePathSep = require("./normalize-path-sep");
+function denormalizePagePath(page) {
+    let _page = _normalizePathSep.normalizePathSep(page);
+    return _page.startsWith("/index/") && !_utils.isDynamicRoute(_page) ? _page.slice(6) : _page !== "/index" ? _page : "/";
+}
+
+},{"../router/utils":"i2luU","./normalize-path-sep":"YUF7l"}],"i2luU":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "getSortedRoutes", {
+    enumerable: true,
+    get: function() {
+        return _sortedRoutes.getSortedRoutes;
+    }
+});
+Object.defineProperty(exports, "isDynamicRoute", {
+    enumerable: true,
+    get: function() {
+        return _isDynamic.isDynamicRoute;
+    }
+});
+var _sortedRoutes = require("./sorted-routes");
+var _isDynamic = require("./is-dynamic");
+
+},{"./sorted-routes":"iStS0","./is-dynamic":"6rybP"}],"iStS0":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.getSortedRoutes = getSortedRoutes;
+class UrlNode {
+    insert(urlPath) {
+        this._insert(urlPath.split("/").filter(Boolean), [], false);
+    }
+    smoosh() {
+        return this._smoosh();
+    }
+    _smoosh(prefix = "/") {
+        const childrenPaths = [
+            ...this.children.keys()
+        ].sort();
+        if (this.slugName !== null) childrenPaths.splice(childrenPaths.indexOf("[]"), 1);
+        if (this.restSlugName !== null) childrenPaths.splice(childrenPaths.indexOf("[...]"), 1);
+        if (this.optionalRestSlugName !== null) childrenPaths.splice(childrenPaths.indexOf("[[...]]"), 1);
+        const routes = childrenPaths.map((c)=>this.children.get(c)._smoosh(`${prefix}${c}/`)).reduce((prev, curr)=>[
+                ...prev,
+                ...curr
+            ], []);
+        if (this.slugName !== null) routes.push(...this.children.get("[]")._smoosh(`${prefix}[${this.slugName}]/`));
+        if (!this.placeholder) {
+            const r = prefix === "/" ? "/" : prefix.slice(0, -1);
+            if (this.optionalRestSlugName != null) throw new Error(`You cannot define a route with the same specificity as a optional catch-all route ("${r}" and "${r}[[...${this.optionalRestSlugName}]]").`);
+            routes.unshift(r);
+        }
+        if (this.restSlugName !== null) routes.push(...this.children.get("[...]")._smoosh(`${prefix}[...${this.restSlugName}]/`));
+        if (this.optionalRestSlugName !== null) routes.push(...this.children.get("[[...]]")._smoosh(`${prefix}[[...${this.optionalRestSlugName}]]/`));
+        return routes;
+    }
+    _insert(urlPaths, slugNames, isCatchAll) {
+        if (urlPaths.length === 0) {
+            this.placeholder = false;
+            return;
+        }
+        if (isCatchAll) throw new Error(`Catch-all must be the last part of the URL.`);
+        // The next segment in the urlPaths list
+        let nextSegment = urlPaths[0];
+        // Check if the segment matches `[something]`
+        if (nextSegment.startsWith("[") && nextSegment.endsWith("]")) {
+            // Strip `[` and `]`, leaving only `something`
+            let segmentName = nextSegment.slice(1, -1);
+            let isOptional = false;
+            if (segmentName.startsWith("[") && segmentName.endsWith("]")) {
+                // Strip optional `[` and `]`, leaving only `something`
+                segmentName = segmentName.slice(1, -1);
+                isOptional = true;
+            }
+            if (segmentName.startsWith("...")) {
+                // Strip `...`, leaving only `something`
+                segmentName = segmentName.substring(3);
+                isCatchAll = true;
+            }
+            if (segmentName.startsWith("[") || segmentName.endsWith("]")) throw new Error(`Segment names may not start or end with extra brackets ('${segmentName}').`);
+            if (segmentName.startsWith(".")) throw new Error(`Segment names may not start with erroneous periods ('${segmentName}').`);
+            function handleSlug(previousSlug, nextSlug) {
+                if (previousSlug !== null) {
+                    // If the specific segment already has a slug but the slug is not `something`
+                    // This prevents collisions like:
+                    // pages/[post]/index.js
+                    // pages/[id]/index.js
+                    // Because currently multiple dynamic params on the same segment level are not supported
+                    if (previousSlug !== nextSlug) // TODO: This error seems to be confusing for users, needs an error link, the description can be based on above comment.
+                    throw new Error(`You cannot use different slug names for the same dynamic path ('${previousSlug}' !== '${nextSlug}').`);
+                }
+                slugNames.forEach((slug)=>{
+                    if (slug === nextSlug) throw new Error(`You cannot have the same slug name "${nextSlug}" repeat within a single dynamic path`);
+                    if (slug.replace(/\W/g, "") === nextSegment.replace(/\W/g, "")) throw new Error(`You cannot have the slug names "${slug}" and "${nextSlug}" differ only by non-word symbols within a single dynamic path`);
+                });
+                slugNames.push(nextSlug);
+            }
+            if (isCatchAll) {
+                if (isOptional) {
+                    if (this.restSlugName != null) throw new Error(`You cannot use both an required and optional catch-all route at the same level ("[...${this.restSlugName}]" and "${urlPaths[0]}" ).`);
+                    handleSlug(this.optionalRestSlugName, segmentName);
+                    // slugName is kept as it can only be one particular slugName
+                    this.optionalRestSlugName = segmentName;
+                    // nextSegment is overwritten to [[...]] so that it can later be sorted specifically
+                    nextSegment = "[[...]]";
+                } else {
+                    if (this.optionalRestSlugName != null) throw new Error(`You cannot use both an optional and required catch-all route at the same level ("[[...${this.optionalRestSlugName}]]" and "${urlPaths[0]}").`);
+                    handleSlug(this.restSlugName, segmentName);
+                    // slugName is kept as it can only be one particular slugName
+                    this.restSlugName = segmentName;
+                    // nextSegment is overwritten to [...] so that it can later be sorted specifically
+                    nextSegment = "[...]";
+                }
+            } else {
+                if (isOptional) throw new Error(`Optional route parameters are not yet supported ("${urlPaths[0]}").`);
+                handleSlug(this.slugName, segmentName);
+                // slugName is kept as it can only be one particular slugName
+                this.slugName = segmentName;
+                // nextSegment is overwritten to [] so that it can later be sorted specifically
+                nextSegment = "[]";
+            }
+        }
+        // If this UrlNode doesn't have the nextSegment yet we create a new child UrlNode
+        if (!this.children.has(nextSegment)) this.children.set(nextSegment, new UrlNode());
+        this.children.get(nextSegment)._insert(urlPaths.slice(1), slugNames, isCatchAll);
+    }
+    constructor(){
+        this.placeholder = true;
+        this.children = new Map();
+        this.slugName = null;
+        this.restSlugName = null;
+        this.optionalRestSlugName = null;
+    }
+}
+function getSortedRoutes(normalizedPages) {
+    // First the UrlNode is created, and every UrlNode can have only 1 dynamic segment
+    // Eg you can't have pages/[post]/abc.js and pages/[hello]/something-else.js
+    // Only 1 dynamic segment per nesting level
+    // So in the case that is test/integration/dynamic-routing it'll be this:
+    // pages/[post]/comments.js
+    // pages/blog/[post]/comment/[id].js
+    // Both are fine because `pages/[post]` and `pages/blog` are on the same level
+    // So in this case `UrlNode` created here has `this.slugName === 'post'`
+    // And since your PR passed through `slugName` as an array basically it'd including it in too many possibilities
+    // Instead what has to be passed through is the upwards path's dynamic names
+    const root = new UrlNode();
+    // Here the `root` gets injected multiple paths, and insert will break them up into sublevels
+    normalizedPages.forEach((pagePath)=>root.insert(pagePath));
+    // Smoosh will then sort those sublevels up to the point where you get the correct route definition priority
+    return root.smoosh();
+}
+
+},{}],"6rybP":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.isDynamicRoute = isDynamicRoute;
+// Identify /[param]/ in route string
+const TEST_ROUTE = /\/\[[^/]+?\](?=\/|$)/;
+function isDynamicRoute(route) {
+    return TEST_ROUTE.test(route);
+}
+
+},{}],"YUF7l":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.normalizePathSep = normalizePathSep;
+function normalizePathSep(path) {
+    return path.replace(/\\/g, "/");
+}
+
+},{}],"iF0G9":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.normalizeLocalePath = normalizeLocalePath;
+function normalizeLocalePath(pathname, locales) {
+    let detectedLocale;
+    // first item will be empty string from splitting at first char
+    const pathnameParts = pathname.split("/");
+    (locales || []).some((locale)=>{
+        if (pathnameParts[1] && pathnameParts[1].toLowerCase() === locale.toLowerCase()) {
+            detectedLocale = locale;
+            pathnameParts.splice(1, 1);
+            pathname = pathnameParts.join("/") || "/";
+            return true;
+        }
+        return false;
+    });
+    return {
+        pathname,
+        detectedLocale
+    };
+}
+
+},{}],"1O1Fg":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = mitt;
+function mitt() {
+    const all = Object.create(null);
+    return {
+        on (type, handler) {
+            (all[type] || (all[type] = [])).push(handler);
+        },
+        off (type, handler) {
+            if (all[type]) all[type].splice(all[type].indexOf(handler) >>> 0, 1);
+        },
+        emit (type, ...evts) {
+            (all[type] || []).slice().map((handler)=>{
+                handler(...evts);
+            });
+        }
+    };
+}
+
+},{}],"cHiay":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.execOnce = execOnce;
+exports.getLocationOrigin = getLocationOrigin;
+exports.getURL = getURL;
+exports.getDisplayName = getDisplayName;
+exports.isResSent = isResSent;
+exports.normalizeRepeatedSlashes = normalizeRepeatedSlashes;
+exports.loadGetInitialProps = loadGetInitialProps;
+exports.ST = exports.SP = exports.warnOnce = exports.isAbsoluteUrl = void 0;
+var _async_to_generator = require("@swc/helpers/lib/_async_to_generator.js").default;
+function execOnce(fn) {
+    let used = false;
+    let result;
+    return (...args)=>{
+        if (!used) {
+            used = true;
+            result = fn(...args);
+        }
+        return result;
+    };
+}
+// Scheme: https://tools.ietf.org/html/rfc3986#section-3.1
+// Absolute URL: https://tools.ietf.org/html/rfc3986#section-4.3
+const ABSOLUTE_URL_REGEX = /^[a-zA-Z][a-zA-Z\d+\-.]*?:/;
+const isAbsoluteUrl = (url)=>ABSOLUTE_URL_REGEX.test(url);
+exports.isAbsoluteUrl = isAbsoluteUrl;
+function getLocationOrigin() {
+    const { protocol , hostname , port  } = window.location;
+    return `${protocol}//${hostname}${port ? ":" + port : ""}`;
+}
+function getURL() {
+    const { href  } = window.location;
+    const origin = getLocationOrigin();
+    return href.substring(origin.length);
+}
+function getDisplayName(Component) {
+    return typeof Component === "string" ? Component : Component.displayName || Component.name || "Unknown";
+}
+function isResSent(res) {
+    return res.finished || res.headersSent;
+}
+function normalizeRepeatedSlashes(url) {
+    const urlParts = url.split("?");
+    const urlNoQuery = urlParts[0];
+    return urlNoQuery // first we replace any non-encoded backslashes with forward
+    // then normalize repeated forward slashes
+    .replace(/\\/g, "/").replace(/\/\/+/g, "/") + (urlParts[1] ? `?${urlParts.slice(1).join("?")}` : "");
+}
+function loadGetInitialProps(App, ctx) {
+    return _loadGetInitialProps.apply(this, arguments);
+}
+function _loadGetInitialProps() {
+    _loadGetInitialProps = _async_to_generator(function*(App, ctx) {
+        var ref;
+        if ((ref = App.prototype) == null ? void 0 : ref.getInitialProps) {
+            const message = `"${getDisplayName(App)}.getInitialProps()" is defined as an instance method - visit https://nextjs.org/docs/messages/get-initial-props-as-an-instance-method for more information.`;
+            throw new Error(message);
+        }
+        // when called from _app `ctx` is nested in `ctx`
+        const res = ctx.res || ctx.ctx && ctx.ctx.res;
+        if (!App.getInitialProps) {
+            if (ctx.ctx && ctx.Component) // @ts-ignore pageProps default
+            return {
+                pageProps: yield loadGetInitialProps(ctx.Component, ctx.ctx)
+            };
+            return {};
+        }
+        const props = yield App.getInitialProps(ctx);
+        if (res && isResSent(res)) return props;
+        if (!props) {
+            const message1 = `"${getDisplayName(App)}.getInitialProps()" should resolve to an object. But found "${props}" instead.`;
+            throw new Error(message1);
+        }
+        if (Object.keys(props).length === 0 && !ctx.ctx) console.warn(`${getDisplayName(App)} returned an empty object from \`getInitialProps\`. This de-optimizes and prevents automatic static optimization. https://nextjs.org/docs/messages/empty-object-getInitialProps`);
+        return props;
+    });
+    return _loadGetInitialProps.apply(this, arguments);
+}
+let warnOnce = (_)=>{};
+{
+    const warnings = new Set();
+    exports.warnOnce = warnOnce = (msg)=>{
+        if (!warnings.has(msg)) console.warn(msg);
+        warnings.add(msg);
+    };
+}const SP = typeof performance !== "undefined";
+exports.SP = SP;
+const ST = SP && [
+    "mark",
+    "measure",
+    "getEntriesByName"
+].every((method)=>typeof performance[method] === "function");
+exports.ST = ST;
+class DecodeError extends Error {
+}
+exports.DecodeError = DecodeError;
+class NormalizeError extends Error {
+}
+exports.NormalizeError = NormalizeError;
+class PageNotFoundError extends Error {
+    constructor(page){
+        super();
+        this.code = "ENOENT";
+        this.message = `Cannot find module for page: ${page}`;
+    }
+}
+exports.PageNotFoundError = PageNotFoundError;
+class MissingStaticPage extends Error {
+    constructor(page, message){
+        super();
+        this.message = `Failed to load static file for page: ${page} ${message}`;
+    }
+}
+exports.MissingStaticPage = MissingStaticPage;
+class MiddlewareNotFoundError extends Error {
+    constructor(){
+        super();
+        this.code = "ENOENT";
+        this.message = `Cannot find the middleware module`;
+    }
+}
+exports.MiddlewareNotFoundError = MiddlewareNotFoundError;
+exports.warnOnce = warnOnce;
+
+},{"@swc/helpers/lib/_async_to_generator.js":"687bf"}],"lDl7e":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.parseRelativeUrl = parseRelativeUrl;
+var _utils = require("../../utils");
+var _querystring = require("./querystring");
+function parseRelativeUrl(url, base) {
+    const globalBase = new URL(typeof window === "undefined" ? "http://n" : _utils.getLocationOrigin());
+    const resolvedBase = base ? new URL(base, globalBase) : url.startsWith(".") ? new URL(typeof window === "undefined" ? "http://n" : window.location.href) : globalBase;
+    const { pathname , searchParams , search , hash , href , origin  } = new URL(url, resolvedBase);
+    if (origin !== globalBase.origin) throw new Error(`invariant: invalid relative URL, router received ${url}`);
+    return {
+        pathname,
+        query: _querystring.searchParamsToUrlQuery(searchParams),
+        search,
+        hash,
+        href: href.slice(globalBase.origin.length)
+    };
+}
+
+},{"../../utils":"cHiay","./querystring":"PeN2l"}],"PeN2l":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.searchParamsToUrlQuery = searchParamsToUrlQuery;
+exports.urlQueryToSearchParams = urlQueryToSearchParams;
+exports.assign = assign;
+function searchParamsToUrlQuery(searchParams) {
+    const query = {};
+    searchParams.forEach((value, key)=>{
+        if (typeof query[key] === "undefined") query[key] = value;
+        else if (Array.isArray(query[key])) query[key].push(value);
+        else query[key] = [
+            query[key],
+            value
+        ];
+    });
+    return query;
+}
+function stringifyUrlQueryParam(param) {
+    if (typeof param === "string" || typeof param === "number" && !isNaN(param) || typeof param === "boolean") return String(param);
+    else return "";
+}
+function urlQueryToSearchParams(urlQuery) {
+    const result = new URLSearchParams();
+    Object.entries(urlQuery).forEach(([key, value])=>{
+        if (Array.isArray(value)) value.forEach((item)=>result.append(key, stringifyUrlQueryParam(item)));
+        else result.set(key, stringifyUrlQueryParam(value));
+    });
+    return result;
+}
+function assign(target, ...searchParamsList) {
+    searchParamsList.forEach((searchParams)=>{
+        Array.from(searchParams.keys()).forEach((key)=>target.delete(key));
+        searchParams.forEach((value, key)=>target.append(key, value));
+    });
+    return target;
+}
+
+},{}],"ezgoA":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = resolveRewrites;
+var _pathMatch = require("./path-match");
+var _prepareDestination = require("./prepare-destination");
+var _removeTrailingSlash = require("./remove-trailing-slash");
+var _normalizeLocalePath = require("../../i18n/normalize-locale-path");
+var _removeBasePath = require("../../../../client/remove-base-path");
+var _parseRelativeUrl = require("./parse-relative-url");
+function resolveRewrites(asPath, pages, rewrites, query, resolveHref, locales) {
+    let matchedPage = false;
+    let externalDest = false;
+    let parsedAs = _parseRelativeUrl.parseRelativeUrl(asPath);
+    let fsPathname = _removeTrailingSlash.removeTrailingSlash(_normalizeLocalePath.normalizeLocalePath(_removeBasePath.removeBasePath(parsedAs.pathname), locales).pathname);
+    let resolvedHref;
+    const handleRewrite = (rewrite)=>{
+        const matcher = _pathMatch.getPathMatch(rewrite.source + "", {
+            removeUnnamedParams: true,
+            strict: true
+        });
+        let params = matcher(parsedAs.pathname);
+        if (rewrite.has && params) {
+            const hasParams = _prepareDestination.matchHas({
+                headers: {
+                    host: document.location.hostname
+                },
+                cookies: document.cookie.split("; ").reduce((acc, item)=>{
+                    const [key, ...value] = item.split("=");
+                    acc[key] = value.join("=");
+                    return acc;
+                }, {})
+            }, rewrite.has, parsedAs.query);
+            if (hasParams) Object.assign(params, hasParams);
+            else params = false;
+        }
+        if (params) {
+            if (!rewrite.destination) {
+                // this is a proxied rewrite which isn't handled on the client
+                externalDest = true;
+                return true;
+            }
+            const destRes = _prepareDestination.prepareDestination({
+                appendParamsToQuery: true,
+                destination: rewrite.destination,
+                params: params,
+                query: query
+            });
+            parsedAs = destRes.parsedDestination;
+            asPath = destRes.newUrl;
+            Object.assign(query, destRes.parsedDestination.query);
+            fsPathname = _removeTrailingSlash.removeTrailingSlash(_normalizeLocalePath.normalizeLocalePath(_removeBasePath.removeBasePath(asPath), locales).pathname);
+            if (pages.includes(fsPathname)) {
+                // check if we now match a page as this means we are done
+                // resolving the rewrites
+                matchedPage = true;
+                resolvedHref = fsPathname;
+                return true;
+            }
+            // check if we match a dynamic-route, if so we break the rewrites chain
+            resolvedHref = resolveHref(fsPathname);
+            if (resolvedHref !== asPath && pages.includes(resolvedHref)) {
+                matchedPage = true;
+                return true;
+            }
+        }
+    };
+    let finished = false;
+    for(let i = 0; i < rewrites.beforeFiles.length; i++)// we don't end after match in beforeFiles to allow
+    // continuing through all beforeFiles rewrites
+    handleRewrite(rewrites.beforeFiles[i]);
+    matchedPage = pages.includes(fsPathname);
+    if (!matchedPage) {
+        if (!finished) {
+            for(let i1 = 0; i1 < rewrites.afterFiles.length; i1++)if (handleRewrite(rewrites.afterFiles[i1])) {
+                finished = true;
+                break;
+            }
+        }
+        // check dynamic route before processing fallback rewrites
+        if (!finished) {
+            resolvedHref = resolveHref(fsPathname);
+            matchedPage = pages.includes(resolvedHref);
+            finished = matchedPage;
+        }
+        if (!finished) {
+            for(let i2 = 0; i2 < rewrites.fallback.length; i2++)if (handleRewrite(rewrites.fallback[i2])) {
+                finished = true;
+                break;
+            }
+        }
+    }
+    return {
+        asPath,
+        parsedAs,
+        matchedPage,
+        resolvedHref,
+        externalDest
+    };
+}
+
+},{"./path-match":"dsT1h","./prepare-destination":"EhxbV","./remove-trailing-slash":"ltEax","../../i18n/normalize-locale-path":"iF0G9","../../../../client/remove-base-path":"gS7mU","./parse-relative-url":"lDl7e"}],"dsT1h":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.getPathMatch = getPathMatch;
+var _extends = require("@swc/helpers/lib/_extends.js").default;
+var _pathToRegexp = require("next/dist/compiled/path-to-regexp");
+function getPathMatch(path, options) {
+    const keys = [];
+    const regexp = _pathToRegexp.pathToRegexp(path, keys, {
+        delimiter: "/",
+        sensitive: false,
+        strict: options == null ? void 0 : options.strict
+    });
+    const matcher = _pathToRegexp.regexpToFunction((options == null ? void 0 : options.regexModifier) ? new RegExp(options.regexModifier(regexp.source), regexp.flags) : regexp, keys);
+    /**
+   * A matcher function that will check if a given pathname matches the path
+   * given in the builder function. When the path does not match it will return
+   * `false` but if it does it will return an object with the matched params
+   * merged with the params provided in the second argument.
+   */ return (pathname, params)=>{
+        const res = pathname == null ? false : matcher(pathname);
+        if (!res) return false;
+        /**
+     * If unnamed params are not allowed they must be removed from
+     * the matched parameters. path-to-regexp uses "string" for named and
+     * "number" for unnamed parameters.
+     */ if (options == null ? void 0 : options.removeUnnamedParams) {
+            for (const key of keys)if (typeof key.name === "number") delete res.params[key.name];
+        }
+        return _extends({}, params, res.params);
+    };
+}
+
+},{"@swc/helpers/lib/_extends.js":"4vU6g","next/dist/compiled/path-to-regexp":"575Oc"}],"575Oc":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+/**
+ * Tokenize input string.
+ */ function lexer(str) {
+    var tokens = [];
+    var i = 0;
+    while(i < str.length){
+        var char = str[i];
+        if (char === "*" || char === "+" || char === "?") {
+            tokens.push({
+                type: "MODIFIER",
+                index: i,
+                value: str[i++]
+            });
+            continue;
+        }
+        if (char === "\\") {
+            tokens.push({
+                type: "ESCAPED_CHAR",
+                index: i++,
+                value: str[i++]
+            });
+            continue;
+        }
+        if (char === "{") {
+            tokens.push({
+                type: "OPEN",
+                index: i,
+                value: str[i++]
+            });
+            continue;
+        }
+        if (char === "}") {
+            tokens.push({
+                type: "CLOSE",
+                index: i,
+                value: str[i++]
+            });
+            continue;
+        }
+        if (char === ":") {
+            var name = "";
+            var j = i + 1;
+            while(j < str.length){
+                var code = str.charCodeAt(j);
+                if (// `0-9`
+                code >= 48 && code <= 57 || code >= 65 && code <= 90 || code >= 97 && code <= 122 || // `_`
+                code === 95) {
+                    name += str[j++];
+                    continue;
+                }
+                break;
+            }
+            if (!name) throw new TypeError("Missing parameter name at " + i);
+            tokens.push({
+                type: "NAME",
+                index: i,
+                value: name
+            });
+            i = j;
+            continue;
+        }
+        if (char === "(") {
+            var count = 1;
+            var pattern = "";
+            var j = i + 1;
+            if (str[j] === "?") throw new TypeError('Pattern cannot start with "?" at ' + j);
+            while(j < str.length){
+                if (str[j] === "\\") {
+                    pattern += str[j++] + str[j++];
+                    continue;
+                }
+                if (str[j] === ")") {
+                    count--;
+                    if (count === 0) {
+                        j++;
+                        break;
+                    }
+                } else if (str[j] === "(") {
+                    count++;
+                    if (str[j + 1] !== "?") throw new TypeError("Capturing groups are not allowed at " + j);
+                }
+                pattern += str[j++];
+            }
+            if (count) throw new TypeError("Unbalanced pattern at " + i);
+            if (!pattern) throw new TypeError("Missing pattern at " + i);
+            tokens.push({
+                type: "PATTERN",
+                index: i,
+                value: pattern
+            });
+            i = j;
+            continue;
+        }
+        tokens.push({
+            type: "CHAR",
+            index: i,
+            value: str[i++]
+        });
+    }
+    tokens.push({
+        type: "END",
+        index: i,
+        value: ""
+    });
+    return tokens;
+}
+/**
+ * Parse a string for the raw tokens.
+ */ function parse(str, options) {
+    if (options === void 0) options = {};
+    var tokens = lexer(str);
+    var _a = options.prefixes, prefixes = _a === void 0 ? "./" : _a;
+    var defaultPattern = "[^" + escapeString(options.delimiter || "/#?") + "]+?";
+    var result = [];
+    var key = 0;
+    var i = 0;
+    var path = "";
+    var tryConsume = function(type) {
+        if (i < tokens.length && tokens[i].type === type) return tokens[i++].value;
+    };
+    var mustConsume = function(type) {
+        var value = tryConsume(type);
+        if (value !== undefined) return value;
+        var _a = tokens[i], nextType = _a.type, index = _a.index;
+        throw new TypeError("Unexpected " + nextType + " at " + index + ", expected " + type);
+    };
+    var consumeText = function() {
+        var result = "";
+        var value;
+        // tslint:disable-next-line
+        while(value = tryConsume("CHAR") || tryConsume("ESCAPED_CHAR"))result += value;
+        return result;
+    };
+    while(i < tokens.length){
+        var char = tryConsume("CHAR");
+        var name = tryConsume("NAME");
+        var pattern = tryConsume("PATTERN");
+        if (name || pattern) {
+            var prefix = char || "";
+            if (prefixes.indexOf(prefix) === -1) {
+                path += prefix;
+                prefix = "";
+            }
+            if (path) {
+                result.push(path);
+                path = "";
+            }
+            result.push({
+                name: name || key++,
+                prefix: prefix,
+                suffix: "",
+                pattern: pattern || defaultPattern,
+                modifier: tryConsume("MODIFIER") || ""
+            });
+            continue;
+        }
+        var value = char || tryConsume("ESCAPED_CHAR");
+        if (value) {
+            path += value;
+            continue;
+        }
+        if (path) {
+            result.push(path);
+            path = "";
+        }
+        var open = tryConsume("OPEN");
+        if (open) {
+            var prefix = consumeText();
+            var name_1 = tryConsume("NAME") || "";
+            var pattern_1 = tryConsume("PATTERN") || "";
+            var suffix = consumeText();
+            mustConsume("CLOSE");
+            result.push({
+                name: name_1 || (pattern_1 ? key++ : ""),
+                pattern: name_1 && !pattern_1 ? defaultPattern : pattern_1,
+                prefix: prefix,
+                suffix: suffix,
+                modifier: tryConsume("MODIFIER") || ""
+            });
+            continue;
+        }
+        mustConsume("END");
+    }
+    return result;
+}
+exports.parse = parse;
+/**
+ * Compile a string to a template function for the path.
+ */ function compile(str, options) {
+    return tokensToFunction(parse(str, options), options);
+}
+exports.compile = compile;
+/**
+ * Expose a method for transforming tokens into the path function.
+ */ function tokensToFunction(tokens, options) {
+    if (options === void 0) options = {};
+    var reFlags = flags(options);
+    var _a = options.encode, encode = _a === void 0 ? function(x) {
+        return x;
+    } : _a, _b = options.validate, validate = _b === void 0 ? true : _b;
+    // Compile all the tokens into regexps.
+    var matches = tokens.map(function(token) {
+        if (typeof token === "object") return new RegExp("^(?:" + token.pattern + ")$", reFlags);
+    });
+    return function(data) {
+        var path = "";
+        for(var i = 0; i < tokens.length; i++){
+            var token = tokens[i];
+            if (typeof token === "string") {
+                path += token;
+                continue;
+            }
+            var value = data ? data[token.name] : undefined;
+            var optional = token.modifier === "?" || token.modifier === "*";
+            var repeat = token.modifier === "*" || token.modifier === "+";
+            if (Array.isArray(value)) {
+                if (!repeat) throw new TypeError('Expected "' + token.name + '" to not repeat, but got an array');
+                if (value.length === 0) {
+                    if (optional) continue;
+                    throw new TypeError('Expected "' + token.name + '" to not be empty');
+                }
+                for(var j = 0; j < value.length; j++){
+                    var segment = encode(value[j], token);
+                    if (validate && !matches[i].test(segment)) throw new TypeError('Expected all "' + token.name + '" to match "' + token.pattern + '", but got "' + segment + '"');
+                    path += token.prefix + segment + token.suffix;
+                }
+                continue;
+            }
+            if (typeof value === "string" || typeof value === "number") {
+                var segment = encode(String(value), token);
+                if (validate && !matches[i].test(segment)) throw new TypeError('Expected "' + token.name + '" to match "' + token.pattern + '", but got "' + segment + '"');
+                path += token.prefix + segment + token.suffix;
+                continue;
+            }
+            if (optional) continue;
+            var typeOfMessage = repeat ? "an array" : "a string";
+            throw new TypeError('Expected "' + token.name + '" to be ' + typeOfMessage);
+        }
+        return path;
+    };
+}
+exports.tokensToFunction = tokensToFunction;
+/**
+ * Create path match function from `path-to-regexp` spec.
+ */ function match(str, options) {
+    var keys = [];
+    var re = pathToRegexp(str, keys, options);
+    return regexpToFunction(re, keys, options);
+}
+exports.match = match;
+/**
+ * Create a path match function from `path-to-regexp` output.
+ */ function regexpToFunction(re, keys, options) {
+    if (options === void 0) options = {};
+    var _a = options.decode, decode = _a === void 0 ? function(x) {
+        return x;
+    } : _a;
+    return function(pathname) {
+        var m = re.exec(pathname);
+        if (!m) return false;
+        var path = m[0], index = m.index;
+        var params = Object.create(null);
+        var _loop_1 = function(i) {
+            // tslint:disable-next-line
+            if (m[i] === undefined) return "continue";
+            var key = keys[i - 1];
+            if (key.modifier === "*" || key.modifier === "+") params[key.name] = m[i].split(key.prefix + key.suffix).map(function(value) {
+                return decode(value, key);
+            });
+            else params[key.name] = decode(m[i], key);
+        };
+        for(var i = 1; i < m.length; i++)_loop_1(i);
+        return {
+            path: path,
+            index: index,
+            params: params
+        };
+    };
+}
+exports.regexpToFunction = regexpToFunction;
+/**
+ * Escape a regular expression string.
+ */ function escapeString(str) {
+    return str.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1");
+}
+/**
+ * Get the flags for a regexp from the options.
+ */ function flags(options) {
+    return options && options.sensitive ? "" : "i";
+}
+/**
+ * Pull out keys from a regexp.
+ */ function regexpToRegexp(path, keys) {
+    if (!keys) return path;
+    // Use a negative lookahead to match only capturing groups.
+    var groups = path.source.match(/\((?!\?)/g);
+    if (groups) for(var i = 0; i < groups.length; i++)keys.push({
+        name: i,
+        prefix: "",
+        suffix: "",
+        modifier: "",
+        pattern: ""
+    });
+    return path;
+}
+/**
+ * Transform an array into a regexp.
+ */ function arrayToRegexp(paths, keys, options) {
+    var parts = paths.map(function(path) {
+        return pathToRegexp(path, keys, options).source;
+    });
+    return new RegExp("(?:" + parts.join("|") + ")", flags(options));
+}
+/**
+ * Create a path regexp from string input.
+ */ function stringToRegexp(path, keys, options) {
+    return tokensToRegexp(parse(path, options), keys, options);
+}
+/**
+ * Expose a function for taking tokens and returning a RegExp.
+ */ function tokensToRegexp(tokens, keys, options) {
+    if (options === void 0) options = {};
+    var _a = options.strict, strict = _a === void 0 ? false : _a, _b = options.start, start = _b === void 0 ? true : _b, _c = options.end, end = _c === void 0 ? true : _c, _d = options.encode, encode = _d === void 0 ? function(x) {
+        return x;
+    } : _d;
+    var endsWith = "[" + escapeString(options.endsWith || "") + "]|$";
+    var delimiter = "[" + escapeString(options.delimiter || "/#?") + "]";
+    var route = start ? "^" : "";
+    // Iterate over the tokens and create our regexp string.
+    for(var _i = 0, tokens_1 = tokens; _i < tokens_1.length; _i++){
+        var token = tokens_1[_i];
+        if (typeof token === "string") route += escapeString(encode(token));
+        else {
+            var prefix = escapeString(encode(token.prefix));
+            var suffix = escapeString(encode(token.suffix));
+            if (token.pattern) {
+                if (keys) keys.push(token);
+                if (prefix || suffix) {
+                    if (token.modifier === "+" || token.modifier === "*") {
+                        var mod = token.modifier === "*" ? "?" : "";
+                        route += "(?:" + prefix + "((?:" + token.pattern + ")(?:" + suffix + prefix + "(?:" + token.pattern + "))*)" + suffix + ")" + mod;
+                    } else route += "(?:" + prefix + "(" + token.pattern + ")" + suffix + ")" + token.modifier;
+                } else route += "(" + token.pattern + ")" + token.modifier;
+            } else route += "(?:" + prefix + suffix + ")" + token.modifier;
+        }
+    }
+    if (end) {
+        if (!strict) route += delimiter + "?";
+        route += !options.endsWith ? "$" : "(?=" + endsWith + ")";
+    } else {
+        var endToken = tokens[tokens.length - 1];
+        var isEndDelimited = typeof endToken === "string" ? delimiter.indexOf(endToken[endToken.length - 1]) > -1 : endToken === undefined;
+        if (!strict) route += "(?:" + delimiter + "(?=" + endsWith + "))?";
+        if (!isEndDelimited) route += "(?=" + delimiter + "|" + endsWith + ")";
+    }
+    return new RegExp(route, flags(options));
+}
+exports.tokensToRegexp = tokensToRegexp;
+/**
+ * Normalize the given path string, returning a regular expression.
+ *
+ * An empty array can be passed in for the keys, which will hold the
+ * placeholder key descriptions. For example, using `/user/:id`, `keys` will
+ * contain `[{ name: 'id', delimiter: '/', optional: false, repeat: false }]`.
+ */ function pathToRegexp(path, keys, options) {
+    if (path instanceof RegExp) return regexpToRegexp(path, keys);
+    if (Array.isArray(path)) return arrayToRegexp(path, keys, options);
+    return stringToRegexp(path, keys, options);
+}
+exports.pathToRegexp = pathToRegexp; //# sourceMappingURL=index.js.map
+
+},{}],"EhxbV":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.matchHas = matchHas;
+exports.compileNonPath = compileNonPath;
+exports.prepareDestination = prepareDestination;
+var _extends = require("@swc/helpers/lib/_extends.js").default;
+var _pathToRegexp = require("next/dist/compiled/path-to-regexp");
+var _escapeRegexp = require("../../escape-regexp");
+var _parseUrl = require("./parse-url");
+/**
+ * Ensure only a-zA-Z are used for param names for proper interpolating
+ * with path-to-regexp
+ */ function getSafeParamName(paramName) {
+    let newParamName = "";
+    for(let i = 0; i < paramName.length; i++){
+        const charCode = paramName.charCodeAt(i);
+        if (charCode > 64 && charCode < 91 || charCode > 96 && charCode < 123 // a-z
+        ) newParamName += paramName[i];
+    }
+    return newParamName;
+}
+function escapeSegment(str, segmentName) {
+    return str.replace(new RegExp(`:${_escapeRegexp.escapeStringRegexp(segmentName)}`, "g"), `__ESC_COLON_${segmentName}`);
+}
+function unescapeSegments(str) {
+    return str.replace(/__ESC_COLON_/gi, ":");
+}
+function matchHas(req, has, query) {
+    const params = {};
+    const allMatch = has.every((hasItem)=>{
+        let value;
+        let key = hasItem.key;
+        switch(hasItem.type){
+            case "header":
+                key = key.toLowerCase();
+                value = req.headers[key];
+                break;
+            case "cookie":
+                value = req.cookies[hasItem.key];
+                break;
+            case "query":
+                value = query[key];
+                break;
+            case "host":
+                {
+                    const { host  } = (req == null ? void 0 : req.headers) || {};
+                    // remove port from host if present
+                    const hostname = host == null ? void 0 : host.split(":")[0].toLowerCase();
+                    value = hostname;
+                    break;
+                }
+            default:
+                break;
+        }
+        if (!hasItem.value && value) {
+            params[getSafeParamName(key)] = value;
+            return true;
+        } else if (value) {
+            const matcher = new RegExp(`^${hasItem.value}$`);
+            const matches = Array.isArray(value) ? value.slice(-1)[0].match(matcher) : value.match(matcher);
+            if (matches) {
+                if (Array.isArray(matches)) {
+                    if (matches.groups) Object.keys(matches.groups).forEach((groupKey)=>{
+                        params[groupKey] = matches.groups[groupKey];
+                    });
+                    else if (hasItem.type === "host" && matches[0]) params.host = matches[0];
+                }
+                return true;
+            }
+        }
+        return false;
+    });
+    if (allMatch) return params;
+    return false;
+}
+function compileNonPath(value, params) {
+    if (!value.includes(":")) return value;
+    for (const key of Object.keys(params))if (value.includes(`:${key}`)) value = value.replace(new RegExp(`:${key}\\*`, "g"), `:${key}--ESCAPED_PARAM_ASTERISKS`).replace(new RegExp(`:${key}\\?`, "g"), `:${key}--ESCAPED_PARAM_QUESTION`).replace(new RegExp(`:${key}\\+`, "g"), `:${key}--ESCAPED_PARAM_PLUS`).replace(new RegExp(`:${key}(?!\\w)`, "g"), `--ESCAPED_PARAM_COLON${key}`);
+    value = value.replace(/(:|\*|\?|\+|\(|\)|\{|\})/g, "\\$1").replace(/--ESCAPED_PARAM_PLUS/g, "+").replace(/--ESCAPED_PARAM_COLON/g, ":").replace(/--ESCAPED_PARAM_QUESTION/g, "?").replace(/--ESCAPED_PARAM_ASTERISKS/g, "*");
+    // the value needs to start with a forward-slash to be compiled
+    // correctly
+    return _pathToRegexp.compile(`/${value}`, {
+        validate: false
+    })(params).slice(1);
+}
+function prepareDestination(args) {
+    const query = Object.assign({}, args.query);
+    delete query.__nextLocale;
+    delete query.__nextDefaultLocale;
+    delete query.__nextDataReq;
+    let escapedDestination = args.destination;
+    for (const param of Object.keys(_extends({}, args.params, query)))escapedDestination = escapeSegment(escapedDestination, param);
+    const parsedDestination = _parseUrl.parseUrl(escapedDestination);
+    const destQuery = parsedDestination.query;
+    const destPath = unescapeSegments(`${parsedDestination.pathname}${parsedDestination.hash || ""}`);
+    const destHostname = unescapeSegments(parsedDestination.hostname || "");
+    const destPathParamKeys = [];
+    const destHostnameParamKeys = [];
+    _pathToRegexp.pathToRegexp(destPath, destPathParamKeys);
+    _pathToRegexp.pathToRegexp(destHostname, destHostnameParamKeys);
+    const destParams = [];
+    destPathParamKeys.forEach((key)=>destParams.push(key.name));
+    destHostnameParamKeys.forEach((key)=>destParams.push(key.name));
+    const destPathCompiler = _pathToRegexp.compile(destPath, // have already validated before we got to this point and validating
+    // breaks compiling destinations with named pattern params from the source
+    // e.g. /something:hello(.*) -> /another/:hello is broken with validation
+    // since compile validation is meant for reversing and not for inserting
+    // params from a separate path-regex into another
+    {
+        validate: false
+    });
+    const destHostnameCompiler = _pathToRegexp.compile(destHostname, {
+        validate: false
+    });
+    // update any params in query values
+    for (const [key1, strOrArray] of Object.entries(destQuery))// the value needs to start with a forward-slash to be compiled
+    // correctly
+    if (Array.isArray(strOrArray)) destQuery[key1] = strOrArray.map((value)=>compileNonPath(unescapeSegments(value), args.params));
+    else destQuery[key1] = compileNonPath(unescapeSegments(strOrArray), args.params);
+    // add path params to query if it's not a redirect and not
+    // already defined in destination query or path
+    let paramKeys = Object.keys(args.params).filter((name)=>name !== "nextInternalLocale");
+    if (args.appendParamsToQuery && !paramKeys.some((key)=>destParams.includes(key))) {
+        for (const key of paramKeys)if (!(key in destQuery)) destQuery[key] = args.params[key];
+    }
+    let newUrl;
+    try {
+        newUrl = destPathCompiler(args.params);
+        const [pathname, hash] = newUrl.split("#");
+        parsedDestination.hostname = destHostnameCompiler(args.params);
+        parsedDestination.pathname = pathname;
+        parsedDestination.hash = `${hash ? "#" : ""}${hash || ""}`;
+        delete parsedDestination.search;
+    } catch (err) {
+        if (err.message.match(/Expected .*? to not repeat, but got an array/)) throw new Error(`To use a multi-match in the destination you must add \`*\` at the end of the param name to signify it should repeat. https://nextjs.org/docs/messages/invalid-multi-match`);
+        throw err;
+    }
+    // Query merge order lowest priority to highest
+    // 1. initial URL query values
+    // 2. path segment values
+    // 3. destination specified query values
+    parsedDestination.query = _extends({}, query, parsedDestination.query);
+    return {
+        newUrl,
+        destQuery,
+        parsedDestination
+    };
+}
+
+},{"@swc/helpers/lib/_extends.js":"4vU6g","next/dist/compiled/path-to-regexp":"575Oc","../../escape-regexp":"g4TDV","./parse-url":"58L73"}],"g4TDV":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.escapeStringRegexp = escapeStringRegexp;
+// regexp is based on https://github.com/sindresorhus/escape-string-regexp
+const reHasRegExp = /[|\\{}()[\]^$+*?.-]/;
+const reReplaceRegExp = /[|\\{}()[\]^$+*?.-]/g;
+function escapeStringRegexp(str) {
+    // see also: https://github.com/lodash/lodash/blob/2da024c3b4f9947a48517639de7560457cd4ec6c/escapeRegExp.js#L23
+    if (reHasRegExp.test(str)) return str.replace(reReplaceRegExp, "\\$&");
+    return str;
+}
+
+},{}],"58L73":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.parseUrl = parseUrl;
+var _querystring = require("./querystring");
+var _parseRelativeUrl = require("./parse-relative-url");
+function parseUrl(url) {
+    if (url.startsWith("/")) return _parseRelativeUrl.parseRelativeUrl(url);
+    const parsedURL = new URL(url);
+    return {
+        hash: parsedURL.hash,
+        hostname: parsedURL.hostname,
+        href: parsedURL.href,
+        pathname: parsedURL.pathname,
+        port: parsedURL.port,
+        protocol: parsedURL.protocol,
+        query: _querystring.searchParamsToUrlQuery(parsedURL.searchParams),
+        search: parsedURL.search
+    };
+}
+
+},{"./querystring":"PeN2l","./parse-relative-url":"lDl7e"}],"gS7mU":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.removeBasePath = removeBasePath;
+var _hasBasePath = require("./has-base-path");
+const basePath = "";
+function removeBasePath(path) {
+    path = path.slice(basePath.length);
+    if (!path.startsWith("/")) path = `/${path}`;
+    return path;
+}
+if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
+    Object.defineProperty(exports.default, "__esModule", {
+        value: true
+    });
+    Object.assign(exports.default, exports);
+    module.exports = exports.default;
+}
+
+},{"./has-base-path":"6NT5g"}],"6NT5g":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.hasBasePath = hasBasePath;
+var _pathHasPrefix = require("../shared/lib/router/utils/path-has-prefix");
+const basePath = "";
+function hasBasePath(path) {
+    return _pathHasPrefix.pathHasPrefix(path, basePath);
+}
+if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
+    Object.defineProperty(exports.default, "__esModule", {
+        value: true
+    });
+    Object.assign(exports.default, exports);
+    module.exports = exports.default;
+}
+
+},{"../shared/lib/router/utils/path-has-prefix":"cVgm7"}],"cVgm7":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.pathHasPrefix = pathHasPrefix;
+var _parsePath = require("./parse-path");
+function pathHasPrefix(path, prefix) {
+    if (typeof path !== "string") return false;
+    const { pathname  } = _parsePath.parsePath(path);
+    return pathname === prefix || pathname.startsWith(prefix + "/");
+}
+
+},{"./parse-path":"9lS3k"}],"hBdpi":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.getRouteMatcher = getRouteMatcher;
+var _utils = require("../../utils");
+function getRouteMatcher({ re , groups  }) {
+    return (pathname)=>{
+        const routeMatch = re.exec(pathname);
+        if (!routeMatch) return false;
+        const decode = (param)=>{
+            try {
+                return decodeURIComponent(param);
+            } catch (_) {
+                throw new _utils.DecodeError("failed to decode param");
+            }
+        };
+        const params = {};
+        Object.keys(groups).forEach((slugName)=>{
+            const g = groups[slugName];
+            const m = routeMatch[g.pos];
+            if (m !== undefined) params[slugName] = ~m.indexOf("/") ? m.split("/").map((entry)=>decode(entry)) : g.repeat ? [
+                decode(m)
+            ] : decode(m);
+        });
+        return params;
+    };
+}
+
+},{"../../utils":"cHiay"}],"7W7zJ":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.getRouteRegex = getRouteRegex;
+exports.getNamedRouteRegex = getNamedRouteRegex;
+exports.getNamedMiddlewareRegex = getNamedMiddlewareRegex;
+var _extends = require("@swc/helpers/lib/_extends.js").default;
+var _escapeRegexp = require("../../escape-regexp");
+var _removeTrailingSlash = require("./remove-trailing-slash");
+/**
+ * Parses a given parameter from a route to a data structure that can be used
+ * to generate the parametrized route. Examples:
+ *   - `[...slug]` -> `{ name: 'slug', repeat: true, optional: true }`
+ *   - `[foo]` -> `{ name: 'foo', repeat: false, optional: true }`
+ *   - `bar` -> `{ name: 'bar', repeat: false, optional: false }`
+ */ function parseParameter(param) {
+    const optional = param.startsWith("[") && param.endsWith("]");
+    if (optional) param = param.slice(1, -1);
+    const repeat = param.startsWith("...");
+    if (repeat) param = param.slice(3);
+    return {
+        key: param,
+        repeat,
+        optional
+    };
+}
+function getParametrizedRoute(route) {
+    const segments = _removeTrailingSlash.removeTrailingSlash(route).slice(1).split("/");
+    const groups = {};
+    let groupIndex = 1;
+    return {
+        parameterizedRoute: segments.map((segment)=>{
+            if (segment.startsWith("[") && segment.endsWith("]")) {
+                const { key , optional , repeat  } = parseParameter(segment.slice(1, -1));
+                groups[key] = {
+                    pos: groupIndex++,
+                    repeat,
+                    optional
+                };
+                return repeat ? optional ? "(?:/(.+?))?" : "/(.+?)" : "/([^/]+?)";
+            } else return `/${_escapeRegexp.escapeStringRegexp(segment)}`;
+        }).join(""),
+        groups
+    };
+}
+function getRouteRegex(normalizedRoute) {
+    const { parameterizedRoute , groups  } = getParametrizedRoute(normalizedRoute);
+    return {
+        re: new RegExp(`^${parameterizedRoute}(?:/)?$`),
+        groups: groups
+    };
+}
+/**
+ * Builds a function to generate a minimal routeKey using only a-z and minimal
+ * number of characters.
+ */ function buildGetSafeRouteKey() {
+    let routeKeyCharCode = 97;
+    let routeKeyCharLength = 1;
+    return ()=>{
+        let routeKey = "";
+        for(let i = 0; i < routeKeyCharLength; i++){
+            routeKey += String.fromCharCode(routeKeyCharCode);
+            routeKeyCharCode++;
+            if (routeKeyCharCode > 122) {
+                routeKeyCharLength++;
+                routeKeyCharCode = 97;
+            }
+        }
+        return routeKey;
+    };
+}
+function getNamedParametrizedRoute(route) {
+    const segments = _removeTrailingSlash.removeTrailingSlash(route).slice(1).split("/");
+    const getSafeRouteKey = buildGetSafeRouteKey();
+    const routeKeys = {};
+    return {
+        namedParameterizedRoute: segments.map((segment)=>{
+            if (segment.startsWith("[") && segment.endsWith("]")) {
+                const { key , optional , repeat  } = parseParameter(segment.slice(1, -1));
+                // replace any non-word characters since they can break
+                // the named regex
+                let cleanedKey = key.replace(/\W/g, "");
+                let invalidKey = false;
+                // check if the key is still invalid and fallback to using a known
+                // safe key
+                if (cleanedKey.length === 0 || cleanedKey.length > 30) invalidKey = true;
+                if (!isNaN(parseInt(cleanedKey.slice(0, 1)))) invalidKey = true;
+                if (invalidKey) cleanedKey = getSafeRouteKey();
+                routeKeys[cleanedKey] = key;
+                return repeat ? optional ? `(?:/(?<${cleanedKey}>.+?))?` : `/(?<${cleanedKey}>.+?)` : `/(?<${cleanedKey}>[^/]+?)`;
+            } else return `/${_escapeRegexp.escapeStringRegexp(segment)}`;
+        }).join(""),
+        routeKeys
+    };
+}
+function getNamedRouteRegex(normalizedRoute) {
+    const result = getNamedParametrizedRoute(normalizedRoute);
+    return _extends({}, getRouteRegex(normalizedRoute), {
+        namedRegex: `^${result.namedParameterizedRoute}(?:/)?$`,
+        routeKeys: result.routeKeys
+    });
+}
+function getNamedMiddlewareRegex(normalizedRoute, options) {
+    const { parameterizedRoute  } = getParametrizedRoute(normalizedRoute);
+    const { catchAll =true  } = options;
+    if (parameterizedRoute === "/") {
+        let catchAllRegex = catchAll ? ".*" : "";
+        return {
+            namedRegex: `^/${catchAllRegex}$`
+        };
+    }
+    const { namedParameterizedRoute  } = getNamedParametrizedRoute(normalizedRoute);
+    let catchAllGroupedRegex = catchAll ? "(?:(/.*)?)" : "";
+    return {
+        namedRegex: `^${namedParameterizedRoute}${catchAllGroupedRegex}$`
+    };
+}
+
+},{"@swc/helpers/lib/_extends.js":"4vU6g","../../escape-regexp":"g4TDV","./remove-trailing-slash":"ltEax"}],"aBY4l":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.formatUrl = formatUrl;
+exports.formatWithValidation = formatWithValidation;
+exports.urlObjectKeys = void 0;
+var _interop_require_wildcard = require("@swc/helpers/lib/_interop_require_wildcard.js").default;
+var querystring = _interop_require_wildcard(require("./querystring"));
+const slashedProtocols = /https?|ftp|gopher|file/;
+function formatUrl(urlObj) {
+    let { auth , hostname  } = urlObj;
+    let protocol = urlObj.protocol || "";
+    let pathname = urlObj.pathname || "";
+    let hash = urlObj.hash || "";
+    let query = urlObj.query || "";
+    let host = false;
+    auth = auth ? encodeURIComponent(auth).replace(/%3A/i, ":") + "@" : "";
+    if (urlObj.host) host = auth + urlObj.host;
+    else if (hostname) {
+        host = auth + (~hostname.indexOf(":") ? `[${hostname}]` : hostname);
+        if (urlObj.port) host += ":" + urlObj.port;
+    }
+    if (query && typeof query === "object") query = String(querystring.urlQueryToSearchParams(query));
+    let search = urlObj.search || query && `?${query}` || "";
+    if (protocol && !protocol.endsWith(":")) protocol += ":";
+    if (urlObj.slashes || (!protocol || slashedProtocols.test(protocol)) && host !== false) {
+        host = "//" + (host || "");
+        if (pathname && pathname[0] !== "/") pathname = "/" + pathname;
+    } else if (!host) host = "";
+    if (hash && hash[0] !== "#") hash = "#" + hash;
+    if (search && search[0] !== "?") search = "?" + search;
+    pathname = pathname.replace(/[?#]/g, encodeURIComponent);
+    search = search.replace("#", "%23");
+    return `${protocol}${host}${pathname}${search}${hash}`;
+}
+const urlObjectKeys = [
+    "auth",
+    "hash",
+    "host",
+    "hostname",
+    "href",
+    "path",
+    "pathname",
+    "port",
+    "protocol",
+    "query",
+    "search",
+    "slashes", 
+];
+exports.urlObjectKeys = urlObjectKeys;
+function formatWithValidation(url) {
+    if (url !== null && typeof url === "object") Object.keys(url).forEach((key)=>{
+        if (urlObjectKeys.indexOf(key) === -1) console.warn(`Unknown key passed via urlObject into url.format: ${key}`);
+    });
+    return formatUrl(url);
+}
+
+},{"@swc/helpers/lib/_interop_require_wildcard.js":"frrjo","./querystring":"PeN2l"}],"ld5PD":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.detectDomainLocale = void 0;
+const detectDomainLocale = (...args)=>{};
+exports.detectDomainLocale = detectDomainLocale;
+if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
+    Object.defineProperty(exports.default, "__esModule", {
+        value: true
+    });
+    Object.assign(exports.default, exports);
+    module.exports = exports.default;
+}
+
+},{}],"8fuhH":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.addLocale = void 0;
+var _normalizeTrailingSlash = require("./normalize-trailing-slash");
+const addLocale = (path, ...args)=>{
+    return path;
+};
+exports.addLocale = addLocale;
+if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
+    Object.defineProperty(exports.default, "__esModule", {
+        value: true
+    });
+    Object.assign(exports.default, exports);
+    module.exports = exports.default;
+}
+
+},{"./normalize-trailing-slash":"a5Qce"}],"d72mY":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.removeLocale = removeLocale;
+var _parsePath = require("../shared/lib/router/utils/parse-path");
+function removeLocale(path, locale) {
+    return path;
+}
+if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
+    Object.defineProperty(exports.default, "__esModule", {
+        value: true
+    });
+    Object.assign(exports.default, exports);
+    module.exports = exports.default;
+}
+
+},{"../shared/lib/router/utils/parse-path":"9lS3k"}],"7l5aF":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.addBasePath = addBasePath;
+var _addPathPrefix = require("../shared/lib/router/utils/add-path-prefix");
+var _normalizeTrailingSlash = require("./normalize-trailing-slash");
+const basePath = "";
+function addBasePath(path, required) {
+    return _normalizeTrailingSlash.normalizePathTrailingSlash(_addPathPrefix.addPathPrefix(path, basePath));
+}
+if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
+    Object.defineProperty(exports.default, "__esModule", {
+        value: true
+    });
+    Object.assign(exports.default, exports);
+    module.exports = exports.default;
+}
+
+},{"../shared/lib/router/utils/add-path-prefix":"2Cwev","./normalize-trailing-slash":"a5Qce"}],"2Cwev":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.addPathPrefix = addPathPrefix;
+var _parsePath = require("./parse-path");
+function addPathPrefix(path, prefix) {
+    if (!path.startsWith("/") || !prefix) return path;
+    const { pathname , query , hash  } = _parsePath.parsePath(path);
+    return `${prefix}${pathname}${query}${hash}`;
+}
+
+},{"./parse-path":"9lS3k"}],"24hnY":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.getNextPathnameInfo = getNextPathnameInfo;
+var _normalizeLocalePath = require("../../i18n/normalize-locale-path");
+var _removePathPrefix = require("./remove-path-prefix");
+var _pathHasPrefix = require("./path-has-prefix");
+function getNextPathnameInfo(pathname, options) {
+    var _nextConfig;
+    const { basePath , i18n , trailingSlash  } = (_nextConfig = options.nextConfig) != null ? _nextConfig : {};
+    const info = {
+        pathname: pathname,
+        trailingSlash: pathname !== "/" ? pathname.endsWith("/") : trailingSlash
+    };
+    if (basePath && _pathHasPrefix.pathHasPrefix(info.pathname, basePath)) {
+        info.pathname = _removePathPrefix.removePathPrefix(info.pathname, basePath);
+        info.basePath = basePath;
+    }
+    if (options.parseData === true && info.pathname.startsWith("/_next/data/") && info.pathname.endsWith(".json")) {
+        const paths = info.pathname.replace(/^\/_next\/data\//, "").replace(/\.json$/, "").split("/");
+        const buildId = paths[0];
+        info.pathname = paths[1] !== "index" ? `/${paths.slice(1).join("/")}` : "/";
+        info.buildId = buildId;
+    }
+    if (i18n) {
+        const pathLocale = _normalizeLocalePath.normalizeLocalePath(info.pathname, i18n.locales);
+        info.locale = pathLocale == null ? void 0 : pathLocale.detectedLocale;
+        info.pathname = (pathLocale == null ? void 0 : pathLocale.pathname) || info.pathname;
+    }
+    return info;
+}
+
+},{"../../i18n/normalize-locale-path":"iF0G9","./remove-path-prefix":"ilN2g","./path-has-prefix":"cVgm7"}],"ilN2g":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.removePathPrefix = removePathPrefix;
+var _pathHasPrefix = require("./path-has-prefix");
+function removePathPrefix(path, prefix) {
+    if (_pathHasPrefix.pathHasPrefix(path, prefix)) {
+        const withoutPrefix = path.slice(prefix.length);
+        return withoutPrefix.startsWith("/") ? withoutPrefix : `/${withoutPrefix}`;
+    }
+    return path;
+}
+
+},{"./path-has-prefix":"cVgm7"}],"b08uw":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.formatNextPathnameInfo = formatNextPathnameInfo;
+var _removeTrailingSlash = require("./remove-trailing-slash");
+var _addPathPrefix = require("./add-path-prefix");
+var _addPathSuffix = require("./add-path-suffix");
+var _addLocale = require("./add-locale");
+function formatNextPathnameInfo(info) {
+    let pathname = _addLocale.addLocale(info.pathname, info.locale, info.buildId ? undefined : info.defaultLocale, info.ignorePrefix);
+    if (info.buildId) pathname = _addPathSuffix.addPathSuffix(_addPathPrefix.addPathPrefix(pathname, `/_next/data/${info.buildId}`), info.pathname === "/" ? "index.json" : ".json");
+    pathname = _addPathPrefix.addPathPrefix(pathname, info.basePath);
+    return info.trailingSlash ? !info.buildId && !pathname.endsWith("/") ? _addPathSuffix.addPathSuffix(pathname, "/") : pathname : _removeTrailingSlash.removeTrailingSlash(pathname);
+}
+
+},{"./remove-trailing-slash":"ltEax","./add-path-prefix":"2Cwev","./add-path-suffix":"4FJ90","./add-locale":"3JUC0"}],"4FJ90":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.addPathSuffix = addPathSuffix;
+var _parsePath = require("./parse-path");
+function addPathSuffix(path, suffix) {
+    if (!path.startsWith("/") || !suffix) return path;
+    const { pathname , query , hash  } = _parsePath.parsePath(path);
+    return `${pathname}${suffix}${query}${hash}`;
+}
+
+},{"./parse-path":"9lS3k"}],"3JUC0":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.addLocale = addLocale;
+var _addPathPrefix = require("./add-path-prefix");
+var _pathHasPrefix = require("./path-has-prefix");
+function addLocale(path, locale, defaultLocale, ignorePrefix) {
+    if (locale && locale !== defaultLocale && (ignorePrefix || !_pathHasPrefix.pathHasPrefix(path.toLowerCase(), `/${locale.toLowerCase()}`) && !_pathHasPrefix.pathHasPrefix(path.toLowerCase(), "/api"))) return _addPathPrefix.addPathPrefix(path, `/${locale}`);
+    return path;
+}
+
+},{"./add-path-prefix":"2Cwev","./path-has-prefix":"cVgm7"}],"i3HBc":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.compareRouterStates = compareRouterStates;
+function compareRouterStates(a, b) {
+    const stateKeys = Object.keys(a);
+    if (stateKeys.length !== Object.keys(b).length) return false;
+    for(let i = stateKeys.length; i--;){
+        const key = stateKeys[i];
+        if (key === "query") {
+            const queryKeys = Object.keys(a.query);
+            if (queryKeys.length !== Object.keys(b.query).length) return false;
+            for(let j = queryKeys.length; j--;){
+                const queryKey = queryKeys[j];
+                if (!b.query.hasOwnProperty(queryKey) || a.query[queryKey] !== b.query[queryKey]) return false;
+            }
+        } else if (!b.hasOwnProperty(key) || a[key] !== b[key]) return false;
+    }
+    return true;
+}
+
+},{}],"eGU1s":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.isBot = isBot;
+function isBot(userAgent) {
+    return /Googlebot|Mediapartners-Google|AdsBot-Google|googleweblight|Storebot-Google|Google-PageRenderer|Bingbot|BingPreview|Slurp|DuckDuckBot|baiduspider|yandex|sogou|LinkedInBot|bitlybot|tumblr|vkShare|quora link preview|facebookexternalhit|facebookcatalog|Twitterbot|applebot|redditbot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|ia_archiver/i.test(userAgent);
+}
+
+},{}],"8mz76":[function(require,module,exports) {
+"use strict";
+module.exports = require("./cjs/react-is.development.js");
+
+},{"./cjs/react-is.development.js":"l40OM"}],"l40OM":[function(require,module,exports) {
+/** @license React v17.0.2
+ * react-is.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ "use strict";
+(function() {
+    "use strict";
+    // ATTENTION
+    // When adding new symbols to this file,
+    // Please consider also adding to 'react-devtools-shared/src/backend/ReactSymbols'
+    // The Symbol used to tag the ReactElement-like types. If there is no native Symbol
+    // nor polyfill, then a plain number is used for performance.
+    var REACT_ELEMENT_TYPE = 0xeac7;
+    var REACT_PORTAL_TYPE = 0xeaca;
+    var REACT_FRAGMENT_TYPE = 0xeacb;
+    var REACT_STRICT_MODE_TYPE = 0xeacc;
+    var REACT_PROFILER_TYPE = 0xead2;
+    var REACT_PROVIDER_TYPE = 0xeacd;
+    var REACT_CONTEXT_TYPE = 0xeace;
+    var REACT_FORWARD_REF_TYPE = 0xead0;
+    var REACT_SUSPENSE_TYPE = 0xead1;
+    var REACT_SUSPENSE_LIST_TYPE = 0xead8;
+    var REACT_MEMO_TYPE = 0xead3;
+    var REACT_LAZY_TYPE = 0xead4;
+    var REACT_BLOCK_TYPE = 0xead9;
+    var REACT_SERVER_BLOCK_TYPE = 0xeada;
+    var REACT_FUNDAMENTAL_TYPE = 0xead5;
+    var REACT_SCOPE_TYPE = 0xead7;
+    var REACT_OPAQUE_ID_TYPE = 0xeae0;
+    var REACT_DEBUG_TRACING_MODE_TYPE = 0xeae1;
+    var REACT_OFFSCREEN_TYPE = 0xeae2;
+    var REACT_LEGACY_HIDDEN_TYPE = 0xeae3;
+    if (typeof Symbol === "function" && Symbol.for) {
+        var symbolFor = Symbol.for;
+        REACT_ELEMENT_TYPE = symbolFor("react.element");
+        REACT_PORTAL_TYPE = symbolFor("react.portal");
+        REACT_FRAGMENT_TYPE = symbolFor("react.fragment");
+        REACT_STRICT_MODE_TYPE = symbolFor("react.strict_mode");
+        REACT_PROFILER_TYPE = symbolFor("react.profiler");
+        REACT_PROVIDER_TYPE = symbolFor("react.provider");
+        REACT_CONTEXT_TYPE = symbolFor("react.context");
+        REACT_FORWARD_REF_TYPE = symbolFor("react.forward_ref");
+        REACT_SUSPENSE_TYPE = symbolFor("react.suspense");
+        REACT_SUSPENSE_LIST_TYPE = symbolFor("react.suspense_list");
+        REACT_MEMO_TYPE = symbolFor("react.memo");
+        REACT_LAZY_TYPE = symbolFor("react.lazy");
+        REACT_BLOCK_TYPE = symbolFor("react.block");
+        REACT_SERVER_BLOCK_TYPE = symbolFor("react.server.block");
+        REACT_FUNDAMENTAL_TYPE = symbolFor("react.fundamental");
+        REACT_SCOPE_TYPE = symbolFor("react.scope");
+        REACT_OPAQUE_ID_TYPE = symbolFor("react.opaque.id");
+        REACT_DEBUG_TRACING_MODE_TYPE = symbolFor("react.debug_trace_mode");
+        REACT_OFFSCREEN_TYPE = symbolFor("react.offscreen");
+        REACT_LEGACY_HIDDEN_TYPE = symbolFor("react.legacy_hidden");
+    }
+    // Filter certain DOM attributes (e.g. src, href) if their values are empty strings.
+    var enableScopeAPI = false; // Experimental Create Event Handle API.
+    function isValidElementType(type) {
+        if (typeof type === "string" || typeof type === "function") return true;
+         // Note: typeof might be other than 'symbol' or 'number' (e.g. if it's a polyfill).
+        if (type === REACT_FRAGMENT_TYPE || type === REACT_PROFILER_TYPE || type === REACT_DEBUG_TRACING_MODE_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || type === REACT_LEGACY_HIDDEN_TYPE || enableScopeAPI) return true;
+        if (typeof type === "object" && type !== null) {
+            if (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_BLOCK_TYPE || type[0] === REACT_SERVER_BLOCK_TYPE) return true;
+        }
+        return false;
+    }
+    function typeOf(object) {
+        if (typeof object === "object" && object !== null) {
+            var $$typeof = object.$$typeof;
+            switch($$typeof){
+                case REACT_ELEMENT_TYPE:
+                    var type = object.type;
+                    switch(type){
+                        case REACT_FRAGMENT_TYPE:
+                        case REACT_PROFILER_TYPE:
+                        case REACT_STRICT_MODE_TYPE:
+                        case REACT_SUSPENSE_TYPE:
+                        case REACT_SUSPENSE_LIST_TYPE:
+                            return type;
+                        default:
+                            var $$typeofType = type && type.$$typeof;
+                            switch($$typeofType){
+                                case REACT_CONTEXT_TYPE:
+                                case REACT_FORWARD_REF_TYPE:
+                                case REACT_LAZY_TYPE:
+                                case REACT_MEMO_TYPE:
+                                case REACT_PROVIDER_TYPE:
+                                    return $$typeofType;
+                                default:
+                                    return $$typeof;
+                            }
+                    }
+                case REACT_PORTAL_TYPE:
+                    return $$typeof;
+            }
+        }
+        return undefined;
+    }
+    var ContextConsumer = REACT_CONTEXT_TYPE;
+    var ContextProvider = REACT_PROVIDER_TYPE;
+    var Element = REACT_ELEMENT_TYPE;
+    var ForwardRef = REACT_FORWARD_REF_TYPE;
+    var Fragment = REACT_FRAGMENT_TYPE;
+    var Lazy = REACT_LAZY_TYPE;
+    var Memo = REACT_MEMO_TYPE;
+    var Portal = REACT_PORTAL_TYPE;
+    var Profiler = REACT_PROFILER_TYPE;
+    var StrictMode = REACT_STRICT_MODE_TYPE;
+    var Suspense = REACT_SUSPENSE_TYPE;
+    var hasWarnedAboutDeprecatedIsAsyncMode = false;
+    var hasWarnedAboutDeprecatedIsConcurrentMode = false; // AsyncMode should be deprecated
+    function isAsyncMode(object) {
+        if (!hasWarnedAboutDeprecatedIsAsyncMode) {
+            hasWarnedAboutDeprecatedIsAsyncMode = true; // Using console['warn'] to evade Babel and ESLint
+            console["warn"]("The ReactIs.isAsyncMode() alias has been deprecated, and will be removed in React 18+.");
+        }
+        return false;
+    }
+    function isConcurrentMode(object) {
+        if (!hasWarnedAboutDeprecatedIsConcurrentMode) {
+            hasWarnedAboutDeprecatedIsConcurrentMode = true; // Using console['warn'] to evade Babel and ESLint
+            console["warn"]("The ReactIs.isConcurrentMode() alias has been deprecated, and will be removed in React 18+.");
+        }
+        return false;
+    }
+    function isContextConsumer(object) {
+        return typeOf(object) === REACT_CONTEXT_TYPE;
+    }
+    function isContextProvider(object) {
+        return typeOf(object) === REACT_PROVIDER_TYPE;
+    }
+    function isElement(object) {
+        return typeof object === "object" && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+    }
+    function isForwardRef(object) {
+        return typeOf(object) === REACT_FORWARD_REF_TYPE;
+    }
+    function isFragment(object) {
+        return typeOf(object) === REACT_FRAGMENT_TYPE;
+    }
+    function isLazy(object) {
+        return typeOf(object) === REACT_LAZY_TYPE;
+    }
+    function isMemo(object) {
+        return typeOf(object) === REACT_MEMO_TYPE;
+    }
+    function isPortal(object) {
+        return typeOf(object) === REACT_PORTAL_TYPE;
+    }
+    function isProfiler(object) {
+        return typeOf(object) === REACT_PROFILER_TYPE;
+    }
+    function isStrictMode(object) {
+        return typeOf(object) === REACT_STRICT_MODE_TYPE;
+    }
+    function isSuspense(object) {
+        return typeOf(object) === REACT_SUSPENSE_TYPE;
+    }
+    exports.ContextConsumer = ContextConsumer;
+    exports.ContextProvider = ContextProvider;
+    exports.Element = Element;
+    exports.ForwardRef = ForwardRef;
+    exports.Fragment = Fragment;
+    exports.Lazy = Lazy;
+    exports.Memo = Memo;
+    exports.Portal = Portal;
+    exports.Profiler = Profiler;
+    exports.StrictMode = StrictMode;
+    exports.Suspense = Suspense;
+    exports.isAsyncMode = isAsyncMode;
+    exports.isConcurrentMode = isConcurrentMode;
+    exports.isContextConsumer = isContextConsumer;
+    exports.isContextProvider = isContextProvider;
+    exports.isElement = isElement;
+    exports.isForwardRef = isForwardRef;
+    exports.isFragment = isFragment;
+    exports.isLazy = isLazy;
+    exports.isMemo = isMemo;
+    exports.isPortal = isPortal;
+    exports.isProfiler = isProfiler;
+    exports.isStrictMode = isStrictMode;
+    exports.isSuspense = isSuspense;
+    exports.isValidElementType = isValidElementType;
+    exports.typeOf = typeOf;
+})();
+
+},{}],"iJTGy":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.RouterContext = void 0;
+var _interop_require_default = require("@swc/helpers/lib/_interop_require_default.js").default;
+var _react = _interop_require_default(require("react"));
+const RouterContext = _react.default.createContext(null);
+exports.RouterContext = RouterContext;
+RouterContext.displayName = "RouterContext";
+
+},{"@swc/helpers/lib/_interop_require_default.js":"k1iFV","react":"21dqq"}],"1z2O4":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = withRouter;
+var _interop_require_default = require("@swc/helpers/lib/_interop_require_default.js").default;
+var _react = _interop_require_default(require("react"));
+var _router = require("./router");
+function withRouter(ComposedComponent) {
+    function WithRouterWrapper(props) {
+        return /*#__PURE__*/ _react.default.createElement(ComposedComponent, Object.assign({
+            router: _router.useRouter()
+        }, props));
+    }
+    WithRouterWrapper.getInitialProps = ComposedComponent.getInitialProps;
+    WithRouterWrapper.origGetInitialProps = ComposedComponent.origGetInitialProps;
+    {
+        const name = ComposedComponent.displayName || ComposedComponent.name || "Unknown";
+        WithRouterWrapper.displayName = `withRouter(${name})`;
+    }
+    return WithRouterWrapper;
+}
+if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
+    Object.defineProperty(exports.default, "__esModule", {
+        value: true
+    });
+    Object.assign(exports.default, exports);
+    module.exports = exports.default;
+}
+
+},{"@swc/helpers/lib/_interop_require_default.js":"k1iFV","react":"21dqq","./router":"9DVWS"}],"jxb92":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "DropdownStyled", ()=>DropdownStyled);
+parcelHelpers.export(exports, "DropdownTriggerStyled", ()=>DropdownTriggerStyled);
+parcelHelpers.export(exports, "DropdownGroupStyled", ()=>DropdownGroupStyled);
+parcelHelpers.export(exports, "DropdownItemStyled", ()=>DropdownItemStyled);
+var _stitchesConfig = require("../../stitches.config");
+const DropdownStyled = (0, _stitchesConfig.styled)("div", {
+    display: "inline-block",
+    position: "relative",
+    verticalAlign: "middle"
+});
+const DropdownTriggerStyled = (0, _stitchesConfig.styled)("div", {
+    "*": {
+        cursor: "pointer"
+    },
+    "display": "inline-flex",
+    "position": "relative",
+    "verticalAlign": "middle"
+});
+const DropdownGroupStyled = (0, _stitchesConfig.styled)("div", {
+    backgroundColor: "$background",
+    border: "0.1rem solid $border",
+    borderRadius: "$1",
+    boxShadow: "$3",
+    lineBreak: "auto",
+    marginTop: "5%",
+    overflowY: "auto",
+    padding: "calc($2 / 1.5)",
+    position: "absolute",
+    textAlign: "left !important",
+    transition: "$default",
+    variants: {
+        animation: {
+            false: {
+                animation: `${(0, _stitchesConfig.fadeOut)} .2s`,
+                animationFillMode: "forwards"
+            },
+            true: {
+                animation: `${(0, _stitchesConfig.fadeIn)} .2s`,
+                animationFillMode: "forwards"
+            }
+        }
+    },
+    width: "100%",
+    zIndex: "$dropdown"
+});
+const DropdownItemStyled = (0, _stitchesConfig.styled)("div", {
+    "&.active": {
+        "&:hover": {
+            backgroundColor: "$defaultHover"
+        }
+    },
+    "&:hover": {
+        backgroundColor: "$default",
+        borderBottomColor: "transparent",
+        borderRadius: "$1"
+    },
+    "&:last-child": {
+        borderBottom: 0
+    },
+    "borderRadius": 0,
+    "cursor": "pointer",
+    "display": "flex",
+    "fontSize": "$h6",
+    "lineHeight": "normal !important",
+    "transition": "$default",
+    "variants": {
+        submenu: {
+            false: {
+                padding: "$2 $3"
+            },
+            true: {
+                a: {
+                    display: "block",
+                    padding: "$3",
+                    width: "100%"
+                },
+                padding: 0
+            }
+        }
+    }
+});
+exports.default = DropdownStyled;
+
+},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ikXqf":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Image", ()=>(0, _imageDefault.default));
-parcelHelpers.export(exports, "ThreesImage", ()=>(0, _image.ThreesImage));
 var _image = require("./Image");
 var _imageDefault = parcelHelpers.interopDefault(_image);
 
@@ -32997,39 +40740,35 @@ $parcel$ReactRefreshHelpers$2630.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "ThreesImage", ()=>ThreesImage);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+// import React from 'react';
 var _image = require("next/image");
 var _imageDefault = parcelHelpers.interopDefault(_image);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
 var _imageStyles = require("./Image.styles");
 function Image(props) {
     const { borderRadius , css , hover , fillHeight , ...rest } = props;
-    if (props.src && props.src !== "") return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _imageStyles.ImageStyled), {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _imageStyles.ImageStyled), {
         borderRadius: borderRadius,
         css: {
-            height: fillHeight || "100%",
-            ...css
+            ...css,
+            height: fillHeight || "100%"
         },
         hover: hover,
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _imageDefault.default), {
             ...rest
         }, void 0, false, {
             fileName: "src/components/Image/Image.tsx",
-            lineNumber: 26,
-            columnNumber: 9
+            lineNumber: 25,
+            columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/components/Image/Image.tsx",
-        lineNumber: 19,
-        columnNumber: 7
+        lineNumber: 18,
+        columnNumber: 5
     }, this);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {}, void 0, false);
 }
 exports.default = Image;
 _c = Image;
-const ThreesImage = Image;
 var _c;
 $RefreshReg$(_c, "Image");
 
@@ -33038,7 +40777,7 @@ $RefreshReg$(_c, "Image");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","next/image":"7q1Av","react":"21dqq","./Image.styles":"jpX72","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7q1Av":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","next/image":"7q1Av","./Image.styles":"jpX72","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7q1Av":[function(require,module,exports) {
 module.exports = require("./dist/client/image");
 
 },{"./dist/client/image":"5nHO8"}],"5nHO8":[function(require,module,exports) {
@@ -33727,91 +41466,7 @@ if ((typeof exports.default === "function" || typeof exports.default === "object
     module.exports = exports.default;
 }
 
-},{"@swc/helpers/lib/_extends.js":"4vU6g","@swc/helpers/lib/_interop_require_default.js":"k1iFV","@swc/helpers/lib/_interop_require_wildcard.js":"frrjo","@swc/helpers/lib/_object_without_properties_loose.js":"6DnfI","react":"21dqq","../shared/lib/head":"1DDNO","../shared/lib/image-config":"eQn6B","./use-intersection":"18ZWg","../shared/lib/image-config-context":"cVmIT","../shared/lib/utils":"cHiay","./normalize-trailing-slash":"a5Qce","../shared/lib/match-remote-pattern":"dONeA"}],"4vU6g":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = _extends;
-function _extends() {
-    return extends_.apply(this, arguments);
-}
-function extends_() {
-    extends_ = Object.assign || function(target) {
-        for(var i = 1; i < arguments.length; i++){
-            var source = arguments[i];
-            for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
-        }
-        return target;
-    };
-    return extends_.apply(this, arguments);
-}
-
-},{}],"k1iFV":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = _interopRequireDefault;
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {
-        default: obj
-    };
-}
-
-},{}],"frrjo":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = _interopRequireWildcard;
-function _interopRequireWildcard(obj, nodeInterop) {
-    if (!nodeInterop && obj && obj.__esModule) return obj;
-    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
-        default: obj
-    };
-    var cache = _getRequireWildcardCache(nodeInterop);
-    if (cache && cache.has(obj)) return cache.get(obj);
-    var newObj = {};
-    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-    for(var key in obj)if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
-        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-        if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
-        else newObj[key] = obj[key];
-    }
-    newObj.default = obj;
-    if (cache) cache.set(obj, newObj);
-    return newObj;
-}
-function _getRequireWildcardCache(nodeInterop1) {
-    if (typeof WeakMap !== "function") return null;
-    var cacheBabelInterop = new WeakMap();
-    var cacheNodeInterop = new WeakMap();
-    return (_getRequireWildcardCache = function(nodeInterop) {
-        return nodeInterop ? cacheNodeInterop : cacheBabelInterop;
-    })(nodeInterop1);
-}
-
-},{}],"6DnfI":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = _objectWithoutPropertiesLoose;
-function _objectWithoutPropertiesLoose(source, excluded) {
-    if (source == null) return {};
-    var target = {};
-    var sourceKeys = Object.keys(source);
-    var key, i;
-    for(i = 0; i < sourceKeys.length; i++){
-        key = sourceKeys[i];
-        if (excluded.indexOf(key) >= 0) continue;
-        target[key] = source[key];
-    }
-    return target;
-}
-
-},{}],"1DDNO":[function(require,module,exports) {
+},{"@swc/helpers/lib/_extends.js":"4vU6g","@swc/helpers/lib/_interop_require_default.js":"k1iFV","@swc/helpers/lib/_interop_require_wildcard.js":"frrjo","@swc/helpers/lib/_object_without_properties_loose.js":"6DnfI","react":"21dqq","../shared/lib/head":"1DDNO","../shared/lib/image-config":"eQn6B","./use-intersection":"18ZWg","../shared/lib/image-config-context":"cVmIT","../shared/lib/utils":"cHiay","./normalize-trailing-slash":"a5Qce","../shared/lib/match-remote-pattern":"dONeA"}],"1DDNO":[function(require,module,exports) {
 "use strict";
 "client";
 Object.defineProperty(exports, "__esModule", {
@@ -34009,18 +41664,6 @@ const AmpStateContext = _react.default.createContext({});
 exports.AmpStateContext = AmpStateContext;
 AmpStateContext.displayName = "AmpStateContext";
 
-},{"@swc/helpers/lib/_interop_require_default.js":"k1iFV","react":"21dqq"}],"4Wc5J":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.HeadManagerContext = void 0;
-var _interop_require_default = require("@swc/helpers/lib/_interop_require_default.js").default;
-var _react = _interop_require_default(require("react"));
-const HeadManagerContext = _react.default.createContext({});
-exports.HeadManagerContext = HeadManagerContext;
-HeadManagerContext.displayName = "HeadManagerContext";
-
 },{"@swc/helpers/lib/_interop_require_default.js":"k1iFV","react":"21dqq"}],"iHYni":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
@@ -34029,167 +41672,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.isInAmpMode = isInAmpMode;
 function isInAmpMode({ ampFirst =false , hybrid =false , hasQuery =false ,  } = {}) {
     return ampFirst || hybrid && hasQuery;
-}
-
-},{}],"cHiay":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.execOnce = execOnce;
-exports.getLocationOrigin = getLocationOrigin;
-exports.getURL = getURL;
-exports.getDisplayName = getDisplayName;
-exports.isResSent = isResSent;
-exports.normalizeRepeatedSlashes = normalizeRepeatedSlashes;
-exports.loadGetInitialProps = loadGetInitialProps;
-exports.ST = exports.SP = exports.warnOnce = exports.isAbsoluteUrl = void 0;
-var _async_to_generator = require("@swc/helpers/lib/_async_to_generator.js").default;
-function execOnce(fn) {
-    let used = false;
-    let result;
-    return (...args)=>{
-        if (!used) {
-            used = true;
-            result = fn(...args);
-        }
-        return result;
-    };
-}
-// Scheme: https://tools.ietf.org/html/rfc3986#section-3.1
-// Absolute URL: https://tools.ietf.org/html/rfc3986#section-4.3
-const ABSOLUTE_URL_REGEX = /^[a-zA-Z][a-zA-Z\d+\-.]*?:/;
-const isAbsoluteUrl = (url)=>ABSOLUTE_URL_REGEX.test(url);
-exports.isAbsoluteUrl = isAbsoluteUrl;
-function getLocationOrigin() {
-    const { protocol , hostname , port  } = window.location;
-    return `${protocol}//${hostname}${port ? ":" + port : ""}`;
-}
-function getURL() {
-    const { href  } = window.location;
-    const origin = getLocationOrigin();
-    return href.substring(origin.length);
-}
-function getDisplayName(Component) {
-    return typeof Component === "string" ? Component : Component.displayName || Component.name || "Unknown";
-}
-function isResSent(res) {
-    return res.finished || res.headersSent;
-}
-function normalizeRepeatedSlashes(url) {
-    const urlParts = url.split("?");
-    const urlNoQuery = urlParts[0];
-    return urlNoQuery // first we replace any non-encoded backslashes with forward
-    // then normalize repeated forward slashes
-    .replace(/\\/g, "/").replace(/\/\/+/g, "/") + (urlParts[1] ? `?${urlParts.slice(1).join("?")}` : "");
-}
-function loadGetInitialProps(App, ctx) {
-    return _loadGetInitialProps.apply(this, arguments);
-}
-function _loadGetInitialProps() {
-    _loadGetInitialProps = _async_to_generator(function*(App, ctx) {
-        var ref;
-        if ((ref = App.prototype) == null ? void 0 : ref.getInitialProps) {
-            const message = `"${getDisplayName(App)}.getInitialProps()" is defined as an instance method - visit https://nextjs.org/docs/messages/get-initial-props-as-an-instance-method for more information.`;
-            throw new Error(message);
-        }
-        // when called from _app `ctx` is nested in `ctx`
-        const res = ctx.res || ctx.ctx && ctx.ctx.res;
-        if (!App.getInitialProps) {
-            if (ctx.ctx && ctx.Component) // @ts-ignore pageProps default
-            return {
-                pageProps: yield loadGetInitialProps(ctx.Component, ctx.ctx)
-            };
-            return {};
-        }
-        const props = yield App.getInitialProps(ctx);
-        if (res && isResSent(res)) return props;
-        if (!props) {
-            const message1 = `"${getDisplayName(App)}.getInitialProps()" should resolve to an object. But found "${props}" instead.`;
-            throw new Error(message1);
-        }
-        if (Object.keys(props).length === 0 && !ctx.ctx) console.warn(`${getDisplayName(App)} returned an empty object from \`getInitialProps\`. This de-optimizes and prevents automatic static optimization. https://nextjs.org/docs/messages/empty-object-getInitialProps`);
-        return props;
-    });
-    return _loadGetInitialProps.apply(this, arguments);
-}
-let warnOnce = (_)=>{};
-{
-    const warnings = new Set();
-    exports.warnOnce = warnOnce = (msg)=>{
-        if (!warnings.has(msg)) console.warn(msg);
-        warnings.add(msg);
-    };
-}const SP = typeof performance !== "undefined";
-exports.SP = SP;
-const ST = SP && [
-    "mark",
-    "measure",
-    "getEntriesByName"
-].every((method)=>typeof performance[method] === "function");
-exports.ST = ST;
-class DecodeError extends Error {
-}
-exports.DecodeError = DecodeError;
-class NormalizeError extends Error {
-}
-exports.NormalizeError = NormalizeError;
-class PageNotFoundError extends Error {
-    constructor(page){
-        super();
-        this.code = "ENOENT";
-        this.message = `Cannot find module for page: ${page}`;
-    }
-}
-exports.PageNotFoundError = PageNotFoundError;
-class MissingStaticPage extends Error {
-    constructor(page, message){
-        super();
-        this.message = `Failed to load static file for page: ${page} ${message}`;
-    }
-}
-exports.MissingStaticPage = MissingStaticPage;
-class MiddlewareNotFoundError extends Error {
-    constructor(){
-        super();
-        this.code = "ENOENT";
-        this.message = `Cannot find the middleware module`;
-    }
-}
-exports.MiddlewareNotFoundError = MiddlewareNotFoundError;
-exports.warnOnce = warnOnce;
-
-},{"@swc/helpers/lib/_async_to_generator.js":"687bf"}],"687bf":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = _asyncToGenerator;
-function _asyncToGenerator(fn) {
-    return function() {
-        var self = this, args = arguments;
-        return new Promise(function(resolve, reject) {
-            var gen = fn.apply(self, args);
-            function _next(value) {
-                asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
-            }
-            function _throw(err) {
-                asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
-            }
-            _next(undefined);
-        });
-    };
-}
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
-    try {
-        var info = gen[key](arg);
-        var value = info.value;
-    } catch (error) {
-        reject(error);
-        return;
-    }
-    if (info.done) resolve(value);
-    else Promise.resolve(value).then(_next, _throw);
 }
 
 },{}],"eQn6B":[function(require,module,exports) {
@@ -34339,37 +41821,7 @@ if ((typeof exports.default === "function" || typeof exports.default === "object
     module.exports = exports.default;
 }
 
-},{"react":"21dqq","./request-idle-callback":"5zsyF"}],"5zsyF":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.cancelIdleCallback = exports.requestIdleCallback = void 0;
-const requestIdleCallback = typeof self !== "undefined" && self.requestIdleCallback && self.requestIdleCallback.bind(window) || function(cb) {
-    let start = Date.now();
-    return setTimeout(function() {
-        cb({
-            didTimeout: false,
-            timeRemaining: function() {
-                return Math.max(0, 50 - (Date.now() - start));
-            }
-        });
-    }, 1);
-};
-exports.requestIdleCallback = requestIdleCallback;
-const cancelIdleCallback = typeof self !== "undefined" && self.cancelIdleCallback && self.cancelIdleCallback.bind(window) || function(id) {
-    return clearTimeout(id);
-};
-exports.cancelIdleCallback = cancelIdleCallback;
-if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
-    Object.defineProperty(exports.default, "__esModule", {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-}
-
-},{}],"cVmIT":[function(require,module,exports) {
+},{"react":"21dqq","./request-idle-callback":"5zsyF"}],"cVmIT":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -34382,61 +41834,7 @@ const ImageConfigContext = _react.default.createContext(_imageConfig.imageConfig
 exports.ImageConfigContext = ImageConfigContext;
 ImageConfigContext.displayName = "ImageConfigContext";
 
-},{"@swc/helpers/lib/_interop_require_default.js":"k1iFV","react":"21dqq","./image-config":"eQn6B"}],"a5Qce":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.normalizePathTrailingSlash = void 0;
-var _removeTrailingSlash = require("../shared/lib/router/utils/remove-trailing-slash");
-var _parsePath = require("../shared/lib/router/utils/parse-path");
-const normalizePathTrailingSlash = (path)=>{
-    if (!path.startsWith("/")) return path;
-    const { pathname , query , hash  } = _parsePath.parsePath(path);
-    return `${_removeTrailingSlash.removeTrailingSlash(pathname)}${query}${hash}`;
-};
-exports.normalizePathTrailingSlash = normalizePathTrailingSlash;
-if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
-    Object.defineProperty(exports.default, "__esModule", {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-}
-
-},{"../shared/lib/router/utils/remove-trailing-slash":"ltEax","../shared/lib/router/utils/parse-path":"9lS3k"}],"ltEax":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.removeTrailingSlash = removeTrailingSlash;
-function removeTrailingSlash(route) {
-    return route.replace(/\/$/, "") || "/";
-}
-
-},{}],"9lS3k":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.parsePath = parsePath;
-function parsePath(path) {
-    const hashIndex = path.indexOf("#");
-    const queryIndex = path.indexOf("?");
-    const hasQuery = queryIndex > -1 && (hashIndex < 0 || queryIndex < hashIndex);
-    if (hasQuery || hashIndex > -1) return {
-        pathname: path.substring(0, hasQuery ? queryIndex : hashIndex),
-        query: hasQuery ? path.substring(queryIndex, hashIndex > -1 ? hashIndex : undefined) : "",
-        hash: hashIndex > -1 ? path.slice(hashIndex) : ""
-    };
-    return {
-        pathname: path,
-        query: "",
-        hash: ""
-    };
-}
-
-},{}],"dONeA":[function(require,module,exports) {
+},{"@swc/helpers/lib/_interop_require_default.js":"k1iFV","react":"21dqq","./image-config":"eQn6B"}],"dONeA":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -37697,7 +45095,7 @@ function formatProperty(ctx, value, recurseTimes, visibleKeys, key, array) {
             if (str.indexOf("\n") > -1) {
                 if (array) str = str.split("\n").map(function(line) {
                     return "  " + line;
-                }).join("\n").substr(2);
+                }).join("\n").slice(2);
                 else str = "\n" + str.split("\n").map(function(line) {
                     return "   " + line;
                 }).join("\n");
@@ -37708,7 +45106,7 @@ function formatProperty(ctx, value, recurseTimes, visibleKeys, key, array) {
         if (array && key.match(/^\d+$/)) return str;
         name = JSON.stringify("" + key);
         if (name.match(/^"([a-zA-Z_][a-zA-Z_0-9]*)"$/)) {
-            name = name.substr(1, name.length - 2);
+            name = name.slice(1, -1);
             name = ctx.stylize(name, "name");
         } else {
             name = name.replace(/'/g, "\\'").replace(/\\"/g, '"').replace(/(^"|"$)/g, "'");
@@ -39094,7327 +46492,7 @@ const ImageStyled = (0, _stitchesConfig.styled)("div", {
 });
 exports.default = ImageStyled;
 
-},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iMNz3":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "breakpoints", ()=>breakpoints);
-parcelHelpers.export(exports, "theme", ()=>theme);
-parcelHelpers.export(exports, "css", ()=>css);
-parcelHelpers.export(exports, "styled", ()=>styled);
-parcelHelpers.export(exports, "getCssText", ()=>getCssText);
-parcelHelpers.export(exports, "globalCss", ()=>globalCss);
-parcelHelpers.export(exports, "keyframes", ()=>keyframes);
-parcelHelpers.export(exports, "lightTheme", ()=>lightTheme);
-parcelHelpers.export(exports, "fadeIn", ()=>fadeIn);
-parcelHelpers.export(exports, "fadeOut", ()=>fadeOut);
-var _react = require("@stitches/react");
-const breakpoints = {
-    desktop: "@media only screen and (max-width: 1980px)",
-    desktopX: "@media only screen and (min-width: 1541px) and (max-width: 1980px)",
-    laptop: "@media only screen and (max-width: 1540px)",
-    laptopX: "@media only screen and (min-width: 921px) and (max-width: 1540px)",
-    phone: "@media only screen and (max-width: 740px)",
-    tablet: "@media only screen and (max-width: 920px)",
-    tabletX: "@media only screen and (min-width: 741px) and (max-width: 920px)",
-    wide: "@media only screen and (min-width: 1981px)"
-};
-const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _react.createStitches)({
-    theme: {
-        colors: {
-            accent: "rgb(162, 170, 194)",
-            background: "rgb(8, 10, 27)",
-            blueBorder: "rgba(115, 172, 255, 0.4)",
-            blueOverlay: "rgba(151, 193, 255, 0.2)",
-            blueText: "rgb(166, 179, 255)",
-            border: "rgba(253, 250, 246, 0.15)",
-            borderHover: "rgba(253, 250, 246, 0.1)",
-            default: "rgba(253, 250, 246, 0.06)",
-            defaultHover: "rgba(253, 250, 246, 0.1)",
-            greenBorder: "rgba(0, 200, 83, 0.4)",
-            greenOverlay: "rgba(101, 227, 124, 0.2)",
-            greenText: "rgb(124, 241, 151)",
-            orangeBorder: "rgba(255, 172, 115, 0.4)",
-            orangeOverlay: "rgba(255, 172, 115, 0.2)",
-            orangeText: "rgb(254, 177, 141)",
-            pinkBorder: "rgba(255, 115, 172, 0.4)",
-            pinkOverlay: "rgba(255, 115, 172, 0.2)",
-            pinkText: "rgb(255, 142, 221)",
-            purpleBorder: "rgba(172, 115, 255, 0.4)",
-            purpleOverlay: "rgba(172, 115, 255, 0.2)",
-            purpleText: "rgb(210, 142, 255)",
-            redBorder: "rgba(255, 115, 115, 0.4)",
-            redOverlay: "rgba(255, 115, 115, 0.2)",
-            redText: "rgb(251, 127, 143)",
-            text: "rgb(253, 250, 246)"
-        },
-        fontSizes: {
-            h1: "3.6rem",
-            h2: "3rem",
-            h3: "2.6rem",
-            h4: "1.7rem",
-            h5: "1.6rem",
-            h6: "1.5rem",
-            p: "1.3rem",
-            small: "1.2rem"
-        },
-        fontWeights: {
-            h1: "500",
-            h2: "500",
-            h3: "500",
-            h4: "bold",
-            h5: "normal",
-            h6: "normal",
-            p: "normal",
-            small: "normal"
-        },
-        fonts: {
-            default: "$sans",
-            sans: "Untitled Sans, apple-system, sans-serif",
-            serif: "Tiempos Headline"
-        },
-        media: breakpoints,
-        radii: {
-            1: "0.6rem",
-            2: "0.9rem",
-            3: "1.2rem"
-        },
-        shadows: {
-            1: "0 0.2rem 0.3rem 0 rgba(253, 250, 246, 0.03)",
-            2: "0 0.4rem 0.6rem 0 rgba(253, 250, 246, 0.03)",
-            3: "0 0.6rem 0.9rem 0 rgba(253, 250, 246, 0.03)"
-        },
-        space: {
-            1: "0.25rem",
-            2: "0.5rem",
-            3: "0.75rem",
-            4: "1rem",
-            5: "2rem",
-            6: "4rem",
-            7: "8rem",
-            8: "10rem"
-        },
-        transitions: {
-            default: "all 0.13s ease-in-out"
-        },
-        zIndices: {
-            dialog: 100,
-            dropdown: 125,
-            popover: 150,
-            toast: 1000
-        }
-    },
-    utils: {
-        desktop: (value)=>({
-                [breakpoints.desktop]: value
-            }),
-        desktopX: (value)=>({
-                [breakpoints.desktopX]: value
-            }),
-        hidden: (value)=>({
-                [breakpoints[value]]: {
-                    display: "none !important"
-                }
-            }),
-        hiddenInline: (value)=>({
-                display: "inline-block !important",
-                [breakpoints[value]]: {
-                    display: "none !important"
-                }
-            }),
-        laptop: (value)=>({
-                [breakpoints.laptop]: value
-            }),
-        laptopX: (value)=>({
-                [breakpoints.laptopX]: value
-            }),
-        phone: (value)=>({
-                [breakpoints.phone]: value
-            }),
-        tablet: (value)=>({
-                [breakpoints.tablet]: value
-            }),
-        tabletX: (value)=>({
-                [breakpoints.tabletX]: value
-            }),
-        visible: (value)=>({
-                display: "none",
-                [breakpoints[value]]: {
-                    display: "block"
-                }
-            }),
-        visibleInline: (value)=>({
-                display: "none",
-                [breakpoints[value]]: {
-                    display: "inline-block"
-                }
-            }),
-        wide: (value)=>({
-                [breakpoints.wide]: value
-            })
-    }
-});
-const lightTheme = (0, _react.createTheme)({
-    colors: {
-        accent: "rgb(40, 57, 73)",
-        background: "rgb(253, 250, 246)",
-        blueText: "rgb(32, 47, 136)",
-        border: "rgba(10, 12, 30,0.11)",
-        borderHover: "rgba(10, 12, 30, 0.09)",
-        default: "rgba(10, 12, 30, 0.04)",
-        defaultHover: "rgba(10, 12, 30, 0.06)",
-        greenText: "rgb(0, 76, 6)",
-        orangeText: "rgb(199, 84, 30)",
-        pinkText: "rgb(173, 22, 128)",
-        purpleText: "rgb(112, 23, 171)",
-        redText: "rgb(170, 28, 47)",
-        text: "rgb(10, 37, 64)"
-    },
-    shadows: {
-        1: "0 0.2rem 0.3rem 0 rgba(8, 10, 27, 0.1)",
-        2: "0 0.4rem 0.6rem 0 rgba(8, 10, 27, 0.1)",
-        3: "0 0.6rem 0.8rem 0 rgba(8, 10, 27, 0.1)"
-    }
-});
-const fadeIn = keyframes({
-    "0%": {
-        opacity: 0
-    },
-    "100%": {
-        opacity: 1
-    }
-});
-const fadeOut = keyframes({
-    "0%": {
-        opacity: 1
-    },
-    "100%": {
-        opacity: 0
-    }
-});
-
-},{"@stitches/react":"5m0Or","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5m0Or":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "createStitches", ()=>q) //# sourceMappingUrl=index.map
-;
-parcelHelpers.export(exports, "createTheme", ()=>Q);
-parcelHelpers.export(exports, "css", ()=>te);
-parcelHelpers.export(exports, "defaultThemeMap", ()=>n);
-parcelHelpers.export(exports, "globalCss", ()=>_);
-parcelHelpers.export(exports, "keyframes", ()=>ee);
-parcelHelpers.export(exports, "styled", ()=>re);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var e = "colors", t = "sizes", r = "space", n = {
-    gap: r,
-    gridGap: r,
-    columnGap: r,
-    gridColumnGap: r,
-    rowGap: r,
-    gridRowGap: r,
-    inset: r,
-    insetBlock: r,
-    insetBlockEnd: r,
-    insetBlockStart: r,
-    insetInline: r,
-    insetInlineEnd: r,
-    insetInlineStart: r,
-    margin: r,
-    marginTop: r,
-    marginRight: r,
-    marginBottom: r,
-    marginLeft: r,
-    marginBlock: r,
-    marginBlockEnd: r,
-    marginBlockStart: r,
-    marginInline: r,
-    marginInlineEnd: r,
-    marginInlineStart: r,
-    padding: r,
-    paddingTop: r,
-    paddingRight: r,
-    paddingBottom: r,
-    paddingLeft: r,
-    paddingBlock: r,
-    paddingBlockEnd: r,
-    paddingBlockStart: r,
-    paddingInline: r,
-    paddingInlineEnd: r,
-    paddingInlineStart: r,
-    top: r,
-    right: r,
-    bottom: r,
-    left: r,
-    scrollMargin: r,
-    scrollMarginTop: r,
-    scrollMarginRight: r,
-    scrollMarginBottom: r,
-    scrollMarginLeft: r,
-    scrollMarginX: r,
-    scrollMarginY: r,
-    scrollMarginBlock: r,
-    scrollMarginBlockEnd: r,
-    scrollMarginBlockStart: r,
-    scrollMarginInline: r,
-    scrollMarginInlineEnd: r,
-    scrollMarginInlineStart: r,
-    scrollPadding: r,
-    scrollPaddingTop: r,
-    scrollPaddingRight: r,
-    scrollPaddingBottom: r,
-    scrollPaddingLeft: r,
-    scrollPaddingX: r,
-    scrollPaddingY: r,
-    scrollPaddingBlock: r,
-    scrollPaddingBlockEnd: r,
-    scrollPaddingBlockStart: r,
-    scrollPaddingInline: r,
-    scrollPaddingInlineEnd: r,
-    scrollPaddingInlineStart: r,
-    fontSize: "fontSizes",
-    background: e,
-    backgroundColor: e,
-    backgroundImage: e,
-    borderImage: e,
-    border: e,
-    borderBlock: e,
-    borderBlockEnd: e,
-    borderBlockStart: e,
-    borderBottom: e,
-    borderBottomColor: e,
-    borderColor: e,
-    borderInline: e,
-    borderInlineEnd: e,
-    borderInlineStart: e,
-    borderLeft: e,
-    borderLeftColor: e,
-    borderRight: e,
-    borderRightColor: e,
-    borderTop: e,
-    borderTopColor: e,
-    caretColor: e,
-    color: e,
-    columnRuleColor: e,
-    fill: e,
-    outline: e,
-    outlineColor: e,
-    stroke: e,
-    textDecorationColor: e,
-    fontFamily: "fonts",
-    fontWeight: "fontWeights",
-    lineHeight: "lineHeights",
-    letterSpacing: "letterSpacings",
-    blockSize: t,
-    minBlockSize: t,
-    maxBlockSize: t,
-    inlineSize: t,
-    minInlineSize: t,
-    maxInlineSize: t,
-    width: t,
-    minWidth: t,
-    maxWidth: t,
-    height: t,
-    minHeight: t,
-    maxHeight: t,
-    flexBasis: t,
-    gridTemplateColumns: t,
-    gridTemplateRows: t,
-    borderWidth: "borderWidths",
-    borderTopWidth: "borderWidths",
-    borderRightWidth: "borderWidths",
-    borderBottomWidth: "borderWidths",
-    borderLeftWidth: "borderWidths",
-    borderStyle: "borderStyles",
-    borderTopStyle: "borderStyles",
-    borderRightStyle: "borderStyles",
-    borderBottomStyle: "borderStyles",
-    borderLeftStyle: "borderStyles",
-    borderRadius: "radii",
-    borderTopLeftRadius: "radii",
-    borderTopRightRadius: "radii",
-    borderBottomRightRadius: "radii",
-    borderBottomLeftRadius: "radii",
-    boxShadow: "shadows",
-    textShadow: "shadows",
-    transition: "transitions",
-    zIndex: "zIndices"
-}, i = (e, t)=>"function" == typeof t ? {
-        "()": Function.prototype.toString.call(t)
-    } : t, o = ()=>{
-    const e = Object.create(null);
-    return (t, r, ...n)=>{
-        const o = ((e)=>JSON.stringify(e, i))(t);
-        return o in e ? e[o] : e[o] = r(t, ...n);
-    };
-}, l = Symbol.for("sxs.internal"), s = (e, t)=>Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)), a = (e)=>{
-    for(const t in e)return !0;
-    return !1;
-}, { hasOwnProperty: c  } = Object.prototype, d = (e)=>e.includes("-") ? e : e.replace(/[A-Z]/g, (e)=>"-" + e.toLowerCase()), g = /\s+(?![^()]*\))/, p = (e)=>(t)=>e(..."string" == typeof t ? String(t).split(g) : [
-            t
-        ]), u = {
-    appearance: (e)=>({
-            WebkitAppearance: e,
-            appearance: e
-        }),
-    backfaceVisibility: (e)=>({
-            WebkitBackfaceVisibility: e,
-            backfaceVisibility: e
-        }),
-    backdropFilter: (e)=>({
-            WebkitBackdropFilter: e,
-            backdropFilter: e
-        }),
-    backgroundClip: (e)=>({
-            WebkitBackgroundClip: e,
-            backgroundClip: e
-        }),
-    boxDecorationBreak: (e)=>({
-            WebkitBoxDecorationBreak: e,
-            boxDecorationBreak: e
-        }),
-    clipPath: (e)=>({
-            WebkitClipPath: e,
-            clipPath: e
-        }),
-    content: (e)=>({
-            content: e.includes('"') || e.includes("'") || /^([A-Za-z]+\([^]*|[^]*-quote|inherit|initial|none|normal|revert|unset)$/.test(e) ? e : `"${e}"`
-        }),
-    hyphens: (e)=>({
-            WebkitHyphens: e,
-            hyphens: e
-        }),
-    maskImage: (e)=>({
-            WebkitMaskImage: e,
-            maskImage: e
-        }),
-    maskSize: (e)=>({
-            WebkitMaskSize: e,
-            maskSize: e
-        }),
-    tabSize: (e)=>({
-            MozTabSize: e,
-            tabSize: e
-        }),
-    textSizeAdjust: (e)=>({
-            WebkitTextSizeAdjust: e,
-            textSizeAdjust: e
-        }),
-    userSelect: (e)=>({
-            WebkitUserSelect: e,
-            userSelect: e
-        }),
-    marginBlock: p((e, t)=>({
-            marginBlockStart: e,
-            marginBlockEnd: t || e
-        })),
-    marginInline: p((e, t)=>({
-            marginInlineStart: e,
-            marginInlineEnd: t || e
-        })),
-    maxSize: p((e, t)=>({
-            maxBlockSize: e,
-            maxInlineSize: t || e
-        })),
-    minSize: p((e, t)=>({
-            minBlockSize: e,
-            minInlineSize: t || e
-        })),
-    paddingBlock: p((e, t)=>({
-            paddingBlockStart: e,
-            paddingBlockEnd: t || e
-        })),
-    paddingInline: p((e, t)=>({
-            paddingInlineStart: e,
-            paddingInlineEnd: t || e
-        }))
-}, h = /([\d.]+)([^]*)/, f = (e, t)=>e.length ? e.reduce((e, r)=>(e.push(...t.map((e)=>e.includes("&") ? e.replace(/&/g, /[ +>|~]/.test(r) && /&.*&/.test(e) ? `:is(${r})` : r) : r + " " + e)), e), []) : t, m = (e, t)=>e in b && "string" == typeof t ? t.replace(/^((?:[^]*[^\w-])?)(fit-content|stretch)((?:[^\w-][^]*)?)$/, (t, r, n, i)=>r + ("stretch" === n ? `-moz-available${i};${d(e)}:${r}-webkit-fill-available` : `-moz-fit-content${i};${d(e)}:${r}fit-content`) + i) : String(t), b = {
-    blockSize: 1,
-    height: 1,
-    inlineSize: 1,
-    maxBlockSize: 1,
-    maxHeight: 1,
-    maxInlineSize: 1,
-    maxWidth: 1,
-    minBlockSize: 1,
-    minHeight: 1,
-    minInlineSize: 1,
-    minWidth: 1,
-    width: 1
-}, S = (e)=>e ? e + "-" : "", k = (e, t, r)=>e.replace(/([+-])?((?:\d+(?:\.\d*)?|\.\d+)(?:[Ee][+-]?\d+)?)?(\$|--)([$\w-]+)/g, (e, n, i, o, l)=>"$" == o == !!i ? e : (n || "--" == o ? "calc(" : "") + "var(--" + ("$" === o ? S(t) + (l.includes("$") ? "" : S(r)) + l.replace(/\$/g, "-") : l) + ")" + (n || "--" == o ? "*" + (n || "") + (i || "1") + ")" : "")), y = /\s*,\s*(?![^()]*\))/, B = Object.prototype.toString, $ = (e, t, r, n, i)=>{
-    let o, l, s;
-    const a = (e, t, r)=>{
-        let c, g;
-        const p = (e)=>{
-            for(c in e){
-                const R = 64 === c.charCodeAt(0), z = R && Array.isArray(e[c]) ? e[c] : [
-                    e[c]
-                ];
-                for (g of z){
-                    const e1 = /[A-Z]/.test($ = c) ? $ : $.replace(/-[^]/g, (e)=>e[1].toUpperCase()), z1 = "object" == typeof g && g && g.toString === B && (!n.utils[e1] || !t.length);
-                    if (e1 in n.utils && !z1) {
-                        const t1 = n.utils[e1];
-                        if (t1 !== l) {
-                            l = t1, p(t1(g)), l = null;
-                            continue;
-                        }
-                    } else if (e1 in u) {
-                        const t2 = u[e1];
-                        if (t2 !== s) {
-                            s = t2, p(t2(g)), s = null;
-                            continue;
-                        }
-                    }
-                    if (R && (b = c.slice(1) in n.media ? "@media " + n.media[c.slice(1)] : c, c = b.replace(/\(\s*([\w-]+)\s*(=|<|<=|>|>=)\s*([\w-]+)\s*(?:(<|<=|>|>=)\s*([\w-]+)\s*)?\)/g, (e, t, r, n, i, o)=>{
-                        const l = h.test(t), s = .0625 * (l ? -1 : 1), [a, c] = l ? [
-                            n,
-                            t
-                        ] : [
-                            t,
-                            n
-                        ];
-                        return "(" + ("=" === r[0] ? "" : ">" === r[0] === l ? "max-" : "min-") + a + ":" + ("=" !== r[0] && 1 === r.length ? c.replace(h, (e, t, n)=>Number(t) + s * (">" === r ? 1 : -1) + n) : c) + (i ? ") and (" + (">" === i[0] ? "min-" : "max-") + a + ":" + (1 === i.length ? o.replace(h, (e, t, r)=>Number(t) + s * (">" === i ? -1 : 1) + r) : o) : "") + ")";
-                    })), z1) {
-                        const e2 = R ? r.concat(c) : [
-                            ...r
-                        ], n1 = R ? [
-                            ...t
-                        ] : f(t, c.split(y));
-                        void 0 !== o && i(x(...o)), o = void 0, a(g, n1, e2);
-                    } else void 0 === o && (o = [
-                        [],
-                        t,
-                        r
-                    ]), c = R || 36 !== c.charCodeAt(0) ? c : `--${S(n.prefix)}${c.slice(1).replace(/\$/g, "-")}`, g = z1 ? g : "number" == typeof g ? g && e1 in I ? String(g) + "px" : String(g) : k(m(e1, null == g ? "" : g), n.prefix, n.themeMap[e1]), o[0].push(`${R ? `${c} ` : `${d(c)}:`}${g}`);
-                }
-            }
-            var b, $;
-        };
-        p(e), void 0 !== o && i(x(...o)), o = void 0;
-    };
-    a(e, t, r);
-}, x = (e, t, r)=>`${r.map((e)=>`${e}{`).join("")}${t.length ? `${t.join(",")}{` : ""}${e.join(";")}${t.length ? "}" : ""}${Array(r.length ? r.length + 1 : 0).join("}")}`, I = {
-    animationDelay: 1,
-    animationDuration: 1,
-    backgroundSize: 1,
-    blockSize: 1,
-    border: 1,
-    borderBlock: 1,
-    borderBlockEnd: 1,
-    borderBlockEndWidth: 1,
-    borderBlockStart: 1,
-    borderBlockStartWidth: 1,
-    borderBlockWidth: 1,
-    borderBottom: 1,
-    borderBottomLeftRadius: 1,
-    borderBottomRightRadius: 1,
-    borderBottomWidth: 1,
-    borderEndEndRadius: 1,
-    borderEndStartRadius: 1,
-    borderInlineEnd: 1,
-    borderInlineEndWidth: 1,
-    borderInlineStart: 1,
-    borderInlineStartWidth: 1,
-    borderInlineWidth: 1,
-    borderLeft: 1,
-    borderLeftWidth: 1,
-    borderRadius: 1,
-    borderRight: 1,
-    borderRightWidth: 1,
-    borderSpacing: 1,
-    borderStartEndRadius: 1,
-    borderStartStartRadius: 1,
-    borderTop: 1,
-    borderTopLeftRadius: 1,
-    borderTopRightRadius: 1,
-    borderTopWidth: 1,
-    borderWidth: 1,
-    bottom: 1,
-    columnGap: 1,
-    columnRule: 1,
-    columnRuleWidth: 1,
-    columnWidth: 1,
-    containIntrinsicSize: 1,
-    flexBasis: 1,
-    fontSize: 1,
-    gap: 1,
-    gridAutoColumns: 1,
-    gridAutoRows: 1,
-    gridTemplateColumns: 1,
-    gridTemplateRows: 1,
-    height: 1,
-    inlineSize: 1,
-    inset: 1,
-    insetBlock: 1,
-    insetBlockEnd: 1,
-    insetBlockStart: 1,
-    insetInline: 1,
-    insetInlineEnd: 1,
-    insetInlineStart: 1,
-    left: 1,
-    letterSpacing: 1,
-    margin: 1,
-    marginBlock: 1,
-    marginBlockEnd: 1,
-    marginBlockStart: 1,
-    marginBottom: 1,
-    marginInline: 1,
-    marginInlineEnd: 1,
-    marginInlineStart: 1,
-    marginLeft: 1,
-    marginRight: 1,
-    marginTop: 1,
-    maxBlockSize: 1,
-    maxHeight: 1,
-    maxInlineSize: 1,
-    maxWidth: 1,
-    minBlockSize: 1,
-    minHeight: 1,
-    minInlineSize: 1,
-    minWidth: 1,
-    offsetDistance: 1,
-    offsetRotate: 1,
-    outline: 1,
-    outlineOffset: 1,
-    outlineWidth: 1,
-    overflowClipMargin: 1,
-    padding: 1,
-    paddingBlock: 1,
-    paddingBlockEnd: 1,
-    paddingBlockStart: 1,
-    paddingBottom: 1,
-    paddingInline: 1,
-    paddingInlineEnd: 1,
-    paddingInlineStart: 1,
-    paddingLeft: 1,
-    paddingRight: 1,
-    paddingTop: 1,
-    perspective: 1,
-    right: 1,
-    rowGap: 1,
-    scrollMargin: 1,
-    scrollMarginBlock: 1,
-    scrollMarginBlockEnd: 1,
-    scrollMarginBlockStart: 1,
-    scrollMarginBottom: 1,
-    scrollMarginInline: 1,
-    scrollMarginInlineEnd: 1,
-    scrollMarginInlineStart: 1,
-    scrollMarginLeft: 1,
-    scrollMarginRight: 1,
-    scrollMarginTop: 1,
-    scrollPadding: 1,
-    scrollPaddingBlock: 1,
-    scrollPaddingBlockEnd: 1,
-    scrollPaddingBlockStart: 1,
-    scrollPaddingBottom: 1,
-    scrollPaddingInline: 1,
-    scrollPaddingInlineEnd: 1,
-    scrollPaddingInlineStart: 1,
-    scrollPaddingLeft: 1,
-    scrollPaddingRight: 1,
-    scrollPaddingTop: 1,
-    shapeMargin: 1,
-    textDecoration: 1,
-    textDecorationThickness: 1,
-    textIndent: 1,
-    textUnderlineOffset: 1,
-    top: 1,
-    transitionDelay: 1,
-    transitionDuration: 1,
-    verticalAlign: 1,
-    width: 1,
-    wordSpacing: 1
-}, R = (e)=>String.fromCharCode(e + (e > 25 ? 39 : 97)), z = (e)=>((e)=>{
-        let t, r = "";
-        for(t = Math.abs(e); t > 52; t = t / 52 | 0)r = R(t % 52) + r;
-        return R(t % 52) + r;
-    })(((e, t)=>{
-        let r = t.length;
-        for(; r;)e = 33 * e ^ t.charCodeAt(--r);
-        return e;
-    })(5381, JSON.stringify(e)) >>> 0), W = [
-    "themed",
-    "global",
-    "styled",
-    "onevar",
-    "resonevar",
-    "allvar",
-    "inline"
-], j = (e)=>{
-    if (e.href && !e.href.startsWith(location.origin)) return !1;
-    try {
-        return !!e.cssRules;
-    } catch (e1) {
-        return !1;
-    }
-}, E = (e)=>{
-    let t;
-    const r = ()=>{
-        const { cssRules: e  } = t.sheet;
-        return [].map.call(e, (r, n)=>{
-            const { cssText: i  } = r;
-            let o = "";
-            if (i.startsWith("--sxs")) return "";
-            if (e[n - 1] && (o = e[n - 1].cssText).startsWith("--sxs")) {
-                if (!r.cssRules.length) return "";
-                for(const e1 in t.rules)if (t.rules[e1].group === r) return `--sxs{--sxs:${[
-                    ...t.rules[e1].cache
-                ].join(" ")}}${i}`;
-                return r.cssRules.length ? `${o}${i}` : "";
-            }
-            return i;
-        }).join("");
-    }, n = ()=>{
-        if (t) {
-            const { rules: e1 , sheet: r1  } = t;
-            if (!r1.deleteRule) {
-                for(; 3 === Object(Object(r1.cssRules)[0]).type;)r1.cssRules.splice(0, 1);
-                r1.cssRules = [];
-            }
-            for(const t1 in e1)delete e1[t1];
-        }
-        const i = Object(e).styleSheets || [];
-        for (const e2 of i)if (j(e2)) {
-            for(let i1 = 0, o = e2.cssRules; o[i1]; ++i1){
-                const l = Object(o[i1]);
-                if (1 !== l.type) continue;
-                const s = Object(o[i1 + 1]);
-                if (4 !== s.type) continue;
-                ++i1;
-                const { cssText: a  } = l;
-                if (!a.startsWith("--sxs")) continue;
-                const c = a.slice(14, -3).trim().split(/\s+/), d = W[c[0]];
-                d && (t || (t = {
-                    sheet: e2,
-                    reset: n,
-                    rules: {},
-                    toString: r
-                }), t.rules[d] = {
-                    group: s,
-                    index: i1,
-                    cache: new Set(c)
-                });
-            }
-            if (t) break;
-        }
-        if (!t) {
-            const i2 = (e, t)=>({
-                    type: t,
-                    cssRules: [],
-                    insertRule (e, t) {
-                        this.cssRules.splice(t, 0, i2(e, {
-                            import: 3,
-                            undefined: 1
-                        }[(e.toLowerCase().match(/^@([a-z]+)/) || [])[1]] || 4));
-                    },
-                    get cssText () {
-                        return "@media{}" === e ? `@media{${[].map.call(this.cssRules, (e)=>e.cssText).join("")}}` : e;
-                    }
-                });
-            t = {
-                sheet: e ? (e.head || e).appendChild(document.createElement("style")).sheet : i2("", "text/css"),
-                rules: {},
-                reset: n,
-                toString: r
-            };
-        }
-        const { sheet: o1 , rules: l1  } = t;
-        for(let e3 = W.length - 1; e3 >= 0; --e3){
-            const t2 = W[e3];
-            if (!l1[t2]) {
-                const r2 = W[e3 + 1], n1 = l1[r2] ? l1[r2].index : o1.cssRules.length;
-                o1.insertRule("@media{}", n1), o1.insertRule(`--sxs{--sxs:${e3}}`, n1), l1[t2] = {
-                    group: o1.cssRules[n1 + 1],
-                    index: n1,
-                    cache: new Set([
-                        e3
-                    ])
-                };
-            }
-            v(l1[t2]);
-        }
-    };
-    return n(), t;
-}, v = (e)=>{
-    const t = e.group;
-    let r = t.cssRules.length;
-    e.apply = (e)=>{
-        try {
-            t.insertRule(e, r), ++r;
-        } catch (e1) {}
-    };
-}, T = Symbol(), w = o(), M = (e, t)=>w(e, ()=>(...r)=>{
-            let n = {
-                type: null,
-                composers: new Set
-            };
-            for (const t1 of r)if (null != t1) {
-                if (t1[l]) {
-                    null == n.type && (n.type = t1[l].type);
-                    for (const e1 of t1[l].composers)n.composers.add(e1);
-                } else t1.constructor !== Object || t1.$$typeof ? null == n.type && (n.type = t1) : n.composers.add(C(t1, e));
-            }
-            return null == n.type && (n.type = "span"), n.composers.size || n.composers.add([
-                "PJLV",
-                {},
-                [],
-                [],
-                {},
-                []
-            ]), P(e, n, t);
-        }), C = ({ variants: e , compoundVariants: t , defaultVariants: r , ...n }, i)=>{
-    const o = `${S(i.prefix)}c-${z(n)}`, l = [], s = [], d = Object.create(null), g = [];
-    for(const e1 in r)d[e1] = String(r[e1]);
-    if ("object" == typeof e && e) for(const t1 in e){
-        p = d, u = t1, c.call(p, u) || (d[t1] = "undefined");
-        const r1 = e[t1];
-        for(const e2 in r1){
-            const n1 = {
-                [t1]: String(e2)
-            };
-            "undefined" === String(e2) && g.push(t1);
-            const i1 = r1[e2], o1 = [
-                n1,
-                i1,
-                !a(i1)
-            ];
-            l.push(o1);
-        }
-    }
-    var p, u;
-    if ("object" == typeof t && t) for (const e3 of t){
-        let { css: t2 , ...r2 } = e3;
-        t2 = "object" == typeof t2 && t2 || {};
-        for(const e4 in r2)r2[e4] = String(r2[e4]);
-        const n2 = [
-            r2,
-            t2,
-            !a(t2)
-        ];
-        s.push(n2);
-    }
-    return [
-        o,
-        n,
-        l,
-        s,
-        d,
-        g
-    ];
-}, P = (e, t, r)=>{
-    const [n, i, o, a] = L(t.composers), c = "function" == typeof t.type || t.type.$$typeof ? ((e)=>{
-        function t() {
-            for(let r = 0; r < t[T].length; r++){
-                const [n, i] = t[T][r];
-                e.rules[n].apply(i);
-            }
-            return t[T] = [], null;
-        }
-        return t[T] = [], t.rules = {}, W.forEach((e)=>t.rules[e] = {
-                apply: (r)=>t[T].push([
-                        e,
-                        r
-                    ])
-            }), t;
-    })(r) : null, d = (c || r).rules, g = `.${n}${i.length > 1 ? `:where(.${i.slice(1).join(".")})` : ""}`, p = (l)=>{
-        l = "object" == typeof l && l || A;
-        const { css: s , ...p } = l, u = {};
-        for(const e1 in o)if (delete p[e1], e1 in l) {
-            let t1 = l[e1];
-            "object" == typeof t1 && t1 ? u[e1] = {
-                "@initial": o[e1],
-                ...t1
-            } : (t1 = String(t1), u[e1] = "undefined" !== t1 || a.has(e1) ? t1 : o[e1]);
-        } else u[e1] = o[e1];
-        const h = new Set([
-            ...i
-        ]);
-        for (const [n1, i1, o1, l1] of t.composers){
-            r.rules.styled.cache.has(n1) || (r.rules.styled.cache.add(n1), $(i1, [
-                `.${n1}`
-            ], [], e, (e)=>{
-                d.styled.apply(e);
-            }));
-            const t2 = O(o1, u, e.media), s1 = O(l1, u, e.media, !0);
-            for (const i2 of t2)if (void 0 !== i2) for (const [t3, o2, l2] of i2){
-                const i3 = `${n1}-${z(o2)}-${t3}`;
-                h.add(i3);
-                const s2 = (l2 ? r.rules.resonevar : r.rules.onevar).cache, a1 = l2 ? d.resonevar : d.onevar;
-                s2.has(i3) || (s2.add(i3), $(o2, [
-                    `.${i3}`
-                ], [], e, (e)=>{
-                    a1.apply(e);
-                }));
-            }
-            for (const t4 of s1)if (void 0 !== t4) for (const [i4, o3] of t4){
-                const t5 = `${n1}-${z(o3)}-${i4}`;
-                h.add(t5), r.rules.allvar.cache.has(t5) || (r.rules.allvar.cache.add(t5), $(o3, [
-                    `.${t5}`
-                ], [], e, (e)=>{
-                    d.allvar.apply(e);
-                }));
-            }
-        }
-        if ("object" == typeof s && s) {
-            const t6 = `${n}-i${z(s)}-css`;
-            h.add(t6), r.rules.inline.cache.has(t6) || (r.rules.inline.cache.add(t6), $(s, [
-                `.${t6}`
-            ], [], e, (e)=>{
-                d.inline.apply(e);
-            }));
-        }
-        for (const e2 of String(l.className || "").trim().split(/\s+/))e2 && h.add(e2);
-        const f = p.className = [
-            ...h
-        ].join(" ");
-        return {
-            type: t.type,
-            className: f,
-            selector: g,
-            props: p,
-            toString: ()=>f,
-            deferredInjector: c
-        };
-    };
-    return s(p, {
-        className: n,
-        selector: g,
-        [l]: t,
-        toString: ()=>(r.rules.styled.cache.has(n) || p(), n)
-    });
-}, L = (e)=>{
-    let t = "";
-    const r = [], n = {}, i = [];
-    for (const [o, , , , l, s] of e){
-        "" === t && (t = o), r.push(o), i.push(...s);
-        for(const e1 in l){
-            const t1 = l[e1];
-            (void 0 === n[e1] || "undefined" !== t1 || s.includes(t1)) && (n[e1] = t1);
-        }
-    }
-    return [
-        t,
-        r,
-        n,
-        new Set(i)
-    ];
-}, O = (e, t, r, n)=>{
-    const i = [];
-    e: for (let [o, l, s] of e){
-        if (s) continue;
-        let e1, a = 0, c = !1;
-        for(e1 in o){
-            const n1 = o[e1];
-            let i1 = t[e1];
-            if (i1 !== n1) {
-                if ("object" != typeof i1 || !i1) continue e;
-                {
-                    let e2, t1, o1 = 0;
-                    for(const l1 in i1){
-                        if (n1 === String(i1[l1])) {
-                            if ("@initial" !== l1) {
-                                const e3 = l1.slice(1);
-                                (t1 = t1 || []).push(e3 in r ? r[e3] : l1.replace(/^@media ?/, "")), c = !0;
-                            }
-                            a += o1, e2 = !0;
-                        }
-                        ++o1;
-                    }
-                    if (t1 && t1.length && (l = {
-                        ["@media " + t1.join(", ")]: l
-                    }), !e2) continue e;
-                }
-            }
-        }
-        (i[a] = i[a] || []).push([
-            n ? "cv" : `${e1}-${o[e1]}`,
-            l,
-            c
-        ]);
-    }
-    return i;
-}, A = {}, N = o(), D = (e, t)=>N(e, ()=>(...r)=>{
-            const n = ()=>{
-                for (let n of r){
-                    n = "object" == typeof n && n || {};
-                    let r1 = z(n);
-                    if (!t.rules.global.cache.has(r1)) {
-                        if (t.rules.global.cache.add(r1), "@import" in n) {
-                            let e1 = [].indexOf.call(t.sheet.cssRules, t.rules.themed.group) - 1;
-                            for (let r2 of [].concat(n["@import"]))r2 = r2.includes('"') || r2.includes("'") ? r2 : `"${r2}"`, t.sheet.insertRule(`@import ${r2};`, e1++);
-                            delete n["@import"];
-                        }
-                        $(n, [], [], e, (e)=>{
-                            t.rules.global.apply(e);
-                        });
-                    }
-                }
-                return "";
-            };
-            return s(n, {
-                toString: n
-            });
-        }), H = o(), V = (e, t)=>H(e, ()=>(r)=>{
-            const n = `${S(e.prefix)}k-${z(r)}`, i = ()=>{
-                if (!t.rules.global.cache.has(n)) {
-                    t.rules.global.cache.add(n);
-                    const i = [];
-                    $(r, [], [], e, (e)=>i.push(e));
-                    const o = `@keyframes ${n}{${i.join("")}}`;
-                    t.rules.global.apply(o);
-                }
-                return n;
-            };
-            return s(i, {
-                get name () {
-                    return i();
-                },
-                toString: i
-            });
-        }), G = class {
-    constructor(e, t, r, n){
-        this.token = null == e ? "" : String(e), this.value = null == t ? "" : String(t), this.scale = null == r ? "" : String(r), this.prefix = null == n ? "" : String(n);
-    }
-    get computedValue() {
-        return "var(" + this.variable + ")";
-    }
-    get variable() {
-        return "--" + S(this.prefix) + S(this.scale) + this.token;
-    }
-    toString() {
-        return this.computedValue;
-    }
-}, F = o(), J = (e, t)=>F(e, ()=>(r, n)=>{
-            n = "object" == typeof r && r || Object(n);
-            const i = `.${r = (r = "string" == typeof r ? r : "") || `${S(e.prefix)}t-${z(n)}`}`, o = {}, l = [];
-            for(const t1 in n){
-                o[t1] = {};
-                for(const r1 in n[t1]){
-                    const i1 = `--${S(e.prefix)}${t1}-${r1}`, s = k(String(n[t1][r1]), e.prefix, t1);
-                    o[t1][r1] = new G(r1, s, t1, e.prefix), l.push(`${i1}:${s}`);
-                }
-            }
-            const s1 = ()=>{
-                if (l.length && !t.rules.themed.cache.has(r)) {
-                    t.rules.themed.cache.add(r);
-                    const i = `${n === e.theme ? ":root," : ""}.${r}{${l.join(";")}}`;
-                    t.rules.themed.apply(i);
-                }
-                return r;
-            };
-            return {
-                ...o,
-                get className () {
-                    return s1();
-                },
-                selector: i,
-                toString: s1
-            };
-        }), U = o();
-var X, Y = o(), q = (e)=>{
-    const t = ((e)=>{
-        let t = !1;
-        const r = U(e, (e)=>{
-            t = !0;
-            const r = "prefix" in (e = "object" == typeof e && e || {}) ? String(e.prefix) : "", i = "object" == typeof e.media && e.media || {}, o = "object" == typeof e.root ? e.root || null : globalThis.document || null, l = "object" == typeof e.theme && e.theme || {}, s = {
-                prefix: r,
-                media: i,
-                theme: l,
-                themeMap: "object" == typeof e.themeMap && e.themeMap || {
-                    ...n
-                },
-                utils: "object" == typeof e.utils && e.utils || {}
-            }, a = E(o), c = {
-                css: M(s, a),
-                globalCss: D(s, a),
-                keyframes: V(s, a),
-                createTheme: J(s, a),
-                reset () {
-                    a.reset(), c.theme.toString();
-                },
-                theme: {},
-                sheet: a,
-                config: s,
-                prefix: r,
-                getCssText: a.toString,
-                toString: a.toString
-            };
-            return String(c.theme = c.createTheme(l)), c;
-        });
-        return t || r.reset(), r;
-    })(e);
-    return t.styled = (({ config: e , sheet: t  })=>Y(e, ()=>{
-            const r = M(e, t);
-            return (...e)=>{
-                const t = r(...e), n = t[l].type, i = (0, _reactDefault.default).forwardRef((e, r)=>{
-                    const i = e && e.as || n, { props: o , deferredInjector: l  } = t(e);
-                    return delete o.as, o.ref = r, l ? (0, _reactDefault.default).createElement((0, _reactDefault.default).Fragment, null, (0, _reactDefault.default).createElement(i, o), (0, _reactDefault.default).createElement(l, null)) : (0, _reactDefault.default).createElement(i, o);
-                });
-                return i.className = t.className, i.displayName = `Styled.${n.displayName || n.name || n}`, i.selector = t.selector, i.toString = ()=>t.selector, i[l] = t[l], i;
-            };
-        }))(t), t;
-}, K = ()=>X || (X = q()), Q = (...e)=>K().createTheme(...e), _ = (...e)=>K().globalCss(...e), ee = (...e)=>K().keyframes(...e), te = (...e)=>K().css(...e), re = (...e)=>K().styled(...e);
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"km3Ru":[function(require,module,exports) {
-"use strict";
-var Refresh = require("react-refresh/runtime");
-function debounce(func, delay) {
-    var args;
-    var timeout = undefined;
-    return function(args) {
-        clearTimeout(timeout);
-        timeout = setTimeout(function() {
-            timeout = undefined;
-            func.call(null, args);
-        }, delay);
-    };
-}
-var enqueueUpdate = debounce(function() {
-    Refresh.performReactRefresh();
-}, 30); // Everthing below is either adapted or copied from
-// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
-// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
-module.exports.prelude = function(module1) {
-    window.$RefreshReg$ = function(type, id) {
-        Refresh.register(type, module1.id + " " + id);
-    };
-    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
-};
-module.exports.postlude = function(module1) {
-    if (isReactRefreshBoundary(module1.exports)) {
-        registerExportsForReactRefresh(module1);
-        if (module1.hot) {
-            module1.hot.dispose(function(data) {
-                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
-                data.prevExports = module1.exports;
-            });
-            module1.hot.accept(function(getParents) {
-                var prevExports = module1.hot.data.prevExports;
-                var nextExports = module1.exports; // Since we just executed the code for it, it's possible
-                // that the new exports make it ineligible for being a boundary.
-                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports); // It can also become ineligible if its exports are incompatible
-                // with the previous exports.
-                // For example, if you add/remove/change exports, we'll want
-                // to re-execute the importing modules, and force those components
-                // to re-render. Similarly, if you convert a class component
-                // to a function, we want to invalidate the boundary.
-                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
-                if (isNoLongerABoundary || didInvalidate) {
-                    // We'll be conservative. The only case in which we won't do a full
-                    // reload is if all parent modules are also refresh boundaries.
-                    // In that case we'll add them to the current queue.
-                    var parents = getParents();
-                    if (parents.length === 0) {
-                        // Looks like we bubbled to the root. Can't recover from that.
-                        window.location.reload();
-                        return;
-                    }
-                    return parents;
-                }
-                enqueueUpdate();
-            });
-        }
-    }
-};
-function isReactRefreshBoundary(exports) {
-    if (Refresh.isLikelyComponentType(exports)) return true;
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    return false;
-    var hasExports = false;
-    var areAllExportsComponents = true;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        hasExports = true;
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
-        return false;
-        var exportValue = exports[key];
-        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
-    }
-    return hasExports && areAllExportsComponents;
-}
-function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
-    var prevSignature = getRefreshBoundarySignature(prevExports);
-    var nextSignature = getRefreshBoundarySignature(nextExports);
-    if (prevSignature.length !== nextSignature.length) return true;
-    for(var i = 0; i < nextSignature.length; i++){
-        if (prevSignature[i] !== nextSignature[i]) return true;
-    }
-    return false;
-} // When this signature changes, it's unsafe to stop at this refresh boundary.
-function getRefreshBoundarySignature(exports) {
-    var signature = [];
-    signature.push(Refresh.getFamilyByType(exports));
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return signature;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        signature.push(key);
-        signature.push(Refresh.getFamilyByType(exportValue));
-    }
-    return signature;
-}
-function registerExportsForReactRefresh(module1) {
-    var exports = module1.exports, id = module1.id;
-    Refresh.register(exports, id + " %exports%");
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        Refresh.register(exportValue, id + " %exports% " + key);
-    }
-}
-
-},{"react-refresh/runtime":"786KC"}],"jdqmG":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "AvatarStyled", ()=>AvatarStyled);
-parcelHelpers.export(exports, "AvatarImageStyled", ()=>AvatarImageStyled);
-parcelHelpers.export(exports, "AvatarFallbackStyled", ()=>AvatarFallbackStyled);
-var _stitchesConfig = require("../../stitches.config");
-const AvatarStyled = (0, _stitchesConfig.styled)("div", {
-    alignItems: "center",
-    borderRadius: "100%",
-    display: "inline-flex",
-    justifyContent: "center",
-    overflow: "hidden",
-    position: "relative",
-    userSelect: "none"
-});
-const AvatarImageStyled = (0, _stitchesConfig.styled)("div", {
-    borderRadius: "inherit",
-    height: "100%",
-    position: "relative",
-    width: "100%"
-});
-const AvatarFallbackStyled = (0, _stitchesConfig.styled)("div", {
-    alignItems: "center",
-    backgroundColor: "$default",
-    color: "$text",
-    display: "flex",
-    height: "100%",
-    justifyContent: "center",
-    textAlign: "center",
-    width: "100%"
-});
-exports.default = AvatarStyled;
-
-},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"egHOx":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Badge", ()=>(0, _badgeDefault.default));
-var _badge = require("./Badge");
-var _badgeDefault = parcelHelpers.interopDefault(_badge);
-
-},{"./Badge":"lc6Ga","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lc6Ga":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$1291 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$1291.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _phosphorReact = require("phosphor-react");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _stitchesConfig = require("../../stitches.config");
-var _loading = require("../Loading");
-var _badgeStyles = require("./Badge.styles");
-function Badge(props) {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badgeStyles.BadgeStyled), {
-        css: {
-            ...props.css,
-            ...props.inline && {
-                display: "inline-flex",
-                marginBottom: "0 !important",
-                marginRight: props.inline === "auto" ? "auto" : `$${props.inline}`,
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    marginRight: props.inline === "auto" ? "auto" : `calc($${props.inline} * 0.8)`
-                },
-                verticalAlign: "middle"
-            }
-        },
-        id: props.id,
-        onClick: props.onClick,
-        theme: props.theme || "default",
-        children: [
-            props.icon && (props.iconPosition === "left" || !props.iconPosition) && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badgeStyles.BadgeIconStyled), {
-                align: "left",
-                children: props.icon
-            }, void 0, false, {
-                fileName: "src/components/Badge/Badge.tsx",
-                lineNumber: 50,
-                columnNumber: 9
-            }, this),
-            props.dot && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badgeStyles.BadgeDotStyled), {
-                dotColor: props.dotColor || "default",
-                pulse: props.dot === "pulse",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.Circle), {
-                    weight: "fill"
-                }, void 0, false, {
-                    fileName: "src/components/Badge/Badge.tsx",
-                    lineNumber: 56,
-                    columnNumber: 11
-                }, this)
-            }, void 0, false, {
-                fileName: "src/components/Badge/Badge.tsx",
-                lineNumber: 53,
-                columnNumber: 9
-            }, this),
-            props.loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loading.Loading), {}, void 0, false, {
-                fileName: "src/components/Badge/Badge.tsx",
-                lineNumber: 59,
-                columnNumber: 24
-            }, this) : props.children,
-            props.icon && props.iconPosition === "right" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badgeStyles.BadgeIconStyled), {
-                align: "right",
-                children: props.icon
-            }, void 0, false, {
-                fileName: "src/components/Badge/Badge.tsx",
-                lineNumber: 61,
-                columnNumber: 9
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Badge/Badge.tsx",
-        lineNumber: 32,
-        columnNumber: 5
-    }, this);
-}
-exports.default = Badge;
-_c = Badge;
-var _c;
-$RefreshReg$(_c, "Badge");
-
-  $parcel$ReactRefreshHelpers$1291.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","../../stitches.config":"iMNz3","../Loading":"gWqOi","./Badge.styles":"dW7FY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gWqOi":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Loading", ()=>(0, _loadingDefault.default));
-var _loading = require("./Loading");
-var _loadingDefault = parcelHelpers.interopDefault(_loading);
-
-},{"./Loading":"ecYkh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ecYkh":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$98b5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$98b5.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _stitchesConfig = require("../../stitches.config");
-function Loading({ stroke =(0, _stitchesConfig.theme).colors.text.toString() , width =16  }) {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-        height: width,
-        stroke: stroke,
-        viewBox: "0 0 38 38",
-        width: width,
-        xmlns: "http://www.w3.org/2000/svg",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
-            fill: "none",
-            fillRule: "nonzero",
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
-                strokeWidth: "2",
-                transform: "translate(1 1)",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("circle", {
-                        cx: "18",
-                        cy: "18",
-                        r: "18",
-                        strokeOpacity: ".3"
-                    }, void 0, false, {
-                        fileName: "src/components/Loading/Loading.tsx",
-                        lineNumber: 23,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                        d: "M36 18c0-9.94-8.06-18-18-18",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("animateTransform", {
-                            attributeName: "transform",
-                            begin: "0s",
-                            dur: "0.8s",
-                            from: "0 18 18",
-                            repeatCount: "indefinite",
-                            to: "360 18 18",
-                            type: "rotate"
-                        }, void 0, false, {
-                            fileName: "src/components/Loading/Loading.tsx",
-                            lineNumber: 25,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/components/Loading/Loading.tsx",
-                        lineNumber: 24,
-                        columnNumber: 11
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Loading/Loading.tsx",
-                lineNumber: 22,
-                columnNumber: 9
-            }, this)
-        }, void 0, false, {
-            fileName: "src/components/Loading/Loading.tsx",
-            lineNumber: 21,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
-        fileName: "src/components/Loading/Loading.tsx",
-        lineNumber: 15,
-        columnNumber: 5
-    }, this);
-}
-exports.default = Loading;
-_c = Loading;
-var _c;
-$RefreshReg$(_c, "Loading");
-
-  $parcel$ReactRefreshHelpers$98b5.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dW7FY":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "BadgeStyled", ()=>BadgeStyled);
-parcelHelpers.export(exports, "BadgeIconStyled", ()=>BadgeIconStyled);
-parcelHelpers.export(exports, "BadgeDotStyled", ()=>BadgeDotStyled);
-var _stitchesConfig = require("../../stitches.config");
-const pulse = (0, _stitchesConfig.keyframes)({
-    "0%": {
-        opacity: 0.5,
-        transform: "scale(0.95)"
-    },
-    "100%": {
-        opacity: 0.5,
-        transform: "scale(0.95)"
-    },
-    "50%": {
-        opacity: 1,
-        transform: "scale(1)"
-    }
-});
-const BadgeStyled = (0, _stitchesConfig.styled)("div", {
-    alignItems: "center",
-    borderRadius: "$3",
-    display: "inline-flex",
-    fontSize: "$h5",
-    fontWeight: "$h5",
-    justifyContent: "center",
-    lineHeight: "normal !important",
-    [(0, _stitchesConfig.breakpoints).phone]: {
-        fontSize: "calc($h5 * 0.925)"
-    },
-    [(0, _stitchesConfig.breakpoints).tabletX]: {
-        fontSize: "calc($h5 * 0.95)"
-    },
-    padding: "$1 $4",
-    svg: {
-        alignSelf: "center",
-        height: "1.6rem",
-        marginTop: "-0.2rem",
-        width: "1.6rem"
-    },
-    variants: {
-        theme: {
-            blue: {
-                backgroundColor: "$blueOverlay",
-                color: "$blueText"
-            },
-            border: {
-                border: "0.1rem solid $border",
-                color: "$text"
-            },
-            borderHover: {
-                border: "0.1rem solid $borderHover",
-                color: "$text"
-            },
-            default: {
-                backgroundColor: "$default",
-                color: "$text"
-            },
-            green: {
-                backgroundColor: "$greenOverlay",
-                color: "$greenText"
-            },
-            orange: {
-                backgroundColor: "$orangeOverlay",
-                color: "$orangeText"
-            },
-            pink: {
-                backgroundColor: "$pinkOverlay",
-                color: "$pinkText"
-            },
-            purple: {
-                backgroundColor: "$purpleOverlay",
-                color: "$purpleText"
-            },
-            red: {
-                backgroundColor: "$redOverlay",
-                color: "$redText"
-            }
-        }
-    },
-    [(0, _stitchesConfig.breakpoints).phone]: {
-        fontSize: "calc($h6 * 0.9)"
-    },
-    [(0, _stitchesConfig.breakpoints).tabletX]: {
-        fontSize: "calc($h6 * 0.95)"
-    },
-    verticalAlign: "middle"
-});
-const BadgeIconStyled = (0, _stitchesConfig.styled)("span", {
-    display: "inline",
-    variants: {
-        align: {
-            left: {
-                marginRight: "$3"
-            },
-            right: {
-                marginLeft: "$3"
-            }
-        }
-    },
-    verticalAlign: "middle"
-});
-const BadgeDotStyled = (0, _stitchesConfig.styled)("span", {
-    display: "inline",
-    paddingRight: "$2",
-    svg: {
-        height: "1rem",
-        marginTop: "-0.2rem",
-        verticalAlign: "middle",
-        width: "1rem"
-    },
-    variants: {
-        dotColor: {
-            blue: {
-                color: "$blueText"
-            },
-            borderHover: {
-                color: "$borderHover"
-            },
-            default: {
-                color: "$text"
-            },
-            green: {
-                color: "$greenText"
-            },
-            orange: {
-                color: "$orangeText"
-            },
-            pink: {
-                color: "$pinkText"
-            },
-            purple: {
-                color: "$purpleText"
-            },
-            red: {
-                color: "$redText"
-            }
-        },
-        pulse: {
-            true: {
-                animation: `${pulse} 1.5s infinite`
-            }
-        }
-    },
-    verticalAlign: "middle"
-});
-exports.default = BadgeStyled;
-
-},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8AYsO":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Box", ()=>(0, _boxDefault.default));
-var _box = require("./Box");
-var _boxDefault = parcelHelpers.interopDefault(_box);
-
-},{"./Box":"eBQnA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eBQnA":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$f51f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$f51f.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _image = require("../Image");
-var _boxStyles = require("./Box.styles");
-function Box(props) {
-    return props.image && props.image !== "" && props.image !== undefined && props.image !== "#" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _boxStyles.BoxStyled), {
-        css: props.css,
-        hover: props.hover,
-        id: props.id,
-        loading: props.loading || false,
-        padding: "none",
-        theme: props.theme || "default",
-        children: [
-            props.imageCTA ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                href: props.imageCTA,
-                rel: "noopener noreferrer",
-                target: props.imageTarget || "_blank",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _image.ThreesImage), {
-                    alt: props.imageAlt || "#",
-                    css: {
-                        img: {
-                            borderTopLeftRadius: "$1 !important",
-                            borderTopRightRadius: "$1 !important"
-                        }
-                    },
-                    fillHeight: props.imageHeight || "20rem",
-                    hover: props.hover,
-                    layout: "fill",
-                    objectFit: "cover",
-                    objectPosition: props.imagePosition || "center",
-                    src: props.image
-                }, void 0, false, {
-                    fileName: "src/components/Box/Box.tsx",
-                    lineNumber: 38,
-                    columnNumber: 11
-                }, this)
-            }, void 0, false, {
-                fileName: "src/components/Box/Box.tsx",
-                lineNumber: 34,
-                columnNumber: 9
-            }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _image.ThreesImage), {
-                alt: props.imageAlt || "#",
-                css: {
-                    img: {
-                        borderTopLeftRadius: "$1 !important",
-                        borderTopRightRadius: "$1 !important"
-                    }
-                },
-                fillHeight: props.imageHeight || "20rem",
-                hover: props.hover,
-                layout: "fill",
-                objectFit: "cover",
-                objectPosition: props.imagePosition || "center",
-                src: props.image
-            }, void 0, false, {
-                fileName: "src/components/Box/Box.tsx",
-                lineNumber: 55,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _boxStyles.BoxImageChildrenStyled), {
-                padding: "default",
-                children: props.children
-            }, void 0, false, {
-                fileName: "src/components/Box/Box.tsx",
-                lineNumber: 71,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Box/Box.tsx",
-        lineNumber: 26,
-        columnNumber: 5
-    }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _boxStyles.BoxStyled), {
-        css: props.css,
-        hover: props.hover,
-        id: props.id,
-        loading: props.loading || false,
-        padding: "default",
-        theme: props.theme || "default",
-        children: props.children
-    }, void 0, false, {
-        fileName: "src/components/Box/Box.tsx",
-        lineNumber: 76,
-        columnNumber: 5
-    }, this);
-}
-exports.default = Box;
-_c = Box;
-var _c;
-$RefreshReg$(_c, "Box");
-
-  $parcel$ReactRefreshHelpers$f51f.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../Image":"ikXqf","./Box.styles":"3P0Da","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3P0Da":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "paddingVariants", ()=>paddingVariants);
-parcelHelpers.export(exports, "BoxStyled", ()=>BoxStyled);
-parcelHelpers.export(exports, "BoxImageChildrenStyled", ()=>BoxImageChildrenStyled);
-var _stitchesConfig = require("../../stitches.config");
-const paddingVariants = {
-    padding: {
-        default: {
-            padding: "$5"
-        },
-        none: {
-            padding: 0
-        }
-    }
-};
-const BoxStyled = (0, _stitchesConfig.styled)("div", {
-    border: "0.1rem solid transparent",
-    borderRadius: "$2",
-    display: "block",
-    height: "100%",
-    margin: 0,
-    paddingBlock: 0,
-    position: "relative",
-    transition: "$default",
-    variants: {
-        hover: {
-            true: {
-                "&:hover": {
-                    boxShadow: "$2"
-                }
-            }
-        },
-        loading: {
-            true: {
-                cursor: "wait"
-            }
-        },
-        theme: {
-            default: {
-                backgroundColor: "transparent",
-                borderColor: "$border"
-            },
-            error: {
-                backgroundColor: "$redOverlay",
-                borderColor: "$redBorder",
-                color: "$redText"
-            },
-            fill: {
-                backgroundColor: "$default"
-            },
-            success: {
-                backgroundColor: "$greenOverlay",
-                borderColor: "$greenBorder",
-                color: "$greenText"
-            },
-            transparent: {
-                backgroundColor: "transparent",
-                borderColor: "transparent"
-            },
-            warning: {
-                backgroundColor: "$orangeOverlay",
-                borderColor: "$orangeBorder",
-                color: "$orangeText"
-            }
-        },
-        ...paddingVariants
-    },
-    width: "auto"
-});
-const BoxImageChildrenStyled = (0, _stitchesConfig.styled)("div", {
-    variants: {
-        ...paddingVariants
-    }
-});
-exports.default = BoxStyled;
-
-},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"i3jlU":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Button", ()=>(0, _buttonDefault.default));
-var _button = require("./Button");
-var _buttonDefault = parcelHelpers.interopDefault(_button);
-
-},{"./Button":"gRY88","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gRY88":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$aa9e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$aa9e.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _stitchesConfig = require("../../stitches.config");
-var _loading = require("../Loading");
-var _buttonStyles = require("./Button.styles");
-function Button(props) {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonStyles.ButtonStyled), {
-        "aria-label": props.ariaLabel || props.name || typeof props.children === "string" ? props.children.toString() : "",
-        block: props.block || false,
-        css: {
-            ...props.css,
-            ...props.inline && {
-                alignSelf: "center",
-                marginRight: props.inline === "auto" ? "auto" : `$${props.inline}`,
-                verticalAlign: "middle",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    marginRight: props.inline === "auto" ? "auto" : `calc($${props.inline} * 0.8)`
-                }
-            }
-        },
-        disabled: props.disabled || props.loading || false,
-        id: props.id,
-        name: props.name,
-        onClick: props.onClick,
-        small: props.small,
-        theme: props.theme || "default",
-        children: [
-            props.loading && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonStyles.ButtonIconStyled), {
-                align: "left",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loading.Loading), {}, void 0, false, {
-                    fileName: "src/components/Button/Button.tsx",
-                    lineNumber: 53,
-                    columnNumber: 11
-                }, this)
-            }, void 0, false, {
-                fileName: "src/components/Button/Button.tsx",
-                lineNumber: 52,
-                columnNumber: 9
-            }, this),
-            props.icon && (props.iconPosition === "left" || !props.iconPosition) && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonStyles.ButtonIconStyled), {
-                align: "left",
-                children: props.icon
-            }, void 0, false, {
-                fileName: "src/components/Button/Button.tsx",
-                lineNumber: 57,
-                columnNumber: 9
-            }, this),
-            props.children,
-            props.icon && props.iconPosition === "right" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonStyles.ButtonIconStyled), {
-                align: "right",
-                children: props.icon
-            }, void 0, false, {
-                fileName: "src/components/Button/Button.tsx",
-                lineNumber: 61,
-                columnNumber: 9
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Button/Button.tsx",
-        lineNumber: 26,
-        columnNumber: 5
-    }, this);
-}
-exports.default = Button;
-_c = Button;
-var _c;
-$RefreshReg$(_c, "Button");
-
-  $parcel$ReactRefreshHelpers$aa9e.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../stitches.config":"iMNz3","../Loading":"gWqOi","./Button.styles":"8Xn66","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8Xn66":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "ButtonStyled", ()=>ButtonStyled);
-parcelHelpers.export(exports, "ButtonIconStyled", ()=>ButtonIconStyled);
-var _stitchesConfig = require("../../stitches.config");
-const ButtonStyled = (0, _stitchesConfig.styled)("button", {
-    "&:disabled": {
-        cursor: "not-allowed",
-        opacity: 0.7
-    },
-    "&:hover": {
-        backgroundColor: "$defaultHover",
-        borderColor: "$borderHover",
-        boxShadow: "$2",
-        color: "$text"
-    },
-    "a": {
-        display: "block"
-    },
-    "alignContent": "center",
-    "alignItems": "center",
-    "border": "0.1rem solid $borderHover",
-    "borderRadius": "$1",
-    "boxShadow": "$1",
-    "color": "$text",
-    "display": "inline-flex",
-    "fontSize": "$h5",
-    "fontWeight": "$h5",
-    "lineHeight": "1.420 !important",
-    [(0, _stitchesConfig.breakpoints).phone]: {
-        fontSize: "calc($h5 * 0.925)"
-    },
-    [(0, _stitchesConfig.breakpoints).tabletX]: {
-        fontSize: "calc($h5 * 0.95)"
-    },
-    "padding": "$1 $4",
-    "svg": {
-        height: "1.75rem",
-        marginTop: "-0.05rem",
-        width: "1.75rem"
-    },
-    "transition": "$default",
-    "variants": {
-        block: {
-            false: {
-                display: "inline"
-            },
-            true: {
-                display: "block",
-                width: "100%"
-            }
-        },
-        small: {
-            true: {
-                fontSize: "$p",
-                fontWeight: "$p",
-                svg: {
-                    height: "1.5rem",
-                    marginTop: "-0.1rem",
-                    width: "1.5rem"
-                }
-            }
-        },
-        theme: {
-            default: {
-                borderColor: "$border"
-            },
-            fill: {
-                backgroundColor: "$default"
-            },
-            minimal: {
-                backgroundColor: "transparent",
-                borderColor: "transparent",
-                boxShadow: "none"
-            },
-            solid: {
-                backgroundColor: "$text",
-                color: "$background"
-            }
-        }
-    },
-    "verticalAlign": "middle"
-});
-const ButtonIconStyled = (0, _stitchesConfig.styled)("span", {
-    alignContent: "center",
-    alignItems: "center",
-    alignSelf: "center",
-    display: "inline-flex",
-    justifyContent: "center",
-    variants: {
-        align: {
-            left: {
-                marginRight: "$2"
-            },
-            right: {
-                marginLeft: "$2"
-            }
-        }
-    },
-    verticalAlign: "middle"
-});
-exports.default = ButtonStyled;
-
-},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7DV0X":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Dialog", ()=>(0, _dialogDefault.default));
-var _dialog = require("./Dialog");
-var _dialogDefault = parcelHelpers.interopDefault(_dialog);
-
-},{"./Dialog":"2wmkg","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2wmkg":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$b155 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$b155.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _phosphorReact = require("phosphor-react");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _usehooksTs = require("usehooks-ts");
-var _button = require("../Button");
-var _dialogStyles = require("./Dialog.styles");
-var _s = $RefreshSig$();
-function Dialog(props) {
-    _s();
-    const ref = (0, _react.useRef)(null);
-    const [isOpen, setIsOpen] = (0, _react.useState)(false);
-    const [isMounted, setIsMounted] = (0, _react.useState)(false);
-    function handleClose() {
-        setIsOpen(false);
-        setTimeout(()=>{
-            setIsMounted(false);
-        }, 250);
-    }
-    function handleOpen() {
-        setIsOpen(true);
-        setTimeout(()=>{
-            setIsMounted(true);
-        }, 25);
-    }
-    function handleClick() {
-        if (isOpen || isMounted) {
-            setIsOpen(false);
-            setIsMounted(false);
-        } else handleOpen();
-    }
-    (0, _usehooksTs.useOnClickOutside)(ref, ()=>handleClose());
-    (0, _usehooksTs.useEventListener)("keydown", (event)=>{
-        if (event.key === "Escape") handleClose();
-    });
-    (0, _usehooksTs.useLockedBody)(props.locked ? isOpen : false);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dialogStyles.DialogStyled), {
-        id: props.id,
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dialogStyles.DialogTriggerStyled), {
-                onClickCapture: handleClick,
-                children: props.trigger
-            }, void 0, false, {
-                fileName: "src/components/Dialog/Dialog.tsx",
-                lineNumber: 63,
-                columnNumber: 7
-            }, this),
-            isMounted && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dialogStyles.DialogOverlayStyled), {
-                animation: isOpen,
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dialogStyles.DialogContentStyled), {
-                    animation: isOpen,
-                    css: props.css,
-                    ref: ref,
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dialogStyles.DialogExitStyled), {
-                            onClick: ()=>handleClose(),
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
-                                ariaLabel: "Close",
-                                icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.X), {}, void 0, false, void 0, void 0),
-                                name: "close",
-                                small: true,
-                                theme: "minimal",
-                                children: "Close"
-                            }, void 0, false, {
-                                fileName: "src/components/Dialog/Dialog.tsx",
-                                lineNumber: 70,
-                                columnNumber: 15
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "src/components/Dialog/Dialog.tsx",
-                            lineNumber: 69,
-                            columnNumber: 13
-                        }, this),
-                        props.children
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/Dialog/Dialog.tsx",
-                    lineNumber: 68,
-                    columnNumber: 11
-                }, this)
-            }, void 0, false, {
-                fileName: "src/components/Dialog/Dialog.tsx",
-                lineNumber: 67,
-                columnNumber: 9
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Dialog/Dialog.tsx",
-        lineNumber: 62,
-        columnNumber: 5
-    }, this);
-}
-exports.default = Dialog;
-_s(Dialog, "jtSOqnL57Sd5vSNTmgLKr0xO03o=", false, function() {
-    return [
-        (0, _usehooksTs.useOnClickOutside),
-        (0, _usehooksTs.useEventListener),
-        (0, _usehooksTs.useLockedBody)
-    ];
-});
-_c = Dialog;
-var _c;
-$RefreshReg$(_c, "Dialog");
-
-  $parcel$ReactRefreshHelpers$b155.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","usehooks-ts":"dmUe4","../Button":"i3jlU","./Dialog.styles":"awDkT","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dmUe4":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useBoolean", ()=>(0, _useBooleanDefault.default));
-parcelHelpers.export(exports, "useClickAnyWhere", ()=>(0, _useClickAnyWhereDefault.default));
-parcelHelpers.export(exports, "useCopyToClipboard", ()=>(0, _useCopyToClipboardDefault.default));
-parcelHelpers.export(exports, "useCountdown", ()=>(0, _useCountdownDefault.default));
-parcelHelpers.export(exports, "useCounter", ()=>(0, _useCounterDefault.default));
-parcelHelpers.export(exports, "useDarkMode", ()=>(0, _useDarkModeDefault.default));
-parcelHelpers.export(exports, "useDebounce", ()=>(0, _useDebounceDefault.default));
-parcelHelpers.export(exports, "useDocumentTitle", ()=>(0, _useDocumentTitleDefault.default));
-parcelHelpers.export(exports, "useEffectOnce", ()=>(0, _useEffectOnceDefault.default));
-parcelHelpers.export(exports, "useElementSize", ()=>(0, _useElementSizeDefault.default));
-parcelHelpers.export(exports, "useEventCallback", ()=>(0, _useEventCallbackDefault.default));
-parcelHelpers.export(exports, "useEventListener", ()=>(0, _useEventListenerDefault.default));
-parcelHelpers.export(exports, "useFetch", ()=>(0, _useFetchDefault.default));
-parcelHelpers.export(exports, "useHover", ()=>(0, _useHoverDefault.default));
-parcelHelpers.export(exports, "useImageOnLoad", ()=>(0, _useImageOnLoadDefault.default));
-parcelHelpers.export(exports, "useIntersectionObserver", ()=>(0, _useIntersectionObserverDefault.default));
-parcelHelpers.export(exports, "useInterval", ()=>(0, _useIntervalDefault.default));
-parcelHelpers.export(exports, "useIsClient", ()=>(0, _useIsClientDefault.default));
-parcelHelpers.export(exports, "useIsFirstRender", ()=>(0, _useIsFirstRenderDefault.default));
-parcelHelpers.export(exports, "useIsMounted", ()=>(0, _useIsMountedDefault.default));
-parcelHelpers.export(exports, "useIsomorphicLayoutEffect", ()=>(0, _useIsomorphicLayoutEffectDefault.default));
-parcelHelpers.export(exports, "useLocalStorage", ()=>(0, _useLocalStorageDefault.default));
-parcelHelpers.export(exports, "useLockedBody", ()=>(0, _useLockedBodyDefault.default));
-parcelHelpers.export(exports, "useMap", ()=>(0, _useMapDefault.default));
-parcelHelpers.export(exports, "useMediaQuery", ()=>(0, _useMediaQueryDefault.default));
-parcelHelpers.export(exports, "useOnClickOutside", ()=>(0, _useOnClickOutsideDefault.default));
-parcelHelpers.export(exports, "useReadLocalStorage", ()=>(0, _useReadLocalStorageDefault.default));
-parcelHelpers.export(exports, "useScreen", ()=>(0, _useScreenDefault.default));
-parcelHelpers.export(exports, "useScript", ()=>(0, _useScriptDefault.default));
-parcelHelpers.export(exports, "useSessionStorage", ()=>(0, _useSessionStorageDefault.default));
-parcelHelpers.export(exports, "useSsr", ()=>(0, _useSsrDefault.default));
-parcelHelpers.export(exports, "useStep", ()=>(0, _useStepDefault.default));
-parcelHelpers.export(exports, "useTernaryDarkMode", ()=>(0, _useTernaryDarkModeDefault.default));
-parcelHelpers.export(exports, "useTimeout", ()=>(0, _useTimeoutDefault.default));
-parcelHelpers.export(exports, "useUpdateEffect", ()=>(0, _useUpdateEffectDefault.default));
-parcelHelpers.export(exports, "useWindowSize", ()=>(0, _useWindowSizeDefault.default));
-var _useBoolean = require("./useBoolean/useBoolean");
-var _useBooleanDefault = parcelHelpers.interopDefault(_useBoolean);
-parcelHelpers.exportAll(_useBoolean, exports);
-var _useClickAnyWhere = require("./useClickAnyWhere/useClickAnyWhere");
-var _useClickAnyWhereDefault = parcelHelpers.interopDefault(_useClickAnyWhere);
-parcelHelpers.exportAll(_useClickAnyWhere, exports);
-var _useCopyToClipboard = require("./useCopyToClipboard/useCopyToClipboard");
-var _useCopyToClipboardDefault = parcelHelpers.interopDefault(_useCopyToClipboard);
-parcelHelpers.exportAll(_useCopyToClipboard, exports);
-var _useCountdown = require("./useCountdown/useCountdown");
-var _useCountdownDefault = parcelHelpers.interopDefault(_useCountdown);
-parcelHelpers.exportAll(_useCountdown, exports);
-var _useCounter = require("./useCounter/useCounter");
-var _useCounterDefault = parcelHelpers.interopDefault(_useCounter);
-parcelHelpers.exportAll(_useCounter, exports);
-var _useDarkMode = require("./useDarkMode/useDarkMode");
-var _useDarkModeDefault = parcelHelpers.interopDefault(_useDarkMode);
-parcelHelpers.exportAll(_useDarkMode, exports);
-var _useDebounce = require("./useDebounce/useDebounce");
-var _useDebounceDefault = parcelHelpers.interopDefault(_useDebounce);
-parcelHelpers.exportAll(_useDebounce, exports);
-var _useDocumentTitle = require("./useDocumentTitle/useDocumentTitle");
-var _useDocumentTitleDefault = parcelHelpers.interopDefault(_useDocumentTitle);
-parcelHelpers.exportAll(_useDocumentTitle, exports);
-var _useEffectOnce = require("./useEffectOnce/useEffectOnce");
-var _useEffectOnceDefault = parcelHelpers.interopDefault(_useEffectOnce);
-parcelHelpers.exportAll(_useEffectOnce, exports);
-var _useElementSize = require("./useElementSize/useElementSize");
-var _useElementSizeDefault = parcelHelpers.interopDefault(_useElementSize);
-parcelHelpers.exportAll(_useElementSize, exports);
-var _useEventCallback = require("./useEventCallback/useEventCallback");
-var _useEventCallbackDefault = parcelHelpers.interopDefault(_useEventCallback);
-parcelHelpers.exportAll(_useEventCallback, exports);
-var _useEventListener = require("./useEventListener/useEventListener");
-var _useEventListenerDefault = parcelHelpers.interopDefault(_useEventListener);
-parcelHelpers.exportAll(_useEventListener, exports);
-var _useFetch = require("./useFetch/useFetch");
-var _useFetchDefault = parcelHelpers.interopDefault(_useFetch);
-parcelHelpers.exportAll(_useFetch, exports);
-var _useHover = require("./useHover/useHover");
-var _useHoverDefault = parcelHelpers.interopDefault(_useHover);
-parcelHelpers.exportAll(_useHover, exports);
-var _useImageOnLoad = require("./useImageOnLoad/useImageOnLoad");
-var _useImageOnLoadDefault = parcelHelpers.interopDefault(_useImageOnLoad);
-parcelHelpers.exportAll(_useImageOnLoad, exports);
-var _useIntersectionObserver = require("./useIntersectionObserver/useIntersectionObserver");
-var _useIntersectionObserverDefault = parcelHelpers.interopDefault(_useIntersectionObserver);
-parcelHelpers.exportAll(_useIntersectionObserver, exports);
-var _useInterval = require("./useInterval/useInterval");
-var _useIntervalDefault = parcelHelpers.interopDefault(_useInterval);
-parcelHelpers.exportAll(_useInterval, exports);
-var _useIsClient = require("./useIsClient/useIsClient");
-var _useIsClientDefault = parcelHelpers.interopDefault(_useIsClient);
-parcelHelpers.exportAll(_useIsClient, exports);
-var _useIsFirstRender = require("./useIsFirstRender/useIsFirstRender");
-var _useIsFirstRenderDefault = parcelHelpers.interopDefault(_useIsFirstRender);
-parcelHelpers.exportAll(_useIsFirstRender, exports);
-var _useIsMounted = require("./useIsMounted/useIsMounted");
-var _useIsMountedDefault = parcelHelpers.interopDefault(_useIsMounted);
-parcelHelpers.exportAll(_useIsMounted, exports);
-var _useIsomorphicLayoutEffect = require("./useIsomorphicLayoutEffect/useIsomorphicLayoutEffect");
-var _useIsomorphicLayoutEffectDefault = parcelHelpers.interopDefault(_useIsomorphicLayoutEffect);
-parcelHelpers.exportAll(_useIsomorphicLayoutEffect, exports);
-var _useLocalStorage = require("./useLocalStorage/useLocalStorage");
-var _useLocalStorageDefault = parcelHelpers.interopDefault(_useLocalStorage);
-parcelHelpers.exportAll(_useLocalStorage, exports);
-var _useLockedBody = require("./useLockedBody/useLockedBody");
-var _useLockedBodyDefault = parcelHelpers.interopDefault(_useLockedBody);
-parcelHelpers.exportAll(_useLockedBody, exports);
-var _useMap = require("./useMap/useMap");
-var _useMapDefault = parcelHelpers.interopDefault(_useMap);
-parcelHelpers.exportAll(_useMap, exports);
-var _useMediaQuery = require("./useMediaQuery/useMediaQuery");
-var _useMediaQueryDefault = parcelHelpers.interopDefault(_useMediaQuery);
-parcelHelpers.exportAll(_useMediaQuery, exports);
-var _useOnClickOutside = require("./useOnClickOutside/useOnClickOutside");
-var _useOnClickOutsideDefault = parcelHelpers.interopDefault(_useOnClickOutside);
-parcelHelpers.exportAll(_useOnClickOutside, exports);
-var _useReadLocalStorage = require("./useReadLocalStorage/useReadLocalStorage");
-var _useReadLocalStorageDefault = parcelHelpers.interopDefault(_useReadLocalStorage);
-parcelHelpers.exportAll(_useReadLocalStorage, exports);
-var _useScreen = require("./useScreen/useScreen");
-var _useScreenDefault = parcelHelpers.interopDefault(_useScreen);
-parcelHelpers.exportAll(_useScreen, exports);
-var _useScript = require("./useScript/useScript");
-var _useScriptDefault = parcelHelpers.interopDefault(_useScript);
-parcelHelpers.exportAll(_useScript, exports);
-var _useSessionStorage = require("./useSessionStorage/useSessionStorage");
-var _useSessionStorageDefault = parcelHelpers.interopDefault(_useSessionStorage);
-parcelHelpers.exportAll(_useSessionStorage, exports);
-var _useSsr = require("./useSsr/useSsr");
-var _useSsrDefault = parcelHelpers.interopDefault(_useSsr);
-parcelHelpers.exportAll(_useSsr, exports);
-var _useStep = require("./useStep/useStep");
-var _useStepDefault = parcelHelpers.interopDefault(_useStep);
-parcelHelpers.exportAll(_useStep, exports);
-var _useTernaryDarkMode = require("./useTernaryDarkMode/useTernaryDarkMode");
-var _useTernaryDarkModeDefault = parcelHelpers.interopDefault(_useTernaryDarkMode);
-parcelHelpers.exportAll(_useTernaryDarkMode, exports);
-var _useTimeout = require("./useTimeout/useTimeout");
-var _useTimeoutDefault = parcelHelpers.interopDefault(_useTimeout);
-parcelHelpers.exportAll(_useTimeout, exports);
-var _useUpdateEffect = require("./useUpdateEffect/useUpdateEffect");
-var _useUpdateEffectDefault = parcelHelpers.interopDefault(_useUpdateEffect);
-parcelHelpers.exportAll(_useUpdateEffect, exports);
-var _useWindowSize = require("./useWindowSize/useWindowSize");
-var _useWindowSizeDefault = parcelHelpers.interopDefault(_useWindowSize);
-parcelHelpers.exportAll(_useWindowSize, exports);
-
-},{"./useBoolean/useBoolean":"75OO8","./useClickAnyWhere/useClickAnyWhere":"faDbb","./useCopyToClipboard/useCopyToClipboard":"2BS9r","./useCountdown/useCountdown":"fIMZs","./useCounter/useCounter":"kSFgg","./useDarkMode/useDarkMode":"aqL5L","./useDebounce/useDebounce":"lNmEG","./useDocumentTitle/useDocumentTitle":"esgc8","./useEffectOnce/useEffectOnce":"3jP3w","./useElementSize/useElementSize":"2iww6","./useEventCallback/useEventCallback":"iwlUo","./useEventListener/useEventListener":"1HJqq","./useFetch/useFetch":"26gvK","./useHover/useHover":"eNC2T","./useImageOnLoad/useImageOnLoad":"fttn3","./useIntersectionObserver/useIntersectionObserver":"9IP75","./useInterval/useInterval":"GPWw2","./useIsClient/useIsClient":"3emvU","./useIsFirstRender/useIsFirstRender":"g3oAw","./useIsMounted/useIsMounted":"2uJb6","./useIsomorphicLayoutEffect/useIsomorphicLayoutEffect":"fWEdC","./useLocalStorage/useLocalStorage":"2Bbwp","./useLockedBody/useLockedBody":"aCXSw","./useMap/useMap":"2ZsJ5","./useMediaQuery/useMediaQuery":"26a3m","./useOnClickOutside/useOnClickOutside":"eLhz8","./useReadLocalStorage/useReadLocalStorage":"4VBoB","./useScreen/useScreen":"6YQVm","./useScript/useScript":"djE9J","./useSessionStorage/useSessionStorage":"jTdlC","./useSsr/useSsr":"9XRLH","./useStep/useStep":"2zb9y","./useTernaryDarkMode/useTernaryDarkMode":"9k0Mg","./useTimeout/useTimeout":"iuWi6","./useUpdateEffect/useUpdateEffect":"Gp0lB","./useWindowSize/useWindowSize":"73GDr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"75OO8":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-function useBoolean(defaultValue) {
-    const [value, setValue] = (0, _react.useState)(!!defaultValue);
-    const setTrue = (0, _react.useCallback)(()=>setValue(true), []);
-    const setFalse = (0, _react.useCallback)(()=>setValue(false), []);
-    const toggle = (0, _react.useCallback)(()=>setValue((x)=>!x), []);
-    return {
-        value,
-        setValue,
-        setTrue,
-        setFalse,
-        toggle
-    };
-}
-exports.default = useBoolean;
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"faDbb":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _ = require("..");
-function useClickAnyWhere(handler) {
-    (0, _.useEventListener)("click", (event)=>{
-        handler(event);
-    });
-}
-exports.default = useClickAnyWhere;
-
-},{"..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2BS9r":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-function useCopyToClipboard() {
-    const [copiedText, setCopiedText] = (0, _react.useState)(null);
-    const copy = async (text)=>{
-        if (!navigator?.clipboard) {
-            console.warn("Clipboard not supported");
-            return false;
-        }
-        try {
-            await navigator.clipboard.writeText(text);
-            setCopiedText(text);
-            return true;
-        } catch (error) {
-            console.warn("Copy failed", error);
-            setCopiedText(null);
-            return false;
-        }
-    };
-    return [
-        copiedText,
-        copy
-    ];
-}
-exports.default = useCopyToClipboard;
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fIMZs":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _ = require("..");
-function useCountdown(countdownOption) {
-    let isDeprecated = false;
-    let countStart, intervalMs, isIncrement, countStop;
-    if ("seconds" in countdownOption) {
-        console.warn("[useCountdown:DEPRECATED] new interface is already available (see https://usehooks-ts.com/react-hook/use-countdown), the old version will retire on usehooks-ts@3.");
-        isDeprecated = true;
-        countStart = countdownOption.seconds;
-        intervalMs = countdownOption.interval;
-        isIncrement = countdownOption.isIncrement;
-    } else ({ countStart , intervalMs , isIncrement , countStop  } = countdownOption);
-    intervalMs = intervalMs ?? 1000;
-    isIncrement = isIncrement ?? false;
-    countStop = countStop ?? 0;
-    const { count , increment , decrement , reset: resetCounter ,  } = (0, _.useCounter)(countStart);
-    const { value: isCountdownRunning , setTrue: startCountdown , setFalse: stopCountdown ,  } = (0, _.useBoolean)(false);
-    const resetCountdown = ()=>{
-        stopCountdown();
-        resetCounter();
-    };
-    const countdownCallback = (0, _react.useCallback)(()=>{
-        if (count === countStop) {
-            stopCountdown();
-            return;
-        }
-        if (isIncrement) increment();
-        else decrement();
-    }, [
-        count,
-        countStop,
-        decrement,
-        increment,
-        isIncrement,
-        stopCountdown
-    ]);
-    (0, _.useInterval)(countdownCallback, isCountdownRunning ? intervalMs : null);
-    return isDeprecated ? [
-        count,
-        {
-            start: startCountdown,
-            stop: stopCountdown,
-            reset: resetCountdown
-        }, 
-    ] : [
-        count,
-        {
-            startCountdown,
-            stopCountdown,
-            resetCountdown
-        }, 
-    ];
-}
-exports.default = useCountdown;
-
-},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kSFgg":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-function useCounter(initialValue) {
-    const [count, setCount] = (0, _react.useState)(initialValue || 0);
-    const increment = ()=>setCount((x)=>x + 1);
-    const decrement = ()=>setCount((x)=>x - 1);
-    const reset = ()=>setCount(initialValue || 0);
-    return {
-        count,
-        increment,
-        decrement,
-        reset,
-        setCount
-    };
-}
-exports.default = useCounter;
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aqL5L":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _ = require("..");
-const COLOR_SCHEME_QUERY = "(prefers-color-scheme: dark)";
-function useDarkMode(defaultValue) {
-    const isDarkOS = (0, _.useMediaQuery)(COLOR_SCHEME_QUERY);
-    const [isDarkMode, setDarkMode] = (0, _.useLocalStorage)("usehooks-ts-dark-mode", (defaultValue ?? isDarkOS) ?? false);
-    (0, _.useUpdateEffect)(()=>{
-        setDarkMode(isDarkOS);
-    }, [
-        isDarkOS
-    ]);
-    return {
-        isDarkMode,
-        toggle: ()=>setDarkMode((prev)=>!prev),
-        enable: ()=>setDarkMode(true),
-        disable: ()=>setDarkMode(false)
-    };
-}
-exports.default = useDarkMode;
-
-},{"..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lNmEG":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-function useDebounce(value, delay) {
-    const [debouncedValue, setDebouncedValue] = (0, _react.useState)(value);
-    (0, _react.useEffect)(()=>{
-        const timer = setTimeout(()=>setDebouncedValue(value), delay || 500);
-        return ()=>{
-            clearTimeout(timer);
-        };
-    }, [
-        value,
-        delay
-    ]);
-    return debouncedValue;
-}
-exports.default = useDebounce;
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"esgc8":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _ = require("..");
-function useDocumentTitle(title) {
-    (0, _.useIsomorphicLayoutEffect)(()=>{
-        window.document.title = title;
-    }, [
-        title
-    ]);
-}
-exports.default = useDocumentTitle;
-
-},{"..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3jP3w":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-function useEffectOnce(effect) {
-    (0, _react.useEffect)(effect, []);
-}
-exports.default = useEffectOnce;
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2iww6":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _ = require("..");
-function useElementSize() {
-    const [ref, setRef] = (0, _react.useState)(null);
-    const [size, setSize] = (0, _react.useState)({
-        width: 0,
-        height: 0
-    });
-    const handleSize = (0, _react.useCallback)(()=>{
-        setSize({
-            width: ref?.offsetWidth || 0,
-            height: ref?.offsetHeight || 0
-        });
-    }, [
-        ref?.offsetHeight,
-        ref?.offsetWidth
-    ]);
-    (0, _.useEventListener)("resize", handleSize);
-    (0, _.useIsomorphicLayoutEffect)(()=>{
-        handleSize();
-    }, [
-        ref?.offsetHeight,
-        ref?.offsetWidth
-    ]);
-    return [
-        setRef,
-        size
-    ];
-}
-exports.default = useElementSize;
-
-},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iwlUo":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _ = require("..");
-function useEventCallback(fn) {
-    const ref = (0, _react.useRef)(()=>{
-        throw new Error("Cannot call an event handler while rendering.");
-    });
-    (0, _.useIsomorphicLayoutEffect)(()=>{
-        ref.current = fn;
-    }, [
-        fn
-    ]);
-    return (0, _react.useCallback)((...args)=>ref.current(...args), [
-        ref
-    ]);
-}
-exports.default = useEventCallback;
-
-},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1HJqq":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _ = require("..");
-function useEventListener(eventName, handler, element, options) {
-    const savedHandler = (0, _react.useRef)(handler);
-    (0, _.useIsomorphicLayoutEffect)(()=>{
-        savedHandler.current = handler;
-    }, [
-        handler
-    ]);
-    (0, _react.useEffect)(()=>{
-        const targetElement = element?.current || window;
-        if (!(targetElement && targetElement.addEventListener)) return;
-        const eventListener = (event)=>savedHandler.current(event);
-        targetElement.addEventListener(eventName, eventListener, options);
-        return ()=>{
-            targetElement.removeEventListener(eventName, eventListener);
-        };
-    }, [
-        eventName,
-        element,
-        options
-    ]);
-}
-exports.default = useEventListener;
-
-},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"26gvK":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-function useFetch(url, options) {
-    const cache = (0, _react.useRef)({});
-    const cancelRequest = (0, _react.useRef)(false);
-    const initialState = {
-        error: undefined,
-        data: undefined
-    };
-    const fetchReducer = (state, action)=>{
-        switch(action.type){
-            case "loading":
-                return {
-                    ...initialState
-                };
-            case "fetched":
-                return {
-                    ...initialState,
-                    data: action.payload
-                };
-            case "error":
-                return {
-                    ...initialState,
-                    error: action.payload
-                };
-            default:
-                return state;
-        }
-    };
-    const [state, dispatch] = (0, _react.useReducer)(fetchReducer, initialState);
-    (0, _react.useEffect)(()=>{
-        if (!url) return;
-        cancelRequest.current = false;
-        const fetchData = async ()=>{
-            dispatch({
-                type: "loading"
-            });
-            if (cache.current[url]) {
-                dispatch({
-                    type: "fetched",
-                    payload: cache.current[url]
-                });
-                return;
-            }
-            try {
-                const response = await fetch(url, options);
-                if (!response.ok) throw new Error(response.statusText);
-                const data = await response.json();
-                cache.current[url] = data;
-                if (cancelRequest.current) return;
-                dispatch({
-                    type: "fetched",
-                    payload: data
-                });
-            } catch (error) {
-                if (cancelRequest.current) return;
-                dispatch({
-                    type: "error",
-                    payload: error
-                });
-            }
-        };
-        fetchData();
-        return ()=>{
-            cancelRequest.current = true;
-        };
-    }, [
-        url
-    ]);
-    return state;
-}
-exports.default = useFetch;
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eNC2T":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _ = require("..");
-function useHover(elementRef) {
-    const [value, setValue] = (0, _react.useState)(false);
-    const handleMouseEnter = ()=>setValue(true);
-    const handleMouseLeave = ()=>setValue(false);
-    (0, _.useEventListener)("mouseenter", handleMouseEnter, elementRef);
-    (0, _.useEventListener)("mouseleave", handleMouseLeave, elementRef);
-    return value;
-}
-exports.default = useHover;
-
-},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fttn3":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-function useImageOnLoad() {
-    const [isLoaded, setIsLoaded] = (0, _react.useState)(false);
-    const handleImageOnLoad = ()=>{
-        setIsLoaded(true);
-    };
-    const css = {
-        thumbnail: {
-            visibility: isLoaded ? "hidden" : "visible",
-            filter: "blur(8px)",
-            transition: "visibility 0ms ease-out 500ms"
-        },
-        fullSize: {
-            opacity: isLoaded ? 1 : 0,
-            transition: "opacity 500ms ease-in 0ms"
-        }
-    };
-    return {
-        handleImageOnLoad,
-        css
-    };
-}
-exports.default = useImageOnLoad;
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9IP75":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-function useIntersectionObserver(elementRef, { threshold =0 , root =null , rootMargin ="0%" , freezeOnceVisible =false ,  }) {
-    const [entry, setEntry] = (0, _react.useState)();
-    const frozen = entry?.isIntersecting && freezeOnceVisible;
-    const updateEntry = ([entry])=>{
-        setEntry(entry);
-    };
-    (0, _react.useEffect)(()=>{
-        const node = elementRef?.current;
-        const hasIOSupport = !!window.IntersectionObserver;
-        if (!hasIOSupport || frozen || !node) return;
-        const observerParams = {
-            threshold,
-            root,
-            rootMargin
-        };
-        const observer = new IntersectionObserver(updateEntry, observerParams);
-        observer.observe(node);
-        return ()=>observer.disconnect();
-    }, [
-        elementRef,
-        JSON.stringify(threshold),
-        root,
-        rootMargin,
-        frozen
-    ]);
-    return entry;
-}
-exports.default = useIntersectionObserver;
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"GPWw2":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _ = require("..");
-function useInterval(callback, delay) {
-    const savedCallback = (0, _react.useRef)(callback);
-    (0, _.useIsomorphicLayoutEffect)(()=>{
-        savedCallback.current = callback;
-    }, [
-        callback
-    ]);
-    (0, _react.useEffect)(()=>{
-        if (!delay && delay !== 0) return;
-        const id = setInterval(()=>savedCallback.current(), delay);
-        return ()=>clearInterval(id);
-    }, [
-        delay
-    ]);
-}
-exports.default = useInterval;
-
-},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3emvU":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-function useIsClient() {
-    const [isClient, setClient] = (0, _react.useState)(false);
-    (0, _react.useEffect)(()=>{
-        setClient(true);
-    }, []);
-    return isClient;
-}
-exports.default = useIsClient;
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"g3oAw":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-function useIsFirstRender() {
-    const isFirst = (0, _react.useRef)(true);
-    if (isFirst.current) {
-        isFirst.current = false;
-        return true;
-    }
-    return isFirst.current;
-}
-exports.default = useIsFirstRender;
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2uJb6":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-function useIsMounted() {
-    const isMounted = (0, _react.useRef)(false);
-    (0, _react.useEffect)(()=>{
-        isMounted.current = true;
-        return ()=>{
-            isMounted.current = false;
-        };
-    }, []);
-    return (0, _react.useCallback)(()=>isMounted.current, []);
-}
-exports.default = useIsMounted;
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fWEdC":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-const useIsomorphicLayoutEffect = typeof window !== "undefined" ? (0, _react.useLayoutEffect) : (0, _react.useEffect);
-exports.default = useIsomorphicLayoutEffect;
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2Bbwp":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _ = require("..");
-function useLocalStorage(key, initialValue) {
-    const readValue = (0, _react.useCallback)(()=>{
-        if (typeof window === "undefined") return initialValue;
-        try {
-            const item = window.localStorage.getItem(key);
-            return item ? parseJSON(item) : initialValue;
-        } catch (error) {
-            console.warn(`Error reading localStorage key “${key}”:`, error);
-            return initialValue;
-        }
-    }, [
-        initialValue,
-        key
-    ]);
-    const [storedValue, setStoredValue] = (0, _react.useState)(readValue);
-    const setValue = (0, _.useEventCallback)((value)=>{
-        if (typeof window === "undefined") console.warn(`Tried setting localStorage key “${key}” even though environment is not a client`);
-        try {
-            const newValue = value instanceof Function ? value(storedValue) : value;
-            window.localStorage.setItem(key, JSON.stringify(newValue));
-            setStoredValue(newValue);
-            window.dispatchEvent(new Event("local-storage"));
-        } catch (error) {
-            console.warn(`Error setting localStorage key “${key}”:`, error);
-        }
-    });
-    (0, _react.useEffect)(()=>{
-        setStoredValue(readValue());
-    }, []);
-    const handleStorageChange = (0, _react.useCallback)((event)=>{
-        if (event?.key && event.key !== key) return;
-        setStoredValue(readValue());
-    }, [
-        key,
-        readValue
-    ]);
-    (0, _.useEventListener)("storage", handleStorageChange);
-    (0, _.useEventListener)("local-storage", handleStorageChange);
-    return [
-        storedValue,
-        setValue
-    ];
-}
-exports.default = useLocalStorage;
-function parseJSON(value) {
-    try {
-        return value === "undefined" ? undefined : JSON.parse(value ?? "");
-    } catch  {
-        console.log("parsing error on", {
-            value
-        });
-        return undefined;
-    }
-}
-
-},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aCXSw":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _ = require("..");
-function useLockedBody(initialLocked = false) {
-    const [locked, setLocked] = (0, _react.useState)(initialLocked);
-    (0, _.useIsomorphicLayoutEffect)(()=>{
-        if (!locked) return;
-        const originalOverflow = document.body.style.overflow;
-        const originalPaddingRight = document.body.style.paddingRight;
-        document.body.style.overflow = "hidden";
-        const root = document.getElementById("___gatsby");
-        const scrollBarWidth = root ? root.offsetWidth - root.scrollWidth : 0;
-        if (scrollBarWidth) document.body.style.paddingRight = `${scrollBarWidth}px`;
-        return ()=>{
-            document.body.style.overflow = originalOverflow;
-            if (scrollBarWidth) document.body.style.paddingRight = originalPaddingRight;
-        };
-    }, [
-        locked
-    ]);
-    (0, _react.useEffect)(()=>{
-        if (locked !== initialLocked) setLocked(initialLocked);
-    }, [
-        initialLocked
-    ]);
-    return [
-        locked,
-        setLocked
-    ];
-}
-exports.default = useLockedBody;
-
-},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2ZsJ5":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-function useMap(initialState = new Map()) {
-    const [map, setMap] = (0, _react.useState)(new Map(initialState));
-    const actions = {
-        set: (0, _react.useCallback)((key, value)=>{
-            setMap((prev)=>{
-                const copy = new Map(prev);
-                copy.set(key, value);
-                return copy;
-            });
-        }, []),
-        setAll: (0, _react.useCallback)((entries)=>{
-            setMap(()=>new Map(entries));
-        }, []),
-        remove: (0, _react.useCallback)((key)=>{
-            setMap((prev)=>{
-                const copy = new Map(prev);
-                copy.delete(key);
-                return copy;
-            });
-        }, []),
-        reset: (0, _react.useCallback)(()=>{
-            setMap(()=>new Map());
-        }, [])
-    };
-    return [
-        map,
-        actions
-    ];
-}
-exports.default = useMap;
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"26a3m":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-function useMediaQuery(query) {
-    const getMatches = (query)=>{
-        if (typeof window !== "undefined") return window.matchMedia(query).matches;
-        return false;
-    };
-    const [matches, setMatches] = (0, _react.useState)(getMatches(query));
-    function handleChange() {
-        setMatches(getMatches(query));
-    }
-    (0, _react.useEffect)(()=>{
-        const matchMedia = window.matchMedia(query);
-        handleChange();
-        if (matchMedia.addListener) matchMedia.addListener(handleChange);
-        else matchMedia.addEventListener("change", handleChange);
-        return ()=>{
-            if (matchMedia.removeListener) matchMedia.removeListener(handleChange);
-            else matchMedia.removeEventListener("change", handleChange);
-        };
-    }, [
-        query
-    ]);
-    return matches;
-}
-exports.default = useMediaQuery;
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eLhz8":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _ = require("..");
-function useOnClickOutside(ref, handler, mouseEvent = "mousedown") {
-    (0, _.useEventListener)(mouseEvent, (event)=>{
-        const el = ref?.current;
-        if (!el || el.contains(event.target)) return;
-        handler(event);
-    });
-}
-exports.default = useOnClickOutside;
-
-},{"..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4VBoB":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _ = require("..");
-function useReadLocalStorage(key) {
-    const readValue = (0, _react.useCallback)(()=>{
-        if (typeof window === "undefined") return null;
-        try {
-            const item = window.localStorage.getItem(key);
-            return item ? JSON.parse(item) : null;
-        } catch (error) {
-            console.warn(`Error reading localStorage key “${key}”:`, error);
-            return null;
-        }
-    }, [
-        key
-    ]);
-    const [storedValue, setStoredValue] = (0, _react.useState)(readValue);
-    (0, _react.useEffect)(()=>{
-        setStoredValue(readValue());
-    }, []);
-    const handleStorageChange = (0, _react.useCallback)((event)=>{
-        if (event?.key && event.key !== key) return;
-        setStoredValue(readValue());
-    }, [
-        key,
-        readValue
-    ]);
-    (0, _.useEventListener)("storage", handleStorageChange);
-    (0, _.useEventListener)("local-storage", handleStorageChange);
-    return storedValue;
-}
-exports.default = useReadLocalStorage;
-
-},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6YQVm":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _ = require("..");
-function useScreen() {
-    const getScreen = ()=>{
-        if (typeof window !== "undefined" && window.screen) return window.screen;
-        return undefined;
-    };
-    const [screen, setScreen] = (0, _react.useState)(getScreen());
-    function handleSize() {
-        setScreen(getScreen());
-    }
-    (0, _.useEventListener)("resize", handleSize);
-    (0, _.useIsomorphicLayoutEffect)(()=>{
-        handleSize();
-    }, []);
-    return screen;
-}
-exports.default = useScreen;
-
-},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"djE9J":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-function useScript(src) {
-    const [status, setStatus] = (0, _react.useState)(src ? "loading" : "idle");
-    (0, _react.useEffect)(()=>{
-        if (!src) {
-            setStatus("idle");
-            return;
-        }
-        let script = document.querySelector(`script[src="${src}"]`);
-        if (!script) {
-            script = document.createElement("script");
-            script.src = src;
-            script.async = true;
-            script.setAttribute("data-status", "loading");
-            document.body.appendChild(script);
-            const setAttributeFromEvent = (event)=>{
-                script?.setAttribute("data-status", event.type === "load" ? "ready" : "error");
-            };
-            script.addEventListener("load", setAttributeFromEvent);
-            script.addEventListener("error", setAttributeFromEvent);
-        } else setStatus(script.getAttribute("data-status"));
-        const setStateFromEvent = (event)=>{
-            setStatus(event.type === "load" ? "ready" : "error");
-        };
-        script.addEventListener("load", setStateFromEvent);
-        script.addEventListener("error", setStateFromEvent);
-        return ()=>{
-            if (script) {
-                script.removeEventListener("load", setStateFromEvent);
-                script.removeEventListener("error", setStateFromEvent);
-            }
-        };
-    }, [
-        src
-    ]);
-    return status;
-}
-exports.default = useScript;
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jTdlC":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _ = require("..");
-function useSessionStorage(key, initialValue) {
-    const readValue = (0, _react.useCallback)(()=>{
-        if (typeof window === "undefined") return initialValue;
-        try {
-            const item = window.sessionStorage.getItem(key);
-            return item ? parseJSON(item) : initialValue;
-        } catch (error) {
-            console.warn(`Error reading sessionStorage key “${key}”:`, error);
-            return initialValue;
-        }
-    }, [
-        initialValue,
-        key
-    ]);
-    const [storedValue, setStoredValue] = (0, _react.useState)(readValue);
-    const setValue = (0, _.useEventCallback)((value)=>{
-        if (typeof window == "undefined") console.warn(`Tried setting sessionStorage key “${key}” even though environment is not a client`);
-        try {
-            const newValue = value instanceof Function ? value(storedValue) : value;
-            window.sessionStorage.setItem(key, JSON.stringify(newValue));
-            setStoredValue(newValue);
-            window.dispatchEvent(new Event("session-storage"));
-        } catch (error) {
-            console.warn(`Error setting sessionStorage key “${key}”:`, error);
-        }
-    });
-    (0, _react.useEffect)(()=>{
-        setStoredValue(readValue());
-    }, []);
-    const handleStorageChange = (0, _react.useCallback)((event)=>{
-        if (event?.key && event.key !== key) return;
-        setStoredValue(readValue());
-    }, [
-        key,
-        readValue
-    ]);
-    (0, _.useEventListener)("storage", handleStorageChange);
-    (0, _.useEventListener)("session-storage", handleStorageChange);
-    return [
-        storedValue,
-        setValue
-    ];
-}
-exports.default = useSessionStorage;
-function parseJSON(value) {
-    try {
-        return value === "undefined" ? undefined : JSON.parse(value ?? "");
-    } catch  {
-        console.log("parsing error on", {
-            value
-        });
-        return undefined;
-    }
-}
-
-},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9XRLH":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-function useSsr() {
-    const isDOM = typeof window !== "undefined" && window.document && window.document.documentElement;
-    return {
-        isBrowser: isDOM,
-        isServer: !isDOM
-    };
-}
-exports.default = useSsr;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2zb9y":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-function useStep(maxStep) {
-    const [currentStep, setCurrentStep] = (0, _react.useState)(1);
-    const canGoToNextStep = (0, _react.useMemo)(()=>currentStep + 1 <= maxStep, [
-        currentStep,
-        maxStep
-    ]);
-    const canGoToPrevStep = (0, _react.useMemo)(()=>currentStep - 1 >= 1, [
-        currentStep
-    ]);
-    const setStep = (0, _react.useCallback)((step)=>{
-        const newStep = step instanceof Function ? step(currentStep) : step;
-        if (newStep >= 1 && newStep <= maxStep) {
-            setCurrentStep(newStep);
-            return;
-        }
-        throw new Error("Step not valid");
-    }, [
-        maxStep,
-        currentStep
-    ]);
-    const goToNextStep = (0, _react.useCallback)(()=>{
-        if (canGoToNextStep) setCurrentStep((step)=>step + 1);
-    }, [
-        canGoToNextStep
-    ]);
-    const goToPrevStep = (0, _react.useCallback)(()=>{
-        if (canGoToPrevStep) setCurrentStep((step)=>step - 1);
-    }, [
-        canGoToPrevStep
-    ]);
-    const reset = (0, _react.useCallback)(()=>{
-        setCurrentStep(1);
-    }, []);
-    return [
-        currentStep,
-        {
-            goToNextStep,
-            goToPrevStep,
-            canGoToNextStep,
-            canGoToPrevStep,
-            setStep,
-            reset
-        }, 
-    ];
-}
-exports.default = useStep;
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9k0Mg":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _ = require("..");
-const COLOR_SCHEME_QUERY = "(prefers-color-scheme: dark)";
-function useTernaryDarkMode() {
-    const isDarkOS = (0, _.useMediaQuery)(COLOR_SCHEME_QUERY);
-    const [ternaryDarkMode, setTernaryDarkMode] = (0, _.useLocalStorage)("usehooks-ts-ternary-dark-mode", "system");
-    const [isDarkMode, setDarkMode] = (0, _react.useState)(isDarkOS);
-    (0, _.useUpdateEffect)(()=>{
-        if (ternaryDarkMode === "system") setDarkMode(isDarkOS);
-    }, [
-        isDarkOS
-    ]);
-    (0, _react.useEffect)(()=>{
-        switch(ternaryDarkMode){
-            case "light":
-                setDarkMode(false);
-                break;
-            case "system":
-                setDarkMode(isDarkOS);
-                break;
-            case "dark":
-                setDarkMode(true);
-                break;
-        }
-    }, [
-        ternaryDarkMode,
-        isDarkOS
-    ]);
-    function toggleTernaryDarkMode() {
-        const toggleDict = {
-            light: "system",
-            system: "dark",
-            dark: "light"
-        };
-        setTernaryDarkMode((prevMode)=>toggleDict[prevMode]);
-    }
-    return {
-        isDarkMode,
-        ternaryDarkMode,
-        setTernaryDarkMode,
-        toggleTernaryDarkMode
-    };
-}
-exports.default = useTernaryDarkMode;
-
-},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iuWi6":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _ = require("..");
-function useTimeout(callback, delay) {
-    const savedCallback = (0, _react.useRef)(callback);
-    (0, _.useIsomorphicLayoutEffect)(()=>{
-        savedCallback.current = callback;
-    }, [
-        callback
-    ]);
-    (0, _react.useEffect)(()=>{
-        if (!delay && delay !== 0) return;
-        const id = setTimeout(()=>savedCallback.current(), delay);
-        return ()=>clearTimeout(id);
-    }, [
-        delay
-    ]);
-}
-exports.default = useTimeout;
-
-},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"Gp0lB":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _ = require("..");
-function useUpdateEffect(effect, deps) {
-    const isFirst = (0, _.useIsFirstRender)();
-    (0, _react.useEffect)(()=>{
-        if (!isFirst) return effect();
-    }, deps);
-}
-exports.default = useUpdateEffect;
-
-},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"73GDr":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _ = require("..");
-function useWindowSize() {
-    const [windowSize, setWindowSize] = (0, _react.useState)({
-        width: 0,
-        height: 0
-    });
-    const handleSize = ()=>{
-        setWindowSize({
-            width: window.innerWidth,
-            height: window.innerHeight
-        });
-    };
-    (0, _.useEventListener)("resize", handleSize);
-    (0, _.useIsomorphicLayoutEffect)(()=>{
-        handleSize();
-    }, []);
-    return windowSize;
-}
-exports.default = useWindowSize;
-
-},{"react":"21dqq","..":"dmUe4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"awDkT":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "DialogStyled", ()=>DialogStyled);
-parcelHelpers.export(exports, "DialogTriggerStyled", ()=>DialogTriggerStyled);
-parcelHelpers.export(exports, "DialogOverlayStyled", ()=>DialogOverlayStyled);
-parcelHelpers.export(exports, "DialogContentStyled", ()=>DialogContentStyled);
-parcelHelpers.export(exports, "DialogExitStyled", ()=>DialogExitStyled);
-var _stitchesConfig = require("../../stitches.config");
-const DialogStyled = (0, _stitchesConfig.styled)("div", {
-    display: "inline-block",
-    position: "relative",
-    verticalAlign: "middle"
-});
-const DialogTriggerStyled = (0, _stitchesConfig.styled)("div", {
-    "*": {
-        cursor: "pointer"
-    },
-    "display": "inline-flex",
-    "position": "relative",
-    "verticalAlign": "middle"
-});
-const DialogOverlayStyled = (0, _stitchesConfig.styled)("div", {
-    backgroundColor: "rgba(116, 116, 121, 0.4)",
-    bottom: 0,
-    left: 0,
-    overflowY: "scroll",
-    position: "fixed",
-    right: 0,
-    top: 0,
-    transition: "$default",
-    variants: {
-        animation: {
-            false: {
-                animation: `${(0, _stitchesConfig.fadeOut)} .3s ease-in-out`,
-                animationFillMode: "forwards"
-            },
-            true: {
-                animation: `${(0, _stitchesConfig.fadeIn)} .1s ease-in-out`,
-                animationFillMode: "forwards"
-            }
-        }
-    },
-    width: "100%",
-    zIndex: "$dialog"
-});
-const DialogContentStyled = (0, _stitchesConfig.styled)("div", {
-    backgroundColor: "$background",
-    borderRadius: "$2",
-    left: "50%",
-    maxHeight: "80vh",
-    maxWidth: "100%",
-    overflowX: "hidden",
-    overflowY: "auto",
-    padding: "$6 $5",
-    position: "fixed",
-    textAlign: "left",
-    top: "50%",
-    transform: "translate(-50%, -50%)",
-    transition: "$default",
-    variants: {
-        animation: {
-            false: {
-                animation: `${(0, _stitchesConfig.fadeOut)} .4s ease-in-out`,
-                animationFillMode: "forwards"
-            },
-            true: {
-                animation: `${(0, _stitchesConfig.fadeIn)} .4s ease-in-out`,
-                animationFillMode: "forwards"
-            }
-        }
-    },
-    width: "70rem",
-    [(0, _stitchesConfig.breakpoints).phone]: {
-        maxHeight: "95vh",
-        maxWidth: "90%",
-        padding: "5",
-        width: "90%"
-    }
-});
-const DialogExitStyled = (0, _stitchesConfig.styled)("div", {
-    "&:hover": {
-        opacity: 1
-    },
-    "cursor": "pointer",
-    "opacity": 0.7,
-    "padding": "1rem",
-    "position": "absolute",
-    "right": 0,
-    "top": 0,
-    "transition": "$default"
-});
-exports.default = DialogStyled;
-
-},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4ujjS":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Divider", ()=>(0, _dividerDefault.default));
-var _divider = require("./Divider");
-var _dividerDefault = parcelHelpers.interopDefault(_divider);
-
-},{"./Divider":"jF4Vz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jF4Vz":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$5dbe = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5dbe.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _stitchesConfig = require("../../stitches.config");
-var _dividerStyles = require("./Divider.styles");
-function Divider(props) {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dividerStyles.DividerStyled), {
-        css: {
-            ...props.css,
-            backgroundColor: props.theme ? `$${props.theme}` : "$border",
-            ...props.top && {
-                marginTop: `$${props.top}`,
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    marginTop: props.top !== "8" ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    marginTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`
-                }
-            },
-            ...props.bottom && {
-                marginBottom: `$${props.bottom}`,
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    marginBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    marginBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`
-                }
-            }
-        },
-        id: props.id
-    }, void 0, false, {
-        fileName: "src/components/Divider/Divider.tsx",
-        lineNumber: 15,
-        columnNumber: 5
-    }, this);
-}
-exports.default = Divider;
-_c = Divider;
-var _c;
-$RefreshReg$(_c, "Divider");
-
-  $parcel$ReactRefreshHelpers$5dbe.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../stitches.config":"iMNz3","./Divider.styles":"8kl7a","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8kl7a":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "DividerStyled", ()=>DividerStyled);
-var _stitchesConfig = require("../../stitches.config");
-const DividerStyled = (0, _stitchesConfig.styled)("div", {
-    height: "0.1rem",
-    margin: "0 auto",
-    maxWidth: "100%",
-    width: "100%"
-});
-exports.default = DividerStyled;
-
-},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9yvFB":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Dropdown", ()=>(0, _dropdownDefault.default));
-var _dropdown = require("./Dropdown");
-var _dropdownDefault = parcelHelpers.interopDefault(_dropdown);
-
-},{"./Dropdown":"kKcMp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kKcMp":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$636e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$636e.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _router = require("next/router");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _usehooksTs = require("usehooks-ts");
-var _input = require("../Input");
-var _loading = require("../Loading");
-var _stack = require("../Stack");
-var _text = require("../Text");
-var _dropdownStyles = require("./Dropdown.styles");
-var _s = $RefreshSig$();
-function Dropdown(props) {
-    _s();
-    const ref = (0, _react.useRef)(null);
-    const router = (0, _router.useRouter)();
-    const path = router?.pathname || "/";
-    const [isOpen, setIsOpen] = (0, _react.useState)(false);
-    const [isMounted, setIsMounted] = (0, _react.useState)(false);
-    const [filter, setFilter] = (0, _react.useState)("");
-    function handleClose() {
-        setIsOpen(false);
-        setTimeout(()=>{
-            setIsMounted(false);
-        }, 250);
-    }
-    function handleOpen() {
-        setIsOpen(true);
-        setTimeout(()=>{
-            setIsMounted(true);
-        }, 25);
-    }
-    function handleClick() {
-        if (isOpen || isMounted) {
-            setIsOpen(false);
-            setIsMounted(false);
-        } else handleOpen();
-    }
-    const handleNavigate = (value)=>{
-        router.push(value);
-        handleClose();
-    };
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const handleActions = (value, label)=>{
-        props.actions(value, label);
-        handleClose();
-    };
-    (0, _usehooksTs.useOnClickOutside)(ref, ()=>handleClose());
-    (0, _usehooksTs.useEventListener)("keydown", (event)=>{
-        if (event.key === "Escape") handleClose();
-    });
-    (0, _usehooksTs.useLockedBody)(props.locked ? isOpen : false);
-    const filteredOptions = props.filter ? props.options.filter((option)=>option.label.toLowerCase().includes(filter.toLowerCase())) : props.options;
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownStyles.DropdownStyled), {
-        css: props.css,
-        id: props.id,
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownStyles.DropdownTriggerStyled), {
-                onClickCapture: handleClick,
-                children: props.trigger
-            }, props.active || Math.random(), false, {
-                fileName: "src/components/Dropdown/Dropdown.tsx",
-                lineNumber: 97,
-                columnNumber: 7
-            }, this),
-            isMounted && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownStyles.DropdownGroupStyled), {
-                animation: isOpen,
-                css: {
-                    left: props.align === "left" ? "0" : "auto",
-                    maxWidth: props.width + " !important",
-                    minWidth: props.width + " !important",
-                    right: props.align === "right" ? "0" : "auto"
-                },
-                ref: ref,
-                children: [
-                    props.filter && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stack.Stack), {
-                        bottom: "2",
-                        top: "1",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _input.Input), {
-                            disabled: !props.options,
-                            onChange: (e)=>setFilter(e.target.value),
-                            placeholder: "Search"
-                        }, void 0, false, {
-                            fileName: "src/components/Dropdown/Dropdown.tsx",
-                            lineNumber: 114,
-                            columnNumber: 15
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/components/Dropdown/Dropdown.tsx",
-                        lineNumber: 113,
-                        columnNumber: 13
-                    }, this),
-                    props.loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loading.Loading), {}, void 0, false, {
-                        fileName: "src/components/Dropdown/Dropdown.tsx",
-                        lineNumber: 122,
-                        columnNumber: 13
-                    }, this) : !props.options || filteredOptions.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _text.Text), {
-                        accent: true,
-                        as: "p",
-                        css: {
-                            padding: "$2 $3 $1 $3"
-                        },
-                        children: "No results found."
-                    }, void 0, false, {
-                        fileName: "src/components/Dropdown/Dropdown.tsx",
-                        lineNumber: 124,
-                        columnNumber: 13
-                    }, this) : filteredOptions.map(({ label , value  })=>props.submenu ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownStyles.DropdownItemStyled), {
-                            css: {
-                                color: path === value ? "$accent" : "$text"
-                            },
-                            submenu: true,
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                onClickCapture: ()=>handleNavigate(value),
-                                children: label
-                            }, void 0, false, {
-                                fileName: "src/components/Dropdown/Dropdown.tsx",
-                                lineNumber: 136,
-                                columnNumber: 19
-                            }, this)
-                        }, value, false, {
-                            fileName: "src/components/Dropdown/Dropdown.tsx",
-                            lineNumber: 130,
-                            columnNumber: 17
-                        }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownStyles.DropdownItemStyled), {
-                            css: {
-                                color: props.active && props.active === value ? "$accent" : "$text"
-                            },
-                            onClickCapture: ()=>{
-                                handleActions(value, label);
-                            },
-                            submenu: false,
-                            children: label
-                        }, value, false, {
-                            fileName: "src/components/Dropdown/Dropdown.tsx",
-                            lineNumber: 139,
-                            columnNumber: 17
-                        }, this))
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Dropdown/Dropdown.tsx",
-                lineNumber: 103,
-                columnNumber: 9
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Dropdown/Dropdown.tsx",
-        lineNumber: 96,
-        columnNumber: 5
-    }, this);
-}
-exports.default = Dropdown;
-_s(Dropdown, "Nb5kKGmxLWkuWakGtElAmBfP5wk=", false, function() {
-    return [
-        (0, _router.useRouter),
-        (0, _usehooksTs.useOnClickOutside),
-        (0, _usehooksTs.useEventListener),
-        (0, _usehooksTs.useLockedBody)
-    ];
-});
-_c = Dropdown;
-var _c;
-$RefreshReg$(_c, "Dropdown");
-
-  $parcel$ReactRefreshHelpers$636e.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","next/router":"hphgm","react":"21dqq","usehooks-ts":"dmUe4","../Input":"iclCk","../Loading":"gWqOi","../Stack":"6V7Vx","../Text":"d5OVu","./Dropdown.styles":"jxb92","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hphgm":[function(require,module,exports) {
-module.exports = require("./dist/client/router");
-
-},{"./dist/client/router":"9DVWS"}],"9DVWS":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-Object.defineProperty(exports, "Router", {
-    enumerable: true,
-    get: function() {
-        return _router.default;
-    }
-});
-Object.defineProperty(exports, "withRouter", {
-    enumerable: true,
-    get: function() {
-        return _withRouter.default;
-    }
-});
-exports.useRouter = useRouter;
-exports.createRouter = createRouter;
-exports.makePublicRouterInstance = makePublicRouterInstance;
-exports.default = void 0;
-var _interop_require_default = require("@swc/helpers/lib/_interop_require_default.js").default;
-var _react = _interop_require_default(require("react"));
-var _router = _interop_require_default(require("../shared/lib/router/router"));
-var _routerContext = require("../shared/lib/router-context");
-var _isError = _interop_require_default(require("../lib/is-error"));
-var _withRouter = _interop_require_default(require("./with-router"));
-const singletonRouter = {
-    router: null,
-    readyCallbacks: [],
-    ready (cb) {
-        if (this.router) return cb();
-        if (typeof window !== "undefined") this.readyCallbacks.push(cb);
-    }
-};
-// Create public properties and methods of the router in the singletonRouter
-const urlPropertyFields = [
-    "pathname",
-    "route",
-    "query",
-    "asPath",
-    "components",
-    "isFallback",
-    "basePath",
-    "locale",
-    "locales",
-    "defaultLocale",
-    "isReady",
-    "isPreview",
-    "isLocaleDomain",
-    "domainLocales", 
-];
-const routerEvents = [
-    "routeChangeStart",
-    "beforeHistoryChange",
-    "routeChangeComplete",
-    "routeChangeError",
-    "hashChangeStart",
-    "hashChangeComplete", 
-];
-const coreMethodFields = [
-    "push",
-    "replace",
-    "reload",
-    "back",
-    "prefetch",
-    "beforePopState", 
-];
-// Events is a static property on the router, the router doesn't have to be initialized to use it
-Object.defineProperty(singletonRouter, "events", {
-    get () {
-        return _router.default.events;
-    }
-});
-function getRouter() {
-    if (!singletonRouter.router) {
-        const message = 'No router instance found.\nYou should only use "next/router" on the client side of your app.\n';
-        throw new Error(message);
-    }
-    return singletonRouter.router;
-}
-urlPropertyFields.forEach((field)=>{
-    // Here we need to use Object.defineProperty because we need to return
-    // the property assigned to the actual router
-    // The value might get changed as we change routes and this is the
-    // proper way to access it
-    Object.defineProperty(singletonRouter, field, {
-        get () {
-            const router = getRouter();
-            return router[field];
-        }
-    });
-});
-coreMethodFields.forEach((field)=>{
-    singletonRouter[field] = (...args)=>{
-        const router = getRouter();
-        return router[field](...args);
-    };
-});
-routerEvents.forEach((event)=>{
-    singletonRouter.ready(()=>{
-        _router.default.events.on(event, (...args)=>{
-            const eventField = `on${event.charAt(0).toUpperCase()}${event.substring(1)}`;
-            const _singletonRouter = singletonRouter;
-            if (_singletonRouter[eventField]) try {
-                _singletonRouter[eventField](...args);
-            } catch (err) {
-                console.error(`Error when running the Router event: ${eventField}`);
-                console.error(_isError.default(err) ? `${err.message}\n${err.stack}` : err + "");
-            }
-        });
-    });
-});
-var _default = singletonRouter;
-exports.default = _default;
-function useRouter() {
-    return _react.default.useContext(_routerContext.RouterContext);
-}
-function createRouter(...args) {
-    singletonRouter.router = new _router.default(...args);
-    singletonRouter.readyCallbacks.forEach((cb)=>cb());
-    singletonRouter.readyCallbacks = [];
-    return singletonRouter.router;
-}
-function makePublicRouterInstance(router) {
-    const scopedRouter = router;
-    const instance = {};
-    for (const property of urlPropertyFields){
-        if (typeof scopedRouter[property] === "object") {
-            instance[property] = Object.assign(Array.isArray(scopedRouter[property]) ? [] : {}, scopedRouter[property]) // makes sure query is not stateful
-            ;
-            continue;
-        }
-        instance[property] = scopedRouter[property];
-    }
-    // Events is a static property on the router, the router doesn't have to be initialized to use it
-    instance.events = _router.default.events;
-    coreMethodFields.forEach((field)=>{
-        instance[field] = (...args)=>{
-            return scopedRouter[field](...args);
-        };
-    });
-    return instance;
-}
-if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
-    Object.defineProperty(exports.default, "__esModule", {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-}
-
-},{"@swc/helpers/lib/_interop_require_default.js":"k1iFV","react":"21dqq","../shared/lib/router/router":"eKYbI","../shared/lib/router-context":"iJTGy","../lib/is-error":"6h17E","./with-router":"1z2O4"}],"eKYbI":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.matchesMiddleware = matchesMiddleware;
-exports.isLocalURL = isLocalURL;
-exports.interpolateAs = interpolateAs;
-exports.resolveHref = resolveHref;
-exports.createKey = createKey;
-exports.default = void 0;
-var _async_to_generator = require("@swc/helpers/lib/_async_to_generator.js").default;
-var _extends = require("@swc/helpers/lib/_extends.js").default;
-var _interop_require_default = require("@swc/helpers/lib/_interop_require_default.js").default;
-var _interop_require_wildcard = require("@swc/helpers/lib/_interop_require_wildcard.js").default;
-var _normalizeTrailingSlash = require("../../../client/normalize-trailing-slash");
-var _removeTrailingSlash = require("./utils/remove-trailing-slash");
-var _routeLoader = require("../../../client/route-loader");
-var _script = require("../../../client/script");
-var _isError = _interop_require_wildcard(require("../../../lib/is-error"));
-var _denormalizePagePath = require("../page-path/denormalize-page-path");
-var _normalizeLocalePath = require("../i18n/normalize-locale-path");
-var _mitt = _interop_require_default(require("../mitt"));
-var _utils = require("../utils");
-var _isDynamic = require("./utils/is-dynamic");
-var _parseRelativeUrl = require("./utils/parse-relative-url");
-var _querystring = require("./utils/querystring");
-var _resolveRewrites = _interop_require_default(require("./utils/resolve-rewrites"));
-var _routeMatcher = require("./utils/route-matcher");
-var _routeRegex = require("./utils/route-regex");
-var _formatUrl = require("./utils/format-url");
-var _detectDomainLocale = require("../../../client/detect-domain-locale");
-var _parsePath = require("./utils/parse-path");
-var _addLocale = require("../../../client/add-locale");
-var _removeLocale = require("../../../client/remove-locale");
-var _removeBasePath = require("../../../client/remove-base-path");
-var _addBasePath = require("../../../client/add-base-path");
-var _hasBasePath = require("../../../client/has-base-path");
-var _getNextPathnameInfo = require("./utils/get-next-pathname-info");
-var _formatNextPathnameInfo = require("./utils/format-next-pathname-info");
-var _compareStates = require("./utils/compare-states");
-var _isBot = require("./utils/is-bot");
-function buildCancellationError() {
-    return Object.assign(new Error("Route Cancelled"), {
-        cancelled: true
-    });
-}
-function matchesMiddleware(options) {
-    return _matchesMiddleware.apply(this, arguments);
-}
-function _matchesMiddleware() {
-    _matchesMiddleware = _async_to_generator(function*(options) {
-        const matchers = yield Promise.resolve(options.router.pageLoader.getMiddleware());
-        if (!matchers) return false;
-        const { pathname: asPathname  } = _parsePath.parsePath(options.asPath);
-        // remove basePath first since path prefix has to be in the order of `/${basePath}/${locale}`
-        const cleanedAs = _hasBasePath.hasBasePath(asPathname) ? _removeBasePath.removeBasePath(asPathname) : asPathname;
-        const asWithBasePathAndLocale = _addBasePath.addBasePath(_addLocale.addLocale(cleanedAs, options.locale));
-        // Check only path match on client. Matching "has" should be done on server
-        // where we can access more info such as headers, HttpOnly cookie, etc.
-        return matchers.some((m)=>new RegExp(m.regexp).test(asWithBasePathAndLocale));
-    });
-    return _matchesMiddleware.apply(this, arguments);
-}
-function stripOrigin(url) {
-    const origin = _utils.getLocationOrigin();
-    return url.startsWith(origin) ? url.substring(origin.length) : url;
-}
-function omit(object, keys) {
-    const omitted = {};
-    Object.keys(object).forEach((key)=>{
-        if (!keys.includes(key)) omitted[key] = object[key];
-    });
-    return omitted;
-}
-function isLocalURL(url) {
-    // prevent a hydration mismatch on href for url with anchor refs
-    if (!_utils.isAbsoluteUrl(url)) return true;
-    try {
-        // absolute urls can be local if they are on the same origin
-        const locationOrigin = _utils.getLocationOrigin();
-        const resolved = new URL(url, locationOrigin);
-        return resolved.origin === locationOrigin && _hasBasePath.hasBasePath(resolved.pathname);
-    } catch (_) {
-        return false;
-    }
-}
-function interpolateAs(route, asPathname, query) {
-    let interpolatedRoute = "";
-    const dynamicRegex = _routeRegex.getRouteRegex(route);
-    const dynamicGroups = dynamicRegex.groups;
-    const dynamicMatches = (asPathname !== route ? _routeMatcher.getRouteMatcher(dynamicRegex)(asPathname) : "") || // TODO: should this take priority; also need to change in the router.
-    query;
-    interpolatedRoute = route;
-    const params = Object.keys(dynamicGroups);
-    if (!params.every((param)=>{
-        let value = dynamicMatches[param] || "";
-        const { repeat , optional  } = dynamicGroups[param];
-        // support single-level catch-all
-        // TODO: more robust handling for user-error (passing `/`)
-        let replaced = `[${repeat ? "..." : ""}${param}]`;
-        if (optional) replaced = `${!value ? "/" : ""}[${replaced}]`;
-        if (repeat && !Array.isArray(value)) value = [
-            value
-        ];
-        return (optional || param in dynamicMatches) && (interpolatedRoute = interpolatedRoute.replace(replaced, repeat ? value.map(// path delimiter escaped since they are being inserted
-        // into the URL and we expect URL encoded segments
-        // when parsing dynamic route params
-        (segment)=>encodeURIComponent(segment)).join("/") : encodeURIComponent(value)) || "/");
-    })) interpolatedRoute = "" // did not satisfy all requirements
-    ;
-    return {
-        params,
-        result: interpolatedRoute
-    };
-}
-function resolveHref(router, href, resolveAs) {
-    // we use a dummy base url for relative urls
-    let base;
-    let urlAsString = typeof href === "string" ? href : _formatUrl.formatWithValidation(href);
-    // repeated slashes and backslashes in the URL are considered
-    // invalid and will never match a Next.js page/file
-    const urlProtoMatch = urlAsString.match(/^[a-zA-Z]{1,}:\/\//);
-    const urlAsStringNoProto = urlProtoMatch ? urlAsString.slice(urlProtoMatch[0].length) : urlAsString;
-    const urlParts = urlAsStringNoProto.split("?");
-    if ((urlParts[0] || "").match(/(\/\/|\\)/)) {
-        console.error(`Invalid href passed to next/router: ${urlAsString}, repeated forward-slashes (//) or backslashes \\ are not valid in the href`);
-        const normalizedUrl = _utils.normalizeRepeatedSlashes(urlAsStringNoProto);
-        urlAsString = (urlProtoMatch ? urlProtoMatch[0] : "") + normalizedUrl;
-    }
-    // Return because it cannot be routed by the Next.js router
-    if (!isLocalURL(urlAsString)) return resolveAs ? [
-        urlAsString
-    ] : urlAsString;
-    try {
-        base = new URL(urlAsString.startsWith("#") ? router.asPath : router.pathname, "http://n");
-    } catch (_) {
-        // fallback to / for invalid asPath values e.g. //
-        base = new URL("/", "http://n");
-    }
-    try {
-        const finalUrl = new URL(urlAsString, base);
-        finalUrl.pathname = _normalizeTrailingSlash.normalizePathTrailingSlash(finalUrl.pathname);
-        let interpolatedAs = "";
-        if (_isDynamic.isDynamicRoute(finalUrl.pathname) && finalUrl.searchParams && resolveAs) {
-            const query = _querystring.searchParamsToUrlQuery(finalUrl.searchParams);
-            const { result , params  } = interpolateAs(finalUrl.pathname, finalUrl.pathname, query);
-            if (result) interpolatedAs = _formatUrl.formatWithValidation({
-                pathname: result,
-                hash: finalUrl.hash,
-                query: omit(query, params)
-            });
-        }
-        // if the origin didn't change, it means we received a relative href
-        const resolvedHref = finalUrl.origin === base.origin ? finalUrl.href.slice(finalUrl.origin.length) : finalUrl.href;
-        return resolveAs ? [
-            resolvedHref,
-            interpolatedAs || resolvedHref
-        ] : resolvedHref;
-    } catch (_1) {
-        return resolveAs ? [
-            urlAsString
-        ] : urlAsString;
-    }
-}
-function prepareUrlAs(router, url, as) {
-    // If url and as provided as an object representation,
-    // we'll format them into the string version here.
-    let [resolvedHref, resolvedAs] = resolveHref(router, url, true);
-    const origin = _utils.getLocationOrigin();
-    const hrefHadOrigin = resolvedHref.startsWith(origin);
-    const asHadOrigin = resolvedAs && resolvedAs.startsWith(origin);
-    resolvedHref = stripOrigin(resolvedHref);
-    resolvedAs = resolvedAs ? stripOrigin(resolvedAs) : resolvedAs;
-    const preparedUrl = hrefHadOrigin ? resolvedHref : _addBasePath.addBasePath(resolvedHref);
-    const preparedAs = as ? stripOrigin(resolveHref(router, as)) : resolvedAs || resolvedHref;
-    return {
-        url: preparedUrl,
-        as: asHadOrigin ? preparedAs : _addBasePath.addBasePath(preparedAs)
-    };
-}
-function resolveDynamicRoute(pathname, pages) {
-    const cleanPathname = _removeTrailingSlash.removeTrailingSlash(_denormalizePagePath.denormalizePagePath(pathname));
-    if (cleanPathname === "/404" || cleanPathname === "/_error") return pathname;
-    // handle resolving href for dynamic routes
-    if (!pages.includes(cleanPathname)) // eslint-disable-next-line array-callback-return
-    pages.some((page)=>{
-        if (_isDynamic.isDynamicRoute(page) && _routeRegex.getRouteRegex(page).re.test(cleanPathname)) {
-            pathname = page;
-            return true;
-        }
-    });
-    return _removeTrailingSlash.removeTrailingSlash(pathname);
-}
-function getMiddlewareData(source, response, options) {
-    const nextConfig = {
-        basePath: options.router.basePath,
-        i18n: {
-            locales: options.router.locales
-        },
-        trailingSlash: Boolean(undefined)
-    };
-    const rewriteHeader = response.headers.get("x-nextjs-rewrite");
-    let rewriteTarget = rewriteHeader || response.headers.get("x-nextjs-matched-path");
-    const matchedPath = response.headers.get("x-matched-path");
-    if (matchedPath && !rewriteTarget && !matchedPath.includes("__next_data_catchall") && !matchedPath.includes("/_error") && !matchedPath.includes("/404")) // leverage x-matched-path to detect next.config.js rewrites
-    rewriteTarget = matchedPath;
-    if (rewriteTarget) {
-        if (rewriteTarget.startsWith("/")) {
-            const parsedRewriteTarget = _parseRelativeUrl.parseRelativeUrl(rewriteTarget);
-            const pathnameInfo = _getNextPathnameInfo.getNextPathnameInfo(parsedRewriteTarget.pathname, {
-                nextConfig,
-                parseData: true
-            });
-            let fsPathname = _removeTrailingSlash.removeTrailingSlash(pathnameInfo.pathname);
-            return Promise.all([
-                options.router.pageLoader.getPageList(),
-                _routeLoader.getClientBuildManifest(), 
-            ]).then(([pages, { __rewrites: rewrites  }])=>{
-                let as = _addLocale.addLocale(pathnameInfo.pathname, pathnameInfo.locale);
-                if (_isDynamic.isDynamicRoute(as) || !rewriteHeader && pages.includes(_normalizeLocalePath.normalizeLocalePath(_removeBasePath.removeBasePath(as), options.router.locales).pathname)) {
-                    const parsedSource = _getNextPathnameInfo.getNextPathnameInfo(_parseRelativeUrl.parseRelativeUrl(source).pathname, {
-                        parseData: true
-                    });
-                    as = _addBasePath.addBasePath(parsedSource.pathname);
-                    parsedRewriteTarget.pathname = as;
-                }
-                if (!pages.includes(fsPathname)) {
-                    const resolvedPathname = resolveDynamicRoute(fsPathname, pages);
-                    if (resolvedPathname !== fsPathname) fsPathname = resolvedPathname;
-                }
-                const resolvedHref = !pages.includes(fsPathname) ? resolveDynamicRoute(_normalizeLocalePath.normalizeLocalePath(_removeBasePath.removeBasePath(parsedRewriteTarget.pathname), options.router.locales).pathname, pages) : fsPathname;
-                if (_isDynamic.isDynamicRoute(resolvedHref)) {
-                    const matches = _routeMatcher.getRouteMatcher(_routeRegex.getRouteRegex(resolvedHref))(as);
-                    Object.assign(parsedRewriteTarget.query, matches || {});
-                }
-                return {
-                    type: "rewrite",
-                    parsedAs: parsedRewriteTarget,
-                    resolvedHref
-                };
-            });
-        }
-        const src = _parsePath.parsePath(source);
-        const pathname = _formatNextPathnameInfo.formatNextPathnameInfo(_extends({}, _getNextPathnameInfo.getNextPathnameInfo(src.pathname, {
-            nextConfig,
-            parseData: true
-        }), {
-            defaultLocale: options.router.defaultLocale,
-            buildId: ""
-        }));
-        return Promise.resolve({
-            type: "redirect-external",
-            destination: `${pathname}${src.query}${src.hash}`
-        });
-    }
-    const redirectTarget = response.headers.get("x-nextjs-redirect");
-    if (redirectTarget) {
-        if (redirectTarget.startsWith("/")) {
-            const src1 = _parsePath.parsePath(redirectTarget);
-            const pathname1 = _formatNextPathnameInfo.formatNextPathnameInfo(_extends({}, _getNextPathnameInfo.getNextPathnameInfo(src1.pathname, {
-                nextConfig,
-                parseData: true
-            }), {
-                defaultLocale: options.router.defaultLocale,
-                buildId: ""
-            }));
-            return Promise.resolve({
-                type: "redirect-internal",
-                newAs: `${pathname1}${src1.query}${src1.hash}`,
-                newUrl: `${pathname1}${src1.query}${src1.hash}`
-            });
-        }
-        return Promise.resolve({
-            type: "redirect-external",
-            destination: redirectTarget
-        });
-    }
-    return Promise.resolve({
-        type: "next"
-    });
-}
-function withMiddlewareEffects(options) {
-    return matchesMiddleware(options).then((matches)=>{
-        if (matches && options.fetchData) return options.fetchData().then((data)=>getMiddlewareData(data.dataHref, data.response, options).then((effect)=>({
-                    dataHref: data.dataHref,
-                    cacheKey: data.cacheKey,
-                    json: data.json,
-                    response: data.response,
-                    text: data.text,
-                    effect
-                }))).catch((_err)=>{
-            /**
-           * TODO: Revisit this in the future.
-           * For now we will not consider middleware data errors to be fatal.
-           * maybe we should revisit in the future.
-           */ return null;
-        });
-        return null;
-    });
-}
-const manualScrollRestoration = undefined;
-const SSG_DATA_NOT_FOUND = Symbol("SSG_DATA_NOT_FOUND");
-function fetchRetry(url, attempts, options) {
-    return fetch(url, {
-        // Cookies are required to be present for Next.js' SSG "Preview Mode".
-        // Cookies may also be required for `getServerSideProps`.
-        //
-        // > `fetch` won’t send cookies, unless you set the credentials init
-        // > option.
-        // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-        //
-        // > For maximum browser compatibility when it comes to sending &
-        // > receiving cookies, always supply the `credentials: 'same-origin'`
-        // > option instead of relying on the default.
-        // https://github.com/github/fetch#caveats
-        credentials: "same-origin",
-        method: options.method || "GET",
-        headers: Object.assign({}, options.headers, {
-            "x-nextjs-data": "1"
-        })
-    }).then((response)=>{
-        return !response.ok && attempts > 1 && response.status >= 500 ? fetchRetry(url, attempts - 1, options) : response;
-    });
-}
-const backgroundCache = {};
-function handleSmoothScroll(fn) {
-    const htmlElement = document.documentElement;
-    const existing = htmlElement.style.scrollBehavior;
-    htmlElement.style.scrollBehavior = "auto";
-    fn();
-    htmlElement.style.scrollBehavior = existing;
-}
-function tryToParseAsJSON(text) {
-    try {
-        return JSON.parse(text);
-    } catch (error) {
-        return null;
-    }
-}
-function fetchNextData({ dataHref , inflightCache , isPrefetch , hasMiddleware , isServerRender , parseJSON , persistCache , isBackground , unstable_skipClientCache  }) {
-    const { href: cacheKey  } = new URL(dataHref, window.location.href);
-    var ref1;
-    const getData = (params)=>{
-        return fetchRetry(dataHref, isServerRender ? 3 : 1, {
-            headers: isPrefetch ? {
-                purpose: "prefetch"
-            } : {},
-            method: (ref1 = params == null ? void 0 : params.method) != null ? ref1 : "GET"
-        }).then((response)=>{
-            if (response.ok && (params == null ? void 0 : params.method) === "HEAD") return {
-                dataHref,
-                response,
-                text: "",
-                json: {},
-                cacheKey
-            };
-            return response.text().then((text)=>{
-                if (!response.ok) {
-                    /**
-             * When the data response is a redirect because of a middleware
-             * we do not consider it an error. The headers must bring the
-             * mapped location.
-             * TODO: Change the status code in the handler.
-             */ if (hasMiddleware && [
-                        301,
-                        302,
-                        307,
-                        308
-                    ].includes(response.status)) return {
-                        dataHref,
-                        response,
-                        text,
-                        json: {},
-                        cacheKey
-                    };
-                    if (!hasMiddleware && response.status === 404) {
-                        var ref;
-                        if ((ref = tryToParseAsJSON(text)) == null ? void 0 : ref.notFound) return {
-                            dataHref,
-                            json: {
-                                notFound: SSG_DATA_NOT_FOUND
-                            },
-                            response,
-                            text,
-                            cacheKey
-                        };
-                    }
-                    const error = new Error(`Failed to load static props`);
-                    /**
-             * We should only trigger a server-side transition if this was
-             * caused on a client-side transition. Otherwise, we'd get into
-             * an infinite loop.
-             */ if (!isServerRender) _routeLoader.markAssetError(error);
-                    throw error;
-                }
-                return {
-                    dataHref,
-                    json: parseJSON ? tryToParseAsJSON(text) : null,
-                    response,
-                    text,
-                    cacheKey
-                };
-            });
-        }).then((data)=>{
-            delete inflightCache[cacheKey];
-            return data;
-        }).catch((err)=>{
-            delete inflightCache[cacheKey];
-            throw err;
-        });
-    };
-    // when skipping client cache we wait to update
-    // inflight cache until successful data response
-    // this allows racing click event with fetching newer data
-    // without blocking navigation when stale data is available
-    if (unstable_skipClientCache && persistCache) return getData({}).then((data)=>{
-        inflightCache[cacheKey] = Promise.resolve(data);
-        return data;
-    });
-    if (inflightCache[cacheKey] !== undefined) return inflightCache[cacheKey];
-    return inflightCache[cacheKey] = getData(isBackground ? {
-        method: "HEAD"
-    } : {});
-}
-function createKey() {
-    return Math.random().toString(36).slice(2, 10);
-}
-function handleHardNavigation({ url , router  }) {
-    // ensure we don't trigger a hard navigation to the same
-    // URL as this can end up with an infinite refresh
-    if (url === _addBasePath.addBasePath(_addLocale.addLocale(router.asPath, router.locale))) throw new Error(`Invariant: attempted to hard navigate to the same URL ${url} ${location.href}`);
-    window.location.href = url;
-}
-const getCancelledHandler = ({ route , router  })=>{
-    let cancelled = false;
-    const cancel = router.clc = ()=>{
-        cancelled = true;
-    };
-    const handleCancelled = ()=>{
-        if (cancelled) {
-            const error = new Error(`Abort fetching component for route: "${route}"`);
-            error.cancelled = true;
-            throw error;
-        }
-        if (cancel === router.clc) router.clc = null;
-    };
-    return handleCancelled;
-};
-class Router {
-    reload() {
-        window.location.reload();
-    }
-    /**
-   * Go back in history
-   */ back() {
-        window.history.back();
-    }
-    /**
-   * Performs a `pushState` with arguments
-   * @param url of the route
-   * @param as masks `url` for the browser
-   * @param options object you can define `shallow` and other options
-   */ push(url, as, options = {}) {
-        var e;
-        ({ url , as  } = prepareUrlAs(this, url, as));
-        return this.change("pushState", url, as, options);
-    }
-    /**
-   * Performs a `replaceState` with arguments
-   * @param url of the route
-   * @param as masks `url` for the browser
-   * @param options object you can define `shallow` and other options
-   */ replace(url, as, options = {}) {
-        ({ url , as  } = prepareUrlAs(this, url, as));
-        return this.change("replaceState", url, as, options);
-    }
-    change(method, url, as, options, forcedScroll) {
-        var _this = this;
-        return _async_to_generator(function*() {
-            if (!isLocalURL(url)) {
-                handleHardNavigation({
-                    url,
-                    router: _this
-                });
-                return false;
-            }
-            // WARNING: `_h` is an internal option for handing Next.js client-side
-            // hydration. Your app should _never_ use this property. It may change at
-            // any time without notice.
-            const isQueryUpdating = options._h;
-            const shouldResolveHref = isQueryUpdating || options._shouldResolveHref || _parsePath.parsePath(url).pathname === _parsePath.parsePath(as).pathname;
-            const nextState = _extends({}, _this.state);
-            // for static pages with query params in the URL we delay
-            // marking the router ready until after the query is updated
-            // or a navigation has occurred
-            const readyStateChange = _this.isReady !== true;
-            _this.isReady = true;
-            const isSsr = _this.isSsr;
-            if (!isQueryUpdating) _this.isSsr = false;
-            // if a route transition is already in progress before
-            // the query updating is triggered ignore query updating
-            if (isQueryUpdating && _this.clc) return false;
-            const prevLocale = nextState.locale;
-            var ref;
-            // marking route changes as a navigation start entry
-            if (_utils.ST) performance.mark("routeChange");
-            const { shallow =false , scroll =true  } = options;
-            const routeProps = {
-                shallow
-            };
-            if (_this._inFlightRoute && _this.clc) {
-                if (!isSsr) Router.events.emit("routeChangeError", buildCancellationError(), _this._inFlightRoute, routeProps);
-                _this.clc();
-                _this.clc = null;
-            }
-            as = _addBasePath.addBasePath(_addLocale.addLocale(_hasBasePath.hasBasePath(as) ? _removeBasePath.removeBasePath(as) : as, options.locale, _this.defaultLocale));
-            const cleanedAs = _removeLocale.removeLocale(_hasBasePath.hasBasePath(as) ? _removeBasePath.removeBasePath(as) : as, nextState.locale);
-            _this._inFlightRoute = as;
-            const localeChange = prevLocale !== nextState.locale;
-            // If the url change is only related to a hash change
-            // We should not proceed. We should only change the state.
-            if (!isQueryUpdating && _this.onlyAHashChange(cleanedAs) && !localeChange) {
-                nextState.asPath = cleanedAs;
-                Router.events.emit("hashChangeStart", as, routeProps);
-                // TODO: do we need the resolved href when only a hash change?
-                _this.changeState(method, url, as, _extends({}, options, {
-                    scroll: false
-                }));
-                if (scroll) _this.scrollToHash(cleanedAs);
-                try {
-                    yield _this.set(nextState, _this.components[nextState.route], null);
-                } catch (err) {
-                    if (_isError.default(err) && err.cancelled) Router.events.emit("routeChangeError", err, cleanedAs, routeProps);
-                    throw err;
-                }
-                Router.events.emit("hashChangeComplete", as, routeProps);
-                return true;
-            }
-            let parsed = _parseRelativeUrl.parseRelativeUrl(url);
-            let { pathname , query  } = parsed;
-            // The build manifest needs to be loaded before auto-static dynamic pages
-            // get their query parameters to allow ensuring they can be parsed properly
-            // when rewritten to
-            let pages, rewrites;
-            try {
-                [pages, { __rewrites: rewrites  }] = yield Promise.all([
-                    _this.pageLoader.getPageList(),
-                    _routeLoader.getClientBuildManifest(),
-                    _this.pageLoader.getMiddleware(), 
-                ]);
-            } catch (err1) {
-                // If we fail to resolve the page list or client-build manifest, we must
-                // do a server-side transition:
-                handleHardNavigation({
-                    url: as,
-                    router: _this
-                });
-                return false;
-            }
-            // If asked to change the current URL we should reload the current page
-            // (not location.reload() but reload getInitialProps and other Next.js stuffs)
-            // We also need to set the method = replaceState always
-            // as this should not go into the history (That's how browsers work)
-            // We should compare the new asPath to the current asPath, not the url
-            if (!_this.urlIsNew(cleanedAs) && !localeChange) method = "replaceState";
-            // we need to resolve the as value using rewrites for dynamic SSG
-            // pages to allow building the data URL correctly
-            let resolvedAs = as;
-            // url and as should always be prefixed with basePath by this
-            // point by either next/link or router.push/replace so strip the
-            // basePath from the pathname to match the pages dir 1-to-1
-            pathname = pathname ? _removeTrailingSlash.removeTrailingSlash(_removeBasePath.removeBasePath(pathname)) : pathname;
-            // we don't attempt resolve asPath when we need to execute
-            // middleware as the resolving will occur server-side
-            const isMiddlewareMatch = yield matchesMiddleware({
-                asPath: as,
-                locale: nextState.locale,
-                router: _this
-            });
-            if (options.shallow && isMiddlewareMatch) pathname = _this.pathname;
-            if (shouldResolveHref && pathname !== "/_error") {
-                options._shouldResolveHref = true;
-                parsed.pathname = resolveDynamicRoute(pathname, pages);
-                if (parsed.pathname !== pathname) {
-                    pathname = parsed.pathname;
-                    parsed.pathname = _addBasePath.addBasePath(pathname);
-                    if (!isMiddlewareMatch) url = _formatUrl.formatWithValidation(parsed);
-                }
-            }
-            if (!isLocalURL(as)) throw new Error(`Invalid href: "${url}" and as: "${as}", received relative href and external as` + `\nSee more info: https://nextjs.org/docs/messages/invalid-relative-url-external-as`);
-            resolvedAs = _removeLocale.removeLocale(_removeBasePath.removeBasePath(resolvedAs), nextState.locale);
-            let route = _removeTrailingSlash.removeTrailingSlash(pathname);
-            let routeMatch = false;
-            if (_isDynamic.isDynamicRoute(route)) {
-                const parsedAs = _parseRelativeUrl.parseRelativeUrl(resolvedAs);
-                const asPathname = parsedAs.pathname;
-                const routeRegex = _routeRegex.getRouteRegex(route);
-                routeMatch = _routeMatcher.getRouteMatcher(routeRegex)(asPathname);
-                const shouldInterpolate = route === asPathname;
-                const interpolatedAs = shouldInterpolate ? interpolateAs(route, asPathname, query) : {};
-                if (!routeMatch || shouldInterpolate && !interpolatedAs.result) {
-                    const missingParams = Object.keys(routeRegex.groups).filter((param)=>!query[param]);
-                    if (missingParams.length > 0 && !isMiddlewareMatch) {
-                        console.warn(`${shouldInterpolate ? `Interpolating href` : `Mismatching \`as\` and \`href\``} failed to manually provide ` + `the params: ${missingParams.join(", ")} in the \`href\`'s \`query\``);
-                        throw new Error((shouldInterpolate ? `The provided \`href\` (${url}) value is missing query values (${missingParams.join(", ")}) to be interpolated properly. ` : `The provided \`as\` value (${asPathname}) is incompatible with the \`href\` value (${route}). `) + `Read more: https://nextjs.org/docs/messages/${shouldInterpolate ? "href-interpolation-failed" : "incompatible-href-as"}`);
-                    }
-                } else if (shouldInterpolate) as = _formatUrl.formatWithValidation(Object.assign({}, parsedAs, {
-                    pathname: interpolatedAs.result,
-                    query: omit(query, interpolatedAs.params)
-                }));
-                else // Merge params into `query`, overwriting any specified in search
-                Object.assign(query, routeMatch);
-            }
-            if (!isQueryUpdating) Router.events.emit("routeChangeStart", as, routeProps);
-            try {
-                var ref2, ref3;
-                let routeInfo = yield _this.getRouteInfo({
-                    route,
-                    pathname,
-                    query,
-                    as,
-                    resolvedAs,
-                    routeProps,
-                    locale: nextState.locale,
-                    isPreview: nextState.isPreview,
-                    hasMiddleware: isMiddlewareMatch
-                });
-                if ("route" in routeInfo && isMiddlewareMatch) {
-                    pathname = routeInfo.route || route;
-                    route = pathname;
-                    if (!routeProps.shallow) query = Object.assign({}, routeInfo.query || {}, query);
-                    const cleanedParsedPathname = _hasBasePath.hasBasePath(parsed.pathname) ? _removeBasePath.removeBasePath(parsed.pathname) : parsed.pathname;
-                    if (routeMatch && pathname !== cleanedParsedPathname) Object.keys(routeMatch).forEach((key)=>{
-                        if (routeMatch && query[key] === routeMatch[key]) delete query[key];
-                    });
-                    if (_isDynamic.isDynamicRoute(pathname)) {
-                        const prefixedAs = !routeProps.shallow && routeInfo.resolvedAs ? routeInfo.resolvedAs : _addBasePath.addBasePath(_addLocale.addLocale(new URL(as, location.href).pathname, nextState.locale), true);
-                        let rewriteAs = prefixedAs;
-                        if (_hasBasePath.hasBasePath(rewriteAs)) rewriteAs = _removeBasePath.removeBasePath(rewriteAs);
-                        const routeRegex1 = _routeRegex.getRouteRegex(pathname);
-                        const curRouteMatch = _routeMatcher.getRouteMatcher(routeRegex1)(rewriteAs);
-                        if (curRouteMatch) Object.assign(query, curRouteMatch);
-                    }
-                }
-                // If the routeInfo brings a redirect we simply apply it.
-                if ("type" in routeInfo) {
-                    if (routeInfo.type === "redirect-internal") return _this.change(method, routeInfo.newUrl, routeInfo.newAs, options);
-                    else {
-                        handleHardNavigation({
-                            url: routeInfo.destination,
-                            router: _this
-                        });
-                        return new Promise(()=>{});
-                    }
-                }
-                let { error , props , __N_SSG , __N_SSP  } = routeInfo;
-                const component = routeInfo.Component;
-                if (component && component.unstable_scriptLoader) {
-                    const scripts = [].concat(component.unstable_scriptLoader());
-                    scripts.forEach((script)=>{
-                        _script.handleClientScriptLoad(script.props);
-                    });
-                }
-                // handle redirect on client-transition
-                if ((__N_SSG || __N_SSP) && props) {
-                    if (props.pageProps && props.pageProps.__N_REDIRECT) {
-                        // Use the destination from redirect without adding locale
-                        options.locale = false;
-                        const destination = props.pageProps.__N_REDIRECT;
-                        // check if destination is internal (resolves to a page) and attempt
-                        // client-navigation if it is falling back to hard navigation if
-                        // it's not
-                        if (destination.startsWith("/") && props.pageProps.__N_REDIRECT_BASE_PATH !== false) {
-                            const parsedHref = _parseRelativeUrl.parseRelativeUrl(destination);
-                            parsedHref.pathname = resolveDynamicRoute(parsedHref.pathname, pages);
-                            const { url: newUrl , as: newAs  } = prepareUrlAs(_this, destination, destination);
-                            return _this.change(method, newUrl, newAs, options);
-                        }
-                        handleHardNavigation({
-                            url: destination,
-                            router: _this
-                        });
-                        return new Promise(()=>{});
-                    }
-                    nextState.isPreview = !!props.__N_PREVIEW;
-                    // handle SSG data 404
-                    if (props.notFound === SSG_DATA_NOT_FOUND) {
-                        let notFoundRoute;
-                        try {
-                            yield _this.fetchComponent("/404");
-                            notFoundRoute = "/404";
-                        } catch (_) {
-                            notFoundRoute = "/_error";
-                        }
-                        routeInfo = yield _this.getRouteInfo({
-                            route: notFoundRoute,
-                            pathname: notFoundRoute,
-                            query,
-                            as,
-                            resolvedAs,
-                            routeProps: {
-                                shallow: false
-                            },
-                            locale: nextState.locale,
-                            isPreview: nextState.isPreview
-                        });
-                        if ("type" in routeInfo) throw new Error(`Unexpected middleware effect on /404`);
-                    }
-                }
-                Router.events.emit("beforeHistoryChange", as, routeProps);
-                _this.changeState(method, url, as, options);
-                if (isQueryUpdating && pathname === "/_error" && ((ref2 = self.__NEXT_DATA__.props) == null ? void 0 : (ref3 = ref2.pageProps) == null ? void 0 : ref3.statusCode) === 500 && (props == null ? void 0 : props.pageProps)) // ensure statusCode is still correct for static 500 page
-                // when updating query information
-                props.pageProps.statusCode = 500;
-                var _route;
-                // shallow routing is only allowed for same page URL changes.
-                const isValidShallowRoute = options.shallow && nextState.route === ((_route = routeInfo.route) != null ? _route : route);
-                var _scroll;
-                const shouldScroll = (_scroll = options.scroll) != null ? _scroll : !options._h && !isValidShallowRoute;
-                const resetScroll = shouldScroll ? {
-                    x: 0,
-                    y: 0
-                } : null;
-                // the new state that the router gonna set
-                const upcomingRouterState = _extends({}, nextState, {
-                    route,
-                    pathname,
-                    query,
-                    asPath: cleanedAs,
-                    isFallback: false
-                });
-                const upcomingScrollState = forcedScroll != null ? forcedScroll : resetScroll;
-                // for query updates we can skip it if the state is unchanged and we don't
-                // need to scroll
-                // https://github.com/vercel/next.js/issues/37139
-                const canSkipUpdating = options._h && !upcomingScrollState && !readyStateChange && !localeChange && _compareStates.compareRouterStates(upcomingRouterState, _this.state);
-                if (!canSkipUpdating) {
-                    yield _this.set(upcomingRouterState, routeInfo, upcomingScrollState).catch((e)=>{
-                        if (e.cancelled) error = error || e;
-                        else throw e;
-                    });
-                    if (error) {
-                        if (!isQueryUpdating) Router.events.emit("routeChangeError", error, cleanedAs, routeProps);
-                        throw error;
-                    }
-                    if (!isQueryUpdating) Router.events.emit("routeChangeComplete", as, routeProps);
-                    // A hash mark # is the optional last part of a URL
-                    const hashRegex = /#.+$/;
-                    if (shouldScroll && hashRegex.test(as)) _this.scrollToHash(as);
-                }
-                return true;
-            } catch (err11) {
-                if (_isError.default(err11) && err11.cancelled) return false;
-                throw err11;
-            }
-        })();
-    }
-    changeState(method, url, as, options = {}) {
-        if (typeof window.history === "undefined") {
-            console.error(`Warning: window.history is not available.`);
-            return;
-        }
-        if (typeof window.history[method] === "undefined") {
-            console.error(`Warning: window.history.${method} is not available`);
-            return;
-        }
-        if (method !== "pushState" || _utils.getURL() !== as) {
-            this._shallow = options.shallow;
-            window.history[method]({
-                url,
-                as,
-                options,
-                __N: true,
-                key: this._key = method !== "pushState" ? this._key : createKey()
-            }, // Passing the empty string here should be safe against future changes to the method.
-            // https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState
-            "", as);
-        }
-    }
-    handleRouteInfoError(err, pathname, query, as, routeProps, loadErrorFail) {
-        var _this = this;
-        return _async_to_generator(function*() {
-            console.error(err);
-            if (err.cancelled) // bubble up cancellation errors
-            throw err;
-            if (_routeLoader.isAssetError(err) || loadErrorFail) {
-                Router.events.emit("routeChangeError", err, as, routeProps);
-                // If we can't load the page it could be one of following reasons
-                //  1. Page doesn't exists
-                //  2. Page does exist in a different zone
-                //  3. Internal error while loading the page
-                // So, doing a hard reload is the proper way to deal with this.
-                handleHardNavigation({
-                    url: as,
-                    router: _this
-                });
-                // Changing the URL doesn't block executing the current code path.
-                // So let's throw a cancellation error stop the routing logic.
-                throw buildCancellationError();
-            }
-            try {
-                let props;
-                const { page: Component , styleSheets  } = yield _this.fetchComponent("/_error");
-                const routeInfo = {
-                    props,
-                    Component,
-                    styleSheets,
-                    err,
-                    error: err
-                };
-                if (!routeInfo.props) try {
-                    routeInfo.props = yield _this.getInitialProps(Component, {
-                        err,
-                        pathname,
-                        query
-                    });
-                } catch (gipErr) {
-                    console.error("Error in error page `getInitialProps`: ", gipErr);
-                    routeInfo.props = {};
-                }
-                return routeInfo;
-            } catch (routeInfoErr) {
-                return _this.handleRouteInfoError(_isError.default(routeInfoErr) ? routeInfoErr : new Error(routeInfoErr + ""), pathname, query, as, routeProps, true);
-            }
-        })();
-    }
-    getRouteInfo({ route: requestedRoute , pathname , query , as , resolvedAs , routeProps , locale , hasMiddleware , isPreview , unstable_skipClientCache  }) {
-        var _this = this;
-        return _async_to_generator(function*() {
-            /**
-     * This `route` binding can change if there's a rewrite
-     * so we keep a reference to the original requested route
-     * so we can store the cache for it and avoid re-requesting every time
-     * for shallow routing purposes.
-     */ let route = requestedRoute;
-            try {
-                var ref, ref4, ref5;
-                const handleCancelled = getCancelledHandler({
-                    route,
-                    router: _this
-                });
-                let existingInfo = _this.components[route];
-                if (routeProps.shallow && existingInfo && _this.route === route) return existingInfo;
-                if (hasMiddleware) existingInfo = undefined;
-                let cachedRouteInfo = undefined;
-                const fetchNextDataParams = {
-                    dataHref: _this.pageLoader.getDataHref({
-                        href: _formatUrl.formatWithValidation({
-                            pathname,
-                            query
-                        }),
-                        skipInterpolation: true,
-                        asPath: resolvedAs,
-                        locale
-                    }),
-                    hasMiddleware: true,
-                    isServerRender: _this.isSsr,
-                    parseJSON: true,
-                    inflightCache: _this.sdc,
-                    persistCache: !isPreview,
-                    isPrefetch: false,
-                    unstable_skipClientCache
-                };
-                const data = yield withMiddlewareEffects({
-                    fetchData: ()=>fetchNextData(fetchNextDataParams),
-                    asPath: resolvedAs,
-                    locale: locale,
-                    router: _this
-                });
-                handleCancelled();
-                if ((data == null ? void 0 : (ref = data.effect) == null ? void 0 : ref.type) === "redirect-internal" || (data == null ? void 0 : (ref4 = data.effect) == null ? void 0 : ref4.type) === "redirect-external") return data.effect;
-                if ((data == null ? void 0 : (ref5 = data.effect) == null ? void 0 : ref5.type) === "rewrite") {
-                    route = _removeTrailingSlash.removeTrailingSlash(data.effect.resolvedHref);
-                    pathname = data.effect.resolvedHref;
-                    query = _extends({}, query, data.effect.parsedAs.query);
-                    resolvedAs = _removeBasePath.removeBasePath(_normalizeLocalePath.normalizeLocalePath(data.effect.parsedAs.pathname, _this.locales).pathname);
-                    // Check again the cache with the new destination.
-                    existingInfo = _this.components[route];
-                    if (routeProps.shallow && existingInfo && _this.route === route && !hasMiddleware) // If we have a match with the current route due to rewrite,
-                    // we can copy the existing information to the rewritten one.
-                    // Then, we return the information along with the matched route.
-                    return _extends({}, existingInfo, {
-                        route
-                    });
-                }
-                if (route === "/api" || route.startsWith("/api/")) {
-                    handleHardNavigation({
-                        url: as,
-                        router: _this
-                    });
-                    return new Promise(()=>{});
-                }
-                const routeInfo = cachedRouteInfo || (yield _this.fetchComponent(route).then((res)=>({
-                        Component: res.page,
-                        styleSheets: res.styleSheets,
-                        __N_SSG: res.mod.__N_SSG,
-                        __N_SSP: res.mod.__N_SSP
-                    })));
-                {
-                    const { isValidElementType  } = require("next/dist/compiled/react-is");
-                    if (!isValidElementType(routeInfo.Component)) throw new Error(`The default export is not a React Component in page: "${pathname}"`);
-                }
-                const shouldFetchData = routeInfo.__N_SSG || routeInfo.__N_SSP;
-                const { props , cacheKey  } = yield _this._getData(_async_to_generator(function*() {
-                    if (shouldFetchData) {
-                        const { json , cacheKey: _cacheKey  } = (data == null ? void 0 : data.json) ? data : yield fetchNextData({
-                            dataHref: _this.pageLoader.getDataHref({
-                                href: _formatUrl.formatWithValidation({
-                                    pathname,
-                                    query
-                                }),
-                                asPath: resolvedAs,
-                                locale
-                            }),
-                            isServerRender: _this.isSsr,
-                            parseJSON: true,
-                            inflightCache: _this.sdc,
-                            persistCache: !isPreview,
-                            isPrefetch: false,
-                            unstable_skipClientCache
-                        });
-                        return {
-                            cacheKey: _cacheKey,
-                            props: json || {}
-                        };
-                    }
-                    return {
-                        headers: {},
-                        cacheKey: "",
-                        props: yield _this.getInitialProps(routeInfo.Component, {
-                            pathname,
-                            query,
-                            asPath: as,
-                            locale,
-                            locales: _this.locales,
-                            defaultLocale: _this.defaultLocale
-                        })
-                    };
-                }));
-                // Only bust the data cache for SSP routes although
-                // middleware can skip cache per request with
-                // x-middleware-cache: no-cache as well
-                if (routeInfo.__N_SSP && fetchNextDataParams.dataHref) delete _this.sdc[cacheKey];
-                !_this.isPreview && routeInfo.__N_SSG;
-                props.pageProps = Object.assign({}, props.pageProps);
-                routeInfo.props = props;
-                routeInfo.route = route;
-                routeInfo.query = query;
-                routeInfo.resolvedAs = resolvedAs;
-                _this.components[route] = routeInfo;
-                return routeInfo;
-            } catch (err) {
-                return _this.handleRouteInfoError(_isError.getProperError(err), pathname, query, as, routeProps);
-            }
-        })();
-    }
-    set(state, data, resetScroll) {
-        this.state = state;
-        return this.sub(data, this.components["/_app"].Component, resetScroll);
-    }
-    /**
-   * Callback to execute before replacing router state
-   * @param cb callback to be executed
-   */ beforePopState(cb) {
-        this._bps = cb;
-    }
-    onlyAHashChange(as) {
-        if (!this.asPath) return false;
-        const [oldUrlNoHash, oldHash] = this.asPath.split("#");
-        const [newUrlNoHash, newHash] = as.split("#");
-        // Makes sure we scroll to the provided hash if the url/hash are the same
-        if (newHash && oldUrlNoHash === newUrlNoHash && oldHash === newHash) return true;
-        // If the urls are change, there's more than a hash change
-        if (oldUrlNoHash !== newUrlNoHash) return false;
-        // If the hash has changed, then it's a hash only change.
-        // This check is necessary to handle both the enter and
-        // leave hash === '' cases. The identity case falls through
-        // and is treated as a next reload.
-        return oldHash !== newHash;
-    }
-    scrollToHash(as) {
-        const [, hash = ""] = as.split("#");
-        // Scroll to top if the hash is just `#` with no value or `#top`
-        // To mirror browsers
-        if (hash === "" || hash === "top") {
-            handleSmoothScroll(()=>window.scrollTo(0, 0));
-            return;
-        }
-        // Decode hash to make non-latin anchor works.
-        const rawHash = decodeURIComponent(hash);
-        // First we check if the element by id is found
-        const idEl = document.getElementById(rawHash);
-        if (idEl) {
-            handleSmoothScroll(()=>idEl.scrollIntoView());
-            return;
-        }
-        // If there's no element with the id, we check the `name` property
-        // To mirror browsers
-        const nameEl = document.getElementsByName(rawHash)[0];
-        if (nameEl) handleSmoothScroll(()=>nameEl.scrollIntoView());
-    }
-    urlIsNew(asPath) {
-        return this.asPath !== asPath;
-    }
-    /**
-   * Prefetch page code, you may wait for the data during page rendering.
-   * This feature only works in production!
-   * @param url the href of prefetched page
-   * @param asPath the as path of the prefetched page
-   */ prefetch(url, asPath = url, options = {}) {
-        var _this = this;
-        return _async_to_generator(function*() {
-            if (typeof window !== "undefined" && _isBot.isBot(window.navigator.userAgent)) // No prefetches for bots that render the link since they are typically navigating
-            // links via the equivalent of a hard navigation and hence never utilize these
-            // prefetches.
-            return;
-            let parsed = _parseRelativeUrl.parseRelativeUrl(url);
-            let { pathname , query  } = parsed;
-            const pages = yield _this.pageLoader.getPageList();
-            let resolvedAs = asPath;
-            const locale = typeof options.locale !== "undefined" ? options.locale || undefined : _this.locale;
-            parsed.pathname = resolveDynamicRoute(parsed.pathname, pages);
-            if (_isDynamic.isDynamicRoute(parsed.pathname)) {
-                pathname = parsed.pathname;
-                parsed.pathname = pathname;
-                Object.assign(query, _routeMatcher.getRouteMatcher(_routeRegex.getRouteRegex(parsed.pathname))(_parsePath.parsePath(asPath).pathname) || {});
-                url = _formatUrl.formatWithValidation(parsed);
-            }
-            var isSsg;
-            return;
-        })();
-    }
-    fetchComponent(route) {
-        var _this = this;
-        return _async_to_generator(function*() {
-            const handleCancelled = getCancelledHandler({
-                route,
-                router: _this
-            });
-            try {
-                const componentResult = yield _this.pageLoader.loadPage(route);
-                handleCancelled();
-                return componentResult;
-            } catch (err) {
-                handleCancelled();
-                throw err;
-            }
-        })();
-    }
-    _getData(fn) {
-        let cancelled = false;
-        const cancel = ()=>{
-            cancelled = true;
-        };
-        this.clc = cancel;
-        return fn().then((data)=>{
-            if (cancel === this.clc) this.clc = null;
-            if (cancelled) {
-                const err = new Error("Loading initial props cancelled");
-                err.cancelled = true;
-                throw err;
-            }
-            return data;
-        });
-    }
-    _getFlightData(dataHref) {
-        // Do not cache RSC flight response since it's not a static resource
-        return fetchNextData({
-            dataHref,
-            isServerRender: true,
-            parseJSON: false,
-            inflightCache: this.sdc,
-            persistCache: false,
-            isPrefetch: false
-        }).then(({ text  })=>({
-                data: text
-            }));
-    }
-    getInitialProps(Component, ctx) {
-        const { Component: App  } = this.components["/_app"];
-        const AppTree = this._wrapApp(App);
-        ctx.AppTree = AppTree;
-        return _utils.loadGetInitialProps(App, {
-            AppTree,
-            Component,
-            router: this,
-            ctx
-        });
-    }
-    get route() {
-        return this.state.route;
-    }
-    get pathname() {
-        return this.state.pathname;
-    }
-    get query() {
-        return this.state.query;
-    }
-    get asPath() {
-        return this.state.asPath;
-    }
-    get locale() {
-        return this.state.locale;
-    }
-    get isFallback() {
-        return this.state.isFallback;
-    }
-    get isPreview() {
-        return this.state.isPreview;
-    }
-    constructor(pathname1, query1, as1, { initialProps , pageLoader , App , wrapApp , Component , err , subscription , isFallback , locale , locales , defaultLocale , domainLocales , isPreview  }){
-        // Server Data Cache
-        this.sdc = {};
-        this.isFirstPopStateEvent = true;
-        this._key = createKey();
-        this.onPopState = (e)=>{
-            const { isFirstPopStateEvent  } = this;
-            this.isFirstPopStateEvent = false;
-            const state = e.state;
-            if (!state) {
-                // We get state as undefined for two reasons.
-                //  1. With older safari (< 8) and older chrome (< 34)
-                //  2. When the URL changed with #
-                //
-                // In the both cases, we don't need to proceed and change the route.
-                // (as it's already changed)
-                // But we can simply replace the state with the new changes.
-                // Actually, for (1) we don't need to nothing. But it's hard to detect that event.
-                // So, doing the following for (1) does no harm.
-                const { pathname , query  } = this;
-                this.changeState("replaceState", _formatUrl.formatWithValidation({
-                    pathname: _addBasePath.addBasePath(pathname),
-                    query
-                }), _utils.getURL());
-                return;
-            }
-            // __NA is used to identify if the history entry can be handled by the app-router.
-            if (state.__NA) {
-                window.location.reload();
-                return;
-            }
-            if (!state.__N) return;
-            // Safari fires popstateevent when reopening the browser.
-            if (isFirstPopStateEvent && this.locale === state.options.locale && state.as === this.asPath) return;
-            let forcedScroll;
-            const { url , as , options , key  } = state;
-            var e1, e11;
-            this._key = key;
-            const { pathname: pathname1  } = _parseRelativeUrl.parseRelativeUrl(url);
-            // Make sure we don't re-render on initial load,
-            // can be caused by navigating back from an external site
-            if (this.isSsr && as === _addBasePath.addBasePath(this.asPath) && pathname1 === _addBasePath.addBasePath(this.pathname)) return;
-            // If the downstream application returns falsy, return.
-            // They will then be responsible for handling the event.
-            if (this._bps && !this._bps(state)) return;
-            this.change("replaceState", url, as, Object.assign({}, options, {
-                shallow: options.shallow && this._shallow,
-                locale: options.locale || this.defaultLocale,
-                // @ts-ignore internal value not exposed on types
-                _h: 0
-            }), forcedScroll);
-        };
-        // represents the current component key
-        const route = _removeTrailingSlash.removeTrailingSlash(pathname1);
-        // set up the component cache (by route keys)
-        this.components = {};
-        // We should not keep the cache, if there's an error
-        // Otherwise, this cause issues when when going back and
-        // come again to the errored page.
-        if (pathname1 !== "/_error") this.components[route] = {
-            Component,
-            initial: true,
-            props: initialProps,
-            err,
-            __N_SSG: initialProps && initialProps.__N_SSG,
-            __N_SSP: initialProps && initialProps.__N_SSP
-        };
-        this.components["/_app"] = {
-            Component: App,
-            styleSheets: []
-        };
-        // Backwards compat for Router.router.events
-        // TODO: Should be remove the following major version as it was never documented
-        this.events = Router.events;
-        this.pageLoader = pageLoader;
-        // if auto prerendered and dynamic route wait to update asPath
-        // until after mount to prevent hydration mismatch
-        const autoExportDynamic = _isDynamic.isDynamicRoute(pathname1) && self.__NEXT_DATA__.autoExport;
-        this.basePath = "";
-        this.sub = subscription;
-        this.clc = null;
-        this._wrapApp = wrapApp;
-        // make sure to ignore extra popState in safari on navigating
-        // back from external site
-        this.isSsr = true;
-        this.isLocaleDomain = false;
-        this.isReady = !!(self.__NEXT_DATA__.gssp || self.__NEXT_DATA__.gip || self.__NEXT_DATA__.appGip && !self.__NEXT_DATA__.gsp || !autoExportDynamic && !self.location.search && true);
-        this.state = {
-            route,
-            pathname: pathname1,
-            query: query1,
-            asPath: autoExportDynamic ? pathname1 : as1,
-            isPreview: !!isPreview,
-            locale: undefined,
-            isFallback
-        };
-        this._initialMatchesMiddlewarePromise = Promise.resolve(false);
-        if (typeof window !== "undefined") {
-            // make sure "as" doesn't start with double slashes or else it can
-            // throw an error as it's considered invalid
-            if (!as1.startsWith("//")) {
-                // in order for `e.state` to work on the `onpopstate` event
-                // we have to register the initial route upon initialization
-                const options = {
-                    locale
-                };
-                const asPath = _utils.getURL();
-                this._initialMatchesMiddlewarePromise = matchesMiddleware({
-                    router: this,
-                    locale,
-                    asPath
-                }).then((matches)=>{
-                    options._shouldResolveHref = as1 !== pathname1;
-                    this.changeState("replaceState", matches ? asPath : _formatUrl.formatWithValidation({
-                        pathname: _addBasePath.addBasePath(pathname1),
-                        query: query1
-                    }), asPath, options);
-                    return matches;
-                });
-            }
-            window.addEventListener("popstate", this.onPopState);
-        }
-    }
-}
-Router.events = _mitt.default();
-exports.default = Router;
-
-},{"@swc/helpers/lib/_async_to_generator.js":"687bf","@swc/helpers/lib/_extends.js":"4vU6g","@swc/helpers/lib/_interop_require_default.js":"k1iFV","@swc/helpers/lib/_interop_require_wildcard.js":"frrjo","../../../client/normalize-trailing-slash":"a5Qce","./utils/remove-trailing-slash":"ltEax","../../../client/route-loader":"i5Qrh","../../../client/script":"58Hib","../../../lib/is-error":"6h17E","../page-path/denormalize-page-path":"cW08D","../i18n/normalize-locale-path":"iF0G9","../mitt":"1O1Fg","../utils":"cHiay","./utils/is-dynamic":"6rybP","./utils/parse-relative-url":"lDl7e","./utils/querystring":"PeN2l","./utils/resolve-rewrites":"ezgoA","./utils/route-matcher":"hBdpi","./utils/route-regex":"7W7zJ","./utils/format-url":"aBY4l","../../../client/detect-domain-locale":"ld5PD","./utils/parse-path":"9lS3k","../../../client/add-locale":"8fuhH","../../../client/remove-locale":"d72mY","../../../client/remove-base-path":"gS7mU","../../../client/add-base-path":"7l5aF","../../../client/has-base-path":"6NT5g","./utils/get-next-pathname-info":"24hnY","./utils/format-next-pathname-info":"b08uw","./utils/compare-states":"i3HBc","./utils/is-bot":"eGU1s","next/dist/compiled/react-is":"8mz76"}],"i5Qrh":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.markAssetError = markAssetError;
-exports.isAssetError = isAssetError;
-exports.getClientBuildManifest = getClientBuildManifest;
-exports.createRouteLoader = createRouteLoader;
-var _interop_require_default = require("@swc/helpers/lib/_interop_require_default.js").default;
-var _getAssetPathFromRoute = _interop_require_default(require("../shared/lib/router/utils/get-asset-path-from-route"));
-var _trustedTypes = require("./trusted-types");
-var _requestIdleCallback = require("./request-idle-callback");
-// 3.8s was arbitrarily chosen as it's what https://web.dev/interactive
-// considers as "Good" time-to-interactive. We must assume something went
-// wrong beyond this point, and then fall-back to a full page transition to
-// show the user something of value.
-const MS_MAX_IDLE_DELAY = 3800;
-function withFuture(key, map, generator) {
-    let entry = map.get(key);
-    if (entry) {
-        if ("future" in entry) return entry.future;
-        return Promise.resolve(entry);
-    }
-    let resolver;
-    const prom = new Promise((resolve)=>{
-        resolver = resolve;
-    });
-    map.set(key, entry = {
-        resolve: resolver,
-        future: prom
-    });
-    return generator ? generator() // eslint-disable-next-line no-sequences
-    .then((value)=>(resolver(value), value)).catch((err)=>{
-        map.delete(key);
-        throw err;
-    }) : prom;
-}
-function hasPrefetch(link) {
-    try {
-        link = document.createElement("link");
-        return(// with relList.support
-        !!window.MSInputMethodContext && !!document.documentMode || link.relList.supports("prefetch"));
-    } catch (e) {
-        return false;
-    }
-}
-const canPrefetch = hasPrefetch();
-function prefetchViaDom(href, as, link) {
-    return new Promise((res, rej)=>{
-        const selector = `
-      link[rel="prefetch"][href^="${href}"],
-      link[rel="preload"][href^="${href}"],
-      script[src^="${href}"]`;
-        if (document.querySelector(selector)) return res();
-        link = document.createElement("link");
-        // The order of property assignment here is intentional:
-        if (as) link.as = as;
-        link.rel = `prefetch`;
-        link.crossOrigin = undefined;
-        link.onload = res;
-        link.onerror = rej;
-        // `href` should always be last:
-        link.href = href;
-        document.head.appendChild(link);
-    });
-}
-const ASSET_LOAD_ERROR = Symbol("ASSET_LOAD_ERROR");
-function markAssetError(err) {
-    return Object.defineProperty(err, ASSET_LOAD_ERROR, {});
-}
-function isAssetError(err) {
-    return err && ASSET_LOAD_ERROR in err;
-}
-function appendScript(src, script) {
-    return new Promise((resolve, reject)=>{
-        script = document.createElement("script");
-        // The order of property assignment here is intentional.
-        // 1. Setup success/failure hooks in case the browser synchronously
-        //    executes when `src` is set.
-        script.onload = resolve;
-        script.onerror = ()=>reject(markAssetError(new Error(`Failed to load script: ${src}`)));
-        // 2. Configure the cross-origin attribute before setting `src` in case the
-        //    browser begins to fetch.
-        script.crossOrigin = undefined;
-        // 3. Finally, set the source and inject into the DOM in case the child
-        //    must be appended for fetching to start.
-        script.src = src;
-        document.body.appendChild(script);
-    });
-}
-// We wait for pages to be built in dev before we start the route transition
-// timeout to prevent an un-necessary hard navigation in development.
-let devBuildPromise;
-// Resolve a promise that times out after given amount of milliseconds.
-function resolvePromiseWithTimeout(p, ms, err) {
-    return new Promise((resolve, reject)=>{
-        let cancelled = false;
-        p.then((r)=>{
-            // Resolved, cancel the timeout
-            cancelled = true;
-            resolve(r);
-        }).catch(reject);
-        (devBuildPromise || Promise.resolve()).then(()=>{
-            _requestIdleCallback.requestIdleCallback(()=>setTimeout(()=>{
-                    if (!cancelled) reject(err);
-                }, ms));
-        });
-    });
-}
-function getClientBuildManifest() {
-    if (self.__BUILD_MANIFEST) return Promise.resolve(self.__BUILD_MANIFEST);
-    const onBuildManifest = new Promise((resolve)=>{
-        // Mandatory because this is not concurrent safe:
-        const cb = self.__BUILD_MANIFEST_CB;
-        self.__BUILD_MANIFEST_CB = ()=>{
-            resolve(self.__BUILD_MANIFEST);
-            cb && cb();
-        };
-    });
-    return resolvePromiseWithTimeout(onBuildManifest, MS_MAX_IDLE_DELAY, markAssetError(new Error("Failed to load client build manifest")));
-}
-function getFilesForRoute(assetPrefix, route) {
-    {
-        const scriptUrl = assetPrefix + "/_next/static/chunks/pages" + encodeURI(_getAssetPathFromRoute.default(route, ".js"));
-        return Promise.resolve({
-            scripts: [
-                _trustedTypes.__unsafeCreateTrustedScriptURL(scriptUrl)
-            ],
-            // Styles are handled by `style-loader` in development:
-            css: []
-        });
-    }
-    return getClientBuildManifest().then((manifest)=>{
-        if (!(route in manifest)) throw markAssetError(new Error(`Failed to lookup route: ${route}`));
-        const allFiles = manifest[route].map((entry)=>assetPrefix + "/_next/" + encodeURI(entry));
-        return {
-            scripts: allFiles.filter((v)=>v.endsWith(".js")).map((v)=>_trustedTypes.__unsafeCreateTrustedScriptURL(v)),
-            css: allFiles.filter((v)=>v.endsWith(".css"))
-        };
-    });
-}
-function createRouteLoader(assetPrefix) {
-    const entrypoints = new Map();
-    const loadedScripts = new Map();
-    const styleSheets = new Map();
-    const routes = new Map();
-    function maybeExecuteScript(src) {
-        return appendScript(src);
-    }
-    function fetchStyleSheet(href) {
-        let prom = styleSheets.get(href);
-        if (prom) return prom;
-        styleSheets.set(href, prom = fetch(href).then((res)=>{
-            if (!res.ok) throw new Error(`Failed to load stylesheet: ${href}`);
-            return res.text().then((text)=>({
-                    href: href,
-                    content: text
-                }));
-        }).catch((err)=>{
-            throw markAssetError(err);
-        }));
-        return prom;
-    }
-    return {
-        whenEntrypoint (route) {
-            return withFuture(route, entrypoints);
-        },
-        onEntrypoint (route, execute) {
-            (execute ? Promise.resolve().then(()=>execute()).then((exports1)=>({
-                    component: exports1 && exports1.default || exports1,
-                    exports: exports1
-                }), (err)=>({
-                    error: err
-                })) : Promise.resolve(undefined)).then((input)=>{
-                const old = entrypoints.get(route);
-                if (old && "resolve" in old) {
-                    if (input) {
-                        entrypoints.set(route, input);
-                        old.resolve(input);
-                    }
-                } else {
-                    if (input) entrypoints.set(route, input);
-                    else entrypoints.delete(route);
-                    // when this entrypoint has been resolved before
-                    // the route is outdated and we want to invalidate
-                    // this cache entry
-                    routes.delete(route);
-                }
-            });
-        },
-        loadRoute (route, prefetch) {
-            return withFuture(route, routes, ()=>{
-                let devBuildPromiseResolve;
-                devBuildPromise = new Promise((resolve)=>{
-                    devBuildPromiseResolve = resolve;
-                });
-                return resolvePromiseWithTimeout(getFilesForRoute(assetPrefix, route).then(({ scripts , css  })=>{
-                    return Promise.all([
-                        entrypoints.has(route) ? [] : Promise.all(scripts.map(maybeExecuteScript)),
-                        Promise.all(css.map(fetchStyleSheet)), 
-                    ]);
-                }).then((res)=>{
-                    return this.whenEntrypoint(route).then((entrypoint)=>({
-                            entrypoint,
-                            styles: res[1]
-                        }));
-                }), MS_MAX_IDLE_DELAY, markAssetError(new Error(`Route did not complete loading: ${route}`))).then(({ entrypoint , styles  })=>{
-                    const res = Object.assign({
-                        styles: styles
-                    }, entrypoint);
-                    return "error" in entrypoint ? entrypoint : res;
-                }).catch((err)=>{
-                    if (prefetch) // we don't want to cache errors during prefetch
-                    throw err;
-                    return {
-                        error: err
-                    };
-                }).finally(()=>{
-                    return devBuildPromiseResolve == null ? void 0 : devBuildPromiseResolve();
-                });
-            });
-        },
-        prefetch (route) {
-            // https://github.com/GoogleChromeLabs/quicklink/blob/453a661fa1fa940e2d2e044452398e38c67a98fb/src/index.mjs#L115-L118
-            // License: Apache 2.0
-            let cn;
-            if (cn = navigator.connection) {
-                // Don't prefetch if using 2G or if Save-Data is enabled.
-                if (cn.saveData || /2g/.test(cn.effectiveType)) return Promise.resolve();
-            }
-            return getFilesForRoute(assetPrefix, route).then((output)=>Promise.all(canPrefetch ? output.scripts.map((script)=>prefetchViaDom(script.toString(), "script")) : [])).then(()=>{
-                _requestIdleCallback.requestIdleCallback(()=>this.loadRoute(route, true).catch(()=>{}));
-            }).catch(()=>{});
-        }
-    };
-}
-if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
-    Object.defineProperty(exports.default, "__esModule", {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-}
-
-},{"@swc/helpers/lib/_interop_require_default.js":"k1iFV","../shared/lib/router/utils/get-asset-path-from-route":"aWNSG","./trusted-types":"yQZri","./request-idle-callback":"5zsyF"}],"aWNSG":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = getAssetPathFromRoute;
-function getAssetPathFromRoute(route, ext = "") {
-    const path = route === "/" ? "/index" : /^\/index(\/|$)/.test(route) ? `/index${route}` : `${route}`;
-    return path + ext;
-}
-
-},{}],"yQZri":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.__unsafeCreateTrustedScriptURL = __unsafeCreateTrustedScriptURL;
-/**
- * Stores the Trusted Types Policy. Starts as undefined and can be set to null
- * if Trusted Types is not supported in the browser.
- */ let policy;
-/**
- * Getter for the Trusted Types Policy. If it is undefined, it is instantiated
- * here or set to null if Trusted Types is not supported in the browser.
- */ function getPolicy() {
-    if (typeof policy === "undefined" && typeof window !== "undefined") {
-        var ref;
-        policy = ((ref = window.trustedTypes) == null ? void 0 : ref.createPolicy("nextjs", {
-            createHTML: (input)=>input,
-            createScript: (input)=>input,
-            createScriptURL: (input)=>input
-        })) || null;
-    }
-    return policy;
-}
-function __unsafeCreateTrustedScriptURL(url) {
-    var ref;
-    return ((ref = getPolicy()) == null ? void 0 : ref.createScriptURL(url)) || url;
-}
-if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
-    Object.defineProperty(exports.default, "__esModule", {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-}
-
-},{}],"58Hib":[function(require,module,exports) {
-"use strict";
-"client";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.handleClientScriptLoad = handleClientScriptLoad;
-exports.initScriptLoader = initScriptLoader;
-exports.default = void 0;
-var _extends = require("@swc/helpers/lib/_extends.js").default;
-var _interop_require_wildcard = require("@swc/helpers/lib/_interop_require_wildcard.js").default;
-var _object_without_properties_loose = require("@swc/helpers/lib/_object_without_properties_loose.js").default;
-var _react = _interop_require_wildcard(require("react"));
-var _headManagerContext = require("../shared/lib/head-manager-context");
-var _headManager = require("./head-manager");
-var _requestIdleCallback = require("./request-idle-callback");
-"client";
-const ScriptCache = new Map();
-const LoadCache = new Set();
-const ignoreProps = [
-    "onLoad",
-    "onReady",
-    "dangerouslySetInnerHTML",
-    "children",
-    "onError",
-    "strategy", 
-];
-const loadScript = (props)=>{
-    const { src , id , onLoad =()=>{} , onReady =null , dangerouslySetInnerHTML , children ="" , strategy ="afterInteractive" , onError ,  } = props;
-    const cacheKey = id || src;
-    // Script has already loaded
-    if (cacheKey && LoadCache.has(cacheKey)) return;
-    // Contents of this script are already loading/loaded
-    if (ScriptCache.has(src)) {
-        LoadCache.add(cacheKey);
-        // It is possible that multiple `next/script` components all have same "src", but has different "onLoad"
-        // This is to make sure the same remote script will only load once, but "onLoad" are executed in order
-        ScriptCache.get(src).then(onLoad, onError);
-        return;
-    }
-    /** Execute after the script first loaded */ const afterLoad = ()=>{
-        // Run onReady for the first time after load event
-        if (onReady) onReady();
-        // add cacheKey to LoadCache when load successfully
-        LoadCache.add(cacheKey);
-    };
-    const el = document.createElement("script");
-    const loadPromise = new Promise((resolve, reject)=>{
-        el.addEventListener("load", function(e) {
-            resolve();
-            if (onLoad) onLoad.call(this, e);
-            afterLoad();
-        });
-        el.addEventListener("error", function(e) {
-            reject(e);
-        });
-    }).catch(function(e) {
-        if (onError) onError(e);
-    });
-    if (dangerouslySetInnerHTML) {
-        el.innerHTML = dangerouslySetInnerHTML.__html || "";
-        afterLoad();
-    } else if (children) {
-        el.textContent = typeof children === "string" ? children : Array.isArray(children) ? children.join("") : "";
-        afterLoad();
-    } else if (src) {
-        el.src = src;
-        // do not add cacheKey into LoadCache for remote script here
-        // cacheKey will be added to LoadCache when it is actually loaded (see loadPromise above)
-        ScriptCache.set(src, loadPromise);
-    }
-    for (const [k, value] of Object.entries(props)){
-        if (value === undefined || ignoreProps.includes(k)) continue;
-        const attr = _headManager.DOMAttributeNames[k] || k.toLowerCase();
-        el.setAttribute(attr, value);
-    }
-    if (strategy === "worker") el.setAttribute("type", "text/partytown");
-    el.setAttribute("data-nscript", strategy);
-    document.body.appendChild(el);
-};
-function handleClientScriptLoad(props) {
-    const { strategy ="afterInteractive"  } = props;
-    if (strategy === "lazyOnload") window.addEventListener("load", ()=>{
-        _requestIdleCallback.requestIdleCallback(()=>loadScript(props));
-    });
-    else loadScript(props);
-}
-function loadLazyScript(props) {
-    if (document.readyState === "complete") _requestIdleCallback.requestIdleCallback(()=>loadScript(props));
-    else window.addEventListener("load", ()=>{
-        _requestIdleCallback.requestIdleCallback(()=>loadScript(props));
-    });
-}
-function addBeforeInteractiveToCache() {
-    const scripts = [
-        ...document.querySelectorAll('[data-nscript="beforeInteractive"]'),
-        ...document.querySelectorAll('[data-nscript="beforePageRender"]'), 
-    ];
-    scripts.forEach((script)=>{
-        const cacheKey = script.id || script.getAttribute("src");
-        LoadCache.add(cacheKey);
-    });
-}
-function initScriptLoader(scriptLoaderItems) {
-    scriptLoaderItems.forEach(handleClientScriptLoad);
-    addBeforeInteractiveToCache();
-}
-function Script(props) {
-    const { id , src ="" , onLoad =()=>{} , onReady =null , strategy ="afterInteractive" , onError  } = props, restProps = _object_without_properties_loose(props, [
-        "id",
-        "src",
-        "onLoad",
-        "onReady",
-        "strategy",
-        "onError"
-    ]);
-    // Context is available only during SSR
-    const { updateScripts , scripts , getIsSsr  } = _react.useContext(_headManagerContext.HeadManagerContext);
-    /**
-   * - First mount:
-   *   1. The useEffect for onReady executes
-   *   2. hasOnReadyEffectCalled.current is false, but the script hasn't loaded yet (not in LoadCache)
-   *      onReady is skipped, set hasOnReadyEffectCalled.current to true
-   *   3. The useEffect for loadScript executes
-   *   4. hasLoadScriptEffectCalled.current is false, loadScript executes
-   *      Once the script is loaded, the onLoad and onReady will be called by then
-   *   [If strict mode is enabled / is wrapped in <OffScreen /> component]
-   *   5. The useEffect for onReady executes again
-   *   6. hasOnReadyEffectCalled.current is true, so entire effect is skipped
-   *   7. The useEffect for loadScript executes again
-   *   8. hasLoadScriptEffectCalled.current is true, so entire effect is skipped
-   *
-   * - Second mount:
-   *   1. The useEffect for onReady executes
-   *   2. hasOnReadyEffectCalled.current is false, but the script has already loaded (found in LoadCache)
-   *      onReady is called, set hasOnReadyEffectCalled.current to true
-   *   3. The useEffect for loadScript executes
-   *   4. The script is already loaded, loadScript bails out
-   *   [If strict mode is enabled / is wrapped in <OffScreen /> component]
-   *   5. The useEffect for onReady executes again
-   *   6. hasOnReadyEffectCalled.current is true, so entire effect is skipped
-   *   7. The useEffect for loadScript executes again
-   *   8. hasLoadScriptEffectCalled.current is true, so entire effect is skipped
-   */ const hasOnReadyEffectCalled = _react.useRef(false);
-    _react.useEffect(()=>{
-        const cacheKey = id || src;
-        if (!hasOnReadyEffectCalled.current) {
-            // Run onReady if script has loaded before but component is re-mounted
-            if (onReady && cacheKey && LoadCache.has(cacheKey)) onReady();
-            hasOnReadyEffectCalled.current = true;
-        }
-    }, [
-        onReady,
-        id,
-        src
-    ]);
-    const hasLoadScriptEffectCalled = _react.useRef(false);
-    _react.useEffect(()=>{
-        if (!hasLoadScriptEffectCalled.current) {
-            if (strategy === "afterInteractive") loadScript(props);
-            else if (strategy === "lazyOnload") loadLazyScript(props);
-            hasLoadScriptEffectCalled.current = true;
-        }
-    }, [
-        props,
-        strategy
-    ]);
-    if (strategy === "beforeInteractive" || strategy === "worker") {
-        if (updateScripts) {
-            scripts[strategy] = (scripts[strategy] || []).concat([
-                _extends({
-                    id,
-                    src,
-                    onLoad,
-                    onReady,
-                    onError
-                }, restProps), 
-            ]);
-            updateScripts(scripts);
-        } else if (getIsSsr && getIsSsr()) // Script has already loaded during SSR
-        LoadCache.add(id || src);
-        else if (getIsSsr && !getIsSsr()) loadScript(props);
-    }
-    return null;
-}
-Object.defineProperty(Script, "__nextScript", {
-    value: true
-});
-var _default = Script;
-exports.default = _default;
-if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
-    Object.defineProperty(exports.default, "__esModule", {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-}
-
-},{"@swc/helpers/lib/_extends.js":"4vU6g","@swc/helpers/lib/_interop_require_wildcard.js":"frrjo","@swc/helpers/lib/_object_without_properties_loose.js":"6DnfI","react":"21dqq","../shared/lib/head-manager-context":"4Wc5J","./head-manager":"6zmW2","./request-idle-callback":"5zsyF"}],"6zmW2":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = initHeadManager;
-exports.isEqualNode = isEqualNode;
-exports.DOMAttributeNames = void 0;
-function initHeadManager() {
-    return {
-        mountedInstances: new Set(),
-        updateHead: (head)=>{
-            const tags = {};
-            head.forEach((h)=>{
-                if (// it won't be inlined. In this case revert to the original behavior
-                h.type === "link" && h.props["data-optimized-fonts"]) {
-                    if (document.querySelector(`style[data-href="${h.props["data-href"]}"]`)) return;
-                    else {
-                        h.props.href = h.props["data-href"];
-                        h.props["data-href"] = undefined;
-                    }
-                }
-                const components = tags[h.type] || [];
-                components.push(h);
-                tags[h.type] = components;
-            });
-            const titleComponent = tags.title ? tags.title[0] : null;
-            let title = "";
-            if (titleComponent) {
-                const { children  } = titleComponent.props;
-                title = typeof children === "string" ? children : Array.isArray(children) ? children.join("") : "";
-            }
-            if (title !== document.title) document.title = title;
-            [
-                "meta",
-                "base",
-                "link",
-                "style",
-                "script"
-            ].forEach((type)=>{
-                updateElements(type, tags[type] || []);
-            });
-        }
-    };
-}
-const DOMAttributeNames = {
-    acceptCharset: "accept-charset",
-    className: "class",
-    htmlFor: "for",
-    httpEquiv: "http-equiv",
-    noModule: "noModule"
-};
-exports.DOMAttributeNames = DOMAttributeNames;
-function reactElementToDOM({ type , props  }) {
-    const el = document.createElement(type);
-    for(const p in props){
-        if (!props.hasOwnProperty(p)) continue;
-        if (p === "children" || p === "dangerouslySetInnerHTML") continue;
-        // we don't render undefined props to the DOM
-        if (props[p] === undefined) continue;
-        const attr = DOMAttributeNames[p] || p.toLowerCase();
-        if (type === "script" && (attr === "async" || attr === "defer" || attr === "noModule")) el[attr] = !!props[p];
-        else el.setAttribute(attr, props[p]);
-    }
-    const { children , dangerouslySetInnerHTML  } = props;
-    if (dangerouslySetInnerHTML) el.innerHTML = dangerouslySetInnerHTML.__html || "";
-    else if (children) el.textContent = typeof children === "string" ? children : Array.isArray(children) ? children.join("") : "";
-    return el;
-}
-function isEqualNode(oldTag, newTag) {
-    if (oldTag instanceof HTMLElement && newTag instanceof HTMLElement) {
-        const nonce = newTag.getAttribute("nonce");
-        // Only strip the nonce if `oldTag` has had it stripped. An element's nonce attribute will not
-        // be stripped if there is no content security policy response header that includes a nonce.
-        if (nonce && !oldTag.getAttribute("nonce")) {
-            const cloneTag = newTag.cloneNode(true);
-            cloneTag.setAttribute("nonce", "");
-            cloneTag.nonce = nonce;
-            return nonce === oldTag.nonce && oldTag.isEqualNode(cloneTag);
-        }
-    }
-    return oldTag.isEqualNode(newTag);
-}
-function updateElements(type, components) {
-    const headEl = document.getElementsByTagName("head")[0];
-    const headCountEl = headEl.querySelector("meta[name=next-head-count]");
-    if (!headCountEl) {
-        console.error("Warning: next-head-count is missing. https://nextjs.org/docs/messages/next-head-count-missing");
-        return;
-    }
-    const headCount = Number(headCountEl.content);
-    const oldTags = [];
-    for(let i = 0, j = headCountEl.previousElementSibling; i < headCount; i++, j = (j == null ? void 0 : j.previousElementSibling) || null){
-        var ref;
-        if ((j == null ? void 0 : (ref = j.tagName) == null ? void 0 : ref.toLowerCase()) === type) oldTags.push(j);
-    }
-    const newTags = components.map(reactElementToDOM).filter((newTag)=>{
-        for(let k = 0, len = oldTags.length; k < len; k++){
-            const oldTag = oldTags[k];
-            if (isEqualNode(oldTag, newTag)) {
-                oldTags.splice(k, 1);
-                return false;
-            }
-        }
-        return true;
-    });
-    oldTags.forEach((t)=>{
-        var ref;
-        return (ref = t.parentNode) == null ? void 0 : ref.removeChild(t);
-    });
-    newTags.forEach((t)=>headEl.insertBefore(t, headCountEl));
-    headCountEl.content = (headCount - oldTags.length + newTags.length).toString();
-}
-if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
-    Object.defineProperty(exports.default, "__esModule", {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-}
-
-},{}],"6h17E":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = isError;
-exports.getProperError = getProperError;
-var _isPlainObject = require("../shared/lib/is-plain-object");
-function isError(err) {
-    return typeof err === "object" && err !== null && "name" in err && "message" in err;
-}
-function getProperError(err) {
-    if (isError(err)) return err;
-    // provide better error for case where `throw undefined`
-    // is called in development
-    if (typeof err === "undefined") return new Error("An undefined error was thrown, see here for more info: https://nextjs.org/docs/messages/threw-undefined");
-    if (err === null) return new Error("A null error was thrown, see here for more info: https://nextjs.org/docs/messages/threw-undefined");
-    return new Error(_isPlainObject.isPlainObject(err) ? JSON.stringify(err) : err + "");
-}
-
-},{"../shared/lib/is-plain-object":"6SYHW"}],"6SYHW":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.getObjectClassLabel = getObjectClassLabel;
-exports.isPlainObject = isPlainObject;
-function getObjectClassLabel(value) {
-    return Object.prototype.toString.call(value);
-}
-function isPlainObject(value) {
-    if (getObjectClassLabel(value) !== "[object Object]") return false;
-    const prototype = Object.getPrototypeOf(value);
-    /**
-   * this used to be previously:
-   *
-   * `return prototype === null || prototype === Object.prototype`
-   *
-   * but Edge Runtime expose Object from vm, being that kind of type-checking wrongly fail.
-   *
-   * It was changed to the current implementation since it's resilient to serialization.
-   */ return prototype === null || prototype.hasOwnProperty("isPrototypeOf");
-}
-
-},{}],"cW08D":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.denormalizePagePath = denormalizePagePath;
-var _utils = require("../router/utils");
-var _normalizePathSep = require("./normalize-path-sep");
-function denormalizePagePath(page) {
-    let _page = _normalizePathSep.normalizePathSep(page);
-    return _page.startsWith("/index/") && !_utils.isDynamicRoute(_page) ? _page.slice(6) : _page !== "/index" ? _page : "/";
-}
-
-},{"../router/utils":"i2luU","./normalize-path-sep":"YUF7l"}],"i2luU":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-Object.defineProperty(exports, "getSortedRoutes", {
-    enumerable: true,
-    get: function() {
-        return _sortedRoutes.getSortedRoutes;
-    }
-});
-Object.defineProperty(exports, "isDynamicRoute", {
-    enumerable: true,
-    get: function() {
-        return _isDynamic.isDynamicRoute;
-    }
-});
-var _sortedRoutes = require("./sorted-routes");
-var _isDynamic = require("./is-dynamic");
-
-},{"./sorted-routes":"iStS0","./is-dynamic":"6rybP"}],"iStS0":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.getSortedRoutes = getSortedRoutes;
-class UrlNode {
-    insert(urlPath) {
-        this._insert(urlPath.split("/").filter(Boolean), [], false);
-    }
-    smoosh() {
-        return this._smoosh();
-    }
-    _smoosh(prefix = "/") {
-        const childrenPaths = [
-            ...this.children.keys()
-        ].sort();
-        if (this.slugName !== null) childrenPaths.splice(childrenPaths.indexOf("[]"), 1);
-        if (this.restSlugName !== null) childrenPaths.splice(childrenPaths.indexOf("[...]"), 1);
-        if (this.optionalRestSlugName !== null) childrenPaths.splice(childrenPaths.indexOf("[[...]]"), 1);
-        const routes = childrenPaths.map((c)=>this.children.get(c)._smoosh(`${prefix}${c}/`)).reduce((prev, curr)=>[
-                ...prev,
-                ...curr
-            ], []);
-        if (this.slugName !== null) routes.push(...this.children.get("[]")._smoosh(`${prefix}[${this.slugName}]/`));
-        if (!this.placeholder) {
-            const r = prefix === "/" ? "/" : prefix.slice(0, -1);
-            if (this.optionalRestSlugName != null) throw new Error(`You cannot define a route with the same specificity as a optional catch-all route ("${r}" and "${r}[[...${this.optionalRestSlugName}]]").`);
-            routes.unshift(r);
-        }
-        if (this.restSlugName !== null) routes.push(...this.children.get("[...]")._smoosh(`${prefix}[...${this.restSlugName}]/`));
-        if (this.optionalRestSlugName !== null) routes.push(...this.children.get("[[...]]")._smoosh(`${prefix}[[...${this.optionalRestSlugName}]]/`));
-        return routes;
-    }
-    _insert(urlPaths, slugNames, isCatchAll) {
-        if (urlPaths.length === 0) {
-            this.placeholder = false;
-            return;
-        }
-        if (isCatchAll) throw new Error(`Catch-all must be the last part of the URL.`);
-        // The next segment in the urlPaths list
-        let nextSegment = urlPaths[0];
-        // Check if the segment matches `[something]`
-        if (nextSegment.startsWith("[") && nextSegment.endsWith("]")) {
-            // Strip `[` and `]`, leaving only `something`
-            let segmentName = nextSegment.slice(1, -1);
-            let isOptional = false;
-            if (segmentName.startsWith("[") && segmentName.endsWith("]")) {
-                // Strip optional `[` and `]`, leaving only `something`
-                segmentName = segmentName.slice(1, -1);
-                isOptional = true;
-            }
-            if (segmentName.startsWith("...")) {
-                // Strip `...`, leaving only `something`
-                segmentName = segmentName.substring(3);
-                isCatchAll = true;
-            }
-            if (segmentName.startsWith("[") || segmentName.endsWith("]")) throw new Error(`Segment names may not start or end with extra brackets ('${segmentName}').`);
-            if (segmentName.startsWith(".")) throw new Error(`Segment names may not start with erroneous periods ('${segmentName}').`);
-            function handleSlug(previousSlug, nextSlug) {
-                if (previousSlug !== null) {
-                    // If the specific segment already has a slug but the slug is not `something`
-                    // This prevents collisions like:
-                    // pages/[post]/index.js
-                    // pages/[id]/index.js
-                    // Because currently multiple dynamic params on the same segment level are not supported
-                    if (previousSlug !== nextSlug) // TODO: This error seems to be confusing for users, needs an error link, the description can be based on above comment.
-                    throw new Error(`You cannot use different slug names for the same dynamic path ('${previousSlug}' !== '${nextSlug}').`);
-                }
-                slugNames.forEach((slug)=>{
-                    if (slug === nextSlug) throw new Error(`You cannot have the same slug name "${nextSlug}" repeat within a single dynamic path`);
-                    if (slug.replace(/\W/g, "") === nextSegment.replace(/\W/g, "")) throw new Error(`You cannot have the slug names "${slug}" and "${nextSlug}" differ only by non-word symbols within a single dynamic path`);
-                });
-                slugNames.push(nextSlug);
-            }
-            if (isCatchAll) {
-                if (isOptional) {
-                    if (this.restSlugName != null) throw new Error(`You cannot use both an required and optional catch-all route at the same level ("[...${this.restSlugName}]" and "${urlPaths[0]}" ).`);
-                    handleSlug(this.optionalRestSlugName, segmentName);
-                    // slugName is kept as it can only be one particular slugName
-                    this.optionalRestSlugName = segmentName;
-                    // nextSegment is overwritten to [[...]] so that it can later be sorted specifically
-                    nextSegment = "[[...]]";
-                } else {
-                    if (this.optionalRestSlugName != null) throw new Error(`You cannot use both an optional and required catch-all route at the same level ("[[...${this.optionalRestSlugName}]]" and "${urlPaths[0]}").`);
-                    handleSlug(this.restSlugName, segmentName);
-                    // slugName is kept as it can only be one particular slugName
-                    this.restSlugName = segmentName;
-                    // nextSegment is overwritten to [...] so that it can later be sorted specifically
-                    nextSegment = "[...]";
-                }
-            } else {
-                if (isOptional) throw new Error(`Optional route parameters are not yet supported ("${urlPaths[0]}").`);
-                handleSlug(this.slugName, segmentName);
-                // slugName is kept as it can only be one particular slugName
-                this.slugName = segmentName;
-                // nextSegment is overwritten to [] so that it can later be sorted specifically
-                nextSegment = "[]";
-            }
-        }
-        // If this UrlNode doesn't have the nextSegment yet we create a new child UrlNode
-        if (!this.children.has(nextSegment)) this.children.set(nextSegment, new UrlNode());
-        this.children.get(nextSegment)._insert(urlPaths.slice(1), slugNames, isCatchAll);
-    }
-    constructor(){
-        this.placeholder = true;
-        this.children = new Map();
-        this.slugName = null;
-        this.restSlugName = null;
-        this.optionalRestSlugName = null;
-    }
-}
-function getSortedRoutes(normalizedPages) {
-    // First the UrlNode is created, and every UrlNode can have only 1 dynamic segment
-    // Eg you can't have pages/[post]/abc.js and pages/[hello]/something-else.js
-    // Only 1 dynamic segment per nesting level
-    // So in the case that is test/integration/dynamic-routing it'll be this:
-    // pages/[post]/comments.js
-    // pages/blog/[post]/comment/[id].js
-    // Both are fine because `pages/[post]` and `pages/blog` are on the same level
-    // So in this case `UrlNode` created here has `this.slugName === 'post'`
-    // And since your PR passed through `slugName` as an array basically it'd including it in too many possibilities
-    // Instead what has to be passed through is the upwards path's dynamic names
-    const root = new UrlNode();
-    // Here the `root` gets injected multiple paths, and insert will break them up into sublevels
-    normalizedPages.forEach((pagePath)=>root.insert(pagePath));
-    // Smoosh will then sort those sublevels up to the point where you get the correct route definition priority
-    return root.smoosh();
-}
-
-},{}],"6rybP":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.isDynamicRoute = isDynamicRoute;
-// Identify /[param]/ in route string
-const TEST_ROUTE = /\/\[[^/]+?\](?=\/|$)/;
-function isDynamicRoute(route) {
-    return TEST_ROUTE.test(route);
-}
-
-},{}],"YUF7l":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.normalizePathSep = normalizePathSep;
-function normalizePathSep(path) {
-    return path.replace(/\\/g, "/");
-}
-
-},{}],"iF0G9":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.normalizeLocalePath = normalizeLocalePath;
-function normalizeLocalePath(pathname, locales) {
-    let detectedLocale;
-    // first item will be empty string from splitting at first char
-    const pathnameParts = pathname.split("/");
-    (locales || []).some((locale)=>{
-        if (pathnameParts[1] && pathnameParts[1].toLowerCase() === locale.toLowerCase()) {
-            detectedLocale = locale;
-            pathnameParts.splice(1, 1);
-            pathname = pathnameParts.join("/") || "/";
-            return true;
-        }
-        return false;
-    });
-    return {
-        pathname,
-        detectedLocale
-    };
-}
-
-},{}],"1O1Fg":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = mitt;
-function mitt() {
-    const all = Object.create(null);
-    return {
-        on (type, handler) {
-            (all[type] || (all[type] = [])).push(handler);
-        },
-        off (type, handler) {
-            if (all[type]) all[type].splice(all[type].indexOf(handler) >>> 0, 1);
-        },
-        emit (type, ...evts) {
-            (all[type] || []).slice().map((handler)=>{
-                handler(...evts);
-            });
-        }
-    };
-}
-
-},{}],"lDl7e":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.parseRelativeUrl = parseRelativeUrl;
-var _utils = require("../../utils");
-var _querystring = require("./querystring");
-function parseRelativeUrl(url, base) {
-    const globalBase = new URL(typeof window === "undefined" ? "http://n" : _utils.getLocationOrigin());
-    const resolvedBase = base ? new URL(base, globalBase) : url.startsWith(".") ? new URL(typeof window === "undefined" ? "http://n" : window.location.href) : globalBase;
-    const { pathname , searchParams , search , hash , href , origin  } = new URL(url, resolvedBase);
-    if (origin !== globalBase.origin) throw new Error(`invariant: invalid relative URL, router received ${url}`);
-    return {
-        pathname,
-        query: _querystring.searchParamsToUrlQuery(searchParams),
-        search,
-        hash,
-        href: href.slice(globalBase.origin.length)
-    };
-}
-
-},{"../../utils":"cHiay","./querystring":"PeN2l"}],"PeN2l":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.searchParamsToUrlQuery = searchParamsToUrlQuery;
-exports.urlQueryToSearchParams = urlQueryToSearchParams;
-exports.assign = assign;
-function searchParamsToUrlQuery(searchParams) {
-    const query = {};
-    searchParams.forEach((value, key)=>{
-        if (typeof query[key] === "undefined") query[key] = value;
-        else if (Array.isArray(query[key])) query[key].push(value);
-        else query[key] = [
-            query[key],
-            value
-        ];
-    });
-    return query;
-}
-function stringifyUrlQueryParam(param) {
-    if (typeof param === "string" || typeof param === "number" && !isNaN(param) || typeof param === "boolean") return String(param);
-    else return "";
-}
-function urlQueryToSearchParams(urlQuery) {
-    const result = new URLSearchParams();
-    Object.entries(urlQuery).forEach(([key, value])=>{
-        if (Array.isArray(value)) value.forEach((item)=>result.append(key, stringifyUrlQueryParam(item)));
-        else result.set(key, stringifyUrlQueryParam(value));
-    });
-    return result;
-}
-function assign(target, ...searchParamsList) {
-    searchParamsList.forEach((searchParams)=>{
-        Array.from(searchParams.keys()).forEach((key)=>target.delete(key));
-        searchParams.forEach((value, key)=>target.append(key, value));
-    });
-    return target;
-}
-
-},{}],"ezgoA":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = resolveRewrites;
-var _pathMatch = require("./path-match");
-var _prepareDestination = require("./prepare-destination");
-var _removeTrailingSlash = require("./remove-trailing-slash");
-var _normalizeLocalePath = require("../../i18n/normalize-locale-path");
-var _removeBasePath = require("../../../../client/remove-base-path");
-var _parseRelativeUrl = require("./parse-relative-url");
-function resolveRewrites(asPath, pages, rewrites, query, resolveHref, locales) {
-    let matchedPage = false;
-    let externalDest = false;
-    let parsedAs = _parseRelativeUrl.parseRelativeUrl(asPath);
-    let fsPathname = _removeTrailingSlash.removeTrailingSlash(_normalizeLocalePath.normalizeLocalePath(_removeBasePath.removeBasePath(parsedAs.pathname), locales).pathname);
-    let resolvedHref;
-    const handleRewrite = (rewrite)=>{
-        const matcher = _pathMatch.getPathMatch(rewrite.source + "", {
-            removeUnnamedParams: true,
-            strict: true
-        });
-        let params = matcher(parsedAs.pathname);
-        if (rewrite.has && params) {
-            const hasParams = _prepareDestination.matchHas({
-                headers: {
-                    host: document.location.hostname
-                },
-                cookies: document.cookie.split("; ").reduce((acc, item)=>{
-                    const [key, ...value] = item.split("=");
-                    acc[key] = value.join("=");
-                    return acc;
-                }, {})
-            }, rewrite.has, parsedAs.query);
-            if (hasParams) Object.assign(params, hasParams);
-            else params = false;
-        }
-        if (params) {
-            if (!rewrite.destination) {
-                // this is a proxied rewrite which isn't handled on the client
-                externalDest = true;
-                return true;
-            }
-            const destRes = _prepareDestination.prepareDestination({
-                appendParamsToQuery: true,
-                destination: rewrite.destination,
-                params: params,
-                query: query
-            });
-            parsedAs = destRes.parsedDestination;
-            asPath = destRes.newUrl;
-            Object.assign(query, destRes.parsedDestination.query);
-            fsPathname = _removeTrailingSlash.removeTrailingSlash(_normalizeLocalePath.normalizeLocalePath(_removeBasePath.removeBasePath(asPath), locales).pathname);
-            if (pages.includes(fsPathname)) {
-                // check if we now match a page as this means we are done
-                // resolving the rewrites
-                matchedPage = true;
-                resolvedHref = fsPathname;
-                return true;
-            }
-            // check if we match a dynamic-route, if so we break the rewrites chain
-            resolvedHref = resolveHref(fsPathname);
-            if (resolvedHref !== asPath && pages.includes(resolvedHref)) {
-                matchedPage = true;
-                return true;
-            }
-        }
-    };
-    let finished = false;
-    for(let i = 0; i < rewrites.beforeFiles.length; i++)// we don't end after match in beforeFiles to allow
-    // continuing through all beforeFiles rewrites
-    handleRewrite(rewrites.beforeFiles[i]);
-    matchedPage = pages.includes(fsPathname);
-    if (!matchedPage) {
-        if (!finished) {
-            for(let i1 = 0; i1 < rewrites.afterFiles.length; i1++)if (handleRewrite(rewrites.afterFiles[i1])) {
-                finished = true;
-                break;
-            }
-        }
-        // check dynamic route before processing fallback rewrites
-        if (!finished) {
-            resolvedHref = resolveHref(fsPathname);
-            matchedPage = pages.includes(resolvedHref);
-            finished = matchedPage;
-        }
-        if (!finished) {
-            for(let i2 = 0; i2 < rewrites.fallback.length; i2++)if (handleRewrite(rewrites.fallback[i2])) {
-                finished = true;
-                break;
-            }
-        }
-    }
-    return {
-        asPath,
-        parsedAs,
-        matchedPage,
-        resolvedHref,
-        externalDest
-    };
-}
-
-},{"./path-match":"dsT1h","./prepare-destination":"EhxbV","./remove-trailing-slash":"ltEax","../../i18n/normalize-locale-path":"iF0G9","../../../../client/remove-base-path":"gS7mU","./parse-relative-url":"lDl7e"}],"dsT1h":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.getPathMatch = getPathMatch;
-var _extends = require("@swc/helpers/lib/_extends.js").default;
-var _pathToRegexp = require("next/dist/compiled/path-to-regexp");
-function getPathMatch(path, options) {
-    const keys = [];
-    const regexp = _pathToRegexp.pathToRegexp(path, keys, {
-        delimiter: "/",
-        sensitive: false,
-        strict: options == null ? void 0 : options.strict
-    });
-    const matcher = _pathToRegexp.regexpToFunction((options == null ? void 0 : options.regexModifier) ? new RegExp(options.regexModifier(regexp.source), regexp.flags) : regexp, keys);
-    /**
-   * A matcher function that will check if a given pathname matches the path
-   * given in the builder function. When the path does not match it will return
-   * `false` but if it does it will return an object with the matched params
-   * merged with the params provided in the second argument.
-   */ return (pathname, params)=>{
-        const res = pathname == null ? false : matcher(pathname);
-        if (!res) return false;
-        /**
-     * If unnamed params are not allowed they must be removed from
-     * the matched parameters. path-to-regexp uses "string" for named and
-     * "number" for unnamed parameters.
-     */ if (options == null ? void 0 : options.removeUnnamedParams) {
-            for (const key of keys)if (typeof key.name === "number") delete res.params[key.name];
-        }
-        return _extends({}, params, res.params);
-    };
-}
-
-},{"@swc/helpers/lib/_extends.js":"4vU6g","next/dist/compiled/path-to-regexp":"575Oc"}],"575Oc":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-/**
- * Tokenize input string.
- */ function lexer(str) {
-    var tokens = [];
-    var i = 0;
-    while(i < str.length){
-        var char = str[i];
-        if (char === "*" || char === "+" || char === "?") {
-            tokens.push({
-                type: "MODIFIER",
-                index: i,
-                value: str[i++]
-            });
-            continue;
-        }
-        if (char === "\\") {
-            tokens.push({
-                type: "ESCAPED_CHAR",
-                index: i++,
-                value: str[i++]
-            });
-            continue;
-        }
-        if (char === "{") {
-            tokens.push({
-                type: "OPEN",
-                index: i,
-                value: str[i++]
-            });
-            continue;
-        }
-        if (char === "}") {
-            tokens.push({
-                type: "CLOSE",
-                index: i,
-                value: str[i++]
-            });
-            continue;
-        }
-        if (char === ":") {
-            var name = "";
-            var j = i + 1;
-            while(j < str.length){
-                var code = str.charCodeAt(j);
-                if (// `0-9`
-                code >= 48 && code <= 57 || code >= 65 && code <= 90 || code >= 97 && code <= 122 || // `_`
-                code === 95) {
-                    name += str[j++];
-                    continue;
-                }
-                break;
-            }
-            if (!name) throw new TypeError("Missing parameter name at " + i);
-            tokens.push({
-                type: "NAME",
-                index: i,
-                value: name
-            });
-            i = j;
-            continue;
-        }
-        if (char === "(") {
-            var count = 1;
-            var pattern = "";
-            var j = i + 1;
-            if (str[j] === "?") throw new TypeError('Pattern cannot start with "?" at ' + j);
-            while(j < str.length){
-                if (str[j] === "\\") {
-                    pattern += str[j++] + str[j++];
-                    continue;
-                }
-                if (str[j] === ")") {
-                    count--;
-                    if (count === 0) {
-                        j++;
-                        break;
-                    }
-                } else if (str[j] === "(") {
-                    count++;
-                    if (str[j + 1] !== "?") throw new TypeError("Capturing groups are not allowed at " + j);
-                }
-                pattern += str[j++];
-            }
-            if (count) throw new TypeError("Unbalanced pattern at " + i);
-            if (!pattern) throw new TypeError("Missing pattern at " + i);
-            tokens.push({
-                type: "PATTERN",
-                index: i,
-                value: pattern
-            });
-            i = j;
-            continue;
-        }
-        tokens.push({
-            type: "CHAR",
-            index: i,
-            value: str[i++]
-        });
-    }
-    tokens.push({
-        type: "END",
-        index: i,
-        value: ""
-    });
-    return tokens;
-}
-/**
- * Parse a string for the raw tokens.
- */ function parse(str, options) {
-    if (options === void 0) options = {};
-    var tokens = lexer(str);
-    var _a = options.prefixes, prefixes = _a === void 0 ? "./" : _a;
-    var defaultPattern = "[^" + escapeString(options.delimiter || "/#?") + "]+?";
-    var result = [];
-    var key = 0;
-    var i = 0;
-    var path = "";
-    var tryConsume = function(type) {
-        if (i < tokens.length && tokens[i].type === type) return tokens[i++].value;
-    };
-    var mustConsume = function(type) {
-        var value = tryConsume(type);
-        if (value !== undefined) return value;
-        var _a = tokens[i], nextType = _a.type, index = _a.index;
-        throw new TypeError("Unexpected " + nextType + " at " + index + ", expected " + type);
-    };
-    var consumeText = function() {
-        var result = "";
-        var value;
-        // tslint:disable-next-line
-        while(value = tryConsume("CHAR") || tryConsume("ESCAPED_CHAR"))result += value;
-        return result;
-    };
-    while(i < tokens.length){
-        var char = tryConsume("CHAR");
-        var name = tryConsume("NAME");
-        var pattern = tryConsume("PATTERN");
-        if (name || pattern) {
-            var prefix = char || "";
-            if (prefixes.indexOf(prefix) === -1) {
-                path += prefix;
-                prefix = "";
-            }
-            if (path) {
-                result.push(path);
-                path = "";
-            }
-            result.push({
-                name: name || key++,
-                prefix: prefix,
-                suffix: "",
-                pattern: pattern || defaultPattern,
-                modifier: tryConsume("MODIFIER") || ""
-            });
-            continue;
-        }
-        var value = char || tryConsume("ESCAPED_CHAR");
-        if (value) {
-            path += value;
-            continue;
-        }
-        if (path) {
-            result.push(path);
-            path = "";
-        }
-        var open = tryConsume("OPEN");
-        if (open) {
-            var prefix = consumeText();
-            var name_1 = tryConsume("NAME") || "";
-            var pattern_1 = tryConsume("PATTERN") || "";
-            var suffix = consumeText();
-            mustConsume("CLOSE");
-            result.push({
-                name: name_1 || (pattern_1 ? key++ : ""),
-                pattern: name_1 && !pattern_1 ? defaultPattern : pattern_1,
-                prefix: prefix,
-                suffix: suffix,
-                modifier: tryConsume("MODIFIER") || ""
-            });
-            continue;
-        }
-        mustConsume("END");
-    }
-    return result;
-}
-exports.parse = parse;
-/**
- * Compile a string to a template function for the path.
- */ function compile(str, options) {
-    return tokensToFunction(parse(str, options), options);
-}
-exports.compile = compile;
-/**
- * Expose a method for transforming tokens into the path function.
- */ function tokensToFunction(tokens, options) {
-    if (options === void 0) options = {};
-    var reFlags = flags(options);
-    var _a = options.encode, encode = _a === void 0 ? function(x) {
-        return x;
-    } : _a, _b = options.validate, validate = _b === void 0 ? true : _b;
-    // Compile all the tokens into regexps.
-    var matches = tokens.map(function(token) {
-        if (typeof token === "object") return new RegExp("^(?:" + token.pattern + ")$", reFlags);
-    });
-    return function(data) {
-        var path = "";
-        for(var i = 0; i < tokens.length; i++){
-            var token = tokens[i];
-            if (typeof token === "string") {
-                path += token;
-                continue;
-            }
-            var value = data ? data[token.name] : undefined;
-            var optional = token.modifier === "?" || token.modifier === "*";
-            var repeat = token.modifier === "*" || token.modifier === "+";
-            if (Array.isArray(value)) {
-                if (!repeat) throw new TypeError('Expected "' + token.name + '" to not repeat, but got an array');
-                if (value.length === 0) {
-                    if (optional) continue;
-                    throw new TypeError('Expected "' + token.name + '" to not be empty');
-                }
-                for(var j = 0; j < value.length; j++){
-                    var segment = encode(value[j], token);
-                    if (validate && !matches[i].test(segment)) throw new TypeError('Expected all "' + token.name + '" to match "' + token.pattern + '", but got "' + segment + '"');
-                    path += token.prefix + segment + token.suffix;
-                }
-                continue;
-            }
-            if (typeof value === "string" || typeof value === "number") {
-                var segment = encode(String(value), token);
-                if (validate && !matches[i].test(segment)) throw new TypeError('Expected "' + token.name + '" to match "' + token.pattern + '", but got "' + segment + '"');
-                path += token.prefix + segment + token.suffix;
-                continue;
-            }
-            if (optional) continue;
-            var typeOfMessage = repeat ? "an array" : "a string";
-            throw new TypeError('Expected "' + token.name + '" to be ' + typeOfMessage);
-        }
-        return path;
-    };
-}
-exports.tokensToFunction = tokensToFunction;
-/**
- * Create path match function from `path-to-regexp` spec.
- */ function match(str, options) {
-    var keys = [];
-    var re = pathToRegexp(str, keys, options);
-    return regexpToFunction(re, keys, options);
-}
-exports.match = match;
-/**
- * Create a path match function from `path-to-regexp` output.
- */ function regexpToFunction(re, keys, options) {
-    if (options === void 0) options = {};
-    var _a = options.decode, decode = _a === void 0 ? function(x) {
-        return x;
-    } : _a;
-    return function(pathname) {
-        var m = re.exec(pathname);
-        if (!m) return false;
-        var path = m[0], index = m.index;
-        var params = Object.create(null);
-        var _loop_1 = function(i) {
-            // tslint:disable-next-line
-            if (m[i] === undefined) return "continue";
-            var key = keys[i - 1];
-            if (key.modifier === "*" || key.modifier === "+") params[key.name] = m[i].split(key.prefix + key.suffix).map(function(value) {
-                return decode(value, key);
-            });
-            else params[key.name] = decode(m[i], key);
-        };
-        for(var i = 1; i < m.length; i++)_loop_1(i);
-        return {
-            path: path,
-            index: index,
-            params: params
-        };
-    };
-}
-exports.regexpToFunction = regexpToFunction;
-/**
- * Escape a regular expression string.
- */ function escapeString(str) {
-    return str.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1");
-}
-/**
- * Get the flags for a regexp from the options.
- */ function flags(options) {
-    return options && options.sensitive ? "" : "i";
-}
-/**
- * Pull out keys from a regexp.
- */ function regexpToRegexp(path, keys) {
-    if (!keys) return path;
-    // Use a negative lookahead to match only capturing groups.
-    var groups = path.source.match(/\((?!\?)/g);
-    if (groups) for(var i = 0; i < groups.length; i++)keys.push({
-        name: i,
-        prefix: "",
-        suffix: "",
-        modifier: "",
-        pattern: ""
-    });
-    return path;
-}
-/**
- * Transform an array into a regexp.
- */ function arrayToRegexp(paths, keys, options) {
-    var parts = paths.map(function(path) {
-        return pathToRegexp(path, keys, options).source;
-    });
-    return new RegExp("(?:" + parts.join("|") + ")", flags(options));
-}
-/**
- * Create a path regexp from string input.
- */ function stringToRegexp(path, keys, options) {
-    return tokensToRegexp(parse(path, options), keys, options);
-}
-/**
- * Expose a function for taking tokens and returning a RegExp.
- */ function tokensToRegexp(tokens, keys, options) {
-    if (options === void 0) options = {};
-    var _a = options.strict, strict = _a === void 0 ? false : _a, _b = options.start, start = _b === void 0 ? true : _b, _c = options.end, end = _c === void 0 ? true : _c, _d = options.encode, encode = _d === void 0 ? function(x) {
-        return x;
-    } : _d;
-    var endsWith = "[" + escapeString(options.endsWith || "") + "]|$";
-    var delimiter = "[" + escapeString(options.delimiter || "/#?") + "]";
-    var route = start ? "^" : "";
-    // Iterate over the tokens and create our regexp string.
-    for(var _i = 0, tokens_1 = tokens; _i < tokens_1.length; _i++){
-        var token = tokens_1[_i];
-        if (typeof token === "string") route += escapeString(encode(token));
-        else {
-            var prefix = escapeString(encode(token.prefix));
-            var suffix = escapeString(encode(token.suffix));
-            if (token.pattern) {
-                if (keys) keys.push(token);
-                if (prefix || suffix) {
-                    if (token.modifier === "+" || token.modifier === "*") {
-                        var mod = token.modifier === "*" ? "?" : "";
-                        route += "(?:" + prefix + "((?:" + token.pattern + ")(?:" + suffix + prefix + "(?:" + token.pattern + "))*)" + suffix + ")" + mod;
-                    } else route += "(?:" + prefix + "(" + token.pattern + ")" + suffix + ")" + token.modifier;
-                } else route += "(" + token.pattern + ")" + token.modifier;
-            } else route += "(?:" + prefix + suffix + ")" + token.modifier;
-        }
-    }
-    if (end) {
-        if (!strict) route += delimiter + "?";
-        route += !options.endsWith ? "$" : "(?=" + endsWith + ")";
-    } else {
-        var endToken = tokens[tokens.length - 1];
-        var isEndDelimited = typeof endToken === "string" ? delimiter.indexOf(endToken[endToken.length - 1]) > -1 : endToken === undefined;
-        if (!strict) route += "(?:" + delimiter + "(?=" + endsWith + "))?";
-        if (!isEndDelimited) route += "(?=" + delimiter + "|" + endsWith + ")";
-    }
-    return new RegExp(route, flags(options));
-}
-exports.tokensToRegexp = tokensToRegexp;
-/**
- * Normalize the given path string, returning a regular expression.
- *
- * An empty array can be passed in for the keys, which will hold the
- * placeholder key descriptions. For example, using `/user/:id`, `keys` will
- * contain `[{ name: 'id', delimiter: '/', optional: false, repeat: false }]`.
- */ function pathToRegexp(path, keys, options) {
-    if (path instanceof RegExp) return regexpToRegexp(path, keys);
-    if (Array.isArray(path)) return arrayToRegexp(path, keys, options);
-    return stringToRegexp(path, keys, options);
-}
-exports.pathToRegexp = pathToRegexp; //# sourceMappingURL=index.js.map
-
-},{}],"EhxbV":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.matchHas = matchHas;
-exports.compileNonPath = compileNonPath;
-exports.prepareDestination = prepareDestination;
-var _extends = require("@swc/helpers/lib/_extends.js").default;
-var _pathToRegexp = require("next/dist/compiled/path-to-regexp");
-var _escapeRegexp = require("../../escape-regexp");
-var _parseUrl = require("./parse-url");
-/**
- * Ensure only a-zA-Z are used for param names for proper interpolating
- * with path-to-regexp
- */ function getSafeParamName(paramName) {
-    let newParamName = "";
-    for(let i = 0; i < paramName.length; i++){
-        const charCode = paramName.charCodeAt(i);
-        if (charCode > 64 && charCode < 91 || charCode > 96 && charCode < 123 // a-z
-        ) newParamName += paramName[i];
-    }
-    return newParamName;
-}
-function escapeSegment(str, segmentName) {
-    return str.replace(new RegExp(`:${_escapeRegexp.escapeStringRegexp(segmentName)}`, "g"), `__ESC_COLON_${segmentName}`);
-}
-function unescapeSegments(str) {
-    return str.replace(/__ESC_COLON_/gi, ":");
-}
-function matchHas(req, has, query) {
-    const params = {};
-    const allMatch = has.every((hasItem)=>{
-        let value;
-        let key = hasItem.key;
-        switch(hasItem.type){
-            case "header":
-                key = key.toLowerCase();
-                value = req.headers[key];
-                break;
-            case "cookie":
-                value = req.cookies[hasItem.key];
-                break;
-            case "query":
-                value = query[key];
-                break;
-            case "host":
-                {
-                    const { host  } = (req == null ? void 0 : req.headers) || {};
-                    // remove port from host if present
-                    const hostname = host == null ? void 0 : host.split(":")[0].toLowerCase();
-                    value = hostname;
-                    break;
-                }
-            default:
-                break;
-        }
-        if (!hasItem.value && value) {
-            params[getSafeParamName(key)] = value;
-            return true;
-        } else if (value) {
-            const matcher = new RegExp(`^${hasItem.value}$`);
-            const matches = Array.isArray(value) ? value.slice(-1)[0].match(matcher) : value.match(matcher);
-            if (matches) {
-                if (Array.isArray(matches)) {
-                    if (matches.groups) Object.keys(matches.groups).forEach((groupKey)=>{
-                        params[groupKey] = matches.groups[groupKey];
-                    });
-                    else if (hasItem.type === "host" && matches[0]) params.host = matches[0];
-                }
-                return true;
-            }
-        }
-        return false;
-    });
-    if (allMatch) return params;
-    return false;
-}
-function compileNonPath(value, params) {
-    if (!value.includes(":")) return value;
-    for (const key of Object.keys(params))if (value.includes(`:${key}`)) value = value.replace(new RegExp(`:${key}\\*`, "g"), `:${key}--ESCAPED_PARAM_ASTERISKS`).replace(new RegExp(`:${key}\\?`, "g"), `:${key}--ESCAPED_PARAM_QUESTION`).replace(new RegExp(`:${key}\\+`, "g"), `:${key}--ESCAPED_PARAM_PLUS`).replace(new RegExp(`:${key}(?!\\w)`, "g"), `--ESCAPED_PARAM_COLON${key}`);
-    value = value.replace(/(:|\*|\?|\+|\(|\)|\{|\})/g, "\\$1").replace(/--ESCAPED_PARAM_PLUS/g, "+").replace(/--ESCAPED_PARAM_COLON/g, ":").replace(/--ESCAPED_PARAM_QUESTION/g, "?").replace(/--ESCAPED_PARAM_ASTERISKS/g, "*");
-    // the value needs to start with a forward-slash to be compiled
-    // correctly
-    return _pathToRegexp.compile(`/${value}`, {
-        validate: false
-    })(params).slice(1);
-}
-function prepareDestination(args) {
-    const query = Object.assign({}, args.query);
-    delete query.__nextLocale;
-    delete query.__nextDefaultLocale;
-    delete query.__nextDataReq;
-    let escapedDestination = args.destination;
-    for (const param of Object.keys(_extends({}, args.params, query)))escapedDestination = escapeSegment(escapedDestination, param);
-    const parsedDestination = _parseUrl.parseUrl(escapedDestination);
-    const destQuery = parsedDestination.query;
-    const destPath = unescapeSegments(`${parsedDestination.pathname}${parsedDestination.hash || ""}`);
-    const destHostname = unescapeSegments(parsedDestination.hostname || "");
-    const destPathParamKeys = [];
-    const destHostnameParamKeys = [];
-    _pathToRegexp.pathToRegexp(destPath, destPathParamKeys);
-    _pathToRegexp.pathToRegexp(destHostname, destHostnameParamKeys);
-    const destParams = [];
-    destPathParamKeys.forEach((key)=>destParams.push(key.name));
-    destHostnameParamKeys.forEach((key)=>destParams.push(key.name));
-    const destPathCompiler = _pathToRegexp.compile(destPath, // have already validated before we got to this point and validating
-    // breaks compiling destinations with named pattern params from the source
-    // e.g. /something:hello(.*) -> /another/:hello is broken with validation
-    // since compile validation is meant for reversing and not for inserting
-    // params from a separate path-regex into another
-    {
-        validate: false
-    });
-    const destHostnameCompiler = _pathToRegexp.compile(destHostname, {
-        validate: false
-    });
-    // update any params in query values
-    for (const [key1, strOrArray] of Object.entries(destQuery))// the value needs to start with a forward-slash to be compiled
-    // correctly
-    if (Array.isArray(strOrArray)) destQuery[key1] = strOrArray.map((value)=>compileNonPath(unescapeSegments(value), args.params));
-    else destQuery[key1] = compileNonPath(unescapeSegments(strOrArray), args.params);
-    // add path params to query if it's not a redirect and not
-    // already defined in destination query or path
-    let paramKeys = Object.keys(args.params).filter((name)=>name !== "nextInternalLocale");
-    if (args.appendParamsToQuery && !paramKeys.some((key)=>destParams.includes(key))) {
-        for (const key of paramKeys)if (!(key in destQuery)) destQuery[key] = args.params[key];
-    }
-    let newUrl;
-    try {
-        newUrl = destPathCompiler(args.params);
-        const [pathname, hash] = newUrl.split("#");
-        parsedDestination.hostname = destHostnameCompiler(args.params);
-        parsedDestination.pathname = pathname;
-        parsedDestination.hash = `${hash ? "#" : ""}${hash || ""}`;
-        delete parsedDestination.search;
-    } catch (err) {
-        if (err.message.match(/Expected .*? to not repeat, but got an array/)) throw new Error(`To use a multi-match in the destination you must add \`*\` at the end of the param name to signify it should repeat. https://nextjs.org/docs/messages/invalid-multi-match`);
-        throw err;
-    }
-    // Query merge order lowest priority to highest
-    // 1. initial URL query values
-    // 2. path segment values
-    // 3. destination specified query values
-    parsedDestination.query = _extends({}, query, parsedDestination.query);
-    return {
-        newUrl,
-        destQuery,
-        parsedDestination
-    };
-}
-
-},{"@swc/helpers/lib/_extends.js":"4vU6g","next/dist/compiled/path-to-regexp":"575Oc","../../escape-regexp":"g4TDV","./parse-url":"58L73"}],"g4TDV":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.escapeStringRegexp = escapeStringRegexp;
-// regexp is based on https://github.com/sindresorhus/escape-string-regexp
-const reHasRegExp = /[|\\{}()[\]^$+*?.-]/;
-const reReplaceRegExp = /[|\\{}()[\]^$+*?.-]/g;
-function escapeStringRegexp(str) {
-    // see also: https://github.com/lodash/lodash/blob/2da024c3b4f9947a48517639de7560457cd4ec6c/escapeRegExp.js#L23
-    if (reHasRegExp.test(str)) return str.replace(reReplaceRegExp, "\\$&");
-    return str;
-}
-
-},{}],"58L73":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.parseUrl = parseUrl;
-var _querystring = require("./querystring");
-var _parseRelativeUrl = require("./parse-relative-url");
-function parseUrl(url) {
-    if (url.startsWith("/")) return _parseRelativeUrl.parseRelativeUrl(url);
-    const parsedURL = new URL(url);
-    return {
-        hash: parsedURL.hash,
-        hostname: parsedURL.hostname,
-        href: parsedURL.href,
-        pathname: parsedURL.pathname,
-        port: parsedURL.port,
-        protocol: parsedURL.protocol,
-        query: _querystring.searchParamsToUrlQuery(parsedURL.searchParams),
-        search: parsedURL.search
-    };
-}
-
-},{"./querystring":"PeN2l","./parse-relative-url":"lDl7e"}],"gS7mU":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.removeBasePath = removeBasePath;
-var _hasBasePath = require("./has-base-path");
-const basePath = "";
-function removeBasePath(path) {
-    path = path.slice(basePath.length);
-    if (!path.startsWith("/")) path = `/${path}`;
-    return path;
-}
-if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
-    Object.defineProperty(exports.default, "__esModule", {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-}
-
-},{"./has-base-path":"6NT5g"}],"6NT5g":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.hasBasePath = hasBasePath;
-var _pathHasPrefix = require("../shared/lib/router/utils/path-has-prefix");
-const basePath = "";
-function hasBasePath(path) {
-    return _pathHasPrefix.pathHasPrefix(path, basePath);
-}
-if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
-    Object.defineProperty(exports.default, "__esModule", {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-}
-
-},{"../shared/lib/router/utils/path-has-prefix":"cVgm7"}],"cVgm7":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.pathHasPrefix = pathHasPrefix;
-var _parsePath = require("./parse-path");
-function pathHasPrefix(path, prefix) {
-    if (typeof path !== "string") return false;
-    const { pathname  } = _parsePath.parsePath(path);
-    return pathname === prefix || pathname.startsWith(prefix + "/");
-}
-
-},{"./parse-path":"9lS3k"}],"hBdpi":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.getRouteMatcher = getRouteMatcher;
-var _utils = require("../../utils");
-function getRouteMatcher({ re , groups  }) {
-    return (pathname)=>{
-        const routeMatch = re.exec(pathname);
-        if (!routeMatch) return false;
-        const decode = (param)=>{
-            try {
-                return decodeURIComponent(param);
-            } catch (_) {
-                throw new _utils.DecodeError("failed to decode param");
-            }
-        };
-        const params = {};
-        Object.keys(groups).forEach((slugName)=>{
-            const g = groups[slugName];
-            const m = routeMatch[g.pos];
-            if (m !== undefined) params[slugName] = ~m.indexOf("/") ? m.split("/").map((entry)=>decode(entry)) : g.repeat ? [
-                decode(m)
-            ] : decode(m);
-        });
-        return params;
-    };
-}
-
-},{"../../utils":"cHiay"}],"7W7zJ":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.getRouteRegex = getRouteRegex;
-exports.getNamedRouteRegex = getNamedRouteRegex;
-exports.getNamedMiddlewareRegex = getNamedMiddlewareRegex;
-var _extends = require("@swc/helpers/lib/_extends.js").default;
-var _escapeRegexp = require("../../escape-regexp");
-var _removeTrailingSlash = require("./remove-trailing-slash");
-/**
- * Parses a given parameter from a route to a data structure that can be used
- * to generate the parametrized route. Examples:
- *   - `[...slug]` -> `{ name: 'slug', repeat: true, optional: true }`
- *   - `[foo]` -> `{ name: 'foo', repeat: false, optional: true }`
- *   - `bar` -> `{ name: 'bar', repeat: false, optional: false }`
- */ function parseParameter(param) {
-    const optional = param.startsWith("[") && param.endsWith("]");
-    if (optional) param = param.slice(1, -1);
-    const repeat = param.startsWith("...");
-    if (repeat) param = param.slice(3);
-    return {
-        key: param,
-        repeat,
-        optional
-    };
-}
-function getParametrizedRoute(route) {
-    const segments = _removeTrailingSlash.removeTrailingSlash(route).slice(1).split("/");
-    const groups = {};
-    let groupIndex = 1;
-    return {
-        parameterizedRoute: segments.map((segment)=>{
-            if (segment.startsWith("[") && segment.endsWith("]")) {
-                const { key , optional , repeat  } = parseParameter(segment.slice(1, -1));
-                groups[key] = {
-                    pos: groupIndex++,
-                    repeat,
-                    optional
-                };
-                return repeat ? optional ? "(?:/(.+?))?" : "/(.+?)" : "/([^/]+?)";
-            } else return `/${_escapeRegexp.escapeStringRegexp(segment)}`;
-        }).join(""),
-        groups
-    };
-}
-function getRouteRegex(normalizedRoute) {
-    const { parameterizedRoute , groups  } = getParametrizedRoute(normalizedRoute);
-    return {
-        re: new RegExp(`^${parameterizedRoute}(?:/)?$`),
-        groups: groups
-    };
-}
-/**
- * Builds a function to generate a minimal routeKey using only a-z and minimal
- * number of characters.
- */ function buildGetSafeRouteKey() {
-    let routeKeyCharCode = 97;
-    let routeKeyCharLength = 1;
-    return ()=>{
-        let routeKey = "";
-        for(let i = 0; i < routeKeyCharLength; i++){
-            routeKey += String.fromCharCode(routeKeyCharCode);
-            routeKeyCharCode++;
-            if (routeKeyCharCode > 122) {
-                routeKeyCharLength++;
-                routeKeyCharCode = 97;
-            }
-        }
-        return routeKey;
-    };
-}
-function getNamedParametrizedRoute(route) {
-    const segments = _removeTrailingSlash.removeTrailingSlash(route).slice(1).split("/");
-    const getSafeRouteKey = buildGetSafeRouteKey();
-    const routeKeys = {};
-    return {
-        namedParameterizedRoute: segments.map((segment)=>{
-            if (segment.startsWith("[") && segment.endsWith("]")) {
-                const { key , optional , repeat  } = parseParameter(segment.slice(1, -1));
-                // replace any non-word characters since they can break
-                // the named regex
-                let cleanedKey = key.replace(/\W/g, "");
-                let invalidKey = false;
-                // check if the key is still invalid and fallback to using a known
-                // safe key
-                if (cleanedKey.length === 0 || cleanedKey.length > 30) invalidKey = true;
-                if (!isNaN(parseInt(cleanedKey.slice(0, 1)))) invalidKey = true;
-                if (invalidKey) cleanedKey = getSafeRouteKey();
-                routeKeys[cleanedKey] = key;
-                return repeat ? optional ? `(?:/(?<${cleanedKey}>.+?))?` : `/(?<${cleanedKey}>.+?)` : `/(?<${cleanedKey}>[^/]+?)`;
-            } else return `/${_escapeRegexp.escapeStringRegexp(segment)}`;
-        }).join(""),
-        routeKeys
-    };
-}
-function getNamedRouteRegex(normalizedRoute) {
-    const result = getNamedParametrizedRoute(normalizedRoute);
-    return _extends({}, getRouteRegex(normalizedRoute), {
-        namedRegex: `^${result.namedParameterizedRoute}(?:/)?$`,
-        routeKeys: result.routeKeys
-    });
-}
-function getNamedMiddlewareRegex(normalizedRoute, options) {
-    const { parameterizedRoute  } = getParametrizedRoute(normalizedRoute);
-    const { catchAll =true  } = options;
-    if (parameterizedRoute === "/") {
-        let catchAllRegex = catchAll ? ".*" : "";
-        return {
-            namedRegex: `^/${catchAllRegex}$`
-        };
-    }
-    const { namedParameterizedRoute  } = getNamedParametrizedRoute(normalizedRoute);
-    let catchAllGroupedRegex = catchAll ? "(?:(/.*)?)" : "";
-    return {
-        namedRegex: `^${namedParameterizedRoute}${catchAllGroupedRegex}$`
-    };
-}
-
-},{"@swc/helpers/lib/_extends.js":"4vU6g","../../escape-regexp":"g4TDV","./remove-trailing-slash":"ltEax"}],"aBY4l":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.formatUrl = formatUrl;
-exports.formatWithValidation = formatWithValidation;
-exports.urlObjectKeys = void 0;
-var _interop_require_wildcard = require("@swc/helpers/lib/_interop_require_wildcard.js").default;
-var querystring = _interop_require_wildcard(require("./querystring"));
-const slashedProtocols = /https?|ftp|gopher|file/;
-function formatUrl(urlObj) {
-    let { auth , hostname  } = urlObj;
-    let protocol = urlObj.protocol || "";
-    let pathname = urlObj.pathname || "";
-    let hash = urlObj.hash || "";
-    let query = urlObj.query || "";
-    let host = false;
-    auth = auth ? encodeURIComponent(auth).replace(/%3A/i, ":") + "@" : "";
-    if (urlObj.host) host = auth + urlObj.host;
-    else if (hostname) {
-        host = auth + (~hostname.indexOf(":") ? `[${hostname}]` : hostname);
-        if (urlObj.port) host += ":" + urlObj.port;
-    }
-    if (query && typeof query === "object") query = String(querystring.urlQueryToSearchParams(query));
-    let search = urlObj.search || query && `?${query}` || "";
-    if (protocol && !protocol.endsWith(":")) protocol += ":";
-    if (urlObj.slashes || (!protocol || slashedProtocols.test(protocol)) && host !== false) {
-        host = "//" + (host || "");
-        if (pathname && pathname[0] !== "/") pathname = "/" + pathname;
-    } else if (!host) host = "";
-    if (hash && hash[0] !== "#") hash = "#" + hash;
-    if (search && search[0] !== "?") search = "?" + search;
-    pathname = pathname.replace(/[?#]/g, encodeURIComponent);
-    search = search.replace("#", "%23");
-    return `${protocol}${host}${pathname}${search}${hash}`;
-}
-const urlObjectKeys = [
-    "auth",
-    "hash",
-    "host",
-    "hostname",
-    "href",
-    "path",
-    "pathname",
-    "port",
-    "protocol",
-    "query",
-    "search",
-    "slashes", 
-];
-exports.urlObjectKeys = urlObjectKeys;
-function formatWithValidation(url) {
-    if (url !== null && typeof url === "object") Object.keys(url).forEach((key)=>{
-        if (urlObjectKeys.indexOf(key) === -1) console.warn(`Unknown key passed via urlObject into url.format: ${key}`);
-    });
-    return formatUrl(url);
-}
-
-},{"@swc/helpers/lib/_interop_require_wildcard.js":"frrjo","./querystring":"PeN2l"}],"ld5PD":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.detectDomainLocale = void 0;
-const detectDomainLocale = (...args)=>{};
-exports.detectDomainLocale = detectDomainLocale;
-if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
-    Object.defineProperty(exports.default, "__esModule", {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-}
-
-},{}],"8fuhH":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.addLocale = void 0;
-var _normalizeTrailingSlash = require("./normalize-trailing-slash");
-const addLocale = (path, ...args)=>{
-    return path;
-};
-exports.addLocale = addLocale;
-if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
-    Object.defineProperty(exports.default, "__esModule", {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-}
-
-},{"./normalize-trailing-slash":"a5Qce"}],"d72mY":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.removeLocale = removeLocale;
-var _parsePath = require("../shared/lib/router/utils/parse-path");
-function removeLocale(path, locale) {
-    return path;
-}
-if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
-    Object.defineProperty(exports.default, "__esModule", {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-}
-
-},{"../shared/lib/router/utils/parse-path":"9lS3k"}],"7l5aF":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.addBasePath = addBasePath;
-var _addPathPrefix = require("../shared/lib/router/utils/add-path-prefix");
-var _normalizeTrailingSlash = require("./normalize-trailing-slash");
-const basePath = "";
-function addBasePath(path, required) {
-    return _normalizeTrailingSlash.normalizePathTrailingSlash(_addPathPrefix.addPathPrefix(path, basePath));
-}
-if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
-    Object.defineProperty(exports.default, "__esModule", {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-}
-
-},{"../shared/lib/router/utils/add-path-prefix":"2Cwev","./normalize-trailing-slash":"a5Qce"}],"2Cwev":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.addPathPrefix = addPathPrefix;
-var _parsePath = require("./parse-path");
-function addPathPrefix(path, prefix) {
-    if (!path.startsWith("/") || !prefix) return path;
-    const { pathname , query , hash  } = _parsePath.parsePath(path);
-    return `${prefix}${pathname}${query}${hash}`;
-}
-
-},{"./parse-path":"9lS3k"}],"24hnY":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.getNextPathnameInfo = getNextPathnameInfo;
-var _normalizeLocalePath = require("../../i18n/normalize-locale-path");
-var _removePathPrefix = require("./remove-path-prefix");
-var _pathHasPrefix = require("./path-has-prefix");
-function getNextPathnameInfo(pathname, options) {
-    var _nextConfig;
-    const { basePath , i18n , trailingSlash  } = (_nextConfig = options.nextConfig) != null ? _nextConfig : {};
-    const info = {
-        pathname: pathname,
-        trailingSlash: pathname !== "/" ? pathname.endsWith("/") : trailingSlash
-    };
-    if (basePath && _pathHasPrefix.pathHasPrefix(info.pathname, basePath)) {
-        info.pathname = _removePathPrefix.removePathPrefix(info.pathname, basePath);
-        info.basePath = basePath;
-    }
-    if (options.parseData === true && info.pathname.startsWith("/_next/data/") && info.pathname.endsWith(".json")) {
-        const paths = info.pathname.replace(/^\/_next\/data\//, "").replace(/\.json$/, "").split("/");
-        const buildId = paths[0];
-        info.pathname = paths[1] !== "index" ? `/${paths.slice(1).join("/")}` : "/";
-        info.buildId = buildId;
-    }
-    if (i18n) {
-        const pathLocale = _normalizeLocalePath.normalizeLocalePath(info.pathname, i18n.locales);
-        info.locale = pathLocale == null ? void 0 : pathLocale.detectedLocale;
-        info.pathname = (pathLocale == null ? void 0 : pathLocale.pathname) || info.pathname;
-    }
-    return info;
-}
-
-},{"../../i18n/normalize-locale-path":"iF0G9","./remove-path-prefix":"ilN2g","./path-has-prefix":"cVgm7"}],"ilN2g":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.removePathPrefix = removePathPrefix;
-var _pathHasPrefix = require("./path-has-prefix");
-function removePathPrefix(path, prefix) {
-    if (_pathHasPrefix.pathHasPrefix(path, prefix)) {
-        const withoutPrefix = path.slice(prefix.length);
-        return withoutPrefix.startsWith("/") ? withoutPrefix : `/${withoutPrefix}`;
-    }
-    return path;
-}
-
-},{"./path-has-prefix":"cVgm7"}],"b08uw":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.formatNextPathnameInfo = formatNextPathnameInfo;
-var _removeTrailingSlash = require("./remove-trailing-slash");
-var _addPathPrefix = require("./add-path-prefix");
-var _addPathSuffix = require("./add-path-suffix");
-var _addLocale = require("./add-locale");
-function formatNextPathnameInfo(info) {
-    let pathname = _addLocale.addLocale(info.pathname, info.locale, info.buildId ? undefined : info.defaultLocale, info.ignorePrefix);
-    if (info.buildId) pathname = _addPathSuffix.addPathSuffix(_addPathPrefix.addPathPrefix(pathname, `/_next/data/${info.buildId}`), info.pathname === "/" ? "index.json" : ".json");
-    pathname = _addPathPrefix.addPathPrefix(pathname, info.basePath);
-    return info.trailingSlash ? !info.buildId && !pathname.endsWith("/") ? _addPathSuffix.addPathSuffix(pathname, "/") : pathname : _removeTrailingSlash.removeTrailingSlash(pathname);
-}
-
-},{"./remove-trailing-slash":"ltEax","./add-path-prefix":"2Cwev","./add-path-suffix":"4FJ90","./add-locale":"3JUC0"}],"4FJ90":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.addPathSuffix = addPathSuffix;
-var _parsePath = require("./parse-path");
-function addPathSuffix(path, suffix) {
-    if (!path.startsWith("/") || !suffix) return path;
-    const { pathname , query , hash  } = _parsePath.parsePath(path);
-    return `${pathname}${suffix}${query}${hash}`;
-}
-
-},{"./parse-path":"9lS3k"}],"3JUC0":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.addLocale = addLocale;
-var _addPathPrefix = require("./add-path-prefix");
-var _pathHasPrefix = require("./path-has-prefix");
-function addLocale(path, locale, defaultLocale, ignorePrefix) {
-    if (locale && locale !== defaultLocale && (ignorePrefix || !_pathHasPrefix.pathHasPrefix(path.toLowerCase(), `/${locale.toLowerCase()}`) && !_pathHasPrefix.pathHasPrefix(path.toLowerCase(), "/api"))) return _addPathPrefix.addPathPrefix(path, `/${locale}`);
-    return path;
-}
-
-},{"./add-path-prefix":"2Cwev","./path-has-prefix":"cVgm7"}],"i3HBc":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.compareRouterStates = compareRouterStates;
-function compareRouterStates(a, b) {
-    const stateKeys = Object.keys(a);
-    if (stateKeys.length !== Object.keys(b).length) return false;
-    for(let i = stateKeys.length; i--;){
-        const key = stateKeys[i];
-        if (key === "query") {
-            const queryKeys = Object.keys(a.query);
-            if (queryKeys.length !== Object.keys(b.query).length) return false;
-            for(let j = queryKeys.length; j--;){
-                const queryKey = queryKeys[j];
-                if (!b.query.hasOwnProperty(queryKey) || a.query[queryKey] !== b.query[queryKey]) return false;
-            }
-        } else if (!b.hasOwnProperty(key) || a[key] !== b[key]) return false;
-    }
-    return true;
-}
-
-},{}],"eGU1s":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.isBot = isBot;
-function isBot(userAgent) {
-    return /Googlebot|Mediapartners-Google|AdsBot-Google|googleweblight|Storebot-Google|Google-PageRenderer|Bingbot|BingPreview|Slurp|DuckDuckBot|baiduspider|yandex|sogou|LinkedInBot|bitlybot|tumblr|vkShare|quora link preview|facebookexternalhit|facebookcatalog|Twitterbot|applebot|redditbot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|ia_archiver/i.test(userAgent);
-}
-
-},{}],"8mz76":[function(require,module,exports) {
-"use strict";
-module.exports = require("./cjs/react-is.development.js");
-
-},{"./cjs/react-is.development.js":"l40OM"}],"l40OM":[function(require,module,exports) {
-/** @license React v17.0.2
- * react-is.development.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ "use strict";
-(function() {
-    "use strict";
-    // ATTENTION
-    // When adding new symbols to this file,
-    // Please consider also adding to 'react-devtools-shared/src/backend/ReactSymbols'
-    // The Symbol used to tag the ReactElement-like types. If there is no native Symbol
-    // nor polyfill, then a plain number is used for performance.
-    var REACT_ELEMENT_TYPE = 0xeac7;
-    var REACT_PORTAL_TYPE = 0xeaca;
-    var REACT_FRAGMENT_TYPE = 0xeacb;
-    var REACT_STRICT_MODE_TYPE = 0xeacc;
-    var REACT_PROFILER_TYPE = 0xead2;
-    var REACT_PROVIDER_TYPE = 0xeacd;
-    var REACT_CONTEXT_TYPE = 0xeace;
-    var REACT_FORWARD_REF_TYPE = 0xead0;
-    var REACT_SUSPENSE_TYPE = 0xead1;
-    var REACT_SUSPENSE_LIST_TYPE = 0xead8;
-    var REACT_MEMO_TYPE = 0xead3;
-    var REACT_LAZY_TYPE = 0xead4;
-    var REACT_BLOCK_TYPE = 0xead9;
-    var REACT_SERVER_BLOCK_TYPE = 0xeada;
-    var REACT_FUNDAMENTAL_TYPE = 0xead5;
-    var REACT_SCOPE_TYPE = 0xead7;
-    var REACT_OPAQUE_ID_TYPE = 0xeae0;
-    var REACT_DEBUG_TRACING_MODE_TYPE = 0xeae1;
-    var REACT_OFFSCREEN_TYPE = 0xeae2;
-    var REACT_LEGACY_HIDDEN_TYPE = 0xeae3;
-    if (typeof Symbol === "function" && Symbol.for) {
-        var symbolFor = Symbol.for;
-        REACT_ELEMENT_TYPE = symbolFor("react.element");
-        REACT_PORTAL_TYPE = symbolFor("react.portal");
-        REACT_FRAGMENT_TYPE = symbolFor("react.fragment");
-        REACT_STRICT_MODE_TYPE = symbolFor("react.strict_mode");
-        REACT_PROFILER_TYPE = symbolFor("react.profiler");
-        REACT_PROVIDER_TYPE = symbolFor("react.provider");
-        REACT_CONTEXT_TYPE = symbolFor("react.context");
-        REACT_FORWARD_REF_TYPE = symbolFor("react.forward_ref");
-        REACT_SUSPENSE_TYPE = symbolFor("react.suspense");
-        REACT_SUSPENSE_LIST_TYPE = symbolFor("react.suspense_list");
-        REACT_MEMO_TYPE = symbolFor("react.memo");
-        REACT_LAZY_TYPE = symbolFor("react.lazy");
-        REACT_BLOCK_TYPE = symbolFor("react.block");
-        REACT_SERVER_BLOCK_TYPE = symbolFor("react.server.block");
-        REACT_FUNDAMENTAL_TYPE = symbolFor("react.fundamental");
-        REACT_SCOPE_TYPE = symbolFor("react.scope");
-        REACT_OPAQUE_ID_TYPE = symbolFor("react.opaque.id");
-        REACT_DEBUG_TRACING_MODE_TYPE = symbolFor("react.debug_trace_mode");
-        REACT_OFFSCREEN_TYPE = symbolFor("react.offscreen");
-        REACT_LEGACY_HIDDEN_TYPE = symbolFor("react.legacy_hidden");
-    }
-    // Filter certain DOM attributes (e.g. src, href) if their values are empty strings.
-    var enableScopeAPI = false; // Experimental Create Event Handle API.
-    function isValidElementType(type) {
-        if (typeof type === "string" || typeof type === "function") return true;
-         // Note: typeof might be other than 'symbol' or 'number' (e.g. if it's a polyfill).
-        if (type === REACT_FRAGMENT_TYPE || type === REACT_PROFILER_TYPE || type === REACT_DEBUG_TRACING_MODE_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || type === REACT_LEGACY_HIDDEN_TYPE || enableScopeAPI) return true;
-        if (typeof type === "object" && type !== null) {
-            if (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_BLOCK_TYPE || type[0] === REACT_SERVER_BLOCK_TYPE) return true;
-        }
-        return false;
-    }
-    function typeOf(object) {
-        if (typeof object === "object" && object !== null) {
-            var $$typeof = object.$$typeof;
-            switch($$typeof){
-                case REACT_ELEMENT_TYPE:
-                    var type = object.type;
-                    switch(type){
-                        case REACT_FRAGMENT_TYPE:
-                        case REACT_PROFILER_TYPE:
-                        case REACT_STRICT_MODE_TYPE:
-                        case REACT_SUSPENSE_TYPE:
-                        case REACT_SUSPENSE_LIST_TYPE:
-                            return type;
-                        default:
-                            var $$typeofType = type && type.$$typeof;
-                            switch($$typeofType){
-                                case REACT_CONTEXT_TYPE:
-                                case REACT_FORWARD_REF_TYPE:
-                                case REACT_LAZY_TYPE:
-                                case REACT_MEMO_TYPE:
-                                case REACT_PROVIDER_TYPE:
-                                    return $$typeofType;
-                                default:
-                                    return $$typeof;
-                            }
-                    }
-                case REACT_PORTAL_TYPE:
-                    return $$typeof;
-            }
-        }
-        return undefined;
-    }
-    var ContextConsumer = REACT_CONTEXT_TYPE;
-    var ContextProvider = REACT_PROVIDER_TYPE;
-    var Element = REACT_ELEMENT_TYPE;
-    var ForwardRef = REACT_FORWARD_REF_TYPE;
-    var Fragment = REACT_FRAGMENT_TYPE;
-    var Lazy = REACT_LAZY_TYPE;
-    var Memo = REACT_MEMO_TYPE;
-    var Portal = REACT_PORTAL_TYPE;
-    var Profiler = REACT_PROFILER_TYPE;
-    var StrictMode = REACT_STRICT_MODE_TYPE;
-    var Suspense = REACT_SUSPENSE_TYPE;
-    var hasWarnedAboutDeprecatedIsAsyncMode = false;
-    var hasWarnedAboutDeprecatedIsConcurrentMode = false; // AsyncMode should be deprecated
-    function isAsyncMode(object) {
-        if (!hasWarnedAboutDeprecatedIsAsyncMode) {
-            hasWarnedAboutDeprecatedIsAsyncMode = true; // Using console['warn'] to evade Babel and ESLint
-            console["warn"]("The ReactIs.isAsyncMode() alias has been deprecated, and will be removed in React 18+.");
-        }
-        return false;
-    }
-    function isConcurrentMode(object) {
-        if (!hasWarnedAboutDeprecatedIsConcurrentMode) {
-            hasWarnedAboutDeprecatedIsConcurrentMode = true; // Using console['warn'] to evade Babel and ESLint
-            console["warn"]("The ReactIs.isConcurrentMode() alias has been deprecated, and will be removed in React 18+.");
-        }
-        return false;
-    }
-    function isContextConsumer(object) {
-        return typeOf(object) === REACT_CONTEXT_TYPE;
-    }
-    function isContextProvider(object) {
-        return typeOf(object) === REACT_PROVIDER_TYPE;
-    }
-    function isElement(object) {
-        return typeof object === "object" && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
-    }
-    function isForwardRef(object) {
-        return typeOf(object) === REACT_FORWARD_REF_TYPE;
-    }
-    function isFragment(object) {
-        return typeOf(object) === REACT_FRAGMENT_TYPE;
-    }
-    function isLazy(object) {
-        return typeOf(object) === REACT_LAZY_TYPE;
-    }
-    function isMemo(object) {
-        return typeOf(object) === REACT_MEMO_TYPE;
-    }
-    function isPortal(object) {
-        return typeOf(object) === REACT_PORTAL_TYPE;
-    }
-    function isProfiler(object) {
-        return typeOf(object) === REACT_PROFILER_TYPE;
-    }
-    function isStrictMode(object) {
-        return typeOf(object) === REACT_STRICT_MODE_TYPE;
-    }
-    function isSuspense(object) {
-        return typeOf(object) === REACT_SUSPENSE_TYPE;
-    }
-    exports.ContextConsumer = ContextConsumer;
-    exports.ContextProvider = ContextProvider;
-    exports.Element = Element;
-    exports.ForwardRef = ForwardRef;
-    exports.Fragment = Fragment;
-    exports.Lazy = Lazy;
-    exports.Memo = Memo;
-    exports.Portal = Portal;
-    exports.Profiler = Profiler;
-    exports.StrictMode = StrictMode;
-    exports.Suspense = Suspense;
-    exports.isAsyncMode = isAsyncMode;
-    exports.isConcurrentMode = isConcurrentMode;
-    exports.isContextConsumer = isContextConsumer;
-    exports.isContextProvider = isContextProvider;
-    exports.isElement = isElement;
-    exports.isForwardRef = isForwardRef;
-    exports.isFragment = isFragment;
-    exports.isLazy = isLazy;
-    exports.isMemo = isMemo;
-    exports.isPortal = isPortal;
-    exports.isProfiler = isProfiler;
-    exports.isStrictMode = isStrictMode;
-    exports.isSuspense = isSuspense;
-    exports.isValidElementType = isValidElementType;
-    exports.typeOf = typeOf;
-})();
-
-},{}],"iJTGy":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.RouterContext = void 0;
-var _interop_require_default = require("@swc/helpers/lib/_interop_require_default.js").default;
-var _react = _interop_require_default(require("react"));
-const RouterContext = _react.default.createContext(null);
-exports.RouterContext = RouterContext;
-RouterContext.displayName = "RouterContext";
-
-},{"@swc/helpers/lib/_interop_require_default.js":"k1iFV","react":"21dqq"}],"1z2O4":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = withRouter;
-var _interop_require_default = require("@swc/helpers/lib/_interop_require_default.js").default;
-var _react = _interop_require_default(require("react"));
-var _router = require("./router");
-function withRouter(ComposedComponent) {
-    function WithRouterWrapper(props) {
-        return /*#__PURE__*/ _react.default.createElement(ComposedComponent, Object.assign({
-            router: _router.useRouter()
-        }, props));
-    }
-    WithRouterWrapper.getInitialProps = ComposedComponent.getInitialProps;
-    WithRouterWrapper.origGetInitialProps = ComposedComponent.origGetInitialProps;
-    {
-        const name = ComposedComponent.displayName || ComposedComponent.name || "Unknown";
-        WithRouterWrapper.displayName = `withRouter(${name})`;
-    }
-    return WithRouterWrapper;
-}
-if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
-    Object.defineProperty(exports.default, "__esModule", {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-}
-
-},{"@swc/helpers/lib/_interop_require_default.js":"k1iFV","react":"21dqq","./router":"9DVWS"}],"iclCk":[function(require,module,exports) {
+},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iclCk":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Input", ()=>(0, _inputDefault.default));
@@ -46435,9 +46513,7 @@ var _phosphorReact = require("phosphor-react");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _usehooksTs = require("usehooks-ts");
-var _badge = require("../Badge");
-var _button = require("../Button");
-var _loading = require("../Loading");
+var _index = require("../../index");
 var _inputStyles = require("./Input.styles");
 var _s = $RefreshSig$();
 function Input(props) {
@@ -46461,6 +46537,7 @@ function Input(props) {
     function handleReveal() {
         setIsRevealed(!isRevealed);
     }
+    // event listener
     (0, _usehooksTs.useEventListener)("keydown", (e)=>{
         if (props.listen && e.key === "Enter" && props.submitFunction && props.submitValid) props.submitFunction();
     });
@@ -46485,17 +46562,17 @@ function Input(props) {
                         value: value
                     }, void 0, false, {
                         fileName: "src/components/Input/Input.tsx",
-                        lineNumber: 90,
+                        lineNumber: 89,
                         columnNumber: 9
                     }, this),
                     (props.loading || props.submit || props.copy || props.reveal) && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputStyles.InputFunctionStyled), {
                         children: [
-                            props.loading && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loading.Loading), {}, void 0, false, {
+                            props.loading && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Loading), {}, void 0, false, {
                                 fileName: "src/components/Input/Input.tsx",
-                                lineNumber: 101,
+                                lineNumber: 100,
                                 columnNumber: 31
                             }, this),
-                            props.copy && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
+                            props.copy && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
                                 ariaLabel: "Copy",
                                 css: {
                                     marginLeft: "$2"
@@ -46512,10 +46589,10 @@ function Input(props) {
                                 children: "Copy"
                             }, void 0, false, {
                                 fileName: "src/components/Input/Input.tsx",
-                                lineNumber: 103,
+                                lineNumber: 102,
                                 columnNumber: 15
                             }, this),
-                            props.reveal && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
+                            props.reveal && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
                                 ariaLabel: "Reveal",
                                 css: {
                                     marginLeft: "$2"
@@ -46531,10 +46608,10 @@ function Input(props) {
                                 children: isRevealed ? "Hide" : "Show"
                             }, void 0, false, {
                                 fileName: "src/components/Input/Input.tsx",
-                                lineNumber: 122,
+                                lineNumber: 121,
                                 columnNumber: 15
                             }, this),
-                            props.submit && props.submitFunction && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
+                            props.submit && props.submitFunction && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
                                 ariaLabel: "Submit",
                                 css: {
                                     marginLeft: "$2"
@@ -46546,24 +46623,24 @@ function Input(props) {
                                 children: props.submit
                             }, void 0, false, {
                                 fileName: "src/components/Input/Input.tsx",
-                                lineNumber: 138,
+                                lineNumber: 137,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Input/Input.tsx",
-                        lineNumber: 100,
+                        lineNumber: 99,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Input/Input.tsx",
-                lineNumber: 79,
+                lineNumber: 78,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputStyles.InputCallbackStyled), {
                 children: [
-                    props.error && !props.success && !props.warning && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badge.Badge), {
+                    props.error && !props.success && !props.warning && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
                         css: {
                             backgroundColor: "transparent",
                             fontSize: "$p !important",
@@ -46576,10 +46653,10 @@ function Input(props) {
                         children: props.errorMessage || "Error"
                     }, void 0, false, {
                         fileName: "src/components/Input/Input.tsx",
-                        lineNumber: 155,
+                        lineNumber: 154,
                         columnNumber: 11
                     }, this),
-                    props.success && !props.error && !props.warning && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badge.Badge), {
+                    props.success && !props.error && !props.warning && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
                         css: {
                             backgroundColor: "transparent",
                             fontSize: "$p !important",
@@ -46592,10 +46669,10 @@ function Input(props) {
                         children: props.successMessage || "Success"
                     }, void 0, false, {
                         fileName: "src/components/Input/Input.tsx",
-                        lineNumber: 167,
+                        lineNumber: 166,
                         columnNumber: 11
                     }, this),
-                    props.warning && !props.success && !props.error && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badge.Badge), {
+                    props.warning && !props.success && !props.error && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
                         css: {
                             backgroundColor: "transparent",
                             fontSize: "$p !important",
@@ -46608,19 +46685,19 @@ function Input(props) {
                         children: props.warningMessage || "Invalid"
                     }, void 0, false, {
                         fileName: "src/components/Input/Input.tsx",
-                        lineNumber: 179,
+                        lineNumber: 178,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Input/Input.tsx",
-                lineNumber: 153,
+                lineNumber: 152,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Input/Input.tsx",
-        lineNumber: 73,
+        lineNumber: 72,
         columnNumber: 5
     }, this);
 }
@@ -46639,7 +46716,7 @@ $RefreshReg$(_c, "Input");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","usehooks-ts":"dmUe4","../Badge":"egHOx","../Button":"i3jlU","../Loading":"gWqOi","./Input.styles":"crIMc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"crIMc":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","usehooks-ts":"dmUe4","../../index":"4aBH6","./Input.styles":"crIMc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"crIMc":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "InputStyled", ()=>InputStyled);
@@ -46730,530 +46807,97 @@ const InputCallbackStyled = (0, _stitchesConfig.styled)("div", {
 });
 exports.default = InputStyled;
 
-},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6V7Vx":[function(require,module,exports) {
+},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gWqOi":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Stack", ()=>(0, _stackDefault.default));
-var _stack = require("./Stack");
-var _stackDefault = parcelHelpers.interopDefault(_stack);
+parcelHelpers.export(exports, "Loading", ()=>(0, _loadingDefault.default));
+var _loading = require("./Loading");
+var _loadingDefault = parcelHelpers.interopDefault(_loading);
 
-},{"./Stack":"fzqaU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fzqaU":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$48e7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"./Loading":"ecYkh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ecYkh":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$98b5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$48e7.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Element", ()=>Element);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _stitchesConfig = require("../../stitches.config");
-var _stackStyles = require("./Stack.styles");
-function Stack(props) {
-    return props.direction === "row" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stackStyles.StackRowStyled), {
-        css: {
-            ...props.css,
-            "*": {
-                alignItems: props.flex || "initial"
-            },
-            "alignItems": props.flex || "initial",
-            ...props.top && {
-                paddingTop: `$${props.top}`,
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`
-                }
-            },
-            ...props.bottom && {
-                paddingBottom: `$${props.bottom}`,
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`
-                }
-            }
-        },
-        id: props.id,
-        children: props.children
-    }, void 0, false, {
-        fileName: "src/components/Stack/Stack.tsx",
-        lineNumber: 39,
-        columnNumber: 5
-    }, this) : props.direction === "column" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stackStyles.StackColumnStyled), {
-        css: {
-            ...props.top && {
-                paddingTop: `$${props.top}`,
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`
-                }
-            },
-            ...props.bottom && {
-                paddingBottom: `$${props.bottom}`,
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`
-                }
-            },
-            ...props.minimal && {
-                paddingLeft: "0!important",
-                paddingRight: "0!important"
-            },
-            textAlign: props.align,
-            [(0, _stitchesConfig.breakpoints).phone]: {
-                flex: props.widthPhone ? `0 0 ${props.widthPhone}%` : `0 0 100%`,
-                marginLeft: props.offsetPhone ? `${props.offsetPhone}%` : 0,
-                width: props.widthPhone ? `${props.widthPhone}%` : `100%`
-            },
-            [(0, _stitchesConfig.breakpoints).tabletX]: {
-                flex: props.widthTablet ? `0 0 ${props.widthTablet}%` : `0 0 ${props.width}%`,
-                marginLeft: props.offsetTablet ? `${props.offsetTablet}%` : `${props.offset}%`,
-                width: props.widthTablet ? `${props.widthTablet}%` : `${props.width}%`
-            },
-            [(0, _stitchesConfig.breakpoints).laptopX]: {
-                flex: props.widthLaptop ? `0 0 ${props.widthLaptop}%` : `0 0 ${props.width}%`,
-                marginLeft: props.offsetLaptop ? `${props.offsetLaptop}%` : `${props.offset}%`,
-                width: props.widthLaptop ? `${props.widthLaptop}%` : `${props.width}%`
-            },
-            [(0, _stitchesConfig.breakpoints).desktopX]: {
-                flex: props.widthDesktop ? `0 0 ${props.widthDesktop}%` : `0 0 ${props.width}%`,
-                marginLeft: props.offsetDesktop ? `${props.offsetDesktop}%` : `${props.offset}%`,
-                width: props.widthDesktop ? `${props.widthDesktop}%` : `${props.width}%`
-            },
-            [(0, _stitchesConfig.breakpoints).wide]: {
-                flex: props.widthWide ? `0 0 ${props.widthWide}%` : `0 0 ${props.width}%`,
-                marginLeft: props.offsetWide ? `${props.offsetWide}%` : `${props.offset}%`,
-                width: props.widthWide ? `${props.widthWide}%` : `${props.width}%`
-            },
-            ...props.css
-        },
-        id: props.id,
-        children: props.children
-    }, void 0, false, {
-        fileName: "src/components/Stack/Stack.tsx",
-        lineNumber: 81,
-        columnNumber: 5
-    }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stackStyles.StackElementStyled), {
-        css: {
-            ...props.css,
-            textAlign: props.align,
-            ...props.top && {
-                paddingTop: `$${props.top}`,
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`
-                }
-            },
-            ...props.bottom && {
-                paddingBottom: `$${props.bottom}`,
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`
-                }
-            }
-        },
-        flexduo: props.flexduo,
-        id: props.id,
-        children: props.children
-    }, void 0, false, {
-        fileName: "src/components/Stack/Stack.tsx",
-        lineNumber: 152,
-        columnNumber: 5
-    }, this);
-}
-exports.default = Stack;
-_c = Stack;
-const Element = Stack;
-var _c;
-$RefreshReg$(_c, "Stack");
-
-  $parcel$ReactRefreshHelpers$48e7.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../stitches.config":"iMNz3","./Stack.styles":"77zow","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"77zow":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "StackRowStyled", ()=>StackRowStyled);
-parcelHelpers.export(exports, "StackColumnStyled", ()=>StackColumnStyled);
-parcelHelpers.export(exports, "StackElementStyled", ()=>StackElementStyled);
-var _stitchesConfig = require("../../stitches.config");
-const StackRowStyled = (0, _stitchesConfig.styled)("div", {
-    "*": {
-        boxSizing: "border-box"
-    },
-    "display": "flex",
-    "flexDirection": "row",
-    "flexFlow": "row wrap",
-    "maxWidth": "100%",
-    "minWidth": "100%",
-    "width": "100%"
-});
-const StackColumnStyled = (0, _stitchesConfig.styled)("div", {
-    flex: "1 1 auto",
-    maxWidth: "100%",
-    paddingLeft: "$4",
-    paddingRight: "$4",
-    width: "100%",
-    [(0, _stitchesConfig.breakpoints).tablet]: {
-        paddingLeft: "$3",
-        paddingRight: "$3"
-    }
-});
-const StackElementStyled = (0, _stitchesConfig.styled)("div", {
-    marginBlockEnd: 0,
-    marginBlockStart: 0,
-    variants: {
-        flexduo: {
-            true: {
-                "*": {
-                    alignSelf: "center",
-                    marginBottom: "0 !important",
-                    marginTOp: "0 !important",
-                    verticalAlign: "middle"
-                },
-                "alignItems": "center",
-                "display": "flex",
-                "justifyContent": "space-between",
-                "verticalAlign": "middle"
-            }
-        }
-    }
-});
-exports.default = StackElementStyled;
-
-},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"d5OVu":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Text", ()=>(0, _textDefault.default));
-var _text = require("./Text");
-var _textDefault = parcelHelpers.interopDefault(_text);
-
-},{"./Text":"97kA1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"97kA1":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$7646 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7646.prelude(module);
+$parcel$ReactRefreshHelpers$98b5.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
+// import React from 'react';
 var _stitchesConfig = require("../../stitches.config");
-var _textStyles = require("./Text.styles");
-function Text(props) {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _textStyles.TextStyled), {
-        accent: props.accent,
-        as: props.as,
-        bold: props.bold,
-        css: {
-            ...props.css,
-            ...props.top && {
-                paddingTop: `$${props.top}`,
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    marginTop: props.top ? "0 !important" : "inherit",
-                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    marginTop: props.top ? "0 !important" : "inherit",
-                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`
-                }
-            },
-            ...props.bottom && {
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    marginBottom: props.bottom ? "0 !important" : "inherit",
-                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    marginBottom: props.bottom ? "0 !important" : "inherit",
-                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`
-                },
-                paddingBottom: `$${props.bottom}`
-            },
-            ...props.inline && {
-                alignSelf: "center",
-                display: "inline-flex",
-                marginBottom: "0 !important",
-                marginRight: props.inline === "auto" ? "auto" : `$${props.inline}`,
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    marginRight: props.inline === "auto" ? "auto" : `calc($${props.inline} * 0.8)`
-                }
-            },
-            ...props.link && {
-                "&:hover": {
-                    color: "$accent",
-                    opacity: 0.7
-                },
-                "borderBottom": props.link === "borderHover" ? "0.1rem solid $borderHover" : props.link === "border" ? "0.1rem solid $border" : "none",
-                "transition": "$default"
-            }
-        },
-        size: props.as,
-        children: props.children
+function Loading({ stroke =(0, _stitchesConfig.theme).colors.text.toString() , width =16  }) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+        height: width,
+        stroke: stroke,
+        viewBox: "0 0 38 38",
+        width: width,
+        xmlns: "http://www.w3.org/2000/svg",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
+            fill: "none",
+            fillRule: "nonzero",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
+                strokeWidth: "2",
+                transform: "translate(1 1)",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("circle", {
+                        cx: "18",
+                        cy: "18",
+                        r: "18",
+                        strokeOpacity: ".3"
+                    }, void 0, false, {
+                        fileName: "src/components/Loading/Loading.tsx",
+                        lineNumber: 23,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                        d: "M36 18c0-9.94-8.06-18-18-18",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("animateTransform", {
+                            attributeName: "transform",
+                            begin: "0s",
+                            dur: "0.8s",
+                            from: "0 18 18",
+                            repeatCount: "indefinite",
+                            to: "360 18 18",
+                            type: "rotate"
+                        }, void 0, false, {
+                            fileName: "src/components/Loading/Loading.tsx",
+                            lineNumber: 25,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/components/Loading/Loading.tsx",
+                        lineNumber: 24,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Loading/Loading.tsx",
+                lineNumber: 22,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "src/components/Loading/Loading.tsx",
+            lineNumber: 21,
+            columnNumber: 7
+        }, this)
     }, void 0, false, {
-        fileName: "src/components/Text/Text.tsx",
-        lineNumber: 20,
+        fileName: "src/components/Loading/Loading.tsx",
+        lineNumber: 15,
         columnNumber: 5
     }, this);
 }
-exports.default = Text;
-_c = Text;
+exports.default = Loading;
+_c = Loading;
 var _c;
-$RefreshReg$(_c, "Text");
+$RefreshReg$(_c, "Loading");
 
-  $parcel$ReactRefreshHelpers$7646.postlude(module);
+  $parcel$ReactRefreshHelpers$98b5.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../stitches.config":"iMNz3","./Text.styles":"2hqo9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2hqo9":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "TextStyled", ()=>TextStyled);
-var _stitchesConfig = require("../../stitches.config");
-const TextStyled = (0, _stitchesConfig.styled)("div", {
-    "&:last-child": {
-        marginBottom: `${0}!important`
-    },
-    "color": "inherit",
-    "display": "block",
-    "lineHeight": "normal !important",
-    "variants": {
-        accent: {
-            true: {
-                color: "$accent"
-            }
-        },
-        bold: {
-            true: {
-                fontWeight: "bold !important"
-            }
-        },
-        size: {
-            h1: {
-                "&:not(:last-child)": {
-                    marginBottom: "$5"
-                },
-                "fontFamily": "$serif",
-                "fontSize": "$h1",
-                "fontWeight": "$h1",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h1 * 0.9)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h1 * 0.95)"
-                }
-            },
-            h2: {
-                "&:not(:last-child)": {
-                    marginBottom: "$5"
-                },
-                "fontFamily": "$serif",
-                "fontSize": "$h2",
-                "fontWeight": "$h2",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h2 * 0.9)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h2 * 0.95)"
-                }
-            },
-            h3: {
-                "&:not(:last-child)": {
-                    marginBottom: "$5"
-                },
-                "fontFamily": "$serif",
-                "fontSize": "$h3",
-                "fontWeight": "$h3",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h3 * 0.9)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h3 * 0.95)"
-                }
-            },
-            h4: {
-                "&:not(:last-child)": {
-                    marginBottom: "$4"
-                },
-                "fontSize": "$h4",
-                "fontWeight": "$h4",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h4 * 0.9)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h4 * 0.95)"
-                }
-            },
-            h5: {
-                "&:not(:last-child)": {
-                    marginBottom: "$4"
-                },
-                "fontSize": "$h5",
-                "fontWeight": "$h5",
-                "lineHeight": "1.35 !important",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h5 * 0.925)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h5 * 0.95)"
-                }
-            },
-            h6: {
-                "&:not(:last-child)": {
-                    marginBottom: "$4"
-                },
-                "fontSize": "$h6",
-                "fontWeight": "$h6",
-                "lineHeight": "1.35 !important",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($h6 * 0.925)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($h6 * 0.95)"
-                }
-            },
-            p: {
-                "&:not(:last-child)": {
-                    marginBottom: "$4"
-                },
-                "fontSize": "$p",
-                "fontWeight": "$p",
-                "lineHeight": "1.3 !important",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($p * 0.925)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($p * 0.95)"
-                }
-            },
-            small: {
-                "&:not(:last-child)": {
-                    marginBottom: "$4"
-                },
-                "fontSize": "$small",
-                "fontWeight": "$small",
-                "lineHeight": "1.3 !important",
-                [(0, _stitchesConfig.breakpoints).phone]: {
-                    fontSize: "calc($small * 0.925)"
-                },
-                [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    fontSize: "calc($small * 0.95)"
-                }
-            },
-            span: {
-                fontSize: "inherit",
-                fontWeight: "inherit"
-            }
-        }
-    }
-});
-exports.default = TextStyled;
-
-},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jxb92":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "DropdownStyled", ()=>DropdownStyled);
-parcelHelpers.export(exports, "DropdownTriggerStyled", ()=>DropdownTriggerStyled);
-parcelHelpers.export(exports, "DropdownGroupStyled", ()=>DropdownGroupStyled);
-parcelHelpers.export(exports, "DropdownItemStyled", ()=>DropdownItemStyled);
-var _stitchesConfig = require("../../stitches.config");
-const DropdownStyled = (0, _stitchesConfig.styled)("div", {
-    display: "inline-block",
-    position: "relative",
-    verticalAlign: "middle"
-});
-const DropdownTriggerStyled = (0, _stitchesConfig.styled)("div", {
-    "*": {
-        cursor: "pointer"
-    },
-    "display": "inline-flex",
-    "position": "relative",
-    "verticalAlign": "middle"
-});
-const DropdownGroupStyled = (0, _stitchesConfig.styled)("div", {
-    backgroundColor: "$background",
-    border: "0.1rem solid $border",
-    borderRadius: "$1",
-    boxShadow: "$3",
-    lineBreak: "auto",
-    marginTop: "5%",
-    overflowY: "auto",
-    padding: "calc($2 / 1.5)",
-    position: "absolute",
-    textAlign: "left !important",
-    transition: "$default",
-    variants: {
-        animation: {
-            false: {
-                animation: `${(0, _stitchesConfig.fadeOut)} .2s`,
-                animationFillMode: "forwards"
-            },
-            true: {
-                animation: `${(0, _stitchesConfig.fadeIn)} .2s`,
-                animationFillMode: "forwards"
-            }
-        }
-    },
-    width: "100%",
-    zIndex: "$dropdown"
-});
-const DropdownItemStyled = (0, _stitchesConfig.styled)("div", {
-    "&.active": {
-        "&:hover": {
-            backgroundColor: "$defaultHover"
-        }
-    },
-    "&:hover": {
-        backgroundColor: "$default",
-        borderBottomColor: "transparent",
-        borderRadius: "$1"
-    },
-    "&:last-child": {
-        borderBottom: 0
-    },
-    "borderRadius": 0,
-    "cursor": "pointer",
-    "display": "flex",
-    "fontSize": "$h6",
-    "lineHeight": "normal !important",
-    "transition": "$default",
-    "variants": {
-        submenu: {
-            false: {
-                padding: "$2 $3"
-            },
-            true: {
-                a: {
-                    display: "block",
-                    padding: "$3",
-                    width: "100%"
-                },
-                padding: 0
-            }
-        }
-    }
-});
-exports.default = DropdownStyled;
-
-},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ayKiy":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ayKiy":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Popover", ()=>(0, _popoverDefault.default));
@@ -47270,8 +46914,8 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+// import React from 'react';
 var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
 var _usehooksTs = require("usehooks-ts");
 var _popoverStyles = require("./Popover.styles");
 var _s = $RefreshSig$();
@@ -47307,7 +46951,8 @@ function Popover(props) {
     function handleMouseLeave() {
         if (props.type === "hover") handleClose();
     }
-    (0, _usehooksTs.useOnClickOutside)(ref, props.trigger !== "hover" && handleClose);
+    (0, _usehooksTs.useOnClickOutside)(ref, // eslint-disable-next-line @typescript-eslint/no-empty-function
+    props.trigger !== "hover" ? ()=>handleClose() : ()=>{});
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _popoverStyles.PopoverStyled), {
         id: props.id,
         children: [
@@ -47318,7 +46963,7 @@ function Popover(props) {
                 children: props.trigger
             }, void 0, false, {
                 fileName: "src/components/Popover/Popover.tsx",
-                lineNumber: 69,
+                lineNumber: 74,
                 columnNumber: 7
             }, this),
             isMounted && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _popoverStyles.PopoverContentStyled), {
@@ -47335,13 +46980,13 @@ function Popover(props) {
                 children: props.children
             }, void 0, false, {
                 fileName: "src/components/Popover/Popover.tsx",
-                lineNumber: 76,
+                lineNumber: 81,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Popover/Popover.tsx",
-        lineNumber: 68,
+        lineNumber: 73,
         columnNumber: 5
     }, this);
 }
@@ -47416,7 +47061,7 @@ exports.default = PopoverStyled;
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Provider", ()=>(0, _providerDefault.default));
-parcelHelpers.export(exports, "ThemeProvider", ()=>(0, _provider.ThemeProvider));
+parcelHelpers.export(exports, "CosmoProvider", ()=>(0, _provider.CosmoProvider));
 parcelHelpers.export(exports, "ProviderToggle", ()=>(0, _provider.ProviderToggle));
 var _provider = require("./Provider");
 var _providerDefault = parcelHelpers.interopDefault(_provider);
@@ -47430,16 +47075,16 @@ $parcel$ReactRefreshHelpers$3518.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "ThemeProvider", ()=>ThemeProvider);
+parcelHelpers.export(exports, "CosmoProvider", ()=>CosmoProvider);
 parcelHelpers.export(exports, "ProviderToggle", ()=>ProviderToggle);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+// import React from 'react';
 var _phosphorReact = require("phosphor-react");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
 var _usehooksTs = require("usehooks-ts");
 var _stitchesConfig = require("../../stitches.config");
-var _toast = require("../Toast");
 var _providerStyles = require("./Provider.styles");
+var _toast = require("./Toast/Toast");
+var _toastDefault = parcelHelpers.interopDefault(_toast);
 var _s = $RefreshSig$(), _s1 = $RefreshSig$();
 function Provider(props) {
     _s();
@@ -47457,21 +47102,21 @@ function Provider(props) {
                 weight: "duotone"
             },
             children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toast.Toast), {}, void 0, false, {
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toastDefault.default), {}, void 0, false, {
                     fileName: "src/components/Provider/Provider.tsx",
-                    lineNumber: 31,
+                    lineNumber: 32,
                     columnNumber: 9
                 }, this),
                 props.children
             ]
         }, void 0, true, {
             fileName: "src/components/Provider/Provider.tsx",
-            lineNumber: 30,
+            lineNumber: 31,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/components/Provider/Provider.tsx",
-        lineNumber: 29,
+        lineNumber: 30,
         columnNumber: 5
     }, this);
 }
@@ -47482,7 +47127,7 @@ _s(Provider, "lAL/w3sRTeO/2QB/mttQhSQs2QI=", false, function() {
     ];
 });
 _c = Provider;
-const ThemeProvider = Provider;
+const CosmoProvider = Provider;
 function ProviderToggle(props) {
     _s1();
     const { isDarkMode , toggle  } = (0, _usehooksTs.useDarkMode)(false);
@@ -47492,7 +47137,7 @@ function ProviderToggle(props) {
         children: isDarkMode ? props.triggerActive || props.trigger : props.trigger
     }, void 0, false, {
         fileName: "src/components/Provider/Provider.tsx",
-        lineNumber: 44,
+        lineNumber: 45,
         columnNumber: 5
     }, this);
 }
@@ -47511,28 +47156,127 @@ $RefreshReg$(_c1, "ProviderToggle");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","usehooks-ts":"dmUe4","../../stitches.config":"iMNz3","../Toast":"64Cun","./Provider.styles":"JKoG4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"64Cun":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","usehooks-ts":"dmUe4","../../stitches.config":"iMNz3","./Provider.styles":"JKoG4","./Toast/Toast":"iz5gv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"JKoG4":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Toast", ()=>(0, _toastDefault.default));
-parcelHelpers.export(exports, "toast", ()=>(0, _toast.toast));
-var _toast = require("./Toast");
-var _toastDefault = parcelHelpers.interopDefault(_toast);
+parcelHelpers.export(exports, "ProviderStyled", ()=>ProviderStyled);
+parcelHelpers.export(exports, "ProviderTriggerStyled", ()=>ProviderTriggerStyled);
+parcelHelpers.export(exports, "reset", ()=>reset);
+var _stitchesConfig = require("../../stitches.config");
+const ProviderStyled = (0, _stitchesConfig.styled)("div", {
+    backgroundColor: "$background",
+    color: "$text",
+    minHeight: "100vh",
+    position: "relative"
+});
+const ProviderTriggerStyled = (0, _stitchesConfig.styled)("div", {
+    "*": {
+        cursor: "pointer"
+    },
+    "display": "inline-flex",
+    "position": "relative",
+    "verticalAlign": "middle"
+});
+const reset = (0, _stitchesConfig.globalCss)({
+    "*": {
+        MozOsxFontSmoothing: "grayscale",
+        WebkitAppearance: "none",
+        WebkitFontSmoothing: "antialiased",
+        boxSizing: "inherit",
+        letterSpacing: "normal",
+        marginBlockEnd: 0,
+        marginBlockStart: 0,
+        marginInlineEnd: 0,
+        marginInlineStart: 0,
+        outline: "none",
+        paddingBlockEnd: 0,
+        paddingBlockStart: 0,
+        paddingInlineEnd: 0,
+        paddingInlineStart: 0,
+        wordSpacing: "normal"
+    },
+    "*:after": {
+        boxSizing: "inherit"
+    },
+    "*:before": {
+        boxSizing: "inherit"
+    },
+    "@import": 'url("https://xxxjddzdqkdtyqtywwfi.supabase.co/storage/v1/object/public/public/webfonts-oct22.css")',
+    "a": {
+        color: "inherit",
+        textDecoration: "none"
+    },
+    "body": {
+        backgroundColor: "inherit",
+        border: 0,
+        color: "$text",
+        fontFamily: "$sans, sans-serif",
+        fontSize: "1.6rem",
+        margin: 0,
+        overflowX: "hidden",
+        overflowY: "auto",
+        padding: 0,
+        [`.${0, _stitchesConfig.theme}`]: {
+            backgroundColor: "$background",
+            color: "$text"
+        },
+        [`.${0, _stitchesConfig.lightTheme}`]: {
+            backgroundColor: "$background",
+            color: "$text"
+        }
+    },
+    "button": {
+        "&::-moz-focus-inner": {
+            border: 0,
+            outline: 0,
+            outlineOffset: 0,
+            padding: 0
+        },
+        "&:active": {
+            outline: 0
+        },
+        "&:focus": {
+            outline: 0
+        },
+        "MozOsxFontSmoothing": "grayscale",
+        "WebkitAppearance": "none",
+        "WebkitFontSmoothing": "antialiased",
+        "appearance": "none",
+        "backgroundColor": "transparent",
+        "border": 0,
+        "cursor": "pointer",
+        "font": "$default",
+        "fontFamily": "inherit",
+        "margin": 0,
+        "outline": "none",
+        "overflow": "visible",
+        "textOverflow": "ellipsis",
+        "whiteSpace": "nowrap",
+        "width": "auto"
+    },
+    "html": {
+        MozOsxFontSmoothing: "grayscale",
+        WebkitFontSmoothing: "antialiased",
+        fontSize: "62.5%",
+        lineHeight: "1.5",
+        textRendering: "optimizeLegibility"
+    },
+    "svg": {
+        verticalAlign: "middle"
+    }
+});
+exports.default = ProviderStyled;
 
-},{"./Toast":"CGEhc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"CGEhc":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$4fd0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iz5gv":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$75fe = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$4fd0.prelude(module);
+$parcel$ReactRefreshHelpers$75fe.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-// export react-hot-toast to hook
-parcelHelpers.export(exports, "toast", ()=>(0, _reactHotToastDefault.default));
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactHotToast = require("react-hot-toast");
 var _reactHotToastDefault = parcelHelpers.interopDefault(_reactHotToast);
 var _usehooksTs = require("usehooks-ts");
@@ -47557,14 +47301,14 @@ function Toast(props) {
                 theme: t.type === "success" ? "success" : t.type === "error" ? "error" : "default",
                 children: t.message && t.message.toString().length > 50 ? `${t.message.toString().substring(0, 50)}...` : t.message?.toString()
             }, t.id, false, {
-                fileName: "src/components/Toast/Toast.tsx",
-                lineNumber: 30,
+                fileName: "src/components/Provider/Toast/Toast.tsx",
+                lineNumber: 31,
                 columnNumber: 11
             }, this);
         })
     }, void 0, false, {
-        fileName: "src/components/Toast/Toast.tsx",
-        lineNumber: 26,
+        fileName: "src/components/Provider/Toast/Toast.tsx",
+        lineNumber: 27,
         columnNumber: 5
     }, this);
 }
@@ -47579,12 +47323,12 @@ _c = Toast;
 var _c;
 $RefreshReg$(_c, "Toast");
 
-  $parcel$ReactRefreshHelpers$4fd0.postlude(module);
+  $parcel$ReactRefreshHelpers$75fe.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-hot-toast":"gi0hv","usehooks-ts":"dmUe4","./Toast.styles":"6Oi9x","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gi0hv":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-hot-toast":"gi0hv","usehooks-ts":"dmUe4","./Toast.styles":"6QD7M","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gi0hv":[function(require,module,exports) {
 "use strict";
 var Y = Object.create;
 var E = Object.defineProperty;
@@ -48256,12 +48000,12 @@ function j(e, t) {
     };
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6Oi9x":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6QD7M":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ToastStyled", ()=>ToastStyled);
 parcelHelpers.export(exports, "ToastContainerStyled", ()=>ToastContainerStyled);
-var _stitchesConfig = require("../../stitches.config");
+var _stitchesConfig = require("../../../stitches.config");
 const ToastStyled = (0, _stitchesConfig.styled)("div", {
     backgroundColor: "$background",
     border: "0.1rem solid $border",
@@ -48310,116 +48054,157 @@ const ToastContainerStyled = (0, _stitchesConfig.styled)("div", {
 });
 exports.default = ToastStyled;
 
-},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"JKoG4":[function(require,module,exports) {
+},{"../../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6V7Vx":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "ProviderStyled", ()=>ProviderStyled);
-parcelHelpers.export(exports, "ProviderTriggerStyled", ()=>ProviderTriggerStyled);
-parcelHelpers.export(exports, "reset", ()=>reset);
+parcelHelpers.export(exports, "Stack", ()=>(0, _stackDefault.default));
+var _stack = require("./Stack");
+var _stackDefault = parcelHelpers.interopDefault(_stack);
+
+},{"./Stack":"fzqaU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fzqaU":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$48e7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$48e7.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _stitchesConfig = require("../../stitches.config");
-const ProviderStyled = (0, _stitchesConfig.styled)("div", {
-    backgroundColor: "$background",
-    color: "$text",
-    minHeight: "100vh",
-    position: "relative"
-});
-const ProviderTriggerStyled = (0, _stitchesConfig.styled)("div", {
+var _stackStyles = require("./Stack.styles");
+function Stack(props) {
+    const StackElement = props.direction === "row" ? (0, _stackStyles.StackRowStyled) : props.direction === "column" ? (0, _stackStyles.StackColumnStyled) : (0, _stackStyles.StackElementStyled);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(StackElement, {
+        css: {
+            ...props.css,
+            textAlign: props.align,
+            ...props.top && {
+                paddingTop: `$${props.top}`,
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    paddingTop: props.top !== "6" ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    paddingTop: props.top !== "6" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`
+                }
+            },
+            ...props.bottom && {
+                paddingBottom: `$${props.bottom}`,
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    paddingBottom: props.bottom !== "6" ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    paddingBottom: props.bottom !== "6" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`
+                }
+            },
+            ...props.minimal && {
+                paddingLeft: "0!important",
+                paddingRight: "0!important"
+            },
+            ...props?.direction === "column" && {
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    flex: props.widthPhone ? `0 0 ${props.widthPhone}%` : `0 0 100%`,
+                    marginLeft: props.offsetPhone ? `${props.offsetPhone}%` : 0,
+                    width: props.widthPhone ? `${props.widthPhone}%` : `100%`
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    flex: props.widthTablet ? `0 0 ${props.widthTablet}%` : `0 0 ${props.width}%`,
+                    marginLeft: props.offsetTablet ? `${props.offsetTablet}%` : `${props.offset}%`,
+                    width: props.widthTablet ? `${props.widthTablet}%` : `${props.width}%`
+                },
+                [(0, _stitchesConfig.breakpoints).laptopX]: {
+                    flex: props.widthLaptop ? `0 0 ${props.widthLaptop}%` : `0 0 ${props.width}%`,
+                    marginLeft: props.offsetLaptop ? `${props.offsetLaptop}%` : `${props.offset}%`,
+                    width: props.widthLaptop ? `${props.widthLaptop}%` : `${props.width}%`
+                },
+                [(0, _stitchesConfig.breakpoints).desktopX]: {
+                    flex: props.widthDesktop ? `0 0 ${props.widthDesktop}%` : `0 0 ${props.width}%`,
+                    marginLeft: props.offsetDesktop ? `${props.offsetDesktop}%` : `${props.offset}%`,
+                    width: props.widthDesktop ? `${props.widthDesktop}%` : `${props.width}%`
+                },
+                [(0, _stitchesConfig.breakpoints).wide]: {
+                    flex: props.widthWide ? `0 0 ${props.widthWide}%` : `0 0 ${props.width}%`,
+                    marginLeft: props.offsetWide ? `${props.offsetWide}%` : `${props.offset}%`,
+                    width: props.widthWide ? `${props.widthWide}%` : `${props.width}%`
+                }
+            },
+            ...props?.direction === "row" && {
+                "*": {
+                    alignItems: props.align,
+                    flex: props.flex,
+                    justifyContent: props.align
+                }
+            }
+        },
+        flexduo: props.direction === "row" && props.flexduo,
+        id: props.id,
+        children: props.children
+    }, void 0, false, {
+        fileName: "src/components/Stack/Stack.tsx",
+        lineNumber: 47,
+        columnNumber: 5
+    }, this);
+}
+exports.default = Stack;
+_c = Stack;
+var _c;
+$RefreshReg$(_c, "Stack");
+
+  $parcel$ReactRefreshHelpers$48e7.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../../stitches.config":"iMNz3","./Stack.styles":"77zow","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"77zow":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "StackRowStyled", ()=>StackRowStyled);
+parcelHelpers.export(exports, "StackColumnStyled", ()=>StackColumnStyled);
+parcelHelpers.export(exports, "StackElementStyled", ()=>StackElementStyled);
+var _stitchesConfig = require("../../stitches.config");
+const StackRowStyled = (0, _stitchesConfig.styled)("div", {
     "*": {
-        cursor: "pointer"
+        boxSizing: "border-box"
     },
-    "display": "inline-flex",
-    "position": "relative",
-    "verticalAlign": "middle"
+    "display": "flex",
+    "flexDirection": "row",
+    "flexFlow": "row wrap",
+    "maxWidth": "100%",
+    "minWidth": "100%",
+    "width": "100%"
 });
-const reset = (0, _stitchesConfig.globalCss)({
-    "*": {
-        MozOsxFontSmoothing: "grayscale",
-        WebkitAppearance: "none",
-        WebkitFontSmoothing: "antialiased",
-        boxSizing: "inherit",
-        letterSpacing: "normal",
-        marginBlockEnd: 0,
-        marginBlockStart: 0,
-        marginInlineEnd: 0,
-        marginInlineStart: 0,
-        outline: "none",
-        paddingBlockEnd: 0,
-        paddingBlockStart: 0,
-        paddingInlineEnd: 0,
-        paddingInlineStart: 0,
-        wordSpacing: "normal"
-    },
-    "*:after": {
-        boxSizing: "inherit"
-    },
-    "*:before": {
-        boxSizing: "inherit"
-    },
-    "@import": 'url("https://xxxjddzdqkdtyqtywwfi.supabase.co/storage/v1/object/public/public/webfonts-test1.css")',
-    "a": {
-        color: "inherit",
-        textDecoration: "none"
-    },
-    "body": {
-        backgroundColor: "inherit",
-        border: 0,
-        color: "$text",
-        fontFamily: "$sans, sans-serif",
-        fontSize: "1.6rem",
-        margin: 0,
-        overflowX: "hidden",
-        overflowY: "auto",
-        padding: 0,
-        [`.${0, _stitchesConfig.theme}`]: {
-            backgroundColor: "$background",
-            color: "$text"
-        },
-        [`.${0, _stitchesConfig.lightTheme}`]: {
-            backgroundColor: "$background",
-            color: "$text"
-        }
-    },
-    "button": {
-        "&::-moz-focus-inner": {
-            border: 0,
-            outline: 0,
-            outlineOffset: 0,
-            padding: 0
-        },
-        "&:active": {
-            outline: 0
-        },
-        "&:focus": {
-            outline: 0
-        },
-        "MozOsxFontSmoothing": "grayscale",
-        "WebkitAppearance": "none",
-        "WebkitFontSmoothing": "antialiased",
-        "appearance": "none",
-        "backgroundColor": "transparent",
-        "border": 0,
-        "cursor": "pointer",
-        "font": "$default",
-        "fontFamily": "inherit",
-        "margin": 0,
-        "outline": "none",
-        "overflow": "visible",
-        "textOverflow": "ellipsis",
-        "whiteSpace": "nowrap",
-        "width": "auto"
-    },
-    "html": {
-        MozOsxFontSmoothing: "grayscale",
-        WebkitFontSmoothing: "antialiased",
-        fontSize: "62.5%",
-        lineHeight: "1.5",
-        textRendering: "optimizeLegibility"
-    },
-    "svg": {
-        verticalAlign: "middle"
+const StackColumnStyled = (0, _stitchesConfig.styled)("div", {
+    flex: "1 1 auto",
+    maxWidth: "100%",
+    paddingLeft: "$4",
+    paddingRight: "$4",
+    width: "100%",
+    [(0, _stitchesConfig.breakpoints).tablet]: {
+        paddingLeft: "$3",
+        paddingRight: "$3"
     }
 });
-exports.default = ProviderStyled;
+const StackElementStyled = (0, _stitchesConfig.styled)("div", {
+    marginBlockEnd: 0,
+    marginBlockStart: 0,
+    variants: {
+        flexduo: {
+            true: {
+                "*": {
+                    alignSelf: "center",
+                    marginBottom: "0 !important",
+                    marginTOp: "0 !important",
+                    verticalAlign: "middle"
+                },
+                "alignItems": "center",
+                "display": "flex",
+                "justifyContent": "space-between",
+                "verticalAlign": "middle"
+            }
+        }
+    }
+});
+exports.default = StackElementStyled;
 
 },{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kTnYg":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -48438,10 +48223,10 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+// import React from 'react';
 var _phosphorReact = require("phosphor-react");
 var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _button = require("../Button");
+var _index = require("../../index");
 var _tableStyles = require("./Table.styles");
 var _s = $RefreshSig$();
 function Table(props) {
@@ -48456,7 +48241,11 @@ function Table(props) {
         }
     }
     function sort(a, b) {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         if (a[sortBy] < b[sortBy]) return sortDirection === "asc" ? -1 : 1;
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         if (a[sortBy] > b[sortBy]) return sortDirection === "asc" ? 1 : -1;
         return 0;
     }
@@ -48467,7 +48256,7 @@ function Table(props) {
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tableStyles.TableRowStyled), {
                     children: props.headChildren.map((child, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tableStyles.TableHeadCellStyled), {
                             onClick: ()=>handleSort(index),
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
                                 ariaLabel: "Sort",
                                 css: {
                                     svg: {
@@ -48481,22 +48270,22 @@ function Table(props) {
                                 children: child
                             }, void 0, false, {
                                 fileName: "src/components/Table/Table.tsx",
-                                lineNumber: 54,
+                                lineNumber: 58,
                                 columnNumber: 17
                             }, this)
                         }, index, false, {
                             fileName: "src/components/Table/Table.tsx",
-                            lineNumber: 53,
+                            lineNumber: 57,
                             columnNumber: 15
                         }, this))
                 }, void 0, false, {
                     fileName: "src/components/Table/Table.tsx",
-                    lineNumber: 51,
+                    lineNumber: 55,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/Table/Table.tsx",
-                lineNumber: 50,
+                lineNumber: 54,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tableStyles.TableBodyStyled), {
@@ -48505,23 +48294,23 @@ function Table(props) {
                                 children: cell
                             }, index, false, {
                                 fileName: "src/components/Table/Table.tsx",
-                                lineNumber: 86,
+                                lineNumber: 90,
                                 columnNumber: 15
                             }, this))
                     }, index, false, {
                         fileName: "src/components/Table/Table.tsx",
-                        lineNumber: 84,
+                        lineNumber: 88,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "src/components/Table/Table.tsx",
-                lineNumber: 82,
+                lineNumber: 86,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Table/Table.tsx",
-        lineNumber: 48,
+        lineNumber: 52,
         columnNumber: 5
     }, this);
 }
@@ -48536,7 +48325,7 @@ $RefreshReg$(_c, "Table");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","../Button":"i3jlU","./Table.styles":"gCOL7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gCOL7":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","../../index":"4aBH6","./Table.styles":"gCOL7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gCOL7":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "TableStyled", ()=>TableStyled);
@@ -48615,6 +48404,234 @@ const TableHeadCellStyled = (0, _stitchesConfig.styled)("th", {
 });
 exports.default = TableStyled;
 
+},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"d5OVu":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Text", ()=>(0, _textDefault.default));
+var _text = require("./Text");
+var _textDefault = parcelHelpers.interopDefault(_text);
+
+},{"./Text":"97kA1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"97kA1":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$7646 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7646.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _stitchesConfig = require("../../stitches.config");
+var _textStyles = require("./Text.styles");
+function Text(props) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _textStyles.TextStyled), {
+        accent: props.accent,
+        as: props.override || props.as,
+        bold: props.bold,
+        css: {
+            ...props.css,
+            ...props.top && {
+                paddingTop: `$${props.top}`,
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    marginTop: props.top ? "0 !important" : "inherit",
+                    paddingTop: props.top !== "6" ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    marginTop: props.top ? "0 !important" : "inherit",
+                    paddingTop: props.top !== "6" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`
+                }
+            },
+            ...props.bottom && {
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    marginBottom: props.bottom ? "0 !important" : "inherit",
+                    paddingBottom: props.bottom !== "6" ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    marginBottom: props.bottom ? "0 !important" : "inherit",
+                    paddingBottom: props.bottom !== "6" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.9)`
+                },
+                paddingBottom: `$${props.bottom}`
+            },
+            ...props.inline && {
+                alignSelf: "center",
+                display: "inline-flex",
+                marginBottom: "0 !important",
+                marginRight: props.inline === "auto" ? "auto" : `$${props.inline}`,
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    marginRight: props.inline === "auto" ? "auto" : `calc($${props.inline} * 0.8)`
+                }
+            },
+            ...props.link && {
+                "&:hover": {
+                    color: "$accent",
+                    opacity: 0.7
+                },
+                "borderBottom": props.link === "borderHover" ? "0.1rem solid $borderHover" : props.link === "border" ? "0.1rem solid $border" : "none",
+                "transition": "$default"
+            }
+        },
+        size: props.as,
+        children: props.children
+    }, void 0, false, {
+        fileName: "src/components/Text/Text.tsx",
+        lineNumber: 22,
+        columnNumber: 5
+    }, this);
+}
+exports.default = Text;
+_c = Text;
+var _c;
+$RefreshReg$(_c, "Text");
+
+  $parcel$ReactRefreshHelpers$7646.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../../stitches.config":"iMNz3","./Text.styles":"2hqo9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2hqo9":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "TextStyled", ()=>TextStyled);
+var _stitchesConfig = require("../../stitches.config");
+const TextStyled = (0, _stitchesConfig.styled)("div", {
+    "&:last-child": {
+        marginBottom: `${0}!important`
+    },
+    "color": "inherit",
+    "display": "block",
+    "lineHeight": "normal !important",
+    "variants": {
+        accent: {
+            true: {
+                color: "$accent"
+            }
+        },
+        bold: {
+            true: {
+                fontWeight: "bold !important"
+            }
+        },
+        size: {
+            h1: {
+                "&:not(:last-child)": {
+                    marginBottom: "$5"
+                },
+                "fontFamily": "$serif",
+                "fontSize": "$h1",
+                "fontWeight": "$h1",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($h1 * 0.9)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($h1 * 0.95)"
+                }
+            },
+            h2: {
+                "&:not(:last-child)": {
+                    marginBottom: "$5"
+                },
+                "fontFamily": "$serif",
+                "fontSize": "$h2",
+                "fontWeight": "$h2",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($h2 * 0.9)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($h2 * 0.95)"
+                }
+            },
+            h3: {
+                "&:not(:last-child)": {
+                    marginBottom: "$5"
+                },
+                "fontFamily": "$serif",
+                "fontSize": "$h3",
+                "fontWeight": "$h3",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($h3 * 0.9)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($h3 * 0.95)"
+                }
+            },
+            h4: {
+                "&:not(:last-child)": {
+                    marginBottom: "$4"
+                },
+                "fontSize": "$h4",
+                "fontWeight": "$h4",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($h4 * 0.9)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($h4 * 0.95)"
+                }
+            },
+            h5: {
+                "&:not(:last-child)": {
+                    marginBottom: "$4"
+                },
+                "fontSize": "$h5",
+                "fontWeight": "$h5",
+                "lineHeight": "1.35 !important",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($h5 * 0.925)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($h5 * 0.95)"
+                }
+            },
+            h6: {
+                "&:not(:last-child)": {
+                    marginBottom: "$4"
+                },
+                "fontSize": "$h6",
+                "fontWeight": "$h6",
+                "lineHeight": "1.35 !important",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($h6 * 0.925)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($h6 * 0.95)"
+                }
+            },
+            p: {
+                "&:not(:last-child)": {
+                    marginBottom: "$4"
+                },
+                "fontSize": "$p",
+                "fontWeight": "$p",
+                "lineHeight": "1.3 !important",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($p * 0.925)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($p * 0.95)"
+                }
+            },
+            small: {
+                "&:not(:last-child)": {
+                    marginBottom: "$4"
+                },
+                "fontSize": "$small",
+                "fontWeight": "$small",
+                "lineHeight": "1.3 !important",
+                [(0, _stitchesConfig.breakpoints).phone]: {
+                    fontSize: "calc($small * 0.925)"
+                },
+                [(0, _stitchesConfig.breakpoints).tabletX]: {
+                    fontSize: "calc($small * 0.95)"
+                }
+            },
+            span: {
+                fontSize: "inherit",
+                fontWeight: "inherit"
+            }
+        }
+    }
+});
+exports.default = TextStyled;
+
 },{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fyNq0":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -48632,8 +48649,6 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
 var _stitchesConfig = require("../../stitches.config");
 var _viewStyles = require("./View.styles");
 function View(props) {
@@ -48645,19 +48660,19 @@ function View(props) {
             ...props.top && {
                 paddingTop: `$${props.top}`,
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`
+                    paddingTop: props.top !== "6" ? `calc($${props.top} * 0.8)` : `calc($${props.top} * 0.75)`
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    paddingTop: props.top !== "8" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`
+                    paddingTop: props.top !== "6" ? `calc($${props.top} * 0.9)` : `calc($${props.top} * 0.85)`
                 }
             },
             ...props.bottom && {
                 paddingBottom: `$${props.bottom}`,
                 [(0, _stitchesConfig.breakpoints).phone]: {
-                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`
+                    paddingBottom: props.bottom !== "6" ? `calc($${props.bottom} * 0.8)` : `calc($${props.bottom} * 0.75)`
                 },
                 [(0, _stitchesConfig.breakpoints).tabletX]: {
-                    paddingBottom: props.bottom !== "8" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.85)`
+                    paddingBottom: props.bottom !== "6" ? `calc($${props.bottom} * 0.9)` : `calc($${props.bottom} * 0.9)`
                 }
             }
         },
@@ -48667,12 +48682,12 @@ function View(props) {
             children: props.children
         }, void 0, false, {
             fileName: "src/components/View/View.tsx",
-            lineNumber: 54,
+            lineNumber: 55,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/components/View/View.tsx",
-        lineNumber: 17,
+        lineNumber: 18,
         columnNumber: 5
     }, this);
 }
@@ -48686,7 +48701,7 @@ $RefreshReg$(_c, "View");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../stitches.config":"iMNz3","./View.styles":"gmJg2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gmJg2":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../../stitches.config":"iMNz3","./View.styles":"gmJg2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gmJg2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ViewStyled", ()=>ViewStyled);
@@ -48749,10 +48764,10 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+// import React from 'react';
 var _phosphorReact = require("phosphor-react");
 var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _button = require("../Button");
+var _index = require("../../index");
 var _codeStyles = require("./Code.styles");
 var _s = $RefreshSig$();
 function Code(props) {
@@ -48760,7 +48775,7 @@ function Code(props) {
     const [isCopied, setIsCopied] = (0, _react.useState)(false);
     function handleCopy() {
         if (props.copy) {
-            navigator.clipboard.writeText(props.children.toString());
+            navigator.clipboard.writeText(props?.children?.toString() || "");
             setIsCopied(true);
             setTimeout(()=>{
                 setIsCopied(false);
@@ -48771,7 +48786,7 @@ function Code(props) {
         css: props.css,
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _codeStyles.CodeFunctionStyled), {
-                children: props.copy && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
+                children: props.copy && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
                     ariaLabel: "Copy",
                     icon: isCopied ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ClipboardText), {
                         opacity: 0.5,
@@ -48784,25 +48799,25 @@ function Code(props) {
                     children: "Copy"
                 }, void 0, false, {
                     fileName: "src/components/Code/Code.tsx",
-                    lineNumber: 31,
+                    lineNumber: 32,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/Code/Code.tsx",
-                lineNumber: 29,
+                lineNumber: 30,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _codeStyles.CodeBlockStyled), {
                 children: props.children
             }, void 0, false, {
                 fileName: "src/components/Code/Code.tsx",
-                lineNumber: 46,
+                lineNumber: 47,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Code/Code.tsx",
-        lineNumber: 28,
+        lineNumber: 29,
         columnNumber: 5
     }, this);
 }
@@ -48817,7 +48832,7 @@ $RefreshReg$(_c, "Code");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","../Button":"i3jlU","./Code.styles":"f0eya","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"f0eya":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","../../index":"4aBH6","./Code.styles":"f0eya","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"f0eya":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CodeStyled", ()=>CodeStyled);
@@ -48867,9 +48882,7 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _phosphorReact = require("phosphor-react");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _badge = require("../Badge");
-var _button = require("../Button");
-var _loading = require("../Loading");
+var _index = require("../../index");
 var _fieldStyles = require("./Field.styles");
 var _s = $RefreshSig$();
 function Field(props) {
@@ -48900,7 +48913,7 @@ function Field(props) {
         children: [
             (props.error || props.success || props.warning || props.loading || props.submit || props.copy || props.reveal) && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fieldStyles.FieldFunctionStyled), {
                 children: [
-                    props.error && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badge.Badge), {
+                    props.error && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
                         icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.Warning), {
                             weight: "duotone"
                         }, void 0, false, void 0, void 0),
@@ -48908,10 +48921,10 @@ function Field(props) {
                         children: props.errorMessage || "Error"
                     }, void 0, false, {
                         fileName: "src/components/Field/Field.tsx",
-                        lineNumber: 76,
+                        lineNumber: 74,
                         columnNumber: 13
                     }, this),
-                    props.success && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badge.Badge), {
+                    props.success && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
                         icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.Check), {
                             weight: "duotone"
                         }, void 0, false, void 0, void 0),
@@ -48919,10 +48932,10 @@ function Field(props) {
                         children: props.successMessage || "Success"
                     }, void 0, false, {
                         fileName: "src/components/Field/Field.tsx",
-                        lineNumber: 81,
+                        lineNumber: 79,
                         columnNumber: 13
                     }, this),
-                    props.warning && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badge.Badge), {
+                    props.warning && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
                         icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.Warning), {
                             weight: "duotone"
                         }, void 0, false, void 0, void 0),
@@ -48930,21 +48943,21 @@ function Field(props) {
                         children: props.warningMessage || "Warning"
                     }, void 0, false, {
                         fileName: "src/components/Field/Field.tsx",
-                        lineNumber: 86,
+                        lineNumber: 84,
                         columnNumber: 13
                     }, this),
-                    props.loading && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badge.Badge), {
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loading.Loading), {}, void 0, false, {
+                    props.loading && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Loading), {}, void 0, false, {
                             fileName: "src/components/Field/Field.tsx",
-                            lineNumber: 92,
+                            lineNumber: 90,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "src/components/Field/Field.tsx",
-                        lineNumber: 91,
+                        lineNumber: 89,
                         columnNumber: 13
                     }, this),
-                    props.copy && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
+                    props.copy && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
                         ariaLabel: "Copy",
                         icon: isCopied ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ClipboardText), {
                             opacity: 0.5,
@@ -48957,10 +48970,10 @@ function Field(props) {
                         children: "Copy"
                     }, void 0, false, {
                         fileName: "src/components/Field/Field.tsx",
-                        lineNumber: 96,
+                        lineNumber: 94,
                         columnNumber: 13
                     }, this),
-                    props.submit && props.submitFunction && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
+                    props.submit && props.submitFunction && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
                         ariaLabel: "Submit",
                         disabled: !props.submitValid,
                         name: "submit",
@@ -48968,13 +48981,13 @@ function Field(props) {
                         children: props.submit
                     }, void 0, false, {
                         fileName: "src/components/Field/Field.tsx",
-                        lineNumber: 112,
+                        lineNumber: 110,
                         columnNumber: 13
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Field/Field.tsx",
-                lineNumber: 74,
+                lineNumber: 72,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fieldStyles.FieldAreaStyled), {
@@ -48987,13 +49000,13 @@ function Field(props) {
                 value: value
             }, void 0, false, {
                 fileName: "src/components/Field/Field.tsx",
-                lineNumber: 122,
+                lineNumber: 120,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Field/Field.tsx",
-        lineNumber: 51,
+        lineNumber: 49,
         columnNumber: 5
     }, this);
 }
@@ -49008,7 +49021,7 @@ $RefreshReg$(_c, "Field");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","../Badge":"egHOx","../Button":"i3jlU","../Loading":"gWqOi","./Field.styles":"bUhHh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bUhHh":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","../../index":"4aBH6","./Field.styles":"bUhHh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bUhHh":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "FieldStyled", ()=>FieldStyled);

@@ -1,13 +1,12 @@
-import React, { HTMLAttributes, ReactNode } from 'react';
+// import React from 'react';
+import { HTMLAttributes, ReactNode } from 'react';
 
+import { Loading } from '../../index';
 import { breakpoints, DefaultProps } from '../../stitches.config';
-import { Loading } from '../Loading';
 
 import { ButtonIconStyled, ButtonStyled } from './Button.styles';
 
-export interface Props
-  extends HTMLAttributes<HTMLButtonElement>,
-    Omit<DefaultProps, 'spacing'> {
+interface Props extends HTMLAttributes<HTMLButtonElement>, Omit<DefaultProps, 'spacing'> {
   children: ReactNode | string;
   loading?: boolean;
   disabled?: boolean;
@@ -26,7 +25,7 @@ export default function Button(props: Props): JSX.Element {
     <ButtonStyled
       aria-label={
         props.ariaLabel || props.name || typeof props.children === 'string'
-          ? props.children.toString()
+          ? props?.children?.toString()
           : ''
       }
       block={props.block || false}

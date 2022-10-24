@@ -1,10 +1,10 @@
-import React from 'react';
+// import React from 'react';
 
 import { breakpoints, DefaultProps } from '../../stitches.config';
 
-import { DividerStyled } from './Divider.styles';
+import DividerStyled from './Divider.styles';
 
-export interface Props extends Omit<DefaultProps, 'spacing'> {
+interface Props extends Omit<DefaultProps, 'spacing'> {
   top?: DefaultProps['spacing'];
   bottom?: DefaultProps['spacing'];
   theme?: 'border' | 'borderHover';
@@ -20,13 +20,13 @@ export default function Divider(props: Props): JSX.Element {
           marginTop: `$${props.top}`,
           [breakpoints.phone]: {
             marginTop:
-              props.top !== ('8' || '9')
+              props.top !== ('6' || '7' || '8' || '9')
                 ? `calc($${props.top} * 0.8)`
                 : `calc($${props.top} * 0.75)`,
           },
           [breakpoints.tabletX]: {
             marginTop:
-              props.top !== ('8' || '9')
+              props.top !== ('6' || '7' || '8' || '9')
                 ? `calc($${props.top} * 0.9)`
                 : `calc($${props.top} * 0.85)`,
           },
@@ -35,13 +35,13 @@ export default function Divider(props: Props): JSX.Element {
           marginBottom: `$${props.bottom}`,
           [breakpoints.phone]: {
             marginBottom:
-              props.bottom !== ('8' || '9')
+              props.bottom !== ('6' || '7' || '8' || '9')
                 ? `calc($${props.bottom} * 0.8)`
                 : `calc($${props.bottom} * 0.75)`,
           },
           [breakpoints.tabletX]: {
             marginBottom:
-              props.bottom !== ('8' || '9')
+              props.bottom !== ('6' || '7' || '8' || '9')
                 ? `calc($${props.bottom} * 0.9)`
                 : `calc($${props.bottom} * 0.85)`,
           },

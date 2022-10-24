@@ -1,12 +1,10 @@
+// import React from 'react';
 import { useRouter } from 'next/router';
-import React, { ReactNode, useRef, useState } from 'react';
+import { ReactNode, useRef, useState } from 'react';
 import { useEventListener, useLockedBody, useOnClickOutside } from 'usehooks-ts';
 
+import { Input, Loading, Stack, Text } from '../../index';
 import { DefaultProps } from '../../stitches.config';
-import { Input } from '../Input';
-import { Loading } from '../Loading';
-import { Stack } from '../Stack';
-import { Text } from '../Text';
 
 import {
   DropdownStyled,
@@ -15,7 +13,7 @@ import {
   DropdownItemStyled,
 } from './Dropdown.styles';
 
-export interface Props extends DefaultProps {
+interface Props extends DefaultProps {
   options: Array<{
     label: string;
     value: string;

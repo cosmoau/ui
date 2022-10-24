@@ -1,1 +1,1 @@
-export { default as Provider, ThemeProvider, ProviderToggle } from './Provider';
+export { default as Provider, CosmoProvider, ProviderToggle } from './Provider';
