@@ -1,5 +1,3 @@
-// import React from 'react';
-
 import { theme } from '../../stitches.config';
 
 interface Props {

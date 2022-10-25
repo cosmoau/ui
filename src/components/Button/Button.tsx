@@ -1,4 +1,3 @@
-// import React from 'react';
 import { HTMLAttributes, ReactNode } from 'react';
 
 import { Loading } from '../../index';

@@ -1,4 +1,3 @@
-// import React from 'react';
 import { ComponentType, ElementType } from 'react';
 import toast, { Toaster, useToaster } from 'react-hot-toast';
 import { useEventListener } from 'usehooks-ts';

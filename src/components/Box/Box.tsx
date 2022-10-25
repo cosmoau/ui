@@ -1,4 +1,3 @@
-// import React from 'react';
 import { ReactNode } from 'react';
 
 import { Image } from '../../index';
@@ -37,35 +36,35 @@ export default function Box(props: Props): JSX.Element {
           rel='noopener noreferrer'
           target={props.imageTarget || '_blank'}>
           <Image
-            alt={props.imageAlt || ('#' as string)}
+            alt={props.imageAlt || ''}
             css={{
               img: {
                 borderTopLeftRadius: '$1 !important',
                 borderTopRightRadius: '$1 !important',
+                objectFit: 'cover',
+                objectPosition: props.imagePosition || 'center',
               },
             }}
+            fill
             fillHeight={props.imageHeight || '20rem'}
             hover={props.hover}
-            layout='fill'
-            objectFit={'cover'}
-            objectPosition={props.imagePosition || 'center'}
             src={props.image}
           />
         </a>
       ) : (
         <Image
-          alt={props.imageAlt || ('#' as string)}
+          alt={props.imageAlt || ''}
           css={{
             img: {
               borderTopLeftRadius: '$1 !important',
               borderTopRightRadius: '$1 !important',
+              objectFit: 'cover',
+              objectPosition: props.imagePosition || 'center',
             },
           }}
+          fill
           fillHeight={props.imageHeight || '20rem'}
           hover={props.hover}
-          layout='fill'
-          objectFit={'cover'}
-          objectPosition={props.imagePosition || 'center'}
           src={props.image}
         />
       )}

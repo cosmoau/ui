@@ -27089,309 +27089,87 @@ var _index = require("../src/index");
 function App() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Provider), {
         locked: "light",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.View), {
-                container: true,
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
-                    direction: "row",
-                    flex: "center",
-                    top: "4",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.View), {
+            container: true,
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
+                direction: "row",
+                flex: "stretch",
+                top: "4",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
                         direction: "column",
+                        width: 50,
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
+                            theme: "fill",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
+                                    bottom: "6",
+                                    top: "6"
+                                }, void 0, false, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 29,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
+                                    flexduo: true,
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                            accent: true,
+                                            as: "h1",
+                                            children: "Airbnb, Stayz, Booking.com and Homes & Villas Management"
+                                        }, void 0, false, {
+                                            fileName: "playground/App.tsx",
+                                            lineNumber: 31,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
+                                            accent: true,
+                                            as: "h2",
+                                            children: "A"
+                                        }, void 0, false, {
+                                            fileName: "playground/App.tsx",
+                                            lineNumber: 34,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "playground/App.tsx",
+                                    lineNumber: 30,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "playground/App.tsx",
+                            lineNumber: 28,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "playground/App.tsx",
+                        lineNumber: 27,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
+                        direction: "column",
+                        width: 50,
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
+                                theme: "fill",
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
                                         bottom: "6",
                                         top: "6"
-                                    }, void 0, false, {
-                                        fileName: "playground/App.tsx",
-                                        lineNumber: 29,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                                        as: "h1",
-                                        bottom: "6",
-                                        override: "h6",
-                                        children: "Airbnb, Stayz, Booking.com and Homes & Villas Management"
-                                    }, void 0, false, {
-                                        fileName: "playground/App.tsx",
-                                        lineNumber: 30,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                                        as: "h2",
-                                        children: "Make your short-term rental listings work for you, without the hassle"
-                                    }, void 0, false, {
-                                        fileName: "playground/App.tsx",
-                                        lineNumber: 33,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                                        as: "h3",
-                                        children: "Make your short-term rental listings work for you, without the hassle"
-                                    }, void 0, false, {
-                                        fileName: "playground/App.tsx",
-                                        lineNumber: 36,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                                        as: "h4",
-                                        children: "Make your short-term rental listings work for you, without the hassle"
-                                    }, void 0, false, {
-                                        fileName: "playground/App.tsx",
-                                        lineNumber: 39,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                                        as: "h5",
-                                        children: "Make your short-term rental listings work for you, without the hassle"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
                                         lineNumber: 42,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                                        as: "h6",
-                                        children: "Make your short-term rental listings work for you, without the hassle"
-                                    }, void 0, false, {
-                                        fileName: "playground/App.tsx",
-                                        lineNumber: 45,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                                        as: "p",
-                                        children: "Make your short-term rental listings work for you, without the hassle"
-                                    }, void 0, false, {
-                                        fileName: "playground/App.tsx",
-                                        lineNumber: 48,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                                        as: "small",
-                                        children: "Make your short-term rental listings work for you, without the hassle"
-                                    }, void 0, false, {
-                                        fileName: "playground/App.tsx",
-                                        lineNumber: 51,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
-                                        align: "center",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Input), {
-                                            listen: true,
-                                            submit: "Alert",
-                                            submitFunction: ()=>alert("lol"),
-                                            submitValid: true
-                                        }, void 0, false, {
-                                            fileName: "playground/App.tsx",
-                                            lineNumber: 56,
-                                            columnNumber: 17
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "playground/App.tsx",
-                                        lineNumber: 55,
-                                        columnNumber: 15
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "playground/App.tsx",
-                                lineNumber: 28,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
-                                ariaLabel: "button",
-                                icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
-                                iconPosition: "right",
-                                children: "Button"
-                            }, void 0, false, {
-                                fileName: "playground/App.tsx",
-                                lineNumber: 64,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
-                                ariaLabel: "button",
-                                icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
-                                iconPosition: "right",
-                                small: true,
-                                children: "Button"
-                            }, void 0, false, {
-                                fileName: "playground/App.tsx",
-                                lineNumber: 67,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Dialog), {
-                                trigger: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
-                                    ariaLabel: "button",
-                                    icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
-                                    iconPosition: "right",
-                                    small: true,
-                                    children: "Button"
-                                }, void 0, false, void 0, void 0),
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
-                                    as: "h1",
-                                    children: [
-                                        " ",
-                                        "Airbnb, Stayz, Booking.com and Homes & Villas Management Airbnb, Stayz, Booking.com and Homes & Villas Management"
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "playground/App.tsx",
-                                    lineNumber: 80,
-                                    columnNumber: 15
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "playground/App.tsx",
-                                lineNumber: 70,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Dropdown), {
-                                filter: true,
-                                options: [
-                                    {
-                                        label: "Option 1",
-                                        value: "option-1"
-                                    },
-                                    {
-                                        label: "Option 2",
-                                        value: "option-2"
-                                    },
-                                    {
-                                        label: "Option 3",
-                                        value: "option-3"
-                                    }, 
-                                ],
-                                trigger: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
-                                    ariaLabel: "button",
-                                    icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
-                                    children: "Dropdown Test"
-                                }, void 0, false, void 0, void 0)
-                            }, void 0, false, {
-                                fileName: "playground/App.tsx",
-                                lineNumber: 86,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
-                                ariaLabel: "button",
-                                block: true,
-                                icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ArrowRight), {}, void 0, false, void 0, void 0),
-                                iconPosition: "right",
-                                theme: "fill",
-                                children: "Button"
-                            }, void 0, false, {
-                                fileName: "playground/App.tsx",
-                                lineNumber: 100,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
-                                theme: "border",
-                                children: "Make your short-term rental listings work for you, without the hassle"
-                            }, void 0, false, {
-                                fileName: "playground/App.tsx",
-                                lineNumber: 108,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Table), {
-                                bodyChildren: [
-                                    [
-                                        "John DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn Doe",
-                                        "32",
-                                        "United States", 
-                                    ],
-                                    [
-                                        "Jane Doe",
-                                        "25",
-                                        "United States"
-                                    ],
-                                    [
-                                        "John Doe",
-                                        "32",
-                                        "United States"
-                                    ],
-                                    [
-                                        "Jane Doe",
-                                        "25",
-                                        "United States"
-                                    ],
-                                    [
-                                        "Jane Doe",
-                                        "25",
-                                        "United States"
-                                    ],
-                                    [
-                                        "Jane Doe",
-                                        "25",
-                                        "United States"
-                                    ],
-                                    [
-                                        "Jane Doe",
-                                        "25",
-                                        "United States"
-                                    ],
-                                    [
-                                        "Jane Doe",
-                                        "25",
-                                        "United States"
-                                    ],
-                                    [
-                                        "Jane Doe",
-                                        "25",
-                                        "United States"
-                                    ], 
-                                ],
-                                headChildren: [
-                                    "Name",
-                                    "Age",
-                                    "Country"
-                                ]
-                            }, void 0, false, {
-                                fileName: "playground/App.tsx",
-                                lineNumber: 111,
-                                columnNumber: 13
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "playground/App.tsx",
-                        lineNumber: 27,
-                        columnNumber: 11
-                    }, this)
-                }, void 0, false, {
-                    fileName: "playground/App.tsx",
-                    lineNumber: 26,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "playground/App.tsx",
-                lineNumber: 25,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.View), {
-                container: true,
-                inverted: true,
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
-                    direction: "row",
-                    flex: "center",
-                    top: "4",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
-                        direction: "column",
-                        width: 25,
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Box), {
-                                theme: "fill",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Divider), {
-                                        bottom: "6",
-                                        top: "6"
-                                    }, void 0, false, {
-                                        fileName: "playground/App.tsx",
-                                        lineNumber: 137,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
                                         accent: true,
                                         as: "h1",
                                         children: "Airbnb, Stayz, Booking.com and Homes & Villas Management"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 138,
+                                        lineNumber: 43,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27400,7 +27178,7 @@ function App() {
                                         children: "Make your short-term rental listings work for you, without the hassle"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 141,
+                                        lineNumber: 46,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27408,7 +27186,7 @@ function App() {
                                         children: "Make your short-term rental listings work for you, without the hassle"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 144,
+                                        lineNumber: 49,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27416,7 +27194,7 @@ function App() {
                                         children: "Make your short-term rental listings work for you, without the hassle"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 147,
+                                        lineNumber: 52,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27424,7 +27202,7 @@ function App() {
                                         children: "Make your short-term rental listings work for you, without the hassle"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 150,
+                                        lineNumber: 55,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27432,7 +27210,7 @@ function App() {
                                         children: "Make your short-term rental listings work for you, without the hassle"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 153,
+                                        lineNumber: 58,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27440,7 +27218,7 @@ function App() {
                                         children: "Make your short-term rental listings work for you, without the hassle"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 156,
+                                        lineNumber: 61,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
@@ -27448,7 +27226,7 @@ function App() {
                                         children: "Make your short-term rental listings work for you, without the hassle"
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 159,
+                                        lineNumber: 64,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Stack), {
@@ -27460,18 +27238,18 @@ function App() {
                                             submitValid: true
                                         }, void 0, false, {
                                             fileName: "playground/App.tsx",
-                                            lineNumber: 164,
+                                            lineNumber: 69,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "playground/App.tsx",
-                                        lineNumber: 163,
+                                        lineNumber: 68,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 136,
+                                lineNumber: 41,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27481,7 +27259,7 @@ function App() {
                                 children: "Button"
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 172,
+                                lineNumber: 77,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Popover), {
@@ -27498,12 +27276,12 @@ function App() {
                                     children: "Test"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 186,
+                                    lineNumber: 91,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 175,
+                                lineNumber: 80,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Popover), {
@@ -27519,12 +27297,12 @@ function App() {
                                     children: "Test"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 198,
+                                    lineNumber: 103,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 188,
+                                lineNumber: 93,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Dialog), {
@@ -27540,12 +27318,12 @@ function App() {
                                     children: "Test"
                                 }, void 0, false, {
                                     fileName: "playground/App.tsx",
-                                    lineNumber: 210,
+                                    lineNumber: 115,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 200,
+                                lineNumber: 105,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Dropdown), {
@@ -27571,7 +27349,7 @@ function App() {
                                 }, void 0, false, void 0, void 0)
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 212,
+                                lineNumber: 117,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
@@ -27583,7 +27361,7 @@ function App() {
                                 children: "Button"
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 226,
+                                lineNumber: 131,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
@@ -27591,7 +27369,7 @@ function App() {
                                 children: "Make your short-term rental listings work for you, without the hassle"
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 234,
+                                lineNumber: 139,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Table), {
@@ -27649,27 +27427,27 @@ function App() {
                                 ]
                             }, void 0, false, {
                                 fileName: "playground/App.tsx",
-                                lineNumber: 237,
+                                lineNumber: 142,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "playground/App.tsx",
-                        lineNumber: 135,
+                        lineNumber: 40,
                         columnNumber: 11
                     }, this)
-                }, void 0, false, {
-                    fileName: "playground/App.tsx",
-                    lineNumber: 134,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
+                ]
+            }, void 0, true, {
                 fileName: "playground/App.tsx",
-                lineNumber: 133,
-                columnNumber: 7
+                lineNumber: 26,
+                columnNumber: 9
             }, this)
-        ]
-    }, void 0, true, {
+        }, void 0, false, {
+            fileName: "playground/App.tsx",
+            lineNumber: 25,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
         fileName: "playground/App.tsx",
         lineNumber: 24,
         columnNumber: 5
@@ -32883,38 +32661,38 @@ var _index1 = require("./components/Box/index");
 parcelHelpers.exportAll(_index1, exports);
 var _index2 = require("./components/Button/index");
 parcelHelpers.exportAll(_index2, exports);
-var _index3 = require("./components/Dialog/index");
+var _index3 = require("./components/Code/index");
 parcelHelpers.exportAll(_index3, exports);
-var _index4 = require("./components/Divider/index");
+var _index4 = require("./components/Dialog/index");
 parcelHelpers.exportAll(_index4, exports);
-var _index5 = require("./components/Dropdown/index");
+var _index5 = require("./components/Divider/index");
 parcelHelpers.exportAll(_index5, exports);
-var _index6 = require("./components/Image/index");
+var _index6 = require("./components/Dropdown/index");
 parcelHelpers.exportAll(_index6, exports);
-var _index7 = require("./components/Input/index");
+var _index7 = require("./components/Field/index");
 parcelHelpers.exportAll(_index7, exports);
-var _index8 = require("./components/Loading/index");
+var _index8 = require("./components/Image/index");
 parcelHelpers.exportAll(_index8, exports);
-var _index9 = require("./components/Popover/index");
+var _index9 = require("./components/Input/index");
 parcelHelpers.exportAll(_index9, exports);
-var _index10 = require("./components/Provider/index");
+var _index10 = require("./components/Loading/index");
 parcelHelpers.exportAll(_index10, exports);
-var _index11 = require("./components/Stack/index");
+var _index11 = require("./components/Popover/index");
 parcelHelpers.exportAll(_index11, exports);
-var _index12 = require("./components/Table/index");
+var _index12 = require("./components/Provider/index");
 parcelHelpers.exportAll(_index12, exports);
-var _index13 = require("./components/Text/index");
+var _index13 = require("./components/Stack/index");
 parcelHelpers.exportAll(_index13, exports);
-var _index14 = require("./components/View/index");
+var _index14 = require("./components/Table/index");
 parcelHelpers.exportAll(_index14, exports);
-var _index15 = require("./components/Code/index");
+var _index15 = require("./components/Text/index");
 parcelHelpers.exportAll(_index15, exports);
-var _index16 = require("./components/Field/index");
+var _index16 = require("./components/View/index");
 parcelHelpers.exportAll(_index16, exports);
 var _stitchesConfig = require("./stitches.config");
 parcelHelpers.exportAll(_stitchesConfig, exports);
 
-},{"./components/Avatar":"iC4G6","./components/Badge/index":"egHOx","./components/Box/index":"8AYsO","./components/Button/index":"i3jlU","./components/Dialog/index":"7DV0X","./components/Divider/index":"4ujjS","./components/Dropdown/index":"9yvFB","./components/Image/index":"ikXqf","./components/Input/index":"iclCk","./components/Loading/index":"gWqOi","./components/Popover/index":"ayKiy","./components/Provider/index":"gZ9Mc","./components/Stack/index":"6V7Vx","./components/Table/index":"kTnYg","./components/Text/index":"d5OVu","./components/View/index":"fyNq0","./components/Code/index":"99Ces","./components/Field/index":"gaJxM","./stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iC4G6":[function(require,module,exports) {
+},{"./components/Avatar":"iC4G6","./components/Badge/index":"egHOx","./components/Box/index":"8AYsO","./components/Button/index":"i3jlU","./components/Code/index":"99Ces","./components/Dialog/index":"7DV0X","./components/Divider/index":"4ujjS","./components/Dropdown/index":"9yvFB","./components/Field/index":"gaJxM","./components/Image/index":"ikXqf","./components/Input/index":"iclCk","./components/Loading/index":"gWqOi","./components/Popover/index":"ayKiy","./components/Provider/index":"gZ9Mc","./components/Stack/index":"6V7Vx","./components/Table/index":"kTnYg","./components/Text/index":"d5OVu","./components/View/index":"fyNq0","./stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iC4G6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Avatar", ()=>(0, _avatarDefault.default));
@@ -32931,7 +32709,6 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-// import React from 'react';
 var _index = require("../../index");
 var _avatarStyles = require("./Avatar.styles");
 function Avatar(props) {
@@ -32951,23 +32728,23 @@ function Avatar(props) {
                 src: props.image
             }, void 0, false, {
                 fileName: "src/components/Avatar/Avatar.tsx",
-                lineNumber: 25,
+                lineNumber: 23,
                 columnNumber: 11
             }, this)
         }, void 0, false, {
             fileName: "src/components/Avatar/Avatar.tsx",
-            lineNumber: 24,
+            lineNumber: 22,
             columnNumber: 9
         }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _avatarStyles.AvatarFallbackStyled), {
             children: props.fallback
         }, void 0, false, {
             fileName: "src/components/Avatar/Avatar.tsx",
-            lineNumber: 34,
+            lineNumber: 32,
             columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "src/components/Avatar/Avatar.tsx",
-        lineNumber: 16,
+        lineNumber: 14,
         columnNumber: 5
     }, this);
 }
@@ -33079,9 +32856,9 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
             small: "1.2rem"
         },
         fontWeights: {
-            h1: "500",
-            h2: "500",
-            h3: "500",
+            h1: "700",
+            h2: "bold",
+            h3: "bold",
             h4: "bold",
             h5: "normal",
             h6: "normal",
@@ -33091,7 +32868,8 @@ const { theme , css , styled , getCssText , globalCss , keyframes  } = (0, _reac
         fonts: {
             default: "$sans",
             sans: "Untitled Sans, apple-system, sans-serif",
-            serif: "Tiempos Headline"
+            // serif: 'Tiempos Headline',
+            serif: "$sans"
         },
         media: breakpoints,
         radii: {
@@ -34213,7 +33991,6 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-// import React from 'react';
 var _phosphorReact = require("phosphor-react");
 var _index = require("../../index");
 var _stitchesConfig = require("../../stitches.config");
@@ -34241,7 +34018,7 @@ function Badge(props) {
                 children: props.icon
             }, void 0, false, {
                 fileName: "src/components/Badge/Badge.tsx",
-                lineNumber: 51,
+                lineNumber: 50,
                 columnNumber: 9
             }, this),
             props.dot && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badgeStyles.BadgeDotStyled), {
@@ -34251,17 +34028,17 @@ function Badge(props) {
                     weight: "fill"
                 }, void 0, false, {
                     fileName: "src/components/Badge/Badge.tsx",
-                    lineNumber: 57,
+                    lineNumber: 56,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/Badge/Badge.tsx",
-                lineNumber: 54,
+                lineNumber: 53,
                 columnNumber: 9
             }, this),
             props.loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Loading), {}, void 0, false, {
                 fileName: "src/components/Badge/Badge.tsx",
-                lineNumber: 60,
+                lineNumber: 59,
                 columnNumber: 24
             }, this) : props.children,
             props.icon && props.iconPosition === "right" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badgeStyles.BadgeIconStyled), {
@@ -34269,13 +34046,13 @@ function Badge(props) {
                 children: props.icon
             }, void 0, false, {
                 fileName: "src/components/Badge/Badge.tsx",
-                lineNumber: 62,
+                lineNumber: 61,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Badge/Badge.tsx",
-        lineNumber: 33,
+        lineNumber: 32,
         columnNumber: 5
     }, this);
 }
@@ -34472,45 +34249,45 @@ function Box(props) {
                 rel: "noopener noreferrer",
                 target: props.imageTarget || "_blank",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Image), {
-                    alt: props.imageAlt || "#",
+                    alt: props.imageAlt || "",
                     css: {
                         img: {
                             borderTopLeftRadius: "$1 !important",
-                            borderTopRightRadius: "$1 !important"
+                            borderTopRightRadius: "$1 !important",
+                            objectFit: "cover",
+                            objectPosition: props.imagePosition || "center"
                         }
                     },
+                    fill: true,
                     fillHeight: props.imageHeight || "20rem",
                     hover: props.hover,
-                    layout: "fill",
-                    objectFit: "cover",
-                    objectPosition: props.imagePosition || "center",
                     src: props.image
                 }, void 0, false, {
                     fileName: "src/components/Box/Box.tsx",
-                    lineNumber: 39,
+                    lineNumber: 38,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/Box/Box.tsx",
-                lineNumber: 35,
+                lineNumber: 34,
                 columnNumber: 9
             }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Image), {
-                alt: props.imageAlt || "#",
+                alt: props.imageAlt || "",
                 css: {
                     img: {
                         borderTopLeftRadius: "$1 !important",
-                        borderTopRightRadius: "$1 !important"
+                        borderTopRightRadius: "$1 !important",
+                        objectFit: "cover",
+                        objectPosition: props.imagePosition || "center"
                     }
                 },
+                fill: true,
                 fillHeight: props.imageHeight || "20rem",
                 hover: props.hover,
-                layout: "fill",
-                objectFit: "cover",
-                objectPosition: props.imagePosition || "center",
                 src: props.image
             }, void 0, false, {
                 fileName: "src/components/Box/Box.tsx",
-                lineNumber: 56,
+                lineNumber: 55,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _boxStyles.BoxImageChildrenStyled), {
@@ -34518,13 +34295,13 @@ function Box(props) {
                 children: props.children
             }, void 0, false, {
                 fileName: "src/components/Box/Box.tsx",
-                lineNumber: 72,
+                lineNumber: 71,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Box/Box.tsx",
-        lineNumber: 27,
+        lineNumber: 26,
         columnNumber: 5
     }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _boxStyles.BoxStyled), {
         css: props.css,
@@ -34536,7 +34313,7 @@ function Box(props) {
         children: props.children
     }, void 0, false, {
         fileName: "src/components/Box/Box.tsx",
-        lineNumber: 77,
+        lineNumber: 76,
         columnNumber: 5
     }, this);
 }
@@ -34674,12 +34451,12 @@ function Button(props) {
                 align: "left",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Loading), {}, void 0, false, {
                     fileName: "src/components/Button/Button.tsx",
-                    lineNumber: 52,
+                    lineNumber: 51,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/Button/Button.tsx",
-                lineNumber: 51,
+                lineNumber: 50,
                 columnNumber: 9
             }, this),
             props.icon && (props.iconPosition === "left" || !props.iconPosition) && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonStyles.ButtonIconStyled), {
@@ -34687,7 +34464,7 @@ function Button(props) {
                 children: props.icon
             }, void 0, false, {
                 fileName: "src/components/Button/Button.tsx",
-                lineNumber: 56,
+                lineNumber: 55,
                 columnNumber: 9
             }, this),
             props.children,
@@ -34696,13 +34473,13 @@ function Button(props) {
                 children: props.icon
             }, void 0, false, {
                 fileName: "src/components/Button/Button.tsx",
-                lineNumber: 60,
+                lineNumber: 59,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Button/Button.tsx",
-        lineNumber: 25,
+        lineNumber: 24,
         columnNumber: 5
     }, this);
 }
@@ -34820,6 +34597,120 @@ const ButtonIconStyled = (0, _stitchesConfig.styled)("span", {
 });
 exports.default = ButtonStyled;
 
+},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"99Ces":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Code", ()=>(0, _codeDefault.default));
+var _code = require("./Code");
+var _codeDefault = parcelHelpers.interopDefault(_code);
+
+},{"./Code":"iprOZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iprOZ":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5847 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5847.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _phosphorReact = require("phosphor-react");
+var _react = require("react");
+var _index = require("../../index");
+var _codeStyles = require("./Code.styles");
+var _s = $RefreshSig$();
+function Code(props) {
+    _s();
+    const [isCopied, setIsCopied] = (0, _react.useState)(false);
+    function handleCopy() {
+        if (props.copy) {
+            navigator.clipboard.writeText(props?.children?.toString() || "");
+            setIsCopied(true);
+            setTimeout(()=>{
+                setIsCopied(false);
+            }, 3000);
+        }
+    }
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _codeStyles.CodeStyled), {
+        css: props.css,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _codeStyles.CodeFunctionStyled), {
+                children: props.copy && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
+                    ariaLabel: "Copy",
+                    icon: isCopied ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ClipboardText), {
+                        opacity: 0.5,
+                        weight: "duotone"
+                    }, void 0, false, void 0, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ClipboardText), {
+                        weight: "duotone"
+                    }, void 0, false, void 0, void 0),
+                    name: "copy",
+                    onClick: handleCopy,
+                    children: "Copy"
+                }, void 0, false, {
+                    fileName: "src/components/Code/Code.tsx",
+                    lineNumber: 31,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "src/components/Code/Code.tsx",
+                lineNumber: 29,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _codeStyles.CodeBlockStyled), {
+                children: props.children
+            }, void 0, false, {
+                fileName: "src/components/Code/Code.tsx",
+                lineNumber: 46,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Code/Code.tsx",
+        lineNumber: 28,
+        columnNumber: 5
+    }, this);
+}
+exports.default = Code;
+_s(Code, "dIAMLjsduWkZ4KaA+ylUo0FLqmM=");
+_c = Code;
+var _c;
+$RefreshReg$(_c, "Code");
+
+  $parcel$ReactRefreshHelpers$5847.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","../../index":"4aBH6","./Code.styles":"f0eya","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"f0eya":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CodeStyled", ()=>CodeStyled);
+parcelHelpers.export(exports, "CodeFunctionStyled", ()=>CodeFunctionStyled);
+parcelHelpers.export(exports, "CodeBlockStyled", ()=>CodeBlockStyled);
+var _stitchesConfig = require("../../stitches.config");
+const CodeStyled = (0, _stitchesConfig.styled)("div", {
+    alignContent: "center",
+    alignSelf: "center",
+    borderRadius: "$1",
+    height: "100%",
+    position: "relative",
+    transition: "$default",
+    width: "100%"
+});
+const CodeFunctionStyled = (0, _stitchesConfig.styled)("div", {
+    float: "right"
+});
+const CodeBlockStyled = (0, _stitchesConfig.styled)("pre", {
+    fontFamily: "monospace",
+    lineBreak: "auto",
+    margin: "$2 0",
+    maxWidth: "80%",
+    overflow: "auto",
+    whiteSpace: "pre-wrap",
+    wordBreak: "break-word"
+});
+exports.default = CodeStyled;
+
 },{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7DV0X":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -34837,7 +34728,6 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-// import React from 'react';
 var _phosphorReact = require("phosphor-react");
 var _react = require("react");
 var _usehooksTs = require("usehooks-ts");
@@ -34880,7 +34770,7 @@ function Dialog(props) {
                 children: props.trigger
             }, void 0, false, {
                 fileName: "src/components/Dialog/Dialog.tsx",
-                lineNumber: 64,
+                lineNumber: 63,
                 columnNumber: 7
             }, this),
             isMounted && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dialogStyles.DialogOverlayStyled), {
@@ -34901,30 +34791,30 @@ function Dialog(props) {
                                 children: "Close"
                             }, void 0, false, {
                                 fileName: "src/components/Dialog/Dialog.tsx",
-                                lineNumber: 71,
+                                lineNumber: 70,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "src/components/Dialog/Dialog.tsx",
-                            lineNumber: 70,
+                            lineNumber: 69,
                             columnNumber: 13
                         }, this),
                         props.children
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Dialog/Dialog.tsx",
-                    lineNumber: 69,
+                    lineNumber: 68,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/Dialog/Dialog.tsx",
-                lineNumber: 68,
+                lineNumber: 67,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Dialog/Dialog.tsx",
-        lineNumber: 63,
+        lineNumber: 62,
         columnNumber: 5
     }, this);
 }
@@ -36301,7 +36191,6 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-// import React from 'react';
 var _stitchesConfig = require("../../stitches.config");
 var _dividerStyles = require("./Divider.styles");
 var _dividerStylesDefault = parcelHelpers.interopDefault(_dividerStyles);
@@ -36332,7 +36221,7 @@ function Divider(props) {
         id: props.id
     }, void 0, false, {
         fileName: "src/components/Divider/Divider.tsx",
-        lineNumber: 15,
+        lineNumber: 13,
         columnNumber: 5
     }, this);
 }
@@ -36376,7 +36265,6 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-// import React from 'react';
 var _router = require("next/router");
 var _react = require("react");
 var _usehooksTs = require("usehooks-ts");
@@ -36433,7 +36321,7 @@ function Dropdown(props) {
                 children: props.trigger
             }, props.active || Math.random(), false, {
                 fileName: "src/components/Dropdown/Dropdown.tsx",
-                lineNumber: 95,
+                lineNumber: 94,
                 columnNumber: 7
             }, this),
             isMounted && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownStyles.DropdownGroupStyled), {
@@ -36455,17 +36343,17 @@ function Dropdown(props) {
                             placeholder: "Search"
                         }, void 0, false, {
                             fileName: "src/components/Dropdown/Dropdown.tsx",
-                            lineNumber: 112,
+                            lineNumber: 111,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "src/components/Dropdown/Dropdown.tsx",
-                        lineNumber: 111,
+                        lineNumber: 110,
                         columnNumber: 13
                     }, this),
                     props.loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Loading), {}, void 0, false, {
                         fileName: "src/components/Dropdown/Dropdown.tsx",
-                        lineNumber: 120,
+                        lineNumber: 119,
                         columnNumber: 13
                     }, this) : !props.options || filteredOptions.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Text), {
                         accent: true,
@@ -36476,7 +36364,7 @@ function Dropdown(props) {
                         children: "No results found."
                     }, void 0, false, {
                         fileName: "src/components/Dropdown/Dropdown.tsx",
-                        lineNumber: 122,
+                        lineNumber: 121,
                         columnNumber: 13
                     }, this) : filteredOptions.map(({ label , value  })=>props.submenu ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownStyles.DropdownItemStyled), {
                             css: {
@@ -36488,12 +36376,12 @@ function Dropdown(props) {
                                 children: label
                             }, void 0, false, {
                                 fileName: "src/components/Dropdown/Dropdown.tsx",
-                                lineNumber: 134,
+                                lineNumber: 133,
                                 columnNumber: 19
                             }, this)
                         }, value, false, {
                             fileName: "src/components/Dropdown/Dropdown.tsx",
-                            lineNumber: 128,
+                            lineNumber: 127,
                             columnNumber: 17
                         }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownStyles.DropdownItemStyled), {
                             css: {
@@ -36506,19 +36394,19 @@ function Dropdown(props) {
                             children: label
                         }, value, false, {
                             fileName: "src/components/Dropdown/Dropdown.tsx",
-                            lineNumber: 137,
+                            lineNumber: 136,
                             columnNumber: 17
                         }, this))
                 ]
             }, void 0, true, {
                 fileName: "src/components/Dropdown/Dropdown.tsx",
-                lineNumber: 101,
+                lineNumber: 100,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Dropdown/Dropdown.tsx",
-        lineNumber: 94,
+        lineNumber: 93,
         columnNumber: 5
     }, this);
 }
@@ -37198,7 +37086,7 @@ class Router {
             // hydration. Your app should _never_ use this property. It may change at
             // any time without notice.
             const isQueryUpdating = options._h;
-            const shouldResolveHref = isQueryUpdating || options._shouldResolveHref || _parsePath.parsePath(url).pathname === _parsePath.parsePath(as).pathname;
+            let shouldResolveHref = isQueryUpdating || options._shouldResolveHref || _parsePath.parsePath(url).pathname === _parsePath.parsePath(as).pathname;
             const nextState = _extends({}, _this.state);
             // for static pages with query params in the URL we delay
             // marking the router ready until after the query is updated
@@ -37288,6 +37176,7 @@ class Router {
                 router: _this
             });
             if (options.shallow && isMiddlewareMatch) pathname = _this.pathname;
+            if (isQueryUpdating && isMiddlewareMatch) shouldResolveHref = false;
             if (shouldResolveHref && pathname !== "/_error") {
                 options._shouldResolveHref = true;
                 parsed.pathname = resolveDynamicRoute(pathname, pages);
@@ -37333,7 +37222,9 @@ class Router {
                     routeProps,
                     locale: nextState.locale,
                     isPreview: nextState.isPreview,
-                    hasMiddleware: isMiddlewareMatch
+                    hasMiddleware: isMiddlewareMatch,
+                    unstable_skipClientCache: options.unstable_skipClientCache,
+                    isQueryUpdating: isQueryUpdating && !_this.isFallback
                 });
                 if ("route" in routeInfo && isMiddlewareMatch) {
                     pathname = routeInfo.route || route;
@@ -37348,7 +37239,7 @@ class Router {
                         let rewriteAs = prefixedAs;
                         if (_hasBasePath.hasBasePath(rewriteAs)) rewriteAs = _removeBasePath.removeBasePath(rewriteAs);
                         const routeRegex1 = _routeRegex.getRouteRegex(pathname);
-                        const curRouteMatch = _routeMatcher.getRouteMatcher(routeRegex1)(rewriteAs);
+                        const curRouteMatch = _routeMatcher.getRouteMatcher(routeRegex1)(new URL(rewriteAs, location.href).pathname);
                         if (curRouteMatch) Object.assign(query, curRouteMatch);
                     }
                 }
@@ -37534,7 +37425,7 @@ class Router {
             }
         })();
     }
-    getRouteInfo({ route: requestedRoute , pathname , query , as , resolvedAs , routeProps , locale , hasMiddleware , isPreview , unstable_skipClientCache  }) {
+    getRouteInfo({ route: requestedRoute , pathname , query , as , resolvedAs , routeProps , locale , hasMiddleware , isPreview , unstable_skipClientCache , isQueryUpdating  }) {
         var _this = this;
         return _async_to_generator(function*() {
             /**
@@ -37569,14 +37460,16 @@ class Router {
                     inflightCache: _this.sdc,
                     persistCache: !isPreview,
                     isPrefetch: false,
-                    unstable_skipClientCache
+                    unstable_skipClientCache,
+                    isBackground: isQueryUpdating
                 };
-                const data = yield withMiddlewareEffects({
+                const data = isQueryUpdating ? {} : yield withMiddlewareEffects({
                     fetchData: ()=>fetchNextData(fetchNextDataParams),
                     asPath: resolvedAs,
                     locale: locale,
                     router: _this
                 });
+                if (isQueryUpdating && data) data.json = self.__NEXT_DATA__.props;
                 handleCancelled();
                 if ((data == null ? void 0 : (ref = data.effect) == null ? void 0 : ref.type) === "redirect-internal" || (data == null ? void 0 : (ref4 = data.effect) == null ? void 0 : ref4.type) === "redirect-external") return data.effect;
                 if ((data == null ? void 0 : (ref5 = data.effect) == null ? void 0 : ref5.type) === "rewrite") {
@@ -38409,7 +38302,7 @@ if ((typeof exports.default === "function" || typeof exports.default === "object
 
 },{}],"58Hib":[function(require,module,exports) {
 "use strict";
-"client";
+"use client";
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -38417,13 +38310,15 @@ exports.handleClientScriptLoad = handleClientScriptLoad;
 exports.initScriptLoader = initScriptLoader;
 exports.default = void 0;
 var _extends = require("@swc/helpers/lib/_extends.js").default;
+var _interop_require_default = require("@swc/helpers/lib/_interop_require_default.js").default;
 var _interop_require_wildcard = require("@swc/helpers/lib/_interop_require_wildcard.js").default;
 var _object_without_properties_loose = require("@swc/helpers/lib/_object_without_properties_loose.js").default;
+var _reactDom = _interop_require_default(require("react-dom"));
 var _react = _interop_require_wildcard(require("react"));
 var _headManagerContext = require("../shared/lib/head-manager-context");
 var _headManager = require("./head-manager");
 var _requestIdleCallback = require("./request-idle-callback");
-"client";
+"use client";
 const ScriptCache = new Map();
 const LoadCache = new Set();
 const ignoreProps = [
@@ -38524,7 +38419,7 @@ function Script(props) {
         "onError"
     ]);
     // Context is available only during SSR
-    const { updateScripts , scripts , getIsSsr  } = _react.useContext(_headManagerContext.HeadManagerContext);
+    const { updateScripts , scripts , getIsSsr , appDir , nonce  } = _react.useContext(_headManagerContext.HeadManagerContext);
     /**
    * - First mount:
    *   1. The useEffect for onReady executes
@@ -38590,6 +38485,52 @@ function Script(props) {
         LoadCache.add(id || src);
         else if (getIsSsr && !getIsSsr()) loadScript(props);
     }
+    // For the app directory, we need React Float to preload these scripts.
+    if (appDir) {
+        // Before interactive scripts need to be loaded by Next.js' runtime instead
+        // of native <script> tags, because they no longer have `defer`.
+        if (strategy === "beforeInteractive") {
+            if (!src) {
+                // For inlined scripts, we put the content in `children`.
+                if (restProps.dangerouslySetInnerHTML) {
+                    restProps.children = restProps.dangerouslySetInnerHTML.__html;
+                    delete restProps.dangerouslySetInnerHTML;
+                }
+                return /*#__PURE__*/ _react.default.createElement("script", {
+                    nonce: nonce,
+                    dangerouslySetInnerHTML: {
+                        __html: `(self.__next_s=self.__next_s||[]).push(${JSON.stringify([
+                            0,
+                            _extends({}, restProps), 
+                        ])})`
+                    }
+                });
+            }
+            // @ts-ignore
+            _reactDom.default.preload(src, restProps.integrity ? {
+                as: "script",
+                integrity: restProps.integrity
+            } : {
+                as: "script"
+            });
+            return /*#__PURE__*/ _react.default.createElement("script", {
+                nonce: nonce,
+                dangerouslySetInnerHTML: {
+                    __html: `(self.__next_s=self.__next_s||[]).push(${JSON.stringify([
+                        src, 
+                    ])})`
+                }
+            });
+        } else if (strategy === "afterInteractive") {
+            if (src) // @ts-ignore
+            _reactDom.default.preload(src, restProps.integrity ? {
+                as: "script",
+                integrity: restProps.integrity
+            } : {
+                as: "script"
+            });
+        }
+    }
     return null;
 }
 Object.defineProperty(Script, "__nextScript", {
@@ -38605,7 +38546,7 @@ if ((typeof exports.default === "function" || typeof exports.default === "object
     module.exports = exports.default;
 }
 
-},{"@swc/helpers/lib/_extends.js":"4vU6g","@swc/helpers/lib/_interop_require_wildcard.js":"frrjo","@swc/helpers/lib/_object_without_properties_loose.js":"6DnfI","react":"21dqq","../shared/lib/head-manager-context":"4Wc5J","./head-manager":"6zmW2","./request-idle-callback":"5zsyF"}],"6DnfI":[function(require,module,exports) {
+},{"@swc/helpers/lib/_extends.js":"4vU6g","@swc/helpers/lib/_interop_require_default.js":"k1iFV","@swc/helpers/lib/_interop_require_wildcard.js":"frrjo","@swc/helpers/lib/_object_without_properties_loose.js":"6DnfI","react-dom":"j6uA9","react":"21dqq","../shared/lib/head-manager-context":"4Wc5J","./head-manager":"6zmW2","./request-idle-callback":"5zsyF"}],"6DnfI":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -39046,8 +38987,17 @@ exports.getDisplayName = getDisplayName;
 exports.isResSent = isResSent;
 exports.normalizeRepeatedSlashes = normalizeRepeatedSlashes;
 exports.loadGetInitialProps = loadGetInitialProps;
-exports.ST = exports.SP = exports.warnOnce = exports.isAbsoluteUrl = void 0;
+exports.ST = exports.SP = exports.warnOnce = exports.isAbsoluteUrl = exports.WEB_VITALS = void 0;
 var _async_to_generator = require("@swc/helpers/lib/_async_to_generator.js").default;
+const WEB_VITALS = [
+    "CLS",
+    "FCP",
+    "FID",
+    "INP",
+    "LCP",
+    "TTFB"
+];
+exports.WEB_VITALS = WEB_VITALS;
 function execOnce(fn) {
     let used = false;
     let result;
@@ -39856,10 +39806,12 @@ function prepareDestination(args) {
         validate: false
     });
     // update any params in query values
-    for (const [key1, strOrArray] of Object.entries(destQuery))// the value needs to start with a forward-slash to be compiled
-    // correctly
-    if (Array.isArray(strOrArray)) destQuery[key1] = strOrArray.map((value)=>compileNonPath(unescapeSegments(value), args.params));
-    else destQuery[key1] = compileNonPath(unescapeSegments(strOrArray), args.params);
+    for (const [key1, strOrArray] of Object.entries(destQuery)){
+        // the value needs to start with a forward-slash to be compiled
+        // correctly
+        if (Array.isArray(strOrArray)) destQuery[key1] = strOrArray.map((value)=>compileNonPath(unescapeSegments(value), args.params));
+        else if (typeof strOrArray === "string") destQuery[key1] = compileNonPath(unescapeSegments(strOrArray), args.params);
+    }
     // add path params to query if it's not a redirect and not
     // already defined in destination query or path
     let paramKeys = Object.keys(args.params).filter((name)=>name !== "nextInternalLocale");
@@ -40337,9 +40289,10 @@ var _addPathSuffix = require("./add-path-suffix");
 var _addLocale = require("./add-locale");
 function formatNextPathnameInfo(info) {
     let pathname = _addLocale.addLocale(info.pathname, info.locale, info.buildId ? undefined : info.defaultLocale, info.ignorePrefix);
+    if (info.buildId || !info.trailingSlash) pathname = _removeTrailingSlash.removeTrailingSlash(pathname);
     if (info.buildId) pathname = _addPathSuffix.addPathSuffix(_addPathPrefix.addPathPrefix(pathname, `/_next/data/${info.buildId}`), info.pathname === "/" ? "index.json" : ".json");
     pathname = _addPathPrefix.addPathPrefix(pathname, info.basePath);
-    return info.trailingSlash ? !info.buildId && !pathname.endsWith("/") ? _addPathSuffix.addPathSuffix(pathname, "/") : pathname : _removeTrailingSlash.removeTrailingSlash(pathname);
+    return !info.buildId && info.trailingSlash ? !pathname.endsWith("/") ? _addPathSuffix.addPathSuffix(pathname, "/") : pathname : _removeTrailingSlash.removeTrailingSlash(pathname);
 }
 
 },{"./remove-trailing-slash":"ltEax","./add-path-prefix":"2Cwev","./add-path-suffix":"4FJ90","./add-locale":"3JUC0"}],"4FJ90":[function(require,module,exports) {
@@ -40406,7 +40359,8 @@ function isBot(userAgent) {
 module.exports = require("./cjs/react-is.development.js");
 
 },{"./cjs/react-is.development.js":"l40OM"}],"l40OM":[function(require,module,exports) {
-/** @license React v17.0.2
+/**
+ * @license React
  * react-is.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -40419,59 +40373,40 @@ module.exports = require("./cjs/react-is.development.js");
     // ATTENTION
     // When adding new symbols to this file,
     // Please consider also adding to 'react-devtools-shared/src/backend/ReactSymbols'
-    // The Symbol used to tag the ReactElement-like types. If there is no native Symbol
-    // nor polyfill, then a plain number is used for performance.
-    var REACT_ELEMENT_TYPE = 0xeac7;
-    var REACT_PORTAL_TYPE = 0xeaca;
-    var REACT_FRAGMENT_TYPE = 0xeacb;
-    var REACT_STRICT_MODE_TYPE = 0xeacc;
-    var REACT_PROFILER_TYPE = 0xead2;
-    var REACT_PROVIDER_TYPE = 0xeacd;
-    var REACT_CONTEXT_TYPE = 0xeace;
-    var REACT_FORWARD_REF_TYPE = 0xead0;
-    var REACT_SUSPENSE_TYPE = 0xead1;
-    var REACT_SUSPENSE_LIST_TYPE = 0xead8;
-    var REACT_MEMO_TYPE = 0xead3;
-    var REACT_LAZY_TYPE = 0xead4;
-    var REACT_BLOCK_TYPE = 0xead9;
-    var REACT_SERVER_BLOCK_TYPE = 0xeada;
-    var REACT_FUNDAMENTAL_TYPE = 0xead5;
-    var REACT_SCOPE_TYPE = 0xead7;
-    var REACT_OPAQUE_ID_TYPE = 0xeae0;
-    var REACT_DEBUG_TRACING_MODE_TYPE = 0xeae1;
-    var REACT_OFFSCREEN_TYPE = 0xeae2;
-    var REACT_LEGACY_HIDDEN_TYPE = 0xeae3;
-    if (typeof Symbol === "function" && Symbol.for) {
-        var symbolFor = Symbol.for;
-        REACT_ELEMENT_TYPE = symbolFor("react.element");
-        REACT_PORTAL_TYPE = symbolFor("react.portal");
-        REACT_FRAGMENT_TYPE = symbolFor("react.fragment");
-        REACT_STRICT_MODE_TYPE = symbolFor("react.strict_mode");
-        REACT_PROFILER_TYPE = symbolFor("react.profiler");
-        REACT_PROVIDER_TYPE = symbolFor("react.provider");
-        REACT_CONTEXT_TYPE = symbolFor("react.context");
-        REACT_FORWARD_REF_TYPE = symbolFor("react.forward_ref");
-        REACT_SUSPENSE_TYPE = symbolFor("react.suspense");
-        REACT_SUSPENSE_LIST_TYPE = symbolFor("react.suspense_list");
-        REACT_MEMO_TYPE = symbolFor("react.memo");
-        REACT_LAZY_TYPE = symbolFor("react.lazy");
-        REACT_BLOCK_TYPE = symbolFor("react.block");
-        REACT_SERVER_BLOCK_TYPE = symbolFor("react.server.block");
-        REACT_FUNDAMENTAL_TYPE = symbolFor("react.fundamental");
-        REACT_SCOPE_TYPE = symbolFor("react.scope");
-        REACT_OPAQUE_ID_TYPE = symbolFor("react.opaque.id");
-        REACT_DEBUG_TRACING_MODE_TYPE = symbolFor("react.debug_trace_mode");
-        REACT_OFFSCREEN_TYPE = symbolFor("react.offscreen");
-        REACT_LEGACY_HIDDEN_TYPE = symbolFor("react.legacy_hidden");
-    }
-    // Filter certain DOM attributes (e.g. src, href) if their values are empty strings.
+    // The Symbol used to tag the ReactElement-like types.
+    var REACT_ELEMENT_TYPE = Symbol.for("react.element");
+    var REACT_PORTAL_TYPE = Symbol.for("react.portal");
+    var REACT_FRAGMENT_TYPE = Symbol.for("react.fragment");
+    var REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode");
+    var REACT_PROFILER_TYPE = Symbol.for("react.profiler");
+    var REACT_PROVIDER_TYPE = Symbol.for("react.provider");
+    var REACT_CONTEXT_TYPE = Symbol.for("react.context");
+    var REACT_SERVER_CONTEXT_TYPE = Symbol.for("react.server_context");
+    var REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref");
+    var REACT_SUSPENSE_TYPE = Symbol.for("react.suspense");
+    var REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list");
+    var REACT_MEMO_TYPE = Symbol.for("react.memo");
+    var REACT_LAZY_TYPE = Symbol.for("react.lazy");
+    var REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen");
+    // -----------------------------------------------------------------------------
     var enableScopeAPI = false; // Experimental Create Event Handle API.
+    var enableCacheElement = false;
+    var enableTransitionTracing = false; // No known bugs, but needs performance testing
+    var enableLegacyHidden = false; // Enables unstable_avoidThisFallback feature in Fiber
+    // stuff. Intended to enable React core members to more easily debug scheduling
+    // issues in DEV builds.
+    var enableDebugTracing = false; // Track which Fiber(s) schedule render work.
+    var REACT_MODULE_REFERENCE;
+    REACT_MODULE_REFERENCE = Symbol.for("react.module.reference");
     function isValidElementType(type) {
         if (typeof type === "string" || typeof type === "function") return true;
          // Note: typeof might be other than 'symbol' or 'number' (e.g. if it's a polyfill).
-        if (type === REACT_FRAGMENT_TYPE || type === REACT_PROFILER_TYPE || type === REACT_DEBUG_TRACING_MODE_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || type === REACT_LEGACY_HIDDEN_TYPE || enableScopeAPI) return true;
+        if (type === REACT_FRAGMENT_TYPE || type === REACT_PROFILER_TYPE || enableDebugTracing || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || enableLegacyHidden || type === REACT_OFFSCREEN_TYPE || enableScopeAPI || enableCacheElement || enableTransitionTracing) return true;
         if (typeof type === "object" && type !== null) {
-            if (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_BLOCK_TYPE || type[0] === REACT_SERVER_BLOCK_TYPE) return true;
+            if (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || // types supported by any Flight configuration anywhere since
+            // we don't know which Flight build this will end up being used
+            // with.
+            type.$$typeof === REACT_MODULE_REFERENCE || type.getModuleId !== undefined) return true;
         }
         return false;
     }
@@ -40491,6 +40426,7 @@ module.exports = require("./cjs/react-is.development.js");
                         default:
                             var $$typeofType = type && type.$$typeof;
                             switch($$typeofType){
+                                case REACT_SERVER_CONTEXT_TYPE:
                                 case REACT_CONTEXT_TYPE:
                                 case REACT_FORWARD_REF_TYPE:
                                 case REACT_LAZY_TYPE:
@@ -40518,6 +40454,7 @@ module.exports = require("./cjs/react-is.development.js");
     var Profiler = REACT_PROFILER_TYPE;
     var StrictMode = REACT_STRICT_MODE_TYPE;
     var Suspense = REACT_SUSPENSE_TYPE;
+    var SuspenseList = REACT_SUSPENSE_LIST_TYPE;
     var hasWarnedAboutDeprecatedIsAsyncMode = false;
     var hasWarnedAboutDeprecatedIsConcurrentMode = false; // AsyncMode should be deprecated
     function isAsyncMode(object) {
@@ -40567,6 +40504,9 @@ module.exports = require("./cjs/react-is.development.js");
     function isSuspense(object) {
         return typeOf(object) === REACT_SUSPENSE_TYPE;
     }
+    function isSuspenseList(object) {
+        return typeOf(object) === REACT_SUSPENSE_LIST_TYPE;
+    }
     exports.ContextConsumer = ContextConsumer;
     exports.ContextProvider = ContextProvider;
     exports.Element = Element;
@@ -40578,6 +40518,7 @@ module.exports = require("./cjs/react-is.development.js");
     exports.Profiler = Profiler;
     exports.StrictMode = StrictMode;
     exports.Suspense = Suspense;
+    exports.SuspenseList = SuspenseList;
     exports.isAsyncMode = isAsyncMode;
     exports.isConcurrentMode = isConcurrentMode;
     exports.isContextConsumer = isContextConsumer;
@@ -40591,6 +40532,7 @@ module.exports = require("./cjs/react-is.development.js");
     exports.isProfiler = isProfiler;
     exports.isStrictMode = isStrictMode;
     exports.isSuspense = isSuspense;
+    exports.isSuspenseList = isSuspenseList;
     exports.isValidElementType = isValidElementType;
     exports.typeOf = typeOf;
 })();
@@ -40724,6 +40666,253 @@ const DropdownItemStyled = (0, _stitchesConfig.styled)("div", {
 });
 exports.default = DropdownStyled;
 
+},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gaJxM":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Field", ()=>(0, _fieldDefault.default));
+var _field = require("./Field");
+var _fieldDefault = parcelHelpers.interopDefault(_field);
+
+},{"./Field":"78Fg8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"78Fg8":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$f368 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$f368.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _phosphorReact = require("phosphor-react");
+var _react = require("react");
+var _index = require("../../index");
+var _fieldStyles = require("./Field.styles");
+var _s = $RefreshSig$();
+function Field(props) {
+    _s();
+    const [value, setValue] = (0, _react.useState)(props.value || "");
+    const [isCopied, setIsCopied] = (0, _react.useState)(false);
+    function handleChange(e) {
+        setValue(e.target.value);
+        if (props.onChange) props.onChange(e);
+    }
+    function handleCopy() {
+        if (props.copy) {
+            navigator.clipboard.writeText(value);
+            setIsCopied(true);
+            setTimeout(()=>{
+                setIsCopied(false);
+            }, 3000);
+        }
+    }
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fieldStyles.FieldStyled), {
+        css: {
+            maxWidth: props.width || "80%",
+            width: props.width || "80%"
+        },
+        disabled: props.disabled,
+        id: props.id,
+        state: props.success ? "success" : props.warning ? "warning" : props.error ? "error" : "default",
+        children: [
+            (props.error || props.success || props.warning || props.loading || props.submit || props.copy || props.reveal) && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fieldStyles.FieldFunctionStyled), {
+                children: [
+                    props.error && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
+                        icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.Warning), {
+                            weight: "duotone"
+                        }, void 0, false, void 0, void 0),
+                        theme: "red",
+                        children: props.errorMessage || "Error"
+                    }, void 0, false, {
+                        fileName: "src/components/Field/Field.tsx",
+                        lineNumber: 74,
+                        columnNumber: 13
+                    }, this),
+                    props.success && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
+                        icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.Check), {
+                            weight: "duotone"
+                        }, void 0, false, void 0, void 0),
+                        theme: "green",
+                        children: props.successMessage || "Success"
+                    }, void 0, false, {
+                        fileName: "src/components/Field/Field.tsx",
+                        lineNumber: 79,
+                        columnNumber: 13
+                    }, this),
+                    props.warning && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
+                        icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.Warning), {
+                            weight: "duotone"
+                        }, void 0, false, void 0, void 0),
+                        theme: "orange",
+                        children: props.warningMessage || "Warning"
+                    }, void 0, false, {
+                        fileName: "src/components/Field/Field.tsx",
+                        lineNumber: 84,
+                        columnNumber: 13
+                    }, this),
+                    props.loading && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Loading), {}, void 0, false, {
+                            fileName: "src/components/Field/Field.tsx",
+                            lineNumber: 90,
+                            columnNumber: 15
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/components/Field/Field.tsx",
+                        lineNumber: 89,
+                        columnNumber: 13
+                    }, this),
+                    props.copy && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
+                        ariaLabel: "Copy",
+                        icon: isCopied ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ClipboardText), {
+                            opacity: 0.5,
+                            weight: "duotone"
+                        }, void 0, false, void 0, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ClipboardText), {
+                            weight: "duotone"
+                        }, void 0, false, void 0, void 0),
+                        name: "copy",
+                        onClick: handleCopy,
+                        children: "Copy"
+                    }, void 0, false, {
+                        fileName: "src/components/Field/Field.tsx",
+                        lineNumber: 94,
+                        columnNumber: 13
+                    }, this),
+                    props.submit && props.submitFunction && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
+                        ariaLabel: "Submit",
+                        disabled: !props.submitValid,
+                        name: "submit",
+                        onClick: ()=>props.submitFunction(value),
+                        children: props.submit
+                    }, void 0, false, {
+                        fileName: "src/components/Field/Field.tsx",
+                        lineNumber: 110,
+                        columnNumber: 13
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Field/Field.tsx",
+                lineNumber: 72,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fieldStyles.FieldAreaStyled), {
+                cols: props.cols,
+                css: props.css,
+                disabled: props.disabled,
+                onChange: handleChange,
+                placeholder: props.placeholder,
+                rows: props.rows,
+                value: value
+            }, void 0, false, {
+                fileName: "src/components/Field/Field.tsx",
+                lineNumber: 120,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Field/Field.tsx",
+        lineNumber: 49,
+        columnNumber: 5
+    }, this);
+}
+exports.default = Field;
+_s(Field, "/hE9jlOuBcZyFPfX6APa1zSUweM=");
+_c = Field;
+var _c;
+$RefreshReg$(_c, "Field");
+
+  $parcel$ReactRefreshHelpers$f368.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","../../index":"4aBH6","./Field.styles":"bUhHh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bUhHh":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "FieldStyled", ()=>FieldStyled);
+parcelHelpers.export(exports, "FieldAreaStyled", ()=>FieldAreaStyled);
+parcelHelpers.export(exports, "FieldFunctionStyled", ()=>FieldFunctionStyled);
+var _stitchesConfig = require("../../stitches.config");
+const FieldStyled = (0, _stitchesConfig.styled)("div", {
+    "&:focus-within": {
+        boxShadow: "$1"
+    },
+    "&:hover": {
+        boxShadow: "$1"
+    },
+    "*": {
+        verticalAlign: "middle"
+    },
+    "alignContent": "center",
+    "alignSelf": "center",
+    "borderRadius": "$1",
+    "justifyContent": "center",
+    "position": "relative",
+    "transition": "$default",
+    "variants": {
+        disabled: {
+            true: {
+                cursor: "not-allowed",
+                opacity: "0.7"
+            }
+        },
+        state: {
+            default: {
+                border: "0.1rem solid $border"
+            },
+            error: {
+                border: "0.2rem solid $redOverlay"
+            },
+            success: {
+                border: "0.2rem solid $greenOverlay"
+            },
+            warning: {
+                border: "0.2rem solid $orangeOverlay"
+            }
+        }
+    },
+    "width": "100%"
+});
+const FieldAreaStyled = (0, _stitchesConfig.styled)("textarea", {
+    "&:after": {
+        clear: "both",
+        content: '""'
+    },
+    "&:focus": {
+        outline: "none"
+    },
+    "appearance": "none",
+    "backgroundColor": "transparent",
+    "border": "none",
+    "color": "$text",
+    "display": "block",
+    "fontFamily": "$sans !important",
+    "fontSize": "16px !important",
+    "margin": "0 auto",
+    "padding": "$3 $4",
+    "width": "100%"
+});
+const FieldFunctionStyled = (0, _stitchesConfig.styled)("div", {
+    borderBottom: "0.1rem solid $border",
+    button: {
+        fontSize: "$p",
+        marginLeft: "$2",
+        paddingBottom: "$1",
+        paddingLeft: "$3",
+        paddingRight: "$3",
+        paddingTop: "$1"
+    },
+    height: "100%",
+    padding: "$2 $4",
+    position: "relative",
+    svg: {
+        height: "1.8rem",
+        marginTop: "-0.1rem",
+        verticalAlign: "middle",
+        width: "1.8rem"
+    },
+    verticalAlign: "middle",
+    width: "100%"
+});
+
 },{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ikXqf":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -40741,7 +40930,6 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-// import React from 'react';
 var _image = require("next/image");
 var _imageDefault = parcelHelpers.interopDefault(_image);
 var _imageStyles = require("./Image.styles");
@@ -40758,12 +40946,12 @@ function Image(props) {
             ...rest
         }, void 0, false, {
             fileName: "src/components/Image/Image.tsx",
-            lineNumber: 25,
+            lineNumber: 24,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/components/Image/Image.tsx",
-        lineNumber: 18,
+        lineNumber: 17,
         columnNumber: 5
     }, this);
 }
@@ -40783,9 +40971,15 @@ module.exports = require("./dist/client/image");
 },{"./dist/client/image":"5nHO8"}],"5nHO8":[function(require,module,exports) {
 "use strict";
 var global = arguments[3];
-"client";
+"use client";
 Object.defineProperty(exports, "__esModule", {
     value: true
+});
+Object.defineProperty(exports, "ImageLoaderProps", {
+    enumerable: true,
+    get: function() {
+        return _imageConfig.ImageLoaderProps;
+    }
 });
 exports.default = Image;
 var _extends = require("@swc/helpers/lib/_extends.js").default;
@@ -40794,27 +40988,25 @@ var _interop_require_wildcard = require("@swc/helpers/lib/_interop_require_wildc
 var _object_without_properties_loose = require("@swc/helpers/lib/_object_without_properties_loose.js").default;
 var _react = _interop_require_wildcard(require("react"));
 var _head = _interop_require_default(require("../shared/lib/head"));
+var _imageBlurSvg = require("../shared/lib/image-blur-svg");
 var _imageConfig = require("../shared/lib/image-config");
-var _useIntersection = require("./use-intersection");
 var _imageConfigContext = require("../shared/lib/image-config-context");
 var _utils = require("../shared/lib/utils");
-var _normalizeTrailingSlash = require("./normalize-trailing-slash");
+var _imageLoader = _interop_require_default(require("next/dist/shared/lib/image-loader"));
 function Image(_param) {
-    var { src , sizes , unoptimized =false , priority =false , loading , lazyRoot =null , lazyBoundary , className , quality , width , height , style , objectFit , objectPosition , onLoadingComplete , placeholder ="empty" , blurDataURL  } = _param, all = _object_without_properties_loose(_param, [
+    var { src , sizes , unoptimized =false , priority =false , loading , className , quality , width , height , fill , style , onLoad , onLoadingComplete , placeholder ="empty" , blurDataURL  } = _param, all = _object_without_properties_loose(_param, [
         "src",
         "sizes",
         "unoptimized",
         "priority",
         "loading",
-        "lazyRoot",
-        "lazyBoundary",
         "className",
         "quality",
         "width",
         "height",
+        "fill",
         "style",
-        "objectFit",
-        "objectPosition",
+        "onLoad",
         "onLoadingComplete",
         "placeholder",
         "blurDataURL"
@@ -40835,40 +41027,50 @@ function Image(_param) {
         configContext
     ]);
     let rest = all;
-    let layout = sizes ? "responsive" : "intrinsic";
-    if ("layout" in rest) {
-        // Override default layout if the user specified one:
-        if (rest.layout) layout = rest.layout;
-        // Remove property so it's not spread on <img>:
-        delete rest.layout;
-    }
-    let loader = defaultImageLoader;
-    if ("loader" in rest) {
-        if (rest.loader) {
-            const customImageLoader = rest.loader;
-            var _tmp;
-            _tmp = (obj)=>{
-                const { config: _  } = obj, opts = _object_without_properties_loose(obj, [
-                    "config"
-                ]);
-                // The config object is internal only so we must
-                // not pass it to the user-defined loader()
-                return customImageLoader(opts);
-            }, loader = _tmp, _tmp;
-        }
-        // Remove property so it's not spread on <img>
-        delete rest.loader;
+    let loader = rest.loader || _imageLoader.default;
+    // Remove property so it's not spread on <img> element
+    delete rest.loader;
+    if ("__next_img_default" in loader) {
+        // This special value indicates that the user
+        // didn't define a "loader" prop or config.
+        if (config.loader === "custom") throw new Error(`Image with src "${src}" is missing "loader" prop.` + `\nRead more: https://nextjs.org/docs/messages/next-image-missing-loader`);
+    } else {
+        // The user defined a "loader" prop or config.
+        // Since the config object is internal only, we
+        // must not pass it to the user-defined "loader".
+        const customImageLoader = loader;
+        var _tmp;
+        _tmp = (obj)=>{
+            const { config: _  } = obj, opts = _object_without_properties_loose(obj, [
+                "config"
+            ]);
+            return customImageLoader(opts);
+        }, loader = _tmp, _tmp;
     }
     let staticSrc = "";
+    let widthInt = getInt(width);
+    let heightInt = getInt(height);
+    let blurWidth;
+    let blurHeight;
     if (isStaticImport(src)) {
         const staticImageData = isStaticRequire(src) ? src.default : src;
         if (!staticImageData.src) throw new Error(`An object should only be passed to the image component src parameter if it comes from a static image import. It must include src. Received ${JSON.stringify(staticImageData)}`);
+        if (!staticImageData.height || !staticImageData.width) throw new Error(`An object should only be passed to the image component src parameter if it comes from a static image import. It must include height and width. Received ${JSON.stringify(staticImageData)}`);
+        blurWidth = staticImageData.blurWidth;
+        blurHeight = staticImageData.blurHeight;
         blurDataURL = blurDataURL || staticImageData.blurDataURL;
         staticSrc = staticImageData.src;
-        if (!layout || layout !== "fill") {
-            height = height || staticImageData.height;
-            width = width || staticImageData.width;
-            if (!staticImageData.height || !staticImageData.width) throw new Error(`An object should only be passed to the image component src parameter if it comes from a static image import. It must include height and width. Received ${JSON.stringify(staticImageData)}`);
+        if (!fill) {
+            if (!widthInt && !heightInt) {
+                widthInt = staticImageData.width;
+                heightInt = staticImageData.height;
+            } else if (widthInt && !heightInt) {
+                const ratio = widthInt / staticImageData.width;
+                heightInt = Math.round(staticImageData.height * ratio);
+            } else if (!widthInt && heightInt) {
+                const ratio1 = heightInt / staticImageData.height;
+                widthInt = Math.round(staticImageData.width * ratio1);
+            }
         }
     }
     src = typeof src === "string" ? src : staticSrc;
@@ -40878,191 +41080,112 @@ function Image(_param) {
         unoptimized = true;
         isLazy = false;
     }
-    if (typeof window !== "undefined" && loadedImageURLs.has(src)) isLazy = false;
     if (config.unoptimized) unoptimized = true;
     const [blurComplete, setBlurComplete] = _react.useState(false);
-    const [setIntersection, isIntersected, resetIntersected] = _useIntersection.useIntersection({
-        rootRef: lazyRoot,
-        rootMargin: lazyBoundary || "200px",
-        disabled: !isLazy
-    });
-    const isVisible = !isLazy || isIntersected;
-    const wrapperStyle = {
-        boxSizing: "border-box",
-        display: "block",
-        overflow: "hidden",
-        width: "initial",
-        height: "initial",
-        background: "none",
-        opacity: 1,
-        border: 0,
-        margin: 0,
-        padding: 0
-    };
-    const sizerStyle = {
-        boxSizing: "border-box",
-        display: "block",
-        width: "initial",
-        height: "initial",
-        background: "none",
-        opacity: 1,
-        border: 0,
-        margin: 0,
-        padding: 0
-    };
-    let hasSizer = false;
-    let sizerSvgUrl;
-    const layoutStyle = {
-        position: "absolute",
-        top: 0,
-        left: 0,
-        bottom: 0,
-        right: 0,
-        boxSizing: "border-box",
-        padding: 0,
-        border: "none",
-        margin: "auto",
-        display: "block",
-        width: 0,
-        height: 0,
-        minWidth: "100%",
-        maxWidth: "100%",
-        minHeight: "100%",
-        maxHeight: "100%",
-        objectFit,
-        objectPosition
-    };
-    let widthInt = getInt(width);
-    let heightInt = getInt(height);
+    const [showAltText, setShowAltText] = _react.useState(false);
     const qualityInt = getInt(quality);
-    {
-        if (!src) {
-            // React doesn't show the stack trace and there's
-            // no `src` to help identify which image, so we
-            // instead console.error(ref) during mount.
-            widthInt = widthInt || 1;
-            heightInt = heightInt || 1;
-            unoptimized = true;
-        } else {
-            if (!VALID_LAYOUT_VALUES.includes(layout)) {
-                if (layout === "raw") throw new Error(`The layout="raw" experiment has been moved to a new module. Please import \`next/future/image\` instead.`);
-                throw new Error(`Image with src "${src}" has invalid "layout" property. Provided "${layout}" should be one of ${VALID_LAYOUT_VALUES.map(String).join(",")}.`);
-            }
-            if (typeof widthInt !== "undefined" && isNaN(widthInt) || typeof heightInt !== "undefined" && isNaN(heightInt)) throw new Error(`Image with src "${src}" has invalid "width" or "height" property. These should be numeric values.`);
-            if (layout === "fill" && (width || height)) _utils.warnOnce(`Image with src "${src}" and "layout='fill'" has unused properties assigned. Please remove "width" and "height".`);
-            if (!VALID_LOADING_VALUES.includes(loading)) throw new Error(`Image with src "${src}" has invalid "loading" property. Provided "${loading}" should be one of ${VALID_LOADING_VALUES.map(String).join(",")}.`);
-            if (priority && loading === "lazy") throw new Error(`Image with src "${src}" has both "priority" and "loading='lazy'" properties. Only one should be used.`);
-            if (sizes && layout !== "fill" && layout !== "responsive") _utils.warnOnce(`Image with src "${src}" has "sizes" property but it will be ignored. Only use "sizes" with "layout='fill'" or "layout='responsive'"`);
-            if (placeholder === "blur") {
-                if (layout !== "fill" && (widthInt || 0) * (heightInt || 0) < 1600) _utils.warnOnce(`Image with src "${src}" is smaller than 40x40. Consider removing the "placeholder='blur'" property to improve performance.`);
-                if (!blurDataURL) {
-                    const VALID_BLUR_EXT = [
-                        "jpeg",
-                        "png",
-                        "webp",
-                        "avif"
-                    ] // should match next-image-loader
-                    ;
-                    throw new Error(`Image with src "${src}" has "placeholder='blur'" property but is missing the "blurDataURL" property.
+    if (!src) // React doesn't show the stack trace and there's
+    // no `src` to help identify which image, so we
+    // instead console.error(ref) during mount.
+    unoptimized = true;
+    else if (fill) {
+        if (width) throw new Error(`Image with src "${src}" has both "width" and "fill" properties. Only one should be used.`);
+        if (height) throw new Error(`Image with src "${src}" has both "height" and "fill" properties. Only one should be used.`);
+        if ((style == null ? void 0 : style.position) && style.position !== "absolute") throw new Error(`Image with src "${src}" has both "fill" and "style.position" properties. Images with "fill" always use position absolute - it cannot be modified.`);
+        if ((style == null ? void 0 : style.width) && style.width !== "100%") throw new Error(`Image with src "${src}" has both "fill" and "style.width" properties. Images with "fill" always use width 100% - it cannot be modified.`);
+        if ((style == null ? void 0 : style.height) && style.height !== "100%") throw new Error(`Image with src "${src}" has both "fill" and "style.height" properties. Images with "fill" always use height 100% - it cannot be modified.`);
+    } else {
+        if (typeof widthInt === "undefined") throw new Error(`Image with src "${src}" is missing required "width" property.`);
+        else if (isNaN(widthInt)) throw new Error(`Image with src "${src}" has invalid "width" property. Expected a numeric value in pixels but received "${width}".`);
+        if (typeof heightInt === "undefined") throw new Error(`Image with src "${src}" is missing required "height" property.`);
+        else if (isNaN(heightInt)) throw new Error(`Image with src "${src}" has invalid "height" property. Expected a numeric value in pixels but received "${height}".`);
+    }
+    if (!VALID_LOADING_VALUES.includes(loading)) throw new Error(`Image with src "${src}" has invalid "loading" property. Provided "${loading}" should be one of ${VALID_LOADING_VALUES.map(String).join(",")}.`);
+    if (priority && loading === "lazy") throw new Error(`Image with src "${src}" has both "priority" and "loading='lazy'" properties. Only one should be used.`);
+    if (placeholder === "blur") {
+        if (widthInt && heightInt && widthInt * heightInt < 1600) _utils.warnOnce(`Image with src "${src}" is smaller than 40x40. Consider removing the "placeholder='blur'" property to improve performance.`);
+        if (!blurDataURL) {
+            const VALID_BLUR_EXT = [
+                "jpeg",
+                "png",
+                "webp",
+                "avif"
+            ] // should match next-image-loader
+            ;
+            throw new Error(`Image with src "${src}" has "placeholder='blur'" property but is missing the "blurDataURL" property.
           Possible solutions:
             - Add a "blurDataURL" property, the contents should be a small Data URL to represent the image
             - Change the "src" property to a static import with one of the supported file types: ${VALID_BLUR_EXT.join(",")}
             - Remove the "placeholder" property, effectively no blur effect
           Read more: https://nextjs.org/docs/messages/placeholder-blur-data-url`);
-                }
-            }
-            if ("ref" in rest) _utils.warnOnce(`Image with src "${src}" is using unsupported "ref" property. Consider using the "onLoadingComplete" property instead.`);
-            if (!unoptimized && loader !== defaultImageLoader) {
-                const urlStr = loader({
-                    config,
-                    src,
-                    width: widthInt || 400,
-                    quality: qualityInt || 75
-                });
-                let url;
-                try {
-                    url = new URL(urlStr);
-                } catch (err) {}
-                if (urlStr === src || url && url.pathname === src && !url.search) _utils.warnOnce(`Image with src "${src}" has a "loader" property that does not implement width. Please implement it or use the "unoptimized" property instead.` + `\nRead more: https://nextjs.org/docs/messages/next-image-missing-loader-width`);
-            }
-            if (style) {
-                let overwrittenStyles = Object.keys(style).filter((key)=>key in layoutStyle);
-                if (overwrittenStyles.length) _utils.warnOnce(`Image with src ${src} is assigned the following styles, which are overwritten by automatically-generated styles: ${overwrittenStyles.join(", ")}`);
-            }
-            if (typeof window !== "undefined" && !perfObserver && window.PerformanceObserver) {
-                perfObserver = new PerformanceObserver((entryList)=>{
-                    for (const entry of entryList.getEntries()){
-                        var ref;
-                        // @ts-ignore - missing "LargestContentfulPaint" class with "element" prop
-                        const imgSrc = (entry == null ? void 0 : (ref = entry.element) == null ? void 0 : ref.src) || "";
-                        const lcpImage = allImgs.get(imgSrc);
-                        if (lcpImage && !lcpImage.priority && lcpImage.placeholder !== "blur" && !lcpImage.src.startsWith("data:") && !lcpImage.src.startsWith("blob:")) // https://web.dev/lcp/#measure-lcp-in-javascript
-                        _utils.warnOnce(`Image with src "${lcpImage.src}" was detected as the Largest Contentful Paint (LCP). Please add the "priority" property if this image is above the fold.` + `\nRead more: https://nextjs.org/docs/api-reference/next/image#priority`);
-                    }
-                });
-                try {
-                    perfObserver.observe({
-                        type: "largest-contentful-paint",
-                        buffered: true
-                    });
-                } catch (err1) {
-                    // Log error but don't crash the app
-                    console.error(err1);
-                }
-            }
         }
     }
-    const imgStyle = Object.assign({}, style, layoutStyle);
-    const blurStyle = placeholder === "blur" && !blurComplete ? {
-        backgroundSize: objectFit || "cover",
-        backgroundPosition: objectPosition || "0% 0%",
-        filter: "blur(20px)",
-        backgroundImage: `url("${blurDataURL}")`
-    } : {};
-    if (layout === "fill") {
-        // <Image src="i.png" layout="fill" />
-        wrapperStyle.display = "block";
-        wrapperStyle.position = "absolute";
-        wrapperStyle.top = 0;
-        wrapperStyle.left = 0;
-        wrapperStyle.bottom = 0;
-        wrapperStyle.right = 0;
-    } else if (typeof widthInt !== "undefined" && typeof heightInt !== "undefined") {
-        // <Image src="i.png" width="100" height="100" />
-        const quotient = heightInt / widthInt;
-        const paddingTop = isNaN(quotient) ? "100%" : `${quotient * 100}%`;
-        if (layout === "responsive") {
-            // <Image src="i.png" width="100" height="100" layout="responsive" />
-            wrapperStyle.display = "block";
-            wrapperStyle.position = "relative";
-            hasSizer = true;
-            sizerStyle.paddingTop = paddingTop;
-        } else if (layout === "intrinsic") {
-            // <Image src="i.png" width="100" height="100" layout="intrinsic" />
-            wrapperStyle.display = "inline-block";
-            wrapperStyle.position = "relative";
-            wrapperStyle.maxWidth = "100%";
-            hasSizer = true;
-            sizerStyle.maxWidth = "100%";
-            sizerSvgUrl = `data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27${widthInt}%27%20height=%27${heightInt}%27/%3e`;
-        } else if (layout === "fixed") {
-            // <Image src="i.png" width="100" height="100" layout="fixed" />
-            wrapperStyle.display = "inline-block";
-            wrapperStyle.position = "relative";
-            wrapperStyle.width = widthInt;
-            wrapperStyle.height = heightInt;
+    if ("ref" in rest) _utils.warnOnce(`Image with src "${src}" is using unsupported "ref" property. Consider using the "onLoadingComplete" property instead.`);
+    if (!unoptimized && loader !== _imageLoader.default) {
+        const urlStr = loader({
+            config,
+            src,
+            width: widthInt || 400,
+            quality: qualityInt || 75
+        });
+        let url;
+        try {
+            url = new URL(urlStr);
+        } catch (err) {}
+        if (urlStr === src || url && url.pathname === src && !url.search) _utils.warnOnce(`Image with src "${src}" has a "loader" property that does not implement width. Please implement it or use the "unoptimized" property instead.` + `\nRead more: https://nextjs.org/docs/messages/next-image-missing-loader-width`);
+    }
+    if (typeof window !== "undefined" && !perfObserver && window.PerformanceObserver) {
+        perfObserver = new PerformanceObserver((entryList)=>{
+            for (const entry of entryList.getEntries()){
+                var ref;
+                // @ts-ignore - missing "LargestContentfulPaint" class with "element" prop
+                const imgSrc = (entry == null ? void 0 : (ref = entry.element) == null ? void 0 : ref.src) || "";
+                const lcpImage = allImgs.get(imgSrc);
+                if (lcpImage && !lcpImage.priority && lcpImage.placeholder !== "blur" && !lcpImage.src.startsWith("data:") && !lcpImage.src.startsWith("blob:")) // https://web.dev/lcp/#measure-lcp-in-javascript
+                _utils.warnOnce(`Image with src "${lcpImage.src}" was detected as the Largest Contentful Paint (LCP). Please add the "priority" property if this image is above the fold.` + `\nRead more: https://nextjs.org/docs/api-reference/next/image#priority`);
+            }
+        });
+        try {
+            perfObserver.observe({
+                type: "largest-contentful-paint",
+                buffered: true
+            });
+        } catch (err1) {
+            // Log error but don't crash the app
+            console.error(err1);
         }
-    } else throw new Error(`Image with src "${src}" must use "width" and "height" properties or "layout='fill'" property.`);
-    let imgAttributes = {
-        src: emptyDataURL,
-        srcSet: undefined,
-        sizes: undefined
-    };
-    if (isVisible) imgAttributes = generateImgAttrs({
+    }
+    const imgStyle = Object.assign(fill ? {
+        position: "absolute",
+        height: "100%",
+        width: "100%",
+        left: 0,
+        top: 0,
+        right: 0,
+        bottom: 0
+    } : {}, showAltText ? {} : {
+        color: "transparent"
+    }, style);
+    const blurStyle = placeholder === "blur" && blurDataURL && !blurComplete ? {
+        backgroundSize: imgStyle.objectFit || "cover",
+        backgroundPosition: imgStyle.objectPosition || "50% 50%",
+        backgroundRepeat: "no-repeat",
+        backgroundImage: `url("data:image/svg+xml;charset=utf-8,${_imageBlurSvg.getImageBlurSvg({
+            widthInt,
+            heightInt,
+            blurWidth,
+            blurHeight,
+            blurDataURL
+        })}")`
+    } : {};
+    if (blurStyle.backgroundImage && (blurDataURL == null ? void 0 : blurDataURL.startsWith("/"))) // During `next dev`, we don't want to generate blur placeholders with webpack
+    // because it can delay starting the dev server. Instead, `next-image-loader.js`
+    // will inline a special url to lazily generate the blur placeholder at request time.
+    blurStyle.backgroundImage = `url("${blurDataURL}")`;
+    const imgAttributes = generateImgAttrs({
         config,
         src,
         unoptimized,
-        layout,
         width: widthInt,
         quality: qualityInt,
         sizes,
@@ -41090,22 +41213,17 @@ function Image(_param) {
         [imageSizesPropName]: imgAttributes.sizes,
         crossOrigin: rest.crossOrigin
     };
-    const useLayoutEffect = typeof window === "undefined" ? _react.default.useEffect : _react.default.useLayoutEffect;
+    const onLoadRef = _react.useRef(onLoad);
+    _react.useEffect(()=>{
+        onLoadRef.current = onLoad;
+    }, [
+        onLoad
+    ]);
     const onLoadingCompleteRef = _react.useRef(onLoadingComplete);
-    const previousImageSrc = _react.useRef(src);
     _react.useEffect(()=>{
         onLoadingCompleteRef.current = onLoadingComplete;
     }, [
         onLoadingComplete
-    ]);
-    useLayoutEffect(()=>{
-        if (previousImageSrc.current !== src) {
-            resetIntersected();
-            previousImageSrc.current = src;
-        }
-    }, [
-        resetIntersected,
-        src
     ]);
     const imgElementArgs = _extends({
         isLazy,
@@ -41113,42 +41231,22 @@ function Image(_param) {
         heightInt,
         widthInt,
         qualityInt,
-        layout,
         className,
         imgStyle,
         blurStyle,
         loading,
         config,
+        fill,
         unoptimized,
         placeholder,
         loader,
         srcString,
+        onLoadRef,
         onLoadingCompleteRef,
         setBlurComplete,
-        setIntersection,
-        isVisible,
-        noscriptSizes: sizes
+        setShowAltText
     }, rest);
-    return /*#__PURE__*/ _react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/ _react.default.createElement("span", {
-        style: wrapperStyle
-    }, hasSizer ? /*#__PURE__*/ _react.default.createElement("span", {
-        style: sizerStyle
-    }, sizerSvgUrl ? /*#__PURE__*/ _react.default.createElement("img", {
-        style: {
-            display: "block",
-            maxWidth: "100%",
-            width: "initial",
-            height: "initial",
-            background: "none",
-            opacity: 1,
-            border: 0,
-            margin: 0,
-            padding: 0
-        },
-        alt: "",
-        "aria-hidden": true,
-        src: sizerSvgUrl
-    }) : null) : null, /*#__PURE__*/ _react.default.createElement(ImageElement, Object.assign({}, imgElementArgs))), priority ? // for browsers that do not support `imagesrcset`, and in those cases
+    return /*#__PURE__*/ _react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/ _react.default.createElement(ImageElement, Object.assign({}, imgElementArgs)), priority ? // for browsers that do not support `imagesrcset`, and in those cases
     // it would likely cause the incorrect image to be preloaded.
     //
     // https://html.spec.whatwg.org/multipage/semantics.html#attr-link-imagesrcset
@@ -41159,109 +41257,15 @@ function Image(_param) {
         href: imgAttributes.srcSet ? undefined : imgAttributes.src
     }, linkProps))) : null);
 }
-"client";
-function normalizeSrc(src) {
-    return src[0] === "/" ? src.slice(1) : src;
-}
+"use client";
 const configEnv = undefined;
-const loadedImageURLs = new Set();
 const allImgs = new Map();
 let perfObserver;
-const emptyDataURL = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
 if (typeof window === "undefined") global.__NEXT_IMAGE_IMPORTED = true;
 const VALID_LOADING_VALUES = [
     "lazy",
     "eager",
     undefined
-];
-function imgixLoader({ config , src , width , quality  }) {
-    // Demo: https://static.imgix.net/daisy.png?auto=format&fit=max&w=300
-    const url = new URL(`${config.path}${normalizeSrc(src)}`);
-    const params = url.searchParams;
-    // auto params can be combined with comma separation, or reiteration
-    params.set("auto", params.getAll("auto").join(",") || "format");
-    params.set("fit", params.get("fit") || "max");
-    params.set("w", params.get("w") || width.toString());
-    if (quality) params.set("q", quality.toString());
-    return url.href;
-}
-function akamaiLoader({ config , src , width  }) {
-    return `${config.path}${normalizeSrc(src)}?imwidth=${width}`;
-}
-function cloudinaryLoader({ config , src , width , quality  }) {
-    // Demo: https://res.cloudinary.com/demo/image/upload/w_300,c_limit,q_auto/turtles.jpg
-    const params = [
-        "f_auto",
-        "c_limit",
-        "w_" + width,
-        "q_" + (quality || "auto")
-    ];
-    const paramsString = params.join(",") + "/";
-    return `${config.path}${paramsString}${normalizeSrc(src)}`;
-}
-function customLoader({ src  }) {
-    throw new Error(`Image with src "${src}" is missing "loader" prop.` + `\nRead more: https://nextjs.org/docs/messages/next-image-missing-loader`);
-}
-function defaultLoader({ config , src , width , quality  }) {
-    {
-        const missingValues = [];
-        // these should always be provided but make sure they are
-        if (!src) missingValues.push("src");
-        if (!width) missingValues.push("width");
-        if (missingValues.length > 0) throw new Error(`Next Image Optimization requires ${missingValues.join(", ")} to be provided. Make sure you pass them as props to the \`next/image\` component. Received: ${JSON.stringify({
-            src,
-            width,
-            quality
-        })}`);
-        if (src.startsWith("//")) throw new Error(`Failed to parse src "${src}" on \`next/image\`, protocol-relative URL (//) must be changed to an absolute URL (http:// or https://)`);
-        if (!src.startsWith("/") && (config.domains || config.remotePatterns)) {
-            let parsedSrc;
-            try {
-                parsedSrc = new URL(src);
-            } catch (err) {
-                console.error(err);
-                throw new Error(`Failed to parse src "${src}" on \`next/image\`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)`);
-            }
-            {
-                // We use dynamic require because this should only error in development
-                const { hasMatch  } = require("../shared/lib/match-remote-pattern");
-                if (!hasMatch(config.domains, config.remotePatterns, parsedSrc)) throw new Error(`Invalid src prop (${src}) on \`next/image\`, hostname "${parsedSrc.hostname}" is not configured under images in your \`next.config.js\`\n` + `See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host`);
-            }
-        }
-    }
-    if (src.endsWith(".svg") && !config.dangerouslyAllowSVG) // Special case to make svg serve as-is to avoid proxying
-    // through the built-in Image Optimization API.
-    return src;
-    return `${_normalizeTrailingSlash.normalizePathTrailingSlash(config.path)}?url=${encodeURIComponent(src)}&w=${width}&q=${quality || 75}`;
-}
-const loaders = new Map([
-    [
-        "default",
-        defaultLoader
-    ],
-    [
-        "imgix",
-        imgixLoader
-    ],
-    [
-        "cloudinary",
-        cloudinaryLoader
-    ],
-    [
-        "akamai",
-        akamaiLoader
-    ],
-    [
-        "custom",
-        customLoader
-    ], 
-]);
-const VALID_LAYOUT_VALUES = [
-    "fill",
-    "fixed",
-    "intrinsic",
-    "responsive",
-    undefined, 
 ];
 function isStaticRequire(src) {
     return src.default !== undefined;
@@ -41272,8 +41276,8 @@ function isStaticImageData(src) {
 function isStaticImport(src) {
     return typeof src === "object" && (isStaticRequire(src) || isStaticImageData(src));
 }
-function getWidths({ deviceSizes , allSizes  }, width, layout, sizes) {
-    if (sizes && (layout === "fill" || layout === "responsive")) {
+function getWidths({ deviceSizes , allSizes  }, width, sizes) {
+    if (sizes) {
         // Find all the "vw" percent sizes used in the sizes prop
         const viewportWidthRe = /(^|\s)(1?\d?\d)vw/g;
         const percentSizes = [];
@@ -41290,7 +41294,7 @@ function getWidths({ deviceSizes , allSizes  }, width, layout, sizes) {
             kind: "w"
         };
     }
-    if (typeof width !== "number" || layout === "fill" || layout === "responsive") return {
+    if (typeof width !== "number") return {
         widths: deviceSizes,
         kind: "w"
     };
@@ -41312,13 +41316,13 @@ function getWidths({ deviceSizes , allSizes  }, width, layout, sizes) {
         kind: "x"
     };
 }
-function generateImgAttrs({ config , src , unoptimized , layout , width , quality , sizes , loader  }) {
+function generateImgAttrs({ config , src , unoptimized , width , quality , sizes , loader  }) {
     if (unoptimized) return {
         src,
         srcSet: undefined,
         sizes: undefined
     };
-    const { widths , kind  } = getWidths(config, width, layout, sizes);
+    const { widths , kind  } = getWidths(config, width, sizes);
     const last = widths.length - 1;
     return {
         sizes: !sizes && kind === "w" ? "100vw" : sizes,
@@ -41343,21 +41347,14 @@ function generateImgAttrs({ config , src , unoptimized , layout , width , qualit
     };
 }
 function getInt(x) {
-    if (typeof x === "number") return x;
-    if (typeof x === "string") return parseInt(x, 10);
-    return undefined;
-}
-function defaultImageLoader(loaderProps) {
-    var ref;
-    const loaderKey = ((ref = loaderProps.config) == null ? void 0 : ref.loader) || "default";
-    const load = loaders.get(loaderKey);
-    if (load) return load(loaderProps);
-    throw new Error(`Unknown "loader" found in "next.config.js". Expected: ${_imageConfig.VALID_LOADERS.join(", ")}. Received: ${loaderKey}`);
+    if (typeof x === "number" || typeof x === "undefined") return x;
+    if (typeof x === "string" && /^[0-9]+$/.test(x)) return parseInt(x, 10);
+    return NaN;
 }
 // See https://stackoverflow.com/q/39777833/266535 for why we use this ref
 // handler instead of the img's onLoad attribute.
-function handleLoading(img, src, layout, placeholder, onLoadingCompleteRef, setBlurComplete) {
-    if (!img || img.src === emptyDataURL || img["data-loaded-src"] === src) return;
+function handleLoading(img, src, placeholder, onLoadRef, onLoadingCompleteRef, setBlurComplete) {
+    if (!img || img["data-loaded-src"] === src) return;
     img["data-loaded-src"] = src;
     const p = "decode" in img ? img.decode() : Promise.resolve();
     p.catch(()=>{}).then(()=>{
@@ -41367,96 +41364,125 @@ function handleLoading(img, src, layout, placeholder, onLoadingCompleteRef, setB
         // - unmount is called
         // - decode() completes
         return;
-        loadedImageURLs.add(src);
         if (placeholder === "blur") setBlurComplete(true);
-        if (onLoadingCompleteRef == null ? void 0 : onLoadingCompleteRef.current) {
-            const { naturalWidth , naturalHeight  } = img;
-            // Pass back read-only primitive values but not the
-            // underlying DOM element because it could be misused.
-            onLoadingCompleteRef.current({
-                naturalWidth,
-                naturalHeight
+        if (onLoadRef == null ? void 0 : onLoadRef.current) {
+            // Since we don't have the SyntheticEvent here,
+            // we must create one with the same shape.
+            // See https://reactjs.org/docs/events.html
+            const event = new Event("load");
+            Object.defineProperty(event, "target", {
+                writable: false,
+                value: img
             });
+            let prevented = false;
+            let stopped = false;
+            onLoadRef.current(_extends({}, event, {
+                nativeEvent: event,
+                currentTarget: img,
+                target: img,
+                isDefaultPrevented: ()=>prevented,
+                isPropagationStopped: ()=>stopped,
+                persist: ()=>{},
+                preventDefault: ()=>{
+                    prevented = true;
+                    event.preventDefault();
+                },
+                stopPropagation: ()=>{
+                    stopped = true;
+                    event.stopPropagation();
+                }
+            }));
         }
-        var ref;
-        if ((ref = img.parentElement) == null ? void 0 : ref.parentElement) {
-            const parent = getComputedStyle(img.parentElement.parentElement);
-            if (!parent.position) ;
-            else if (layout === "responsive" && parent.display === "flex") _utils.warnOnce(`Image with src "${src}" may not render properly as a child of a flex container. Consider wrapping the image with a div to configure the width.`);
-            else if (layout === "fill" && parent.position !== "relative" && parent.position !== "fixed" && parent.position !== "absolute") _utils.warnOnce(`Image with src "${src}" may not render properly with a parent using position:"${parent.position}". Consider changing the parent style to position:"relative" with a width and height.`);
+        if (onLoadingCompleteRef == null ? void 0 : onLoadingCompleteRef.current) onLoadingCompleteRef.current(img);
+        {
+            if (img.getAttribute("data-nimg") === "fill") {
+                if (!img.getAttribute("sizes") || img.getAttribute("sizes") === "100vw") {
+                    let widthViewportRatio = img.getBoundingClientRect().width / window.innerWidth;
+                    if (widthViewportRatio < 0.6) _utils.warnOnce(`Image with src "${src}" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes`);
+                }
+                if (img.parentElement) {
+                    const { position  } = window.getComputedStyle(img.parentElement);
+                    const valid = [
+                        "absolute",
+                        "fixed",
+                        "relative"
+                    ];
+                    if (!valid.includes(position)) _utils.warnOnce(`Image with src "${src}" has "fill" and parent element with invalid "position". Provided "${position}" should be one of ${valid.map(String).join(",")}.`);
+                }
+                if (img.height === 0) _utils.warnOnce(`Image with src "${src}" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.`);
+            }
+            const heightModified = img.height.toString() !== img.getAttribute("height");
+            const widthModified = img.width.toString() !== img.getAttribute("width");
+            if (heightModified && !widthModified || !heightModified && widthModified) _utils.warnOnce(`Image with src "${src}" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.`);
         }
     });
 }
 const ImageElement = (_param)=>{
-    var { imgAttributes , heightInt , widthInt , qualityInt , layout , className , imgStyle , blurStyle , isLazy , placeholder , loading , srcString , config , unoptimized , loader , onLoadingCompleteRef , setBlurComplete , setIntersection , onLoad , onError , isVisible , noscriptSizes  } = _param, rest = _object_without_properties_loose(_param, [
+    var { imgAttributes , heightInt , widthInt , qualityInt , className , imgStyle , blurStyle , isLazy , fill , placeholder , loading , srcString , config , unoptimized , loader , onLoadRef , onLoadingCompleteRef , setBlurComplete , setShowAltText , onLoad , onError  } = _param, rest = _object_without_properties_loose(_param, [
         "imgAttributes",
         "heightInt",
         "widthInt",
         "qualityInt",
-        "layout",
         "className",
         "imgStyle",
         "blurStyle",
         "isLazy",
+        "fill",
         "placeholder",
         "loading",
         "srcString",
         "config",
         "unoptimized",
         "loader",
+        "onLoadRef",
         "onLoadingCompleteRef",
         "setBlurComplete",
-        "setIntersection",
+        "setShowAltText",
         "onLoad",
-        "onError",
-        "isVisible",
-        "noscriptSizes"
+        "onError"
     ]);
     loading = isLazy ? "lazy" : loading;
     return /*#__PURE__*/ _react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/ _react.default.createElement("img", Object.assign({}, rest, imgAttributes, {
+        width: widthInt,
+        height: heightInt,
         decoding: "async",
-        "data-nimg": layout,
+        "data-nimg": fill ? "fill" : "1",
         className: className,
+        // @ts-ignore - TODO: upgrade to `@types/react@17`
+        loading: loading,
         style: _extends({}, imgStyle, blurStyle),
         ref: _react.useCallback((img)=>{
-            if (img && !srcString) console.error(`Image is missing required "src" property:`, img);
-            setIntersection(img);
-            if (img == null ? void 0 : img.complete) handleLoading(img, srcString, layout, placeholder, onLoadingCompleteRef, setBlurComplete);
+            if (!img) return;
+            if (onError) // If the image has an error before react hydrates, then the error is lost.
+            // The workaround is to wait until the image is mounted which is after hydration,
+            // then we set the src again to trigger the error handler (if there was an error).
+            // eslint-disable-next-line no-self-assign
+            img.src = img.src;
+            if (!srcString) console.error(`Image is missing required "src" property:`, img);
+            if (img.getAttribute("objectFit") || img.getAttribute("objectfit")) console.error(`Image has unknown prop "objectFit". Did you mean to use the "style" prop instead?`, img);
+            if (img.getAttribute("objectPosition") || img.getAttribute("objectposition")) console.error(`Image has unknown prop "objectPosition". Did you mean to use the "style" prop instead?`, img);
+            if (img.getAttribute("alt") === null) console.error(`Image is missing required "alt" property. Please add Alternative Text to describe the image for screen readers and search engines.`);
+            if (img.complete) handleLoading(img, srcString, placeholder, onLoadRef, onLoadingCompleteRef, setBlurComplete);
         }, [
-            setIntersection,
             srcString,
-            layout,
             placeholder,
+            onLoadRef,
             onLoadingCompleteRef,
-            setBlurComplete, 
+            setBlurComplete,
+            onError, 
         ]),
         onLoad: (event)=>{
             const img = event.currentTarget;
-            handleLoading(img, srcString, layout, placeholder, onLoadingCompleteRef, setBlurComplete);
-            if (onLoad) onLoad(event);
+            handleLoading(img, srcString, placeholder, onLoadRef, onLoadingCompleteRef, setBlurComplete);
         },
         onError: (event)=>{
+            // if the real image fails to load, this will ensure "alt" is visible
+            setShowAltText(true);
             if (placeholder === "blur") // If the real image fails to load, this will still remove the placeholder.
             setBlurComplete(true);
             if (onError) onError(event);
         }
-    })), (isLazy || placeholder === "blur") && /*#__PURE__*/ _react.default.createElement("noscript", null, /*#__PURE__*/ _react.default.createElement("img", Object.assign({}, rest, generateImgAttrs({
-        config,
-        src: srcString,
-        unoptimized,
-        layout,
-        width: widthInt,
-        quality: qualityInt,
-        sizes: noscriptSizes,
-        loader
-    }), {
-        decoding: "async",
-        "data-nimg": layout,
-        style: imgStyle,
-        className: className,
-        // @ts-ignore - TODO: upgrade to `@types/react@17`
-        loading: loading
-    }))));
+    })));
 };
 if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
     Object.defineProperty(exports.default, "__esModule", {
@@ -41466,9 +41492,9 @@ if ((typeof exports.default === "function" || typeof exports.default === "object
     module.exports = exports.default;
 }
 
-},{"@swc/helpers/lib/_extends.js":"4vU6g","@swc/helpers/lib/_interop_require_default.js":"k1iFV","@swc/helpers/lib/_interop_require_wildcard.js":"frrjo","@swc/helpers/lib/_object_without_properties_loose.js":"6DnfI","react":"21dqq","../shared/lib/head":"1DDNO","../shared/lib/image-config":"eQn6B","./use-intersection":"18ZWg","../shared/lib/image-config-context":"cVmIT","../shared/lib/utils":"cHiay","./normalize-trailing-slash":"a5Qce","../shared/lib/match-remote-pattern":"dONeA"}],"1DDNO":[function(require,module,exports) {
+},{"@swc/helpers/lib/_extends.js":"4vU6g","@swc/helpers/lib/_interop_require_default.js":"k1iFV","@swc/helpers/lib/_interop_require_wildcard.js":"frrjo","@swc/helpers/lib/_object_without_properties_loose.js":"6DnfI","react":"21dqq","../shared/lib/head":"1DDNO","../shared/lib/image-blur-svg":"bWqDw","../shared/lib/image-config":"eQn6B","../shared/lib/image-config-context":"cVmIT","../shared/lib/utils":"cHiay","next/dist/shared/lib/image-loader":"e9DSX"}],"1DDNO":[function(require,module,exports) {
 "use strict";
-"client";
+"use client";
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -41483,7 +41509,7 @@ var _ampContext = require("./amp-context");
 var _headManagerContext = require("./head-manager-context");
 var _ampMode = require("./amp-mode");
 var _utils = require("./utils");
-"client";
+"use client";
 function defaultHead(inAmpMode = false) {
     const head = [
         /*#__PURE__*/ _react.default.createElement("meta", {
@@ -41674,6 +41700,21 @@ function isInAmpMode({ ampFirst =false , hybrid =false , hasQuery =false ,  } = 
     return ampFirst || hybrid && hasQuery;
 }
 
+},{}],"bWqDw":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.getImageBlurSvg = getImageBlurSvg;
+function getImageBlurSvg({ widthInt , heightInt , blurWidth , blurHeight , blurDataURL  }) {
+    const std = blurWidth && blurHeight ? "1" : "20";
+    const svgWidth = blurWidth || widthInt;
+    const svgHeight = blurHeight || heightInt;
+    const feComponentTransfer = blurDataURL.startsWith("data:image/jpeg") ? `%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'/%3E%3C/feComponentTransfer%3E%` : "";
+    if (svgWidth && svgHeight) return `%3Csvg xmlns='http%3A//www.w3.org/2000/svg' viewBox='0 0 ${svgWidth} ${svgHeight}'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='${std}'/%3E${feComponentTransfer}%3C/filter%3E%3Cimage preserveAspectRatio='none' filter='url(%23b)' x='0' y='0' height='100%25' width='100%25' href='${blurDataURL}'/%3E%3C/svg%3E`;
+    return `%3Csvg xmlns='http%3A//www.w3.org/2000/svg'%3E%3Cimage style='filter:blur(20px)' x='0' y='0' height='100%25' width='100%25' href='${blurDataURL}'/%3E%3C/svg%3E`;
+}
+
 },{}],"eQn6B":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
@@ -41711,6 +41752,7 @@ const imageConfigDefault = {
     ],
     path: "/_next/image",
     loader: "default",
+    loaderFile: "",
     domains: [],
     disableStaticImages: false,
     minimumCacheTTL: 60,
@@ -41724,104 +41766,7 @@ const imageConfigDefault = {
 };
 exports.imageConfigDefault = imageConfigDefault;
 
-},{}],"18ZWg":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.useIntersection = useIntersection;
-var _react = require("react");
-var _requestIdleCallback = require("./request-idle-callback");
-const hasIntersectionObserver = typeof IntersectionObserver === "function";
-const observers = new Map();
-const idList = [];
-function createObserver(options) {
-    const id = {
-        root: options.root || null,
-        margin: options.rootMargin || ""
-    };
-    const existing = idList.find((obj)=>obj.root === id.root && obj.margin === id.margin);
-    let instance;
-    if (existing) {
-        instance = observers.get(existing);
-        if (instance) return instance;
-    }
-    const elements = new Map();
-    const observer = new IntersectionObserver((entries)=>{
-        entries.forEach((entry)=>{
-            const callback = elements.get(entry.target);
-            const isVisible = entry.isIntersecting || entry.intersectionRatio > 0;
-            if (callback && isVisible) callback(isVisible);
-        });
-    }, options);
-    instance = {
-        id,
-        observer,
-        elements
-    };
-    idList.push(id);
-    observers.set(id, instance);
-    return instance;
-}
-function observe(element, callback, options) {
-    const { id , observer , elements  } = createObserver(options);
-    elements.set(element, callback);
-    observer.observe(element);
-    return function unobserve() {
-        elements.delete(element);
-        observer.unobserve(element);
-        // Destroy observer when there's nothing left to watch:
-        if (elements.size === 0) {
-            observer.disconnect();
-            observers.delete(id);
-            const index = idList.findIndex((obj)=>obj.root === id.root && obj.margin === id.margin);
-            if (index > -1) idList.splice(index, 1);
-        }
-    };
-}
-function useIntersection({ rootRef , rootMargin , disabled  }) {
-    const isDisabled = disabled || !hasIntersectionObserver;
-    const [visible, setVisible] = _react.useState(false);
-    const [element, setElement] = _react.useState(null);
-    _react.useEffect(()=>{
-        if (hasIntersectionObserver) {
-            if (isDisabled || visible) return;
-            if (element && element.tagName) {
-                const unobserve = observe(element, (isVisible)=>isVisible && setVisible(isVisible), {
-                    root: rootRef == null ? void 0 : rootRef.current,
-                    rootMargin
-                });
-                return unobserve;
-            }
-        } else if (!visible) {
-            const idleCallback = _requestIdleCallback.requestIdleCallback(()=>setVisible(true));
-            return ()=>_requestIdleCallback.cancelIdleCallback(idleCallback);
-        }
-    }, [
-        element,
-        isDisabled,
-        rootMargin,
-        rootRef,
-        visible
-    ]);
-    const resetVisible = _react.useCallback(()=>{
-        setVisible(false);
-    }, []);
-    return [
-        setElement,
-        visible,
-        resetVisible
-    ];
-}
-if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
-    Object.defineProperty(exports.default, "__esModule", {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-}
-
-},{"react":"21dqq","./request-idle-callback":"5zsyF"}],"cVmIT":[function(require,module,exports) {
+},{}],"cVmIT":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -41834,7 +41779,51 @@ const ImageConfigContext = _react.default.createContext(_imageConfig.imageConfig
 exports.ImageConfigContext = ImageConfigContext;
 ImageConfigContext.displayName = "ImageConfigContext";
 
-},{"@swc/helpers/lib/_interop_require_default.js":"k1iFV","react":"21dqq","./image-config":"eQn6B"}],"dONeA":[function(require,module,exports) {
+},{"@swc/helpers/lib/_interop_require_default.js":"k1iFV","react":"21dqq","./image-config":"eQn6B"}],"e9DSX":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+function defaultLoader({ config , src , width , quality  }) {
+    {
+        const missingValues = [];
+        // these should always be provided but make sure they are
+        if (!src) missingValues.push("src");
+        if (!width) missingValues.push("width");
+        if (missingValues.length > 0) throw new Error(`Next Image Optimization requires ${missingValues.join(", ")} to be provided. Make sure you pass them as props to the \`next/image\` component. Received: ${JSON.stringify({
+            src,
+            width,
+            quality
+        })}`);
+        if (src.startsWith("//")) throw new Error(`Failed to parse src "${src}" on \`next/image\`, protocol-relative URL (//) must be changed to an absolute URL (http:// or https://)`);
+        if (!src.startsWith("/") && (config.domains || config.remotePatterns)) {
+            let parsedSrc;
+            try {
+                parsedSrc = new URL(src);
+            } catch (err) {
+                console.error(err);
+                throw new Error(`Failed to parse src "${src}" on \`next/image\`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)`);
+            }
+            {
+                // We use dynamic require because this should only error in development
+                const { hasMatch  } = require("./match-remote-pattern");
+                if (!hasMatch(config.domains, config.remotePatterns, parsedSrc)) throw new Error(`Invalid src prop (${src}) on \`next/image\`, hostname "${parsedSrc.hostname}" is not configured under images in your \`next.config.js\`\n` + `See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host`);
+            }
+        }
+    }
+    if (src.endsWith(".svg") && !config.dangerouslyAllowSVG) // Special case to make svg serve as-is to avoid proxying
+    // through the built-in Image Optimization API.
+    return src;
+    return `${config.path}?url=${encodeURIComponent(src)}&w=${width}&q=${quality || 75}`;
+}
+// We use this to determine if the import is the default loader
+// or a custom loader defined by the user in next.config.js
+defaultLoader.__next_img_default = true;
+var _default = defaultLoader;
+exports.default = _default;
+
+},{"./match-remote-pattern":"dONeA"}],"dONeA":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -41863,8 +41852,8 @@ function hasMatch(domains, remotePatterns, url) {
 }
 
 },{"next/dist/compiled/micromatch":"7gTyg"}],"7gTyg":[function(require,module,exports) {
-var process = require("process");
 var __dirname = "node_modules/next/dist/compiled/micromatch";
+var process = require("process");
 (()=>{
     "use strict";
     var e = {
@@ -46511,7 +46500,6 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _phosphorReact = require("phosphor-react");
 var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
 var _usehooksTs = require("usehooks-ts");
 var _index = require("../../index");
 var _inputStyles = require("./Input.styles");
@@ -46824,7 +46812,6 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-// import React from 'react';
 var _stitchesConfig = require("../../stitches.config");
 function Loading({ stroke =(0, _stitchesConfig.theme).colors.text.toString() , width =16  }) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
@@ -46847,7 +46834,7 @@ function Loading({ stroke =(0, _stitchesConfig.theme).colors.text.toString() , w
                         strokeOpacity: ".3"
                     }, void 0, false, {
                         fileName: "src/components/Loading/Loading.tsx",
-                        lineNumber: 23,
+                        lineNumber: 21,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
@@ -46862,28 +46849,28 @@ function Loading({ stroke =(0, _stitchesConfig.theme).colors.text.toString() , w
                             type: "rotate"
                         }, void 0, false, {
                             fileName: "src/components/Loading/Loading.tsx",
-                            lineNumber: 25,
+                            lineNumber: 23,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "src/components/Loading/Loading.tsx",
-                        lineNumber: 24,
+                        lineNumber: 22,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Loading/Loading.tsx",
-                lineNumber: 22,
+                lineNumber: 20,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "src/components/Loading/Loading.tsx",
-            lineNumber: 21,
+            lineNumber: 19,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/components/Loading/Loading.tsx",
-        lineNumber: 15,
+        lineNumber: 13,
         columnNumber: 5
     }, this);
 }
@@ -46914,7 +46901,6 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-// import React from 'react';
 var _react = require("react");
 var _usehooksTs = require("usehooks-ts");
 var _popoverStyles = require("./Popover.styles");
@@ -46963,7 +46949,7 @@ function Popover(props) {
                 children: props.trigger
             }, void 0, false, {
                 fileName: "src/components/Popover/Popover.tsx",
-                lineNumber: 74,
+                lineNumber: 73,
                 columnNumber: 7
             }, this),
             isMounted && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _popoverStyles.PopoverContentStyled), {
@@ -46980,13 +46966,13 @@ function Popover(props) {
                 children: props.children
             }, void 0, false, {
                 fileName: "src/components/Popover/Popover.tsx",
-                lineNumber: 81,
+                lineNumber: 80,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Popover/Popover.tsx",
-        lineNumber: 73,
+        lineNumber: 72,
         columnNumber: 5
     }, this);
 }
@@ -47078,7 +47064,6 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CosmoProvider", ()=>CosmoProvider);
 parcelHelpers.export(exports, "ProviderToggle", ()=>ProviderToggle);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-// import React from 'react';
 var _phosphorReact = require("phosphor-react");
 var _usehooksTs = require("usehooks-ts");
 var _stitchesConfig = require("../../stitches.config");
@@ -47104,19 +47089,19 @@ function Provider(props) {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toastDefault.default), {}, void 0, false, {
                     fileName: "src/components/Provider/Provider.tsx",
-                    lineNumber: 32,
+                    lineNumber: 31,
                     columnNumber: 9
                 }, this),
                 props.children
             ]
         }, void 0, true, {
             fileName: "src/components/Provider/Provider.tsx",
-            lineNumber: 31,
+            lineNumber: 30,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/components/Provider/Provider.tsx",
-        lineNumber: 30,
+        lineNumber: 29,
         columnNumber: 5
     }, this);
 }
@@ -47137,7 +47122,7 @@ function ProviderToggle(props) {
         children: isDarkMode ? props.triggerActive || props.trigger : props.trigger
     }, void 0, false, {
         fileName: "src/components/Provider/Provider.tsx",
-        lineNumber: 45,
+        lineNumber: 44,
         columnNumber: 5
     }, this);
 }
@@ -47302,13 +47287,13 @@ function Toast(props) {
                 children: t.message && t.message.toString().length > 50 ? `${t.message.toString().substring(0, 50)}...` : t.message?.toString()
             }, t.id, false, {
                 fileName: "src/components/Provider/Toast/Toast.tsx",
-                lineNumber: 31,
+                lineNumber: 30,
                 columnNumber: 11
             }, this);
         })
     }, void 0, false, {
         fileName: "src/components/Provider/Toast/Toast.tsx",
-        lineNumber: 27,
+        lineNumber: 26,
         columnNumber: 5
     }, this);
 }
@@ -48130,18 +48115,17 @@ function Stack(props) {
             },
             ...props?.direction === "row" && {
                 "*": {
-                    alignItems: props.align,
-                    flex: props.flex,
-                    justifyContent: props.align
-                }
+                    alignItems: props.flex || "initial"
+                },
+                "alignItems": props.flex || "initial"
             }
         },
-        flexduo: props.direction === "row" && props.flexduo,
+        flexduo: props.flexduo,
         id: props.id,
         children: props.children
     }, void 0, false, {
         fileName: "src/components/Stack/Stack.tsx",
-        lineNumber: 47,
+        lineNumber: 46,
         columnNumber: 5
     }, this);
 }
@@ -48223,7 +48207,6 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-// import React from 'react';
 var _phosphorReact = require("phosphor-react");
 var _react = require("react");
 var _index = require("../../index");
@@ -48270,22 +48253,22 @@ function Table(props) {
                                 children: child
                             }, void 0, false, {
                                 fileName: "src/components/Table/Table.tsx",
-                                lineNumber: 58,
+                                lineNumber: 57,
                                 columnNumber: 17
                             }, this)
                         }, index, false, {
                             fileName: "src/components/Table/Table.tsx",
-                            lineNumber: 57,
+                            lineNumber: 56,
                             columnNumber: 15
                         }, this))
                 }, void 0, false, {
                     fileName: "src/components/Table/Table.tsx",
-                    lineNumber: 55,
+                    lineNumber: 54,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/Table/Table.tsx",
-                lineNumber: 54,
+                lineNumber: 53,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tableStyles.TableBodyStyled), {
@@ -48294,23 +48277,23 @@ function Table(props) {
                                 children: cell
                             }, index, false, {
                                 fileName: "src/components/Table/Table.tsx",
-                                lineNumber: 90,
+                                lineNumber: 89,
                                 columnNumber: 15
                             }, this))
                     }, index, false, {
                         fileName: "src/components/Table/Table.tsx",
-                        lineNumber: 88,
+                        lineNumber: 87,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "src/components/Table/Table.tsx",
-                lineNumber: 86,
+                lineNumber: 85,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Table/Table.tsx",
-        lineNumber: 52,
+        lineNumber: 51,
         columnNumber: 5
     }, this);
 }
@@ -48474,7 +48457,7 @@ function Text(props) {
         children: props.children
     }, void 0, false, {
         fileName: "src/components/Text/Text.tsx",
-        lineNumber: 22,
+        lineNumber: 21,
         columnNumber: 5
     }, this);
 }
@@ -48682,12 +48665,12 @@ function View(props) {
             children: props.children
         }, void 0, false, {
             fileName: "src/components/View/View.tsx",
-            lineNumber: 55,
+            lineNumber: 54,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/components/View/View.tsx",
-        lineNumber: 18,
+        lineNumber: 17,
         columnNumber: 5
     }, this);
 }
@@ -48746,369 +48729,6 @@ const ViewContainerStyled = (0, _stitchesConfig.styled)("div", {
     }
 });
 exports.default = ViewStyled;
-
-},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"99Ces":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Code", ()=>(0, _codeDefault.default));
-var _code = require("./Code");
-var _codeDefault = parcelHelpers.interopDefault(_code);
-
-},{"./Code":"iprOZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iprOZ":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$5847 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5847.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-// import React from 'react';
-var _phosphorReact = require("phosphor-react");
-var _react = require("react");
-var _index = require("../../index");
-var _codeStyles = require("./Code.styles");
-var _s = $RefreshSig$();
-function Code(props) {
-    _s();
-    const [isCopied, setIsCopied] = (0, _react.useState)(false);
-    function handleCopy() {
-        if (props.copy) {
-            navigator.clipboard.writeText(props?.children?.toString() || "");
-            setIsCopied(true);
-            setTimeout(()=>{
-                setIsCopied(false);
-            }, 3000);
-        }
-    }
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _codeStyles.CodeStyled), {
-        css: props.css,
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _codeStyles.CodeFunctionStyled), {
-                children: props.copy && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
-                    ariaLabel: "Copy",
-                    icon: isCopied ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ClipboardText), {
-                        opacity: 0.5,
-                        weight: "duotone"
-                    }, void 0, false, void 0, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ClipboardText), {
-                        weight: "duotone"
-                    }, void 0, false, void 0, void 0),
-                    name: "copy",
-                    onClick: handleCopy,
-                    children: "Copy"
-                }, void 0, false, {
-                    fileName: "src/components/Code/Code.tsx",
-                    lineNumber: 32,
-                    columnNumber: 11
-                }, this)
-            }, void 0, false, {
-                fileName: "src/components/Code/Code.tsx",
-                lineNumber: 30,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _codeStyles.CodeBlockStyled), {
-                children: props.children
-            }, void 0, false, {
-                fileName: "src/components/Code/Code.tsx",
-                lineNumber: 47,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Code/Code.tsx",
-        lineNumber: 29,
-        columnNumber: 5
-    }, this);
-}
-exports.default = Code;
-_s(Code, "dIAMLjsduWkZ4KaA+ylUo0FLqmM=");
-_c = Code;
-var _c;
-$RefreshReg$(_c, "Code");
-
-  $parcel$ReactRefreshHelpers$5847.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","../../index":"4aBH6","./Code.styles":"f0eya","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"f0eya":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "CodeStyled", ()=>CodeStyled);
-parcelHelpers.export(exports, "CodeFunctionStyled", ()=>CodeFunctionStyled);
-parcelHelpers.export(exports, "CodeBlockStyled", ()=>CodeBlockStyled);
-var _stitchesConfig = require("../../stitches.config");
-const CodeStyled = (0, _stitchesConfig.styled)("div", {
-    alignContent: "center",
-    alignSelf: "center",
-    borderRadius: "$1",
-    height: "100%",
-    position: "relative",
-    transition: "$default",
-    width: "100%"
-});
-const CodeFunctionStyled = (0, _stitchesConfig.styled)("div", {
-    float: "right"
-});
-const CodeBlockStyled = (0, _stitchesConfig.styled)("pre", {
-    fontFamily: "monospace",
-    lineBreak: "auto",
-    margin: "$2 0",
-    maxWidth: "80%",
-    overflow: "auto",
-    whiteSpace: "pre-wrap",
-    wordBreak: "break-word"
-});
-exports.default = CodeStyled;
-
-},{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gaJxM":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Field", ()=>(0, _fieldDefault.default));
-var _field = require("./Field");
-var _fieldDefault = parcelHelpers.interopDefault(_field);
-
-},{"./Field":"78Fg8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"78Fg8":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$f368 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$f368.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _phosphorReact = require("phosphor-react");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _index = require("../../index");
-var _fieldStyles = require("./Field.styles");
-var _s = $RefreshSig$();
-function Field(props) {
-    _s();
-    const [value, setValue] = (0, _react.useState)(props.value || "");
-    const [isCopied, setIsCopied] = (0, _react.useState)(false);
-    function handleChange(e) {
-        setValue(e.target.value);
-        if (props.onChange) props.onChange(e);
-    }
-    function handleCopy() {
-        if (props.copy) {
-            navigator.clipboard.writeText(value);
-            setIsCopied(true);
-            setTimeout(()=>{
-                setIsCopied(false);
-            }, 3000);
-        }
-    }
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fieldStyles.FieldStyled), {
-        css: {
-            maxWidth: props.width || "80%",
-            width: props.width || "80%"
-        },
-        disabled: props.disabled,
-        id: props.id,
-        state: props.success ? "success" : props.warning ? "warning" : props.error ? "error" : "default",
-        children: [
-            (props.error || props.success || props.warning || props.loading || props.submit || props.copy || props.reveal) && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fieldStyles.FieldFunctionStyled), {
-                children: [
-                    props.error && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
-                        icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.Warning), {
-                            weight: "duotone"
-                        }, void 0, false, void 0, void 0),
-                        theme: "red",
-                        children: props.errorMessage || "Error"
-                    }, void 0, false, {
-                        fileName: "src/components/Field/Field.tsx",
-                        lineNumber: 74,
-                        columnNumber: 13
-                    }, this),
-                    props.success && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
-                        icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.Check), {
-                            weight: "duotone"
-                        }, void 0, false, void 0, void 0),
-                        theme: "green",
-                        children: props.successMessage || "Success"
-                    }, void 0, false, {
-                        fileName: "src/components/Field/Field.tsx",
-                        lineNumber: 79,
-                        columnNumber: 13
-                    }, this),
-                    props.warning && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
-                        icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.Warning), {
-                            weight: "duotone"
-                        }, void 0, false, void 0, void 0),
-                        theme: "orange",
-                        children: props.warningMessage || "Warning"
-                    }, void 0, false, {
-                        fileName: "src/components/Field/Field.tsx",
-                        lineNumber: 84,
-                        columnNumber: 13
-                    }, this),
-                    props.loading && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Badge), {
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Loading), {}, void 0, false, {
-                            fileName: "src/components/Field/Field.tsx",
-                            lineNumber: 90,
-                            columnNumber: 15
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/components/Field/Field.tsx",
-                        lineNumber: 89,
-                        columnNumber: 13
-                    }, this),
-                    props.copy && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
-                        ariaLabel: "Copy",
-                        icon: isCopied ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ClipboardText), {
-                            opacity: 0.5,
-                            weight: "duotone"
-                        }, void 0, false, void 0, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phosphorReact.ClipboardText), {
-                            weight: "duotone"
-                        }, void 0, false, void 0, void 0),
-                        name: "copy",
-                        onClick: handleCopy,
-                        children: "Copy"
-                    }, void 0, false, {
-                        fileName: "src/components/Field/Field.tsx",
-                        lineNumber: 94,
-                        columnNumber: 13
-                    }, this),
-                    props.submit && props.submitFunction && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {
-                        ariaLabel: "Submit",
-                        disabled: !props.submitValid,
-                        name: "submit",
-                        onClick: ()=>props.submitFunction(value),
-                        children: props.submit
-                    }, void 0, false, {
-                        fileName: "src/components/Field/Field.tsx",
-                        lineNumber: 110,
-                        columnNumber: 13
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Field/Field.tsx",
-                lineNumber: 72,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fieldStyles.FieldAreaStyled), {
-                cols: props.cols,
-                css: props.css,
-                disabled: props.disabled,
-                onChange: handleChange,
-                placeholder: props.placeholder,
-                rows: props.rows,
-                value: value
-            }, void 0, false, {
-                fileName: "src/components/Field/Field.tsx",
-                lineNumber: 120,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Field/Field.tsx",
-        lineNumber: 49,
-        columnNumber: 5
-    }, this);
-}
-exports.default = Field;
-_s(Field, "/hE9jlOuBcZyFPfX6APa1zSUweM=");
-_c = Field;
-var _c;
-$RefreshReg$(_c, "Field");
-
-  $parcel$ReactRefreshHelpers$f368.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","phosphor-react":"zkmAe","react":"21dqq","../../index":"4aBH6","./Field.styles":"bUhHh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bUhHh":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "FieldStyled", ()=>FieldStyled);
-parcelHelpers.export(exports, "FieldAreaStyled", ()=>FieldAreaStyled);
-parcelHelpers.export(exports, "FieldFunctionStyled", ()=>FieldFunctionStyled);
-var _stitchesConfig = require("../../stitches.config");
-const FieldStyled = (0, _stitchesConfig.styled)("div", {
-    "&:focus-within": {
-        boxShadow: "$1"
-    },
-    "&:hover": {
-        boxShadow: "$1"
-    },
-    "*": {
-        verticalAlign: "middle"
-    },
-    "alignContent": "center",
-    "alignSelf": "center",
-    "borderRadius": "$1",
-    "justifyContent": "center",
-    "position": "relative",
-    "transition": "$default",
-    "variants": {
-        disabled: {
-            true: {
-                cursor: "not-allowed",
-                opacity: "0.7"
-            }
-        },
-        state: {
-            default: {
-                border: "0.1rem solid $border"
-            },
-            error: {
-                border: "0.2rem solid $redOverlay"
-            },
-            success: {
-                border: "0.2rem solid $greenOverlay"
-            },
-            warning: {
-                border: "0.2rem solid $orangeOverlay"
-            }
-        }
-    },
-    "width": "100%"
-});
-const FieldAreaStyled = (0, _stitchesConfig.styled)("textarea", {
-    "&:after": {
-        clear: "both",
-        content: '""'
-    },
-    "&:focus": {
-        outline: "none"
-    },
-    "appearance": "none",
-    "backgroundColor": "transparent",
-    "border": "none",
-    "color": "$text",
-    "display": "block",
-    "fontFamily": "$sans !important",
-    "fontSize": "16px !important",
-    "margin": "0 auto",
-    "padding": "$3 $4",
-    "width": "100%"
-});
-const FieldFunctionStyled = (0, _stitchesConfig.styled)("div", {
-    borderBottom: "0.1rem solid $border",
-    button: {
-        fontSize: "$p",
-        marginLeft: "$2",
-        paddingBottom: "$1",
-        paddingLeft: "$3",
-        paddingRight: "$3",
-        paddingTop: "$1"
-    },
-    height: "100%",
-    padding: "$2 $4",
-    position: "relative",
-    svg: {
-        height: "1.8rem",
-        marginTop: "-0.1rem",
-        verticalAlign: "middle",
-        width: "1.8rem"
-    },
-    verticalAlign: "middle",
-    width: "100%"
-});
 
 },{"../../stitches.config":"iMNz3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["1xC6H","kNcRP","fCQ4v"], "fCQ4v", "parcelRequired827")
 

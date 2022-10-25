@@ -1,4 +1,3 @@
-// import React from 'react';
 import { ReactNode } from 'react';
 
 import { breakpoints, DefaultProps } from '../../stitches.config';
@@ -118,15 +117,15 @@ export default function Stack(props: Props): JSX.Element {
             width: props.widthWide ? `${props.widthWide}%` : `${props.width}%`,
           },
         }),
+
         ...(props?.direction === 'row' && {
           '*': {
-            alignItems: props.align,
-            flex: props.flex,
-            justifyContent: props.align,
+            alignItems: props.flex || 'initial',
           },
+          'alignItems': props.flex || 'initial',
         }),
       }}
-      flexduo={props.direction === 'row' && props.flexduo}
+      flexduo={props.flexduo}
       id={props.id}>
       {props.children}
     </StackElement>

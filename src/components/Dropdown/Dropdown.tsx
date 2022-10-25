@@ -1,4 +1,3 @@
-// import React from 'react';
 import { useRouter } from 'next/router';
 import { ReactNode, useRef, useState } from 'react';
 import { useEventListener, useLockedBody, useOnClickOutside } from 'usehooks-ts';

@@ -1,5 +1,5 @@
 import { Check, ClipboardText, Warning, Eye, EyeClosed } from 'phosphor-react';
-import React, { InputHTMLAttributes, useState } from 'react';
+import { InputHTMLAttributes, useState } from 'react';
 import { useEventListener } from 'usehooks-ts';
 
 import { Button, Badge, Loading } from '../../index';

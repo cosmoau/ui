@@ -1,4 +1,3 @@
-// import React from 'react';
 import { ClipboardText } from 'phosphor-react';
 import { ReactNode, useState } from 'react';
 

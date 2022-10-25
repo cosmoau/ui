@@ -1,21 +1,21 @@
 {
   "name": "@cosmoau/ui",
-  "description": "A modular, flexible library of components and design patterns used to enforce consistency across all internal and subsidiary projects.",
-  "version": "1.0.8",
+  "description": "A library of components used across all internal projects.",
+  "version": "1.0.9",
   "author": "Jackson Dolman <mail@planare.dev>",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "bugs": {
     "url": "https://github.com/cosmoau/ui/issues"
   },
-  "sideEffects": false,
   "devDependencies": {
     "@stitches/react": "^1.2.8",
-    "@types/node": "^18.11.4",
+    "@types/node": "^18.11.5",
     "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.7",
     "eslint": "^8.26.0",
     "eslint-config-dolmios": "^1.1.1",
-    "eslint-config-next": "^12.3.1",
-    "next": "^12.3.1",
+    "eslint-config-next": "^13.0.0",
+    "next": "^13.0.0",
     "parcel": "^2.7.0",
     "path-browserify": "^1.0.1",
     "phosphor-react": "^1.4.1",
@@ -54,7 +54,6 @@
   "license": "BSD-3-Clause",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
-  "types": "./dist/esm/index.d.ts",
   "packageManager": "yarn@3.2.4",
   "peerDependencies": {
     "next": "^12.3.1",
@@ -68,12 +67,14 @@
   },
   "scripts": {
     "build": "yarn clean && yarn build:esm && yarn build:cjs",
-    "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "build:esm": "tsc",
     "clean": "rm -rf dist lib",
     "dev": "parcel playground/index.html --dist-dir playground/dist --open --no-cache",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx",
     "prettier": "prettier --check --write src"
   },
-  "source": "src/index.tsx"
+  "sideEffects": false,
+  "source": "src/index.tsx",
+  "types": "./dist/esm/index.d.ts"
 }

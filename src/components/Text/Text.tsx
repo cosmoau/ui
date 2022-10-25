@@ -1,4 +1,3 @@
-// import React from 'react';
 import { ReactNode } from 'react';
 
 import { breakpoints, DefaultProps } from '../../stitches.config';

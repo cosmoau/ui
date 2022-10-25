@@ -1,4 +1,3 @@
-// import React from 'react';
 import { FunnelSimple, SortAscending, SortDescending } from 'phosphor-react';
 import { ReactNode, useState } from 'react';
 

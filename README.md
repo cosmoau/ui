@@ -1,23 +1,55 @@
-<!-- @format -->
-
 # @cosmoau/ui
 
-By [@dolmios](https://github.com/dolmios).
+A library of components used across all internal projects.
 
-✏️ A modular, flexible library of components and design patterns used to enforce consistency across all internal and subsidiary projects.
+## Installation
 
-### Documentation
+```bash
+yarn add @cosmoau/ui
+```
 
-✍︎ https://developers.cosmogroup.io
+## Usage
 
-### Installation
+```jsx
+import { Button } from '@cosmoau/ui';
 
-    yarn add @cosmoau/ui
+function App() {
+  return <Button>Click me</Button>;
+}
+```
 
-### Development
+## Components
 
-    yarn playground
+- [x] Avatar
+- [x] Badge
+- [x] Button
+- [x] Code
+- [x] Dialog
+- [x] Divider
+- [x] Dropdown
+- [x] Field
+- [x] Image
+- [x] Input
+- [x] Loading
+- [x] Popover
+- [x] Provider
+- [x] Stack
+- [x] Table
+- [x] Text
+- [x] View
 
-### Compile
+## Development
 
-    yarn build
+```bash
+yarn dev
+```
+
+## Compiling
+
+```bash
+yarn build
+```
+
+## License
+
+BSD-3-Clause License. See [LICENSE](LICENSE) for more information.
