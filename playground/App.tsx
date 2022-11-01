@@ -24,26 +24,13 @@ export function App(): ReactElement {
     <Provider locked='light'>
       <View container>
         <Stack direction='row' flex='stretch' top='4'>
-          <Stack direction='column' width={50}>
+          <Stack direction='column'>
             <Box theme='fill'>
               <Divider bottom='6' top='6' />
-              <Stack flexduo>
-                <Text accent as='h1'>
-                  Airbnb, Stayz, Booking.com and Homes & Villas Management
-                </Text>
-                <Text accent as='h2'>
-                  A
-                </Text>
-              </Stack>
-            </Box>
-          </Stack>
-          <Stack direction='column' width={50}>
-            <Box theme='fill'>
-              <Divider bottom='6' top='6' />
-              <Text accent as='h1'>
+              <Text as='h1'>
                 Airbnb, Stayz, Booking.com and Homes & Villas Management
               </Text>
-              <Text accent as='h2'>
+              <Text as='h2'>
                 Make your short-term rental listings work for you, without the hassle
               </Text>
               <Text as='h3'>
@@ -52,7 +39,7 @@ export function App(): ReactElement {
               <Text as='h4'>
                 Make your short-term rental listings work for you, without the hassle
               </Text>
-              <Text as='h5'>
+              <Text accent as='h5'>
                 Make your short-term rental listings work for you, without the hassle
               </Text>
               <Text as='h6'>
@@ -65,7 +52,7 @@ export function App(): ReactElement {
                 Make your short-term rental listings work for you, without the hassle
               </Text>
 
-              <Stack align='center'>
+              <Stack align='center' top='6'>
                 <Input
                   listen
                   submit='Alert'

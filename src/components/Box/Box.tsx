@@ -12,17 +12,15 @@ interface Props extends DefaultProps {
   imageCTA?: string;
   imageHeight?: string;
   imageTarget?: '_blank' | '_self';
-  imagePosition?: 'top' | 'bottom' | 'center';
+  imagePosition?: 'center' | 'top' | 'bottom' | 'left' | 'right';
+  imageFit?: 'contain' | 'cover';
   imageAlt?: string;
   hover?: boolean;
   theme?: 'default' | 'success' | 'warning' | 'error' | 'transparent' | 'fill';
 }
 
 export default function Box(props: Props): JSX.Element {
-  return props.image &&
-    props.image !== '' &&
-    props.image !== undefined &&
-    props.image !== '#' ? (
+  return props.image ? (
     <BoxStyled
       css={props.css}
       hover={props.hover}
@@ -41,12 +39,12 @@ export default function Box(props: Props): JSX.Element {
               img: {
                 borderTopLeftRadius: '$1 !important',
                 borderTopRightRadius: '$1 !important',
-                objectFit: 'cover',
-                objectPosition: props.imagePosition || 'center',
               },
             }}
             fill
+            fillFit={props.imageFit || 'cover'}
             fillHeight={props.imageHeight || '20rem'}
+            fillPosition={props.imagePosition || 'center'}
             hover={props.hover}
             src={props.image}
           />
@@ -58,12 +56,12 @@ export default function Box(props: Props): JSX.Element {
             img: {
               borderTopLeftRadius: '$1 !important',
               borderTopRightRadius: '$1 !important',
-              objectFit: 'cover',
-              objectPosition: props.imagePosition || 'center',
             },
           }}
           fill
+          fillFit={props.imageFit || 'cover'}
           fillHeight={props.imageHeight || '20rem'}
+          fillPosition={props.imagePosition || 'center'}
           hover={props.hover}
           src={props.image}
         />

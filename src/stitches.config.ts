@@ -1,14 +1,14 @@
 import { createStitches, createTheme, CSS } from '@stitches/react';
 
 export const breakpoints = {
-  desktop: '@media only screen and (max-width: 1980px)',
-  desktopX: '@media only screen and (min-width: 1541px) and (max-width: 1980px)',
-  laptop: '@media only screen and (max-width: 1540px)',
-  laptopX: '@media only screen and (min-width: 921px) and (max-width: 1540px)',
-  phone: '@media only screen and (max-width: 740px)',
-  tablet: '@media only screen and (max-width: 920px)',
-  tabletX: '@media only screen and (min-width: 741px) and (max-width: 920px)',
-  wide: '@media only screen and (min-width: 1981px)',
+  desktop: '@media only screen and (max-width: 2000px)',
+  desktopX: '@media only screen and (min-width: 1601px) and (max-width: 2000px)',
+  laptop: '@media only screen and (max-width: 1600px)',
+  laptopX: '@media only screen and (min-width: 1001px) and (max-width: 1600px)',
+  phone: '@media only screen and (max-width: 800px)',
+  tablet: '@media only screen and (max-width: 1000px)',
+  tabletX: '@media only screen and (min-width: 801px) and (max-width: 1000px)',
+  wide: '@media only screen and (min-width: 2001px)',
 };
 
 export const { theme, css, styled, getCssText, globalCss, keyframes } = createStitches({
@@ -41,19 +41,19 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       text: 'rgb(253, 250, 246)',
     },
     fontSizes: {
-      h1: '3.3rem',
-      h2: '2.7rem',
-      h3: '2.4rem',
-      h4: '1.7rem',
+      h1: '3.6rem',
+      h2: '3rem',
+      h3: '2.6rem',
+      h4: '1.8rem',
       h5: '1.6rem',
       h6: '1.5rem',
       p: '1.3rem',
       small: '1.2rem',
     },
     fontWeights: {
-      h1: '700',
-      h2: 'bold',
-      h3: 'bold',
+      h1: 'normal',
+      h2: 'normal',
+      h3: 'normal',
       h4: 'bold',
       h5: 'normal',
       h6: 'normal',
@@ -63,8 +63,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     fonts: {
       default: '$sans',
       sans: 'Untitled Sans, apple-system, sans-serif',
-      // serif: 'Tiempos Headline',
-      serif: '$sans',
+      serif: 'Tiempos Headline, $sans',
     },
     media: breakpoints,
     radii: {
@@ -73,9 +72,9 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       3: '1.2rem',
     },
     shadows: {
-      1: '0 0.2rem 0.3rem 0 rgba(253, 250, 246, 0.03)',
-      2: '0 0.4rem 0.6rem 0 rgba(253, 250, 246, 0.03)',
-      3: '0 0.6rem 0.9rem 0 rgba(253, 250, 246, 0.03)',
+      1: '0 0.2rem 0.3rem 0 rgba(253, 250, 246, 0.0420)',
+      2: '0 0.4rem 0.6rem 0 rgba(253, 250, 246, 0.0420)',
+      3: '0 0.6rem 0.9rem 0 rgba(253, 250, 246, 0.0420)',
     },
     space: {
       1: '0.25rem',
@@ -83,12 +82,12 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       3: '0.75rem',
       4: '1rem',
       5: '2rem',
-      6: '4rem',
-      7: '8rem',
-      8: '10rem',
+      6: '3rem',
+      7: '6rem',
+      8: '8rem',
     },
     transitions: {
-      default: 'all 0.13s ease-in-out',
+      default: 'all 0.2s ease-in-out',
     },
     zIndices: {
       dialog: 100,
@@ -191,24 +190,24 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
 
 export const lightTheme = createTheme({
   colors: {
-    accent: 'rgb(40, 57, 73)',
+    accent: 'rgb(60, 71, 81)',
     background: 'rgb(253, 250, 246)',
     blueText: 'rgb(32, 47, 136)',
-    border: 'rgba(10, 12, 30,0.11)',
-    borderHover: 'rgba(10, 12, 30, 0.09)',
-    default: 'rgba(10, 12, 30, 0.04)',
+    border: 'rgba(10, 12, 30,0.1)',
+    borderHover: 'rgba(10, 12, 30, 0.075)',
+    default: 'rgba(10, 12, 30, 0.0420)',
     defaultHover: 'rgba(10, 12, 30, 0.06)',
     greenText: 'rgb(0, 76, 6)',
     orangeText: 'rgb(199, 84, 30)',
     pinkText: 'rgb(173, 22, 128)',
     purpleText: 'rgb(112, 23, 171)',
     redText: 'rgb(170, 28, 47)',
-    text: 'rgb(10, 37, 64)',
+    text: 'rgb(15, 18, 39)',
   },
   shadows: {
-    1: '0 0.2rem 0.3rem 0 rgba(8, 10, 27, 0.1)',
-    2: '0 0.4rem 0.6rem 0 rgba(8, 10, 27, 0.1)',
-    3: '0 0.6rem 0.8rem 0 rgba(8, 10, 27, 0.1)',
+    1: '0 0.2rem 0.3rem 0 rgba(8, 10, 27, 0.08)',
+    2: '0 0.4rem 0.6rem 0 rgba(8, 10, 27, 0.08)',
+    3: '0 0.6rem 0.8rem 0 rgba(8, 10, 27, 0.08)',
   },
 });
 

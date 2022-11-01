@@ -1,7 +1,7 @@
 {
   "name": "@cosmoau/ui",
   "description": "A library of components used across all internal projects.",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "author": "Jackson Dolman <mail@planare.dev>",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "bugs": {
@@ -9,13 +9,13 @@
   },
   "devDependencies": {
     "@stitches/react": "^1.2.8",
-    "@types/node": "^18.11.5",
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.7",
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
     "eslint": "^8.26.0",
     "eslint-config-dolmios": "^1.1.1",
-    "eslint-config-next": "^13.0.0",
-    "next": "^13.0.0",
+    "eslint-config-next": "^13.0.1",
+    "next": "^13.0.1",
     "parcel": "^2.7.0",
     "path-browserify": "^1.0.1",
     "phosphor-react": "^1.4.1",
@@ -24,7 +24,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.0",
-    "tslib": "^2.4.0",
+    "tslib": "^2.4.1",
     "typescript": "^4.8.4",
     "usehooks-ts": "^2.9.1",
     "util": "^0.12.5"
