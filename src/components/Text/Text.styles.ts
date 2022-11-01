@@ -75,9 +75,6 @@ export const TextStyled = styled('div', {
         'letterSpacing': '0.01em',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h4 * 0.9)',
-        },
-        [breakpoints.tabletX]: {
           fontSize: 'calc($h4 * 0.95)',
         },
       },
@@ -90,9 +87,6 @@ export const TextStyled = styled('div', {
         'lineHeight': '1.35 !important',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h5 * 0.925)',
-        },
-        [breakpoints.tabletX]: {
           fontSize: 'calc($h5 * 0.95)',
         },
       },
@@ -105,9 +99,6 @@ export const TextStyled = styled('div', {
         'lineHeight': '1.35 !important',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h6 * 0.925)',
-        },
-        [breakpoints.tabletX]: {
           fontSize: 'calc($h6 * 0.95)',
         },
       },
@@ -120,9 +111,6 @@ export const TextStyled = styled('div', {
         'lineHeight': '1.3 !important',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($p * 0.925)',
-        },
-        [breakpoints.tabletX]: {
           fontSize: 'calc($p * 0.95)',
         },
       },
@@ -135,9 +123,6 @@ export const TextStyled = styled('div', {
         'lineHeight': '1.3 !important',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($small * 0.925)',
-        },
-        [breakpoints.tabletX]: {
           fontSize: 'calc($small * 0.95)',
         },
       },

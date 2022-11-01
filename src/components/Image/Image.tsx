@@ -4,37 +4,39 @@ import { DefaultProps } from '../../stitches.config';
 
 import { ImageStyled } from './Image.styles';
 
-interface Props extends DefaultProps, ImageProps {
+interface Props extends DefaultProps {
   borderRadius?: 1 | 2 | 3;
   hover?: boolean;
-  fill?: boolean;
   fillFit?: 'contain' | 'cover';
   fillPosition?: 'center' | 'top' | 'bottom' | 'left' | 'right';
   fillHeight?: string | number;
 }
 
-export default function Image(props: Props): JSX.Element {
-  const { borderRadius, css, hover, fill, fillHeight, ...rest } = props;
+interface NextProps extends ImageProps {
+  src: string;
+  alt: string;
+}
 
+export default function Image(props: Props, nextProps: NextProps): JSX.Element {
   return (
     <ImageStyled
-      borderRadius={borderRadius}
+      borderRadius={props.borderRadius}
       css={{
-        ...css,
-        ...(fill && {
+        ...props.css,
+        ...(nextProps.fill && {
           height: '100%',
           img: {
             height: '100%',
-            objectFit: 'cover',
-            objectPosition: 'center',
+            objectFit: props.fillFit || 'cover',
+            objectPosition: props.fillPosition || 'center',
           },
           position: 'relative',
           width: '100%',
         }),
-        height: fillHeight || '100%',
+        height: props.fillHeight || '100%',
       }}
-      hover={hover}>
-      <NextImage {...rest} fill={fill} />
+      hover={props.hover}>
+      <NextImage {...nextProps} />
     </ImageStyled>
   );
 }
