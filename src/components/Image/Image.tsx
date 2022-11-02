@@ -10,8 +10,6 @@ interface Props extends DefaultProps, ImageProps {
   fillFit?: 'contain' | 'cover';
   fillPosition?: 'center' | 'top' | 'bottom' | 'left' | 'right';
   fillHeight?: string | number;
-  src: string;
-  alt: string;
   fill?: boolean;
 }
 
