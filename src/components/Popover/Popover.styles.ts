@@ -29,11 +29,11 @@ export const PopoverContentStyled = styled('div', {
   variants: {
     animation: {
       false: {
-        animation: `${fadeOut} .15s`,
+        animation: `${fadeOut} .4s`,
         animationFillMode: 'forwards',
       },
       true: {
-        animation: `${fadeIn} .15s`,
+        animation: `${fadeIn} .2s`,
         animationFillMode: 'forwards',
       },
     },

@@ -30,7 +30,7 @@ export const DropdownGroupStyled = styled('div', {
   variants: {
     animation: {
       false: {
-        animation: `${fadeOut} .2s`,
+        animation: `${fadeOut} .4s`,
         animationFillMode: 'forwards',
       },
       true: {

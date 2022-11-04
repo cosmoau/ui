@@ -82,9 +82,9 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       3: '0.75rem',
       4: '1rem',
       5: '2rem',
-      6: '4rem',
-      7: '6rem',
-      8: '8rem',
+      6: '4.25rem',
+      7: '7.5rem',
+      8: '9.75rem',
     },
     transitions: {
       default: 'all 0.2s ease-in-out',
@@ -190,7 +190,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
 
 export const lightTheme = createTheme({
   colors: {
-    accent: 'rgb(60, 71, 81)',
+    accent: 'rgb(67, 84, 98)',
     background: 'rgb(253, 250, 246)',
     blueText: 'rgb(32, 47, 136)',
     border: 'rgba(10, 12, 30,0.1)',

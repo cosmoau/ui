@@ -19,6 +19,7 @@ export const DialogOverlayStyled = styled('div', {
   backgroundColor: 'rgba(116, 116, 121, 0.4)',
   bottom: 0,
   left: 0,
+  minWidth: '100vw',
   overflowY: 'scroll',
   position: 'fixed',
   right: 0,
@@ -31,7 +32,7 @@ export const DialogOverlayStyled = styled('div', {
         animationFillMode: 'forwards',
       },
       true: {
-        animation: `${fadeIn} .1s ease-in-out`,
+        animation: `${fadeIn} .15s ease-in-out`,
         animationFillMode: 'forwards',
       },
     },

@@ -32,12 +32,7 @@ export const ButtonStyled = styled('button', {
   [breakpoints.tabletX]: {
     fontSize: 'calc($h5 * 0.9)',
   },
-  [breakpoints.laptopX]: {
-    fontSize: 'calc($h5 * 0.95)',
-  },
-
   'padding': '$1 $4',
-
   'svg': {
     height: '1.75rem',
     marginTop: '-0.05rem',
