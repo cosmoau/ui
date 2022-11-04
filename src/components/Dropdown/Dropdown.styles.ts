@@ -62,7 +62,7 @@ export const DropdownItemStyled = styled('div', {
   'cursor': 'pointer',
   'display': 'flex',
   'fontSize': '$h6',
-  'lineHeight': 'normal !important',
+  'lineHeight': 'normal',
   'transition': '$default',
   'variants': {
     submenu: {

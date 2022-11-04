@@ -12,38 +12,26 @@ export default function Divider(props: Props): JSX.Element {
   return (
     <DividerStyled
       css={{
-        ...props.css,
         backgroundColor: props.theme ? `$${props.theme}` : '$border',
         ...(props.top && {
           marginTop: `$${props.top}`,
           [breakpoints.phone]: {
-            marginTop:
-              props.top !== ('6' || '7' || '8' || '9')
-                ? `calc($${props.top} * 0.8)`
-                : `calc($${props.top} * 0.75)`,
+            marginTop: `calc($${props.top} * 0.8)`,
           },
           [breakpoints.tabletX]: {
-            marginTop:
-              props.top !== ('6' || '7' || '8' || '9')
-                ? `calc($${props.top} * 0.9)`
-                : `calc($${props.top} * 0.85)`,
+            marginTop: `calc($${props.top} * 0.9)`,
           },
         }),
         ...(props.bottom && {
           marginBottom: `$${props.bottom}`,
           [breakpoints.phone]: {
-            marginBottom:
-              props.bottom !== ('6' || '7' || '8' || '9')
-                ? `calc($${props.bottom} * 0.8)`
-                : `calc($${props.bottom} * 0.75)`,
+            marginBottom: `calc($${props.bottom} * 0.8)`,
           },
           [breakpoints.tabletX]: {
-            marginBottom:
-              props.bottom !== ('6' || '7' || '8' || '9')
-                ? `calc($${props.bottom} * 0.9)`
-                : `calc($${props.bottom} * 0.85)`,
+            marginBottom: `calc($${props.bottom} * 0.9)`,
           },
         }),
+        ...props.css,
       }}
       id={props.id}
     />

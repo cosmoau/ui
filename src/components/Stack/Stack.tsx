@@ -45,43 +45,29 @@ export default function Stack(props: Props): JSX.Element {
   return (
     <StackElement
       css={{
-        ...props.css,
         textAlign: props.align,
         ...(props.top && {
           paddingTop: `$${props.top}`,
           [breakpoints.phone]: {
-            paddingTop:
-              props.top !== ('6' || '7' || '8' || '9')
-                ? `calc($${props.top} * 0.8)`
-                : `calc($${props.top} * 0.75)`,
+            paddingTop: `calc($${props.top} * 0.8)`,
           },
           [breakpoints.tabletX]: {
-            paddingTop:
-              props.top !== ('6' || '7' || '8' || '9')
-                ? `calc($${props.top} * 0.9)`
-                : `calc($${props.top} * 0.85)`,
+            paddingTop: `calc($${props.top} * 0.9)`,
           },
         }),
         ...(props.bottom && {
           paddingBottom: `$${props.bottom}`,
           [breakpoints.phone]: {
-            paddingBottom:
-              props.bottom !== ('6' || '7' || '8' || '9')
-                ? `calc($${props.bottom} * 0.8)`
-                : `calc($${props.bottom} * 0.75)`,
+            paddingBottom: `calc($${props.bottom} * 0.8)`,
           },
           [breakpoints.tabletX]: {
-            paddingBottom:
-              props.bottom !== ('6' || '7' || '8' || '9')
-                ? `calc($${props.bottom} * 0.9)`
-                : `calc($${props.bottom} * 0.85)`,
+            paddingBottom: `calc($${props.bottom} * 0.9)`,
           },
         }),
         ...(props.minimal && {
-          paddingLeft: 0 + '!important',
-          paddingRight: 0 + '!important',
+          paddingLeft: 0,
+          paddingRight: 0,
         }),
-
         ...(props?.direction === 'column' && {
           [breakpoints.phone]: {
             flex: props.widthPhone ? `0 0 ${props.widthPhone}%` : `0 0 100%`,
@@ -117,13 +103,13 @@ export default function Stack(props: Props): JSX.Element {
             width: props.widthWide ? `${props.widthWide}%` : `${props.width}%`,
           },
         }),
-
         ...(props?.direction === 'row' && {
           '*': {
             alignItems: props.flex || 'initial',
           },
           'alignItems': props.flex || 'initial',
         }),
+        ...props.css,
       }}
       flexduo={props.flexduo}
       id={props.id}>

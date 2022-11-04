@@ -23,46 +23,34 @@ export default function Text(props: Props): JSX.Element {
       as={props.override || props.as}
       bold={props.bold}
       css={{
-        ...props.css,
         ...(props.top && {
           paddingTop: `$${props.top}`,
           [breakpoints.phone]: {
             marginTop: props.top ? '0 !important' : 'inherit',
-            paddingTop:
-              props.top !== ('6' || '7' || '8' || '9')
-                ? `calc($${props.top} * 0.8)`
-                : `calc($${props.top} * 0.75)`,
+            paddingTop: `calc($${props.top} * 0.8)`,
           },
           [breakpoints.tabletX]: {
             marginTop: props.top ? '0 !important' : 'inherit',
-            paddingTop:
-              props.top !== ('6' || '7' || '8' || '9')
-                ? `calc($${props.top} * 0.9)`
-                : `calc($${props.top} * 0.85)`,
+            paddingTop: `calc($${props.top} * 0.9)`,
           },
         }),
         ...(props.bottom && {
+          paddingBottom: `$${props.bottom}`,
           [breakpoints.phone]: {
             marginBottom: props.bottom ? '0 !important' : 'inherit',
-            paddingBottom:
-              props.bottom !== ('6' || '7' || '8' || '9')
-                ? `calc($${props.bottom} * 0.8)`
-                : `calc($${props.bottom} * 0.75)`,
+            paddingBottom: `calc($${props.bottom} * 0.8)`,
           },
           [breakpoints.tabletX]: {
             marginBottom: props.bottom ? '0 !important' : 'inherit',
-            paddingBottom:
-              props.bottom !== ('6' || '7' || '8' || '9')
-                ? `calc($${props.bottom} * 0.9)`
-                : `calc($${props.bottom} * 0.9)`,
+            paddingBottom: `calc($${props.bottom} * 0.9)`,
           },
-          paddingBottom: `$${props.bottom}`,
         }),
         ...(props.inline && {
           alignSelf: 'center',
           display: 'inline-flex',
           marginBottom: '0 !important',
           marginRight: props.inline === 'auto' ? 'auto' : `$${props.inline}`,
+          verticalAlign: 'middle',
 
           [breakpoints.phone]: {
             marginRight:
@@ -83,6 +71,7 @@ export default function Text(props: Props): JSX.Element {
 
           'transition': '$default',
         }),
+        ...props.css,
       }}
       size={props.as}>
       {props.children}

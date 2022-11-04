@@ -31,7 +31,6 @@ export default function Badge(props: Props): JSX.Element {
   return (
     <BadgeStyled
       css={{
-        ...props.css,
         ...(props.inline && {
           display: 'inline-flex',
           marginBottom: '0 !important',
@@ -42,6 +41,7 @@ export default function Badge(props: Props): JSX.Element {
           },
           verticalAlign: 'middle',
         }),
+        ...props.css,
       }}
       id={props.id}
       onClick={props.onClick}

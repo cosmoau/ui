@@ -49,13 +49,13 @@ export const TableCellStyled = styled('td', {
   'borderBottom': '0.1rem solid $borderHover',
   'fontSize': '$h6',
   'fontWeight': '$h6',
-  'lineHeight': '1.35 !important',
+  'lineHeight': '1.3',
 
   [breakpoints.phone]: {
-    fontSize: 'calc($h6 * 0.95)',
+    fontSize: 'calc($h6 * 0.85)',
   },
   [breakpoints.tabletX]: {
-    fontSize: 'calc($h6 * 0.95)',
+    fontSize: 'calc($h6 * 0.9)',
   },
 
   'padding': '$4',
@@ -67,14 +67,15 @@ export const TableHeadCellStyled = styled('th', {
   },
   'borderBottom': '0.1rem solid $borderHover',
   'fontSize': '$h6',
-  'lineHeight': '1.35 !important',
+  'fontWeight': 'bold',
 
   [breakpoints.phone]: {
-    fontSize: 'calc($h6 * 0.95)',
+    fontSize: 'calc($h6 * 0.85)',
   },
   [breakpoints.tabletX]: {
-    fontSize: 'calc($h6 * 0.95)',
+    fontSize: 'calc($h6 * 0.9)',
   },
+
   'padding': '$4 0.5rem',
 });
 

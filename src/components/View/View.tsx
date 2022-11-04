@@ -17,38 +17,25 @@ export default function View(props: Props): JSX.Element {
     <ViewStyled
       className={props.inverted ? theme.toString() : undefined}
       css={{
-        ...props.css,
-        backgroundColor: '$background',
         ...(props.top && {
           paddingTop: `$${props.top}`,
           [breakpoints.phone]: {
-            paddingTop:
-              props.top !== ('6' || '7' || '8' || '9')
-                ? `calc($${props.top} * 0.8)`
-                : `calc($${props.top} * 0.75)`,
+            paddingTop: `calc($${props.top} * 0.8)`,
           },
           [breakpoints.tabletX]: {
-            paddingTop:
-              props.top !== ('6' || '7' || '8' || '9')
-                ? `calc($${props.top} * 0.9)`
-                : `calc($${props.top} * 0.85)`,
+            paddingTop: `calc($${props.top} * 0.9)`,
           },
         }),
         ...(props.bottom && {
           paddingBottom: `$${props.bottom}`,
           [breakpoints.phone]: {
-            paddingBottom:
-              props.bottom !== ('6' || '7' || '8' || '9')
-                ? `calc($${props.bottom} * 0.8)`
-                : `calc($${props.bottom} * 0.75)`,
+            paddingBottom: `calc($${props.bottom} * 0.8)`,
           },
           [breakpoints.tabletX]: {
-            paddingBottom:
-              props.bottom !== ('6' || '7' || '8' || '9')
-                ? `calc($${props.bottom} * 0.9)`
-                : `calc($${props.bottom} * 0.9)`,
+            paddingBottom: `calc($${props.bottom} * 0.9)`,
           },
         }),
+        ...props.css,
       }}
       id={props.id}>
       <ViewContainerStyled container={props.container}>

@@ -24,12 +24,15 @@ export const ButtonStyled = styled('button', {
   'display': 'inline-flex',
   'fontSize': '$h5',
   'fontWeight': '$h5',
-  'lineHeight': '1.420 !important',
+  'lineHeight': '1.4 !important',
 
   [breakpoints.phone]: {
-    fontSize: 'calc($h5 * 0.925)',
+    fontSize: 'calc($h5 * 0.85)',
   },
   [breakpoints.tabletX]: {
+    fontSize: 'calc($h5 * 0.9)',
+  },
+  [breakpoints.laptopX]: {
     fontSize: 'calc($h5 * 0.95)',
   },
 
