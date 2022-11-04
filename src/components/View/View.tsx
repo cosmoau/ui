@@ -20,19 +20,19 @@ export default function View(props: Props): JSX.Element {
         ...(props.top && {
           paddingTop: `$${props.top}`,
           [breakpoints.phone]: {
-            paddingTop: `calc($${props.top} * 0.8)`,
+            paddingTop: `calc($${props.top} * 0.9)`,
           },
           [breakpoints.tabletX]: {
-            paddingTop: `calc($${props.top} * 0.9)`,
+            paddingTop: `calc($${props.top} * 0.95)`,
           },
         }),
         ...(props.bottom && {
           paddingBottom: `$${props.bottom}`,
           [breakpoints.phone]: {
-            paddingBottom: `calc($${props.bottom} * 0.8)`,
+            paddingBottom: `calc($${props.bottom} * 0.9)`,
           },
           [breakpoints.tabletX]: {
-            paddingBottom: `calc($${props.bottom} * 0.9)`,
+            paddingBottom: `calc($${props.bottom} * 0.95)`,
           },
         }),
         ...props.css,

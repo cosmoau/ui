@@ -37,7 +37,7 @@ export default function Badge(props: Props): JSX.Element {
           marginRight: props.inline === 'auto' ? 'auto' : `$${props.inline}`,
           [breakpoints.phone]: {
             marginRight:
-              props.inline === 'auto' ? 'auto' : `calc($${props.inline} * 0.8)`,
+              props.inline === 'auto' ? 'auto' : `calc($${props.inline} * 0.9)`,
           },
           verticalAlign: 'middle',
         }),

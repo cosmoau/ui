@@ -27,22 +27,22 @@ export default function Text(props: Props): JSX.Element {
           paddingTop: `$${props.top}`,
           [breakpoints.phone]: {
             marginTop: props.top ? '0 !important' : 'inherit',
-            paddingTop: `calc($${props.top} * 0.8)`,
+            paddingTop: `calc($${props.top} * 0.9)`,
           },
           [breakpoints.tabletX]: {
             marginTop: props.top ? '0 !important' : 'inherit',
-            paddingTop: `calc($${props.top} * 0.9)`,
+            paddingTop: `calc($${props.top} * 0.95)`,
           },
         }),
         ...(props.bottom && {
           paddingBottom: `$${props.bottom}`,
           [breakpoints.phone]: {
             marginBottom: props.bottom ? '0 !important' : 'inherit',
-            paddingBottom: `calc($${props.bottom} * 0.8)`,
+            paddingBottom: `calc($${props.bottom} * 0.9)`,
           },
           [breakpoints.tabletX]: {
             marginBottom: props.bottom ? '0 !important' : 'inherit',
-            paddingBottom: `calc($${props.bottom} * 0.9)`,
+            paddingBottom: `calc($${props.bottom} * 0.95)`,
           },
         }),
         ...(props.inline && {
@@ -54,7 +54,7 @@ export default function Text(props: Props): JSX.Element {
 
           [breakpoints.phone]: {
             marginRight:
-              props.inline === 'auto' ? 'auto' : `calc($${props.inline} * 0.8)`,
+              props.inline === 'auto' ? 'auto' : `calc($${props.inline} * 0.9)`,
           },
         }),
         ...(props.link && {

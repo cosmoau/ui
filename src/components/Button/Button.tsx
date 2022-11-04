@@ -36,7 +36,7 @@ export default function Button(props: Props): JSX.Element {
           verticalAlign: 'middle',
           [breakpoints.phone]: {
             marginRight:
-              props.inline === 'auto' ? 'auto' : `calc($${props.inline} * 0.8)`,
+              props.inline === 'auto' ? 'auto' : `calc($${props.inline} * 0.9)`,
           },
         }),
       }}

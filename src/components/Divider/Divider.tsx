@@ -16,19 +16,19 @@ export default function Divider(props: Props): JSX.Element {
         ...(props.top && {
           marginTop: `$${props.top}`,
           [breakpoints.phone]: {
-            marginTop: `calc($${props.top} * 0.8)`,
+            marginTop: `calc($${props.top} * 0.9)`,
           },
           [breakpoints.tabletX]: {
-            marginTop: `calc($${props.top} * 0.9)`,
+            marginTop: `calc($${props.top} * 0.95)`,
           },
         }),
         ...(props.bottom && {
           marginBottom: `$${props.bottom}`,
           [breakpoints.phone]: {
-            marginBottom: `calc($${props.bottom} * 0.8)`,
+            marginBottom: `calc($${props.bottom} * 0.9)`,
           },
           [breakpoints.tabletX]: {
-            marginBottom: `calc($${props.bottom} * 0.9)`,
+            marginBottom: `calc($${props.bottom} * 0.95)`,
           },
         }),
         ...props.css,
