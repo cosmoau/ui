@@ -128,7 +128,10 @@ export default function Dropdown(props: Props): JSX.Element {
                 <DropdownItemStyled
                   css={{
                     ...(props.last && {
-                      opacity: 0.5,
+                      '&:last-child': {
+                        borderTop: '0.1rem solid $border',
+                        marginTop: '$4',
+                      },
                     }),
                     color: path === value ? '$accent' : '$text',
                   }}
