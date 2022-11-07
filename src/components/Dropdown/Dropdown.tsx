@@ -26,6 +26,7 @@ interface Props extends DefaultProps {
   submenu?: boolean;
   locked?: boolean;
   filter?: boolean;
+  last?: boolean;
   loading?: boolean;
 }
 
@@ -101,8 +102,8 @@ export default function Dropdown(props: Props): JSX.Element {
           animation={isOpen}
           css={{
             left: props.align === 'left' ? '0' : 'auto',
-            maxWidth: props.width + ' !important' || '30rem !important',
-            minWidth: props.width + ' !important' || '20rem !important',
+            maxWidth: (props.width || '30rem') + '!important',
+            minWidth: (props.width || '20rem') + '!important',
             right: props.align === 'right' ? '0' : 'auto',
           }}
           ref={ref}>
@@ -126,6 +127,9 @@ export default function Dropdown(props: Props): JSX.Element {
               props.submenu ? (
                 <DropdownItemStyled
                   css={{
+                    ...(props.last && {
+                      opacity: 0.5,
+                    }),
                     color: path === value ? '$accent' : '$text',
                   }}
                   key={value}
@@ -135,6 +139,12 @@ export default function Dropdown(props: Props): JSX.Element {
               ) : (
                 <DropdownItemStyled
                   css={{
+                    ...(props.last && {
+                      '&:last-child': {
+                        borderTop: '0.1rem solid $border',
+                        marginTop: '$4',
+                      },
+                    }),
                     color: props.active && props.active === value ? '$accent' : '$text',
                   }}
                   key={value}

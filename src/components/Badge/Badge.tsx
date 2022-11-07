@@ -4,7 +4,12 @@ import { ReactNode } from 'react';
 import { Loading } from '../../index';
 import { breakpoints, DefaultProps } from '../../stitches.config';
 
-import { BadgeIconStyled, BadgeStyled, BadgeDotStyled } from './Badge.styles';
+import {
+  BadgeIconStyled,
+  BadgeStyled,
+  BadgeDotStyled,
+  BadgeLoadingStyled,
+} from './Badge.styles';
 
 interface Props extends Omit<DefaultProps, 'spacing'> {
   children: ReactNode;
@@ -56,7 +61,13 @@ export default function Badge(props: Props): JSX.Element {
           <Circle weight='fill' />
         </BadgeDotStyled>
       )}
-      {props.loading ? <Loading /> : props.children}
+      {props.loading ? (
+        <BadgeLoadingStyled>
+          <Loading />
+        </BadgeLoadingStyled>
+      ) : (
+        props.children
+      )}
       {props.icon && props.iconPosition === 'right' && (
         <BadgeIconStyled align='right'>{props.icon}</BadgeIconStyled>
       )}

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { breakpoints, DefaultProps, theme } from '../../stitches.config';
+import { DefaultProps, theme } from '../../stitches.config';
 
 import { ViewStyled, ViewContainerStyled } from './View.styles';
 
@@ -18,22 +18,12 @@ export default function View(props: Props): JSX.Element {
       className={props.inverted ? theme.toString() : undefined}
       css={{
         ...(props.top && {
+          marginTop: 0,
           paddingTop: `$${props.top}`,
-          [breakpoints.phone]: {
-            paddingTop: `calc($${props.top} * 0.9)`,
-          },
-          [breakpoints.tabletX]: {
-            paddingTop: `calc($${props.top} * 0.95)`,
-          },
         }),
         ...(props.bottom && {
+          marginBottom: 0,
           paddingBottom: `$${props.bottom}`,
-          [breakpoints.phone]: {
-            paddingBottom: `calc($${props.bottom} * 0.9)`,
-          },
-          [breakpoints.tabletX]: {
-            paddingBottom: `calc($${props.bottom} * 0.95)`,
-          },
         }),
         ...props.css,
       }}

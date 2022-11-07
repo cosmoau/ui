@@ -29,7 +29,6 @@ export default function Button(props: Props): JSX.Element {
       }
       block={props.block || false}
       css={{
-        ...props.css,
         ...(props.inline && {
           alignSelf: 'center',
           marginRight: props.inline === 'auto' ? 'auto' : `$${props.inline}`,
@@ -39,6 +38,7 @@ export default function Button(props: Props): JSX.Element {
               props.inline === 'auto' ? 'auto' : `calc($${props.inline} * 0.9)`,
           },
         }),
+        ...props.css,
       }}
       disabled={props.disabled || props.loading || false}
       id={props.id}

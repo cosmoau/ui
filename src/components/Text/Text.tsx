@@ -24,26 +24,12 @@ export default function Text(props: Props): JSX.Element {
       bold={props.bold}
       css={{
         ...(props.top && {
+          marginTop: 0,
           paddingTop: `$${props.top}`,
-          [breakpoints.phone]: {
-            marginTop: props.top ? '0 !important' : 'inherit',
-            paddingTop: `calc($${props.top} * 0.9)`,
-          },
-          [breakpoints.tabletX]: {
-            marginTop: props.top ? '0 !important' : 'inherit',
-            paddingTop: `calc($${props.top} * 0.95)`,
-          },
         }),
         ...(props.bottom && {
+          marginBottom: 0,
           paddingBottom: `$${props.bottom}`,
-          [breakpoints.phone]: {
-            marginBottom: props.bottom ? '0 !important' : 'inherit',
-            paddingBottom: `calc($${props.bottom} * 0.9)`,
-          },
-          [breakpoints.tabletX]: {
-            marginBottom: props.bottom ? '0 !important' : 'inherit',
-            paddingBottom: `calc($${props.bottom} * 0.95)`,
-          },
         }),
         ...(props.inline && {
           alignSelf: 'center',

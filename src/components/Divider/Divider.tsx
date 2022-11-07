@@ -1,4 +1,4 @@
-import { breakpoints, DefaultProps } from '../../stitches.config';
+import { DefaultProps } from '../../stitches.config';
 
 import DividerStyled from './Divider.styles';
 
@@ -15,21 +15,9 @@ export default function Divider(props: Props): JSX.Element {
         backgroundColor: props.theme ? `$${props.theme}` : '$border',
         ...(props.top && {
           marginTop: `$${props.top}`,
-          [breakpoints.phone]: {
-            marginTop: `calc($${props.top} * 0.9)`,
-          },
-          [breakpoints.tabletX]: {
-            marginTop: `calc($${props.top} * 0.95)`,
-          },
         }),
         ...(props.bottom && {
           marginBottom: `$${props.bottom}`,
-          [breakpoints.phone]: {
-            marginBottom: `calc($${props.bottom} * 0.9)`,
-          },
-          [breakpoints.tabletX]: {
-            marginBottom: `calc($${props.bottom} * 0.95)`,
-          },
         }),
         ...props.css,
       }}

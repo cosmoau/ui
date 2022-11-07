@@ -12,7 +12,6 @@ import {
   Button,
   Text,
   Input,
-  Box,
   Divider,
   Dropdown,
   Dialog,
@@ -23,54 +22,65 @@ export function App(): ReactElement {
   return (
     <Provider locked='light'>
       <View container>
-        <Stack direction='row' flex='stretch' top='4'>
+        <Stack direction='row' flex='initial' top='4'>
           <Stack direction='column'>
-            <Box theme='fill'>
-              <Divider bottom='6' top='6' />
-              <Text as='h1'>
-                Airbnb, Stayz, Booking.com and Homes & Villas Management
-              </Text>
-              <Text as='h2'>
-                Make your short-term rental listings work for you, without the hassle
-              </Text>
-              <Text as='h3'>
-                Make your short-term rental listings work for you, without the hassle
-              </Text>
-              <Text as='h4'>
-                Make your short-term rental listings work for you, without the hassle
-              </Text>
-              <Text accent as='h5'>
-                Make your short-term rental listings work for you, without the hassle
-              </Text>
-              <Text as='h6'>
-                Make your short-term rental listings work for you, without the hassle
-              </Text>
-              <Text as='p'>
-                Make your short-term rental listings work for you, without the hassle
-              </Text>
-              <Text as='small'>
-                Make your short-term rental listings work for you, without the hassle
-              </Text>
+            <Divider bottom='6' top='6' />
+            <Text as='h1'>
+              Heading One is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
+              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.
+            </Text>
+            <Text as='h2'>
+              Heading Two is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
+              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+            </Text>
+            <Text as='h3'>
+              Heading Three is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
+              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+            </Text>
+            <Text as='h4'>
+              Heading Four is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
+              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+            </Text>
+            <Text accent as='h5'>
+              Heading Five is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
+              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+            </Text>
+            <Text as='h6'>
+              Heading Six is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
+              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+            </Text>
+            <Text as='p'>
+              Paragraph is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae aliquet
+              nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+            </Text>
+            <Text as='small'>
+              Small is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae aliquet
+              nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+            </Text>
 
-              <Stack align='center' top='6'>
-                <Input
-                  listen
-                  submit='Alert'
-                  submitFunction={() => alert('lol')}
-                  submitValid
-                />
-              </Stack>
-            </Box>
-            <Button ariaLabel='button' icon={<ArrowRight />} iconPosition='right'>
-              Button
+            <Stack align='center' top='6'>
+              <Input
+                listen
+                submit='Alert'
+                submitFunction={() => alert('lol')}
+                submitValid
+              />
+            </Stack>
+
+            <Button ariaLabel='button' icon={<ArrowRight />} iconPosition='right' small>
+              Button test
             </Button>
             <Popover
               trigger={
-                <Button
-                  ariaLabel='button'
-                  icon={<ArrowRight />}
-                  iconPosition='right'
-                  small>
+                <Button ariaLabel='button' icon={<ArrowRight />} iconPosition='right'>
                   Popover hover
                 </Button>
               }
@@ -79,11 +89,7 @@ export function App(): ReactElement {
             </Popover>
             <Popover
               trigger={
-                <Button
-                  ariaLabel='button'
-                  icon={<ArrowRight />}
-                  iconPosition='right'
-                  small>
+                <Button ariaLabel='button' icon={<ArrowRight />} iconPosition='right'>
                   Popover hover
                 </Button>
               }>
@@ -91,11 +97,7 @@ export function App(): ReactElement {
             </Popover>
             <Dialog
               trigger={
-                <Button
-                  ariaLabel='button'
-                  icon={<ArrowRight />}
-                  iconPosition='right'
-                  small>
+                <Button ariaLabel='button' icon={<ArrowRight />} iconPosition='right'>
                   Dialog
                 </Button>
               }>
@@ -103,6 +105,7 @@ export function App(): ReactElement {
             </Dialog>
             <Dropdown
               filter
+              last
               options={[
                 { label: 'Option 1', value: 'option-1' },
                 { label: 'Option 2', value: 'option-2' },
@@ -123,7 +126,7 @@ export function App(): ReactElement {
               theme='fill'>
               Button
             </Button>
-            <Badge theme='border'>
+            <Badge loading theme='border'>
               Make your short-term rental listings work for you, without the hassle
             </Badge>
             <Table

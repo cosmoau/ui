@@ -41,14 +41,14 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       text: 'rgb(253, 250, 246)',
     },
     fontSizes: {
-      h1: '3.6rem',
-      h2: '3rem',
-      h3: '2.6rem',
+      h1: '3.4rem',
+      h2: '2.9rem',
+      h3: '2.4rem',
       h4: '1.8rem',
       h5: '1.7rem',
-      h6: '1.5rem',
-      p: '1.3rem',
-      small: '1.2rem',
+      h6: '1.6rem',
+      p: '1.4rem',
+      small: '1.3rem',
     },
     fontWeights: {
       h1: 'normal',
@@ -80,11 +80,11 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       1: '0.25rem',
       2: '0.5rem',
       3: '0.75rem',
-      4: '1rem',
-      5: '2rem',
-      6: '4.25rem',
-      7: '7.5rem',
-      8: '9.75rem',
+      4: '1.25rem',
+      5: '2.5rem',
+      6: '4.75rem',
+      7: '6rem',
+      8: '8.25rem',
     },
     transitions: {
       default: 'all 0.2s ease-in-out',
@@ -190,7 +190,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
 
 export const lightTheme = createTheme({
   colors: {
-    accent: 'rgb(67, 84, 98)',
+    accent: 'rgb(43, 57, 68)',
     background: 'rgb(253, 250, 246)',
     blueText: 'rgb(32, 47, 136)',
     border: 'rgba(10, 12, 30,0.1)',

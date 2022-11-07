@@ -18,22 +18,23 @@ export default function Image(props: Props): JSX.Element {
     props;
   return (
     <ImageStyled
-      borderRadius={borderRadius}
       css={{
-        ...css,
         ...(fill && {
-          height: '100%',
+          borderRadius: borderRadius ? `$${borderRadius}` : undefined,
           img: {
-            height: '100%',
+            borderRadius: borderRadius ? `$${borderRadius}` : undefined,
             objectFit: fillFit || 'cover',
             objectPosition: fillPosition || 'center',
           },
-          position: 'relative',
-          width: '100%',
+        }),
+        ...(hover && {
+          '&:hover': {
+            opacity: 0.9,
+          },
         }),
         height: fillHeight || '100%',
-      }}
-      hover={hover}>
+        ...css,
+      }}>
       <NextImage {...rest} fill={fill} />
     </ImageStyled>
   );

@@ -73,10 +73,10 @@ export const TableHeadCellStyled = styled('th', {
   'fontWeight': 'bold',
 
   [breakpoints.phone]: {
-    fontSize: 'calc($h6 * 0.9)',
+    fontSize: 'calc($h6 * 0.85)',
   },
   [breakpoints.tabletX]: {
-    fontSize: 'calc($h6 * 0.925)',
+    fontSize: 'calc($h6 * 0.9)',
   },
   [breakpoints.laptopX]: {
     fontSize: 'calc($h6 * 0.95)',

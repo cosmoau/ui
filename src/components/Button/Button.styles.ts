@@ -27,10 +27,10 @@ export const ButtonStyled = styled('button', {
   'lineHeight': '1.4 !important',
 
   [breakpoints.phone]: {
-    fontSize: 'calc($h5 * 0.9)',
+    fontSize: 'calc($h5 * 0.85)',
   },
   [breakpoints.tabletX]: {
-    fontSize: 'calc($h5 * 0.925)',
+    fontSize: 'calc($h5 * 0.9)',
   },
   [breakpoints.laptopX]: {
     fontSize: 'calc($h5 * 0.95)',
@@ -59,6 +59,16 @@ export const ButtonStyled = styled('button', {
       true: {
         fontSize: '$p',
         fontWeight: '$p',
+
+        [breakpoints.phone]: {
+          fontSize: 'calc($p * 0.85)',
+        },
+        [breakpoints.tabletX]: {
+          fontSize: 'calc($p * 0.9)',
+        },
+        [breakpoints.laptopX]: {
+          fontSize: 'calc($p * 0.95)',
+        },
 
         svg: {
           height: '1.5rem',

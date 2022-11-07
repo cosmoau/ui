@@ -1,43 +1,13 @@
 import { styled } from '../../stitches.config';
 
 export const ImageStyled = styled('div', {
+  border: '0.1rem solid transparent',
   height: '100%',
+  img: {
+    height: '100%',
+  },
   position: 'relative',
   transition: '$default',
-  variants: {
-    borderRadius: {
-      1: {
-        borderRadius: '$1 !important',
-        img: {
-          borderRadius: '$1 !important',
-        },
-      },
-      2: {
-        borderRadius: '$2 !important',
-        img: {
-          borderRadius: '$2 !important',
-        },
-      },
-      3: {
-        borderRadius: '$3 !important',
-        img: {
-          borderRadius: '$3 !important',
-        },
-      },
-    },
-    hover: {
-      false: {
-        '&:hover': {
-          opacity: 1,
-        },
-      },
-      true: {
-        '&:hover': {
-          opacity: 0.9,
-        },
-      },
-    },
-  },
 
   width: '100%',
 });
