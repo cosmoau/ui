@@ -6,7 +6,7 @@ export const paddingVariants = {
       padding: '$5',
     },
     none: {
-      padding: 0,
+      padding: '0 !important',
     },
   },
 };
@@ -64,8 +64,7 @@ export const BoxStyled = styled('div', {
     },
     ...paddingVariants,
   },
-
-  width: 'auto',
+  width: '100%',
 });
 
 export const BoxImageChildrenStyled = styled('div', {

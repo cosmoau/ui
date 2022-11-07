@@ -23,8 +23,8 @@ export default function Image(props: Props): JSX.Element {
         ...(fill && {
           img: {
             borderRadius: borderRadius ? `$${borderRadius}` : undefined,
-            objectFit: fillFit || 'cover',
-            objectPosition: fillPosition || 'center',
+            objectFit: `${fillFit || 'cover'} !important`,
+            objectPosition: `${fillPosition || 'center'} !important`,
           },
         }),
         ...(hover && {
@@ -35,7 +35,15 @@ export default function Image(props: Props): JSX.Element {
         height: fillHeight || '100%',
         ...css,
       }}>
-      <NextImage {...rest} fill={fill} />
+      <NextImage
+        {...rest}
+        fill={fill}
+        style={{
+          borderRadius: borderRadius ? `$${borderRadius}` : undefined,
+          objectFit: fillFit || 'cover',
+          objectPosition: fillPosition || 'center',
+        }}
+      />
     </ImageStyled>
   );
 }

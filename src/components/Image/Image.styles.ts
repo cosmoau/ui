@@ -1,7 +1,6 @@
 import { styled } from '../../stitches.config';
 
 export const ImageStyled = styled('div', {
-  border: '0.1rem solid transparent',
   height: '100%',
   position: 'relative',
   transition: '$default',
