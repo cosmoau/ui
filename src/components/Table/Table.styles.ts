@@ -49,7 +49,7 @@ export const TableCellStyled = styled('td', {
   'borderBottom': '0.1rem solid $borderHover',
   'fontSize': '$h6',
   'fontWeight': '$h6',
-  'lineHeight': '1.3',
+  'lineHeight': '1.4 !important',
 
   [breakpoints.phone]: {
     fontSize: 'calc($h6 * 0.9)',
@@ -69,14 +69,16 @@ export const TableHeadCellStyled = styled('th', {
     textAlign: 'right',
   },
   'borderBottom': '0.1rem solid $borderHover',
+
   'fontSize': '$h6',
   'fontWeight': 'bold',
+  'lineHeight': '1.4 !important',
 
   [breakpoints.phone]: {
-    fontSize: 'calc($h6 * 0.85)',
+    fontSize: 'calc($h6 * 0.9)',
   },
   [breakpoints.tabletX]: {
-    fontSize: 'calc($h6 * 0.9)',
+    fontSize: 'calc($h6 * 0.925)',
   },
   [breakpoints.laptopX]: {
     fontSize: 'calc($h6 * 0.95)',

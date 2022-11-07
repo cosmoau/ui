@@ -25,10 +25,10 @@ export const BadgeStyled = styled('div', {
   lineHeight: 'normal',
 
   [breakpoints.phone]: {
-    fontSize: 'calc($h5 * 0.85)',
+    fontSize: 'calc($h5 * 0.9)',
   },
   [breakpoints.tabletX]: {
-    fontSize: 'calc($h5 * 0.9)',
+    fontSize: 'calc($h5 * 0.925)',
   },
   [breakpoints.laptopX]: {
     fontSize: 'calc($h5 * 0.95)',
@@ -107,12 +107,11 @@ export const BadgeIconStyled = styled('span', {
 
 export const BadgeLoadingStyled = styled('span', {
   display: 'inline',
-  verticalAlign: 'middle',
-
   svg: {
     marginTop: '-0.4rem',
     verticalAlign: 'middle',
   },
+  verticalAlign: 'middle',
 });
 
 export const BadgeDotStyled = styled('span', {

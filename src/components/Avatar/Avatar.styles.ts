@@ -11,9 +11,13 @@ export const AvatarStyled = styled('div', {
 });
 
 export const AvatarImageStyled = styled('div', {
-  borderRadius: 'inherit',
+  borderRadius: '100% !important',
   height: '100%',
+  img: {
+    borderRadius: '100% !important',
+  },
   position: 'relative',
+
   width: '100%',
 });
 

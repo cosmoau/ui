@@ -36,11 +36,11 @@ export default function Box(props: Props): JSX.Element {
           <Image
             alt={props.imageAlt || ''}
             css={{
-              borderTopLeftRadius: '$1 !important',
-              borderTopRightRadius: '$1 !important',
+              borderTopLeftRadius: '$2 !important',
+              borderTopRightRadius: '$2 !important',
               img: {
-                borderTopLeftRadius: '$1 !important',
-                borderTopRightRadius: '$1 !important',
+                borderTopLeftRadius: '$2 !important',
+                borderTopRightRadius: '$2 !important',
               },
             }}
             fill

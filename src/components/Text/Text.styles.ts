@@ -29,7 +29,7 @@ export const TextStyled = styled('div', {
         'lineHeight': '1.2 !important',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h1 * 0.85)',
+          fontSize: 'calc($h1 * 0.8)',
         },
         [breakpoints.tabletX]: {
           fontSize: 'calc($h1 * 0.9)',
@@ -48,7 +48,7 @@ export const TextStyled = styled('div', {
         'lineHeight': '1.2 !important',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h2 * 0.85)',
+          fontSize: 'calc($h2 * 0.8)',
         },
         [breakpoints.tabletX]: {
           fontSize: 'calc($h2 * 0.9)',
@@ -83,13 +83,13 @@ export const TextStyled = styled('div', {
         'fontSize': '$h4',
         'fontWeight': '$h4',
         'letterSpacing': '0.01em',
-        'lineHeight': '1.35 !important',
+        'lineHeight': '1.3 !important',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h4 * 0.85)',
+          fontSize: 'calc($h4 * 0.9)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($h4 * 0.9)',
+          fontSize: 'calc($h4 * 0.925)',
         },
         [breakpoints.laptopX]: {
           fontSize: 'calc($h4 * 0.95)',
@@ -101,13 +101,13 @@ export const TextStyled = styled('div', {
         },
         'fontSize': '$h5',
         'fontWeight': '$h5',
-        'lineHeight': '1.45 !important',
+        'lineHeight': '1.4 !important',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h5 * 0.85)',
+          fontSize: 'calc($h5 * 0.9)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($h5 * 0.9)',
+          fontSize: 'calc($h5 * 0.925)',
         },
         [breakpoints.laptopX]: {
           fontSize: 'calc($h5 * 0.95)',
@@ -119,13 +119,13 @@ export const TextStyled = styled('div', {
         },
         'fontSize': '$h6',
         'fontWeight': '$h6',
-        'lineHeight': '1.45 !important',
+        'lineHeight': '1.4 !important',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($h6 * 0.85)',
+          fontSize: 'calc($h6 * 0.9)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($h6 * 0.9)',
+          fontSize: 'calc($h6 * 0.925)',
         },
         [breakpoints.laptopX]: {
           fontSize: 'calc($h6 * 0.95)',
@@ -137,13 +137,13 @@ export const TextStyled = styled('div', {
         },
         'fontSize': '$p',
         'fontWeight': '$p',
-        'lineHeight': '1.45 !important',
+        'lineHeight': '1.4 !important',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($p * 0.85)',
+          fontSize: 'calc($p * 0.9)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($p * 0.9)',
+          fontSize: 'calc($p * 0.925)',
         },
         [breakpoints.laptopX]: {
           fontSize: 'calc($p * 0.95)',
@@ -155,13 +155,13 @@ export const TextStyled = styled('div', {
         },
         'fontSize': '$small',
         'fontWeight': '$small',
-        'lineHeight': '1.45 !important',
+        'lineHeight': '1.4 !important',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($small * 0.85)',
+          fontSize: 'calc($small * 0.9)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($small * 0.9)',
+          fontSize: 'calc($small * 0.925)',
         },
         [breakpoints.laptopX]: {
           fontSize: 'calc($small * 0.95)',
