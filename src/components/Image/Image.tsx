@@ -19,8 +19,8 @@ export default function Image(props: Props): JSX.Element {
   return (
     <ImageStyled
       css={{
+        borderRadius: borderRadius ? `$${borderRadius}` : undefined,
         ...(fill && {
-          borderRadius: borderRadius ? `$${borderRadius}` : undefined,
           img: {
             borderRadius: borderRadius ? `$${borderRadius}` : undefined,
             objectFit: fillFit || 'cover',
