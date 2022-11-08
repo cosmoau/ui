@@ -127,9 +127,6 @@ export const TextStyled = styled('div', {
         [breakpoints.tabletX]: {
           fontSize: 'calc($h6 * 0.925)',
         },
-        [breakpoints.laptopX]: {
-          fontSize: 'calc($h6 * 0.95)',
-        },
       },
       p: {
         '&:not(:last-child)': {
@@ -145,9 +142,6 @@ export const TextStyled = styled('div', {
         [breakpoints.tabletX]: {
           fontSize: 'calc($p * 0.925)',
         },
-        [breakpoints.laptopX]: {
-          fontSize: 'calc($p * 0.95)',
-        },
       },
       small: {
         '&:not(:last-child)': {
@@ -162,9 +156,6 @@ export const TextStyled = styled('div', {
         },
         [breakpoints.tabletX]: {
           fontSize: 'calc($small * 0.925)',
-        },
-        [breakpoints.laptopX]: {
-          fontSize: 'calc($small * 0.95)',
         },
       },
       span: {

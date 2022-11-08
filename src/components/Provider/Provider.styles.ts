@@ -98,7 +98,7 @@ export const reset = globalCss({
   'html': {
     MozOsxFontSmoothing: 'grayscale',
     WebkitFontSmoothing: 'antialiased',
-    fontSize: '62.5%',
+    fontSize: '61.5%',
     lineHeight: '1.5',
     textRendering: 'optimizeLegibility',
   },
