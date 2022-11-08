@@ -63,7 +63,12 @@ export default function Input(props: Props): JSX.Element {
   // event listener
 
   useEventListener('keydown', (e: KeyboardEvent) => {
-    if (props.listen && e.key === 'Enter' && props.submitFunction && props.submitValid) {
+    if (
+      props.listen &&
+      e.key === 'Enter' &&
+      props.submitFunction &&
+      props.submitValid
+    ) {
       props.submitFunction();
     }
   });
@@ -124,7 +129,11 @@ export default function Input(props: Props): JSX.Element {
                   marginLeft: '$2',
                 }}
                 icon={
-                  !isRevealed ? <Eye weight='duotone' /> : <EyeClosed weight='duotone' />
+                  !isRevealed ? (
+                    <Eye weight='duotone' />
+                  ) : (
+                    <EyeClosed weight='duotone' />
+                  )
                 }
                 name='reveal'
                 onClick={handleReveal}

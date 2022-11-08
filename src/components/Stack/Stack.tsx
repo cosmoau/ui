@@ -65,14 +65,18 @@ export default function Stack(props: Props): JSX.Element {
             width: props.widthPhone ? `${props.widthPhone}%` : `100%`,
           },
           [breakpoints.tabletX]: {
-            flex: props.widthTablet ? `0 0 ${props.widthTablet}%` : `0 0 ${props.width}%`,
+            flex: props.widthTablet
+              ? `0 0 ${props.widthTablet}%`
+              : `0 0 ${props.width}%`,
             marginLeft: props.offsetTablet
               ? `${props.offsetTablet}%`
               : `${props.offset}%`,
             width: props.widthTablet ? `${props.widthTablet}%` : `${props.width}%`,
           },
           [breakpoints.laptopX]: {
-            flex: props.widthLaptop ? `0 0 ${props.widthLaptop}%` : `0 0 ${props.width}%`,
+            flex: props.widthLaptop
+              ? `0 0 ${props.widthLaptop}%`
+              : `0 0 ${props.width}%`,
             marginLeft: props.offsetLaptop
               ? `${props.offsetLaptop}%`
               : `${props.offset}%`,

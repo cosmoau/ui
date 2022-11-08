@@ -1,5 +1,5 @@
 import { Circle } from 'phosphor-react';
-import { ReactNode } from 'react';
+import { MouseEventHandler, ReactNode } from 'react';
 
 import { Loading } from '../../index';
 import { breakpoints, DefaultProps } from '../../stitches.config';
@@ -23,8 +23,7 @@ interface Props extends Omit<DefaultProps, 'spacing'> {
     | 'green'
     | 'border'
     | 'borderHover';
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  onClick?: any;
+  onClick?: MouseEventHandler<HTMLDivElement>;
   icon?: ReactNode;
   iconPosition?: 'left' | 'right';
   inline?: DefaultProps['spacing'] | 'auto';

@@ -11,10 +11,8 @@ interface Props extends DefaultProps {
   children: ReactNode | ReactNode[];
   default?: 'dark' | 'light';
   locked?: 'dark' | 'light';
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  trigger?: any;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  triggerActive?: any;
+  trigger?: ReactNode;
+  triggerActive?: ReactNode;
 }
 
 export default function Provider(props: Props): JSX.Element {

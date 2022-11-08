@@ -32,7 +32,11 @@ export default function Toast(props: ToasterProps): JSX.Element {
             key={t.id}
             onClick={(): void => toast.dismiss(t.id)}
             theme={
-              t.type === 'success' ? 'success' : t.type === 'error' ? 'error' : 'default'
+              t.type === 'success'
+                ? 'success'
+                : t.type === 'error'
+                ? 'error'
+                : 'default'
             }>
             {t.message && t.message.toString().length > 50
               ? `${t.message.toString().substring(0, 50)}...`

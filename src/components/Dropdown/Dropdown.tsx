@@ -68,9 +68,10 @@ export default function Dropdown(props: Props): JSX.Element {
     handleClose();
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleActions = (value: string, label: string): any => {
-    props.actions(value, label);
+  const handleActions = (value: string, label: string): void => {
+    if (props.actions) {
+      props.actions(value, label);
+    }
     handleClose();
   };
 

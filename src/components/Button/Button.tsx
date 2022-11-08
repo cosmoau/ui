@@ -5,7 +5,9 @@ import { breakpoints, DefaultProps } from '../../stitches.config';
 
 import { ButtonIconStyled, ButtonStyled } from './Button.styles';
 
-interface Props extends HTMLAttributes<HTMLButtonElement>, Omit<DefaultProps, 'spacing'> {
+interface Props
+  extends HTMLAttributes<HTMLButtonElement>,
+    Omit<DefaultProps, 'spacing'> {
   children: ReactNode | string;
   loading?: boolean;
   disabled?: boolean;
