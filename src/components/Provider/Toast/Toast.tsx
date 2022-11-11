@@ -30,14 +30,7 @@ export default function Toast(props: ToasterProps): JSX.Element {
           <ToastStyled
             animation={t.visible}
             key={t.id}
-            onClick={(): void => toast.dismiss(t.id)}
-            theme={
-              t.type === 'success'
-                ? 'success'
-                : t.type === 'error'
-                ? 'error'
-                : 'default'
-            }>
+            onClick={(): void => toast.dismiss(t.id)}>
             {t.message && t.message.toString().length > 50
               ? `${t.message.toString().substring(0, 50)}...`
               : t.message?.toString()}

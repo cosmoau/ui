@@ -1,5 +1,5 @@
 {
-  "extends": ["next", "dolmios"],
+  "extends": ["dolmios", "next/core-web-vitals"],
   "rules": {
     "react/jsx-sort-props": "error"
   }

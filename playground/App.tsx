@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { ArrowRight } from 'phosphor-react';
 import React, { ReactElement } from 'react';
+import toast from 'react-hot-toast';
 
 import {
   Provider,
@@ -13,7 +14,6 @@ import {
   Text,
   Input,
   Divider,
-  Dropdown,
   Dialog,
   Popover,
 } from '../src/index';
@@ -56,14 +56,14 @@ export function App(): ReactElement {
               aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
             </Text>
             <Text as='p'>
-              Paragraph is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae aliquet
-              nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+              Paragraph is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
+              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
             </Text>
             <Text as='small'>
               Small is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae aliquet
-              nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+              auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
+              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
             </Text>
 
             <Stack align='center' top='6'>
@@ -75,7 +75,12 @@ export function App(): ReactElement {
               />
             </Stack>
 
-            <Button ariaLabel='button' icon={<ArrowRight />} iconPosition='right' small>
+            <Button
+              ariaLabel='button'
+              icon={<ArrowRight />}
+              iconPosition='right'
+              onClick={() => toast.success('lol')}
+              small>
               Button test
             </Button>
             <Popover
@@ -103,20 +108,6 @@ export function App(): ReactElement {
               }>
               <Text as='h3'>Test</Text>
             </Dialog>
-            <Dropdown
-              filter
-              last
-              options={[
-                { label: 'Option 1', value: 'option-1' },
-                { label: 'Option 2', value: 'option-2' },
-                { label: 'Option 3', value: 'option-3' },
-              ]}
-              trigger={
-                <Button ariaLabel='button' icon={<ArrowRight />}>
-                  Dropdown Test
-                </Button>
-              }
-            />
 
             <Button
               ariaLabel='button'
@@ -126,9 +117,7 @@ export function App(): ReactElement {
               theme='fill'>
               Button
             </Button>
-            <Badge loading theme='border'>
-              Make your short-term rental listings work for you, without the hassle
-            </Badge>
+            <Badge theme='border'>aIRBNB </Badge>
             <Table
               bodyChildren={[
                 [

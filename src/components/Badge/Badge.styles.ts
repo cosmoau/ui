@@ -22,17 +22,18 @@ export const BadgeStyled = styled('div', {
   fontSize: '$h5',
   fontWeight: '$h5',
   justifyContent: 'center',
-  lineHeight: 'normal',
+  lineHeight: '1.4 !important',
 
   [breakpoints.phone]: {
-    fontSize: 'calc($h5 * 0.9)',
+    fontSize: 'calc($h5 * 0.85)',
   },
   [breakpoints.tabletX]: {
-    fontSize: 'calc($h5 * 0.925)',
+    fontSize: 'calc($h5 * 0.9)',
   },
   [breakpoints.laptopX]: {
     fontSize: 'calc($h5 * 0.95)',
   },
+
   padding: '$1 $4',
   svg: {
     alignSelf: 'center',
@@ -81,12 +82,6 @@ export const BadgeStyled = styled('div', {
     },
   },
 
-  [breakpoints.phone]: {
-    fontSize: 'calc($h6 * 0.9)',
-  },
-  [breakpoints.tabletX]: {
-    fontSize: 'calc($h6 * 0.95)',
-  },
   verticalAlign: 'middle',
 });
 

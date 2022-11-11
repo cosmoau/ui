@@ -15,7 +15,8 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
   theme: {
     colors: {
       accent: 'rgb(162, 170, 194)',
-      background: 'rgb(8, 10, 27)',
+      accentIHM: 'rgb(0, 48, 74)',
+      background: 'rgb(8, 15, 27)',
       blueBorder: 'rgba(115, 172, 255, 0.4)',
       blueOverlay: 'rgba(151, 193, 255, 0.2)',
       blueText: 'rgb(166, 179, 255)',
@@ -82,8 +83,8 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       3: '0.75rem',
       4: '1rem',
       5: '2rem',
-      6: '4.5rem',
-      7: '6.75rem',
+      6: '4rem',
+      7: '6rem',
       8: '8rem',
     },
     transitions: {
@@ -193,8 +194,8 @@ export const lightTheme = createTheme({
     accent: 'rgb(43, 57, 68)',
     background: 'rgb(253, 250, 246)',
     blueText: 'rgb(32, 47, 136)',
-    border: 'rgba(10, 12, 30,0.1)',
-    borderHover: 'rgba(10, 12, 30, 0.075)',
+    border: 'rgba(10, 12, 30,0.15)',
+    borderHover: 'rgba(10, 12, 30, 0.2)',
     default: 'rgba(10, 12, 30, 0.0420)',
     defaultHover: 'rgba(10, 12, 30, 0.06)',
     greenText: 'rgb(0, 76, 6)',
@@ -207,7 +208,7 @@ export const lightTheme = createTheme({
   shadows: {
     1: '0 0.2rem 0.3rem 0 rgba(8, 10, 27, 0.08)',
     2: '0 0.4rem 0.6rem 0 rgba(8, 10, 27, 0.08)',
-    3: '0 0.6rem 0.8rem 0 rgba(8, 10, 27, 0.08)',
+    3: '0 0.8rem 1.2rem 0 rgba(8, 10, 27, 0.16)',
   },
 });
 

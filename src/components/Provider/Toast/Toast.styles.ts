@@ -1,16 +1,28 @@
-import { fadeIn, fadeOut, styled } from '../../../stitches.config';
+import { breakpoints, fadeIn, fadeOut, styled } from '../../../stitches.config';
 
 export const ToastStyled = styled('div', {
   backgroundColor: '$background',
-  border: '0.1rem solid $border',
+  border: '0.1rem solid $borderHover',
   borderRadius: '$1',
   boxShadow: '$3',
   cursor: 'pointer',
-  fontSize: '$h6',
-  fontWeight: 'bold',
+  fontSize: '$h5',
+  fontWeight: '$h5',
   height: 'auto',
-  lineHeight: 'normal',
+  justifyContent: 'center',
+  lineHeight: '1.4 !important',
   marginTop: '$3',
+
+  [breakpoints.phone]: {
+    fontSize: 'calc($h5 * 0.85)',
+  },
+  [breakpoints.tabletX]: {
+    fontSize: 'calc($h5 * 0.9)',
+  },
+  [breakpoints.laptopX]: {
+    fontSize: 'calc($h5 * 0.95)',
+  },
+
   overflow: 'hidden',
   padding: '$1 $3',
   position: 'relative',
@@ -26,26 +38,14 @@ export const ToastStyled = styled('div', {
         animationFillMode: 'forwards',
       },
     },
-    theme: {
-      default: {
-        backgroundColor: '$background',
-      },
-      error: {
-        borderColor: '$orangeBorder',
-        color: '$orangeText',
-      },
-      success: {
-        borderColor: '$greenBorder',
-        color: '$greenText',
-      },
-    },
   },
 });
 
 export const ToastContainerStyled = styled('div', {
-  bottom: '$3',
+  bottom: '$2',
+  left: '50%',
   position: 'fixed',
-  right: '$3',
+  transform: 'translateX(-50%)',
   zIndex: '$toast',
 });
 

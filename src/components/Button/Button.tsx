@@ -29,7 +29,7 @@ export default function Button(props: Props): JSX.Element {
           ? props?.children?.toString()
           : ''
       }
-      block={props.block || false}
+      block={props.block}
       css={{
         ...(props.inline && {
           alignSelf: 'center',
@@ -40,6 +40,7 @@ export default function Button(props: Props): JSX.Element {
               props.inline === 'auto' ? 'auto' : `calc($${props.inline} * 0.9)`,
           },
         }),
+
         ...props.css,
       }}
       disabled={props.disabled || props.loading || false}

@@ -19,18 +19,18 @@ export const ButtonStyled = styled('button', {
   'border': '0.1rem solid $borderHover',
   'borderRadius': '$1',
   'boxShadow': '$1',
-
   'color': '$text',
-  'display': 'inline-flex',
+  'display': 'inline',
   'fontSize': '$h5',
   'fontWeight': '$h5',
+  'justifyContent': 'center',
   'lineHeight': '1.4 !important',
 
   [breakpoints.phone]: {
-    fontSize: 'calc($h5 * 0.9)',
+    fontSize: 'calc($h5 * 0.85)',
   },
   [breakpoints.tabletX]: {
-    fontSize: 'calc($h5 * 0.925)',
+    fontSize: 'calc($h5 * 0.9)',
   },
   [breakpoints.laptopX]: {
     fontSize: 'calc($h5 * 0.95)',
@@ -39,7 +39,7 @@ export const ButtonStyled = styled('button', {
   'padding': '$1 $4',
   'svg': {
     height: '1.75rem',
-    marginTop: '-0.05rem',
+    marginTop: '-0.075rem',
     width: '1.75rem',
   },
 
@@ -47,9 +47,6 @@ export const ButtonStyled = styled('button', {
 
   'variants': {
     block: {
-      false: {
-        display: 'inline',
-      },
       true: {
         display: 'block',
         width: '100%',
@@ -57,17 +54,18 @@ export const ButtonStyled = styled('button', {
     },
     small: {
       true: {
-        fontSize: '$p',
-        fontWeight: '$p',
+        fontSize: '$h6',
+        fontWeight: '$h6',
+        lineHeight: '1.4 !important',
 
         [breakpoints.phone]: {
-          fontSize: 'calc($p * 0.9)',
+          fontSize: 'calc($h6 * 0.9)',
         },
         [breakpoints.tabletX]: {
-          fontSize: 'calc($p * 0.925)',
+          fontSize: 'calc($h6 * 0.925)',
         },
         [breakpoints.laptopX]: {
-          fontSize: 'calc($p * 0.95)',
+          fontSize: 'calc($h6 * 0.95)',
         },
 
         svg: {

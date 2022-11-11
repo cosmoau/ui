@@ -47,18 +47,19 @@ export const TableCellStyled = styled('td', {
     textAlign: 'right',
   },
   'borderBottom': '0.1rem solid $borderHover',
-  'fontSize': '$h6',
-  'fontWeight': '$h6',
+  'fontSize': '$h5',
+  'fontWeight': '$h5',
+  'justifyContent': 'center',
   'lineHeight': '1.4 !important',
 
   [breakpoints.phone]: {
-    fontSize: 'calc($h6 * 0.9)',
+    fontSize: 'calc($h5 * 0.85)',
   },
   [breakpoints.tabletX]: {
-    fontSize: 'calc($h6 * 0.925)',
+    fontSize: 'calc($h5 * 0.9)',
   },
   [breakpoints.laptopX]: {
-    fontSize: 'calc($h6 * 0.95)',
+    fontSize: 'calc($h5 * 0.95)',
   },
 
   'padding': '$4',
@@ -70,18 +71,18 @@ export const TableHeadCellStyled = styled('th', {
   },
   'borderBottom': '0.1rem solid $borderHover',
 
-  'fontSize': '$h6',
+  'fontSize': '$h5',
   'fontWeight': 'bold',
   'lineHeight': '1.4 !important',
 
   [breakpoints.phone]: {
-    fontSize: 'calc($h6 * 0.9)',
+    fontSize: 'calc($h5 * 0.85)',
   },
   [breakpoints.tabletX]: {
-    fontSize: 'calc($h6 * 0.925)',
+    fontSize: 'calc($h5 * 0.9)',
   },
   [breakpoints.laptopX]: {
-    fontSize: 'calc($h6 * 0.95)',
+    fontSize: 'calc($h5 * 0.95)',
   },
 
   'padding': '$4 0.5rem',
