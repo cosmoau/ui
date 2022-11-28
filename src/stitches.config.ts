@@ -82,9 +82,9 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       3: '1.2rem',
     },
     shadows: {
-      1: '0 0.2rem 0.3rem 0 rgba(253, 250, 246, 0.0420)',
-      2: '0 0.4rem 0.6rem 0 rgba(253, 250, 246, 0.0420)',
-      3: '0 0.6rem 0.9rem 0 rgba(253, 250, 246, 0.0420)',
+      1: '0 0.3rem 0.4rem 0 rgba(253, 250, 246, 0.06)',
+      2: '0 0.6rem 0.6rem 0 rgba(253, 250, 246, 0.09)',
+      3: '0 0.6rem 0.9rem 0 rgba(253, 250, 246, 0.12)',
     },
     space: {
       1: '0.25rem',
@@ -203,7 +203,7 @@ export const lightTheme = createTheme({
     accent: 'rgb(43, 57, 68)',
     background: 'rgb(255, 250, 245)',
     blueText: 'rgb(32, 47, 136)',
-    border: 'rgba(6, 12, 36, 0.15)',
+    border: 'rgba(6, 12, 36, 0.125)',
     default: 'rgba(6, 12, 36, 0.04)',
     defaultHover: 'rgba(6, 12, 36, 0.08)',
     greenText: 'rgb(0, 76, 6)',

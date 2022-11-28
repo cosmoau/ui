@@ -2,7 +2,7 @@ import { styled } from '../../stitches.config';
 import { TextSizes } from '../Text/Text.styles';
 
 export const ButtonStyled = styled('button', {
-  ...TextSizes.p,
+  ...TextSizes.h6,
 
   '&:disabled': {
     cursor: 'not-allowed',

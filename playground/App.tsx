@@ -39,7 +39,7 @@ export function App(): ReactElement {
 
   return (
     <Provider locked='light'>
-      <View top={8} bottom='8' container inverted>
+      <View bottom='8' container inverted top={8}>
         <Stack direction='row' flex='initial' top='4'>
           <Stack direction='column'>
             <Box>
@@ -83,7 +83,7 @@ export function App(): ReactElement {
               Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
               aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
             </Text>
-            <Stack top={4} bottom={4}>
+            <Stack bottom={4} top={4}>
               <Box theme='fill'>
                 <Text as='h6'>
                   Heading Six is Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -101,7 +101,12 @@ export function App(): ReactElement {
             <Text as='small'>
               Small is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
               auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
-              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+              aliquet nisl nunc vel aliquet nisl nunc vel nisl. Nulla facilisi. Nulla
+              facilisi. aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi. aliquet nisl
+              nunc vel nisl. Nulla facilisi. Nulla facilisi. aliquet nisl nunc vel nisl.
+              Nulla facilisi. Nulla facilisi. aliquet nisl nunc vel nisl. Nulla
+              facilisi. Nulla facilisi. nisl. Nulla facilisi. Nulla facilisi.{' '}
             </Text>
             <Text as='ol'>
               <Text as='li'>Ordered List</Text>
@@ -127,8 +132,8 @@ export function App(): ReactElement {
             </Stack>
 
             <Button
-              external
               ariaLabel='button'
+              external
               icon={<ArrowRight />}
               iconPosition='right'
               onClick={() => toast.success('lol')}
@@ -169,16 +174,16 @@ export function App(): ReactElement {
               theme='fill'>
               Button
             </Button>
-            <Stack top='4' bottom='4'>
+            <Stack bottom='4' top='4'>
               <Badge>Normal</Badge>
               <Badge closable>Normal</Badge>
             </Stack>
 
             <Table
-              sort
-              sortDisabled={[1, 3]}
               bodyChildren={bodyChildren}
               headChildren={['Name', 'Age', 'Country', 'City']}
+              sort
+              sortDisabled={[1, 3]}
             />
           </Stack>
         </Stack>

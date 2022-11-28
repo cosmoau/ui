@@ -40,7 +40,7 @@ export const TextSizes = {
     fontSize: '$h3',
     fontWeight: '$h3',
     lineHeight: '$h3',
-    marginBottom: '$4',
+    marginBottom: '$5',
 
     [breakpoints.phone]: {
       fontSize: 'calc($h3 * 0.85)',
@@ -190,6 +190,7 @@ export const TextStyled = styled('div', {
     marginBottom: '0 !important',
   },
   'color': '$text',
+  'display': 'block',
   'variants': {
     accent: {
       true: {
@@ -198,7 +199,7 @@ export const TextStyled = styled('div', {
     },
     bold: {
       true: {
-        fontWeight: '$bold',
+        fontWeight: 'bold',
       },
     },
     size: TextSizes,
