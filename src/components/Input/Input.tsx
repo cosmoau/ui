@@ -105,6 +105,7 @@ export default function Input(props: Props): JSX.Element {
             {props.loading && <Loading />}
             {props.copy && (
               <Button
+                small
                 ariaLabel='Copy'
                 css={{
                   marginLeft: '$2',
@@ -117,8 +118,7 @@ export default function Input(props: Props): JSX.Element {
                   )
                 }
                 name='copy'
-                onClick={handleCopy}
-                small>
+                onClick={handleCopy}>
                 Copy
               </Button>
             )}
@@ -163,7 +163,6 @@ export default function Input(props: Props): JSX.Element {
           <Badge
             css={{
               backgroundColor: 'transparent',
-              fontSize: '$p !important',
               padding: 0,
             }}
             icon={<Warning weight='duotone' />}
@@ -175,7 +174,6 @@ export default function Input(props: Props): JSX.Element {
           <Badge
             css={{
               backgroundColor: 'transparent',
-              fontSize: '$p !important',
               padding: 0,
             }}
             icon={<Check weight='duotone' />}
@@ -187,7 +185,6 @@ export default function Input(props: Props): JSX.Element {
           <Badge
             css={{
               backgroundColor: 'transparent',
-              fontSize: '$p !important',
               padding: 0,
             }}
             icon={<Warning weight='duotone' />}

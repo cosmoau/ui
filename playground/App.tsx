@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-alert */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { ArrowRight } from 'phosphor-react';
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useEffect } from 'react';
 import toast from 'react-hot-toast';
 
 import {
@@ -19,8 +20,37 @@ import {
 } from '../src/index';
 
 export function App(): ReactElement {
+  const [isMounted, setIsMounted] = React.useState(false);
+  const [bodyChildren, setBodyChildren] = React.useState(null as any);
+
+  useEffect(() => {
+    if (!isMounted) {
+      setIsMounted(true);
+      setTimeout(() => {
+        setBodyChildren([
+          ['1', '2', '3', '4'],
+          ['1', '2', '3', '4'],
+        ]);
+      }, 5000);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <Provider locked='light'>
+      <View bottom='8' container inverted>
+        <Stack direction='row' flex='initial' top='4'>
+          <Stack direction='column'>
+            <Divider bottom='6' top='6' />
+            <Text as='h1'>
+              Heading One is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
+              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.
+            </Text>
+            <Button>Test</Button>
+          </Stack>
+        </Stack>
+      </View>
       <View container>
         <Stack direction='row' flex='initial' top='4'>
           <Stack direction='column'>
@@ -64,6 +94,14 @@ export function App(): ReactElement {
               Small is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
               auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
               aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+            </Text>
+            <Text as='ol'>
+              <Text as='li'>Ordered List</Text>
+              <Text as='li'>Ordered List</Text>
+            </Text>
+            <Text as='ul'>
+              <Text as='li'>Unordered List</Text>
+              <Text as='li'>Unordered List</Text>
             </Text>
 
             <Stack align='center' top='6'>
@@ -119,23 +157,8 @@ export function App(): ReactElement {
             </Button>
             <Badge theme='border'>aIRBNB </Badge>
             <Table
-              bodyChildren={[
-                [
-                  'John DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn DoeJohn Doe',
-                  '32',
-                  'United States',
-                ],
-
-                ['Jane Doe', '25', 'United States'],
-                ['John Doe', '32', 'United States'],
-                ['Jane Doe', '25', 'United States'],
-                ['Jane Doe', '25', 'United States'],
-                ['Jane Doe', '25', 'United States'],
-                ['Jane Doe', '25', 'United States'],
-                ['Jane Doe', '25', 'United States'],
-                ['Jane Doe', '25', 'United States'],
-              ]}
-              headChildren={['Name', 'Age', 'Country']}
+              bodyChildren={bodyChildren}
+              headChildren={['Name', 'Age', 'Country', 'City']}
             />
           </Stack>
         </Stack>

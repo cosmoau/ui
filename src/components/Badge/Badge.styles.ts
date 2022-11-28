@@ -1,4 +1,5 @@
-import { styled, keyframes, breakpoints } from '../../stitches.config';
+import { styled, keyframes } from '../../stitches.config';
+import { TextSizes } from '../Text/Text.styles';
 
 const pulse = keyframes({
   '0%': {
@@ -19,22 +20,10 @@ export const BadgeStyled = styled('div', {
   alignItems: 'center',
   borderRadius: '$3',
   display: 'inline-flex',
-  fontSize: '$h5',
-  fontWeight: '$h5',
   justifyContent: 'center',
-  lineHeight: '1.4 !important',
-
-  [breakpoints.phone]: {
-    fontSize: 'calc($h5 * 0.85)',
-  },
-  [breakpoints.tabletX]: {
-    fontSize: 'calc($h5 * 0.9)',
-  },
-  [breakpoints.laptopX]: {
-    fontSize: 'calc($h5 * 0.95)',
-  },
-
   padding: '$1 $4',
+  ...TextSizes.p,
+
   svg: {
     alignSelf: 'center',
     height: '1.6rem',

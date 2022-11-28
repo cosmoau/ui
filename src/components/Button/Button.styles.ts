@@ -1,6 +1,10 @@
-import { breakpoints, styled } from '../../stitches.config';
+import { styled } from '../../stitches.config';
+
+import { TextSizes } from '../Text/Text.styles';
 
 export const ButtonStyled = styled('button', {
+  ...TextSizes.p,
+
   '&:disabled': {
     cursor: 'not-allowed',
     opacity: 0.7,
@@ -19,23 +23,8 @@ export const ButtonStyled = styled('button', {
   'border': '0.1rem solid $borderHover',
   'borderRadius': '$1',
   'boxShadow': '$1',
-  'color': '$text',
-  'display': 'inline',
-  'fontSize': '$h5',
-  'fontWeight': '$h5',
   'justifyContent': 'center',
-  'lineHeight': '1.4 !important',
-
-  [breakpoints.phone]: {
-    fontSize: 'calc($h5 * 0.85)',
-  },
-  [breakpoints.tabletX]: {
-    fontSize: 'calc($h5 * 0.9)',
-  },
-  [breakpoints.laptopX]: {
-    fontSize: 'calc($h5 * 0.95)',
-  },
-
+  'display': 'inline',
   'padding': '$1 $4',
   'svg': {
     height: '1.75rem',
@@ -54,19 +43,7 @@ export const ButtonStyled = styled('button', {
     },
     small: {
       true: {
-        fontSize: '$h6',
-        fontWeight: '$h6',
-        lineHeight: '1.4 !important',
-
-        [breakpoints.phone]: {
-          fontSize: 'calc($h6 * 0.9)',
-        },
-        [breakpoints.tabletX]: {
-          fontSize: 'calc($h6 * 0.925)',
-        },
-        [breakpoints.laptopX]: {
-          fontSize: 'calc($h6 * 0.95)',
-        },
+        ...TextSizes.small,
 
         svg: {
           height: '1.5rem',

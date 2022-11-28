@@ -1,13 +1,190 @@
 import { breakpoints, styled } from '../../stitches.config';
 
+export const TextSizes = {
+  h1: {
+    fontSize: '$h1',
+    fontWeight: '$h1',
+    lineHeight: '$h1',
+    fontFamily: '$serif',
+    marginBottom: '$5',
+
+    [breakpoints.phone]: {
+      fontSize: 'calc($h1 * 0.85)',
+    },
+    [breakpoints.tabletX]: {
+      fontSize: 'calc($h1 * 0.9)',
+    },
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($h1 * 0.95)',
+    },
+  },
+  h2: {
+    fontSize: '$h2',
+    fontWeight: '$h2',
+    lineHeight: '$h2',
+    fontFamily: '$serif',
+    marginBottom: '$5',
+
+    [breakpoints.phone]: {
+      fontSize: 'calc($h2 * 0.85)',
+    },
+    [breakpoints.tabletX]: {
+      fontSize: 'calc($h2 * 0.9)',
+    },
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($h2 * 0.95)',
+    },
+  },
+  h3: {
+    fontSize: '$h3',
+    fontWeight: '$h3',
+    lineHeight: '$h3',
+    fontFamily: '$serif',
+    marginBottom: '$4',
+
+    [breakpoints.phone]: {
+      fontSize: 'calc($h3 * 0.85)',
+    },
+    [breakpoints.tabletX]: {
+      fontSize: 'calc($h3 * 0.9)',
+    },
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($h3 * 0.95)',
+    },
+  },
+  h4: {
+    fontSize: '$h4',
+    fontWeight: '$h4',
+    lineHeight: '$h4',
+    fontFamily: '$serif',
+    marginBottom: '$4',
+
+    [breakpoints.phone]: {
+      fontSize: 'calc($h4 * 0.85)',
+    },
+    [breakpoints.tabletX]: {
+      fontSize: 'calc($h4 * 0.9)',
+    },
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($h4 * 0.95)',
+    },
+  },
+  h5: {
+    fontSize: '$h5',
+    fontWeight: '$h5',
+    lineHeight: '$h5',
+    marginBottom: '$3',
+
+    [breakpoints.phone]: {
+      fontSize: 'calc($h5 * 0.85)',
+    },
+    [breakpoints.tabletX]: {
+      fontSize: 'calc($h5 * 0.9)',
+    },
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($h5 * 0.95)',
+    },
+  },
+  h6: {
+    fontSize: '$h6',
+    fontWeight: '$h6',
+    lineHeight: '$h6',
+    marginBottom: '$3',
+
+    [breakpoints.phone]: {
+      fontSize: 'calc($h6 * 0.85)',
+    },
+    [breakpoints.tabletX]: {
+      fontSize: 'calc($h6 * 0.9)',
+    },
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($h6 * 0.95)',
+    },
+  },
+  p: {
+    fontSize: '$p',
+    fontWeight: '$p',
+    lineHeight: '$p',
+
+    [breakpoints.phone]: {
+      fontSize: 'calc($p * 0.85)',
+    },
+    [breakpoints.tabletX]: {
+      fontSize: 'calc($p * 0.9)',
+    },
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($p * 0.95)',
+    },
+  },
+  small: {
+    fontSize: '$small',
+    fontWeight: '$small',
+    lineHeight: '$small',
+
+    [breakpoints.phone]: {
+      fontSize: 'calc($small * 0.85)',
+    },
+    [breakpoints.tabletX]: {
+      fontSize: 'calc($small * 0.9)',
+    },
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($small * 0.95)',
+    },
+  },
+  ol: {
+    fontSize: '$p',
+    fontWeight: '$p',
+    lineHeight: '$p',
+
+    [breakpoints.phone]: {
+      fontSize: 'calc($p * 0.85)',
+    },
+    [breakpoints.tabletX]: {
+      fontSize: 'calc($p * 0.9)',
+    },
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($p * 0.95)',
+    },
+  },
+  ul: {
+    fontSize: '$p',
+    fontWeight: '$p',
+    lineHeight: '$p',
+
+    [breakpoints.phone]: {
+      fontSize: 'calc($p * 0.85)',
+    },
+    [breakpoints.tabletX]: {
+      fontSize: 'calc($p * 0.9)',
+    },
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($p * 0.95)',
+    },
+  },
+  li: {
+    fontSize: '$p',
+    fontWeight: '$p',
+    lineHeight: '$p',
+    marginBottom: '$2',
+
+    [breakpoints.phone]: {
+      fontSize: 'calc($p * 0.85)',
+    },
+    [breakpoints.tabletX]: {
+      fontSize: 'calc($p * 0.9)',
+    },
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($p * 0.95)',
+    },
+  },
+};
+
 export const TextStyled = styled('div', {
   '&:last-child': {
-    marginBottom: `${0}!important`,
+    marginBottom: '0 !important',
   },
-  'color': 'inherit',
-  'display': 'block',
-  'lineHeight': 'normal !important',
   'variants': {
+    size: TextSizes,
     accent: {
       true: {
         color: '$accent',
@@ -15,155 +192,7 @@ export const TextStyled = styled('div', {
     },
     bold: {
       true: {
-        fontWeight: 'bold !important',
-      },
-    },
-    size: {
-      h1: {
-        '&:not(:last-child)': {
-          marginBottom: '$5',
-        },
-        'fontFamily': '$serif',
-        'fontSize': '$h1',
-        'fontWeight': '$h1',
-        'lineHeight': '1.2 !important',
-
-        [breakpoints.phone]: {
-          fontSize: 'calc($h1 * 0.8)',
-        },
-        [breakpoints.tabletX]: {
-          fontSize: 'calc($h1 * 0.9)',
-        },
-        [breakpoints.laptopX]: {
-          fontSize: 'calc($h1 * 0.95)',
-        },
-      },
-      h2: {
-        '&:not(:last-child)': {
-          marginBottom: '$5',
-        },
-        'fontFamily': '$serif',
-        'fontSize': '$h2',
-        'fontWeight': '$h2',
-        'lineHeight': '1.2 !important',
-
-        [breakpoints.phone]: {
-          fontSize: 'calc($h2 * 0.8)',
-        },
-        [breakpoints.tabletX]: {
-          fontSize: 'calc($h2 * 0.9)',
-        },
-        [breakpoints.laptopX]: {
-          fontSize: 'calc($h2 * 0.95)',
-        },
-      },
-      h3: {
-        '&:not(:last-child)': {
-          marginBottom: '$5',
-        },
-        'fontFamily': '$serif',
-        'fontSize': '$h3',
-        'fontWeight': '$h3',
-        'lineHeight': '1.3 !important',
-
-        [breakpoints.phone]: {
-          fontSize: 'calc($h3 * 0.85)',
-        },
-        [breakpoints.tabletX]: {
-          fontSize: 'calc($h3 * 0.9)',
-        },
-        [breakpoints.laptopX]: {
-          fontSize: 'calc($h3 * 0.95)',
-        },
-      },
-      h4: {
-        '&:not(:last-child)': {
-          marginBottom: '$4',
-        },
-        'fontSize': '$h4',
-        'fontWeight': '$h4',
-        'letterSpacing': '0.01em',
-        'lineHeight': '1.3 !important',
-
-        [breakpoints.phone]: {
-          fontSize: 'calc($h4 * 0.85)',
-        },
-        [breakpoints.tabletX]: {
-          fontSize: 'calc($h4 * 0.9)',
-        },
-        [breakpoints.laptopX]: {
-          fontSize: 'calc($h4 * 0.95)',
-        },
-      },
-      h5: {
-        '&:not(:last-child)': {
-          marginBottom: '$4',
-        },
-        'fontSize': '$h5',
-        'fontWeight': '$h5',
-        'lineHeight': '1.4 !important',
-
-        [breakpoints.phone]: {
-          fontSize: 'calc($h5 * 0.85)',
-        },
-        [breakpoints.tabletX]: {
-          fontSize: 'calc($h5 * 0.9)',
-        },
-        [breakpoints.laptopX]: {
-          fontSize: 'calc($h5 * 0.95)',
-        },
-      },
-      h6: {
-        '&:not(:last-child)': {
-          marginBottom: '$4',
-        },
-        'fontSize': '$h6',
-        'fontWeight': '$h6',
-        'lineHeight': '1.4 !important',
-
-        [breakpoints.phone]: {
-          fontSize: 'calc($h6 * 0.9)',
-        },
-        [breakpoints.tabletX]: {
-          fontSize: 'calc($h6 * 0.925)',
-        },
-        [breakpoints.laptopX]: {
-          fontSize: 'calc($h6 * 0.95)',
-        },
-      },
-      p: {
-        '&:not(:last-child)': {
-          marginBottom: '$4',
-        },
-        'fontSize': '$p',
-        'fontWeight': '$p',
-        'lineHeight': '1.4 !important',
-
-        [breakpoints.phone]: {
-          fontSize: 'calc($p * 0.9)',
-        },
-        [breakpoints.tabletX]: {
-          fontSize: 'calc($p * 0.925)',
-        },
-      },
-      small: {
-        '&:not(:last-child)': {
-          marginBottom: '$4',
-        },
-        'fontSize': '$small',
-        'fontWeight': '$small',
-        'lineHeight': '1.4 !important',
-
-        [breakpoints.phone]: {
-          fontSize: 'calc($small * 0.9)',
-        },
-        [breakpoints.tabletX]: {
-          fontSize: 'calc($small * 0.925)',
-        },
-      },
-      span: {
-        fontSize: 'inherit',
-        fontWeight: 'inherit',
+        fontWeight: '$bold',
       },
     },
   },

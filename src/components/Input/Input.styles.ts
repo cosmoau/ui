@@ -8,7 +8,7 @@ export const InputCoreStyled = styled('div', {
     boxShadow: '$1',
   },
   '&:hover': {
-    boxShadow: '$1',
+    boxShadow: '$2',
   },
   '*': {
     verticalAlign: 'middle',
@@ -16,6 +16,7 @@ export const InputCoreStyled = styled('div', {
   'alignContent': 'center',
   'alignSelf': 'center',
   'borderRadius': '$1',
+  'boxShadow': '$1',
   'display': 'inline-flex',
   'justifyContent': 'center',
   'padding': '$2 $4',
@@ -54,7 +55,7 @@ export const InputAreaStyled = styled('input', {
   'backgroundColor': 'transparent',
   'border': 'none',
   'color': '$text',
-  'fontFamily': '$sans !important',
+  'fontFamily': '$default !important',
   'fontSize': '16px !important',
   'letterSpacing': '0',
   'margin': '0',
@@ -67,10 +68,6 @@ export const InputAreaStyled = styled('input', {
 });
 
 export const InputFunctionStyled = styled('div', {
-  button: {
-    fontSize: '$p',
-    marginLeft: '$2',
-  },
   display: 'inline-flex',
   height: '100%',
   marginLeft: '$3',

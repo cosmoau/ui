@@ -1,28 +1,16 @@
-import { breakpoints, fadeIn, fadeOut, styled } from '../../../stitches.config';
+import { fadeIn, fadeOut, styled } from '../../../stitches.config';
+import { TextSizes } from '../../Text/Text.styles';
 
 export const ToastStyled = styled('div', {
   backgroundColor: '$background',
-  border: '0.1rem solid $borderHover',
+  border: '0.1rem solid $border',
   borderRadius: '$1',
   boxShadow: '$3',
   cursor: 'pointer',
-  fontSize: '$h5',
-  fontWeight: '$h5',
   height: 'auto',
   justifyContent: 'center',
-  lineHeight: '1.4 !important',
   marginTop: '$3',
-
-  [breakpoints.phone]: {
-    fontSize: 'calc($h5 * 0.85)',
-  },
-  [breakpoints.tabletX]: {
-    fontSize: 'calc($h5 * 0.9)',
-  },
-  [breakpoints.laptopX]: {
-    fontSize: 'calc($h5 * 0.95)',
-  },
-
+  ...TextSizes.h6,
   overflow: 'hidden',
   padding: '$1 $3',
   position: 'relative',

@@ -1,7 +1,7 @@
 import { FunnelSimple, SortAscending, SortDescending } from 'phosphor-react';
 import { ReactNode, useState } from 'react';
 
-import { Button } from '../../index';
+import { Button, Text } from '../../index';
 
 import {
   TableBodyStyled,
@@ -14,7 +14,7 @@ import {
 
 interface Props {
   headChildren?: Array<string>;
-  bodyChildren: Array<Array<ReactNode | string>>;
+  bodyChildren?: Array<Array<ReactNode | string>>;
   sort?: boolean;
 }
 
@@ -45,7 +45,7 @@ export default function Table(props: Props): JSX.Element {
 
     return 0;
   }
-  const sortedBodyChildren = props.bodyChildren.sort(sort);
+  const sortedBodyChildren = props.bodyChildren ? props.bodyChildren.sort(sort) : [];
 
   return (
     <TableStyled>
@@ -56,9 +56,10 @@ export default function Table(props: Props): JSX.Element {
               <TableHeadCellStyled key={index} onClick={(): void => handleSort(index)}>
                 <Button
                   ariaLabel='Sort'
+                  block
                   css={{
                     svg: {
-                      opacity: sortBy === index ? 1 : 0.3,
+                      opacity: sortBy === index ? 1 : 0.33,
                     },
                   }}
                   icon={
@@ -74,7 +75,7 @@ export default function Table(props: Props): JSX.Element {
                   }
                   iconPosition='right'
                   name='sort'
-                  theme='minimal'>
+                  theme={sortBy === index ? 'default' : 'minimal'}>
                   {child}
                 </Button>
               </TableHeadCellStyled>
@@ -82,14 +83,28 @@ export default function Table(props: Props): JSX.Element {
           </TableRowStyled>
         </TableHeadStyled>
       )}
+
       <TableBodyStyled>
-        {sortedBodyChildren.map((row, index) => (
-          <TableRowStyled key={index}>
-            {row.map((cell, index) => (
-              <TableCellStyled key={index}>{cell}</TableCellStyled>
-            ))}
+        {props.bodyChildren ? (
+          sortedBodyChildren.map((row, index) => (
+            <TableRowStyled key={index}>
+              {row.map((cell, index) => (
+                <TableCellStyled key={index}>{cell}</TableCellStyled>
+              ))}
+            </TableRowStyled>
+          ))
+        ) : (
+          <TableRowStyled>
+            <TableCellStyled
+              css={{
+                textAlign: 'left !important',
+              }}>
+              <Text accent as='h6'>
+                No results found
+              </Text>
+            </TableCellStyled>
           </TableRowStyled>
-        ))}
+        )}
       </TableBodyStyled>
     </TableStyled>
   );

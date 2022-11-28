@@ -56,7 +56,7 @@ export const FieldAreaStyled = styled('textarea', {
   'border': 'none',
   'color': '$text',
   'display': 'block',
-  'fontFamily': '$sans !important',
+  'fontFamily': '$default !important',
   'fontSize': '16px !important',
   'margin': '0 auto',
   'padding': '$3 $4',
@@ -66,7 +66,6 @@ export const FieldAreaStyled = styled('textarea', {
 export const FieldFunctionStyled = styled('div', {
   borderBottom: '0.1rem solid $border',
   button: {
-    fontSize: '$p',
     marginLeft: '$2',
     paddingBottom: '$1',
     paddingLeft: '$3',

@@ -1,4 +1,4 @@
-import { breakpoints, styled } from '../../stitches.config';
+import { styled } from '../../stitches.config';
 
 export const TableStyled = styled('table', {
   '*': {
@@ -7,17 +7,10 @@ export const TableStyled = styled('table', {
   },
   'borderCollapse': 'separate',
   'borderSpacing': '$1',
-  'fontSize': '1.5rem',
   'maxWidth': '100%',
   'minWidth': '100%',
   'overflowX': 'auto',
-  'tableLayout': 'fixed',
   'width': '100%',
-
-  [breakpoints.tablet]: {
-    display: 'block',
-    tableLayout: 'fixed',
-  },
 });
 
 export const TableHeadStyled = styled('thead', {
@@ -44,48 +37,24 @@ export const TableRowStyled = styled('tr', {
 
 export const TableCellStyled = styled('td', {
   '&:last-child': {
+    borderRight: '0 !important',
     textAlign: 'right',
   },
   'borderBottom': '0.1rem solid $borderHover',
-  'fontSize': '$h5',
-  'fontWeight': '$h5',
+  'borderRight': '0.1rem solid $borderHover',
   'justifyContent': 'center',
-  'lineHeight': '1.4 !important',
-
-  [breakpoints.phone]: {
-    fontSize: 'calc($h5 * 0.85)',
-  },
-  [breakpoints.tabletX]: {
-    fontSize: 'calc($h5 * 0.9)',
-  },
-  [breakpoints.laptopX]: {
-    fontSize: 'calc($h5 * 0.95)',
-  },
-
-  'padding': '$4',
+  'padding': '$2 $4 ',
 });
 
 export const TableHeadCellStyled = styled('th', {
   '&:last-child': {
-    textAlign: 'right',
+    borderRight: '0 !important',
   },
+
   'borderBottom': '0.1rem solid $borderHover',
+  'borderRight': '0.1rem solid $borderHover',
 
-  'fontSize': '$h5',
-  'fontWeight': 'bold',
-  'lineHeight': '1.4 !important',
-
-  [breakpoints.phone]: {
-    fontSize: 'calc($h5 * 0.85)',
-  },
-  [breakpoints.tabletX]: {
-    fontSize: 'calc($h5 * 0.9)',
-  },
-  [breakpoints.laptopX]: {
-    fontSize: 'calc($h5 * 0.95)',
-  },
-
-  'padding': '$4 0.5rem',
+  'padding': '$3 $4 ',
 });
 
 export default TableStyled;

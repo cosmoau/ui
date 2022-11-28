@@ -1,6 +1,6 @@
 import { globalCss, lightTheme, styled, theme } from '../../stitches.config';
 
-export const ProviderStyled = styled('div', {
+export const ProviderStyled = styled('main', {
   backgroundColor: '$background',
   color: '$text',
   minHeight: '100vh',
@@ -50,7 +50,7 @@ export const reset = globalCss({
     backgroundColor: 'inherit',
     border: 0,
     color: '$text',
-    fontFamily: '$sans, sans-serif',
+    fontFamily: '$default, sans-serif',
     fontSize: '1.6rem',
     margin: 0,
     overflowX: 'hidden',
@@ -96,11 +96,8 @@ export const reset = globalCss({
     'width': 'auto',
   },
   'html': {
-    MozOsxFontSmoothing: 'grayscale',
-    WebkitFontSmoothing: 'antialiased',
-    fontSize: '61.5%',
+    fontSize: '62.5%',
     lineHeight: '1.5',
-    textRendering: 'optimizeLegibility',
   },
   'svg': {
     verticalAlign: 'middle',

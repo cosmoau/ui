@@ -1,4 +1,5 @@
 import { fadeIn, fadeOut, styled } from '../../stitches.config';
+import { TextSizes } from '../Text/Text.styles';
 
 export const DropdownStyled = styled('div', {
   display: 'inline-block',
@@ -44,6 +45,7 @@ export const DropdownGroupStyled = styled('div', {
 });
 
 export const DropdownItemStyled = styled('div', {
+  ...TextSizes.p,
   '&.active': {
     '&:hover': {
       backgroundColor: '$defaultHover',
@@ -61,7 +63,7 @@ export const DropdownItemStyled = styled('div', {
   'borderRadius': 0,
   'cursor': 'pointer',
   'display': 'flex',
-  'fontSize': '$h6',
+
   'lineHeight': 'normal',
   'transition': '$default',
   'variants': {
