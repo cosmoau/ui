@@ -11,6 +11,8 @@ export const ToastStyled = styled('div', {
   justifyContent: 'center',
   marginTop: '$3',
   ...TextSizes.h6,
+  marginBottom: '0 !important',
+
   overflow: 'hidden',
   padding: '$1 $3',
   position: 'relative',

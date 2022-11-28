@@ -12,7 +12,6 @@ export const TableStyled = styled('table', {
   'minWidth': '100%',
   'overflowX': 'auto',
   'width': '100%',
-  ...TextSizes.p,
 });
 
 export const TableHeadStyled = styled('thead', {
@@ -42,9 +41,12 @@ export const TableCellStyled = styled('td', {
     borderRight: '0 !important',
     textAlign: 'right',
   },
+  ...TextSizes.p,
+
   'borderBottom': '0.1rem solid $border',
   'borderRight': '0.1rem solid $border',
   'justifyContent': 'center',
+  'marginBottom': '0 !important',
   'padding': '$2 $4 ',
 });
 
@@ -55,6 +57,7 @@ export const TableHeadCellStyled = styled('th', {
   ...TextSizes.p,
   'borderBottom': '0.1rem solid $border',
   'borderRight': '0.1rem solid $border',
+  'marginBottom': '0 !important',
   'padding': '$3 $4 ',
   'textAlign': 'center',
 });

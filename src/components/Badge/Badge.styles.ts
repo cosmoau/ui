@@ -23,6 +23,7 @@ export const BadgeStyled = styled('div', {
   justifyContent: 'center',
   padding: '$1 $4',
   ...TextSizes.p,
+  marginBottom: '0 !important',
 
   svg: {
     alignSelf: 'center',

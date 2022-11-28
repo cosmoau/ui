@@ -190,7 +190,6 @@ export const TextStyled = styled('div', {
     marginBottom: '0 !important',
   },
   'color': '$text',
-  'display': 'block',
   'variants': {
     accent: {
       true: {

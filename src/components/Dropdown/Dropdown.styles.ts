@@ -51,6 +51,7 @@ export const DropdownItemStyled = styled('div', {
       backgroundColor: '$defaultHover',
     },
   },
+
   '&:hover': {
     backgroundColor: '$default',
     borderBottomColor: 'transparent',
@@ -59,12 +60,13 @@ export const DropdownItemStyled = styled('div', {
   '&:last-child': {
     borderBottom: 0,
   },
-
   'borderRadius': 0,
+
   'cursor': 'pointer',
   'display': 'flex',
-
   'lineHeight': 'normal',
+
+  'marginBottom': '0 !important',
   'transition': '$default',
   'variants': {
     submenu: {

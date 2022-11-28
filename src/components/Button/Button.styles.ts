@@ -3,11 +3,11 @@ import { TextSizes } from '../Text/Text.styles';
 
 export const ButtonStyled = styled('button', {
   ...TextSizes.h6,
-
   '&:disabled': {
     cursor: 'not-allowed',
     opacity: 0.7,
   },
+
   '&:hover': {
     backgroundColor: '$defaultHover',
     borderColor: '$border',
@@ -18,14 +18,15 @@ export const ButtonStyled = styled('button', {
     display: 'block',
   },
   'alignContent': 'center',
-
   'alignItems': 'center',
+
   'border': '0.1rem solid $border',
   'borderRadius': '$1',
   'boxShadow': '$1',
   'color': '$text',
   'display': 'inline',
   'justifyContent': 'center',
+  'marginBottom': '0 !important',
   'padding': '$1 $4',
   'svg': {
     height: '1.8rem',
@@ -45,6 +46,7 @@ export const ButtonStyled = styled('button', {
     small: {
       true: {
         ...TextSizes.small,
+        marginBottom: '0 !important',
 
         svg: {
           height: '1.5rem',
