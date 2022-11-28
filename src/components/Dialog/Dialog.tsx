@@ -34,9 +34,7 @@ export default function Dialog(props: Props): JSX.Element {
 
   function handleOpen(): void {
     setIsOpen(true);
-    setTimeout(() => {
-      setIsMounted(true);
-    }, 25);
+    setIsMounted(true);
   }
 
   function handleClick(): void {

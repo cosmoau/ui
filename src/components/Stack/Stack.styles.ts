@@ -1,6 +1,6 @@
 import { breakpoints, styled } from '../../stitches.config';
 
-export const StackRowStyled = styled('section', {
+export const StackRowStyled = styled('div', {
   '*': {
     boxSizing: 'border-box',
   },

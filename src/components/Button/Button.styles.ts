@@ -11,25 +11,27 @@ export const ButtonStyled = styled('button', {
   },
   '&:hover': {
     backgroundColor: '$defaultHover',
-    borderColor: '$borderHover',
+    borderColor: '$border',
     boxShadow: '$2',
     color: '$text',
   },
   'a': {
     display: 'block',
   },
+  'color': '$text',
+
   'alignContent': 'center',
   'alignItems': 'center',
-  'border': '0.1rem solid $borderHover',
+  'border': '0.1rem solid $border',
   'borderRadius': '$1',
   'boxShadow': '$1',
   'justifyContent': 'center',
   'display': 'inline',
   'padding': '$1 $4',
   'svg': {
-    height: '1.75rem',
-    marginTop: '-0.075rem',
-    width: '1.75rem',
+    height: '1.8rem',
+    marginTop: '-0.06rem',
+    width: '1.8rem',
   },
 
   'transition': '$default',
@@ -54,6 +56,7 @@ export const ButtonStyled = styled('button', {
     },
     theme: {
       default: {
+        backgroundColor: 'transparent',
         borderColor: '$border',
       },
       fill: {

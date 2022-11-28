@@ -1,7 +1,7 @@
 import { FunnelSimple, SortAscending, SortDescending } from 'phosphor-react';
 import { ReactNode, useState } from 'react';
 
-import { Button, Text } from '../../index';
+import { Button } from '../../index';
 
 import {
   TableBodyStyled,
@@ -16,6 +16,7 @@ interface Props {
   headChildren?: Array<string>;
   bodyChildren?: Array<Array<ReactNode | string>>;
   sort?: boolean;
+  sortDisabled?: number | number[];
 }
 
 export default function Table(props: Props): JSX.Element {
@@ -52,34 +53,44 @@ export default function Table(props: Props): JSX.Element {
       {props.headChildren && (
         <TableHeadStyled>
           <TableRowStyled>
-            {props.headChildren.map((child, index) => (
-              <TableHeadCellStyled key={index} onClick={(): void => handleSort(index)}>
-                <Button
-                  ariaLabel='Sort'
-                  block
-                  css={{
-                    svg: {
-                      opacity: sortBy === index ? 1 : 0.33,
-                    },
-                  }}
-                  icon={
-                    sortBy === index ? (
-                      sortDirection === 'asc' ? (
-                        <SortAscending />
+            {props.headChildren.map((child, index) =>
+              // if props.sort isn't true, or props.sortDisabled equals or includes the index, don't render the sort button
+              !props.sort ||
+              props.sortDisabled === index ||
+              (Array.isArray(props.sortDisabled) &&
+                props.sortDisabled.includes(index)) ? (
+                <TableHeadCellStyled key={index}>{child}</TableHeadCellStyled>
+              ) : (
+                <TableHeadCellStyled
+                  key={index}
+                  onClick={(): void => handleSort(index)}>
+                  <Button
+                    ariaLabel='Sort'
+                    block
+                    css={{
+                      svg: {
+                        opacity: sortBy === index ? 1 : 0.33,
+                      },
+                    }}
+                    icon={
+                      sortBy === index ? (
+                        sortDirection === 'asc' ? (
+                          <SortAscending />
+                        ) : (
+                          <SortDescending />
+                        )
                       ) : (
-                        <SortDescending />
+                        <FunnelSimple />
                       )
-                    ) : (
-                      <FunnelSimple />
-                    )
-                  }
-                  iconPosition='right'
-                  name='sort'
-                  theme={sortBy === index ? 'default' : 'minimal'}>
-                  {child}
-                </Button>
-              </TableHeadCellStyled>
-            ))}
+                    }
+                    iconPosition='right'
+                    name='sort'
+                    theme={sortBy === index ? 'default' : 'minimal'}>
+                    {child}
+                  </Button>
+                </TableHeadCellStyled>
+              )
+            )}
           </TableRowStyled>
         </TableHeadStyled>
       )}
@@ -96,12 +107,11 @@ export default function Table(props: Props): JSX.Element {
         ) : (
           <TableRowStyled>
             <TableCellStyled
+              colSpan={props.headChildren?.length || 1}
               css={{
                 textAlign: 'left !important',
               }}>
-              <Text accent as='h6'>
-                No results found
-              </Text>
+              No results found.
             </TableCellStyled>
           </TableRowStyled>
         )}

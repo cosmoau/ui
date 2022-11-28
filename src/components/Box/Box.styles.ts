@@ -10,7 +10,7 @@ export const paddingVariants = {
     },
   },
 };
-export const BoxStyled = styled('div', {
+export const BoxStyled = styled('article', {
   border: '0.1rem solid transparent',
   borderRadius: '$2',
   display: 'block',

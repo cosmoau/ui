@@ -166,6 +166,7 @@ export const TextSizes = {
     fontWeight: '$p',
     lineHeight: '$p',
     marginBottom: '$2',
+    listStylePosition: 'inside',
 
     [breakpoints.phone]: {
       fontSize: 'calc($p * 0.85)',
@@ -183,6 +184,7 @@ export const TextStyled = styled('div', {
   '&:last-child': {
     marginBottom: '0 !important',
   },
+  'color': '$text',
   'variants': {
     size: TextSizes,
     accent: {

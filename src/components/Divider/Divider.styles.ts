@@ -1,10 +1,14 @@
 import { styled } from '../../stitches.config';
 
-export const DividerStyled = styled('div', {
-  height: '0.1rem',
-  margin: '0 auto',
-  maxWidth: '100%',
-  width: '100%',
+export const DividerStyled = styled('hr', {
+  // reset
+  borderLeft: 'none',
+  borderRight: 'none',
+  borderTop: 'none',
+  borderBottom: '0.1rem solid $border',
+  margin: 0,
+  padding: 0,
+  backgroundColor: 'transparent',
 });
 
 export default DividerStyled;

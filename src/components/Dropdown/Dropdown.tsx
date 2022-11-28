@@ -49,9 +49,7 @@ export default function Dropdown(props: Props): JSX.Element {
 
   function handleOpen(): void {
     setIsOpen(true);
-    setTimeout(() => {
-      setIsMounted(true);
-    }, 25);
+    setIsMounted(true);
   }
 
   function handleClick(): void {
@@ -107,6 +105,7 @@ export default function Dropdown(props: Props): JSX.Element {
             minWidth: (props.width || '20rem') + '!important',
             right: props.align === 'right' ? '0' : 'auto',
           }}
+          key={filteredOptions.length + Math.random()}
           ref={ref}>
           {props.filter && (
             <Stack bottom={'2'} top={'1'}>

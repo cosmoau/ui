@@ -18,11 +18,11 @@ export const ToastStyled = styled('div', {
   variants: {
     animation: {
       false: {
-        animation: `${fadeOut} .3s`,
+        animation: `${fadeOut} .25s`,
         animationFillMode: 'forwards',
       },
       true: {
-        animation: `${fadeIn} .4s`,
+        animation: `${fadeIn} .25s`,
         animationFillMode: 'forwards',
       },
     },

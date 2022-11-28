@@ -10,6 +10,7 @@ interface Props extends Omit<DefaultProps, 'spacing'> {
   top?: DefaultProps['spacing'];
   bottom?: DefaultProps['spacing'];
   inverted?: boolean;
+  soft?: boolean;
 }
 
 export default function View(props: Props): JSX.Element {
@@ -17,6 +18,7 @@ export default function View(props: Props): JSX.Element {
     <ViewStyled
       className={props.inverted ? theme.toString() : undefined}
       css={{
+        backgroundColor: props.soft ? '$soft' : '$background',
         ...(props.top && {
           marginTop: 0,
           paddingTop: `$${props.top}`,

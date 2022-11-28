@@ -28,11 +28,11 @@ export const DialogOverlayStyled = styled('div', {
   variants: {
     animation: {
       false: {
-        animation: `${fadeOut} .3s ease-in-out`,
+        animation: `${fadeOut} .3s linear`,
         animationFillMode: 'forwards',
       },
       true: {
-        animation: `${fadeIn} .15s ease-in-out`,
+        animation: `${fadeIn} .25s linear`,
         animationFillMode: 'forwards',
       },
     },
@@ -59,11 +59,11 @@ export const DialogContentStyled = styled('div', {
   variants: {
     animation: {
       false: {
-        animation: `${fadeOut} .4s ease-in-out`,
+        animation: `${fadeOut} .25s linear`,
         animationFillMode: 'forwards',
       },
       true: {
-        animation: `${fadeIn} .4s ease-in-out`,
+        animation: `${fadeIn} .25s linear`,
         animationFillMode: 'forwards',
       },
     },

@@ -14,21 +14,13 @@ import {
 interface Props extends Omit<DefaultProps, 'spacing'> {
   children: ReactNode;
   loading?: boolean;
-  theme?:
-    | 'red'
-    | 'orange'
-    | 'pink'
-    | 'purple'
-    | 'blue'
-    | 'green'
-    | 'border'
-    | 'borderHover';
+  theme?: 'red' | 'orange' | 'pink' | 'purple' | 'blue' | 'green' | 'border';
   onClick?: MouseEventHandler<HTMLDivElement>;
   icon?: ReactNode;
   iconPosition?: 'left' | 'right';
   inline?: DefaultProps['spacing'] | 'auto';
   dot?: boolean | 'pulse';
-  dotColor?: 'red' | 'orange' | 'pink' | 'purple' | 'blue' | 'green' | 'borderHover';
+  dotColor?: 'red' | 'orange' | 'pink' | 'purple' | 'blue' | 'green' | 'border';
 }
 
 export default function Badge(props: Props): JSX.Element {

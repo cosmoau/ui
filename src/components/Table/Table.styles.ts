@@ -1,4 +1,5 @@
 import { styled } from '../../stitches.config';
+import { TextSizes } from '../Text/Text.styles';
 
 export const TableStyled = styled('table', {
   '*': {
@@ -11,6 +12,7 @@ export const TableStyled = styled('table', {
   'minWidth': '100%',
   'overflowX': 'auto',
   'width': '100%',
+  ...TextSizes.p,
 });
 
 export const TableHeadStyled = styled('thead', {
@@ -40,8 +42,8 @@ export const TableCellStyled = styled('td', {
     borderRight: '0 !important',
     textAlign: 'right',
   },
-  'borderBottom': '0.1rem solid $borderHover',
-  'borderRight': '0.1rem solid $borderHover',
+  'borderBottom': '0.1rem solid $border',
+  'borderRight': '0.1rem solid $border',
   'justifyContent': 'center',
   'padding': '$2 $4 ',
 });
@@ -50,10 +52,10 @@ export const TableHeadCellStyled = styled('th', {
   '&:last-child': {
     borderRight: '0 !important',
   },
-
-  'borderBottom': '0.1rem solid $borderHover',
-  'borderRight': '0.1rem solid $borderHover',
-
+  ...TextSizes.p,
+  'textAlign': 'center',
+  'borderBottom': '0.1rem solid $border',
+  'borderRight': '0.1rem solid $border',
   'padding': '$3 $4 ',
 });
 

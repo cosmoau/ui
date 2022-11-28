@@ -31,11 +31,11 @@ export const DropdownGroupStyled = styled('div', {
   variants: {
     animation: {
       false: {
-        animation: `${fadeOut} .4s`,
+        animation: `${fadeOut} .25s`,
         animationFillMode: 'forwards',
       },
       true: {
-        animation: `${fadeIn} .2s`,
+        animation: `${fadeIn} .25s`,
         animationFillMode: 'forwards',
       },
     },

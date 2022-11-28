@@ -48,6 +48,7 @@ export function App(): ReactElement {
               aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.
             </Text>
             <Button>Test</Button>
+            <Button theme='fill'>Test</Button>
           </Stack>
         </Stack>
       </View>
@@ -103,6 +104,11 @@ export function App(): ReactElement {
               <Text as='li'>Unordered List</Text>
               <Text as='li'>Unordered List</Text>
             </Text>
+            <Text as='h4'>
+              Heading Four is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
+              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+            </Text>
 
             <Stack align='center' top='6'>
               <Input
@@ -157,6 +163,8 @@ export function App(): ReactElement {
             </Button>
             <Badge theme='border'>aIRBNB </Badge>
             <Table
+              sort
+              sortDisabled={[1, 3]}
               bodyChildren={bodyChildren}
               headChildren={['Name', 'Age', 'Country', 'City']}
             />
