@@ -1,4 +1,4 @@
-import { styled, keyframes } from '../../stitches.config';
+import { styled, keyframes, fadeOut } from '../../stitches.config';
 import { TextSizes } from '../Text/Text.styles';
 
 const pulse = keyframes({
@@ -31,6 +31,12 @@ export const BadgeStyled = styled('div', {
     width: '1.6rem',
   },
   variants: {
+    animation: {
+      true: {
+        animation: `${fadeOut} .25s linear`,
+        animationFillMode: 'forwards',
+      },
+    },
     theme: {
       blue: {
         backgroundColor: '$blueOverlay',

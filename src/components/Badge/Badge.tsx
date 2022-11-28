@@ -1,5 +1,5 @@
-import { Circle } from 'phosphor-react';
-import { MouseEventHandler, ReactNode } from 'react';
+import { Circle, X } from 'phosphor-react';
+import { MouseEventHandler, ReactNode, useState } from 'react';
 
 import { Loading } from '../../index';
 import { breakpoints, DefaultProps } from '../../stitches.config';
@@ -21,11 +21,23 @@ interface Props extends Omit<DefaultProps, 'spacing'> {
   inline?: DefaultProps['spacing'] | 'auto';
   dot?: boolean | 'pulse';
   dotColor?: 'red' | 'orange' | 'pink' | 'purple' | 'blue' | 'green' | 'border';
+  closable?: boolean;
 }
 
 export default function Badge(props: Props): JSX.Element {
-  return (
+  const [isOpen, setIsOpen] = useState(true);
+  const [isMounted, setIsMounted] = useState(true);
+
+  function handleClose(): void {
+    setIsOpen(false);
+    setTimeout(() => {
+      setIsMounted(false);
+    }, 250);
+  }
+
+  return isMounted ? (
     <BadgeStyled
+      animation={!isOpen}
       css={{
         ...(props.inline && {
           display: 'inline-flex',
@@ -59,9 +71,16 @@ export default function Badge(props: Props): JSX.Element {
       ) : (
         props.children
       )}
-      {props.icon && props.iconPosition === 'right' && (
+      {props.icon && props.iconPosition === 'right' && !props.closable && (
         <BadgeIconStyled align='right'>{props.icon}</BadgeIconStyled>
       )}
+      {props.closable && (
+        <BadgeIconStyled align='right' onClick={(): void => handleClose()}>
+          <X weight='fill' style={{ opacity: 0.5, cursor: 'pointer' }} />
+        </BadgeIconStyled>
+      )}
     </BadgeStyled>
+  ) : (
+    <></>
   );
 }

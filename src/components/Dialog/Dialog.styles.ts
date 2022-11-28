@@ -84,7 +84,7 @@ export const DialogExitStyled = styled('div', {
     opacity: 1,
   },
   'cursor': 'pointer',
-  'opacity': 0.7,
+  'opacity': 0.5,
   'padding': '1rem',
   'position': 'absolute',
   'right': 0,

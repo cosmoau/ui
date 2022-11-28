@@ -1,4 +1,4 @@
-import { styled } from '../../stitches.config';
+import { fadeOut, styled } from '../../stitches.config';
 
 export const paddingVariants = {
   padding: {
@@ -21,6 +21,12 @@ export const BoxStyled = styled('article', {
   transition: '$default',
 
   variants: {
+    animation: {
+      true: {
+        animation: `${fadeOut} .25s linear`,
+        animationFillMode: 'forwards',
+      },
+    },
     hover: {
       true: {
         '&:hover': {
@@ -71,6 +77,19 @@ export const BoxImageChildrenStyled = styled('div', {
   variants: {
     ...paddingVariants,
   },
+});
+
+export const BoxExitStyled = styled('div', {
+  '&:hover': {
+    opacity: 1,
+  },
+  'cursor': 'pointer',
+  'opacity': 0.7,
+  'padding': '1rem',
+  'position': 'absolute',
+  'right': 0,
+  'top': 0,
+  'transition': '$default',
 });
 
 export default BoxStyled;

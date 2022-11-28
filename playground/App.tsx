@@ -17,6 +17,7 @@ import {
   Divider,
   Dialog,
   Popover,
+  Box,
 } from '../src/index';
 
 export function App(): ReactElement {
@@ -38,17 +39,18 @@ export function App(): ReactElement {
 
   return (
     <Provider locked='light'>
-      <View bottom='8' container inverted>
+      <View bottom='8' container>
         <Stack direction='row' flex='initial' top='4'>
           <Stack direction='column'>
-            <Divider bottom='6' top='6' />
-            <Text as='h1'>
-              Heading One is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
-              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.
-            </Text>
-            <Button>Test</Button>
-            <Button theme='fill'>Test</Button>
+            <Box closable theme='fill'>
+              <Text as='h1'>
+                Heading One is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio,
+                vitae aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.
+              </Text>
+              <Button>Test</Button>
+              <Button theme='fill'>Test</Button>
+            </Box>
           </Stack>
         </Stack>
       </View>
@@ -120,6 +122,7 @@ export function App(): ReactElement {
             </Stack>
 
             <Button
+              external
               ariaLabel='button'
               icon={<ArrowRight />}
               iconPosition='right'
@@ -161,7 +164,11 @@ export function App(): ReactElement {
               theme='fill'>
               Button
             </Button>
-            <Badge theme='border'>aIRBNB </Badge>
+            <Stack top='4' bottom='4'>
+              <Badge>Normal</Badge>
+              <Badge closable>Normal</Badge>
+            </Stack>
+
             <Table
               sort
               sortDisabled={[1, 3]}

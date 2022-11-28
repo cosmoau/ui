@@ -1,9 +1,10 @@
-import { ReactNode } from 'react';
+import { X } from 'phosphor-react';
+import { ReactNode, useState } from 'react';
 
-import { Image } from '../../index';
+import { Button, Image } from '../../index';
 import { DefaultProps } from '../../stitches.config';
 
-import { BoxImageChildrenStyled, BoxStyled } from './Box.styles';
+import { BoxExitStyled, BoxImageChildrenStyled, BoxStyled } from './Box.styles';
 
 interface Props extends DefaultProps {
   children: ReactNode;
@@ -17,22 +18,52 @@ interface Props extends DefaultProps {
   imageAlt?: string;
   hover?: boolean;
   theme?: 'default' | 'success' | 'warning' | 'error' | 'transparent' | 'fill';
+  closable?: boolean;
 }
 
 export default function Box(props: Props): JSX.Element {
-  return props.image ? (
-    <BoxStyled
-      css={props.css}
-      hover={props.hover}
-      id={props.id}
-      loading={props.loading || false}
-      padding={'none'}
-      theme={props.theme || 'default'}>
-      {props.imageCTA ? (
-        <a
-          href={props.imageCTA}
-          rel='noopener noreferrer'
-          target={props.imageTarget || '_blank'}>
+  const [isOpen, setIsOpen] = useState(true);
+  const [isMounted, setIsMounted] = useState(true);
+
+  function handleClose(): void {
+    setIsOpen(false);
+    setTimeout(() => {
+      setIsMounted(false);
+    }, 250);
+  }
+
+  return isMounted ? (
+    props.image ? (
+      <BoxStyled
+        animation={!isOpen}
+        css={props.css}
+        hover={props.hover}
+        id={props.id}
+        loading={props.loading || false}
+        padding={'none'}
+        theme={props.theme || 'default'}>
+        {props.imageCTA ? (
+          <a
+            href={props.imageCTA}
+            rel='noopener noreferrer'
+            target={props.imageTarget || '_blank'}>
+            <Image
+              alt={props.imageAlt || ''}
+              css={{
+                img: {
+                  borderTopLeftRadius: '$2 !important',
+                  borderTopRightRadius: '$2 !important',
+                },
+              }}
+              fill
+              fillFit={props.imageFit || 'cover'}
+              fillHeight={props.imageHeight || '20rem'}
+              fillPosition={props.imagePosition || 'center'}
+              hover={props.hover}
+              src={props.image}
+            />
+          </a>
+        ) : (
           <Image
             alt={props.imageAlt || ''}
             css={{
@@ -48,37 +79,31 @@ export default function Box(props: Props): JSX.Element {
             hover={props.hover}
             src={props.image}
           />
-        </a>
-      ) : (
-        <Image
-          alt={props.imageAlt || ''}
-          css={{
-            img: {
-              borderTopLeftRadius: '$2 !important',
-              borderTopRightRadius: '$2 !important',
-            },
-          }}
-          fill
-          fillFit={props.imageFit || 'cover'}
-          fillHeight={props.imageHeight || '20rem'}
-          fillPosition={props.imagePosition || 'center'}
-          hover={props.hover}
-          src={props.image}
-        />
-      )}
-      <BoxImageChildrenStyled padding={'default'}>
+        )}
+        <BoxImageChildrenStyled padding={'default'}>
+          {props.children}
+        </BoxImageChildrenStyled>
+      </BoxStyled>
+    ) : (
+      <BoxStyled
+        animation={!isOpen}
+        css={props.css}
+        hover={props.hover}
+        id={props.id}
+        loading={props.loading || false}
+        padding={'default'}
+        theme={props.theme || 'default'}>
         {props.children}
-      </BoxImageChildrenStyled>
-    </BoxStyled>
+        {props.closable && (
+          <BoxExitStyled onClick={(): void => handleClose()}>
+            <Button ariaLabel='Close' name='close' small theme={'minimal'}>
+              <X />
+            </Button>
+          </BoxExitStyled>
+        )}
+      </BoxStyled>
+    )
   ) : (
-    <BoxStyled
-      css={props.css}
-      hover={props.hover}
-      id={props.id}
-      loading={props.loading || false}
-      padding={'default'}
-      theme={props.theme || 'default'}>
-      {props.children}
-    </BoxStyled>
+    <></>
   );
 }
