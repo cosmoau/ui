@@ -7,7 +7,7 @@ import { ImageStyled } from './Image.styles';
 interface Props extends DefaultProps, ImageProps {
   borderRadius?: 1 | 2 | 3;
   hover?: boolean;
-  fillFit?: 'contain' | 'cover';
+  fillFit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
   fillPosition?: 'center' | 'top' | 'bottom' | 'left' | 'right';
   fillHeight?: string | number;
   fill?: boolean;
@@ -19,18 +19,12 @@ export default function Image(props: Props): JSX.Element {
   return (
     <ImageStyled
       css={{
-        ...(borderRadius && {
-          borderRadius: `$${borderRadius} !important`,
-          img: {
-            borderRadius: `$${borderRadius} !important`,
-          },
-        }),
-        ...(fill && {
-          img: {
-            objectFit: `${fillFit || 'cover'} !important`,
-            objectPosition: `${fillPosition || 'center'} !important`,
-          },
-        }),
+        borderRadius: borderRadius ? '$' + borderRadius : undefined,
+        img: {
+          borderRadius: borderRadius ? '$' + borderRadius : undefined,
+          objectFit: fillFit || 'cover',
+          objectPosition: fillPosition || 'center',
+        },
         ...(hover && {
           '&:hover': {
             opacity: 0.9,
@@ -39,7 +33,15 @@ export default function Image(props: Props): JSX.Element {
         height: fillHeight || '100%',
         ...css,
       }}>
-      <NextImage {...rest} fill={fill} />
+      <NextImage
+        {...rest}
+        fill={fill}
+        style={{
+          borderRadius: borderRadius ? '$' + borderRadius : undefined,
+          objectFit: fillFit || 'cover',
+          objectPosition: fillPosition || 'center',
+        }}
+      />
     </ImageStyled>
   );
 }

@@ -106,7 +106,7 @@ export const TextSizes = {
     fontWeight: '$p',
     lineHeight: '$p',
     listStylePosition: 'inside',
-    marginBottom: '$2',
+    marginBottom: '$3',
 
     [breakpoints.phone]: {
       fontSize: 'calc($p * 0.85)',
@@ -137,6 +137,7 @@ export const TextSizes = {
     fontSize: '$p',
     fontWeight: '$p',
     lineHeight: '$p',
+    marginBottom: '$3',
 
     [breakpoints.phone]: {
       fontSize: 'calc($p * 0.85)',
@@ -152,6 +153,7 @@ export const TextSizes = {
     fontSize: '$small',
     fontWeight: '$small',
     lineHeight: '$small',
+    marginBottom: '$3',
 
     [breakpoints.phone]: {
       fontSize: 'calc($small * 0.85)',
