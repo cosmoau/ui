@@ -19,10 +19,14 @@ export default function Image(props: Props): JSX.Element {
   return (
     <ImageStyled
       css={{
-        borderRadius: borderRadius ? `$${borderRadius}` : undefined,
+        ...(borderRadius && {
+          borderRadius: `$${borderRadius} !important`,
+          img: {
+            borderRadius: `$${borderRadius} !important`,
+          },
+        }),
         ...(fill && {
           img: {
-            borderRadius: borderRadius ? `$${borderRadius}` : undefined,
             objectFit: `${fillFit || 'cover'} !important`,
             objectPosition: `${fillPosition || 'center'} !important`,
           },
@@ -35,15 +39,7 @@ export default function Image(props: Props): JSX.Element {
         height: fillHeight || '100%',
         ...css,
       }}>
-      <NextImage
-        {...rest}
-        fill={fill}
-        style={{
-          borderRadius: borderRadius ? `$${borderRadius}` : undefined,
-          objectFit: fillFit || 'cover',
-          objectPosition: fillPosition || 'center',
-        }}
-      />
+      <NextImage {...rest} fill={fill} />
     </ImageStyled>
   );
 }
