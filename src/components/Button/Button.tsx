@@ -4,6 +4,7 @@ import { Loading } from '../../index';
 import { breakpoints, DefaultProps } from '../../stitches.config';
 
 import { ButtonIconStyled, ButtonStyled } from './Button.styles';
+import { ArrowSquareOut } from 'phosphor-react';
 
 interface Props
   extends HTMLAttributes<HTMLButtonElement>,
@@ -19,6 +20,7 @@ interface Props
   small?: boolean;
   ariaLabel?: string;
   name?: string;
+  external?: boolean;
 }
 
 export default function Button(props: Props): JSX.Element {
@@ -54,12 +56,19 @@ export default function Button(props: Props): JSX.Element {
           <Loading />
         </ButtonIconStyled>
       )}
-      {props.icon && (props.iconPosition === 'left' || !props.iconPosition) && (
-        <ButtonIconStyled align='left'>{props.icon}</ButtonIconStyled>
-      )}
+      {props.icon &&
+        (props.iconPosition === 'left' || !props.iconPosition) &&
+        !props.external && (
+          <ButtonIconStyled align='left'>{props.icon}</ButtonIconStyled>
+        )}
       {props.children}
-      {props.icon && props.iconPosition === 'right' && (
+      {props.icon && props.iconPosition === 'right' && !props.external && (
         <ButtonIconStyled align='right'>{props.icon}</ButtonIconStyled>
+      )}
+      {props.external && (
+        <ButtonIconStyled align='right'>
+          <ArrowSquareOut />
+        </ButtonIconStyled>
       )}
     </ButtonStyled>
   );
