@@ -2,10 +2,10 @@ import { breakpoints, styled } from '../../stitches.config';
 
 export const TextSizes = {
   h1: {
+    fontFamily: '$serif',
     fontSize: '$h1',
     fontWeight: '$h1',
     lineHeight: '$h1',
-    fontFamily: '$serif',
     marginBottom: '$5',
 
     [breakpoints.phone]: {
@@ -19,10 +19,10 @@ export const TextSizes = {
     },
   },
   h2: {
+    fontFamily: '$serif',
     fontSize: '$h2',
     fontWeight: '$h2',
     lineHeight: '$h2',
-    fontFamily: '$serif',
     marginBottom: '$5',
 
     [breakpoints.phone]: {
@@ -36,10 +36,10 @@ export const TextSizes = {
     },
   },
   h3: {
+    fontFamily: '$serif',
     fontSize: '$h3',
     fontWeight: '$h3',
     lineHeight: '$h3',
-    fontFamily: '$serif',
     marginBottom: '$4',
 
     [breakpoints.phone]: {
@@ -53,10 +53,10 @@ export const TextSizes = {
     },
   },
   h4: {
+    fontFamily: '$serif',
     fontSize: '$h4',
     fontWeight: '$h4',
     lineHeight: '$h4',
-    fontFamily: '$serif',
     marginBottom: '$4',
 
     [breakpoints.phone]: {
@@ -101,6 +101,38 @@ export const TextSizes = {
       fontSize: 'calc($h6 * 0.95)',
     },
   },
+  li: {
+    fontSize: '$p',
+    fontWeight: '$p',
+    lineHeight: '$p',
+    listStylePosition: 'inside',
+    marginBottom: '$2',
+
+    [breakpoints.phone]: {
+      fontSize: 'calc($p * 0.85)',
+    },
+    [breakpoints.tabletX]: {
+      fontSize: 'calc($p * 0.9)',
+    },
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($p * 0.95)',
+    },
+  },
+  ol: {
+    fontSize: '$p',
+    fontWeight: '$p',
+    lineHeight: '$p',
+
+    [breakpoints.phone]: {
+      fontSize: 'calc($p * 0.85)',
+    },
+    [breakpoints.tabletX]: {
+      fontSize: 'calc($p * 0.9)',
+    },
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($p * 0.95)',
+    },
+  },
   p: {
     fontSize: '$p',
     fontWeight: '$p',
@@ -131,42 +163,15 @@ export const TextSizes = {
       fontSize: 'calc($small * 0.95)',
     },
   },
-  ol: {
-    fontSize: '$p',
-    fontWeight: '$p',
-    lineHeight: '$p',
-
-    [breakpoints.phone]: {
-      fontSize: 'calc($p * 0.85)',
-    },
-    [breakpoints.tabletX]: {
-      fontSize: 'calc($p * 0.9)',
-    },
-    [breakpoints.laptopX]: {
-      fontSize: 'calc($p * 0.95)',
-    },
+  span: {
+    fontSize: 'inherit',
+    fontWeight: 'inherit',
+    lineHeight: 'inherit',
   },
   ul: {
     fontSize: '$p',
     fontWeight: '$p',
     lineHeight: '$p',
-
-    [breakpoints.phone]: {
-      fontSize: 'calc($p * 0.85)',
-    },
-    [breakpoints.tabletX]: {
-      fontSize: 'calc($p * 0.9)',
-    },
-    [breakpoints.laptopX]: {
-      fontSize: 'calc($p * 0.95)',
-    },
-  },
-  li: {
-    fontSize: '$p',
-    fontWeight: '$p',
-    lineHeight: '$p',
-    marginBottom: '$2',
-    listStylePosition: 'inside',
 
     [breakpoints.phone]: {
       fontSize: 'calc($p * 0.85)',
@@ -186,7 +191,6 @@ export const TextStyled = styled('div', {
   },
   'color': '$text',
   'variants': {
-    size: TextSizes,
     accent: {
       true: {
         color: '$accent',
@@ -197,6 +201,7 @@ export const TextStyled = styled('div', {
         fontWeight: '$bold',
       },
     },
+    size: TextSizes,
   },
 });
 

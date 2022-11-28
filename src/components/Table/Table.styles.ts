@@ -53,10 +53,10 @@ export const TableHeadCellStyled = styled('th', {
     borderRight: '0 !important',
   },
   ...TextSizes.p,
-  'textAlign': 'center',
   'borderBottom': '0.1rem solid $border',
   'borderRight': '0.1rem solid $border',
   'padding': '$3 $4 ',
+  'textAlign': 'center',
 });
 
 export default TableStyled;

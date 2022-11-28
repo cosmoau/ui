@@ -39,16 +39,16 @@ export function App(): ReactElement {
 
   return (
     <Provider locked='light'>
-      <View bottom='8' container>
+      <View top={8} bottom='8' container inverted>
         <Stack direction='row' flex='initial' top='4'>
           <Stack direction='column'>
-            <Box closable theme='fill'>
+            <Box>
               <Text as='h1'>
                 Heading One is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio,
-                vitae aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.
+                vitae aliquet nisl nunc vel nisl. <Text as='span'>Nulla facilisi.</Text>
               </Text>
-              <Button>Test</Button>
+              <Button inline='5'>Test</Button>
               <Button theme='fill'>Test</Button>
             </Box>
           </Stack>
@@ -83,11 +83,16 @@ export function App(): ReactElement {
               Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
               aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
             </Text>
-            <Text as='h6'>
-              Heading Six is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
-              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
-            </Text>
+            <Stack top={4} bottom={4}>
+              <Box theme='fill'>
+                <Text as='h6'>
+                  Heading Six is Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit. Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta
+                  odio, vitae aliquet nisl nunc vel nisl. Nulla facilisi. Nulla
+                  facilisi.{' '}
+                </Text>
+              </Box>
+            </Stack>
             <Text as='p'>
               Paragraph is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae

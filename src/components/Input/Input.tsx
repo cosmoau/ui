@@ -105,7 +105,6 @@ export default function Input(props: Props): JSX.Element {
             {props.loading && <Loading />}
             {props.copy && (
               <Button
-                small
                 ariaLabel='Copy'
                 css={{
                   marginLeft: '$2',
@@ -118,7 +117,8 @@ export default function Input(props: Props): JSX.Element {
                   )
                 }
                 name='copy'
-                onClick={handleCopy}>
+                onClick={handleCopy}
+                small>
                 Copy
               </Button>
             )}

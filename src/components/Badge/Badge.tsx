@@ -76,7 +76,7 @@ export default function Badge(props: Props): JSX.Element {
       )}
       {props.closable && (
         <BadgeIconStyled align='right' onClick={(): void => handleClose()}>
-          <X weight='fill' style={{ opacity: 0.5, cursor: 'pointer' }} />
+          <X style={{ cursor: 'pointer', opacity: 0.5 }} weight='fill' />
         </BadgeIconStyled>
       )}
     </BadgeStyled>

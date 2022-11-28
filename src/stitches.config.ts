@@ -16,12 +16,11 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     colors: {
       accent: 'rgb(162, 170, 194)',
       accentIHM: 'rgb(0, 48, 74)',
-      background: 'rgb(3, 11, 26)',
+      background: 'rgb(6, 12, 36)',
       blueBorder: 'rgba(115, 172, 255, 0.4)',
       blueOverlay: 'rgba(151, 193, 255, 0.2)',
       blueText: 'rgb(166, 179, 255)',
       border: 'rgba(253, 250, 246, 0.2)',
-      soft: 'rgba(253, 250, 246, 0.05)',
       default: 'rgba(253, 250, 246, 0.15)',
       defaultHover: 'rgba(253, 250, 246, 0.2)',
       greenBorder: 'rgba(0, 200, 83, 0.4)',
@@ -39,17 +38,8 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       redBorder: 'rgba(255, 115, 115, 0.4)',
       redOverlay: 'rgba(255, 115, 115, 0.2)',
       redText: 'rgb(251, 127, 143)',
+      soft: 'rgba(253, 250, 246, 0.05)',
       text: 'rgb(253, 250, 246)',
-    },
-    lineHeights: {
-      h1: '1.2',
-      h2: '1.2',
-      h3: '1.3',
-      h4: '1.3',
-      h5: '1.3',
-      h6: '1.4',
-      p: '1.4',
-      small: '1.4',
     },
     fontSizes: {
       h1: '3.4rem',
@@ -74,6 +64,16 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     fonts: {
       default: 'Untitled Sans, apple-system, sans-serif',
       serif: 'Tiempos Headline, $default',
+    },
+    lineHeights: {
+      h1: '1.2',
+      h2: '1.2',
+      h3: '1.3',
+      h4: '1.3',
+      h5: '1.3',
+      h6: '1.4',
+      p: '1.4',
+      small: '1.4',
     },
     media: breakpoints,
     radii: {
@@ -201,30 +201,46 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
 export const lightTheme = createTheme({
   colors: {
     accent: 'rgb(43, 57, 68)',
-    background: 'rgb(253, 250, 246)',
+    background: 'rgb(255, 250, 245)',
     blueText: 'rgb(32, 47, 136)',
-    border: 'rgba(7, 4, 35, 0.15)',
-    soft: 'rgba(7, 4, 35, 0.05)',
-    default: 'rgba(7, 4, 35, 0.04)',
-    defaultHover: 'rgba(7, 4, 35, 0.08)',
+    border: 'rgba(6, 12, 36, 0.15)',
+    default: 'rgba(6, 12, 36, 0.04)',
+    defaultHover: 'rgba(6, 12, 36, 0.08)',
     greenText: 'rgb(0, 76, 6)',
     orangeText: 'rgb(199, 84, 30)',
     pinkText: 'rgb(173, 22, 128)',
     purpleText: 'rgb(112, 23, 171)',
     redText: 'rgb(170, 28, 47)',
-    text: 'rgb(15, 18, 39)',
+    soft: 'rgba(6, 12, 36, 0.05)',
+    text: 'rgb(6, 12, 36)',
   },
   shadows: {
-    1: '0 0.3rem 0.4rem 0 rgba(7, 4, 35, 0.06)',
-    2: '0 0.6rem 0.6rem 0 rgba(7, 4, 35, 0.09)',
-    3: '0 0.6rem 0.9rem 0 rgba(7, 4, 35, 0.12)',
+    1: '0 0.3rem 0.4rem 0 rgba(6, 12, 36, 0.06)',
+    2: '0 0.6rem 0.6rem 0 rgba(6, 12, 36, 0.09)',
+    3: '0 0.6rem 0.9rem 0 rgba(6, 12, 36, 0.12)',
   },
 });
 
 export interface DefaultProps {
   css?: CSS;
   id?: string;
-  spacing?: keyof typeof theme.space;
+  spacing?:
+    | 1
+    | 2
+    | 3
+    | 4
+    | 5
+    | 6
+    | 7
+    | 8
+    | '1'
+    | '2'
+    | '3'
+    | '4'
+    | '5'
+    | '6'
+    | '7'
+    | '8';
 }
 
 export const fadeIn = keyframes({

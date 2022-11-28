@@ -1,7 +1,7 @@
 {
   "include": ["src"],
   "compilerOptions": {
-    "module": "esnext",
+    "module": "ESNext",
     "importHelpers": true,
     "declaration": true,
     "sourceMap": true,
@@ -21,8 +21,8 @@
     "allowSyntheticDefaultImports": true,
     "jsx": "react-jsx",
     "noImplicitAny": true,
-    "target": "es6",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "target": "ESNext",
     "allowJs": true,
     "resolveJsonModule": true,
     "isolatedModules": true

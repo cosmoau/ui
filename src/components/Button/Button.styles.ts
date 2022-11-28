@@ -1,5 +1,4 @@
 import { styled } from '../../stitches.config';
-
 import { TextSizes } from '../Text/Text.styles';
 
 export const ButtonStyled = styled('button', {
@@ -18,15 +17,15 @@ export const ButtonStyled = styled('button', {
   'a': {
     display: 'block',
   },
-  'color': '$text',
-
   'alignContent': 'center',
+
   'alignItems': 'center',
   'border': '0.1rem solid $border',
   'borderRadius': '$1',
   'boxShadow': '$1',
-  'justifyContent': 'center',
+  'color': '$text',
   'display': 'inline',
+  'justifyContent': 'center',
   'padding': '$1 $4',
   'svg': {
     height: '1.8rem',

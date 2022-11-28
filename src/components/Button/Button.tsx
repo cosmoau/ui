@@ -1,10 +1,10 @@
+import { ArrowSquareOut } from 'phosphor-react';
 import { HTMLAttributes, ReactNode } from 'react';
 
 import { Loading } from '../../index';
 import { breakpoints, DefaultProps } from '../../stitches.config';
 
 import { ButtonIconStyled, ButtonStyled } from './Button.styles';
-import { ArrowSquareOut } from 'phosphor-react';
 
 interface Props
   extends HTMLAttributes<HTMLButtonElement>,
