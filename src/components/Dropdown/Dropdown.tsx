@@ -105,7 +105,6 @@ export default function Dropdown(props: Props): JSX.Element {
             minWidth: (props.width || '20rem') + '!important',
             right: props.align === 'right' ? '0' : 'auto',
           }}
-          key={filteredOptions.length + Math.random()}
           ref={ref}>
           {props.filter && (
             <Stack bottom={'2'} top={'1'}>
@@ -127,12 +126,13 @@ export default function Dropdown(props: Props): JSX.Element {
               props.submenu ? (
                 <DropdownItemStyled
                   css={{
-                    ...(props.last && {
-                      '&:last-child': {
-                        borderTop: '0.1rem solid $border',
-                        marginTop: '$4',
-                      },
-                    }),
+                    ...(props.last &&
+                      !props.filter && {
+                        '&:last-child': {
+                          borderTop: '0.1rem solid $border',
+                          marginTop: '$4',
+                        },
+                      }),
                     color: path === value ? '$accent' : '$text',
                   }}
                   key={value}
@@ -142,12 +142,13 @@ export default function Dropdown(props: Props): JSX.Element {
               ) : (
                 <DropdownItemStyled
                   css={{
-                    ...(props.last && {
-                      '&:last-child': {
-                        borderTop: '0.1rem solid $border',
-                        marginTop: '$4',
-                      },
-                    }),
+                    ...(props.last &&
+                      !props.filter && {
+                        '&:last-child': {
+                          borderTop: '0.1rem solid $border',
+                          marginTop: '$4',
+                        },
+                      }),
                     color: props.active && props.active === value ? '$accent' : '$text',
                   }}
                   key={value}

@@ -16,13 +16,13 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     colors: {
       accent: 'rgb(162, 170, 194)',
       accentIHM: 'rgb(0, 48, 74)',
-      background: 'rgb(6, 12, 36)',
+      background: 'rgb(4, 9, 28)',
       blueBorder: 'rgba(115, 172, 255, 0.4)',
       blueOverlay: 'rgba(151, 193, 255, 0.2)',
       blueText: 'rgb(166, 179, 255)',
       border: 'rgba(253, 250, 246, 0.2)',
-      default: 'rgba(253, 250, 246, 0.15)',
-      defaultHover: 'rgba(253, 250, 246, 0.2)',
+      default: 'rgba(253, 250, 246, 0.1)',
+      defaultHover: 'rgba(253, 250, 246, 0.15)',
       greenBorder: 'rgba(0, 200, 83, 0.4)',
       greenOverlay: 'rgba(101, 227, 124, 0.2)',
       greenText: 'rgb(124, 241, 151)',
@@ -82,9 +82,9 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       3: '1.2rem',
     },
     shadows: {
-      1: '0 0.3rem 0.4rem 0 rgba(253, 250, 246, 0.06)',
-      2: '0 0.6rem 0.6rem 0 rgba(253, 250, 246, 0.09)',
-      3: '0 0.6rem 0.9rem 0 rgba(253, 250, 246, 0.12)',
+      1: '0 0.2rem 0.2rem 0 rgba(253, 250, 246, 0.03)',
+      2: '0 0.4rem 0.4rem 0 rgba(253, 250, 246, 0.06)',
+      3: '0 0.6rem 0.6rem 0 rgba(253, 250, 246, 0.9)',
     },
     space: {
       1: '0.25rem',
@@ -200,24 +200,24 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
 
 export const lightTheme = createTheme({
   colors: {
-    accent: 'rgb(43, 57, 68)',
+    accent: 'rgb(38, 52, 73)',
     background: 'rgb(255, 250, 245)',
     blueText: 'rgb(32, 47, 136)',
-    border: 'rgba(6, 12, 36, 0.125)',
-    default: 'rgba(6, 12, 36, 0.04)',
-    defaultHover: 'rgba(6, 12, 36, 0.08)',
+    border: 'rgba(4, 9, 28, 0.125)',
+    default: 'rgba(4, 9, 28, 0.05)',
+    defaultHover: 'rgba(4, 9, 28, 0.1)',
     greenText: 'rgb(0, 76, 6)',
     orangeText: 'rgb(199, 84, 30)',
     pinkText: 'rgb(173, 22, 128)',
     purpleText: 'rgb(112, 23, 171)',
     redText: 'rgb(170, 28, 47)',
-    soft: 'rgba(6, 12, 36, 0.05)',
-    text: 'rgb(6, 12, 36)',
+    soft: 'rgba(4, 9, 28, 0.03)',
+    text: 'rgb(4, 9, 28)',
   },
   shadows: {
-    1: '0 0.3rem 0.4rem 0 rgba(6, 12, 36, 0.06)',
-    2: '0 0.6rem 0.6rem 0 rgba(6, 12, 36, 0.09)',
-    3: '0 0.6rem 0.9rem 0 rgba(6, 12, 36, 0.12)',
+    1: '0 0.3rem 0.4rem 0 rgba(4, 9, 28, 0.06)',
+    2: '0 0.6rem 0.6rem 0 rgba(4, 9, 28, 0.09)',
+    3: '0 0.6rem 0.9rem 0 rgba(4, 9, 28, 0.12)',
   },
 });
 

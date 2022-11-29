@@ -1,6 +1,12 @@
 # @cosmoau/ui
 
-A library of components used across all internal projects.
+Cosmo UI is a React + TypeScript library for internal use that provides components for creating user interfaces, rapidly spinning up landing pages, and enforcing consistency across every product.
+
+## Dependencies
+
+```bash
+yarn add next react react-dom react-hot-toast usehooks-ts phosphor-react
+```
 
 ## Installation
 

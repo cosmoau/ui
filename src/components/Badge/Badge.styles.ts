@@ -26,9 +26,9 @@ export const BadgeStyled = styled('div', {
   marginBottom: '0 !important',
 
   svg: {
-    height: '1.6rem',
+    height: '1.8rem',
     marginTop: '-0.25rem',
-    width: '1.6rem',
+    width: '1.8rem',
   },
   variants: {
     animation: {

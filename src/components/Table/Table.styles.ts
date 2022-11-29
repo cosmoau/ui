@@ -22,6 +22,12 @@ export const TableHeadStyled = styled('thead', {
 });
 
 export const TableBodyStyled = styled('tbody', {
+  tr: {
+    '&:hover': {
+      backgroundColor: '$soft',
+    },
+  },
+
   width: '100%',
 });
 
@@ -31,6 +37,7 @@ export const TableRowStyled = styled('tr', {
       borderBottom: '0 !important',
     },
   },
+
   'borderRadius': '$2',
 
   'transition': '$default',
@@ -53,6 +60,9 @@ export const TableCellStyled = styled('td', {
 export const TableHeadCellStyled = styled('th', {
   '&:last-child': {
     borderRight: '0 !important',
+  },
+  'button': {
+    fontSize: '$p !important',
   },
   ...TextSizes.p,
   'borderBottom': '0.1rem solid $border',

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-alert */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-import { ArrowRight } from 'phosphor-react';
+import { ArrowRight, CheckCircle } from 'phosphor-react';
 import React, { ReactElement, useEffect } from 'react';
 import toast from 'react-hot-toast';
 
@@ -54,8 +54,42 @@ export function App(): ReactElement {
           </Stack>
         </Stack>
       </View>
-      <View container>
-        <Stack direction='row' flex='initial' top='4'>
+      <View bottom='8' container top='8'>
+        <Stack direction='row' flex='initial'>
+          <Stack direction='column' offset={50} width={50}>
+            <Text as='h6'>
+              Heading Six is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
+              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+            </Text>
+            <Text accent as='h6'>
+              Heading Six is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
+              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+            </Text>
+            <Text as='h6'>
+              Heading Six is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
+              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+            </Text>
+            <Stack bottom={3} top={5}>
+              <Badge icon={<CheckCircle />}>Test badge</Badge>
+            </Stack>
+            <Stack bottom={3}>
+              <Badge icon={<CheckCircle />}>Test badge</Badge>
+            </Stack>
+            <Stack bottom={3}>
+              <Badge icon={<CheckCircle />}>Test badge</Badge>
+            </Stack>
+            <Stack bottom={3}>
+              <Badge icon={<CheckCircle />}>Test badge</Badge>
+            </Stack>
+            <Stack bottom={3}>
+              <Badge icon={<CheckCircle />}>Test badge</Badge>
+            </Stack>
+          </Stack>
+        </Stack>
+        <Stack direction='row' flex='initial' top='6'>
           <Stack direction='column'>
             <Divider bottom='6' top='6' />
             <Text as='h1'>
