@@ -133,7 +133,7 @@ export default function Dropdown(props: Props): JSX.Element {
                           marginTop: '$4',
                         },
                       }),
-                    color: path === value ? '$accent' : '$text',
+                    color: path === value ? '$accent !important' : '$text',
                   }}
                   key={value}
                   submenu={true}>

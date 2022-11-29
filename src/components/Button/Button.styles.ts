@@ -29,12 +29,6 @@ export const ButtonStyled = styled('button', {
     color: '$text',
   },
 
-  'a': {
-    display: 'block',
-    height: '100%',
-    width: '100%',
-  },
-
   'alignContent': 'center',
   'alignItems': 'center',
   'appearance': 'none',
@@ -67,6 +61,7 @@ export const ButtonStyled = styled('button', {
     small: {
       true: {
         ...TextSizes.small,
+        display: 'inline',
         marginBottom: '0 !important',
 
         svg: {

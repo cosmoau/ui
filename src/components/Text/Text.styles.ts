@@ -14,6 +14,9 @@ export const TextSizes = {
     [breakpoints.tabletX]: {
       fontSize: 'calc($h1 * 0.9)',
     },
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($h1 * 0.95)',
+    },
   },
   h2: {
     fontFamily: '$serif',
@@ -27,6 +30,9 @@ export const TextSizes = {
     },
     [breakpoints.tabletX]: {
       fontSize: 'calc($h2 * 0.9)',
+    },
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($h2 * 0.95)',
     },
   },
   h3: {
@@ -42,6 +48,9 @@ export const TextSizes = {
     [breakpoints.tabletX]: {
       fontSize: 'calc($h3 * 0.9)',
     },
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($h3 * 0.95)',
+    },
   },
   h4: {
     fontFamily: '$serif',
@@ -56,6 +65,9 @@ export const TextSizes = {
     [breakpoints.tabletX]: {
       fontSize: 'calc($h4 * 0.9)',
     },
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($h4 * 0.95)',
+    },
   },
   h5: {
     fontSize: '$h5',
@@ -69,6 +81,9 @@ export const TextSizes = {
     [breakpoints.tabletX]: {
       fontSize: 'calc($h5 * 0.9)',
     },
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($h5 * 0.95)',
+    },
   },
   h6: {
     fontSize: '$h6',
@@ -81,6 +96,9 @@ export const TextSizes = {
     },
     [breakpoints.tabletX]: {
       fontSize: 'calc($h6 * 0.9)',
+    },
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($h6 * 0.95)',
     },
   },
   li: {
@@ -96,6 +114,9 @@ export const TextSizes = {
     [breakpoints.tabletX]: {
       fontSize: 'calc($p * 0.9)',
     },
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($p * 0.95)',
+    },
   },
   ol: {
     fontSize: '$p',
@@ -107,6 +128,9 @@ export const TextSizes = {
     },
     [breakpoints.tabletX]: {
       fontSize: 'calc($p * 0.9)',
+    },
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($p * 0.95)',
     },
   },
   p: {
@@ -121,6 +145,9 @@ export const TextSizes = {
     [breakpoints.tabletX]: {
       fontSize: 'calc($p * 0.9)',
     },
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($p * 0.95)',
+    },
   },
   small: {
     display: 'block',
@@ -134,6 +161,9 @@ export const TextSizes = {
     },
     [breakpoints.tabletX]: {
       fontSize: 'calc($small * 0.9)',
+    },
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($small * 0.95)',
     },
   },
   span: {
@@ -151,6 +181,9 @@ export const TextSizes = {
     },
     [breakpoints.tabletX]: {
       fontSize: 'calc($p * 0.9)',
+    },
+    [breakpoints.laptopX]: {
+      fontSize: 'calc($p * 0.95)',
     },
   },
 };

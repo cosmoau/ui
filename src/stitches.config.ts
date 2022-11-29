@@ -20,9 +20,9 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       blueBorder: 'rgba(115, 172, 255, 0.4)',
       blueOverlay: 'rgba(151, 193, 255, 0.2)',
       blueText: 'rgb(166, 179, 255)',
-      border: 'rgba(253, 250, 246, 0.2)',
-      default: 'rgba(253, 250, 246, 0.1)',
-      defaultHover: 'rgba(253, 250, 246, 0.15)',
+      border: 'rgba(253, 250, 246, 0.125)',
+      default: 'rgba(253, 250, 246, 0.15)',
+      defaultHover: 'rgba(253, 250, 246, 0.2)',
       greenBorder: 'rgba(0, 200, 83, 0.4)',
       greenOverlay: 'rgba(101, 227, 124, 0.2)',
       greenText: 'rgb(124, 241, 151)',
@@ -44,8 +44,8 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     fontSizes: {
       h1: '3.2rem',
       h2: '2.8rem',
-      h3: '2.4rem',
-      h4: '2rem',
+      h3: '2.6rem',
+      h4: '2.2rem',
       h5: '1.8rem',
       h6: '1.7rem',
       p: '1.6rem',
@@ -200,7 +200,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
 
 export const lightTheme = createTheme({
   colors: {
-    accent: 'rgb(38, 52, 73)',
+    accent: 'rgb(46, 60, 81)',
     background: 'rgb(255, 250, 245)',
     blueText: 'rgb(32, 47, 136)',
     border: 'rgba(4, 9, 28, 0.125)',
