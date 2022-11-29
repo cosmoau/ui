@@ -5,7 +5,7 @@ Cosmo UI is a React + TypeScript library for internal use that provides componen
 ## Dependencies
 
 ```bash
-yarn add next react react-dom react-hot-toast usehooks-ts phosphor-react
+yarn add next react-hot-toast usehooks-ts phosphor-react
 ```
 
 ## Installation
