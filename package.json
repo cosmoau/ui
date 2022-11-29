@@ -1,7 +1,7 @@
 {
   "name": "@cosmoau/ui",
   "description": "A library of components used across all internal projects.",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "author": "Jackson Dolman <mail@planare.dev>",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "bugs": {

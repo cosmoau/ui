@@ -17,44 +17,30 @@ export const ProviderTriggerStyled = styled('div', {
 });
 
 export const reset = globalCss({
+  '@import':
+    'url("https://xxxjddzdqkdtyqtywwfi.supabase.co/storage/v1/object/public/public/webfonts-oct22.css")',
+  // eslint-disable-next-line sort-keys-fix/sort-keys-fix
   '*': {
     MozOsxFontSmoothing: 'grayscale',
     WebkitAppearance: 'none',
     WebkitFontSmoothing: 'antialiased',
-    boxSizing: 'inherit',
-    letterSpacing: 'normal',
-    marginBlockEnd: 0,
-    marginBlockStart: 0,
-    marginInlineEnd: 0,
-    marginInlineStart: 0,
-    outline: 'none',
-    paddingBlockEnd: 0,
-    paddingBlockStart: 0,
-    paddingInlineEnd: 0,
-    paddingInlineStart: 0,
-    wordSpacing: 'normal',
+    boxSizing: 'border-box',
+    marginBlock: 0,
+    paddingBlock: 0,
+    textRendering: 'optimizeLegibility',
   },
-  '*:after': {
-    boxSizing: 'inherit',
-  },
-  '*:before': {
-    boxSizing: 'inherit',
-  },
-  '@import':
-    'url("https://xxxjddzdqkdtyqtywwfi.supabase.co/storage/v1/object/public/public/webfonts-oct22.css")',
+
   'a': {
-    color: 'inherit',
+    color: '$text',
     textDecoration: 'none',
   },
   'body': {
-    backgroundColor: 'inherit',
-    border: 0,
+    backgroundColor: '$background',
     color: '$text',
-    fontFamily: '$default, sans-serif',
-    fontSize: '1.6rem',
+    fontFamily: '$default',
+    fontSize: '1.5rem',
+    lineHeight: 1.4,
     margin: 0,
-    overflowX: 'hidden',
-    overflowY: 'auto',
     padding: 0,
 
     [`.${theme}`]: {
@@ -66,38 +52,8 @@ export const reset = globalCss({
       color: '$text',
     },
   },
-  'button': {
-    '&::-moz-focus-inner': {
-      border: 0,
-      outline: 0,
-      outlineOffset: 0,
-      padding: 0,
-    },
-    '&:active': {
-      outline: 0,
-    },
-    '&:focus': {
-      outline: 0,
-    },
-    'MozOsxFontSmoothing': 'grayscale',
-    'WebkitAppearance': 'none',
-    'WebkitFontSmoothing': 'antialiased',
-    'appearance': 'none',
-    'backgroundColor': 'transparent',
-    'border': 0,
-    'cursor': 'pointer',
-    'font': '$default',
-    'fontFamily': 'inherit',
-    'margin': 0,
-    'outline': 'none',
-    'overflow': 'visible',
-    'textOverflow': 'ellipsis',
-    'whiteSpace': 'nowrap',
-    'width': 'auto',
-  },
   'html': {
     fontSize: '62.5%',
-    lineHeight: '1.5',
   },
   'svg': {
     verticalAlign: 'middle',

@@ -26,9 +26,8 @@ export const BadgeStyled = styled('div', {
   marginBottom: '0 !important',
 
   svg: {
-    alignSelf: 'center',
     height: '1.6rem',
-    marginTop: '-0.2rem',
+    marginTop: '-0.25rem',
     width: '1.6rem',
   },
   variants: {

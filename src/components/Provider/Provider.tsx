@@ -25,7 +25,7 @@ export default function Provider(props: Props): JSX.Element {
 
   return (
     <ProviderStyled className={active} css={props.css}>
-      <IconContext.Provider value={{ mirrored: false, weight: 'light' }}>
+      <IconContext.Provider value={{ mirrored: false, weight: 'regular' }}>
         <Toast />
         {props.children}
       </IconContext.Provider>

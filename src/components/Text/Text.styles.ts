@@ -150,6 +150,7 @@ export const TextSizes = {
     },
   },
   small: {
+    display: 'block',
     fontSize: '$small',
     fontWeight: '$small',
     lineHeight: '$small',
