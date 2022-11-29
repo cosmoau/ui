@@ -46,11 +46,6 @@ export const DropdownGroupStyled = styled('div', {
 
 export const DropdownItemStyled = styled('div', {
   ...TextSizes.p,
-  '&.active': {
-    '&:hover': {
-      backgroundColor: '$defaultHover',
-    },
-  },
 
   '&:hover': {
     backgroundColor: '$default',

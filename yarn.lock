@@ -66,7 +66,7 @@ __metadata:
     parcel: "npm:^2.8.0"
     path-browserify: "npm:^1.0.1"
     phosphor-react: "npm:1.4.1"
-    prettier: "npm:^2.7.1"
+    prettier: "npm:^2.8.0"
     process: "npm:^0.11.10"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -4406,15 +4406,6 @@ __metadata:
   version: 1.2.1
   resolution: "prelude-ls@npm:1.2.1"
   checksum: 0fee0e2ba5dc7793340a5861d9d37ce4f3d8ec246099bfae25e1f2a928a4df1c009a91882c35862bdf245f69081160df4ed0ec2438662ae22e50b621a6b7848f
-  languageName: node
-  linkType: hard
-
-"prettier@npm:^2.7.1":
-  version: 2.7.1
-  resolution: "prettier@npm:2.7.1"
-  bin:
-    prettier: bin-prettier.js
-  checksum: d2cd7adc83b4f3eb86ab665fa76c58fb3c60c879b37e6d858f71a9d97d2091d4c8a7fe92ad6a1dfa211832025e3660635df9c5e27b3ef79c99d431923bdf933b
   languageName: node
   linkType: hard
 

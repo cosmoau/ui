@@ -19,6 +19,7 @@ interface Props extends DefaultProps {
   hover?: boolean;
   theme?: 'default' | 'success' | 'warning' | 'error' | 'transparent' | 'fill';
   closable?: boolean;
+  minimal?: boolean;
 }
 
 export default function Box(props: Props): JSX.Element {
@@ -91,7 +92,7 @@ export default function Box(props: Props): JSX.Element {
         hover={props.hover}
         id={props.id}
         loading={props.loading || false}
-        padding={'default'}
+        padding={props.minimal ? 'none' : 'default'}
         theme={props.theme || 'default'}>
         {props.children}
         {props.closable && (

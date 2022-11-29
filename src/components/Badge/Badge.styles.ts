@@ -22,7 +22,7 @@ export const BadgeStyled = styled('div', {
   display: 'inline-flex',
   justifyContent: 'center',
   padding: '$1 $4',
-  ...TextSizes.p,
+  ...TextSizes.h6,
   marginBottom: '0 !important',
 
   svg: {

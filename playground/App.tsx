@@ -42,7 +42,7 @@ export function App(): ReactElement {
       <View bottom='8' container inverted top={8}>
         <Stack direction='row' flex='initial' top='4'>
           <Stack direction='column'>
-            <Box>
+            <Box hover>
               <Text as='h1'>
                 Heading One is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio,
