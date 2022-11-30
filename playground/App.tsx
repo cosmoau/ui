@@ -30,7 +30,8 @@ export function App(): ReactElement {
       setTimeout(() => {
         setBodyChildren([
           ['1', '2', '3', '4'],
-          ['1', '2', '3', '4'],
+          ['3', '4', '3', '4'],
+          ['2', '4', '3', '4'],
         ]);
       }, 5000);
     }
@@ -216,8 +217,6 @@ export function App(): ReactElement {
             <Table
               bodyChildren={bodyChildren}
               headChildren={['Name', 'Age', 'Country', 'City']}
-              sort
-              sortDisabled={[1, 3]}
             />
           </Stack>
         </Stack>

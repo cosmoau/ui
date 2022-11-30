@@ -46,7 +46,11 @@ export default function Table(props: Props): JSX.Element {
 
     return 0;
   }
-  const sortedBodyChildren = props.bodyChildren ? props.bodyChildren.sort(sort) : [];
+  const sortedBodyChildren = props.bodyChildren
+    ? props.sort
+      ? props.bodyChildren.sort(sort)
+      : props.bodyChildren
+    : [];
 
   return (
     <TableStyled>
@@ -54,7 +58,6 @@ export default function Table(props: Props): JSX.Element {
         <TableHeadStyled>
           <TableRowStyled>
             {props.headChildren.map((child, index) =>
-              // if props.sort isn't true, or props.sortDisabled equals or includes the index, don't render the sort button
               !props.sort ||
               props.sortDisabled === index ||
               (Array.isArray(props.sortDisabled) &&
