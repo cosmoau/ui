@@ -62,7 +62,7 @@ export default function Dropdown(props: Props): JSX.Element {
   }
 
   const handleNavigate = (value: string): void => {
-    router.push(value);
+    router && router.push(value);
     handleClose();
   };
 

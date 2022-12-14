@@ -21,14 +21,16 @@ export const reset = globalCss({
     'url("https://xxxjddzdqkdtyqtywwfi.supabase.co/storage/v1/object/public/public/webfonts-oct22.css")',
   // eslint-disable-next-line sort-keys-fix/sort-keys-fix
   '*': {
-    MozOsxFontSmoothing: 'grayscale',
-    WebkitAppearance: 'none',
-    WebkitFontSmoothing: 'antialiased',
     boxSizing: 'border-box',
-    marginBlock: 0,
-    paddingBlock: 0,
-    textRendering: 'optimizeLegibility',
   },
+
+  '@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx)':
+    {
+      body: {
+        MozOsxFontSmoothing: 'grayscale',
+        WebkitFontSmoothing: 'antialiased',
+      },
+    },
 
   'a': {
     color: '$text',

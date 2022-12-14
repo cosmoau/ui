@@ -1,61 +1,44 @@
 # @cosmoau/ui
 
-Cosmo UI is a React + TypeScript library for internal use that provides components for creating user interfaces, rapidly spinning up landing pages, and enforcing consistency across every product.
+> An internal UI system for creating user interfaces and enforcing consistency across every product at Cosmo.
 
-## Dependencies
+## Install
 
-```bash
-yarn add next react-hot-toast usehooks-ts phosphor-react
 ```
-
-## Installation
-
-```bash
-yarn add @cosmoau/ui
+pnpm install
 ```
 
 ## Usage
 
-```jsx
-import { Button } from '@cosmoau/ui';
+To work on components in the browser, use Parcel. Run the development server and head to [http://localhost:1234](http://localhost:1234) in the browser.
 
-function App() {
-  return <Button>Click me</Button>;
-}
+```
+pnpm dev
 ```
 
-## Components
+Before you deploy, lint your code and format it. Then run the build to compile the code with `TSC`.
 
-- [x] Avatar
-- [x] Badge
-- [x] Button
-- [x] Code
-- [x] Dialog
-- [x] Divider
-- [x] Dropdown
-- [x] Field
-- [x] Image
-- [x] Input
-- [x] Loading
-- [x] Popover
-- [x] Provider
-- [x] Stack
-- [x] Table
-- [x] Text
-- [x] View
-
-## Development
-
-```bash
-yarn dev
+```
+pnpm tidy
+pnpm build (build:cjs/build:esm)
 ```
 
-## Compiling
+If you change the pages directory, build a fresh sitemap.
 
-```bash
-yarn build
 ```
+pnpm sitemap
+```
+
+## Contributing
+
+Feel free to get in touch with feedback, advice or suggestions. See [Conventional Commits](https://gist.github.com/dolmios/0e33c579a500d87fc6f44df6cde97259) for new contributors.
+
+## Acknowledgments
+
+- [@stitches/react](https://github.com/stitchesjs/stitches)
+- [phosphor-react](https://github.com/phosphor-icons/phosphor-react)
+- [react-hot-toast](https://github.com/timolins/react-hot-toast)
 
 ## License
 
-BSD-3-Clause License. See [LICENSE](LICENSE) for more information.
+[GPL-3.0](https://github.com/cosmoau/ui/blob/main/LICENSE.md) © Cosmo AU Pty Ltd. Code by [Planare](https://github.com/planare)
