@@ -1,13 +1,13 @@
 import { fadeIn, fadeOut, styled } from '../../stitches.config';
 import { TextSizes } from '../Text/Text.styles';
 
-export const DropdownStyled = styled('div', {
+export const SelectStyled = styled('div', {
   display: 'inline-block',
   position: 'relative',
   verticalAlign: 'middle',
 });
 
-export const DropdownTriggerStyled = styled('div', {
+export const SelectTriggerStyled = styled('div', {
   '*': {
     cursor: 'pointer',
   },
@@ -16,7 +16,7 @@ export const DropdownTriggerStyled = styled('div', {
   'verticalAlign': 'middle',
 });
 
-export const DropdownGroupStyled = styled('div', {
+export const SelectGroupStyled = styled('div', {
   backgroundColor: '$background',
   border: '0.1rem solid $border',
   borderRadius: '$1',
@@ -41,10 +41,10 @@ export const DropdownGroupStyled = styled('div', {
     },
   },
   width: '100%',
-  zIndex: '$dropdown',
+  zIndex: '$select',
 });
 
-export const DropdownItemStyled = styled('div', {
+export const SelectItemStyled = styled('div', {
   ...TextSizes.p,
 
   '&:hover': {
@@ -56,28 +56,13 @@ export const DropdownItemStyled = styled('div', {
     borderBottom: 0,
   },
   'borderRadius': 0,
-
   'cursor': 'pointer',
   'display': 'flex',
   'lineHeight': 'normal',
-
   'marginBottom': '0 !important',
+
+  'padding': '$2 $3',
   'transition': '$default',
-  'variants': {
-    submenu: {
-      false: {
-        padding: '$2 $3',
-      },
-      true: {
-        a: {
-          display: 'block',
-          padding: '$3',
-          width: '100%',
-        },
-        padding: 0,
-      },
-    },
-  },
 });
 
-export default DropdownStyled;
+export default SelectStyled;

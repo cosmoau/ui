@@ -5,7 +5,7 @@ export * from './components/Button/index';
 export * from './components/Code/index';
 export * from './components/Dialog/index';
 export * from './components/Divider/index';
-export * from './components/Dropdown/index';
+export * from './components/Select/index';
 export * from './components/Field/index';
 export * from './components/Image/index';
 export * from './components/Input/index';

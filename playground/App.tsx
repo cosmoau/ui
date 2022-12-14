@@ -18,6 +18,7 @@ import {
   Dialog,
   Popover,
   Box,
+  Select,
 } from '../src/index';
 
 export function App(): ReactElement {
@@ -45,12 +46,31 @@ export function App(): ReactElement {
           <Stack direction='column'>
             <Box hover>
               <Text as='h1'>
-                Heading One is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio,
-                vitae aliquet nisl nunc vel nisl. <Text as='span'>Nulla facilisi.</Text>
+                Heading One is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt
+                vestibulum, mauris nisl porta odio, vitae aliquet nisl nunc vel nisl.{' '}
+                <Text as='span'>Nulla facilisi.</Text>
               </Text>
               <Button inline='5'>Test</Button>
-              <Button theme='fill'>Test</Button>
+              <Button inline={6} theme='fill'>
+                Test
+              </Button>
+              <Select
+                onSelection={(value: string, label: string) => {
+                  alert(`Value: ${value}, Label: ${label} `);
+                }}
+                options={[
+                  {
+                    label: 'Test One',
+                    value: 'test1',
+                  },
+                  {
+                    label: 'Test Two',
+                    value: 'test2',
+                  },
+                ]}
+                selection='test1'
+                trigger={<Button>Test</Button>}
+              />
             </Box>
           </Stack>
         </Stack>
@@ -59,19 +79,16 @@ export function App(): ReactElement {
         <Stack direction='row' flex='initial'>
           <Stack direction='column' offset={50} width={50}>
             <Text as='h6'>
-              Heading Six is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
-              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+              Heading Six is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt
+              vestibulum, mauris nisl porta odio, vitae aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
             </Text>
             <Text accent as='h6'>
-              Heading Six is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
-              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+              Heading Six is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt
+              vestibulum, mauris nisl porta odio, vitae aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
             </Text>
             <Text as='h6'>
-              Heading Six is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
-              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+              Heading Six is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt
+              vestibulum, mauris nisl porta odio, vitae aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
             </Text>
             <Stack bottom={3} top={5}>
               <Badge icon={<CheckCircle />}>Test badge</Badge>
@@ -94,54 +111,45 @@ export function App(): ReactElement {
           <Stack direction='column'>
             <Divider bottom='6' top='6' />
             <Text as='h1'>
-              Heading One is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
-              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.
+              Heading One is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt
+              vestibulum, mauris nisl porta odio, vitae aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.
             </Text>
             <Text as='h2'>
-              Heading Two is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
-              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+              Heading Two is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt
+              vestibulum, mauris nisl porta odio, vitae aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
             </Text>
             <Text as='h3'>
-              Heading Three is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
-              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+              Heading Three is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt
+              vestibulum, mauris nisl porta odio, vitae aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
             </Text>
             <Text as='h4'>
-              Heading Four is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
-              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+              Heading Four is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt
+              vestibulum, mauris nisl porta odio, vitae aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
             </Text>
             <Text accent as='h5'>
-              Heading Five is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
-              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+              Heading Five is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt
+              vestibulum, mauris nisl porta odio, vitae aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
             </Text>
             <Stack bottom={4} top={4}>
               <Box theme='fill'>
                 <Text as='h6'>
-                  Heading Six is Lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit. Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta
-                  odio, vitae aliquet nisl nunc vel nisl. Nulla facilisi. Nulla
+                  Heading Six is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel
+                  tincidunt vestibulum, mauris nisl porta odio, vitae aliquet nisl nunc vel nisl. Nulla facilisi. Nulla
                   facilisi.{' '}
                 </Text>
               </Box>
             </Stack>
             <Text as='p'>
-              Paragraph is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
-              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+              Paragraph is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt
+              vestibulum, mauris nisl porta odio, vitae aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
             </Text>
             <Text as='small'>
-              Small is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
-              aliquet nisl nunc vel aliquet nisl nunc vel nisl. Nulla facilisi. Nulla
-              facilisi. aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
-              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi. aliquet nisl
-              nunc vel nisl. Nulla facilisi. Nulla facilisi. aliquet nisl nunc vel nisl.
-              Nulla facilisi. Nulla facilisi. aliquet nisl nunc vel nisl. Nulla
-              facilisi. Nulla facilisi. nisl. Nulla facilisi. Nulla facilisi.{' '}
+              Small is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt
+              vestibulum, mauris nisl porta odio, vitae aliquet nisl nunc vel aliquet nisl nunc vel nisl. Nulla
+              facilisi. Nulla facilisi. aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi. aliquet nisl nunc
+              vel nisl. Nulla facilisi. Nulla facilisi. aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.
+              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi. aliquet nisl nunc vel nisl. Nulla facilisi.
+              Nulla facilisi. nisl. Nulla facilisi. Nulla facilisi.{' '}
             </Text>
             <Text as='ol'>
               <Text as='li'>Ordered List</Text>
@@ -152,18 +160,12 @@ export function App(): ReactElement {
               <Text as='li'>Unordered List</Text>
             </Text>
             <Text as='h4'>
-              Heading Four is Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae
-              aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
+              Heading Four is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt
+              vestibulum, mauris nisl porta odio, vitae aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
             </Text>
 
             <Stack align='center' top='6'>
-              <Input
-                listen
-                submit='Alert'
-                submitFunction={() => alert('lol')}
-                submitValid
-              />
+              <Input listen submit='Alert' submitFunction={() => alert('lol')} submitValid />
             </Stack>
 
             <Button
@@ -201,12 +203,7 @@ export function App(): ReactElement {
               <Text as='h3'>Test</Text>
             </Dialog>
 
-            <Button
-              ariaLabel='button'
-              block
-              icon={<ArrowRight />}
-              iconPosition='right'
-              theme='fill'>
+            <Button ariaLabel='button' block icon={<ArrowRight />} iconPosition='right' theme='fill'>
               Button
             </Button>
             <Stack bottom='4' top='4'>
@@ -214,10 +211,7 @@ export function App(): ReactElement {
               <Badge closable>Normal</Badge>
             </Stack>
 
-            <Table
-              bodyChildren={bodyChildren}
-              headChildren={['Name', 'Age', 'Country', 'City']}
-            />
+            <Table bodyChildren={bodyChildren} headChildren={['Name', 'Age', 'Country', 'City']} />
           </Stack>
         </Stack>
       </View>

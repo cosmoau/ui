@@ -17,25 +17,21 @@ export const ProviderTriggerStyled = styled('div', {
 });
 
 export const reset = globalCss({
-  '@import':
-    'url("https://xxxjddzdqkdtyqtywwfi.supabase.co/storage/v1/object/public/public/webfonts-oct22.css")',
-  // eslint-disable-next-line sort-keys-fix/sort-keys-fix
   '*': {
     boxSizing: 'border-box',
   },
-
-  '@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx)':
-    {
-      body: {
-        MozOsxFontSmoothing: 'grayscale',
-        WebkitFontSmoothing: 'antialiased',
-      },
+  '@import': 'url("https://xxxjddzdqkdtyqtywwfi.supabase.co/storage/v1/object/public/public/webfonts.css")',
+  '@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx)': {
+    body: {
+      MozOsxFontSmoothing: 'grayscale',
+      WebkitFontSmoothing: 'antialiased',
     },
-
+  },
   'a': {
     color: '$text',
     textDecoration: 'none',
   },
+
   'body': {
     backgroundColor: '$background',
     color: '$text',
@@ -57,6 +53,7 @@ export const reset = globalCss({
   'html': {
     fontSize: '62.5%',
   },
+
   'svg': {
     verticalAlign: 'middle',
   },

@@ -101,8 +101,8 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     },
     zIndices: {
       dialog: 999,
-      dropdown: 998,
-      popover: 997,
+      popover: 998,
+      select: 997,
       toast: 996,
     },
   },
@@ -113,32 +113,12 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     desktopX: (value: unknown) => ({
       [breakpoints.desktopX]: value,
     }),
-    hidden: (
-      value:
-        | 'phone'
-        | 'tablet'
-        | 'tabletX'
-        | 'laptop'
-        | 'laptopX'
-        | 'desktop'
-        | 'desktopX'
-        | 'wide'
-    ) => ({
+    hidden: (value: 'phone' | 'tablet' | 'tabletX' | 'laptop' | 'laptopX' | 'desktop' | 'desktopX' | 'wide') => ({
       [breakpoints[value]]: {
         display: 'none !important',
       },
     }),
-    hiddenInline: (
-      value:
-        | 'phone'
-        | 'tablet'
-        | 'tabletX'
-        | 'laptop'
-        | 'laptopX'
-        | 'desktop'
-        | 'desktopX'
-        | 'wide'
-    ) => ({
+    hiddenInline: (value: 'phone' | 'tablet' | 'tabletX' | 'laptop' | 'laptopX' | 'desktop' | 'desktopX' | 'wide') => ({
       display: 'inline-block !important',
       [breakpoints[value]]: {
         display: 'none !important',
@@ -160,32 +140,14 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     tabletX: (value: unknown) => ({
       [breakpoints.tabletX]: value,
     }),
-    visible: (
-      value:
-        | 'phone'
-        | 'tablet'
-        | 'tabletX'
-        | 'laptop'
-        | 'laptopX'
-        | 'desktop'
-        | 'desktopX'
-        | 'wide'
-    ) => ({
+    visible: (value: 'phone' | 'tablet' | 'tabletX' | 'laptop' | 'laptopX' | 'desktop' | 'desktopX' | 'wide') => ({
       display: 'none',
       [breakpoints[value]]: {
         display: 'block',
       },
     }),
     visibleInline: (
-      value:
-        | 'phone'
-        | 'tablet'
-        | 'tabletX'
-        | 'laptop'
-        | 'laptopX'
-        | 'desktop'
-        | 'desktopX'
-        | 'wide'
+      value: 'phone' | 'tablet' | 'tabletX' | 'laptop' | 'laptopX' | 'desktop' | 'desktopX' | 'wide'
     ) => ({
       display: 'none',
       [breakpoints[value]]: {
@@ -224,23 +186,7 @@ export const lightTheme = createTheme({
 export interface DefaultProps {
   css?: CSS;
   id?: string;
-  spacing?:
-    | 1
-    | 2
-    | 3
-    | 4
-    | 5
-    | 6
-    | 7
-    | 8
-    | '1'
-    | '2'
-    | '3'
-    | '4'
-    | '5'
-    | '6'
-    | '7'
-    | '8';
+  spacing?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8';
 }
 
 export const fadeIn = keyframes({

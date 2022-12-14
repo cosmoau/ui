@@ -8,7 +8,7 @@ import { ProviderStyled, ProviderTriggerStyled, reset } from './Provider.styles'
 import Toast from './Toast/Toast';
 
 interface Props extends DefaultProps {
-  children: ReactNode | ReactNode[];
+  children: ReactNode;
   default?: 'dark' | 'light';
   locked?: 'dark' | 'light';
   trigger?: ReactNode;
