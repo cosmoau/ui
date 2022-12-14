@@ -1,7 +1,7 @@
 {
   "name": "@cosmoau/ui",
   "description": "Cosmo UI is a React (Typescript) library for internal use that provides components for creating user interfaces, rapidly spinning up landing pages, and enforcing consistency across every product.",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "bugs": {
