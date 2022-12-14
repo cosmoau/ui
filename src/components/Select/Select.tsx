@@ -13,7 +13,7 @@ interface Props extends DefaultProps {
   }>;
   align?: 'left' | 'right' | 'center';
   width?: number | string;
-  selection: string;
+  selection?: string;
   onSelection?: (value: string, label: string) => void;
   trigger: ReactNode;
   locked?: boolean;
@@ -74,7 +74,7 @@ export default function Select(props: Props): JSX.Element {
     }
   });
 
-  useLockedBody(isOpen);
+  useLockedBody(props.locked ? isOpen : false);
 
   return (
     <SelectStyled css={props.css}>
@@ -117,7 +117,7 @@ export default function Select(props: Props): JSX.Element {
                       },
                     }),
                 }}
-                key={option.value}
+                key={option.value + Math.random()}
                 onClick={(): void => handleSelection(option.value, option.label)}>
                 {option.label}
               </SelectItemStyled>
