@@ -30,9 +30,7 @@ export default function View(props: Props): JSX.Element {
         ...props.css,
       }}
       id={props.id}>
-      <ViewContainerStyled container={props.container}>
-        {props.children}
-      </ViewContainerStyled>
+      <ViewContainerStyled container={props.container}>{props.children}</ViewContainerStyled>
     </ViewStyled>
   );
 }

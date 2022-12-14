@@ -60,13 +60,10 @@ export default function Table(props: Props): JSX.Element {
             {props.headChildren.map((child, index) =>
               !props.sort ||
               props.sortDisabled === index ||
-              (Array.isArray(props.sortDisabled) &&
-                props.sortDisabled.includes(index)) ? (
+              (Array.isArray(props.sortDisabled) && props.sortDisabled.includes(index)) ? (
                 <TableHeadCellStyled key={index}>{child}</TableHeadCellStyled>
               ) : (
-                <TableHeadCellStyled
-                  key={index}
-                  onClick={(): void => handleSort(index)}>
+                <TableHeadCellStyled key={index} onClick={(): void => handleSort(index)}>
                   <Button
                     ariaLabel='Sort'
                     block

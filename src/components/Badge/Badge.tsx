@@ -4,12 +4,7 @@ import { MouseEventHandler, ReactNode, useState } from 'react';
 import { Loading } from '../../index';
 import { breakpoints, DefaultProps } from '../../stitches.config';
 
-import {
-  BadgeIconStyled,
-  BadgeStyled,
-  BadgeDotStyled,
-  BadgeLoadingStyled,
-} from './Badge.styles';
+import { BadgeIconStyled, BadgeStyled, BadgeDotStyled, BadgeLoadingStyled } from './Badge.styles';
 
 interface Props extends Omit<DefaultProps, 'spacing'> {
   children: ReactNode;
@@ -22,6 +17,7 @@ interface Props extends Omit<DefaultProps, 'spacing'> {
   dot?: boolean | 'pulse';
   dotColor?: 'red' | 'orange' | 'pink' | 'purple' | 'blue' | 'green' | 'border';
   closable?: boolean;
+  block?: boolean;
 }
 
 export default function Badge(props: Props): JSX.Element {
@@ -44,10 +40,13 @@ export default function Badge(props: Props): JSX.Element {
           marginBottom: '0 !important',
           marginRight: props.inline === 'auto' ? 'auto' : `$${props.inline}`,
           [breakpoints.phone]: {
-            marginRight:
-              props.inline === 'auto' ? 'auto' : `calc($${props.inline} * 0.9)`,
+            marginRight: props.inline === 'auto' ? 'auto' : `calc($${props.inline} * 0.9)`,
           },
           verticalAlign: 'middle',
+        }),
+        ...(props.block && {
+          justifyContent: 'initial',
+          width: '100%',
         }),
         ...props.css,
       }}
@@ -58,9 +57,7 @@ export default function Badge(props: Props): JSX.Element {
         <BadgeIconStyled align='left'>{props.icon}</BadgeIconStyled>
       )}
       {props.dot && (
-        <BadgeDotStyled
-          dotColor={props.dotColor || 'default'}
-          pulse={props.dot === 'pulse'}>
+        <BadgeDotStyled dotColor={props.dotColor || 'default'} pulse={props.dot === 'pulse'}>
           <Circle weight='fill' />
         </BadgeDotStyled>
       )}
@@ -76,7 +73,7 @@ export default function Badge(props: Props): JSX.Element {
       )}
       {props.closable && (
         <BadgeIconStyled align='right' onClick={(): void => handleClose()}>
-          <X style={{ cursor: 'pointer', opacity: 0.5 }} weight='fill' />
+          <X style={{ cursor: 'pointer', opacity: 0.7 }} weight='fill' />
         </BadgeIconStyled>
       )}
     </BadgeStyled>

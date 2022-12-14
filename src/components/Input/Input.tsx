@@ -63,12 +63,7 @@ export default function Input(props: Props): JSX.Element {
   // event listener
 
   useEventListener('keydown', (e: KeyboardEvent) => {
-    if (
-      props.listen &&
-      e.key === 'Enter' &&
-      props.submitFunction &&
-      props.submitValid
-    ) {
+    if (props.listen && e.key === 'Enter' && props.submitFunction && props.submitValid) {
       props.submitFunction();
     }
   });
@@ -82,15 +77,7 @@ export default function Input(props: Props): JSX.Element {
       id={props.id}>
       <InputCoreStyled
         disabled={props.disabled}
-        state={
-          props.success
-            ? 'success'
-            : props.warning
-            ? 'warning'
-            : props.error
-            ? 'error'
-            : 'default'
-        }>
+        state={props.success ? 'success' : props.warning ? 'warning' : props.error ? 'error' : 'default'}>
         <InputAreaStyled
           css={props.css}
           disabled={props.disabled}
@@ -109,13 +96,7 @@ export default function Input(props: Props): JSX.Element {
                 css={{
                   marginLeft: '$2',
                 }}
-                icon={
-                  isCopied ? (
-                    <ClipboardText opacity={0.5} weight='duotone' />
-                  ) : (
-                    <ClipboardText weight='duotone' />
-                  )
-                }
+                icon={isCopied ? <ClipboardText opacity={0.5} weight='duotone' /> : <ClipboardText weight='duotone' />}
                 name='copy'
                 onClick={handleCopy}
                 small>
@@ -128,13 +109,7 @@ export default function Input(props: Props): JSX.Element {
                 css={{
                   marginLeft: '$2',
                 }}
-                icon={
-                  !isRevealed ? (
-                    <Eye weight='duotone' />
-                  ) : (
-                    <EyeClosed weight='duotone' />
-                  )
-                }
+                icon={!isRevealed ? <Eye weight='duotone' /> : <EyeClosed weight='duotone' />}
                 name='reveal'
                 onClick={handleReveal}
                 small>

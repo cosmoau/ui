@@ -58,19 +58,12 @@ export default function Dialog(props: Props): JSX.Element {
 
   return (
     <DialogStyled id={props.id}>
-      <DialogTriggerStyled onClickCapture={handleClick}>
-        {props.trigger}
-      </DialogTriggerStyled>
+      <DialogTriggerStyled onClickCapture={handleClick}>{props.trigger}</DialogTriggerStyled>
       {isMounted && (
         <DialogOverlayStyled animation={isOpen}>
           <DialogContentStyled animation={isOpen} css={props.css} ref={ref}>
             <DialogExitStyled onClick={(): void => handleClose()}>
-              <Button
-                ariaLabel='Close'
-                icon={<X />}
-                name='close'
-                small
-                theme={'minimal'}>
+              <Button ariaLabel='Close' icon={<X />} name='close' small theme={'minimal'}>
                 Close
               </Button>
             </DialogExitStyled>

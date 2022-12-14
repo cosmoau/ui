@@ -6,9 +6,7 @@ import { breakpoints, DefaultProps } from '../../stitches.config';
 
 import { ButtonIconStyled, ButtonStyled } from './Button.styles';
 
-interface Props
-  extends HTMLAttributes<HTMLButtonElement>,
-    Omit<DefaultProps, 'spacing'> {
+interface Props extends HTMLAttributes<HTMLButtonElement>, Omit<DefaultProps, 'spacing'> {
   children: ReactNode | string;
   loading?: boolean;
   disabled?: boolean;
@@ -27,9 +25,7 @@ export default function Button(props: Props): JSX.Element {
   return (
     <ButtonStyled
       aria-label={
-        props.ariaLabel || props.name || typeof props.children === 'string'
-          ? props?.children?.toString()
-          : ''
+        props.ariaLabel || props.name || typeof props.children === 'string' ? props?.children?.toString() : ''
       }
       block={props.block}
       css={{
@@ -38,8 +34,7 @@ export default function Button(props: Props): JSX.Element {
           marginRight: props.inline === 'auto' ? 'auto' : `$${props.inline}`,
           verticalAlign: 'middle',
           [breakpoints.phone]: {
-            marginRight:
-              props.inline === 'auto' ? 'auto' : `calc($${props.inline} * 0.9)`,
+            marginRight: props.inline === 'auto' ? 'auto' : `calc($${props.inline} * 0.9)`,
           },
         }),
 
@@ -56,11 +51,9 @@ export default function Button(props: Props): JSX.Element {
           <Loading />
         </ButtonIconStyled>
       )}
-      {props.icon &&
-        (props.iconPosition === 'left' || !props.iconPosition) &&
-        !props.external && (
-          <ButtonIconStyled align='left'>{props.icon}</ButtonIconStyled>
-        )}
+      {props.icon && (props.iconPosition === 'left' || !props.iconPosition) && !props.external && (
+        <ButtonIconStyled align='left'>{props.icon}</ButtonIconStyled>
+      )}
       {props.children}
       {props.icon && props.iconPosition === 'right' && !props.external && (
         <ButtonIconStyled align='right'>{props.icon}</ButtonIconStyled>

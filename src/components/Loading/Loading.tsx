@@ -5,17 +5,9 @@ interface Props {
   width?: number | string;
 }
 
-export default function Loading({
-  stroke = theme.colors.text.toString(),
-  width = 16,
-}: Props): JSX.Element {
+export default function Loading({ stroke = theme.colors.text.toString(), width = 16 }: Props): JSX.Element {
   return (
-    <svg
-      height={width}
-      stroke={stroke}
-      viewBox={'0 0 38 38'}
-      width={width}
-      xmlns={'http://www.w3.org/2000/svg'}>
+    <svg height={width} stroke={stroke} viewBox={'0 0 38 38'} width={width} xmlns={'http://www.w3.org/2000/svg'}>
       <g fill='none' fillRule='nonzero'>
         <g strokeWidth='2' transform='translate(1 1)'>
           <circle cx='18' cy='18' r='18' strokeOpacity='.3' />

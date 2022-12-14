@@ -7,14 +7,7 @@ import { StackColumnStyled, StackRowStyled, StackElementStyled } from './Stack.s
 interface Props extends Omit<DefaultProps, 'spacing'> {
   children: ReactNode;
   direction?: 'row' | 'column';
-  flex?:
-    | 'stretch'
-    | 'center'
-    | 'flex-start'
-    | 'flex-end'
-    | 'baseline'
-    | 'initial'
-    | 'inherit';
+  flex?: 'stretch' | 'center' | 'flex-start' | 'flex-end' | 'baseline' | 'initial' | 'inherit';
   align?: 'left' | 'center' | 'right' | 'justify' | 'initial' | 'inherit';
   minimal?: boolean;
   offset?: number;
@@ -36,11 +29,7 @@ interface Props extends Omit<DefaultProps, 'spacing'> {
 
 export default function Stack(props: Props): JSX.Element {
   const StackElement =
-    props.direction === 'row'
-      ? StackRowStyled
-      : props.direction === 'column'
-      ? StackColumnStyled
-      : StackElementStyled;
+    props.direction === 'row' ? StackRowStyled : props.direction === 'column' ? StackColumnStyled : StackElementStyled;
 
   return (
     <StackElement
@@ -65,30 +54,18 @@ export default function Stack(props: Props): JSX.Element {
             width: props.widthPhone ? `${props.widthPhone}%` : `100%`,
           },
           [breakpoints.tabletX]: {
-            flex: props.widthTablet
-              ? `0 0 ${props.widthTablet}%`
-              : `0 0 ${props.width}%`,
-            marginLeft: props.offsetTablet
-              ? `${props.offsetTablet}%`
-              : `${props.offset}%`,
+            flex: props.widthTablet ? `0 0 ${props.widthTablet}%` : `0 0 ${props.width}%`,
+            marginLeft: props.offsetTablet ? `${props.offsetTablet}%` : `${props.offset}%`,
             width: props.widthTablet ? `${props.widthTablet}%` : `${props.width}%`,
           },
           [breakpoints.laptopX]: {
-            flex: props.widthLaptop
-              ? `0 0 ${props.widthLaptop}%`
-              : `0 0 ${props.width}%`,
-            marginLeft: props.offsetLaptop
-              ? `${props.offsetLaptop}%`
-              : `${props.offset}%`,
+            flex: props.widthLaptop ? `0 0 ${props.widthLaptop}%` : `0 0 ${props.width}%`,
+            marginLeft: props.offsetLaptop ? `${props.offsetLaptop}%` : `${props.offset}%`,
             width: props.widthLaptop ? `${props.widthLaptop}%` : `${props.width}%`,
           },
           [breakpoints.desktopX]: {
-            flex: props.widthDesktop
-              ? `0 0 ${props.widthDesktop}%`
-              : `0 0 ${props.width}%`,
-            marginLeft: props.offsetDesktop
-              ? `${props.offsetDesktop}%`
-              : `${props.offset}%`,
+            flex: props.widthDesktop ? `0 0 ${props.widthDesktop}%` : `0 0 ${props.width}%`,
+            marginLeft: props.offsetDesktop ? `${props.offsetDesktop}%` : `${props.offset}%`,
             width: props.widthDesktop ? `${props.widthDesktop}%` : `${props.width}%`,
           },
           [breakpoints.wide]: {

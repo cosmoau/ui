@@ -38,8 +38,7 @@ export default function Text(props: Props): JSX.Element {
           verticalAlign: 'middle',
 
           [breakpoints.phone]: {
-            marginRight:
-              props.inline === 'auto' ? 'auto' : `calc($${props.inline} * 0.9)`,
+            marginRight: props.inline === 'auto' ? 'auto' : `calc($${props.inline} * 0.9)`,
           },
         }),
 

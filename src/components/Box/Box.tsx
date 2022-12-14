@@ -44,10 +44,7 @@ export default function Box(props: Props): JSX.Element {
         padding={'none'}
         theme={props.theme || 'default'}>
         {props.imageCTA ? (
-          <a
-            href={props.imageCTA}
-            rel='noopener noreferrer'
-            target={props.imageTarget || '_blank'}>
+          <a href={props.imageCTA} rel='noopener noreferrer' target={props.imageTarget || '_blank'}>
             <Image
               alt={props.imageAlt || ''}
               css={{
@@ -81,9 +78,7 @@ export default function Box(props: Props): JSX.Element {
             src={props.image}
           />
         )}
-        <BoxImageChildrenStyled padding={'default'}>
-          {props.children}
-        </BoxImageChildrenStyled>
+        <BoxImageChildrenStyled padding={'default'}>{props.children}</BoxImageChildrenStyled>
       </BoxStyled>
     ) : (
       <BoxStyled

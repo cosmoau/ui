@@ -3,8 +3,18 @@ import { globalCss, lightTheme, styled, theme } from '../../stitches.config';
 export const ProviderStyled = styled('main', {
   backgroundColor: '$background',
   color: '$text',
+
   minHeight: '100vh',
   position: 'relative',
+
+  [`.${theme}`]: {
+    backgroundColor: '$background',
+    color: '$text',
+  },
+  [`.${lightTheme}`]: {
+    backgroundColor: '$background',
+    color: '$text',
+  },
 });
 
 export const ProviderTriggerStyled = styled('div', {
@@ -17,46 +27,7 @@ export const ProviderTriggerStyled = styled('div', {
 });
 
 export const reset = globalCss({
-  '*': {
-    boxSizing: 'border-box',
-  },
-  '@import': 'url("https://xxxjddzdqkdtyqtywwfi.supabase.co/storage/v1/object/public/public/webfonts.css")',
-  '@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx)': {
-    body: {
-      MozOsxFontSmoothing: 'grayscale',
-      WebkitFontSmoothing: 'antialiased',
-    },
-  },
-  'a': {
-    color: '$text',
-    textDecoration: 'none',
-  },
-
-  'body': {
-    backgroundColor: '$background',
-    color: '$text',
-    fontFamily: '$default',
-    fontSize: '1.5rem',
-    lineHeight: 1.4,
-    margin: 0,
-    padding: 0,
-
-    [`.${theme}`]: {
-      backgroundColor: '$background',
-      color: '$text',
-    },
-    [`.${lightTheme}`]: {
-      backgroundColor: '$background',
-      color: '$text',
-    },
-  },
-  'html': {
-    fontSize: '62.5%',
-  },
-
-  'svg': {
-    verticalAlign: 'middle',
-  },
+  '@import': 'url("https://xxxjddzdqkdtyqtywwfi.supabase.co/storage/v1/object/public/public/fonts.css")',
 });
 
 export default ProviderStyled;

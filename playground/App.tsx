@@ -91,7 +91,9 @@ export function App(): ReactElement {
               vestibulum, mauris nisl porta odio, vitae aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi.{' '}
             </Text>
             <Stack bottom={3} top={5}>
-              <Badge icon={<CheckCircle />}>Test badge</Badge>
+              <Badge block closable icon={<CheckCircle />}>
+                Test badge
+              </Badge>
             </Stack>
             <Stack bottom={3}>
               <Badge icon={<CheckCircle />}>Test badge</Badge>

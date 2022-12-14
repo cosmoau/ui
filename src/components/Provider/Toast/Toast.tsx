@@ -27,10 +27,7 @@ export default function Toast(props: ToasterProps): JSX.Element {
       {toasts.map((t) => {
         t.duration = 5000;
         return (
-          <ToastStyled
-            animation={t.visible}
-            key={t.id}
-            onClick={(): void => toast.dismiss(t.id)}>
+          <ToastStyled animation={t.visible} key={t.id} onClick={(): void => toast.dismiss(t.id)}>
             {t.message && t.message.toString().length > 50
               ? `${t.message.toString().substring(0, 50)}...`
               : t.message?.toString()}

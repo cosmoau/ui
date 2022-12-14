@@ -3,11 +3,7 @@ import { useOnClickOutside } from 'usehooks-ts';
 
 import { DefaultProps } from '../../stitches.config';
 
-import {
-  PopoverContentStyled,
-  PopoverStyled,
-  PopoverTriggerStyled,
-} from './Popover.styles';
+import { PopoverContentStyled, PopoverStyled, PopoverTriggerStyled } from './Popover.styles';
 
 interface Props extends DefaultProps {
   children: ReactNode;

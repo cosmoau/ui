@@ -30,13 +30,7 @@ export default function Code(props: Props): JSX.Element {
         {props.copy && (
           <Button
             ariaLabel='Copy'
-            icon={
-              isCopied ? (
-                <ClipboardText opacity={0.5} weight='duotone' />
-              ) : (
-                <ClipboardText weight='duotone' />
-              )
-            }
+            icon={isCopied ? <ClipboardText opacity={0.5} weight='duotone' /> : <ClipboardText weight='duotone' />}
             name='copy'
             onClick={handleCopy}>
             Copy
