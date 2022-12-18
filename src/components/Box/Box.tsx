@@ -39,7 +39,6 @@ export default function Box(props: Props): JSX.Element {
         animation={!isOpen}
         css={props.css}
         hover={props.hover}
-        id={props.id}
         loading={props.loading || false}
         padding={'none'}
         theme={props.theme || 'default'}>
@@ -85,7 +84,6 @@ export default function Box(props: Props): JSX.Element {
         animation={!isOpen}
         css={props.css}
         hover={props.hover}
-        id={props.id}
         loading={props.loading || false}
         padding={props.minimal ? 'none' : 'default'}
         theme={props.theme || 'default'}>

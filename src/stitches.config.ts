@@ -6,6 +6,7 @@ export const breakpoints = {
   laptop: '@media only screen and (max-width: 1600px)',
   laptopX: '@media only screen and (min-width: 1001px) and (max-width: 1600px)',
   phone: '@media only screen and (max-width: 800px)',
+  retina: '@media only screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx)',
   tablet: '@media only screen and (max-width: 1000px)',
   tabletX: '@media only screen and (min-width: 801px) and (max-width: 1000px)',
   wide: '@media only screen and (min-width: 2001px)',
@@ -42,10 +43,10 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       text: 'rgb(253, 250, 246)',
     },
     fontSizes: {
-      h1: '3.2rem',
+      h1: '3rem',
       h2: '2.8rem',
-      h3: '2.6rem',
-      h4: '2.2rem',
+      h3: '2.4rem',
+      h4: '2rem',
       h5: '1.8rem',
       h6: '1.7rem',
       p: '1.6rem',
@@ -68,12 +69,12 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     lineHeights: {
       h1: '1.25',
       h2: '1.25',
-      h3: '1.35',
-      h4: '1.35',
-      h5: '1.35',
-      h6: '1.35',
-      p: '1.35',
-      small: '1.35',
+      h3: '1.3',
+      h4: '1.3',
+      h5: '1.3',
+      h6: '1.4',
+      p: '1.4',
+      small: '1.4',
     },
     media: breakpoints,
     radii: {
@@ -162,7 +163,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
 
 export const lightTheme = createTheme({
   colors: {
-    accent: 'rgb(46, 60, 81)',
+    accent: 'rgb(25, 35, 50)',
     background: 'rgb(255, 250, 245)',
     blueText: 'rgb(32, 47, 136)',
     border: 'rgba(4, 9, 28, 0.125)',
@@ -185,7 +186,6 @@ export const lightTheme = createTheme({
 
 export interface DefaultProps {
   css?: CSS;
-  id?: string;
   spacing?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8';
 }
 

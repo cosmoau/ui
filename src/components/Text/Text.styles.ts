@@ -1,4 +1,4 @@
-import { breakpoints, styled } from '../../stitches.config';
+import { styled } from '../../stitches.config';
 
 export const TextSizes = {
   h1: {
@@ -7,16 +7,6 @@ export const TextSizes = {
     fontWeight: '$h1',
     lineHeight: '$h1',
     marginBottom: '$5',
-
-    [breakpoints.phone]: {
-      fontSize: 'calc($h1 * 0.9)',
-    },
-    [breakpoints.tabletX]: {
-      fontSize: 'calc($h1 * 0.9)',
-    },
-    [breakpoints.laptopX]: {
-      fontSize: 'calc($h1 * 0.95)',
-    },
   },
   h2: {
     fontFamily: '$serif',
@@ -24,16 +14,6 @@ export const TextSizes = {
     fontWeight: '$h2',
     lineHeight: '$h2',
     marginBottom: '$5',
-
-    [breakpoints.phone]: {
-      fontSize: 'calc($h2 * 0.9)',
-    },
-    [breakpoints.tabletX]: {
-      fontSize: 'calc($h2 * 0.9)',
-    },
-    [breakpoints.laptopX]: {
-      fontSize: 'calc($h2 * 0.95)',
-    },
   },
   h3: {
     fontFamily: '$serif',
@@ -41,16 +21,6 @@ export const TextSizes = {
     fontWeight: '$h3',
     lineHeight: '$h3',
     marginBottom: '$5',
-
-    [breakpoints.phone]: {
-      fontSize: 'calc($h3 * 0.9)',
-    },
-    [breakpoints.tabletX]: {
-      fontSize: 'calc($h3 * 0.9)',
-    },
-    [breakpoints.laptopX]: {
-      fontSize: 'calc($h3 * 0.95)',
-    },
   },
   h4: {
     fontFamily: '$serif',
@@ -58,48 +28,18 @@ export const TextSizes = {
     fontWeight: '$h4',
     lineHeight: '$h4',
     marginBottom: '$4',
-
-    [breakpoints.phone]: {
-      fontSize: 'calc($h4 * 0.9)',
-    },
-    [breakpoints.tabletX]: {
-      fontSize: 'calc($h4 * 0.9)',
-    },
-    [breakpoints.laptopX]: {
-      fontSize: 'calc($h4 * 0.95)',
-    },
   },
   h5: {
     fontSize: '$h5',
     fontWeight: '$h5',
     lineHeight: '$h5',
     marginBottom: '$3',
-
-    [breakpoints.phone]: {
-      fontSize: 'calc($h5 * 0.9)',
-    },
-    [breakpoints.tabletX]: {
-      fontSize: 'calc($h5 * 0.9)',
-    },
-    [breakpoints.laptopX]: {
-      fontSize: 'calc($h5 * 0.95)',
-    },
   },
   h6: {
     fontSize: '$h6',
     fontWeight: '$h6',
     lineHeight: '$h6',
     marginBottom: '$3',
-
-    [breakpoints.phone]: {
-      fontSize: 'calc($h6 * 0.9)',
-    },
-    [breakpoints.tabletX]: {
-      fontSize: 'calc($h6 * 0.9)',
-    },
-    [breakpoints.laptopX]: {
-      fontSize: 'calc($h6 * 0.95)',
-    },
   },
   li: {
     fontSize: '$p',
@@ -107,47 +47,17 @@ export const TextSizes = {
     lineHeight: '$p',
     listStylePosition: 'inside',
     marginBottom: '$3',
-
-    [breakpoints.phone]: {
-      fontSize: 'calc($p * 0.9)',
-    },
-    [breakpoints.tabletX]: {
-      fontSize: 'calc($p * 0.9)',
-    },
-    [breakpoints.laptopX]: {
-      fontSize: 'calc($p * 0.95)',
-    },
   },
   ol: {
     fontSize: '$p',
     fontWeight: '$p',
     lineHeight: '$p',
-
-    [breakpoints.phone]: {
-      fontSize: 'calc($p * 0.9)',
-    },
-    [breakpoints.tabletX]: {
-      fontSize: 'calc($p * 0.9)',
-    },
-    [breakpoints.laptopX]: {
-      fontSize: 'calc($p * 0.95)',
-    },
   },
   p: {
     fontSize: '$p',
     fontWeight: '$p',
     lineHeight: '$p',
     marginBottom: '$3',
-
-    [breakpoints.phone]: {
-      fontSize: 'calc($p * 0.9)',
-    },
-    [breakpoints.tabletX]: {
-      fontSize: 'calc($p * 0.9)',
-    },
-    [breakpoints.laptopX]: {
-      fontSize: 'calc($p * 0.95)',
-    },
   },
   small: {
     display: 'block',
@@ -155,16 +65,6 @@ export const TextSizes = {
     fontWeight: '$small',
     lineHeight: '$small',
     marginBottom: '$3',
-
-    [breakpoints.phone]: {
-      fontSize: 'calc($small * 0.9)',
-    },
-    [breakpoints.tabletX]: {
-      fontSize: 'calc($small * 0.9)',
-    },
-    [breakpoints.laptopX]: {
-      fontSize: 'calc($small * 0.95)',
-    },
   },
   span: {
     fontSize: 'inherit',
@@ -175,16 +75,6 @@ export const TextSizes = {
     fontSize: '$p',
     fontWeight: '$p',
     lineHeight: '$p',
-
-    [breakpoints.phone]: {
-      fontSize: 'calc($p * 0.9)',
-    },
-    [breakpoints.tabletX]: {
-      fontSize: 'calc($p * 0.9)',
-    },
-    [breakpoints.laptopX]: {
-      fontSize: 'calc($p * 0.95)',
-    },
   },
 };
 

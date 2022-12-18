@@ -57,7 +57,7 @@ export default function Dialog(props: Props): JSX.Element {
   useLockedBody(props.locked ? isOpen : false);
 
   return (
-    <DialogStyled id={props.id}>
+    <DialogStyled>
       <DialogTriggerStyled onClickCapture={handleClick}>{props.trigger}</DialogTriggerStyled>
       {isMounted && (
         <DialogOverlayStyled animation={isOpen}>

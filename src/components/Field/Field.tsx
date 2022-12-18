@@ -52,7 +52,6 @@ export default function Field(props: Props): JSX.Element {
         width: props.width || '80%',
       }}
       disabled={props.disabled}
-      id={props.id}
       state={props.success ? 'success' : props.warning ? 'warning' : props.error ? 'error' : 'default'}>
       {(props.error ||
         props.success ||

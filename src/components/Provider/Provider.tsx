@@ -4,7 +4,7 @@ import { useDarkMode } from 'usehooks-ts';
 
 import { DefaultProps, lightTheme, theme } from '../../stitches.config';
 
-import { ProviderStyled, ProviderTriggerStyled, reset } from './Provider.styles';
+import { ProviderStyled, ProviderTriggerStyled, providerReset } from './Provider.styles';
 import Toast from './Toast/Toast';
 
 interface Props extends DefaultProps {
@@ -18,7 +18,7 @@ interface Props extends DefaultProps {
 export default function Provider(props: Props): JSX.Element {
   const { isDarkMode } = useDarkMode(!props.locked && props.default === 'dark');
 
-  reset();
+  providerReset();
   const locked = props.locked === 'dark' ? theme : lightTheme;
   const auto = isDarkMode ? theme : lightTheme;
   const active = props.locked ? locked : auto;

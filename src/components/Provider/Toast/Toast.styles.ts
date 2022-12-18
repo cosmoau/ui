@@ -10,7 +10,8 @@ export const ToastStyled = styled('div', {
   height: 'auto',
   justifyContent: 'center',
   marginTop: '$3',
-  ...TextSizes.h6,
+  textAlign: 'center',
+  ...TextSizes.p,
   marginBottom: '0 !important',
 
   overflow: 'hidden',
@@ -20,11 +21,11 @@ export const ToastStyled = styled('div', {
   variants: {
     animation: {
       false: {
-        animation: `${fadeOut} .25s`,
+        animation: `${fadeOut} .2s linear`,
         animationFillMode: 'forwards',
       },
       true: {
-        animation: `${fadeIn} .25s`,
+        animation: `${fadeIn} .2s linear`,
         animationFillMode: 'forwards',
       },
     },

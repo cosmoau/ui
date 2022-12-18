@@ -19,7 +19,6 @@ export default function Divider(props: Props): JSX.Element {
         }),
         ...props.css,
       }}
-      id={props.id}
     />
   );
 }

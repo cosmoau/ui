@@ -23,7 +23,7 @@ export const BoxStyled = styled('article', {
   variants: {
     animation: {
       true: {
-        animation: `${fadeOut} .25s linear`,
+        animation: `${fadeOut} .2s linear`,
         animationFillMode: 'forwards',
       },
     },

@@ -4,7 +4,8 @@ import { DefaultProps } from '../../stitches.config';
 import { AvatarFallbackStyled, AvatarImageStyled, AvatarStyled } from './Avatar.styles';
 
 interface Props extends DefaultProps {
-  image?: string;
+  src?: string;
+  alt?: string;
   fallback: string;
   width?: number;
 }
@@ -16,11 +17,10 @@ export default function Avatar(props: Props): JSX.Element {
         height: props.width || 20,
         width: props.width || 20,
         ...props.css,
-      }}
-      id={props.id}>
-      {props.image ? (
+      }}>
+      {props.src ? (
         <AvatarImageStyled>
-          <Image alt={props.fallback} fill src={props.image} />
+          <Image alt={props.alt || props.fallback} fill src={props.src} />
         </AvatarImageStyled>
       ) : (
         <AvatarFallbackStyled>{props.fallback}</AvatarFallbackStyled>

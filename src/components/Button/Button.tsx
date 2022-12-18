@@ -41,7 +41,6 @@ export default function Button(props: Props): JSX.Element {
         ...props.css,
       }}
       disabled={props.disabled || props.loading || false}
-      id={props.id}
       name={props.name}
       onClick={props.onClick}
       small={props.small}

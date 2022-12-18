@@ -73,8 +73,7 @@ export default function Input(props: Props): JSX.Element {
       css={{
         maxWidth: props.width || '100%',
         width: props.width || '100%',
-      }}
-      id={props.id}>
+      }}>
       <InputCoreStyled
         disabled={props.disabled}
         state={props.success ? 'success' : props.warning ? 'warning' : props.error ? 'error' : 'default'}>

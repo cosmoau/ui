@@ -32,7 +32,7 @@ export const DialogOverlayStyled = styled('div', {
         animationFillMode: 'forwards',
       },
       true: {
-        animation: `${fadeIn} .25s linear`,
+        animation: `${fadeIn} .2s linear`,
         animationFillMode: 'forwards',
       },
     },
@@ -59,11 +59,11 @@ export const DialogContentStyled = styled('div', {
   variants: {
     animation: {
       false: {
-        animation: `${fadeOut} .25s linear`,
+        animation: `${fadeOut} .2s linear`,
         animationFillMode: 'forwards',
       },
       true: {
-        animation: `${fadeIn} .25s linear`,
+        animation: `${fadeIn} .2s linear`,
         animationFillMode: 'forwards',
       },
     },

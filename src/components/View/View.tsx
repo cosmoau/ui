@@ -28,8 +28,7 @@ export default function View(props: Props): JSX.Element {
           paddingBottom: `$${props.bottom}`,
         }),
         ...props.css,
-      }}
-      id={props.id}>
+      }}>
       <ViewContainerStyled container={props.container}>{props.children}</ViewContainerStyled>
     </ViewStyled>
   );

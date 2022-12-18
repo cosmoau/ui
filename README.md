@@ -1,6 +1,6 @@
 # @cosmoau/ui
 
-> An internal UI system for creating user interfaces and enforcing consistency across every product at Cosmo.
+> An internal component library for creating user interfaces and enforcing consistency across every product at Cosmo.
 
 ## Install
 

@@ -82,8 +82,7 @@ export default function Stack(props: Props): JSX.Element {
         }),
         ...props.css,
       }}
-      flexduo={props.flexduo}
-      id={props.id}>
+      flexduo={props.flexduo}>
       {props.children}
     </StackElement>
   );

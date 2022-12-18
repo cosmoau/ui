@@ -50,7 +50,6 @@ export default function Badge(props: Props): JSX.Element {
         }),
         ...props.css,
       }}
-      id={props.id}
       onClick={props.onClick}
       theme={props.theme || 'default'}>
       {props.icon && (props.iconPosition === 'left' || !props.iconPosition) && (

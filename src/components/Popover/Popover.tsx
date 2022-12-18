@@ -63,7 +63,7 @@ export default function Popover(props: Props): JSX.Element {
   );
 
   return (
-    <PopoverStyled id={props.id}>
+    <PopoverStyled>
       <PopoverTriggerStyled
         onClickCapture={handleClick}
         onMouseEnter={handleMouseEnter}

@@ -1,3 +1,4 @@
+import { CSSProperties } from '@stitches/react';
 import { default as NextImage, ImageProps } from 'next/image';
 
 import { DefaultProps } from '../../stitches.config';
@@ -7,8 +8,8 @@ import { ImageStyled } from './Image.styles';
 interface Props extends DefaultProps, ImageProps {
   borderRadius?: 1 | 2 | 3;
   hover?: boolean;
-  fillFit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
-  fillPosition?: 'center' | 'top' | 'bottom' | 'left' | 'right';
+  fillFit?: CSSProperties['objectFit'];
+  fillPosition?: CSSProperties['objectPosition'];
   fillHeight?: string | number;
   fill?: boolean;
 }
@@ -21,7 +22,7 @@ export default function Image(props: Props): JSX.Element {
         borderRadius: borderRadius ? '$' + borderRadius : undefined,
         img: {
           borderRadius: borderRadius ? '$' + borderRadius : undefined,
-          objectFit: fillFit || 'cover',
+          objectFit: fillFit || 'contain',
           objectPosition: fillPosition || 'center',
         },
         ...(hover && {

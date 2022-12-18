@@ -22,7 +22,7 @@ export const BadgeStyled = styled('div', {
   display: 'inline-flex',
   justifyContent: 'center',
   padding: '$1 $4',
-  ...TextSizes.h6,
+  ...TextSizes.p,
   marginBottom: '0 !important',
 
   svg: {
@@ -33,7 +33,7 @@ export const BadgeStyled = styled('div', {
   variants: {
     animation: {
       true: {
-        animation: `${fadeOut} .25s linear`,
+        animation: `${fadeOut} .2s linear`,
         animationFillMode: 'forwards',
       },
     },

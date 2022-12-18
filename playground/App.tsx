@@ -19,6 +19,7 @@ import {
   Popover,
   Box,
   Select,
+  ProviderToggle,
 } from '../src/index';
 
 export function App(): ReactElement {
@@ -40,7 +41,7 @@ export function App(): ReactElement {
   }, []);
 
   return (
-    <Provider locked='light'>
+    <Provider default='light'>
       <View bottom='8' container inverted top={8}>
         <Stack direction='row' flex='initial' top='4'>
           <Stack direction='column'>
@@ -54,6 +55,7 @@ export function App(): ReactElement {
               <Button inline={6} theme='fill'>
                 Test
               </Button>
+              <ProviderToggle trigger={<Button inline={7}>Test</Button>} />
               <Select
                 onSelection={(value: string, label: string) => {
                   alert(`Value: ${value}, Label: ${label} `);
