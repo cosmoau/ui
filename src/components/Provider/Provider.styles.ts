@@ -18,12 +18,10 @@ export const ProviderStyled = styled('main', {
 });
 
 export const ProviderTriggerStyled = styled('div', {
-  '*': {
-    cursor: 'pointer',
-  },
-  'display': 'inline-flex',
-  'position': 'relative',
-  'verticalAlign': 'middle',
+  cursor: 'pointer',
+  display: 'inline-flex',
+  position: 'relative',
+  verticalAlign: 'middle',
 });
 
 const bucketURL = 'https://xxxjddzdqkdtyqtywwfi.supabase.co/storage/v1/object/public/public';
@@ -80,7 +78,7 @@ export const providerReset = globalCss({
     margin: 0,
     padding: 0,
 
-    [breakpoints.retina]: {
+    [breakpoints.special.retina]: {
       MozOsxFontSmoothing: 'grayscale',
       WebkitFontSmoothing: 'antialiased',
     },
@@ -88,6 +86,17 @@ export const providerReset = globalCss({
 
   'html': {
     fontSize: '62.5%',
+
+    [breakpoints.special.micro]: {
+      fontSize: '56.25%',
+    },
+
+    [breakpoints.phone]: {
+      fontSize: '57.8125%',
+    },
+    [breakpoints.tabletX]: {
+      fontSize: '59.375%',
+    },
   },
 
   'img': {

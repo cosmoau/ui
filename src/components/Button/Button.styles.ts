@@ -41,7 +41,7 @@ export const ButtonStyled = styled('button', {
   'fontFamily': '$default',
   'justifyContent': 'center',
   'margin': 0,
-  'marginBottom': '0 !important',
+  'marginBottom:': '0 !important',
   'outline': 'none',
   'padding': '$1 $4',
   'svg': {
@@ -62,7 +62,6 @@ export const ButtonStyled = styled('button', {
       true: {
         ...TextSizes.small,
         display: 'inline',
-        marginBottom: '0 !important',
 
         svg: {
           height: '1.6rem',

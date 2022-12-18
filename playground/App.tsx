@@ -41,7 +41,75 @@ export function App(): ReactElement {
   }, []);
 
   return (
-    <Provider default='light'>
+    <Provider locked='light'>
+      <View bottom={8} container inverted top={8}>
+        <Stack direction='row'>
+          <Stack direction='column'>
+            <Text as='h1'>Heading One</Text>
+            <Text as='h2'>Heading Two</Text>
+            <Text as='h3'>Heading Three</Text>
+            <Text as='h4'>Heading Four</Text>
+            <Text as='h5'>Heading Five</Text>
+            <Text as='h6'>Heading Six</Text>
+            <Text as='p'>Paragraph</Text>
+            <Text as='span'>Span</Text>
+            <Text as='small'>Small</Text>
+            <Text as='ul'>
+              <Text as='li'>List Item</Text>
+              <Text as='li'>List Item</Text>
+            </Text>
+          </Stack>
+        </Stack>
+      </View>
+      <View bottom={8} container top={8}>
+        <Stack direction='row'>
+          <Stack direction='column'>
+            <Text as='h1'>
+              Heading One - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt
+              vestibulum
+            </Text>
+            <Text as='h2'>
+              Heading Two - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt
+              vestibulum
+            </Text>
+            <Text as='h3'>
+              Heading Three - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt
+              vestibulum
+            </Text>
+            <Text as='h4'>
+              Heading Four - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt
+              vestibulum
+            </Text>
+            <Text as='h5'>
+              Heading Five - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt
+              vestibulum
+            </Text>
+            <Text as='h6'>
+              Heading Six - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt
+              vestibulum
+            </Text>
+            <Text as='p'>
+              Paragraph - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt
+              vestibulum
+            </Text>
+            <Text as='span'>
+              Span - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt
+              vestibulum
+            </Text>
+            <Text as='small'>Small</Text>
+            <Text as='ul'>
+              <Text as='li'>
+                List Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt
+                vestibulum
+              </Text>
+              <Text as='li'>
+                List Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt
+                vestibulum
+              </Text>
+            </Text>
+          </Stack>
+        </Stack>
+      </View>
       <View bottom='8' container inverted top={8}>
         <Stack direction='row' flex='initial' top='4'>
           <Stack direction='column'>

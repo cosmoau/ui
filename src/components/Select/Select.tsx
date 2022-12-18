@@ -86,8 +86,8 @@ export default function Select(props: Props): JSX.Element {
           animation={isOpen}
           css={{
             left: props.align === 'left' ? '0' : 'auto',
-            maxWidth: (props.width || '30rem') + '!important',
-            minWidth: (props.width || '20rem') + '!important',
+            maxWidth: props.width || '30rem',
+            minWidth: props.width || '20rem',
             right: props.align === 'right' ? '0' : 'auto',
           }}
           ref={ref}>

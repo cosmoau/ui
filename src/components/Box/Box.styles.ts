@@ -6,7 +6,7 @@ export const paddingVariants = {
       padding: '$5',
     },
     none: {
-      padding: '0 !important',
+      padding: '0',
     },
   },
 };

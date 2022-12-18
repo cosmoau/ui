@@ -16,7 +16,7 @@ export const TableStyled = styled('table', {
 
 export const TableHeadStyled = styled('thead', {
   backgroundColor: '$default',
-  borderRadius: '$2 !important',
+  borderRadius: '$2',
   textAlign: 'left',
   width: '100%',
 });
@@ -34,7 +34,7 @@ export const TableBodyStyled = styled('tbody', {
 export const TableRowStyled = styled('tr', {
   '&:last-child': {
     td: {
-      borderBottom: '0 !important',
+      borderBottom: '0',
     },
   },
 
@@ -45,7 +45,7 @@ export const TableRowStyled = styled('tr', {
 
 export const TableCellStyled = styled('td', {
   '&:last-child': {
-    borderRight: '0 !important',
+    borderRight: '0',
     textAlign: 'right',
   },
   ...TextSizes.p,
@@ -59,10 +59,7 @@ export const TableCellStyled = styled('td', {
 
 export const TableHeadCellStyled = styled('th', {
   '&:last-child': {
-    borderRight: '0 !important',
-  },
-  'button': {
-    fontSize: '$p !important',
+    borderRight: '0',
   },
   ...TextSizes.p,
   'borderBottom': '0.1rem solid $border',

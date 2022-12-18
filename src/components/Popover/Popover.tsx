@@ -76,8 +76,8 @@ export default function Popover(props: Props): JSX.Element {
           css={{
             ...props.css,
             left: props.align === 'left' ? '0' : 'auto',
-            maxWidth: (props.width || '25rem') + '!important',
-            minWidth: (props.width || '15rem') + '!important',
+            maxWidth: props.width || '25rem',
+            minWidth: props.width || '15rem',
             right: props.align === 'right' ? '0' : 'auto',
           }}
           minimal={props.minimal}

@@ -7,12 +7,10 @@ export const DialogStyled = styled('div', {
 });
 
 export const DialogTriggerStyled = styled('div', {
-  '*': {
-    cursor: 'pointer',
-  },
-  'display': 'inline-flex',
-  'position': 'relative',
-  'verticalAlign': 'middle',
+  cursor: 'pointer',
+  display: 'inline-flex',
+  position: 'relative',
+  verticalAlign: 'middle',
 });
 
 export const DialogOverlayStyled = styled('div', {
