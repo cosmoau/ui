@@ -2,7 +2,7 @@ import { Circle, X } from 'phosphor-react';
 import { MouseEventHandler, ReactNode, useState } from 'react';
 
 import { Loading } from '../../index';
-import { breakpoints, DefaultProps } from '../../stitches.config';
+import { DefaultProps } from '../../stitches.config';
 
 import { BadgeIconStyled, BadgeStyled, BadgeDotStyled, BadgeLoadingStyled } from './Badge.styles';
 
@@ -38,9 +38,6 @@ export default function Badge(props: Props): JSX.Element {
         ...(props.inline && {
           display: 'inline-flex',
           marginRight: props.inline === 'auto' ? 'auto' : `$${props.inline}`,
-          [breakpoints.phone]: {
-            marginRight: props.inline === 'auto' ? 'auto' : `calc($${props.inline} * 0.9)`,
-          },
           verticalAlign: 'middle',
         }),
         ...(props.block && {

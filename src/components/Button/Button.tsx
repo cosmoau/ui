@@ -2,7 +2,7 @@ import { ArrowSquareOut } from 'phosphor-react';
 import { HTMLAttributes, ReactNode } from 'react';
 
 import { Loading } from '../../index';
-import { breakpoints, DefaultProps } from '../../stitches.config';
+import { DefaultProps } from '../../stitches.config';
 
 import { ButtonIconStyled, ButtonStyled } from './Button.styles';
 
@@ -33,9 +33,6 @@ export default function Button(props: Props): JSX.Element {
           alignSelf: 'center',
           marginRight: props.inline === 'auto' ? 'auto' : `$${props.inline}`,
           verticalAlign: 'middle',
-          [breakpoints.phone]: {
-            marginRight: props.inline === 'auto' ? 'auto' : `calc($${props.inline} * 0.9)`,
-          },
         }),
 
         ...props.css,

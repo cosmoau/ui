@@ -1,7 +1,7 @@
 {
   "name": "@cosmoau/ui",
   "description": "An internal component library for creating user interfaces and enforcing consistency across every product at Cosmo.",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "bugs": {
@@ -53,13 +53,11 @@
     "user interface"
   ],
   "license": "GPL-3.0",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
+  "main": "./dist/index.js",
   "peerDependencies": {
-    "next": "^=12.0.0",
-    "react": "^=17.0.0",
-    "react-dom": "^=17.0.0",
-    "typescript": "^=4.5.0"
+    "next": "^13.0.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "prettier": "eslint-config-dolmios/.prettierrc.json",
   "repository": {
@@ -67,9 +65,7 @@
     "url": "git://github.com/cosmoau/ui.git"
   },
   "scripts": {
-    "build": "pnpm clean && pnpm build:esm && pnpm build:cjs",
-    "build:cjs": "tsc --module commonjs --outDir dist/cjs --declarationDir dist/cjs",
-    "build:esm": "tsc",
+    "build": "pnpm clean && tsc",
     "clean": "rm -rf dist lib",
     "dev": "echo '⚡️ Fetching device IP for development...' && ipconfig getifaddr en0 && echo '🫡' && parcel playground/index.html --dist-dir playground/dist --open --no-cache --port 420",
     "lint": "eslint src --ext .ts,.tsx",
@@ -78,5 +74,5 @@
   },
   "sideEffects": false,
   "source": "src/index.tsx",
-  "types": "./dist/esm/index.d.ts"
+  "types": "./dist/index.d.ts"
 }

@@ -10,7 +10,7 @@ pnpm install
 
 ## Usage
 
-To work on components in the browser, use Parcel. Run the development server and head to [http://localhost:1234](http://localhost:1234) in the browser.
+To work on components in the browser, use Parcel. Run the development server and head to [http://localhost:420](http://localhost:420) in the browser.
 
 ```
 pnpm dev
@@ -20,7 +20,7 @@ Before you deploy, lint your code and format it. Then run the build to compile t
 
 ```
 pnpm tidy
-pnpm build (build:cjs/build:esm)
+pnpm build
 ```
 
 ## Contributing

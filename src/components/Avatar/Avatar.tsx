@@ -11,6 +11,9 @@ interface Props extends DefaultProps {
 }
 
 export default function Avatar(props: Props): JSX.Element {
+  if (props.fallback.length > 2) {
+    throw new Error('Fallback string should be no more than 2 characters');
+  }
   return (
     <AvatarStyled
       css={{

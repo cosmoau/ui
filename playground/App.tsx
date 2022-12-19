@@ -272,7 +272,7 @@ export function App(): ReactElement {
                   Dialog
                 </Button>
               }>
-              <Text as='h3'>Test</Text>
+              <Text as='h3'>Test Test Test Test Test Test Test Test Test Test Test Test Test</Text>
             </Dialog>
 
             <Button ariaLabel='button' block icon={<ArrowRight />} iconPosition='right' theme='fill'>

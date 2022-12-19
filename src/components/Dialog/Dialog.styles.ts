@@ -44,11 +44,11 @@ export const DialogContentStyled = styled('div', {
   borderRadius: '$2',
   boxShadow: '$3',
   left: '50%',
-  maxHeight: '80vh',
-  maxWidth: '100%',
+  maxHeight: '85vh',
+  maxWidth: '90%',
   overflowX: 'hidden',
   overflowY: 'auto',
-  padding: '$6 $5',
+  padding: 'calc($5 + 1.33rem) $5',
   position: 'fixed',
   textAlign: 'left',
   top: '50%',
@@ -70,9 +70,6 @@ export const DialogContentStyled = styled('div', {
   width: '70rem',
 
   [breakpoints.phone]: {
-    maxHeight: '95vh',
-    maxWidth: '90%',
-    padding: '5',
     width: '90%',
   },
 });
@@ -82,8 +79,8 @@ export const DialogExitStyled = styled('div', {
     opacity: 1,
   },
   'cursor': 'pointer',
-  'opacity': 0.5,
-  'padding': '1rem',
+
+  'padding': '$2',
   'position': 'absolute',
   'right': 0,
   'top': 0,

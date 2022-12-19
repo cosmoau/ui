@@ -1,6 +1,9 @@
 import { styled } from '../../stitches.config';
 
 export const TextSizes = {
+  a: {
+    textDecoration: 'none',
+  },
   h1: {
     fontFamily: '$serif',
     fontSize: '$h1',
