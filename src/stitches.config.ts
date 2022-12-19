@@ -51,8 +51,8 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       h3: '2.4rem',
       h4: '2.2rem',
       h5: '1.9rem',
-      h6: '1.7rem',
-      p: '1.7rem',
+      h6: '1.6rem',
+      p: '1.6rem',
       small: '1.4rem',
     },
     fontWeights: {
