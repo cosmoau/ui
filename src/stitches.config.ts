@@ -166,7 +166,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
 
 export const lightTheme = createTheme({
   colors: {
-    accent: 'rgb(25, 35, 50)',
+    accent: 'rgb(39, 44, 59)',
     background: 'rgb(255, 250, 245)',
     blueText: 'rgb(32, 47, 136)',
     border: 'rgba(4, 9, 28, 0.125)',
