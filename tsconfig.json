@@ -1,11 +1,10 @@
 {
   "include": ["src"],
   "compilerOptions": {
-    "module": "ESNext",
+    "module": "esnext",
     "importHelpers": true,
     "declaration": true,
     "sourceMap": true,
-    "declarationMap": true,
     "rootDir": "./src",
     "outDir": "./dist/esm",
     "strict": true,
@@ -17,13 +16,10 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "react-jsx",
-    "noImplicitAny": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "target": "ESNext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "es6",
     "allowJs": true,
     "resolveJsonModule": true,
     "isolatedModules": true
