@@ -1,7 +1,7 @@
 {
   "name": "@cosmoau/ui",
   "description": "A library of UI components used to enforce consistency across every product at Cosmo and make development easier.",
-  "version": "1.2.12",
+  "version": "1.2.13",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "bugs": {
@@ -16,7 +16,7 @@
     "@types/node": "^18.11.17",
     "@types/react": "^18.0.26",
     "eslint": "8.30.0",
-    "eslint-config-dolmios": "^1.3.5",
+    "eslint-config-dolmios": "^1.3.6",
     "eslint-config-next": "^13.1.0",
     "next": "^13.1.0",
     "parcel": "^2.8.2",

@@ -1,9 +1,8 @@
 {
   "include": ["src"],
-  "extends": "eslint-config-dolmios/configs/tsconfig/lib/index",
+  "extends": "eslint-config-dolmios/configs/lib/tsconfig",
   "compilerOptions": {
     "rootDir": "./src",
-    "outDir": "./dist/esm",
-    "experimentalDecorators": true
+    "outDir": "./dist/esm"
   }
 }
