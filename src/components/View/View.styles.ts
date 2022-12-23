@@ -1,41 +1,52 @@
-import { breakpoints, styled } from '../../stitches.config';
+import { breakpoints, styled } from "../../stitches.config";
 
-export const ViewStyled = styled('section', {
-  boxSizing: 'border-box',
-  paddingLeft: '$2',
-  paddingRight: '$2',
-  position: 'relative',
-  width: '100%',
+export const ViewStyled = styled("section", {
+  boxSizing: "border-box",
+  paddingLeft: "$2",
+  paddingRight: "$2",
+  position: "relative",
+  variants: {
+    soft: {
+      false: {
+        backgroundColor: "$background",
+      },
+      true: {
+        backgroundColor: "$soft",
+      },
+    },
+  },
+
+  width: "100%",
 });
 
-export const ViewContainerStyled = styled('div', {
-  position: 'relative',
+export const ViewContainerStyled = styled("div", {
+  position: "relative",
 
   variants: {
     container: {
       false: {
-        minWidth: '100%',
+        minWidth: "100%",
       },
       true: {
-        margin: 'auto',
+        margin: "auto",
 
         [breakpoints.phone]: {
-          width: '96%',
+          width: "96%",
         },
         [breakpoints.tabletX]: {
-          width: '96%',
+          width: "96%",
         },
         [breakpoints.laptopX]: {
-          maxWidth: '1440px',
-          width: '94%',
+          maxWidth: "1440px",
+          width: "94%",
         },
         [breakpoints.desktopX]: {
-          maxWidth: '1660px',
-          width: '92%',
+          maxWidth: "1660px",
+          width: "92%",
         },
         [breakpoints.wide]: {
-          maxWidth: '1950px',
-          width: '90%',
+          maxWidth: "1950px",
+          width: "90%",
         },
       },
     },

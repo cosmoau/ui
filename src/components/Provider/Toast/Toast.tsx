@@ -1,8 +1,8 @@
-import { ComponentType, ElementType } from 'react';
-import toast, { Toaster, useToaster } from 'react-hot-toast';
-import { useEventListener } from 'usehooks-ts';
+import { ComponentType, ElementType } from "react";
+import toast, { Toaster, useToaster } from "react-hot-toast";
+import { useEventListener } from "usehooks-ts";
 
-import { ToastContainerStyled, ToastStyled } from './Toast.styles';
+import { ToastContainerStyled, ToastStyled } from "./Toast.styles";
 
 type InferComponentProps<T extends ElementType> = T extends ComponentType<infer U>
   ? U
@@ -16,8 +16,8 @@ export default function Toast(props: ToasterProps): JSX.Element {
   const { toasts, handlers } = useToaster();
   const { startPause, endPause } = handlers;
 
-  useEventListener('keydown', (e: KeyboardEvent) => {
-    if (e.key === 'Escape') {
+  useEventListener("keydown", (e: KeyboardEvent) => {
+    if (e.key === "Escape") {
       toast.dismiss();
     }
   });

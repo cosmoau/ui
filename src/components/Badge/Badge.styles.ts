@@ -1,141 +1,137 @@
-import { styled, keyframes, fadeOut } from '../../stitches.config';
-import { TextSizes } from '../Text/Text.styles';
+import { styled, keyframes, fadeOut } from "../../stitches.config";
+import { TextSizes } from "../Text/Text.styles";
 
 const pulse = keyframes({
-  '0%': {
+  "0%": {
     opacity: 0.5,
-    transform: 'scale(0.95)',
+    transform: "scale(0.95)",
   },
-  '100%': {
+  "100%": {
     opacity: 0.5,
-    transform: 'scale(0.95)',
+    transform: "scale(0.95)",
   },
-  '50%': {
+  "50%": {
     opacity: 1,
-    transform: 'scale(1)',
+    transform: "scale(1)",
   },
 });
 
-export const BadgeStyled = styled('div', {
-  alignItems: 'center',
-  borderRadius: '$3',
-  display: 'inline-flex',
-  justifyContent: 'center',
-  padding: '$1 $4',
+export const BadgeStyled = styled("div", {
+  alignItems: "center",
+  borderRadius: "$3",
+  display: "inline-flex",
+  justifyContent: "center",
+  padding: "$1 $4",
   ...TextSizes.p,
-  marginBottom: '0 !important',
+  marginBottom: "0 !important",
 
   svg: {
-    height: '1.8rem',
-    marginTop: '-0.25rem',
-    width: '1.8rem',
+    marginTop: "-0.25rem",
   },
   variants: {
     animation: {
       true: {
         animation: `${fadeOut} .2s linear`,
-        animationFillMode: 'forwards',
+        animationFillMode: "forwards",
       },
     },
     theme: {
       blue: {
-        backgroundColor: '$blueOverlay',
-        color: '$blueText',
+        backgroundColor: "$blueOverlay",
+        color: "$blueText",
       },
       border: {
-        border: '0.1rem solid $border',
-        color: '$text',
+        border: "0.1rem solid $border",
+        color: "$text",
       },
       default: {
-        backgroundColor: '$default',
-        color: '$text',
+        backgroundColor: "$default",
+        color: "$text",
       },
       green: {
-        backgroundColor: '$greenOverlay',
-        color: '$greenText',
+        backgroundColor: "$greenOverlay",
+        color: "$greenText",
       },
       orange: {
-        backgroundColor: '$orangeOverlay',
-        color: '$orangeText',
+        backgroundColor: "$orangeOverlay",
+        color: "$orangeText",
       },
       pink: {
-        backgroundColor: '$pinkOverlay',
-        color: '$pinkText',
+        backgroundColor: "$pinkOverlay",
+        color: "$pinkText",
       },
       purple: {
-        backgroundColor: '$purpleOverlay',
-        color: '$purpleText',
+        backgroundColor: "$purpleOverlay",
+        color: "$purpleText",
       },
       red: {
-        backgroundColor: '$redOverlay',
-        color: '$redText',
+        backgroundColor: "$redOverlay",
+        color: "$redText",
       },
     },
   },
 
-  verticalAlign: 'middle',
+  verticalAlign: "middle",
 });
 
-export const BadgeIconStyled = styled('span', {
-  display: 'inline',
+export const BadgeIconStyled = styled("span", {
+  display: "inline",
   variants: {
     align: {
       left: {
-        marginRight: '$3',
+        marginRight: "$3",
       },
       right: {
-        marginLeft: '$3',
+        marginLeft: "$3",
       },
     },
   },
-  verticalAlign: 'middle',
+  verticalAlign: "middle",
 });
 
-export const BadgeLoadingStyled = styled('span', {
-  display: 'inline',
+export const BadgeLoadingStyled = styled("span", {
+  display: "inline",
   svg: {
-    marginTop: '-0.4rem',
-    verticalAlign: 'middle',
+    marginTop: "-0.4rem",
   },
-  verticalAlign: 'middle',
+  verticalAlign: "middle",
 });
 
-export const BadgeDotStyled = styled('span', {
-  display: 'inline',
-  paddingRight: '$2',
+export const BadgeDotStyled = styled("span", {
+  display: "inline",
+  paddingRight: "$2",
 
   svg: {
-    height: '1rem',
-    marginTop: '-0.2rem',
-    verticalAlign: 'middle',
-    width: '1rem',
+    height: "1rem",
+    marginTop: "-0.2rem",
+    width: "1rem",
   },
 
   variants: {
     dotColor: {
       blue: {
-        color: '$blueText',
+        color: "$blueText",
       },
       border: {
-        color: '$border',
+        color: "$border",
       },
       default: {
-        color: '$text',
+        color: "$text",
       },
       green: {
-        color: '$greenText',
+        color: "$greenText",
       },
       orange: {
-        color: '$orangeText',
+        color: "$orangeText",
       },
       pink: {
-        color: '$pinkText',
+        color: "$pinkText",
       },
       purple: {
-        color: '$purpleText',
+        color: "$purpleText",
       },
       red: {
-        color: '$redText',
+        color: "$redText",
       },
     },
     pulse: {
@@ -144,7 +140,7 @@ export const BadgeDotStyled = styled('span', {
       },
     },
   },
-  verticalAlign: 'middle',
+  verticalAlign: "middle",
 });
 
 export default BadgeStyled;

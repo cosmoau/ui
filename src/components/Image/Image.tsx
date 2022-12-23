@@ -1,15 +1,15 @@
-import { CSSProperties } from '@stitches/react';
-import { default as NextImage, ImageProps } from 'next/image';
+import { CSSProperties } from "@stitches/react";
+import { default as NextImage, ImageProps } from "next/image";
 
-import { DefaultProps } from '../../stitches.config';
+import { DefaultProps } from "../../stitches.config";
 
-import { ImageStyled } from './Image.styles';
+import { ImageStyled } from "./Image.styles";
 
 interface Props extends DefaultProps, ImageProps {
   borderRadius?: 1 | 2 | 3;
   hover?: boolean;
-  fillFit?: CSSProperties['objectFit'];
-  fillPosition?: CSSProperties['objectPosition'];
+  fillFit?: CSSProperties["objectFit"];
+  fillPosition?: CSSProperties["objectPosition"];
   fillHeight?: string | number;
   fill?: boolean;
 }
@@ -19,27 +19,27 @@ export default function Image(props: Props): JSX.Element {
   return (
     <ImageStyled
       css={{
-        borderRadius: borderRadius ? '$' + borderRadius : undefined,
+        borderRadius: borderRadius ? "$" + borderRadius : undefined,
         img: {
-          borderRadius: borderRadius ? '$' + borderRadius : undefined,
-          objectFit: fillFit || 'contain',
-          objectPosition: fillPosition || 'center',
+          borderRadius: borderRadius ? "$" + borderRadius : undefined,
+          objectFit: fillFit || "contain",
+          objectPosition: fillPosition || "center",
         },
         ...(hover && {
-          '&:hover': {
+          "&:hover": {
             opacity: 0.9,
           },
         }),
-        height: fillHeight || '100%',
+        height: fillHeight || "100%",
         ...css,
       }}>
       <NextImage
         {...rest}
         fill={fill}
         style={{
-          borderRadius: borderRadius ? '$' + borderRadius : undefined,
-          objectFit: fillFit || 'cover',
-          objectPosition: fillPosition || 'center',
+          borderRadius: borderRadius ? "$" + borderRadius : undefined,
+          objectFit: fillFit || "cover",
+          objectPosition: fillPosition || "center",
         }}
       />
     </ImageStyled>

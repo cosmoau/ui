@@ -1,86 +1,83 @@
-import { styled } from '../../stitches.config';
+import { styled } from "../../stitches.config";
 
-export const FieldStyled = styled('div', {
-  '&:focus-within': {
-    boxShadow: '$1',
+export const FieldStyled = styled("div", {
+  "&:focus-within": {
+    boxShadow: "$1",
   },
-  '&:hover': {
-    boxShadow: '$1',
+  "&:hover": {
+    boxShadow: "$1",
   },
-  '*': {
-    verticalAlign: 'middle',
+  "*": {
+    verticalAlign: "middle",
   },
-  'alignContent': 'center',
-  'alignSelf': 'center',
-  'borderRadius': '$1',
+  alignContent: "center",
+  alignSelf: "center",
+  borderRadius: "$1",
 
-  'justifyContent': 'center',
+  justifyContent: "center",
 
-  'position': 'relative',
-  'transition': '$default',
-  'variants': {
+  position: "relative",
+  transition: "$default",
+  variants: {
     disabled: {
       true: {
-        cursor: 'not-allowed',
-        opacity: '0.7',
+        cursor: "not-allowed",
+        opacity: "0.7",
       },
     },
     state: {
       default: {
-        border: '0.1rem solid $border',
+        border: "0.1rem solid $border",
       },
       error: {
-        border: '0.2rem solid $redOverlay',
+        border: "0.2rem solid $redOverlay",
       },
       success: {
-        border: '0.2rem solid $greenOverlay',
+        border: "0.2rem solid $greenOverlay",
       },
       warning: {
-        border: '0.2rem solid $orangeOverlay',
+        border: "0.2rem solid $orangeOverlay",
       },
     },
   },
-  'width': '100%',
+  width: "100%",
 });
 
-export const FieldAreaStyled = styled('textarea', {
-  '&:after': {
-    clear: 'both',
+export const FieldAreaStyled = styled("textarea", {
+  "&:after": {
+    clear: "both",
     content: '""',
   },
-  '&:focus': {
-    outline: 'none',
+  "&:focus": {
+    outline: "none",
   },
-  'appearance': 'none',
-  'backgroundColor': 'transparent',
-  'border': 'none',
-  'color': '$text',
-  'display': 'block',
-  'fontFamily': '$default',
-  'fontSize': '16px',
-  'margin': '0 auto',
-  'padding': '$3 $4',
-  'width': '100%',
+  appearance: "none",
+  backgroundColor: "transparent",
+  border: "none",
+  color: "$text",
+  display: "block",
+  fontFamily: "$default",
+  fontSize: "16px",
+  margin: "0 auto",
+  padding: "$3 $4",
+  width: "100%",
 });
 
-export const FieldFunctionStyled = styled('div', {
-  borderBottom: '0.1rem solid $border',
+export const FieldFunctionStyled = styled("div", {
+  borderBottom: "0.1rem solid $border",
   button: {
-    marginLeft: '$2',
-    paddingBottom: '$1',
-    paddingLeft: '$3',
-    paddingRight: '$3',
-    paddingTop: '$1',
+    marginLeft: "$2",
+    paddingBottom: "$1",
+    paddingLeft: "$3",
+    paddingRight: "$3",
+    paddingTop: "$1",
   },
-  height: '100%',
-  padding: '$2 $4',
-  position: 'relative',
+  height: "100%",
+  padding: "$2 $4",
+  position: "relative",
   svg: {
-    height: '1.8rem',
-    marginTop: '-0.1rem',
-    verticalAlign: 'middle',
-    width: '1.8rem',
+    marginTop: "-0.1rem",
   },
-  verticalAlign: 'middle',
-  width: '100%',
+  verticalAlign: "middle",
+  width: "100%",
 });

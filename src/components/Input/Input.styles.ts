@@ -1,91 +1,98 @@
-import { styled } from '../../stitches.config';
+import { styled } from "../../stitches.config";
 
-export const InputStyled = styled('div', {
-  position: 'relative',
+export const InputStyled = styled("div", {
+  position: "relative",
 });
-export const InputCoreStyled = styled('div', {
-  '&:focus-within': {
-    boxShadow: '$1',
+export const InputCoreStyled = styled("div", {
+  "&:focus-within": {
+    boxShadow: "$1",
   },
-  '&:hover': {
-    boxShadow: '$2',
+  "&:hover": {
+    boxShadow: "$2",
   },
-  '*': {
-    verticalAlign: 'middle',
+  "*": {
+    verticalAlign: "middle",
   },
-  'alignContent': 'center',
-  'alignSelf': 'center',
-  'borderRadius': '$1',
-  'boxShadow': '$1',
-  'display': 'inline-flex',
-  'justifyContent': 'center',
-  'padding': '$2 $4',
-  'position': 'relative',
-  'transition': '$default',
-  'variants': {
+  alignContent: "center",
+  alignSelf: "center",
+  borderRadius: "$1",
+  boxShadow: "$1",
+  display: "inline-flex",
+  justifyContent: "center",
+  padding: "$2 $4",
+  position: "relative",
+  transition: "$default",
+  variants: {
     disabled: {
       true: {
-        cursor: 'not-allowed',
-        opacity: '0.7',
+        cursor: "not-allowed",
+        opacity: "0.7",
       },
     },
     state: {
       default: {
-        border: '0.1rem solid $border',
+        border: "0.1rem solid $border",
       },
       error: {
-        border: '0.1rem solid $redOverlay',
+        border: "0.1rem solid $redOverlay",
       },
       success: {
-        border: '0.1rem solid $greenOverlay',
+        border: "0.1rem solid $greenOverlay",
       },
       warning: {
-        border: '0.1rem solid $orangeOverlay',
+        border: "0.1rem solid $orangeOverlay",
       },
     },
   },
-  'width': '100%',
+  width: "100%",
 });
 
-export const InputAreaStyled = styled('input', {
-  '&::placeholder': {
-    color: '$text',
-    fontSize: '16px',
-    opacity: '0.5',
+export const InputAreaStyled = styled("input", {
+  "&::placeholder": {
+    color: "$text",
+    fontSize: "16px",
+    opacity: "0.5",
   },
 
-  '&:focus': {
-    outline: 'none',
+  "&:focus": {
+    outline: "none",
   },
-  'appearance': 'none',
-  'backgroundColor': 'transparent',
-  'border': 'none',
-  'color': '$text',
-  'fontFamily': '$default',
-  'fontSize': '$p',
-  'letterSpacing': '0',
-  'margin': '0',
-  'minHeight': '2.4rem',
-  'outline': 'none',
-  'padding': '0',
-  'textAlign': 'left',
-  'transition': '$default',
-  'width': '100%',
+  appearance: "none",
+  backgroundColor: "transparent",
+  border: "none",
+  color: "$text",
+  fontFamily: "$default",
+  fontSize: "$p",
+  letterSpacing: "0",
+  margin: "0",
+  minHeight: "2.4rem",
+  outline: "none",
+  padding: "0",
+  textAlign: "left",
+  transition: "$default",
+  width: "100%",
 });
 
-export const InputFunctionStyled = styled('div', {
-  display: 'inline-flex',
-  height: '100%',
-  marginLeft: '$3',
-  position: 'relative',
+export const InputFunctionStyled = styled("div", {
+  display: "inline-flex",
+  height: "100%",
+  marginLeft: "$3",
+  position: "relative",
 
-  verticalAlign: 'middle',
-  width: 'auto',
+  verticalAlign: "middle",
+  width: "auto",
 });
 
-export const InputCallbackStyled = styled('div', {
-  display: 'block',
-  paddingTop: '$2',
+export const InputIconStyled = styled("div", {
+  display: "inline-block",
+  height: "100%",
+  marginRight: "$3",
+  paddingRight: "$3",
+});
+
+export const InputCallbackStyled = styled("div", {
+  display: "block",
+  paddingTop: "$2",
 });
 
 export default InputStyled;

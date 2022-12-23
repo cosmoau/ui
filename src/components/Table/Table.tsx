@@ -1,7 +1,7 @@
-import { FunnelSimple, SortAscending, SortDescending } from 'phosphor-react';
-import { ReactNode, useState } from 'react';
+import { FunnelSimple, SortAscending, SortDescending } from "phosphor-react";
+import { ReactNode, useState } from "react";
 
-import { Button } from '../../index';
+import { Button } from "../../index";
 
 import {
   TableBodyStyled,
@@ -10,7 +10,7 @@ import {
   TableHeadStyled,
   TableRowStyled,
   TableStyled,
-} from './Table.styles';
+} from "./Table.styles";
 
 interface Props {
   headChildren?: Array<string>;
@@ -21,14 +21,14 @@ interface Props {
 
 export default function Table(props: Props): JSX.Element {
   const [sortBy, setSortBy] = useState(0);
-  const [sortDirection, setSortDirection] = useState('asc');
+  const [sortDirection, setSortDirection] = useState("asc");
 
   function handleSort(index: number): void {
     if (sortBy === index) {
-      setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
+      setSortDirection(sortDirection === "asc" ? "desc" : "asc");
     } else {
       setSortBy(index);
-      setSortDirection('asc');
+      setSortDirection("asc");
     }
   }
 
@@ -36,12 +36,12 @@ export default function Table(props: Props): JSX.Element {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     if (a[sortBy] < b[sortBy]) {
-      return sortDirection === 'asc' ? -1 : 1;
+      return sortDirection === "asc" ? -1 : 1;
     }
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     if (a[sortBy] > b[sortBy]) {
-      return sortDirection === 'asc' ? 1 : -1;
+      return sortDirection === "asc" ? 1 : -1;
     }
 
     return 0;
@@ -65,7 +65,7 @@ export default function Table(props: Props): JSX.Element {
               ) : (
                 <TableHeadCellStyled key={index} onClick={(): void => handleSort(index)}>
                   <Button
-                    ariaLabel='Sort'
+                    ariaLabel="Sort"
                     block
                     css={{
                       svg: {
@@ -74,7 +74,7 @@ export default function Table(props: Props): JSX.Element {
                     }}
                     icon={
                       sortBy === index ? (
-                        sortDirection === 'asc' ? (
+                        sortDirection === "asc" ? (
                           <SortAscending />
                         ) : (
                           <SortDescending />
@@ -83,9 +83,9 @@ export default function Table(props: Props): JSX.Element {
                         <FunnelSimple />
                       )
                     }
-                    iconPosition='right'
-                    name='sort'
-                    theme={sortBy === index ? 'default' : 'minimal'}>
+                    iconPosition="right"
+                    name="sort"
+                    theme={sortBy === index ? "default" : "minimal"}>
                     {child}
                   </Button>
                 </TableHeadCellStyled>
@@ -109,7 +109,7 @@ export default function Table(props: Props): JSX.Element {
             <TableCellStyled
               colSpan={props.headChildren?.length || 1}
               css={{
-                textAlign: 'left !important',
+                textAlign: "left !important",
               }}>
               No results found.
             </TableCellStyled>

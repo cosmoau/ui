@@ -1,10 +1,10 @@
-import { Check, ClipboardText, Warning } from 'phosphor-react';
-import { TextareaHTMLAttributes, useState } from 'react';
+import { Check, ClipboardText, Warning } from "phosphor-react";
+import { TextareaHTMLAttributes, useState } from "react";
 
-import { Button, Badge, Loading } from '../../index';
-import { DefaultProps } from '../../stitches.config';
+import { Button, Badge, Loading } from "../../index";
+import { DefaultProps } from "../../stitches.config";
 
-import { FieldStyled, FieldAreaStyled, FieldFunctionStyled } from './Field.styles';
+import { FieldStyled, FieldAreaStyled, FieldFunctionStyled } from "./Field.styles";
 
 interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement>, DefaultProps {
   copy?: boolean;
@@ -25,7 +25,7 @@ interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement>, DefaultProp
 }
 
 export default function Field(props: Props): JSX.Element {
-  const [value, setValue] = useState(props.value || '');
+  const [value, setValue] = useState(props.value || "");
   const [isCopied, setIsCopied] = useState(false);
 
   function handleChange(e: React.ChangeEvent<HTMLTextAreaElement>): void {
@@ -48,11 +48,13 @@ export default function Field(props: Props): JSX.Element {
   return (
     <FieldStyled
       css={{
-        maxWidth: props.width || '80%',
-        width: props.width || '80%',
+        maxWidth: props.width || "80%",
+        width: props.width || "80%",
       }}
       disabled={props.disabled}
-      state={props.success ? 'success' : props.warning ? 'warning' : props.error ? 'error' : 'default'}>
+      state={
+        props.success ? "success" : props.warning ? "warning" : props.error ? "error" : "default"
+      }>
       {(props.error ||
         props.success ||
         props.warning ||
@@ -62,18 +64,18 @@ export default function Field(props: Props): JSX.Element {
         props.reveal) && (
         <FieldFunctionStyled>
           {props.error && (
-            <Badge icon={<Warning weight='duotone' />} theme='red'>
-              {props.errorMessage || 'Error'}
+            <Badge icon={<Warning weight="duotone" />} theme="red">
+              {props.errorMessage || "Error"}
             </Badge>
           )}
           {props.success && (
-            <Badge icon={<Check weight='duotone' />} theme='green'>
-              {props.successMessage || 'Success'}
+            <Badge icon={<Check weight="duotone" />} theme="green">
+              {props.successMessage || "Success"}
             </Badge>
           )}
           {props.warning && (
-            <Badge icon={<Warning weight='duotone' />} theme='orange'>
-              {props.warningMessage || 'Warning'}
+            <Badge icon={<Warning weight="duotone" />} theme="orange">
+              {props.warningMessage || "Warning"}
             </Badge>
           )}
           {props.loading && (
@@ -83,9 +85,15 @@ export default function Field(props: Props): JSX.Element {
           )}
           {props.copy && (
             <Button
-              ariaLabel='Copy'
-              icon={isCopied ? <ClipboardText opacity={0.5} weight='duotone' /> : <ClipboardText weight='duotone' />}
-              name='copy'
+              ariaLabel="Copy"
+              icon={
+                isCopied ? (
+                  <ClipboardText opacity={0.5} weight="duotone" />
+                ) : (
+                  <ClipboardText weight="duotone" />
+                )
+              }
+              name="copy"
               onClick={handleCopy}>
               Copy
             </Button>
@@ -93,9 +101,9 @@ export default function Field(props: Props): JSX.Element {
 
           {props.submit && props.submitFunction && (
             <Button
-              ariaLabel='Submit'
+              ariaLabel="Submit"
               disabled={!props.submitValid}
-              name='submit'
+              name="submit"
               onClick={(): void => props.submitFunction(value)}>
               {props.submit}
             </Button>

@@ -1,7 +1,0 @@
-{
-  "extends": ["dolmios", "next/core-web-vitals"],
-  "rules": {
-    "react/jsx-sort-props": "error",
-    "@next/next/no-html-link-for-pages": "off"
-  }
-}

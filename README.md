@@ -1,24 +1,28 @@
 # @cosmoau/ui
 
-> An internal component library for creating user interfaces and enforcing consistency across every product at Cosmo.
+> A library of UI components used to enforce consistency across every product at Cosmo and make development easier.
 
 ## Install
 
-```
+```sh
 pnpm install
 ```
+
+## Demo
+
+You can find a demo of the components in the demo CodeSandbox [here](https://codesandbox.io/s/cosmo-ui-demo-3x7xu).
 
 ## Usage
 
 To work on components in the browser, use Parcel. Run the development server and head to [http://localhost:420](http://localhost:420) in the browser.
 
-```
+```sh
 pnpm dev
 ```
 
 Before you deploy, lint your code and format it. Then run the build to compile the code with `TSC`.
 
-```
+```sh
 pnpm tidy
 pnpm build
 ```

@@ -1,9 +1,9 @@
-import { Check, ClipboardText, Warning, Eye, EyeClosed } from 'phosphor-react';
-import { InputHTMLAttributes, useState } from 'react';
-import { useEventListener } from 'usehooks-ts';
+import { Check, ClipboardText, Warning, Eye, EyeClosed } from "phosphor-react";
+import { InputHTMLAttributes, RefObject, useState } from "react";
+import { useEventListener } from "usehooks-ts";
 
-import { Button, Badge, Loading } from '../../index';
-import { DefaultProps } from '../../stitches.config';
+import { Button, Badge, Loading } from "../../index";
+import { DefaultProps } from "../../stitches.config";
 
 import {
   InputAreaStyled,
@@ -11,7 +11,8 @@ import {
   InputFunctionStyled,
   InputStyled,
   InputCoreStyled,
-} from './Input.styles';
+  InputIconStyled,
+} from "./Input.styles";
 
 interface Props extends InputHTMLAttributes<HTMLInputElement>, DefaultProps {
   copy?: boolean;
@@ -20,8 +21,8 @@ interface Props extends InputHTMLAttributes<HTMLInputElement>, DefaultProps {
   loading?: boolean;
   reveal?: boolean;
   submit?: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  submitFunction?: any;
+  icon?: JSX.Element;
+  submitFunction?: (value: string | number | unknown) => void;
   submitValid?: boolean;
   success?: boolean;
   successMessage?: string;
@@ -30,12 +31,11 @@ interface Props extends InputHTMLAttributes<HTMLInputElement>, DefaultProps {
   disabled?: boolean;
   width?: number | string;
   listen?: boolean;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  mustRef?: any;
+  mustRef?: RefObject<HTMLInputElement>;
 }
 
 export default function Input(props: Props): JSX.Element {
-  const [value, setValue] = useState(props.value || '');
+  const [value, setValue] = useState(props.value || "");
   const [isCopied, setIsCopied] = useState(false);
   const [isRevealed, setIsRevealed] = useState(false);
 
@@ -62,28 +62,31 @@ export default function Input(props: Props): JSX.Element {
 
   // event listener
 
-  useEventListener('keydown', (e: KeyboardEvent) => {
-    if (props.listen && e.key === 'Enter' && props.submitFunction && props.submitValid) {
-      props.submitFunction();
+  useEventListener("keydown", (e: KeyboardEvent) => {
+    if (props.listen && e.key === "Enter" && props.submitFunction && props.submitValid) {
+      props.submitFunction(value || "");
     }
   });
 
   return (
     <InputStyled
       css={{
-        maxWidth: props.width || '100%',
-        width: props.width || '100%',
+        maxWidth: props.width || "100%",
+        width: props.width || "100%",
       }}>
       <InputCoreStyled
         disabled={props.disabled}
-        state={props.success ? 'success' : props.warning ? 'warning' : props.error ? 'error' : 'default'}>
+        state={
+          props.success ? "success" : props.warning ? "warning" : props.error ? "error" : "default"
+        }>
+        {props.icon && <InputIconStyled>{props.icon}</InputIconStyled>}
         <InputAreaStyled
           css={props.css}
           disabled={props.disabled}
           onChange={handleChange}
           placeholder={props.placeholder}
           ref={props.mustRef || undefined}
-          type={isRevealed ? 'text' : props.type || 'text'}
+          type={isRevealed ? "text" : props.type || "text"}
           value={value}
         />
         {(props.loading || props.submit || props.copy || props.reveal) && (
@@ -91,12 +94,18 @@ export default function Input(props: Props): JSX.Element {
             {props.loading && <Loading />}
             {props.copy && (
               <Button
-                ariaLabel='Copy'
+                ariaLabel="Copy"
                 css={{
-                  marginLeft: '$2',
+                  marginLeft: "$2",
                 }}
-                icon={isCopied ? <ClipboardText opacity={0.5} weight='duotone' /> : <ClipboardText weight='duotone' />}
-                name='copy'
+                icon={
+                  isCopied ? (
+                    <ClipboardText opacity={0.5} weight="duotone" />
+                  ) : (
+                    <ClipboardText weight="duotone" />
+                  )
+                }
+                name="copy"
                 onClick={handleCopy}
                 small>
                 Copy
@@ -104,27 +113,30 @@ export default function Input(props: Props): JSX.Element {
             )}
             {props.reveal && (
               <Button
-                ariaLabel='Reveal'
+                ariaLabel="Reveal"
                 css={{
-                  marginLeft: '$2',
+                  marginLeft: "$2",
                 }}
-                icon={!isRevealed ? <Eye weight='duotone' /> : <EyeClosed weight='duotone' />}
-                name='reveal'
+                icon={!isRevealed ? <Eye weight="duotone" /> : <EyeClosed weight="duotone" />}
+                name="reveal"
                 onClick={handleReveal}
                 small>
-                {isRevealed ? 'Hide' : 'Show'}
+                {isRevealed ? "Hide" : "Show"}
               </Button>
             )}
 
-            {props.submit && props.submitFunction && (
+            {props.submit && (
               <Button
-                ariaLabel='Submit'
+                ariaLabel="Submit"
                 css={{
-                  marginLeft: '$2',
+                  marginLeft: "$2",
                 }}
                 disabled={!props.submitValid}
-                name='submit'
-                onClick={(): void => props.submitFunction(value)}
+                name="submit"
+                onClick={(value): void => {
+                  if (!props.submitFunction) return;
+                  props.submitFunction(value);
+                }}
                 small>
                 {props.submit}
               </Button>
@@ -136,34 +148,34 @@ export default function Input(props: Props): JSX.Element {
         {props.error && !props.success && !props.warning && (
           <Badge
             css={{
-              backgroundColor: 'transparent',
+              backgroundColor: "transparent",
               padding: 0,
             }}
-            icon={<Warning weight='duotone' />}
-            theme='red'>
-            {props.errorMessage || 'Error'}
+            icon={<Warning weight="duotone" />}
+            theme="red">
+            {props.errorMessage || "Error"}
           </Badge>
         )}
         {props.success && !props.error && !props.warning && (
           <Badge
             css={{
-              backgroundColor: 'transparent',
+              backgroundColor: "transparent",
               padding: 0,
             }}
-            icon={<Check weight='duotone' />}
-            theme='green'>
-            {props.successMessage || 'Success'}
+            icon={<Check weight="duotone" />}
+            theme="green">
+            {props.successMessage || "Success"}
           </Badge>
         )}
         {props.warning && !props.success && !props.error && (
           <Badge
             css={{
-              backgroundColor: 'transparent',
+              backgroundColor: "transparent",
               padding: 0,
             }}
-            icon={<Warning weight='duotone' />}
-            theme='orange'>
-            {props.warningMessage || 'Invalid'}
+            icon={<Warning weight="duotone" />}
+            theme="orange">
+            {props.warningMessage || "Invalid"}
           </Badge>
         )}
       </InputCallbackStyled>

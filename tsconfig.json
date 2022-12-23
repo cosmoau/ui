@@ -1,29 +1,9 @@
 {
   "include": ["src"],
+  "extends": "eslint-config-dolmios/configs/tsconfig/lib/index",
   "compilerOptions": {
-    "module": "ESNext",
-    "importHelpers": true,
-    "declaration": true,
-    "sourceMap": true,
     "rootDir": "./src",
     "outDir": "./dist/esm",
-    "strict": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowSyntheticDefaultImports": true,
-    "jsx": "react-jsx",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "target": "ESNext",
-    "allowJs": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "emitDecoratorMetadata": true,
     "experimentalDecorators": true
   }
 }

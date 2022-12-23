@@ -1,21 +1,21 @@
-import { Circle, X } from 'phosphor-react';
-import { MouseEventHandler, ReactNode, useState } from 'react';
+import { Circle, X } from "phosphor-react";
+import { MouseEventHandler, ReactNode, useState } from "react";
 
-import { Loading } from '../../index';
-import { DefaultProps } from '../../stitches.config';
+import { Loading } from "../../index";
+import { DefaultProps } from "../../stitches.config";
 
-import { BadgeIconStyled, BadgeStyled, BadgeDotStyled, BadgeLoadingStyled } from './Badge.styles';
+import { BadgeIconStyled, BadgeStyled, BadgeDotStyled, BadgeLoadingStyled } from "./Badge.styles";
 
-interface Props extends Omit<DefaultProps, 'spacing'> {
+interface Props extends Omit<DefaultProps, "spacing"> {
   children: ReactNode;
   loading?: boolean;
-  theme?: 'red' | 'orange' | 'pink' | 'purple' | 'blue' | 'green' | 'border';
+  theme?: "red" | "orange" | "pink" | "purple" | "blue" | "green" | "border";
   onClick?: MouseEventHandler<HTMLDivElement>;
   icon?: ReactNode;
-  iconPosition?: 'left' | 'right';
-  inline?: DefaultProps['spacing'] | 'auto';
-  dot?: boolean | 'pulse';
-  dotColor?: 'red' | 'orange' | 'pink' | 'purple' | 'blue' | 'green' | 'border';
+  iconPosition?: "left" | "right";
+  inline?: DefaultProps["spacing"] | "auto";
+  dot?: boolean | "pulse";
+  dotColor?: "red" | "orange" | "pink" | "purple" | "blue" | "green" | "border";
   closable?: boolean;
   block?: boolean;
 }
@@ -36,24 +36,24 @@ export default function Badge(props: Props): JSX.Element {
       animation={!isOpen}
       css={{
         ...(props.inline && {
-          display: 'inline-flex',
-          marginRight: props.inline === 'auto' ? 'auto' : `$${props.inline}`,
-          verticalAlign: 'middle',
+          display: "inline-flex",
+          marginRight: props.inline === "auto" ? "auto" : `$${props.inline}`,
+          verticalAlign: "middle",
         }),
         ...(props.block && {
-          justifyContent: 'initial',
-          width: '100%',
+          justifyContent: "initial",
+          width: "100%",
         }),
         ...props.css,
       }}
       onClick={props.onClick}
-      theme={props.theme || 'default'}>
-      {props.icon && (props.iconPosition === 'left' || !props.iconPosition) && (
-        <BadgeIconStyled align='left'>{props.icon}</BadgeIconStyled>
+      theme={props.theme || "default"}>
+      {props.icon && (props.iconPosition === "left" || !props.iconPosition) && (
+        <BadgeIconStyled align="left">{props.icon}</BadgeIconStyled>
       )}
       {props.dot && (
-        <BadgeDotStyled dotColor={props.dotColor || 'default'} pulse={props.dot === 'pulse'}>
-          <Circle weight='fill' />
+        <BadgeDotStyled dotColor={props.dotColor || "default"} pulse={props.dot === "pulse"}>
+          <Circle weight="fill" />
         </BadgeDotStyled>
       )}
       {props.loading ? (
@@ -63,12 +63,12 @@ export default function Badge(props: Props): JSX.Element {
       ) : (
         props.children
       )}
-      {props.icon && props.iconPosition === 'right' && !props.closable && (
-        <BadgeIconStyled align='right'>{props.icon}</BadgeIconStyled>
+      {props.icon && props.iconPosition === "right" && !props.closable && (
+        <BadgeIconStyled align="right">{props.icon}</BadgeIconStyled>
       )}
       {props.closable && (
-        <BadgeIconStyled align='right' onClick={(): void => handleClose()}>
-          <X style={{ cursor: 'pointer', opacity: 0.7 }} weight='fill' />
+        <BadgeIconStyled align="right" onClick={(): void => handleClose()}>
+          <X style={{ cursor: "pointer", opacity: 0.7 }} weight="fill" />
         </BadgeIconStyled>
       )}
     </BadgeStyled>

@@ -1,7 +1,7 @@
-import { Image } from '../../index';
-import { DefaultProps } from '../../stitches.config';
+import { Image } from "../../index";
+import { DefaultProps } from "../../stitches.config";
 
-import { AvatarFallbackStyled, AvatarImageStyled, AvatarStyled } from './Avatar.styles';
+import { AvatarFallbackStyled, AvatarImageStyled, AvatarStyled } from "./Avatar.styles";
 
 interface Props extends DefaultProps {
   src?: string;
@@ -12,7 +12,7 @@ interface Props extends DefaultProps {
 
 export default function Avatar(props: Props): JSX.Element {
   if (props.fallback.length > 2) {
-    throw new Error('Fallback string should be no more than 2 characters');
+    throw new Error("Fallback string should be no more than 2 characters");
   }
   return (
     <AvatarStyled

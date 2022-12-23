@@ -1,10 +1,10 @@
-import { X } from 'phosphor-react';
-import { ReactNode, useState } from 'react';
+import { X } from "phosphor-react";
+import { ReactNode, useState } from "react";
 
-import { Button, Image } from '../../index';
-import { DefaultProps } from '../../stitches.config';
+import { Button, Image } from "../../index";
+import { DefaultProps } from "../../stitches.config";
 
-import { BoxExitStyled, BoxImageChildrenStyled, BoxStyled } from './Box.styles';
+import { BoxExitStyled, BoxImageChildrenStyled, BoxStyled } from "./Box.styles";
 
 interface Props extends DefaultProps {
   children: ReactNode;
@@ -12,12 +12,12 @@ interface Props extends DefaultProps {
   image?: string;
   imageCTA?: string;
   imageHeight?: string;
-  imageTarget?: '_blank' | '_self';
-  imagePosition?: 'center' | 'top' | 'bottom' | 'left' | 'right';
-  imageFit?: 'contain' | 'cover';
+  imageTarget?: "_blank" | "_self";
+  imagePosition?: "center" | "top" | "bottom" | "left" | "right";
+  imageFit?: "contain" | "cover";
   imageAlt?: string;
   hover?: boolean;
-  theme?: 'default' | 'success' | 'warning' | 'error' | 'transparent' | 'fill';
+  theme?: "default" | "success" | "warning" | "error" | "transparent" | "fill";
   closable?: boolean;
   minimal?: boolean;
 }
@@ -40,44 +40,44 @@ export default function Box(props: Props): JSX.Element {
         css={props.css}
         hover={props.hover}
         loading={props.loading || false}
-        padding={'none'}
-        theme={props.theme || 'default'}>
+        padding={"none"}
+        theme={props.theme || "default"}>
         {props.imageCTA ? (
-          <a href={props.imageCTA} rel='noopener noreferrer' target={props.imageTarget || '_blank'}>
+          <a href={props.imageCTA} rel="noopener noreferrer" target={props.imageTarget || "_blank"}>
             <Image
-              alt={props.imageAlt || ''}
+              alt={props.imageAlt || ""}
               css={{
                 img: {
-                  borderTopLeftRadius: '$2 !important',
-                  borderTopRightRadius: '$2 !important',
+                  borderTopLeftRadius: "$2 !important",
+                  borderTopRightRadius: "$2 !important",
                 },
               }}
               fill
-              fillFit={props.imageFit || 'cover'}
-              fillHeight={props.imageHeight || '20rem'}
-              fillPosition={props.imagePosition || 'center'}
+              fillFit={props.imageFit || "cover"}
+              fillHeight={props.imageHeight || "20rem"}
+              fillPosition={props.imagePosition || "center"}
               hover={props.hover}
               src={props.image}
             />
           </a>
         ) : (
           <Image
-            alt={props.imageAlt || ''}
+            alt={props.imageAlt || ""}
             css={{
               img: {
-                borderTopLeftRadius: '$2 !important',
-                borderTopRightRadius: '$2 !important',
+                borderTopLeftRadius: "$2 !important",
+                borderTopRightRadius: "$2 !important",
               },
             }}
             fill
-            fillFit={props.imageFit || 'cover'}
-            fillHeight={props.imageHeight || '20rem'}
-            fillPosition={props.imagePosition || 'center'}
+            fillFit={props.imageFit || "cover"}
+            fillHeight={props.imageHeight || "20rem"}
+            fillPosition={props.imagePosition || "center"}
             hover={props.hover}
             src={props.image}
           />
         )}
-        <BoxImageChildrenStyled padding={'default'}>{props.children}</BoxImageChildrenStyled>
+        <BoxImageChildrenStyled padding={"default"}>{props.children}</BoxImageChildrenStyled>
       </BoxStyled>
     ) : (
       <BoxStyled
@@ -85,12 +85,12 @@ export default function Box(props: Props): JSX.Element {
         css={props.css}
         hover={props.hover}
         loading={props.loading || false}
-        padding={props.minimal ? 'none' : 'default'}
-        theme={props.theme || 'default'}>
+        padding={props.minimal ? "none" : "default"}
+        theme={props.theme || "default"}>
         {props.children}
         {props.closable && (
           <BoxExitStyled onClick={(): void => handleClose()}>
-            <Button ariaLabel='Close' name='close' small theme={'minimal'}>
+            <Button ariaLabel="Close" name="close" small theme={"minimal"}>
               <X />
             </Button>
           </BoxExitStyled>

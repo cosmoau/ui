@@ -1,9 +1,9 @@
-import { X } from 'phosphor-react';
-import { ReactNode, useRef, useState } from 'react';
-import { useEventListener, useLockedBody, useOnClickOutside } from 'usehooks-ts';
+import { X } from "phosphor-react";
+import { ReactNode, useRef, useState } from "react";
+import { useEventListener, useLockedBody, useOnClickOutside } from "usehooks-ts";
 
-import { Button } from '../../index';
-import { DefaultProps } from '../../stitches.config';
+import { Button } from "../../index";
+import { DefaultProps } from "../../stitches.config";
 
 import {
   DialogContentStyled,
@@ -11,7 +11,7 @@ import {
   DialogOverlayStyled,
   DialogStyled,
   DialogTriggerStyled,
-} from './Dialog.styles';
+} from "./Dialog.styles";
 
 interface Props extends DefaultProps {
   children: ReactNode;
@@ -48,8 +48,8 @@ export default function Dialog(props: Props): JSX.Element {
 
   useOnClickOutside(ref, () => handleClose());
 
-  useEventListener('keydown', (event: KeyboardEvent) => {
-    if (event.key === 'Escape') {
+  useEventListener("keydown", (event: KeyboardEvent) => {
+    if (event.key === "Escape") {
       handleClose();
     }
   });
@@ -63,7 +63,7 @@ export default function Dialog(props: Props): JSX.Element {
         <DialogOverlayStyled animation={isOpen}>
           <DialogContentStyled animation={isOpen} css={props.css} ref={ref}>
             <DialogExitStyled onClick={(): void => handleClose()}>
-              <Button ariaLabel='Close' icon={<X />} name='close' small theme='minimal'>
+              <Button ariaLabel="Close" icon={<X />} name="close" small theme="minimal">
                 Close
               </Button>
             </DialogExitStyled>

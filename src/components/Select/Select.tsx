@@ -1,17 +1,22 @@
-import { ReactNode, useRef, useState } from 'react';
-import { useEventListener, useLockedBody, useOnClickOutside } from 'usehooks-ts';
+import { ReactNode, useRef, useState } from "react";
+import { useEventListener, useLockedBody, useOnClickOutside } from "usehooks-ts";
 
-import { Input, Loading, Stack, Text } from '../../index';
-import { DefaultProps } from '../../stitches.config';
+import { Input, Loading, Stack, Text } from "../../index";
+import { DefaultProps } from "../../stitches.config";
 
-import { SelectStyled, SelectTriggerStyled, SelectGroupStyled, SelectItemStyled } from './Select.styles';
+import {
+  SelectStyled,
+  SelectTriggerStyled,
+  SelectGroupStyled,
+  SelectItemStyled,
+} from "./Select.styles";
 
 interface Props extends DefaultProps {
   options: Array<{
     label: string;
     value: string;
   }>;
-  align?: 'left' | 'right' | 'center';
+  align?: "left" | "right" | "center";
   width?: number | string;
   selection?: string;
   onSelection?: (value: string, label: string) => void;
@@ -27,7 +32,7 @@ export default function Select(props: Props): JSX.Element {
 
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  const [filter, setFilter] = useState('');
+  const [filter, setFilter] = useState("");
 
   function handleClose(): void {
     setIsOpen(false);
@@ -61,15 +66,17 @@ export default function Select(props: Props): JSX.Element {
     value: string;
   }> {
     if (props.filter) {
-      return props.options.filter((option) => option.label.toLowerCase().includes(filter.toLowerCase()));
+      return props.options.filter((option) =>
+        option.label.toLowerCase().includes(filter.toLowerCase())
+      );
     }
     return props.options;
   }
 
   useOnClickOutside(ref, handleClose);
 
-  useEventListener('keydown', (event: KeyboardEvent) => {
-    if (event.key === 'Escape') {
+  useEventListener("keydown", (event: KeyboardEvent) => {
+    if (event.key === "Escape") {
       handleClose();
     }
   });
@@ -78,25 +85,27 @@ export default function Select(props: Props): JSX.Element {
 
   return (
     <SelectStyled css={props.css}>
-      <SelectTriggerStyled key={props.selection || Math.random()} onClickCapture={handleTriggerClick}>
+      <SelectTriggerStyled
+        key={props.selection || Math.random()}
+        onClickCapture={handleTriggerClick}>
         {props.trigger}
       </SelectTriggerStyled>
       {isMounted && (
         <SelectGroupStyled
           animation={isOpen}
           css={{
-            left: props.align === 'left' ? '0' : 'auto',
-            maxWidth: props.width || '30rem',
-            minWidth: props.width || '20rem',
-            right: props.align === 'right' ? '0' : 'auto',
+            left: props.align === "left" ? "0" : "auto",
+            maxWidth: props.width || "30rem",
+            minWidth: props.width || "20rem",
+            right: props.align === "right" ? "0" : "auto",
           }}
           ref={ref}>
           {props.filter && (
-            <Stack bottom={'2'} top={'1'}>
+            <Stack bottom={"2"} top={"1"}>
               <Input
                 disabled={!props.options}
                 onChange={(event): void => setFilter(event.target.value)}
-                placeholder='Search'
+                placeholder="Search"
                 submitValid={filter.length > 0}
                 value={filter}
               />
@@ -108,12 +117,12 @@ export default function Select(props: Props): JSX.Element {
             handleFilter().map((option) => (
               <SelectItemStyled
                 css={{
-                  color: props.selection === (option.value || option.label) ? '$accent' : '$text',
+                  color: props.selection === (option.value || option.label) ? "$accent" : "$text",
                   ...(props.last &&
                     !props.filter && {
-                      '&:last-child': {
-                        borderTop: '0.1rem solid $border',
-                        marginTop: '$4',
+                      "&:last-child": {
+                        borderTop: "0.1rem solid $border",
+                        marginTop: "$4",
                       },
                     }),
                 }}
@@ -123,7 +132,7 @@ export default function Select(props: Props): JSX.Element {
               </SelectItemStyled>
             ))
           ) : (
-            <Text accent as='p' css={{ padding: '$2 $3 $1 $3' }}>
+            <Text accent as="p" css={{ padding: "$2 $3 $1 $3" }}>
               No results found.
             </Text>
           )}
@@ -134,6 +143,6 @@ export default function Select(props: Props): JSX.Element {
 }
 
 export function Dropdown(props: Props): JSX.Element {
-  console.warn('Dropdown was renamed. Please use Select instead.');
+  console.warn("Dropdown was renamed. Please use Select instead.");
   return <Select {...props} />;
 }

@@ -1,14 +1,14 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
-import { breakpoints, DefaultProps } from '../../stitches.config';
+import { breakpoints, DefaultProps } from "../../stitches.config";
 
-import { StackColumnStyled, StackRowStyled, StackElementStyled } from './Stack.styles';
+import { StackColumnStyled, StackRowStyled, StackElementStyled } from "./Stack.styles";
 
-interface Props extends Omit<DefaultProps, 'spacing'> {
+interface Props extends Omit<DefaultProps, "spacing"> {
   children: ReactNode;
-  direction?: 'row' | 'column';
-  flex?: 'stretch' | 'center' | 'flex-start' | 'flex-end' | 'baseline' | 'initial' | 'inherit';
-  align?: 'left' | 'center' | 'right' | 'justify' | 'initial' | 'inherit';
+  direction?: "row" | "column";
+  flex?: "stretch" | "center" | "flex-start" | "flex-end" | "baseline" | "initial" | "inherit";
+  align?: "left" | "center" | "right" | "justify" | "initial" | "inherit";
   minimal?: boolean;
   offset?: number;
   offsetDesktop?: number;
@@ -22,14 +22,18 @@ interface Props extends Omit<DefaultProps, 'spacing'> {
   widthPhone?: number;
   widthTablet?: number;
   widthWide?: number;
-  top?: DefaultProps['spacing'];
-  bottom?: DefaultProps['spacing'];
+  top?: DefaultProps["spacing"];
+  bottom?: DefaultProps["spacing"];
   flexduo?: boolean;
 }
 
 export default function Stack(props: Props): JSX.Element {
   const StackElement =
-    props.direction === 'row' ? StackRowStyled : props.direction === 'column' ? StackColumnStyled : StackElementStyled;
+    props.direction === "row"
+      ? StackRowStyled
+      : props.direction === "column"
+      ? StackColumnStyled
+      : StackElementStyled;
 
   return (
     <StackElement
@@ -47,7 +51,7 @@ export default function Stack(props: Props): JSX.Element {
           paddingLeft: 0,
           paddingRight: 0,
         }),
-        ...(props?.direction === 'column' && {
+        ...(props?.direction === "column" && {
           [breakpoints.phone]: {
             flex: props.widthPhone ? `0 0 ${props.widthPhone}%` : `0 0 100%`,
             marginLeft: props.offsetPhone ? `${props.offsetPhone}%` : 0,
@@ -74,11 +78,11 @@ export default function Stack(props: Props): JSX.Element {
             width: props.widthWide ? `${props.widthWide}%` : `${props.width}%`,
           },
         }),
-        ...(props?.direction === 'row' && {
-          '*': {
-            alignItems: props.flex || 'initial',
+        ...(props?.direction === "row" && {
+          "*": {
+            alignItems: props.flex || "initial",
           },
-          'alignItems': props.flex || 'initial',
+          alignItems: props.flex || "initial",
         }),
         ...props.css,
       }}
