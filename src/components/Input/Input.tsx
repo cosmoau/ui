@@ -113,9 +113,10 @@ export default function Input(props: InputProps): JSX.Element {
                 }}
                 disabled={!props.submitValid}
                 name="submit"
-                onClick={(value): void => {
-                  if (!props.submitFunction) return;
-                  props.submitFunction(value);
+                onClick={(): void => {
+                  if (props.submitFunction && props.submitValid) {
+                    props.submitFunction(value || "");
+                  }
                 }}
                 small>
                 {props.submit}

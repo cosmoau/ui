@@ -121,7 +121,7 @@ export function App(): ReactElement {
                 nunc vel nisl. <Text as="span">Nulla facilisi.</Text>
               </Text>
               <Button inline="e">Test</Button>
-              <Button inline="f" theme="fill">
+              <Button inline="f" theme="solid">
                 Test
               </Button>
               <ProviderToggle trigger={<Button inline="g">Test</Button>} />
@@ -260,7 +260,9 @@ export function App(): ReactElement {
                 icon={<Printer />}
                 listen
                 submit="Alert"
-                submitFunction={(value) => alert(value)}
+                submitFunction={(value): void => {
+                  alert(value);
+                }}
                 submitValid
               />
             </Stack>

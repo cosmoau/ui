@@ -81,14 +81,15 @@ export default function Field(props: FieldProps): JSX.Element {
             </Button>
           )}
 
-          {props.submit && props.submitFunction && (
+          {props.submit && (
             <Button
               ariaLabel="Submit"
               disabled={!props.submitValid}
               name="submit"
-              onClick={(value): void => {
-                if (!props.submitFunction) return;
-                props.submitFunction(value);
+              onClick={(): void => {
+                if (props.submitFunction && props.submitValid) {
+                  props.submitFunction(value || "");
+                }
               }}>
               {props.submit}
             </Button>
