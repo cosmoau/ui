@@ -4,7 +4,7 @@ import { ImageProps as NextImageProps } from "next/image";
 import { DefaultProps } from "../../index";
 
 export interface ImageProps extends DefaultProps, NextImageProps {
-  borderRadius?: 1 | 2 | 3;
+  borderRadius?: "a" | "b" | "c";
   hover?: boolean;
   fillFit?: CSSProperties["objectFit"];
   fillPosition?: CSSProperties["objectPosition"];

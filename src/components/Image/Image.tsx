@@ -8,15 +8,20 @@ export default function Image(props: ImageProps): JSX.Element {
   return (
     <ImageStyled
       css={{
-        borderRadius: borderRadius ? "$" + borderRadius : undefined,
         img: {
-          borderRadius: borderRadius ? "$" + borderRadius : undefined,
           objectFit: fillFit || "contain",
           objectPosition: fillPosition || "center",
         },
         ...(hover && {
           "&:hover": {
             opacity: 0.9,
+          },
+        }),
+        ...(borderRadius && {
+          borderRadius: `$${borderRadius}`,
+
+          img: {
+            borderRadius: `$${borderRadius}`,
           },
         }),
         height: fillHeight || "100%",
