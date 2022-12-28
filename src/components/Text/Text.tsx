@@ -1,24 +1,7 @@
-import { ReactNode } from "react";
+import { TextProps } from "./Text.props";
+import { TextStyled } from "./Text.styles";
 
-import { DefaultProps } from "../../stitches.config";
-
-import { TextStyled, TextSizes } from "./Text.styles";
-
-interface Props extends Omit<DefaultProps, "spacing"> {
-  children: ReactNode;
-  bold?: boolean;
-  accent?: boolean;
-  as?: keyof typeof TextSizes;
-  override?: keyof typeof TextSizes;
-  top?: DefaultProps["spacing"];
-  bottom?: DefaultProps["spacing"];
-  inline?: DefaultProps["spacing"] | "auto";
-  ariaLabel?: string;
-  ariaLabelledBy?: string;
-  ariaTitle?: string;
-}
-
-export default function Text(props: Props): JSX.Element {
+export default function Text(props: TextProps): JSX.Element {
   if (props.as === "a" && !props.ariaLabel) {
     throw new Error('Text component with as="a" requires ariaLabel prop');
   }

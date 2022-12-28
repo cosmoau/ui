@@ -1,32 +1,27 @@
-import { Image } from "../../index";
-import { DefaultProps } from "../../stitches.config";
+import { Image, Text } from "../../index";
 
-import { AvatarFallbackStyled, AvatarImageStyled, AvatarStyled } from "./Avatar.styles";
+import { AvatarProps } from "./Avatar.props";
+import { AvatarStyled } from "./Avatar.styles";
 
-interface Props extends DefaultProps {
-  src?: string;
-  alt?: string;
-  fallback: string;
-  width?: number;
-}
+export default function Avatar(props: AvatarProps): JSX.Element {
+  const fontSize =
+    Math.min((props.width || 35) / 0.9, (props.width || 35) / 0.9) / props.fallback?.length || 1;
 
-export default function Avatar(props: Props): JSX.Element {
-  if (props.fallback.length > 2) {
-    throw new Error("Fallback string should be no more than 2 characters");
-  }
   return (
     <AvatarStyled
       css={{
-        height: props.width || 20,
-        width: props.width || 20,
+        "*": {
+          fontSize: `${fontSize}px`,
+        },
+        height: props.width || 35,
+        width: props.width || 35,
+
         ...props.css,
       }}>
       {props.src ? (
-        <AvatarImageStyled>
-          <Image alt={props.alt || props.fallback} fill src={props.src} />
-        </AvatarImageStyled>
+        <Image alt={props.alt || props.fallback} fill src={props.src} />
       ) : (
-        <AvatarFallbackStyled>{props.fallback}</AvatarFallbackStyled>
+        <Text as="span">{props.fallback}</Text>
       )}
     </AvatarStyled>
   );

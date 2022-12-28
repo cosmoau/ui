@@ -1,33 +1,9 @@
-import { ReactNode } from "react";
+import { breakpoints } from "../../stitches.config";
 
-import { breakpoints, DefaultProps } from "../../stitches.config";
-
+import { StackProps } from "./Stack.props";
 import { StackColumnStyled, StackRowStyled, StackElementStyled } from "./Stack.styles";
 
-interface Props extends Omit<DefaultProps, "spacing"> {
-  children: ReactNode;
-  direction?: "row" | "column";
-  flex?: "stretch" | "center" | "flex-start" | "flex-end" | "baseline" | "initial" | "inherit";
-  align?: "left" | "center" | "right" | "justify" | "initial" | "inherit";
-  minimal?: boolean;
-  offset?: number;
-  offsetDesktop?: number;
-  offsetLaptop?: number;
-  offsetPhone?: number;
-  offsetTablet?: number;
-  offsetWide?: number;
-  width?: number;
-  widthDesktop?: number;
-  widthLaptop?: number;
-  widthPhone?: number;
-  widthTablet?: number;
-  widthWide?: number;
-  top?: DefaultProps["spacing"];
-  bottom?: DefaultProps["spacing"];
-  flexduo?: boolean;
-}
-
-export default function Stack(props: Props): JSX.Element {
+export default function Stack(props: StackProps): JSX.Element {
   const StackElement =
     props.direction === "row"
       ? StackRowStyled
@@ -80,9 +56,9 @@ export default function Stack(props: Props): JSX.Element {
         }),
         ...(props?.direction === "row" && {
           "*": {
-            alignItems: props.flex || "initial",
+            alignItems: props.flex || "normal",
           },
-          alignItems: props.flex || "initial",
+          alignItems: props.flex || "normal",
         }),
         ...props.css,
       }}

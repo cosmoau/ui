@@ -7,7 +7,7 @@ export const TableStyled = styled("table", {
     verticalAlign: "middle",
   },
   borderCollapse: "separate",
-  borderSpacing: "$1",
+  borderSpacing: "$a",
   maxWidth: "100%",
   minWidth: "100%",
   overflowX: "auto",
@@ -16,7 +16,7 @@ export const TableStyled = styled("table", {
 
 export const TableHeadStyled = styled("thead", {
   backgroundColor: "$default",
-  borderRadius: "$2",
+  borderRadius: "$b",
   textAlign: "left",
   width: "100%",
 });
@@ -38,7 +38,7 @@ export const TableRowStyled = styled("tr", {
     },
   },
 
-  borderRadius: "$2",
+  borderRadius: "$b",
 
   transition: "$default",
 });
@@ -54,7 +54,7 @@ export const TableCellStyled = styled("td", {
   borderRight: "0.1rem solid $border",
   justifyContent: "center",
   marginBottom: "0 !important",
-  padding: "$2 $4 ",
+  padding: "$b $d ",
 });
 
 export const TableHeadCellStyled = styled("th", {
@@ -65,7 +65,7 @@ export const TableHeadCellStyled = styled("th", {
   borderBottom: "0.1rem solid $border",
   borderRight: "0.1rem solid $border",
   marginBottom: "0 !important",
-  padding: "$3 $4 ",
+  padding: "$c $d ",
   textAlign: "center",
 });
 

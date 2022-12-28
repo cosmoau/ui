@@ -1,20 +1,9 @@
-import { CSSProperties } from "@stitches/react";
-import { default as NextImage, ImageProps } from "next/image";
+import { default as NextImage } from "next/image";
 
-import { DefaultProps } from "../../stitches.config";
-
+import { ImageProps } from "./Image.props";
 import { ImageStyled } from "./Image.styles";
 
-interface Props extends DefaultProps, ImageProps {
-  borderRadius?: 1 | 2 | 3;
-  hover?: boolean;
-  fillFit?: CSSProperties["objectFit"];
-  fillPosition?: CSSProperties["objectPosition"];
-  fillHeight?: string | number;
-  fill?: boolean;
-}
-
-export default function Image(props: Props): JSX.Element {
+export default function Image(props: ImageProps): JSX.Element {
   const { css, borderRadius, hover, fill, fillFit, fillPosition, fillHeight, ...rest } = props;
   return (
     <ImageStyled

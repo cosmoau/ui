@@ -41,14 +41,14 @@ export const DialogOverlayStyled = styled("div", {
 
 export const DialogContentStyled = styled("div", {
   backgroundColor: "$background",
-  borderRadius: "$2",
-  boxShadow: "$3",
+  borderRadius: "$b",
+  boxShadow: "$c",
   left: "50%",
   maxHeight: "85vh",
   maxWidth: "90%",
   overflowX: "hidden",
   overflowY: "auto",
-  padding: "calc($5 + 1.33rem) $5",
+  padding: "calc($e + 1.33rem) $e",
   position: "fixed",
   textAlign: "left",
   top: "50%",
@@ -79,8 +79,7 @@ export const DialogExitStyled = styled("div", {
     opacity: 1,
   },
   cursor: "pointer",
-
-  padding: "$2",
+  padding: "$b",
   position: "absolute",
   right: 0,
   top: 0,

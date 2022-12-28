@@ -1,19 +1,9 @@
-import { ReactNode } from "react";
+import { theme } from "../../stitches.config";
 
-import { DefaultProps, theme } from "../../stitches.config";
-
+import { ViewProps } from "./View.props";
 import { ViewStyled, ViewContainerStyled } from "./View.styles";
 
-interface Props extends Omit<DefaultProps, "spacing"> {
-  children: ReactNode;
-  container?: boolean;
-  top?: DefaultProps["spacing"];
-  bottom?: DefaultProps["spacing"];
-  inverted?: boolean;
-  soft?: boolean;
-}
-
-export default function View(props: Props): JSX.Element {
+export default function View(props: ViewProps): JSX.Element {
   return (
     <ViewStyled
       className={props.inverted ? theme.toString() : undefined}

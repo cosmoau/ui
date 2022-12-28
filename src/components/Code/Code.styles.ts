@@ -1,27 +1,22 @@
 import { styled } from "../../stitches.config";
 
 export const CodeStyled = styled("div", {
-  alignContent: "center",
-  alignSelf: "center",
-  borderRadius: "$1",
-  height: "100%",
-  position: "relative",
-  transition: "$default",
-  width: "100%",
+  border: "0.1rem solid $border !important",
+  borderRadius: "$a",
+  padding: "$b $d",
 });
 
 export const CodeFunctionStyled = styled("div", {
   float: "right",
 });
 
-export const CodeBlockStyled = styled("pre", {
-  fontFamily: "monospace",
+export const CodeBlockStyled = styled("code", {
   lineBreak: "auto",
-  margin: "$2 0",
-  maxWidth: "80%",
+  margin: "$b 0",
   overflow: "auto",
   whiteSpace: "pre-wrap",
   wordBreak: "break-word",
+  wordWrap: "break-word",
 });
 
 export default CodeStyled;

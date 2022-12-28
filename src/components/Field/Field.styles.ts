@@ -2,17 +2,17 @@ import { styled } from "../../stitches.config";
 
 export const FieldStyled = styled("div", {
   "&:focus-within": {
-    boxShadow: "$1",
+    boxShadow: "$a",
   },
   "&:hover": {
-    boxShadow: "$1",
+    boxShadow: "$a",
   },
   "*": {
     verticalAlign: "middle",
   },
   alignContent: "center",
   alignSelf: "center",
-  borderRadius: "$1",
+  borderRadius: "$a",
 
   justifyContent: "center",
 
@@ -59,21 +59,21 @@ export const FieldAreaStyled = styled("textarea", {
   fontFamily: "$default",
   fontSize: "16px",
   margin: "0 auto",
-  padding: "$3 $4",
+  padding: "$c $d",
   width: "100%",
 });
 
 export const FieldFunctionStyled = styled("div", {
   borderBottom: "0.1rem solid $border",
   button: {
-    marginLeft: "$2",
-    paddingBottom: "$1",
-    paddingLeft: "$3",
-    paddingRight: "$3",
-    paddingTop: "$1",
+    marginLeft: "$b",
+    paddingBottom: "$a",
+    paddingLeft: "$c",
+    paddingRight: "$c",
+    paddingTop: "$a",
   },
   height: "100%",
-  padding: "$2 $4",
+  padding: "$b $d",
   position: "relative",
   svg: {
     marginTop: "-0.1rem",

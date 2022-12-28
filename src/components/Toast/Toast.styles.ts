@@ -1,21 +1,21 @@
-import { fadeIn, fadeOut, styled } from "../../../stitches.config";
-import { TextSizes } from "../../Text/Text.styles";
+import { fadeIn, fadeOut, styled } from "../../stitches.config";
+import { TextSizes } from "../Text/Text.styles";
 
 export const ToastStyled = styled("div", {
   backgroundColor: "$background",
   border: "0.1rem solid $border",
-  borderRadius: "$1",
-  boxShadow: "$3",
+  borderRadius: "$a",
+  boxShadow: "$c",
   cursor: "pointer",
   height: "auto",
   justifyContent: "center",
-  marginTop: "$3",
+  marginTop: "$c",
   textAlign: "center",
   ...TextSizes.p,
   marginBottom: "0 !important",
 
   overflow: "hidden",
-  padding: "$1 $3",
+  padding: "$a $c",
   position: "relative",
   transition: "$default",
   variants: {
@@ -33,7 +33,7 @@ export const ToastStyled = styled("div", {
 });
 
 export const ToastContainerStyled = styled("div", {
-  bottom: "$2",
+  bottom: "$b",
   left: "50%",
   position: "fixed",
   transform: "translateX(-50%)",

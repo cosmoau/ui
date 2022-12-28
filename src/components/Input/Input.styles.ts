@@ -5,21 +5,21 @@ export const InputStyled = styled("div", {
 });
 export const InputCoreStyled = styled("div", {
   "&:focus-within": {
-    boxShadow: "$1",
+    boxShadow: "$a",
   },
   "&:hover": {
-    boxShadow: "$2",
+    boxShadow: "$b",
   },
   "*": {
     verticalAlign: "middle",
   },
   alignContent: "center",
   alignSelf: "center",
-  borderRadius: "$1",
-  boxShadow: "$1",
+  borderRadius: "$a",
+  boxShadow: "$a",
   display: "inline-flex",
   justifyContent: "center",
-  padding: "$2 $4",
+  padding: "$b $d",
   position: "relative",
   transition: "$default",
   variants: {
@@ -76,7 +76,7 @@ export const InputAreaStyled = styled("input", {
 export const InputFunctionStyled = styled("div", {
   display: "inline-flex",
   height: "100%",
-  marginLeft: "$3",
+  marginLeft: "$c",
   position: "relative",
 
   verticalAlign: "middle",
@@ -86,13 +86,13 @@ export const InputFunctionStyled = styled("div", {
 export const InputIconStyled = styled("div", {
   display: "inline-block",
   height: "100%",
-  marginRight: "$3",
-  paddingRight: "$3",
+  marginRight: "$c",
+  paddingRight: "$c",
 });
 
 export const InputCallbackStyled = styled("div", {
   display: "block",
-  paddingTop: "$2",
+  paddingTop: "$b",
 });
 
 export default InputStyled;

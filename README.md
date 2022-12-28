@@ -10,7 +10,7 @@ pnpm install
 
 ## Demo
 
-You can find a demo of the components in the demo CodeSandbox [here](https://codesandbox.io/s/cosmo-ui-demo-3x7xu).
+[codesandbox.io/p/sandbox/cosmoau-ui-demos-f2kuy5](https://codesandbox.io/p/sandbox/cosmoau-ui-demos-f2kuy5).
 
 ## Usage
 

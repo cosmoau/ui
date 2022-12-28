@@ -1,18 +1,10 @@
-import { ComponentType, ElementType } from "react";
-import toast, { Toaster, useToaster } from "react-hot-toast";
+import toast, { useToaster } from "react-hot-toast";
 import { useEventListener } from "usehooks-ts";
 
+import { ToastProps } from "./Toast.props";
 import { ToastContainerStyled, ToastStyled } from "./Toast.styles";
 
-type InferComponentProps<T extends ElementType> = T extends ComponentType<infer U>
-  ? U
-  : T extends keyof JSX.IntrinsicElements
-  ? JSX.IntrinsicElements[T]
-  : Record<string, never>;
-
-export type ToasterProps = InferComponentProps<typeof Toaster>;
-
-export default function Toast(props: ToasterProps): JSX.Element {
+export default function Toast(props: ToastProps): JSX.Element {
   const { toasts, handlers } = useToaster();
   const { startPause, endPause } = handlers;
 

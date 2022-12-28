@@ -1,13 +1,7 @@
-import { DefaultProps } from "../../stitches.config";
-
+import { DividerProps } from "./Divider.props";
 import DividerStyled from "./Divider.styles";
 
-interface Props extends Omit<DefaultProps, "spacing"> {
-  top?: DefaultProps["spacing"];
-  bottom?: DefaultProps["spacing"];
-}
-
-export default function Divider(props: Props): JSX.Element {
+export default function Divider(props: DividerProps): JSX.Element {
   return (
     <DividerStyled
       css={{

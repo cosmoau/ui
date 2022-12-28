@@ -1,28 +1,12 @@
 import { X } from "phosphor-react";
-import { ReactNode, useState } from "react";
+import { useState } from "react";
 
 import { Button, Image } from "../../index";
-import { DefaultProps } from "../../stitches.config";
 
+import { BoxProps } from "./Box.props";
 import { BoxExitStyled, BoxImageChildrenStyled, BoxStyled } from "./Box.styles";
 
-interface Props extends DefaultProps {
-  children: ReactNode;
-  loading?: boolean;
-  image?: string;
-  imageCTA?: string;
-  imageHeight?: string;
-  imageTarget?: "_blank" | "_self";
-  imagePosition?: "center" | "top" | "bottom" | "left" | "right";
-  imageFit?: "contain" | "cover";
-  imageAlt?: string;
-  hover?: boolean;
-  theme?: "default" | "success" | "warning" | "error" | "transparent" | "fill";
-  closable?: boolean;
-  minimal?: boolean;
-}
-
-export default function Box(props: Props): JSX.Element {
+export default function Box(props: BoxProps): JSX.Element {
   const [isOpen, setIsOpen] = useState(true);
   const [isMounted, setIsMounted] = useState(true);
 
@@ -48,8 +32,8 @@ export default function Box(props: Props): JSX.Element {
               alt={props.imageAlt || ""}
               css={{
                 img: {
-                  borderTopLeftRadius: "$2 !important",
-                  borderTopRightRadius: "$2 !important",
+                  borderTopLeftRadius: "$b !important",
+                  borderTopRightRadius: "$b !important",
                 },
               }}
               fill
@@ -65,8 +49,8 @@ export default function Box(props: Props): JSX.Element {
             alt={props.imageAlt || ""}
             css={{
               img: {
-                borderTopLeftRadius: "$2 !important",
-                borderTopRightRadius: "$2 !important",
+                borderTopLeftRadius: "$b !important",
+                borderTopRightRadius: "$b !important",
               },
             }}
             fill

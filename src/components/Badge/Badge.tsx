@@ -1,26 +1,12 @@
 import { Circle, X } from "phosphor-react";
-import { MouseEventHandler, ReactNode, useState } from "react";
+import { useState } from "react";
 
 import { Loading } from "../../index";
-import { DefaultProps } from "../../stitches.config";
 
+import { BadgeProps } from "./Badge.props";
 import { BadgeIconStyled, BadgeStyled, BadgeDotStyled, BadgeLoadingStyled } from "./Badge.styles";
 
-interface Props extends Omit<DefaultProps, "spacing"> {
-  children: ReactNode;
-  loading?: boolean;
-  theme?: "red" | "orange" | "pink" | "purple" | "blue" | "green" | "border";
-  onClick?: MouseEventHandler<HTMLDivElement>;
-  icon?: ReactNode;
-  iconPosition?: "left" | "right";
-  inline?: DefaultProps["spacing"] | "auto";
-  dot?: boolean | "pulse";
-  dotColor?: "red" | "orange" | "pink" | "purple" | "blue" | "green" | "border";
-  closable?: boolean;
-  block?: boolean;
-}
-
-export default function Badge(props: Props): JSX.Element {
+export default function Badge(props: BadgeProps): JSX.Element {
   const [isOpen, setIsOpen] = useState(true);
   const [isMounted, setIsMounted] = useState(true);
 
@@ -52,7 +38,9 @@ export default function Badge(props: Props): JSX.Element {
         <BadgeIconStyled align="left">{props.icon}</BadgeIconStyled>
       )}
       {props.dot && (
-        <BadgeDotStyled dotColor={props.dotColor || "default"} pulse={props.dot === "pulse"}>
+        <BadgeDotStyled
+          dotColor={props.dotColor || props.theme || "default"}
+          pulse={props.dot === "pulse"}>
           <Circle weight="fill" />
         </BadgeDotStyled>
       )}

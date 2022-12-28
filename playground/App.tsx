@@ -20,6 +20,7 @@ import {
   Box,
   Select,
   ProviderToggle,
+  Avatar,
 } from "../src/index";
 
 export function App(): ReactElement {
@@ -42,7 +43,7 @@ export function App(): ReactElement {
 
   return (
     <Provider locked="light">
-      <View bottom={8} container inverted top={8}>
+      <View bottom="h" container inverted top="h">
         <Stack direction="row">
           <Stack direction="column">
             <Text as="h1">Heading One</Text>
@@ -61,7 +62,7 @@ export function App(): ReactElement {
           </Stack>
         </Stack>
       </View>
-      <View bottom={8} container top={8}>
+      <View bottom="h" container top="h">
         <Stack direction="row">
           <Stack direction="column">
             <Text as="h1">
@@ -110,8 +111,8 @@ export function App(): ReactElement {
           </Stack>
         </Stack>
       </View>
-      <View bottom="8" container inverted top={8}>
-        <Stack direction="row" flex="initial" top="4">
+      <View bottom="h" container soft top="h">
+        <Stack direction="row" flex="initial" top="d">
           <Stack direction="column">
             <Box hover>
               <Text as="h1">
@@ -119,11 +120,11 @@ export function App(): ReactElement {
                 auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae aliquet nisl
                 nunc vel nisl. <Text as="span">Nulla facilisi.</Text>
               </Text>
-              <Button inline="5">Test</Button>
-              <Button inline={6} theme="fill">
+              <Button inline="e">Test</Button>
+              <Button inline="f" theme="fill">
                 Test
               </Button>
-              <ProviderToggle trigger={<Button inline={7}>Test</Button>} />
+              <ProviderToggle trigger={<Button inline="g">Test</Button>} />
               <Select
                 onSelection={(value: string, label: string) => {
                   alert(`Value: ${value}, Label: ${label} `);
@@ -145,7 +146,7 @@ export function App(): ReactElement {
           </Stack>
         </Stack>
       </View>
-      <View bottom="8" container top="8">
+      <View bottom="h" container top="h">
         <Stack direction="row" flex="initial">
           <Stack direction="column" offset={50} width={50}>
             <Text as="h6">
@@ -163,28 +164,35 @@ export function App(): ReactElement {
               leo vel tincidunt vestibulum, mauris nisl porta odio, vitae aliquet nisl nunc vel
               nisl. Nulla facilisi. Nulla facilisi.{" "}
             </Text>
-            <Stack bottom={3} top={5}>
+            <Stack bottom="c" top="f">
               <Badge block closable icon={<CheckCircle />}>
                 Test badge
               </Badge>
             </Stack>
-            <Stack bottom={3}>
+            <Avatar fallback="Jackson" />
+            <Avatar fallback="Jack" />
+            <Avatar fallback="JD" />
+            <Avatar fallback="Jac" />
+
+            <Stack bottom="c">
+              <Badge icon={<CheckCircle />} theme="green">
+                Test badge
+              </Badge>
+            </Stack>
+            <Stack bottom="c">
               <Badge icon={<CheckCircle />}>Test badge</Badge>
             </Stack>
-            <Stack bottom={3}>
+            <Stack bottom="c">
               <Badge icon={<CheckCircle />}>Test badge</Badge>
             </Stack>
-            <Stack bottom={3}>
-              <Badge icon={<CheckCircle />}>Test badge</Badge>
-            </Stack>
-            <Stack bottom={3}>
+            <Stack bottom="c">
               <Badge icon={<CheckCircle />}>Test badge</Badge>
             </Stack>
           </Stack>
         </Stack>
-        <Stack direction="row" flex="initial" top="6">
+        <Stack direction="row" flex="initial" top="f">
           <Stack direction="column">
-            <Divider bottom="6" top="6" />
+            <Divider bottom="f" top="f" />
             <Text as="h1">
               Heading One is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor,
               leo vel tincidunt vestibulum, mauris nisl porta odio, vitae aliquet nisl nunc vel
@@ -210,7 +218,7 @@ export function App(): ReactElement {
               auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae aliquet nisl nunc
               vel nisl. Nulla facilisi. Nulla facilisi.{" "}
             </Text>
-            <Stack bottom={4} top={4}>
+            <Stack bottom="d" top="d">
               <Box theme="fill">
                 <Text as="h6">
                   Heading Six is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
@@ -247,7 +255,7 @@ export function App(): ReactElement {
               vel nisl. Nulla facilisi. Nulla facilisi.{" "}
             </Text>
 
-            <Stack align="center" top="6">
+            <Stack align="center" top="f">
               <Input
                 icon={<Printer />}
                 listen
@@ -300,7 +308,7 @@ export function App(): ReactElement {
               theme="fill">
               Button
             </Button>
-            <Stack bottom="4" top="4">
+            <Stack bottom="d" top="d">
               <Badge>Normal</Badge>
               <Badge closable>Normal</Badge>
             </Stack>

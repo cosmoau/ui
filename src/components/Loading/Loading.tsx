@@ -1,18 +1,10 @@
-import { theme } from "../../stitches.config";
+import { LoadingProps } from "./Loading.props";
 
-interface Props {
-  stroke?: string;
-  width?: number | string;
-}
-
-export default function Loading({
-  stroke = theme.colors.text.toString(),
-  width = 16,
-}: Props): JSX.Element {
+export default function Loading({ width = 16 }: LoadingProps): JSX.Element {
   return (
     <svg
       height={width}
-      stroke={stroke}
+      stroke="currentColor"
       viewBox={"0 0 38 38"}
       width={width}
       xmlns={"http://www.w3.org/2000/svg"}>

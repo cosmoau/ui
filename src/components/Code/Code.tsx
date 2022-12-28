@@ -1,17 +1,12 @@
 import { ClipboardText } from "phosphor-react";
-import { ReactNode, useState } from "react";
+import { useState } from "react";
 
 import { Button } from "../../index";
-import { DefaultProps } from "../../stitches.config";
 
+import { CodeProps } from "./Code.props";
 import { CodeStyled, CodeFunctionStyled, CodeBlockStyled } from "./Code.styles";
 
-interface Props extends DefaultProps {
-  children: ReactNode;
-  copy?: boolean;
-}
-
-export default function Code(props: Props): JSX.Element {
+export default function Code(props: CodeProps): JSX.Element {
   const [isCopied, setIsCopied] = useState(false);
 
   function handleCopy(): void {
@@ -38,7 +33,8 @@ export default function Code(props: Props): JSX.Element {
               )
             }
             name="copy"
-            onClick={handleCopy}>
+            onClick={handleCopy}
+            small>
             Copy
           </Button>
         )}

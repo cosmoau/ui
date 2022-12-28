@@ -3,6 +3,7 @@ import { ReactNode, useState } from "react";
 
 import { Button } from "../../index";
 
+import { TableProps } from "./Table.props";
 import {
   TableBodyStyled,
   TableCellStyled,
@@ -12,14 +13,7 @@ import {
   TableStyled,
 } from "./Table.styles";
 
-interface Props {
-  headChildren?: Array<string>;
-  bodyChildren?: Array<Array<ReactNode | string>>;
-  sort?: boolean;
-  sortDisabled?: number | number[];
-}
-
-export default function Table(props: Props): JSX.Element {
+export default function Table(props: TableProps): JSX.Element {
   const [sortBy, setSortBy] = useState(0);
   const [sortDirection, setSortDirection] = useState("asc");
 

@@ -1,10 +1,10 @@
 import { Check, ClipboardText, Warning, Eye, EyeClosed } from "phosphor-react";
-import { InputHTMLAttributes, RefObject, useState } from "react";
+import { useState } from "react";
 import { useEventListener } from "usehooks-ts";
 
 import { Button, Badge, Loading } from "../../index";
-import { DefaultProps } from "../../stitches.config";
 
+import { InputProps } from "./Input.props";
 import {
   InputAreaStyled,
   InputCallbackStyled,
@@ -14,27 +14,7 @@ import {
   InputIconStyled,
 } from "./Input.styles";
 
-interface Props extends InputHTMLAttributes<HTMLInputElement>, DefaultProps {
-  copy?: boolean;
-  error?: boolean;
-  errorMessage?: string;
-  loading?: boolean;
-  reveal?: boolean;
-  submit?: string;
-  icon?: JSX.Element;
-  submitFunction?: (value: string | number | unknown) => void;
-  submitValid?: boolean;
-  success?: boolean;
-  successMessage?: string;
-  warning?: boolean;
-  warningMessage?: string;
-  disabled?: boolean;
-  width?: number | string;
-  listen?: boolean;
-  mustRef?: RefObject<HTMLInputElement>;
-}
-
-export default function Input(props: Props): JSX.Element {
+export default function Input(props: InputProps): JSX.Element {
   const [value, setValue] = useState(props.value || "");
   const [isCopied, setIsCopied] = useState(false);
   const [isRevealed, setIsRevealed] = useState(false);
@@ -96,7 +76,7 @@ export default function Input(props: Props): JSX.Element {
               <Button
                 ariaLabel="Copy"
                 css={{
-                  marginLeft: "$2",
+                  marginLeft: "$b",
                 }}
                 icon={
                   isCopied ? (
@@ -115,7 +95,7 @@ export default function Input(props: Props): JSX.Element {
               <Button
                 ariaLabel="Reveal"
                 css={{
-                  marginLeft: "$2",
+                  marginLeft: "$b",
                 }}
                 icon={!isRevealed ? <Eye weight="duotone" /> : <EyeClosed weight="duotone" />}
                 name="reveal"
@@ -129,7 +109,7 @@ export default function Input(props: Props): JSX.Element {
               <Button
                 ariaLabel="Submit"
                 css={{
-                  marginLeft: "$2",
+                  marginLeft: "$b",
                 }}
                 disabled={!props.submitValid}
                 name="submit"

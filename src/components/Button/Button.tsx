@@ -1,27 +1,11 @@
 import { ArrowSquareOut } from "phosphor-react";
-import { HTMLAttributes, ReactNode } from "react";
 
 import { Loading } from "../../index";
-import { DefaultProps } from "../../stitches.config";
 
+import { ButtonProps } from "./Button.props";
 import { ButtonIconStyled, ButtonStyled } from "./Button.styles";
 
-interface Props extends HTMLAttributes<HTMLButtonElement>, Omit<DefaultProps, "spacing"> {
-  children: ReactNode | string;
-  loading?: boolean;
-  disabled?: boolean;
-  theme?: "default" | "fill" | "minimal" | "solid";
-  block?: boolean;
-  icon?: ReactNode;
-  iconPosition?: "left" | "right";
-  inline?: DefaultProps["spacing"] | "auto";
-  small?: boolean;
-  ariaLabel?: string;
-  name?: string;
-  external?: boolean;
-}
-
-export default function Button(props: Props): JSX.Element {
+export default function Button(props: ButtonProps): JSX.Element {
   return (
     <ButtonStyled
       aria-label={

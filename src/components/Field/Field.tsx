@@ -1,30 +1,12 @@
 import { Check, ClipboardText, Warning } from "phosphor-react";
-import { TextareaHTMLAttributes, useState } from "react";
+import { useState } from "react";
 
 import { Button, Badge, Loading } from "../../index";
-import { DefaultProps } from "../../stitches.config";
 
+import { FieldProps } from "./Field.props";
 import { FieldStyled, FieldAreaStyled, FieldFunctionStyled } from "./Field.styles";
 
-interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement>, DefaultProps {
-  copy?: boolean;
-  error?: boolean;
-  errorMessage?: string;
-  loading?: boolean;
-  reveal?: boolean;
-  submit?: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  submitFunction?: any;
-  submitValid?: boolean;
-  success?: boolean;
-  successMessage?: string;
-  warning?: boolean;
-  warningMessage?: string;
-  disabled?: boolean;
-  width?: number | string;
-}
-
-export default function Field(props: Props): JSX.Element {
+export default function Field(props: FieldProps): JSX.Element {
   const [value, setValue] = useState(props.value || "");
   const [isCopied, setIsCopied] = useState(false);
 
@@ -104,7 +86,10 @@ export default function Field(props: Props): JSX.Element {
               ariaLabel="Submit"
               disabled={!props.submitValid}
               name="submit"
-              onClick={(): void => props.submitFunction(value)}>
+              onClick={(value): void => {
+                if (!props.submitFunction) return;
+                props.submitFunction(value);
+              }}>
               {props.submit}
             </Button>
           )}

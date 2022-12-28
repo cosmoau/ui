@@ -1,20 +1,10 @@
-import { ReactNode, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useOnClickOutside } from "usehooks-ts";
 
-import { DefaultProps } from "../../stitches.config";
-
+import { PopoverProps } from "./Popover.props";
 import { PopoverContentStyled, PopoverStyled, PopoverTriggerStyled } from "./Popover.styles";
 
-interface Props extends DefaultProps {
-  children: ReactNode;
-  type?: "click" | "hover";
-  align?: "left" | "right" | "center";
-  trigger: ReactNode;
-  minimal?: boolean;
-  width?: number | string;
-}
-
-export default function Popover(props: Props): JSX.Element {
+export default function Popover(props: PopoverProps): JSX.Element {
   const ref = useRef(null);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -56,11 +46,8 @@ export default function Popover(props: Props): JSX.Element {
     }
   }
 
-  useOnClickOutside(
-    ref,
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
-    props.trigger !== "hover" ? (): void => handleClose() : (): void => {}
-  );
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  useOnClickOutside(ref, props.trigger !== "hover" ? (): void => handleClose() : (): void => {});
 
   return (
     <PopoverStyled>

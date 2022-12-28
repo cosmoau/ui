@@ -1,9 +1,9 @@
-import { ReactNode, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useEventListener, useLockedBody, useOnClickOutside } from "usehooks-ts";
 
 import { Input, Loading, Stack, Text } from "../../index";
-import { DefaultProps } from "../../stitches.config";
 
+import { SelectProps } from "./Select.props";
 import {
   SelectStyled,
   SelectTriggerStyled,
@@ -11,23 +11,7 @@ import {
   SelectItemStyled,
 } from "./Select.styles";
 
-interface Props extends DefaultProps {
-  options: Array<{
-    label: string;
-    value: string;
-  }>;
-  align?: "left" | "right" | "center";
-  width?: number | string;
-  selection?: string;
-  onSelection?: (value: string, label: string) => void;
-  trigger: ReactNode;
-  locked?: boolean;
-  filter?: boolean;
-  last?: boolean;
-  loading?: boolean;
-}
-
-export default function Select(props: Props): JSX.Element {
+export default function Select(props: SelectProps): JSX.Element {
   const ref = useRef(null);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -101,7 +85,7 @@ export default function Select(props: Props): JSX.Element {
           }}
           ref={ref}>
           {props.filter && (
-            <Stack bottom={"2"} top={"1"}>
+            <Stack bottom="b" top="a">
               <Input
                 disabled={!props.options}
                 onChange={(event): void => setFilter(event.target.value)}
@@ -122,7 +106,7 @@ export default function Select(props: Props): JSX.Element {
                     !props.filter && {
                       "&:last-child": {
                         borderTop: "0.1rem solid $border",
-                        marginTop: "$4",
+                        marginTop: "$d",
                       },
                     }),
                 }}
@@ -132,7 +116,7 @@ export default function Select(props: Props): JSX.Element {
               </SelectItemStyled>
             ))
           ) : (
-            <Text accent as="p" css={{ padding: "$2 $3 $1 $3" }}>
+            <Text accent as="p" css={{ padding: "$b $c $a $c" }}>
               No results found.
             </Text>
           )}
@@ -142,7 +126,7 @@ export default function Select(props: Props): JSX.Element {
   );
 }
 
-export function Dropdown(props: Props): JSX.Element {
+export function Dropdown(props: SelectProps): JSX.Element {
   console.warn("Dropdown was renamed. Please use Select instead.");
   return <Select {...props} />;
 }

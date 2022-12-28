@@ -19,12 +19,12 @@ export const SelectTriggerStyled = styled("div", {
 export const SelectGroupStyled = styled("div", {
   backgroundColor: "$background",
   border: "0.1rem solid $border",
-  borderRadius: "$1",
-  boxShadow: "$3",
+  borderRadius: "$a",
+  boxShadow: "$c",
   lineBreak: "auto",
   marginTop: "5%",
   overflowY: "auto",
-  padding: "calc($2 / 1.5)",
+  padding: "calc($b / 1.5)",
   position: "absolute",
   textAlign: "left !important",
   transition: "$default",
@@ -50,7 +50,7 @@ export const SelectItemStyled = styled("div", {
   "&:hover": {
     backgroundColor: "$default",
     borderBottomColor: "transparent",
-    borderRadius: "$1",
+    borderRadius: "$a",
   },
   "&:last-child": {
     borderBottom: 0,
@@ -61,7 +61,7 @@ export const SelectItemStyled = styled("div", {
   lineHeight: "normal",
   marginBottom: "0 !important",
 
-  padding: "$2 $3",
+  padding: "$b $c",
   transition: "$default",
 });
 
