@@ -1,4 +1,4 @@
-import { createStitches, createTheme, CSS } from "@stitches/react";
+import { createStitches, createTheme } from "@stitches/react";
 
 export const breakpoints = {
   desktop: "@media only screen and (max-width: 2000px)",
@@ -193,11 +193,6 @@ export const lightTheme = createTheme({
     c: "0 0.6rem 0.9rem 0 rgba(4, 9, 28, 0.12)",
   },
 });
-
-export interface DefaultProps {
-  css?: CSS;
-  spacing?: keyof typeof theme.space;
-}
 
 export const fadeIn = keyframes({
   "0%": {

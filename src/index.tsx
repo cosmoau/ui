@@ -1,20 +1,31 @@
-export * from "./components/Avatar";
-export * from "./components/Badge/index";
-export * from "./components/Box/index";
-export * from "./components/Button/index";
-export * from "./components/Code/index";
-export * from "./components/Dialog/index";
-export * from "./components/Divider/index";
-export * from "./components/Select/index";
-export * from "./components/Field/index";
-export * from "./components/Image/index";
-export * from "./components/Input/index";
-export * from "./components/Loading/index";
-export * from "./components/Popover/index";
-export * from "./components/Provider/index";
-export * from "./components/Stack/index";
-export * from "./components/Table/index";
-export * from "./components/Text/index";
-export * from "./components/View/index";
+export { default as Avatar } from "./components/Avatar";
+export { default as Badge } from "./components/Badge";
+export { default as Box } from "./components/Box";
+export { default as Button } from "./components/Button";
+export { default as Code } from "./components/Code";
+export { default as Dialog } from "./components/Dialog";
+export { default as Divider } from "./components/Divider";
+export { default as Select, Dropdown } from "./components/Select";
+export { default as Field } from "./components/Field";
+export { default as Image } from "./components/Image";
+export { default as Input } from "./components/Input";
+export { default as Loading } from "./components/Loading";
+export { default as Popover } from "./components/Popover";
+export { default as Provider, ProviderToggle } from "./components/Provider";
+export { default as Stack } from "./components/Stack";
+export { default as Table } from "./components/Table";
+export { default as Text } from "./components/Text";
+export { default as View } from "./components/View";
 
-export * from "./stitches.config";
+export {
+  breakpoints,
+  theme,
+  css,
+  styled,
+  getCssText,
+  globalCss,
+  keyframes,
+  lightTheme,
+  fadeIn,
+  fadeOut,
+} from "./stitches.config";
