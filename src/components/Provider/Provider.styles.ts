@@ -27,12 +27,6 @@ export const ProviderTriggerStyled = styled("div", {
 const bucketURL = "https://xxxjddzdqkdtyqtywwfi.supabase.co/storage/v1/object/public/public";
 
 export const providerReset = globalCss({
-  "#Smallchat": {
-    bottom: 0,
-    position: "fixed",
-    right: 0,
-    zIndex: 200,
-  },
   "*, *::before, *::after": {
     boxSizing: "border-box",
     marginBlock: 0,
