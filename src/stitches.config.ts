@@ -185,7 +185,7 @@ export const lightTheme = createTheme({
     purpleText: "rgb(112, 23, 171)",
     redText: "rgb(170, 28, 47)",
     soft: "rgba(4, 9, 28, 0.035)",
-    text: "rgb(11, 36, 59)",
+    text: "rgb(10, 33, 55)",
   },
   shadows: {
     a: "0 0.3rem 0.4rem 0 rgba(4, 9, 28, 0.06)",

@@ -272,7 +272,11 @@ export function App(): ReactElement {
               external
               icon={<ArrowRight />}
               iconPosition="right"
-              onClick={() => toast.success("lol")}
+              onClick={() =>
+                toast.success(
+                  "Heading Three is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi."
+                )
+              }
               small>
               Button test
             </Button>

@@ -1,4 +1,4 @@
-import { fadeIn, fadeOut, styled } from "../../stitches.config";
+import { breakpoints, fadeIn, fadeOut, styled } from "../../stitches.config";
 import { TextSizes } from "../Text/Text.styles";
 
 export const ToastStyled = styled("div", {
@@ -9,15 +9,19 @@ export const ToastStyled = styled("div", {
   cursor: "pointer",
   height: "auto",
   justifyContent: "center",
-  marginTop: "$c",
   textAlign: "center",
+  width: "auto",
   ...TextSizes.p,
-  marginBottom: "0 !important",
-
+  margin: "$c auto 0 auto !important",
+  maxWidth: "60%",
   overflow: "hidden",
   padding: "$a $c",
   position: "relative",
   transition: "$default",
+
+  [breakpoints.phone]: {
+    maxWidth: "100%",
+  },
   variants: {
     animation: {
       false: {
@@ -33,10 +37,12 @@ export const ToastStyled = styled("div", {
 });
 
 export const ToastContainerStyled = styled("div", {
-  bottom: "$b",
-  left: "50%",
+  bottom: "$d",
+  left: "$d",
   position: "fixed",
-  transform: "translateX(-50%)",
+
+  right: "$d",
+
   zIndex: "$toast",
 });
 
