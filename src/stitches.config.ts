@@ -94,12 +94,12 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       extra: "6.5rem",
       large: "2.25rem",
       larger: "4.5rem",
+      largest: "$extra",
       medium: "1rem",
       small: "0.75rem",
       smaller: "0.5rem",
       smallest: "0.25rem",
     },
-
     transitions: {
       default: "all 0.2s linear",
     },

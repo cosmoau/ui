@@ -1,18 +1,18 @@
 {
   "name": "@cosmoau/ui",
   "description": "A library of UI components used to enforce consistency across every product at Cosmo and make development easier.",
-  "version": "1.2.18",
+  "version": "1.2.19",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "bugs": {
     "url": "https://github.com/cosmoau/ui/issues"
   },
   "dependencies": {
+    "@stitches/react": "^1.2.8",
     "phosphor-react": "^1.4.1",
     "react-hot-toast": "^2.4.0"
   },
   "devDependencies": {
-    "@stitches/react": "^1.2.8",
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.26",
     "eslint": "^8.31.0",

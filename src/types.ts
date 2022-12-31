@@ -15,6 +15,8 @@ import { Toaster } from "react-hot-toast";
 import { TextSizes } from "./components/Text/Text.styles";
 import { theme } from "./stitches.config";
 
+type ThemeSpacing = keyof typeof theme.space;
+
 type InferComponentProps<T extends ElementType> = T extends ComponentType<infer U>
   ? U
   : T extends keyof JSX.IntrinsicElements
@@ -22,26 +24,26 @@ type InferComponentProps<T extends ElementType> = T extends ComponentType<infer 
   : Record<string, never>;
 
 export interface AvatarProps {
-  css?: CSS; // Stitches CSS prop
-  src?: string; // Image source
-  alt?: string; // Image alt text
-  fallback: string; // Fallback text
-  width?: number; // Width of the avatar
+  css?: CSS;
+  src?: string;
+  alt?: string;
+  fallback: string;
+  width?: number;
 }
 
 export interface BadgeProps {
-  css?: CSS; // Stitches CSS prop
-  children: ReactNode; // Badge content
-  loading?: boolean; // Loading state
-  theme?: "red" | "orange" | "pink" | "purple" | "blue" | "green" | "border" | "default"; // Badge theme
-  onClick?: MouseEventHandler<HTMLDivElement>; // Click handler
-  icon?: ReactNode; // Icon to display
-  iconPosition?: "left" | "right"; // Icon position
-  inline?: keyof typeof theme.space | "auto"; // Inline spacing
-  dot?: boolean | "pulse"; // Dot badge
-  dotColor?: "red" | "orange" | "pink" | "purple" | "blue" | "green" | "border" | "default"; // Dot badge color
-  closable?: boolean; // Closable badge
-  block?: boolean; // Block badge
+  css?: CSS;
+  children: ReactNode;
+  loading?: boolean;
+  theme?: "red" | "orange" | "pink" | "purple" | "blue" | "green" | "border" | "default";
+  onClick?: MouseEventHandler<HTMLDivElement>;
+  icon?: ReactNode;
+  iconPosition?: "left" | "right";
+  inline?: ThemeSpacing | "auto";
+  dot?: boolean | "pulse";
+  dotColor?: "red" | "orange" | "pink" | "purple" | "blue" | "green" | "border" | "default";
+  closable?: boolean;
+  block?: boolean;
 }
 
 export interface BoxProps {
@@ -52,8 +54,8 @@ export interface BoxProps {
   imageCTA?: string;
   imageHeight?: string;
   imageTarget?: "_blank" | "_self";
-  imagePosition?: "center" | "top" | "bottom" | "left" | "right";
-  imageFit?: "contain" | "cover";
+  imagePosition?: CSSProperties["objectPosition"];
+  imageFit?: CSSProperties["objectFit"];
   imageAlt?: string;
   hover?: boolean;
   theme?: "default" | "success" | "warning" | "error" | "transparent" | "fill";
@@ -70,7 +72,7 @@ export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   block?: boolean;
   icon?: ReactNode;
   iconPosition?: "left" | "right";
-  inline?: keyof typeof theme.space | "auto";
+  inline?: ThemeSpacing | "auto";
   small?: boolean;
   ariaLabel?: string;
   name?: string;
@@ -92,8 +94,8 @@ export interface DialogProps {
 
 export interface DividerProps {
   css?: CSS;
-  top?: keyof typeof theme.space;
-  bottom?: keyof typeof theme.space;
+  top?: ThemeSpacing;
+  bottom?: ThemeSpacing;
 }
 
 export interface FieldProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
@@ -205,8 +207,8 @@ export interface StackProps {
   widthPhone?: number;
   widthTablet?: number;
   widthWide?: number;
-  top?: keyof typeof theme.space;
-  bottom?: keyof typeof theme.space;
+  top?: ThemeSpacing;
+  bottom?: ThemeSpacing;
   flexduo?: boolean;
 }
 
@@ -225,9 +227,9 @@ export interface TextProps {
   accent?: boolean;
   as?: keyof typeof TextSizes;
   override?: keyof typeof TextSizes;
-  top?: keyof typeof theme.space;
-  bottom?: keyof typeof theme.space;
-  inline?: keyof typeof theme.space | "auto";
+  top?: ThemeSpacing;
+  bottom?: ThemeSpacing;
+  inline?: ThemeSpacing | "auto";
   ariaLabel?: string;
   ariaLabelledBy?: string;
   ariaTitle?: string;
@@ -239,8 +241,8 @@ export interface ViewProps {
   css?: CSS;
   children: ReactNode;
   container?: boolean;
-  top?: keyof typeof theme.space;
-  bottom?: keyof typeof theme.space;
+  top?: ThemeSpacing;
+  bottom?: ThemeSpacing;
   inverted?: boolean;
   soft?: boolean;
 }

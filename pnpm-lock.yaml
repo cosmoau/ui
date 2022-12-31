@@ -22,11 +22,11 @@ specifiers:
   util: ^0.12.5
 
 dependencies:
+  '@stitches/react': 1.2.8_react@18.2.0
   phosphor-react: 1.4.1_react@18.2.0
   react-hot-toast: 2.4.0_biqbaboplfbrettd7655fr4n2y
 
 devDependencies:
-  '@stitches/react': 1.2.8_react@18.2.0
   '@types/node': 18.11.18
   '@types/react': 18.0.26
   eslint: 8.31.0
@@ -1109,7 +1109,7 @@ packages:
       react: '>= 16.3.0'
     dependencies:
       react: 18.2.0
-    dev: true
+    dev: false
 
   /@swc/helpers/0.4.14:
     resolution: {integrity: sha512-4C7nX/dvpzB7za4Ql9K81xK3HPxCpHMgwTZVyf+9JQ6VUbn9jjZVN7/Nkdz/Ugzs2CSjqnL/UPXroiVBVHUWUw==}
