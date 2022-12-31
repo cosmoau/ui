@@ -16,12 +16,12 @@ export const PopoverTriggerStyled = styled("div", {
 export const PopoverContentStyled = styled("div", {
   backgroundColor: "$background",
   border: "0.1rem solid $border",
-  borderRadius: "$a",
-  boxShadow: "$c",
+  borderRadius: "$small",
+  boxShadow: "large",
   lineBreak: "auto",
   marginTop: ".85%",
   overflowY: "auto",
-  padding: "$a $d",
+  padding: "$smallest $medium",
   position: "absolute",
   transition: "$default",
   variants: {

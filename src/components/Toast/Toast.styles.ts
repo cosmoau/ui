@@ -4,19 +4,15 @@ import { TextSizes } from "../Text/Text.styles";
 export const ToastStyled = styled("div", {
   backgroundColor: "$background",
   border: "0.1rem solid $border",
-  borderRadius: "$a",
-  boxShadow: "$c",
+  borderRadius: "$small",
+  boxShadow: "large",
   cursor: "pointer",
-  height: "auto",
-  justifyContent: "center",
-  textAlign: "center",
-  width: "auto",
+  width: "fit-content",
   ...TextSizes.p,
-  margin: "$c auto 0 auto !important",
+  margin: "$medium auto 0 auto !important",
   maxWidth: "60%",
-  overflow: "hidden",
-  padding: "$a $c",
-  position: "relative",
+  padding: "$smallest $small",
+  pointerEvents: "all",
   transition: "$default",
 
   [breakpoints.phone]: {
@@ -37,12 +33,13 @@ export const ToastStyled = styled("div", {
 });
 
 export const ToastContainerStyled = styled("div", {
-  bottom: "$d",
-  left: "$d",
+  bottom: "$medium",
+  left: "0",
+  pointerEvents: "none",
   position: "fixed",
-
-  right: "$d",
-
+  right: "0",
+  textAlign: "center",
+  userSelect: "none",
   zIndex: "$toast",
 });
 

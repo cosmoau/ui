@@ -18,10 +18,10 @@ const pulse = keyframes({
 
 export const BadgeStyled = styled("div", {
   alignItems: "center",
-  borderRadius: "$c",
+  borderRadius: "$large",
   display: "inline-flex",
   justifyContent: "center",
-  padding: "$a $d",
+  padding: "$smallest $medium",
   ...TextSizes.p,
   marginBottom: "0 !important",
 
@@ -79,10 +79,10 @@ export const BadgeIconStyled = styled("span", {
   variants: {
     align: {
       left: {
-        marginRight: "$c",
+        marginRight: "$small",
       },
       right: {
-        marginLeft: "$c",
+        marginLeft: "$small",
       },
     },
   },
@@ -99,7 +99,7 @@ export const BadgeLoadingStyled = styled("span", {
 
 export const BadgeDotStyled = styled("span", {
   display: "inline",
-  paddingRight: "$b",
+  paddingRight: "$smaller",
 
   svg: {
     height: "1rem",

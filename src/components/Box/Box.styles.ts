@@ -3,7 +3,7 @@ import { fadeOut, styled } from "../../stitches.config";
 export const paddingVariants = {
   padding: {
     default: {
-      padding: "$e",
+      padding: "$large",
     },
     none: {
       padding: "0",
@@ -12,7 +12,7 @@ export const paddingVariants = {
 };
 export const BoxStyled = styled("article", {
   border: "0.1rem solid transparent",
-  borderRadius: "$b",
+  borderRadius: "$medium",
   display: "block",
   height: "100%",
   margin: 0,
@@ -30,7 +30,7 @@ export const BoxStyled = styled("article", {
     hover: {
       true: {
         "&:hover": {
-          boxShadow: "$b",
+          boxShadow: "$medium",
         },
       },
     },

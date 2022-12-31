@@ -25,7 +25,7 @@ export const ButtonStyled = styled("button", {
   "&:hover": {
     backgroundColor: "$defaultHover",
     borderColor: "$border",
-    boxShadow: "$b",
+    boxShadow: "$medium",
     color: "$text",
   },
 
@@ -33,8 +33,8 @@ export const ButtonStyled = styled("button", {
   alignItems: "center",
   appearance: "none",
   border: "0.1rem solid $border",
-  borderRadius: "$a",
-  boxShadow: "$a",
+  borderRadius: "$small",
+  boxShadow: "$small",
   color: "$text",
   cursor: "pointer",
   display: "inline",
@@ -43,7 +43,7 @@ export const ButtonStyled = styled("button", {
   margin: 0,
   "marginBottom:": "0 !important",
   outline: "none",
-  padding: "$a $d",
+  padding: "$smallest $medium",
   svg: {
     marginTop: "-0.3rem",
   },
@@ -105,10 +105,10 @@ export const ButtonIconStyled = styled("span", {
   variants: {
     align: {
       left: {
-        marginRight: "$b",
+        marginRight: "$smaller",
       },
       right: {
-        marginLeft: "$b",
+        marginLeft: "$smaller",
       },
     },
   },

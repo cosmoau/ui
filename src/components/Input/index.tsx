@@ -1,5 +1,5 @@
 import { Check, ClipboardText, Warning, Eye, EyeClosed } from "phosphor-react";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { useEventListener } from "usehooks-ts";
 
 import { Button, Badge, Loading } from "../../index";
@@ -19,7 +19,7 @@ export default function Input(props: InputProps): JSX.Element {
   const [isCopied, setIsCopied] = useState(false);
   const [isRevealed, setIsRevealed] = useState(false);
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
+  function handleChange(e: ChangeEvent<HTMLInputElement>): void {
     setValue(e.target.value);
     if (props.onChange) {
       props.onChange(e);
@@ -76,7 +76,7 @@ export default function Input(props: InputProps): JSX.Element {
               <Button
                 ariaLabel="Copy"
                 css={{
-                  marginLeft: "$b",
+                  marginLeft: "$smaller",
                 }}
                 icon={
                   isCopied ? (
@@ -95,7 +95,7 @@ export default function Input(props: InputProps): JSX.Element {
               <Button
                 ariaLabel="Reveal"
                 css={{
-                  marginLeft: "$b",
+                  marginLeft: "$smaller",
                 }}
                 icon={!isRevealed ? <Eye weight="duotone" /> : <EyeClosed weight="duotone" />}
                 name="reveal"
@@ -109,7 +109,7 @@ export default function Input(props: InputProps): JSX.Element {
               <Button
                 ariaLabel="Submit"
                 css={{
-                  marginLeft: "$b",
+                  marginLeft: "$smaller",
                 }}
                 disabled={!props.submitValid}
                 name="submit"

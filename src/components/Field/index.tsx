@@ -1,5 +1,5 @@
 import { Check, ClipboardText, Warning } from "phosphor-react";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 
 import { Button, Badge, Loading } from "../../index";
 import { FieldProps } from "../../types";
@@ -10,7 +10,7 @@ export default function Field(props: FieldProps): JSX.Element {
   const [value, setValue] = useState(props.value || "");
   const [isCopied, setIsCopied] = useState(false);
 
-  function handleChange(e: React.ChangeEvent<HTMLTextAreaElement>): void {
+  function handleChange(e: ChangeEvent<HTMLTextAreaElement>): void {
     setValue(e.target.value);
     if (props.onChange) {
       props.onChange(e);

@@ -32,8 +32,8 @@ export default function Box(props: BoxProps): JSX.Element {
               alt={props.imageAlt || ""}
               css={{
                 img: {
-                  borderTopLeftRadius: "$b !important",
-                  borderTopRightRadius: "$b !important",
+                  borderTopLeftRadius: "$medium !important",
+                  borderTopRightRadius: "$medium !important",
                 },
               }}
               fill
@@ -49,8 +49,8 @@ export default function Box(props: BoxProps): JSX.Element {
             alt={props.imageAlt || ""}
             css={{
               img: {
-                borderTopLeftRadius: "$b !important",
-                borderTopRightRadius: "$b !important",
+                borderTopLeftRadius: "$medium !important",
+                borderTopRightRadius: "$medium !important",
               },
             }}
             fill

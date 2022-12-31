@@ -85,7 +85,7 @@ export default function Select(props: SelectProps): JSX.Element {
           }}
           ref={ref}>
           {props.filter && (
-            <Stack bottom="b" top="a">
+            <Stack bottom="small" top="small">
               <Input
                 disabled={!props.options}
                 onChange={(event): void => setFilter(event.target.value)}
@@ -106,7 +106,7 @@ export default function Select(props: SelectProps): JSX.Element {
                     !props.filter && {
                       "&:last-child": {
                         borderTop: "0.1rem solid $border",
-                        marginTop: "$d",
+                        marginTop: "$medium",
                       },
                     }),
                 }}
@@ -116,7 +116,7 @@ export default function Select(props: SelectProps): JSX.Element {
               </SelectItemStyled>
             ))
           ) : (
-            <Text accent as="p" css={{ padding: "$b $c $a $c" }}>
+            <Text accent as="p" css={{ padding: "$b $small $smallest $small" }}>
               No results found.
             </Text>
           )}

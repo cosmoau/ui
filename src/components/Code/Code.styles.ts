@@ -2,8 +2,8 @@ import { styled } from "../../stitches.config";
 
 export const CodeStyled = styled("div", {
   border: "0.1rem solid $border !important",
-  borderRadius: "$a",
-  padding: "$b $d",
+  borderRadius: "$small",
+  padding: "$smaller $medium",
 });
 
 export const CodeFunctionStyled = styled("div", {
@@ -12,7 +12,7 @@ export const CodeFunctionStyled = styled("div", {
 
 export const CodeBlockStyled = styled("code", {
   lineBreak: "auto",
-  margin: "$b 0",
+  margin: "$smaller 0",
   overflow: "auto",
   whiteSpace: "pre-wrap",
   wordBreak: "break-word",
