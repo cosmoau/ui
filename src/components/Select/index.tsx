@@ -12,6 +12,8 @@ import {
 } from "./Select.styles";
 
 export default function Select(props: SelectProps): JSX.Element {
+  const { options, css, onSelection, locked, selection, width, align, trigger, loading, last } =
+    props;
   const ref = useRef(null);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -39,8 +41,8 @@ export default function Select(props: SelectProps): JSX.Element {
   }
 
   function handleSelection(value: string, label: string): void {
-    if (props.onSelection) {
-      props.onSelection(value, label);
+    if (onSelection) {
+      onSelection(value, label);
     }
     handleClose();
   }
@@ -49,12 +51,10 @@ export default function Select(props: SelectProps): JSX.Element {
     label: string;
     value: string;
   }> {
-    if (props.filter) {
-      return props.options.filter((option) =>
-        option.label.toLowerCase().includes(filter.toLowerCase())
-      );
+    if (filter) {
+      return options.filter((option) => option.label.toLowerCase().includes(filter.toLowerCase()));
     }
-    return props.options;
+    return options;
   }
 
   useOnClickOutside(ref, handleClose);
@@ -65,52 +65,52 @@ export default function Select(props: SelectProps): JSX.Element {
     }
   });
 
-  useLockedBody(props.locked ? isOpen : false);
+  useLockedBody(locked ? isOpen : false);
 
   return (
-    <SelectStyled css={props.css}>
+    <SelectStyled css={css}>
       <SelectTriggerStyled
-        key={props.selection || Math.random()}
-        onClickCapture={handleTriggerClick}>
-        {props.trigger}
+        key={selection || Math.random()}
+        onClickCapture={(): void => handleTriggerClick()}>
+        {trigger}
       </SelectTriggerStyled>
       {isMounted && (
         <SelectGroupStyled
+          ref={ref}
           animation={isOpen}
           css={{
-            left: props.align === "left" ? "0" : "auto",
-            maxWidth: props.width || "30rem",
-            minWidth: props.width || "20rem",
-            right: props.align === "right" ? "0" : "auto",
-          }}
-          ref={ref}>
-          {props.filter && (
+            left: align === "left" ? "0" : "auto",
+            maxWidth: width || "30rem",
+            minWidth: width || "20rem",
+            right: align === "right" ? "0" : "auto",
+          }}>
+          {filter && (
             <Stack bottom="small" top="small">
               <Input
-                disabled={!props.options}
-                onChange={(event): void => setFilter(event.target.value)}
+                disabled={!options}
                 placeholder="Search"
                 submitValid={filter.length > 0}
                 value={filter}
+                onChange={(event): void => setFilter(event.target.value)}
               />
             </Stack>
           )}
-          {props.loading ? (
+          {loading ? (
             <Loading />
           ) : handleFilter().length ? (
             handleFilter().map((option) => (
               <SelectItemStyled
+                key={option.value + Math.random()}
                 css={{
-                  color: props.selection === (option.value || option.label) ? "$accent" : "$text",
-                  ...(props.last &&
-                    !props.filter && {
+                  color: selection === (option.value || option.label) ? "$accent" : "$text",
+                  ...(last &&
+                    !filter && {
                       "&:last-child": {
                         borderTop: "0.1rem solid $border",
                         marginTop: "$medium",
                       },
                     }),
                 }}
-                key={option.value + Math.random()}
                 onClick={(): void => handleSelection(option.value, option.label)}>
                 {option.label}
               </SelectItemStyled>
@@ -127,6 +127,7 @@ export default function Select(props: SelectProps): JSX.Element {
 }
 
 export function Dropdown(props: SelectProps): JSX.Element {
+  // eslint-disable-next-line no-console
   console.warn("Dropdown was renamed. Please use Select instead.");
   return <Select {...props} />;
 }

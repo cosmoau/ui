@@ -4,22 +4,23 @@ import { ViewProps } from "../../types";
 import { ViewStyled, ViewContainerStyled } from "./View.styles";
 
 export default function View(props: ViewProps): JSX.Element {
+  const { container, inverted, top, bottom, css, soft, children } = props;
   return (
     <ViewStyled
-      className={props.inverted ? theme.toString() : undefined}
+      className={inverted ? theme.toString() : undefined}
       css={{
-        ...(props.top && {
+        ...(top && {
           marginTop: 0,
-          paddingTop: `$${props.top}`,
+          paddingTop: `$${top}`,
         }),
-        ...(props.bottom && {
+        ...(bottom && {
           marginBottom: 0,
-          paddingBottom: `$${props.bottom}`,
+          paddingBottom: `$${bottom}`,
         }),
-        ...props.css,
+        ...css,
       }}
-      soft={props.soft}>
-      <ViewContainerStyled container={props.container}>{props.children}</ViewContainerStyled>
+      soft={soft}>
+      <ViewContainerStyled container={container}>{children}</ViewContainerStyled>
     </ViewStyled>
   );
 }

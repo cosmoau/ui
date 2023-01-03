@@ -7,6 +7,22 @@ import { BoxProps } from "../../types";
 import { BoxExitStyled, BoxImageChildrenStyled, BoxStyled } from "./Box.styles";
 
 export default function Box(props: BoxProps): JSX.Element {
+  const {
+    image,
+    imageAlt,
+    imageCTA,
+    imageFit,
+    imageHeight,
+    imagePosition,
+    imageTarget,
+    css,
+    hover,
+    loading,
+    theme,
+    children,
+    minimal,
+    closable,
+  } = props;
   const [isOpen, setIsOpen] = useState(true);
   const [isMounted, setIsMounted] = useState(true);
 
@@ -18,18 +34,18 @@ export default function Box(props: BoxProps): JSX.Element {
   }
 
   return isMounted ? (
-    props.image ? (
+    image ? (
       <BoxStyled
         animation={!isOpen}
-        css={props.css}
-        hover={props.hover}
-        loading={props.loading || false}
+        css={css}
+        hover={hover}
+        loading={loading || false}
         padding={"none"}
-        theme={props.theme || "default"}>
-        {props.imageCTA ? (
-          <a href={props.imageCTA} rel="noopener noreferrer" target={props.imageTarget || "_blank"}>
+        theme={theme || "default"}>
+        {imageCTA ? (
+          <a href={imageCTA} rel="noopener noreferrer" target={imageTarget || "_blank"}>
             <Image
-              alt={props.imageAlt || ""}
+              alt={imageAlt || ""}
               css={{
                 img: {
                   borderTopLeftRadius: "$medium !important",
@@ -37,16 +53,16 @@ export default function Box(props: BoxProps): JSX.Element {
                 },
               }}
               fill
-              fillFit={props.imageFit || "cover"}
-              fillHeight={props.imageHeight || "20rem"}
-              fillPosition={props.imagePosition || "center"}
-              hover={props.hover}
-              src={props.image}
+              fillFit={imageFit || "cover"}
+              fillHeight={imageHeight || "20rem"}
+              fillPosition={imagePosition || "center"}
+              hover={hover}
+              src={image}
             />
           </a>
         ) : (
           <Image
-            alt={props.imageAlt || ""}
+            alt={imageAlt || ""}
             css={{
               img: {
                 borderTopLeftRadius: "$medium !important",
@@ -54,25 +70,25 @@ export default function Box(props: BoxProps): JSX.Element {
               },
             }}
             fill
-            fillFit={props.imageFit || "cover"}
-            fillHeight={props.imageHeight || "20rem"}
-            fillPosition={props.imagePosition || "center"}
-            hover={props.hover}
-            src={props.image}
+            fillFit={imageFit || "cover"}
+            fillHeight={imageHeight || "20rem"}
+            fillPosition={imagePosition || "center"}
+            hover={hover}
+            src={image}
           />
         )}
-        <BoxImageChildrenStyled padding={"default"}>{props.children}</BoxImageChildrenStyled>
+        <BoxImageChildrenStyled padding={"default"}>{children}</BoxImageChildrenStyled>
       </BoxStyled>
     ) : (
       <BoxStyled
         animation={!isOpen}
-        css={props.css}
-        hover={props.hover}
-        loading={props.loading || false}
-        padding={props.minimal ? "none" : "default"}
-        theme={props.theme || "default"}>
-        {props.children}
-        {props.closable && (
+        css={css}
+        hover={hover}
+        loading={loading || false}
+        padding={minimal ? "none" : "default"}
+        theme={theme || "default"}>
+        {children}
+        {closable && (
           <BoxExitStyled onClick={(): void => handleClose()}>
             <Button ariaLabel="Close" name="close" small theme={"minimal"}>
               <X />
@@ -82,6 +98,6 @@ export default function Box(props: BoxProps): JSX.Element {
       </BoxStyled>
     )
   ) : (
-    <></>
+    <> </>
   );
 }

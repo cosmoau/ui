@@ -20,7 +20,7 @@ export default function Toast(props: ToastProps): JSX.Element {
       {toasts.map((t) => {
         t.duration = 5000;
         return (
-          <ToastStyled animation={t.visible} key={t.id} onClick={(): void => toast.dismiss(t.id)}>
+          <ToastStyled key={t.id} animation={t.visible} onClick={(): void => toast.dismiss(t.id)}>
             {t.message?.toString() || t.message?.toString() || ""}
           </ToastStyled>
         );

@@ -7,11 +7,12 @@ import { CodeProps } from "../../types";
 import { CodeStyled, CodeFunctionStyled, CodeBlockStyled } from "./Code.styles";
 
 export default function Code(props: CodeProps): JSX.Element {
+  const { copy, children, css } = props;
   const [isCopied, setIsCopied] = useState(false);
 
   function handleCopy(): void {
-    if (props.copy) {
-      navigator.clipboard.writeText(props?.children?.toString() || "");
+    if (copy) {
+      navigator.clipboard.writeText(children?.toString() || "");
       setIsCopied(true);
       setTimeout(() => {
         setIsCopied(false);
@@ -20,9 +21,9 @@ export default function Code(props: CodeProps): JSX.Element {
   }
 
   return (
-    <CodeStyled css={props.css}>
+    <CodeStyled css={css}>
       <CodeFunctionStyled>
-        {props.copy && (
+        {copy && (
           <Button
             ariaLabel="Copy"
             icon={
@@ -33,13 +34,19 @@ export default function Code(props: CodeProps): JSX.Element {
               )
             }
             name="copy"
-            onClick={handleCopy}
-            small>
+            small
+            onClick={
+              isCopied
+                ? undefined
+                : (): void => {
+                    handleCopy();
+                  }
+            }>
             Copy
           </Button>
         )}
       </CodeFunctionStyled>
-      <CodeBlockStyled>{props.children}</CodeBlockStyled>
+      <CodeBlockStyled>{children}</CodeBlockStyled>
     </CodeStyled>
   );
 }

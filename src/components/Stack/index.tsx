@@ -4,66 +4,90 @@ import { StackProps } from "../../types";
 import { StackColumnStyled, StackRowStyled, StackElementStyled } from "./Stack.styles";
 
 export default function Stack(props: StackProps): JSX.Element {
+  const {
+    direction,
+    align,
+    top,
+    bottom,
+    flex,
+    flexduo,
+    minimal,
+    width,
+    children,
+    offset,
+    widthPhone,
+    offsetPhone,
+    widthTablet,
+    offsetTablet,
+    widthLaptop,
+    offsetLaptop,
+    widthDesktop,
+    offsetDesktop,
+    widthWide,
+    offsetWide,
+    css,
+  } = props;
+
   const StackElement =
-    props.direction === "row"
+    direction === "row"
       ? StackRowStyled
-      : props.direction === "column"
+      : direction === "column"
       ? StackColumnStyled
       : StackElementStyled;
 
   return (
     <StackElement
       css={{
-        textAlign: props.align,
-        ...(props.top && {
+        textAlign: align,
+        ...(top && {
           marginTop: 0,
-          paddingTop: `$${props.top}`,
+          paddingTop: `$${top}`,
         }),
-        ...(props.bottom && {
+        ...(bottom && {
           marginBottom: 0,
-          paddingBottom: `$${props.bottom}`,
+          paddingBottom: `$${bottom}`,
         }),
-        ...(props.minimal && {
+        ...(minimal && {
           paddingLeft: 0,
           paddingRight: 0,
         }),
-        ...(props?.direction === "column" && {
+        ...(direction === "column" && {
           [breakpoints.phone]: {
-            flex: props.widthPhone ? `0 0 ${props.widthPhone}%` : `0 0 100%`,
-            marginLeft: props.offsetPhone ? `${props.offsetPhone}%` : 0,
-            width: props.widthPhone ? `${props.widthPhone}%` : `100%`,
+            flex: widthPhone ? `0 0 ${widthPhone}%` : `0 0 100%`,
+            marginLeft: offsetPhone ? `${offsetPhone}%` : 0,
+            width: widthPhone ? `${widthPhone}%` : `100%`,
           },
           [breakpoints.tabletX]: {
-            flex: props.widthTablet ? `0 0 ${props.widthTablet}%` : `0 0 ${props.width}%`,
-            marginLeft: props.offsetTablet ? `${props.offsetTablet}%` : `${props.offset}%`,
-            width: props.widthTablet ? `${props.widthTablet}%` : `${props.width}%`,
+            flex: widthTablet ? `0 0 ${widthTablet}%` : `0 0 ${width}%`,
+            marginLeft: offsetTablet ? `${offsetTablet}%` : `${offset}%`,
+            width: widthTablet ? `${widthTablet}%` : `${width}%`,
           },
           [breakpoints.laptopX]: {
-            flex: props.widthLaptop ? `0 0 ${props.widthLaptop}%` : `0 0 ${props.width}%`,
-            marginLeft: props.offsetLaptop ? `${props.offsetLaptop}%` : `${props.offset}%`,
-            width: props.widthLaptop ? `${props.widthLaptop}%` : `${props.width}%`,
+            flex: widthLaptop ? `0 0 ${widthLaptop}%` : `0 0 ${width}%`,
+            marginLeft: offsetLaptop ? `${offsetLaptop}%` : `${offset}%`,
+            width: widthLaptop ? `${widthLaptop}%` : `${width}%`,
           },
           [breakpoints.desktopX]: {
-            flex: props.widthDesktop ? `0 0 ${props.widthDesktop}%` : `0 0 ${props.width}%`,
-            marginLeft: props.offsetDesktop ? `${props.offsetDesktop}%` : `${props.offset}%`,
-            width: props.widthDesktop ? `${props.widthDesktop}%` : `${props.width}%`,
+            flex: widthDesktop ? `0 0 ${widthDesktop}%` : `0 0 ${width}%`,
+            marginLeft: offsetDesktop ? `${offsetDesktop}%` : `${offset}%`,
+            width: widthDesktop ? `${widthDesktop}%` : `${width}%`,
           },
           [breakpoints.wide]: {
-            flex: props.widthWide ? `0 0 ${props.widthWide}%` : `0 0 ${props.width}%`,
-            marginLeft: props.offsetWide ? `${props.offsetWide}%` : `${props.offset}%`,
-            width: props.widthWide ? `${props.widthWide}%` : `${props.width}%`,
+            flex: widthWide ? `0 0 ${widthWide}%` : `0 0 ${width}%`,
+            marginLeft: offsetWide ? `${offsetWide}%` : `${offset}%`,
+            width: widthWide ? `${widthWide}%` : `${width}%`,
           },
         }),
-        ...(props?.direction === "row" && {
+        ...(direction === "row" && {
           "*": {
-            alignItems: props.flex || "normal",
+            alignItems: flex || "normal",
           },
-          alignItems: props.flex || "normal",
+          alignItems: flex || "normal",
         }),
-        ...props.css,
+        ...css,
       }}
-      flexduo={props.flexduo}>
-      {props.children}
+      flexduo={flexduo}>
+      {children}
     </StackElement>
   );
 }

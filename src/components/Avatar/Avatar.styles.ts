@@ -1,6 +1,6 @@
 import { styled } from "../../stitches.config";
-import ImageStyled from "../Image/Image.styles";
-import TextStyled from "../Text/Text.styles";
+import { ImageStyled } from "../Image/Image.styles";
+import { TextStyled } from "../Text/Text.styles";
 
 export const AvatarStyled = styled("div", {
   backgroundColor: "$default !important",

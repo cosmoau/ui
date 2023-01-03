@@ -24,83 +24,84 @@ type InferComponentProps<T extends ElementType> = T extends ComponentType<infer 
   : Record<string, never>;
 
 export interface AvatarProps {
-  css?: CSS;
-  src?: string;
   alt?: string;
+  css?: CSS;
   fallback: string;
+  src?: string;
   width?: number;
 }
 
 export interface BadgeProps {
-  css?: CSS;
+  block?: boolean;
   children: ReactNode;
-  loading?: boolean;
-  theme?: "red" | "orange" | "pink" | "purple" | "blue" | "green" | "border" | "default";
-  onClick?: MouseEventHandler<HTMLDivElement>;
+  closable?: boolean;
+  css?: CSS;
+  dot?: boolean | "pulse";
+  dotColor?: "red" | "orange" | "pink" | "purple" | "blue" | "green" | "border" | "default";
   icon?: ReactNode;
   iconPosition?: "left" | "right";
   inline?: ThemeSpacing | "auto";
-  dot?: boolean | "pulse";
-  dotColor?: "red" | "orange" | "pink" | "purple" | "blue" | "green" | "border" | "default";
-  closable?: boolean;
-  block?: boolean;
+  loading?: boolean;
+  onClick?: MouseEventHandler<HTMLDivElement>;
+  theme?: "red" | "orange" | "pink" | "purple" | "blue" | "green" | "border" | "default";
 }
 
 export interface BoxProps {
-  css?: CSS;
   children: ReactNode;
-  loading?: boolean;
-  image?: string;
-  imageCTA?: string;
-  imageHeight?: string;
-  imageTarget?: "_blank" | "_self";
-  imagePosition?: CSSProperties["objectPosition"];
-  imageFit?: CSSProperties["objectFit"];
-  imageAlt?: string;
-  hover?: boolean;
-  theme?: "default" | "success" | "warning" | "error" | "transparent" | "fill";
   closable?: boolean;
+  css?: CSS;
+  hover?: boolean;
+  image?: string;
+  imageAlt?: string;
+  imageCTA?: string;
+  imageFit?: CSSProperties["objectFit"];
+  imageHeight?: string;
+  imagePosition?: CSSProperties["objectPosition"];
+  imageTarget?: "_blank" | "_self";
+  loading?: boolean;
   minimal?: boolean;
+  theme?: "default" | "success" | "warning" | "error" | "transparent" | "fill";
 }
 
 export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
-  css?: CSS;
-  children: ReactNode | string;
-  loading?: boolean;
-  disabled?: boolean;
-  theme?: "default" | "fill" | "minimal" | "solid";
+  ariaLabel?: string;
   block?: boolean;
+  children: ReactNode | string;
+  css?: CSS;
+  disabled?: boolean;
+  external?: boolean;
   icon?: ReactNode;
   iconPosition?: "left" | "right";
   inline?: ThemeSpacing | "auto";
-  small?: boolean;
-  ariaLabel?: string;
+  loading?: boolean;
   name?: string;
-  external?: boolean;
+  small?: boolean;
+  theme?: "default" | "fill" | "minimal" | "solid";
 }
 
 export interface CodeProps {
-  css?: CSS;
   children: ReactNode;
   copy?: boolean;
+  css?: CSS;
 }
 
 export interface DialogProps {
-  css?: CSS;
   children: ReactNode;
-  trigger: ReactNode;
+  css?: CSS;
   locked?: boolean;
+  trigger: ReactNode;
 }
 
 export interface DividerProps {
+  bottom?: ThemeSpacing;
   css?: CSS;
   top?: ThemeSpacing;
-  bottom?: ThemeSpacing;
 }
 
 export interface FieldProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
-  css?: CSS;
   copy?: boolean;
+  css?: CSS;
+  disabled?: boolean;
   error?: boolean;
   errorMessage?: string;
   loading?: boolean;
@@ -112,39 +113,38 @@ export interface FieldProps extends TextareaHTMLAttributes<HTMLTextAreaElement> 
   successMessage?: string;
   warning?: boolean;
   warningMessage?: string;
-  disabled?: boolean;
   width?: number | string;
 }
 
 export interface ImageProps extends NextImageProps {
-  css?: CSS;
   borderRadius?: keyof typeof theme.radii;
-  hover?: boolean;
-  fillFit?: CSSProperties["objectFit"];
-  fillPosition?: CSSProperties["objectPosition"];
-  fillHeight?: string | number;
+  css?: CSS;
   fill?: boolean;
+  fillFit?: CSSProperties["objectFit"];
+  fillHeight?: string | number;
+  fillPosition?: CSSProperties["objectPosition"];
+  hover?: boolean;
 }
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  css?: CSS;
   copy?: boolean;
+  css?: CSS;
+  disabled?: boolean;
   error?: boolean;
   errorMessage?: string;
+  icon?: ReactNode;
+  listen?: boolean;
   loading?: boolean;
+  mustRef?: RefObject<HTMLInputElement>;
   reveal?: boolean;
   submit?: string;
-  icon?: ReactNode;
   submitFunction?: (value: string | number | unknown) => void;
   submitValid?: boolean;
   success?: boolean;
   successMessage?: string;
   warning?: boolean;
   warningMessage?: string;
-  disabled?: boolean;
   width?: number | string;
-  listen?: boolean;
-  mustRef?: RefObject<HTMLInputElement>;
 }
 
 export interface LoadingProps {
@@ -153,47 +153,49 @@ export interface LoadingProps {
 }
 
 export interface PopoverProps {
-  css?: CSS;
-  children: ReactNode;
-  type?: "click" | "hover";
   align?: "left" | "right" | "center";
-  trigger: ReactNode;
+  children: ReactNode;
+  css?: CSS;
   minimal?: boolean;
+  trigger: ReactNode;
+  type?: "click" | "hover";
   width?: number | string;
 }
 
 export interface ProviderProps {
-  css?: CSS;
   children: ReactNode;
-  default?: "dark" | "light";
+  css?: CSS;
+  initial?: "dark" | "light";
   locked?: "dark" | "light";
   trigger?: ReactNode;
   triggerActive?: ReactNode;
 }
 
 export interface SelectProps {
+  align?: "left" | "right" | "center";
   css?: CSS;
+  filter?: boolean;
+  last?: boolean;
+  loading?: boolean;
+  locked?: boolean;
+  onSelection?: (value: string, label: string) => void;
   options: Array<{
     label: string;
     value: string;
   }>;
-  align?: "left" | "right" | "center";
-  width?: number | string;
   selection?: string;
-  onSelection?: (value: string, label: string) => void;
   trigger: ReactNode;
-  locked?: boolean;
-  filter?: boolean;
-  last?: boolean;
-  loading?: boolean;
+  width?: number | string;
 }
 
 export interface StackProps {
-  css?: CSS;
+  align?: CSSProperties["textAlign"];
+  bottom?: ThemeSpacing;
   children: ReactNode;
+  css?: CSS;
   direction?: "row" | "column";
   flex?: CSSProperties["alignItems"];
-  align?: CSSProperties["textAlign"];
+  flexduo?: boolean;
   minimal?: boolean;
   offset?: number;
   offsetDesktop?: number;
@@ -201,48 +203,46 @@ export interface StackProps {
   offsetPhone?: number;
   offsetTablet?: number;
   offsetWide?: number;
+  top?: ThemeSpacing;
   width?: number;
   widthDesktop?: number;
   widthLaptop?: number;
   widthPhone?: number;
   widthTablet?: number;
   widthWide?: number;
-  top?: ThemeSpacing;
-  bottom?: ThemeSpacing;
-  flexduo?: boolean;
 }
 
 export interface TableProps {
+  bodyChildren?: Array<Array<ReactNode | string>>;
   css?: CSS;
   headChildren?: Array<string>;
-  bodyChildren?: Array<Array<ReactNode | string>>;
   sort?: boolean;
   sortDisabled?: number | number[];
 }
 
 export interface TextProps {
-  css?: CSS;
-  children: ReactNode;
-  bold?: boolean;
   accent?: boolean;
-  as?: keyof typeof TextSizes;
-  override?: keyof typeof TextSizes;
-  top?: ThemeSpacing;
-  bottom?: ThemeSpacing;
-  inline?: ThemeSpacing | "auto";
   ariaLabel?: string;
   ariaLabelledBy?: string;
   ariaTitle?: string;
+  as?: keyof typeof TextSizes;
+  bold?: boolean;
+  bottom?: ThemeSpacing;
+  children: ReactNode;
+  css?: CSS;
+  inline?: ThemeSpacing | "auto";
+  override?: keyof typeof TextSizes;
+  top?: ThemeSpacing;
 }
 
 export type ToastProps = InferComponentProps<typeof Toaster>;
 
 export interface ViewProps {
-  css?: CSS;
+  bottom?: ThemeSpacing;
   children: ReactNode;
   container?: boolean;
-  top?: ThemeSpacing;
-  bottom?: ThemeSpacing;
+  css?: CSS;
   inverted?: boolean;
   soft?: boolean;
+  top?: ThemeSpacing;
 }

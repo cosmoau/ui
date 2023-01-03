@@ -7,6 +7,20 @@ import { BadgeProps } from "../../types";
 import { BadgeIconStyled, BadgeStyled, BadgeDotStyled, BadgeLoadingStyled } from "./Badge.styles";
 
 export default function Badge(props: BadgeProps): JSX.Element {
+  const {
+    closable,
+    dot,
+    icon,
+    iconPosition,
+    loading,
+    theme,
+    inline,
+    block,
+    css,
+    onClick,
+    dotColor,
+    children,
+  } = props;
   const [isOpen, setIsOpen] = useState(true);
   const [isMounted, setIsMounted] = useState(true);
 
@@ -21,46 +35,44 @@ export default function Badge(props: BadgeProps): JSX.Element {
     <BadgeStyled
       animation={!isOpen}
       css={{
-        ...(props.inline && {
+        ...(inline && {
           display: "inline-flex",
-          marginRight: props.inline === "auto" ? "auto" : `$${props.inline}`,
+          marginRight: inline === "auto" ? "auto" : `$${inline}`,
           verticalAlign: "middle",
         }),
-        ...(props.block && {
+        ...(block && {
           justifyContent: "initial",
           width: "100%",
         }),
-        ...props.css,
+        ...css,
       }}
-      onClick={props.onClick}
-      theme={props.theme || "default"}>
-      {props.icon && (props.iconPosition === "left" || !props.iconPosition) && (
-        <BadgeIconStyled align="left">{props.icon}</BadgeIconStyled>
+      theme={theme || "default"}
+      onClick={onClick}>
+      {icon && (iconPosition === "left" || !iconPosition) && (
+        <BadgeIconStyled align="left">{icon}</BadgeIconStyled>
       )}
-      {props.dot && (
-        <BadgeDotStyled
-          dotColor={props.dotColor || props.theme || "default"}
-          pulse={props.dot === "pulse"}>
+      {dot && (
+        <BadgeDotStyled dotColor={dotColor || theme || "default"} pulse={dot === "pulse"}>
           <Circle weight="fill" />
         </BadgeDotStyled>
       )}
-      {props.loading ? (
+      {loading ? (
         <BadgeLoadingStyled>
           <Loading />
         </BadgeLoadingStyled>
       ) : (
-        props.children
+        children
       )}
-      {props.icon && props.iconPosition === "right" && !props.closable && (
-        <BadgeIconStyled align="right">{props.icon}</BadgeIconStyled>
+      {icon && iconPosition === "right" && !closable && (
+        <BadgeIconStyled align="right">{icon}</BadgeIconStyled>
       )}
-      {props.closable && (
+      {closable && (
         <BadgeIconStyled align="right" onClick={(): void => handleClose()}>
           <X style={{ cursor: "pointer", opacity: 0.7 }} weight="fill" />
         </BadgeIconStyled>
       )}
     </BadgeStyled>
   ) : (
-    <></>
+    <> </>
   );
 }

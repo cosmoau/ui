@@ -7,18 +7,39 @@ import { FieldProps } from "../../types";
 import { FieldStyled, FieldAreaStyled, FieldFunctionStyled } from "./Field.styles";
 
 export default function Field(props: FieldProps): JSX.Element {
-  const [value, setValue] = useState(props.value || "");
+  const {
+    copy,
+    disabled,
+    placeholder,
+    width,
+    css,
+    value,
+    onChange,
+    success,
+    successMessage,
+    warning,
+    warningMessage,
+    error,
+    errorMessage,
+    reveal,
+    loading,
+    submit,
+    submitFunction,
+    submitValid,
+    rows,
+    cols,
+  } = props;
+
   const [isCopied, setIsCopied] = useState(false);
 
   function handleChange(e: ChangeEvent<HTMLTextAreaElement>): void {
-    setValue(e.target.value);
-    if (props.onChange) {
-      props.onChange(e);
+    if (onChange) {
+      onChange(e);
     }
   }
 
   function handleCopy(): void {
-    if (props.copy) {
+    if (copy) {
       navigator.clipboard.writeText(value as string);
       setIsCopied(true);
       setTimeout(() => {
@@ -30,42 +51,34 @@ export default function Field(props: FieldProps): JSX.Element {
   return (
     <FieldStyled
       css={{
-        maxWidth: props.width || "80%",
-        width: props.width || "80%",
+        maxWidth: width || "80%",
+        width: width || "80%",
       }}
-      disabled={props.disabled}
-      state={
-        props.success ? "success" : props.warning ? "warning" : props.error ? "error" : "default"
-      }>
-      {(props.error ||
-        props.success ||
-        props.warning ||
-        props.loading ||
-        props.submit ||
-        props.copy ||
-        props.reveal) && (
+      disabled={disabled}
+      state={success ? "success" : warning ? "warning" : error ? "error" : "default"}>
+      {(error || success || warning || loading || submit || copy || reveal) && (
         <FieldFunctionStyled>
-          {props.error && (
+          {error && (
             <Badge icon={<Warning weight="duotone" />} theme="red">
-              {props.errorMessage || "Error"}
+              {errorMessage || "Error"}
             </Badge>
           )}
-          {props.success && (
+          {success && (
             <Badge icon={<Check weight="duotone" />} theme="green">
-              {props.successMessage || "Success"}
+              {successMessage || "Success"}
             </Badge>
           )}
-          {props.warning && (
+          {warning && (
             <Badge icon={<Warning weight="duotone" />} theme="orange">
-              {props.warningMessage || "Warning"}
+              {warningMessage || "Warning"}
             </Badge>
           )}
-          {props.loading && (
+          {loading && (
             <Badge>
               <Loading />
             </Badge>
           )}
-          {props.copy && (
+          {copy && (
             <Button
               ariaLabel="Copy"
               icon={
@@ -75,35 +88,38 @@ export default function Field(props: FieldProps): JSX.Element {
                   <ClipboardText weight="duotone" />
                 )
               }
-              name="copy"
-              onClick={handleCopy}>
+              onClick={(): void => {
+                handleCopy();
+              }}>
               Copy
             </Button>
           )}
 
-          {props.submit && (
+          {submit && (
             <Button
               ariaLabel="Submit"
-              disabled={!props.submitValid}
+              disabled={!submitValid}
               name="submit"
               onClick={(): void => {
-                if (props.submitFunction && props.submitValid) {
-                  props.submitFunction(value || "");
+                if (submitFunction && submitValid) {
+                  submitFunction(value || "");
                 }
               }}>
-              {props.submit}
+              {submit}
             </Button>
           )}
         </FieldFunctionStyled>
       )}
       <FieldAreaStyled
-        cols={props.cols}
-        css={props.css}
-        disabled={props.disabled}
-        onChange={handleChange}
-        placeholder={props.placeholder}
-        rows={props.rows}
+        cols={cols}
+        css={css}
+        disabled={disabled}
+        placeholder={placeholder}
+        rows={rows}
         value={value}
+        onChange={(e: ChangeEvent<HTMLTextAreaElement>): void => {
+          handleChange(e);
+        }}
       />
     </FieldStyled>
   );

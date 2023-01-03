@@ -14,6 +14,8 @@ import {
 } from "./Table.styles";
 
 export default function Table(props: TableProps): JSX.Element {
+  const { headChildren, bodyChildren, css, sort, sortDisabled } = props;
+
   const [sortBy, setSortBy] = useState(0);
   const [sortDirection, setSortDirection] = useState("asc");
 
@@ -26,7 +28,7 @@ export default function Table(props: TableProps): JSX.Element {
     }
   }
 
-  function sort(a: Array<ReactNode | string>, b: Array<ReactNode | string>): number {
+  function parseSort(a: Array<ReactNode | string>, b: Array<ReactNode | string>): number {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     if (a[sortBy] < b[sortBy]) {
@@ -40,21 +42,21 @@ export default function Table(props: TableProps): JSX.Element {
 
     return 0;
   }
-  const sortedBodyChildren = props.bodyChildren
-    ? props.sort
-      ? props.bodyChildren.sort(sort)
-      : props.bodyChildren
+  const sortedBodyChildren = bodyChildren
+    ? sort
+      ? bodyChildren.sort(parseSort)
+      : bodyChildren
     : [];
 
   return (
-    <TableStyled css={props.css}>
-      {props.headChildren && (
+    <TableStyled css={css}>
+      {headChildren && (
         <TableHeadStyled>
           <TableRowStyled>
-            {props.headChildren.map((child, index) =>
-              !props.sort ||
-              props.sortDisabled === index ||
-              (Array.isArray(props.sortDisabled) && props.sortDisabled.includes(index)) ? (
+            {headChildren.map((child, index) =>
+              !sort ||
+              sortDisabled === index ||
+              (Array.isArray(sortDisabled) && sortDisabled.includes(index)) ? (
                 <TableHeadCellStyled key={index}>{child}</TableHeadCellStyled>
               ) : (
                 <TableHeadCellStyled key={index} onClick={(): void => handleSort(index)}>
@@ -90,7 +92,7 @@ export default function Table(props: TableProps): JSX.Element {
       )}
 
       <TableBodyStyled>
-        {props.bodyChildren ? (
+        {bodyChildren ? (
           sortedBodyChildren.map((row, index) => (
             <TableRowStyled key={index}>
               {row.map((cell, index) => (
@@ -101,7 +103,7 @@ export default function Table(props: TableProps): JSX.Element {
         ) : (
           <TableRowStyled>
             <TableCellStyled
-              colSpan={props.headChildren?.length || 1}
+              colSpan={headChildren?.length || 1}
               css={{
                 textAlign: "left !important",
               }}>

@@ -8,29 +8,31 @@ import Toast from "../Toast";
 import { ProviderStyled, ProviderTriggerStyled, providerReset } from "./Provider.styles";
 
 export default function Provider(props: ProviderProps): JSX.Element {
-  const { isDarkMode } = useDarkMode(!props.locked && props.default === "dark");
-
+  const { locked, initial, children, css } = props;
   providerReset();
-  const locked = props.locked === "dark" ? theme : lightTheme;
-  const auto = isDarkMode ? theme : lightTheme;
-  const active = props.locked ? locked : auto;
+
+  const { isDarkMode } = useDarkMode(locked === "dark" || initial === "dark");
+
+  const active = locked === "dark" ? theme : isDarkMode ? theme : lightTheme;
 
   return (
-    <ProviderStyled className={active} css={props.css}>
+    <ProviderStyled className={active} css={css}>
       <IconContext.Provider value={{ mirrored: false, weight: "regular" }}>
         <Toast />
-        {props.children}
+        {children}
       </IconContext.Provider>
     </ProviderStyled>
   );
 }
 
 export function ProviderToggle(props: Omit<ProviderProps, "children">): JSX.Element {
+  const { trigger, triggerActive, css } = props;
+
   const { isDarkMode, toggle } = useDarkMode(false);
 
   return (
-    <ProviderTriggerStyled css={props.css} onClick={toggle}>
-      {isDarkMode ? props.triggerActive || props.trigger : props.trigger}
+    <ProviderTriggerStyled css={css} onClick={toggle}>
+      {isDarkMode ? triggerActive || trigger : trigger}
     </ProviderTriggerStyled>
   );
 }

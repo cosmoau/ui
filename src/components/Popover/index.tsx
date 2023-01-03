@@ -6,6 +6,7 @@ import { PopoverProps } from "../../types";
 import { PopoverContentStyled, PopoverStyled, PopoverTriggerStyled } from "./Popover.styles";
 
 export default function Popover(props: PopoverProps): JSX.Element {
+  const { css, trigger, children, type, align, width, minimal } = props;
   const ref = useRef(null);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +28,7 @@ export default function Popover(props: PopoverProps): JSX.Element {
     if (isOpen || isMounted) {
       setIsOpen(false);
       setIsMounted(false);
-    } else if (props.type === "click" || !props.type) {
+    } else if (type === "click" || !type) {
       handleOpen();
     }
   }
@@ -36,41 +37,47 @@ export default function Popover(props: PopoverProps): JSX.Element {
     if (isOpen || isMounted) {
       setIsOpen(false);
       setIsMounted(false);
-    } else if (props.type === "hover") {
+    } else if (type === "hover") {
       handleOpen();
     }
   }
 
   function handleMouseLeave(): void {
-    if (props.type === "hover") {
+    if (type === "hover") {
       handleClose();
     }
   }
 
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  useOnClickOutside(ref, props.trigger !== "hover" ? (): void => handleClose() : (): void => {});
+  useOnClickOutside(ref, trigger !== "hover" ? (): void => handleClose() : (): void => {});
 
   return (
     <PopoverStyled>
       <PopoverTriggerStyled
-        onClickCapture={handleClick}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}>
-        {props.trigger}
+        onClickCapture={(): void => {
+          handleClick();
+        }}
+        onMouseEnter={(): void => {
+          handleMouseEnter();
+        }}
+        onMouseLeave={(): void => {
+          handleMouseLeave();
+        }}>
+        {trigger}
       </PopoverTriggerStyled>
       {isMounted && (
         <PopoverContentStyled
+          ref={ref}
           animation={isOpen}
           css={{
-            ...props.css,
-            left: props.align === "left" ? "0" : "auto",
-            maxWidth: props.width || "25rem",
-            minWidth: props.width || "15rem",
-            right: props.align === "right" ? "0" : "auto",
+            ...css,
+            left: align === "left" ? "0" : "auto",
+            maxWidth: width || "25rem",
+            minWidth: width || "15rem",
+            right: align === "right" ? "0" : "auto",
           }}
-          minimal={props.minimal}
-          ref={ref}>
-          {props.children}
+          minimal={minimal}>
+          {children}
         </PopoverContentStyled>
       )}
     </PopoverStyled>

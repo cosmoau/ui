@@ -1,18 +1,19 @@
 import { DividerProps } from "../../types";
 
-import DividerStyled from "./Divider.styles";
+import { DividerStyled } from "./Divider.styles";
 
 export default function Divider(props: DividerProps): JSX.Element {
+  const { top, bottom, css } = props;
   return (
     <DividerStyled
       css={{
-        ...(props.top && {
-          marginTop: `$${props.top}`,
+        ...(top && {
+          marginTop: `$${top}`,
         }),
-        ...(props.bottom && {
-          marginBottom: `$${props.bottom}`,
+        ...(bottom && {
+          marginBottom: `$${bottom}`,
         }),
-        ...props.css,
+        ...css,
       }}
     />
   );

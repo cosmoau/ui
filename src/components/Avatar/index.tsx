@@ -4,8 +4,8 @@ import { AvatarProps } from "../../types";
 import { AvatarStyled } from "./Avatar.styles";
 
 export default function Avatar(props: AvatarProps): JSX.Element {
-  const fontSize =
-    Math.min((props.width || 35) / 0.9, (props.width || 35) / 0.9) / props.fallback?.length || 1;
+  const { src, alt, fallback, width, css } = props;
+  const fontSize = Math.min((width || 35) / 0.9, (width || 35) / 0.9) / fallback?.length || 1;
 
   return (
     <AvatarStyled
@@ -13,16 +13,12 @@ export default function Avatar(props: AvatarProps): JSX.Element {
         "*": {
           fontSize: `${fontSize}px`,
         },
-        height: props.width || 35,
-        width: props.width || 35,
+        height: width || 35,
+        width: width || 35,
 
-        ...props.css,
+        ...css,
       }}>
-      {props.src ? (
-        <Image alt={props.alt || props.fallback} fill src={props.src} />
-      ) : (
-        <Text as="span">{props.fallback}</Text>
-      )}
+      {src ? <Image alt={alt || fallback} fill src={src} /> : <Text as="span">{fallback}</Text>}
     </AvatarStyled>
   );
 }

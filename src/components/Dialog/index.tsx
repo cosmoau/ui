@@ -14,6 +14,7 @@ import {
 } from "./Dialog.styles";
 
 export default function Dialog(props: DialogProps): JSX.Element {
+  const { css, trigger, children, locked } = props;
   const ref = useRef(null);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -48,20 +49,22 @@ export default function Dialog(props: DialogProps): JSX.Element {
     }
   });
 
-  useLockedBody(props.locked ? isOpen : false);
+  useLockedBody(locked ? isOpen : false);
 
   return (
     <DialogStyled>
-      <DialogTriggerStyled onClickCapture={handleClick}>{props.trigger}</DialogTriggerStyled>
+      <DialogTriggerStyled onClickCapture={(): void => handleClick()}>
+        {trigger}
+      </DialogTriggerStyled>
       {isMounted && (
         <DialogOverlayStyled animation={isOpen}>
-          <DialogContentStyled animation={isOpen} css={props.css} ref={ref}>
+          <DialogContentStyled ref={ref} animation={isOpen} css={css}>
             <DialogExitStyled onClick={(): void => handleClose()}>
               <Button ariaLabel="Close" icon={<X />} name="close" small theme="minimal">
                 Close
               </Button>
             </DialogExitStyled>
-            {props.children}
+            {children}
           </DialogContentStyled>
         </DialogOverlayStyled>
       )}

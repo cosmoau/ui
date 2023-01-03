@@ -126,9 +126,6 @@ export function App(): ReactElement {
               </Button>
               <ProviderToggle trigger={<Button inline="medium">Test</Button>} />
               <Select
-                onSelection={(value: string, label: string) => {
-                  alert(`Value: ${value}, Label: ${label} `);
-                }}
                 options={[
                   {
                     label: "Test One",
@@ -141,6 +138,9 @@ export function App(): ReactElement {
                 ]}
                 selection="test1"
                 trigger={<Button>Test</Button>}
+                onSelection={(value: string, label: string) => {
+                  alert(`Value: ${value}, Label: ${label} `);
+                }}
               />
             </Box>
           </Stack>
@@ -272,12 +272,12 @@ export function App(): ReactElement {
               external
               icon={<ArrowRight />}
               iconPosition="right"
+              small
               onClick={() =>
                 toast.success(
                   "Heading Three is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt vestibulum, mauris nisl porta odio, vitae aliquet nisl nunc vel nisl. Nulla facilisi. Nulla facilisi."
                 )
-              }
-              small>
+              }>
               Button test
             </Button>
 
@@ -286,8 +286,8 @@ export function App(): ReactElement {
               external
               icon={<ArrowRight />}
               iconPosition="right"
-              onClick={() => toast.success("Heading Three is Lorsi.")}
-              small>
+              small
+              onClick={() => toast.success("Heading Three is Lorsi.")}>
               Button test
             </Button>
             <Popover

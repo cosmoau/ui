@@ -6,41 +6,53 @@ import { ButtonProps } from "../../types";
 import { ButtonIconStyled, ButtonStyled } from "./Button.styles";
 
 export default function Button(props: ButtonProps): JSX.Element {
+  const {
+    external,
+    icon,
+    iconPosition,
+    loading,
+    small,
+    theme,
+    disabled,
+    inline,
+    children,
+    ariaLabel,
+    name,
+    block,
+    css,
+    onClick,
+  } = props;
   return (
     <ButtonStyled
-      aria-label={
-        props.ariaLabel || props.name || typeof props.children === "string"
-          ? props?.children?.toString()
-          : ""
-      }
-      block={props.block}
+      aria-label={ariaLabel || name || typeof children === "string" ? children?.toString() : ""}
+      block={block}
       css={{
-        ...(props.inline && {
+        ...(inline && {
           alignSelf: "center",
-          marginRight: props.inline === "auto" ? "auto" : `$${props.inline}`,
+          marginRight: inline === "auto" ? "auto" : `$${inline}`,
           verticalAlign: "middle",
         }),
 
-        ...props.css,
+        ...css,
       }}
-      disabled={props.disabled || props.loading || false}
-      name={props.name}
-      onClick={props.onClick}
-      small={props.small}
-      theme={props.theme || "default"}>
-      {props.loading && (
+      disabled={disabled || loading || false}
+      name={name}
+      small={small}
+      theme={theme || "default"}
+      onClick={onClick}>
+      {loading && (
         <ButtonIconStyled align="left">
           <Loading />
         </ButtonIconStyled>
       )}
-      {props.icon && (props.iconPosition === "left" || !props.iconPosition) && !props.external && (
-        <ButtonIconStyled align="left">{props.icon}</ButtonIconStyled>
+      {icon && (iconPosition === "left" || !iconPosition) && !external && (
+        <ButtonIconStyled align="left">{icon}</ButtonIconStyled>
       )}
-      {props.children}
-      {props.icon && props.iconPosition === "right" && !props.external && (
-        <ButtonIconStyled align="right">{props.icon}</ButtonIconStyled>
+      {children}
+      {icon && iconPosition === "right" && !external && (
+        <ButtonIconStyled align="right">{icon}</ButtonIconStyled>
       )}
-      {props.external && (
+      {external && (
         <ButtonIconStyled align="right">
           <ArrowSquareOut />
         </ButtonIconStyled>
