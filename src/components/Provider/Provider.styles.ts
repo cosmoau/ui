@@ -38,7 +38,7 @@ export const providerReset = globalCss({
       fontFamily: "Untitled Sans",
       fontStyle: "normal",
       fontWeight: "normal",
-      src: `url(${bucketURL}/untitled-sans-web-regular.woff2) format("woff2"), url(${bucketURL}/untitled-sans-web-regular.woff) format("woff")`,
+      src: `url(${bucketURL}/untitled-sans-web-regular.woff2)`,
     },
 
     {
@@ -46,7 +46,7 @@ export const providerReset = globalCss({
       fontFamily: "Untitled Sans",
       fontStyle: "normal",
       fontWeight: "bold",
-      src: `url(${bucketURL}/untitled-sans-web-medium.woff2) format("woff2"), url(${bucketURL}/untitled-sans-web-medium.woff) format("woff")`,
+      src: `url(${bucketURL}/untitled-sans-web-medium.woff2)`,
     },
 
     {
@@ -54,7 +54,7 @@ export const providerReset = globalCss({
       fontFamily: "Tiempos Headline",
       fontStyle: "normal",
       fontWeight: "normal",
-      src: `url(${bucketURL}/tiempos-headline-regular.woff2) format("woff2"), url(${bucketURL}/tiempos-headline-regular.woff) format("woff")`,
+      src: `url(${bucketURL}/tiempos-headline-regular.woff2)`,
     },
   ],
 
