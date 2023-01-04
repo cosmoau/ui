@@ -24,7 +24,7 @@ export const ProviderTriggerStyled = styled("div", {
   verticalAlign: "middle",
 });
 
-const bucketURL = "https://xxxjddzdqkdtyqtywwfi.supabase.co/storage/v1/object/public/public";
+const baseFontURL = "https://cosmogroup.io/fonts";
 
 export const providerReset = globalCss({
   "*, *::before, *::after": {
@@ -38,7 +38,7 @@ export const providerReset = globalCss({
       fontFamily: "Untitled Sans",
       fontStyle: "normal",
       fontWeight: "normal",
-      src: `url(${bucketURL}/untitled-sans-web-regular.woff2)`,
+      src: `url(${baseFontURL}/untitled-sans-web-regular.woff2)`,
     },
 
     {
@@ -46,7 +46,7 @@ export const providerReset = globalCss({
       fontFamily: "Untitled Sans",
       fontStyle: "normal",
       fontWeight: "bold",
-      src: `url(${bucketURL}/untitled-sans-web-medium.woff2)`,
+      src: `url(${baseFontURL}/untitled-sans-web-medium.woff2)`,
     },
 
     {
@@ -54,7 +54,7 @@ export const providerReset = globalCss({
       fontFamily: "Tiempos Headline",
       fontStyle: "normal",
       fontWeight: "normal",
-      src: `url(${bucketURL}/tiempos-headline-regular.woff2)`,
+      src: `url(${baseFontURL}/tiempos-headline-regular.woff2)`,
     },
   ],
 
