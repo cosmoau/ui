@@ -21,7 +21,7 @@ export const BadgeStyled = styled("div", {
   borderRadius: "$large",
   display: "inline-flex",
   justifyContent: "center",
-  padding: "$smallest $medium",
+  padding: "$smallest $small",
   ...TextSizes.p,
   marginBottom: "0 !important",
 

@@ -1,7 +1,7 @@
 {
   "name": "@cosmoau/ui",
   "description": "A library of UI components used to enforce consistency across every product at Cosmo and make development easier.",
-  "version": "1.2.22",
+  "version": "1.2.23",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "bugs": {
@@ -20,7 +20,7 @@
     "next": "^13.1.1",
     "parcel": "^2.8.2",
     "path-browserify": "^1.0.1",
-    "prettier": "^2.8.1",
+    "prettier": "^2.8.2",
     "process": "^0.11.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

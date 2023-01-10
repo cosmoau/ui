@@ -59,7 +59,7 @@ export const FieldAreaStyled = styled("textarea", {
   fontFamily: "$default",
   fontSize: "16px",
   margin: "0 auto",
-  padding: "$small $medium",
+  padding: "$smaller $small",
   width: "100%",
 });
 
@@ -73,7 +73,7 @@ export const FieldFunctionStyled = styled("div", {
     paddingTop: "$smallest",
   },
   height: "100%",
-  padding: "$smaller $medium",
+  padding: "$smaller $small",
   position: "relative",
   svg: {
     marginTop: "-0.1rem",

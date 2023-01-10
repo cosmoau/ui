@@ -3,7 +3,7 @@ import { fadeOut, styled } from "../../stitches.config";
 export const paddingVariants = {
   padding: {
     default: {
-      padding: "$large",
+      padding: "$medium",
     },
     none: {
       padding: "0",

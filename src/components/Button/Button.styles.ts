@@ -43,7 +43,7 @@ export const ButtonStyled = styled("button", {
   margin: 0,
   "marginBottom:": "0 !important",
   outline: "none",
-  padding: "$smallest $medium",
+  padding: "$smallest $small",
   svg: {
     marginTop: "-0.3rem",
   },

@@ -54,7 +54,7 @@ export const TableCellStyled = styled("td", {
   borderRight: "0.1rem solid $border",
   justifyContent: "center",
   marginBottom: "0 !important",
-  padding: "$smaller $medium ",
+  padding: "$smaller $small ",
 });
 
 export const TableHeadCellStyled = styled("th", {

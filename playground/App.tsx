@@ -42,8 +42,8 @@ export function App(): ReactElement {
   }, []);
 
   return (
-    <Provider locked="light">
-      <View bottom="extra" container inverted top="extra">
+    <Provider locked="dark">
+      <View bottom="largest" container inverted top="largest">
         <Stack direction="row">
           <Stack direction="column">
             <Text as="h1">Heading One</Text>
@@ -62,7 +62,7 @@ export function App(): ReactElement {
           </Stack>
         </Stack>
       </View>
-      <View bottom="extra" container top="extra">
+      <View bottom="largest" container top="largest">
         <Stack direction="row">
           <Stack direction="column">
             <Text as="h1">
@@ -111,7 +111,7 @@ export function App(): ReactElement {
           </Stack>
         </Stack>
       </View>
-      <View bottom="extra" container soft top="extra">
+      <View bottom="largest" container soft top="largest">
         <Stack direction="row" flex="initial" top="medium">
           <Stack direction="column">
             <Box hover>
@@ -146,7 +146,7 @@ export function App(): ReactElement {
           </Stack>
         </Stack>
       </View>
-      <View bottom="extra" container top="extra">
+      <View bottom="largest" container top="largest">
         <Stack direction="row" flex="initial">
           <Stack direction="column" offset={50} width={50}>
             <Text as="h6">
