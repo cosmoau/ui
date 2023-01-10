@@ -22,6 +22,8 @@ import {
   ProviderToggle,
   Avatar,
   LoadingOverlay,
+  Logo,
+  LogoIcon,
 } from "../src/index";
 
 export function App(): ReactElement {
@@ -46,6 +48,8 @@ export function App(): ReactElement {
     <Provider locked="dark">
       <View bottom="largest" container inverted top="largest">
         <LoadingOverlay />
+        <Logo />
+        <LogoIcon />
         <Stack direction="row">
           <Stack direction="column">
             <Text as="h1">Heading One</Text>
