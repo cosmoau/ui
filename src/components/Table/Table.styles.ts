@@ -44,6 +44,9 @@ export const TableRowStyled = styled("tr", {
 });
 
 export const TableCellStyled = styled("td", {
+  "&:first-child": {
+    textAlign: "left !important",
+  },
   "&:last-child": {
     borderRight: "0",
     textAlign: "right",

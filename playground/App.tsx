@@ -91,6 +91,21 @@ export function App(): ReactElement {
             </Text>
             <Text as="p">
               Paragraph - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor,
+              leo vel tincidunt vestibulum. Paragraph - Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Nullam auctor, leo vel tincidunt vestibulum Paragraph - Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel tincidunt
+              vestibulum Paragraph - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              auctor, leo vel tincidunt vestibulum Paragraph - Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Nullam auctor, leo vel tincidunt vestibulum Paragraph -
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, leo vel
+              tincidunt vestibulum
+            </Text>
+            <Text as="p">
+              Paragraph - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor,
+              leo vel tincidunt vestibulum
+            </Text>
+            <Text as="p">
+              Paragraph - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor,
               leo vel tincidunt vestibulum
             </Text>
             <Text as="span">
