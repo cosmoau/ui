@@ -148,7 +148,9 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 export interface LoadingProps {
+  horizontal?: "left" | "right";
   stroke?: string;
+  vertical?: "top" | "bottom";
   width?: number | string;
 }
 

@@ -9,7 +9,7 @@ export { default as Select, Dropdown } from "./components/Select";
 export { default as Field } from "./components/Field";
 export { default as Image } from "./components/Image";
 export { default as Input } from "./components/Input";
-export { default as Loading } from "./components/Loading";
+export { default as Loading, LoadingOverlay } from "./components/Loading";
 export { default as Popover } from "./components/Popover";
 export { default as Provider, ProviderToggle } from "./components/Provider";
 export { default as Stack } from "./components/Stack";

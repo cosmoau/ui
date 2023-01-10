@@ -21,6 +21,7 @@ import {
   Select,
   ProviderToggle,
   Avatar,
+  LoadingOverlay,
 } from "../src/index";
 
 export function App(): ReactElement {
@@ -44,6 +45,7 @@ export function App(): ReactElement {
   return (
     <Provider locked="dark">
       <View bottom="largest" container inverted top="largest">
+        <LoadingOverlay />
         <Stack direction="row">
           <Stack direction="column">
             <Text as="h1">Heading One</Text>
