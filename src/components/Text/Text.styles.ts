@@ -45,15 +45,13 @@ export const TextSizes = {
     marginBottom: "$small",
   },
   li: {
-    fontSize: "$p",
-    fontWeight: "$p",
-    lineHeight: "$p",
     listStylePosition: "inside",
     marginBottom: "$smaller",
   },
+  strong: {
+    fontWeight: "bold",
+  },
   ol: {
-    fontSize: "$p",
-    fontWeight: "$p",
     lineHeight: "$p",
   },
   p: {
@@ -75,8 +73,6 @@ export const TextSizes = {
     lineHeight: "inherit",
   },
   ul: {
-    fontSize: "$p",
-    fontWeight: "$p",
     lineHeight: "$p",
   },
 };

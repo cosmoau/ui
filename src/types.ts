@@ -226,7 +226,6 @@ export interface TextProps {
   ariaLabelledBy?: string;
   ariaTitle?: string;
   as?: keyof typeof TextSizes;
-  bold?: boolean;
   bottom?: ThemeSpacing;
   children: ReactNode;
   css?: CSS;

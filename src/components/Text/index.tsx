@@ -5,7 +5,6 @@ import { TextStyled } from "./Text.styles";
 export default function Text(props: TextProps): JSX.Element {
   const {
     accent,
-    bold,
     top,
     bottom,
     inline,
@@ -33,7 +32,6 @@ export default function Text(props: TextProps): JSX.Element {
       aria-label={ariaLabel || undefined}
       aria-labelledby={ariaLabelledBy || undefined}
       as={override || as || "p"}
-      bold={bold}
       css={{
         ...(top && {
           marginTop: 0,
