@@ -244,6 +244,5 @@ export interface ViewProps {
   container?: boolean;
   css?: CSS;
   inverted?: boolean;
-  soft?: boolean;
   top?: ThemeSpacing;
 }

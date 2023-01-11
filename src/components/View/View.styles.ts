@@ -5,17 +5,6 @@ export const ViewStyled = styled("section", {
   paddingLeft: "$small",
   paddingRight: "$small",
   position: "relative",
-  variants: {
-    soft: {
-      false: {
-        backgroundColor: "$background",
-      },
-      true: {
-        backgroundColor: "$soft",
-      },
-    },
-  },
-
   width: "100%",
 });
 
