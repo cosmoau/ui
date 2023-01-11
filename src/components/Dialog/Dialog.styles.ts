@@ -42,7 +42,7 @@ export const DialogOverlayStyled = styled("div", {
 export const DialogContentStyled = styled("div", {
   backgroundColor: "$background",
   borderRadius: "$medium",
-  boxShadow: "large",
+  boxShadow: "$large",
   left: "50%",
   maxHeight: "85vh",
   maxWidth: "90%",

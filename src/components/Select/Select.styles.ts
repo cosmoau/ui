@@ -20,7 +20,7 @@ export const SelectGroupStyled = styled("div", {
   backgroundColor: "$background",
   border: "0.1rem solid $border",
   borderRadius: "$small",
-  boxShadow: "large",
+  boxShadow: "$large",
   lineBreak: "auto",
   marginTop: "5%",
   overflowY: "auto",

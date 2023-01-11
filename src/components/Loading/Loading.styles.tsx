@@ -12,6 +12,16 @@ export const LoadingOverlayStyled = styled("div", {
   zIndex: 1000,
   pointerEvents: "none",
   userSelect: "none",
+  backgroundColor: "$background",
+  padding: "$smaller",
+  borderRadius: "$medium",
+  border: "0.1rem solid $border",
+  boxShadow: "$medium",
+
+  svg: {
+    width: "auto",
+    height: "auto",
+  },
 
   variants: {
     vertical: {

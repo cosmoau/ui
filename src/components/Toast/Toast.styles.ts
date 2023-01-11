@@ -5,7 +5,7 @@ export const ToastStyled = styled("div", {
   backgroundColor: "$background",
   border: "0.1rem solid $border",
   borderRadius: "$small",
-  boxShadow: "large",
+  boxShadow: "$large",
   cursor: "pointer",
   width: "fit-content",
   ...TextSizes.p,

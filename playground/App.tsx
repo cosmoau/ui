@@ -45,9 +45,8 @@ export function App(): ReactElement {
   }, []);
 
   return (
-    <Provider locked="dark">
+    <Provider locked="light">
       <View bottom="largest" container inverted top="largest">
-        <LoadingOverlay />
         <Logo />
         <LogoIcon />
         <Stack direction="row">
@@ -71,6 +70,8 @@ export function App(): ReactElement {
       <View bottom="largest" container top="largest">
         <Stack direction="row">
           <Stack direction="column">
+            <LoadingOverlay />
+
             <Text as="h1">
               Heading One - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor,
               leo vel tincidunt vestibulum
@@ -132,7 +133,7 @@ export function App(): ReactElement {
           </Stack>
         </Stack>
       </View>
-      <View bottom="largest" container soft top="largest">
+      <View bottom="largest" container top="largest">
         <Stack direction="row" flex="initial" top="medium">
           <Stack direction="column">
             <Box hover>
