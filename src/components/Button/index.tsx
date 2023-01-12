@@ -5,7 +5,7 @@ import { ButtonProps } from "../../types";
 
 import { ButtonIconStyled, ButtonStyled } from "./Button.styles";
 
-export default function Button(props: ButtonProps): JSX.Element {
+export function Button(props: ButtonProps): JSX.Element {
   const {
     external,
     icon,

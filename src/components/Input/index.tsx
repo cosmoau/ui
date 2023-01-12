@@ -15,7 +15,7 @@ import {
   InputIconStyled,
 } from "./Input.styles";
 
-export default function Input(props: InputProps): JSX.Element {
+export function Input(props: InputProps): JSX.Element {
   const {
     copy,
     icon,

@@ -1,11 +1,12 @@
 import React, { ReactElement } from "react";
 
-import { Provider, View, Code, Table, Text } from "../src/index";
+import { Provider, View, Code, Table, Text, Button } from "../src/index";
 
 export function App(): ReactElement {
   return (
     <Provider locked="light">
       <View bottom="largest" container top="largest">
+        <Button>Test</Button>
         <Text as="h1">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
         </Text>
@@ -27,13 +28,8 @@ export function App(): ReactElement {
         <Text as="p">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
         </Text>
-        <Text as="span">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
-        </Text>
-        <Text as="strong">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
-        </Text>
-        <Text as="li">
+
+        <Text as="small">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
         </Text>
         <Code>

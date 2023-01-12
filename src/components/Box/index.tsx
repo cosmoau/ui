@@ -6,7 +6,7 @@ import { BoxProps } from "../../types";
 
 import { BoxExitStyled, BoxImageChildrenStyled, BoxStyled } from "./Box.styles";
 
-export default function Box(props: BoxProps): JSX.Element {
+export function Box(props: BoxProps): JSX.Element {
   const {
     image,
     imageAlt,

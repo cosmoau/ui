@@ -13,7 +13,7 @@ import {
   DialogTriggerStyled,
 } from "./Dialog.styles";
 
-export default function Dialog(props: DialogProps): JSX.Element {
+export function Dialog(props: DialogProps): JSX.Element {
   const { css, trigger, children, locked } = props;
   const ref = useRef(null);
 

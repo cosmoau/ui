@@ -6,7 +6,7 @@ import { TableProps } from "../../types";
 
 import { TableStyled } from "./Table.styles";
 
-export default function Table(props: TableProps): JSX.Element {
+export function Table(props: TableProps): JSX.Element {
   const { headChildren, bodyChildren, css, sort, sortDisabled, ...rest } = props;
 
   const [sortBy, setSortBy] = useState(0);

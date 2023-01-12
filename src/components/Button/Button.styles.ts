@@ -38,6 +38,7 @@ export const ButtonStyled = styled("button", {
   cursor: "pointer",
   display: "inline",
   fontFamily: "$default",
+  fontSize: "$default",
   justifyContent: "center",
   margin: 0,
   "marginBottom:": "0 !important",

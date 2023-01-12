@@ -8,7 +8,6 @@ export const CodeStyled = styled("div", {
   display: "flex",
   justifyContent: "space-between",
 
-  // tablet, don't space between - full width
   [breakpoints.tablet]: {
     display: "block",
   },
@@ -17,7 +16,6 @@ export const CodeStyled = styled("div", {
 export const CodeBlockStyled = styled("code", {
   flex: "1 1 auto",
 
-  // tablet, don't space between - full width
   [breakpoints.tablet]: {
     display: "block",
     flex: "0 0 auto",

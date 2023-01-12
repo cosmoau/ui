@@ -3,7 +3,7 @@ import { ViewProps } from "../../types";
 
 import { ViewStyled, ViewContainerStyled } from "./View.styles";
 
-export default function View(props: ViewProps): JSX.Element {
+export function View(props: ViewProps): JSX.Element {
   const { container, inverted, top, bottom, css, children } = props;
   return (
     <ViewStyled

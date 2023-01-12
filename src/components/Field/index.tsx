@@ -7,7 +7,7 @@ import { FieldProps } from "../../types";
 
 import { FieldStyled, FieldAreaStyled, FieldFunctionStyled } from "./Field.styles";
 
-export default function Field(props: FieldProps): JSX.Element {
+export function Field(props: FieldProps): JSX.Element {
   const {
     copy,
     disabled,

@@ -3,7 +3,7 @@ import { StackProps } from "../../types";
 
 import { StackColumnStyled, StackRowStyled, StackElementStyled } from "./Stack.styles";
 
-export default function Stack(props: StackProps): JSX.Element {
+export function Stack(props: StackProps): JSX.Element {
   const {
     direction,
     align,

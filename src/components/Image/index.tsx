@@ -4,7 +4,7 @@ import { ImageProps } from "../../types";
 
 import { ImageStyled } from "./Image.styles";
 
-export default function Image(props: ImageProps): JSX.Element {
+export function Image(props: ImageProps): JSX.Element {
   const { css, borderRadius, hover, fill, fillFit, fillPosition, fillHeight, ...rest } = props;
   return (
     <ImageStyled

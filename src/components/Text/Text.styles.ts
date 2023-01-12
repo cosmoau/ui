@@ -56,8 +56,8 @@ export const TextSizes = {
   },
   small: {
     display: "block",
-    fontSize: "$small",
-    lineHeight: "$small",
+    fontSize: "calc($default * 0.9)",
+    lineHeight: "calc($default * 0.95)",
     marginBottom: "$smaller",
   },
   span: {

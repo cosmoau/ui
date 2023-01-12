@@ -17,7 +17,7 @@ export const TableStyled = styled("div", {
       backgroundColor: "$default",
 
       th: {
-        fontSize: "$default !important",
+        fontSize: "$default",
         fontWeight: "normal",
         borderRight: "0.1rem solid $border",
         padding: "$small $medium",

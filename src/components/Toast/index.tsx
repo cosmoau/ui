@@ -5,7 +5,7 @@ import { ToastProps } from "../../types";
 
 import { ToastContainerStyled, ToastStyled } from "./Toast.styles";
 
-export default function Toast(props: ToastProps): JSX.Element {
+export function Toast(props: ToastProps): JSX.Element {
   const { toasts, handlers } = useToaster();
   const { startPause, endPause } = handlers;
 

@@ -7,7 +7,7 @@ import { CodeProps } from "../../types";
 
 import { CodeStyled, CodeFunctionStyled, CodeBlockStyled } from "./Code.styles";
 
-export default function Code(props: CodeProps): JSX.Element {
+export function Code(props: CodeProps): JSX.Element {
   const { children, css, ...rest } = props;
   const [isCopied, setIsCopied] = useState(false);
 

@@ -55,7 +55,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       serif: "Tiempos Headline, $default",
     },
     lineHeights: {
-      default: "1.5",
+      default: "1.4",
     },
     radii: {
       large: "1rem",

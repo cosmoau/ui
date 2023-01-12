@@ -6,7 +6,7 @@ import { BadgeProps } from "../../types";
 
 import { BadgeIconStyled, BadgeStyled, BadgeDotStyled, BadgeLoadingStyled } from "./Badge.styles";
 
-export default function Badge(props: BadgeProps): JSX.Element {
+export function Badge(props: BadgeProps): JSX.Element {
   const {
     closable,
     dot,

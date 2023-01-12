@@ -3,11 +3,11 @@ import { useDarkMode } from "usehooks-ts";
 
 import { lightTheme, theme } from "../../stitches.config";
 import { ProviderProps } from "../../types";
-import Toast from "../Toast";
+import { Toast } from "../Toast";
 
 import { ProviderStyled, ProviderTriggerStyled, providerReset } from "./Provider.styles";
 
-export default function Provider(props: ProviderProps): JSX.Element {
+export function Provider(props: ProviderProps): JSX.Element {
   const { locked, initial, children, css } = props;
   providerReset();
 

@@ -2,7 +2,7 @@ import { LoadingProps } from "../../types";
 
 import { LoadingOverlayStyled } from "./Loading.styles";
 
-export default function Loading({ width = 18 }: LoadingProps): JSX.Element {
+export function Loading({ width = 18 }: LoadingProps): JSX.Element {
   return (
     <svg height={width} stroke="currentColor" viewBox="0 0 38 38" width={width}>
       <g fill="none" fillRule="evenodd">

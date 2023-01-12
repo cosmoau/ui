@@ -5,7 +5,7 @@ import { PopoverProps } from "../../types";
 
 import { PopoverContentStyled, PopoverStyled, PopoverTriggerStyled } from "./Popover.styles";
 
-export default function Popover(props: PopoverProps): JSX.Element {
+export function Popover(props: PopoverProps): JSX.Element {
   const { css, trigger, children, type, align, width, minimal } = props;
   const ref = useRef(null);
 

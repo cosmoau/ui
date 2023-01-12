@@ -2,7 +2,7 @@ import { DividerProps } from "../../types";
 
 import { DividerStyled } from "./Divider.styles";
 
-export default function Divider(props: DividerProps): JSX.Element {
+export function Divider(props: DividerProps): JSX.Element {
   const { top = "medium", bottom = "medium", css, ...rest } = props;
   return (
     <DividerStyled

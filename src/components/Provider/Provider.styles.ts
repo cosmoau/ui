@@ -65,10 +65,10 @@ export const providerReset = globalCss({
   },
 
   body: {
-    fontFamily: "$default, system-ui, -apple-system, sans-serif",
-    fontSize: "$default",
+    fontFamily: "Untitled Sans, system-ui, -apple-system, sans-serif",
+    fontSize: "1.6rem",
     fontWeight: "normal",
-    lineHeight: "$default",
+    lineHeight: 1.4,
     margin: 0,
     padding: 0,
 

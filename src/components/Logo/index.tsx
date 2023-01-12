@@ -2,7 +2,7 @@ import { SVGProps } from "react";
 
 import { LogoStyled } from "./Logo.styles";
 
-export default function Logo(props: SVGProps<SVGSVGElement>): JSX.Element {
+export function Logo(props: SVGProps<SVGSVGElement>): JSX.Element {
   const { height = 70.7, width = 231.85, ...rest } = props;
   return (
     <LogoStyled>

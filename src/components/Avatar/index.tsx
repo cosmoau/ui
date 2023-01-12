@@ -3,7 +3,7 @@ import { AvatarProps } from "../../types";
 
 import { AvatarStyled } from "./Avatar.styles";
 
-export default function Avatar(props: AvatarProps): JSX.Element {
+export function Avatar(props: AvatarProps): JSX.Element {
   const { src, alt, fallback, width, css } = props;
   const fontSize = Math.min((width || 35) / 0.9, (width || 35) / 0.9) / fallback?.length || 1;
 

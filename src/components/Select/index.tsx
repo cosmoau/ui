@@ -11,7 +11,7 @@ import {
   SelectItemStyled,
 } from "./Select.styles";
 
-export default function Select(props: SelectProps): JSX.Element {
+export function Select(props: SelectProps): JSX.Element {
   const { options, css, onSelection, locked, selection, width, align, trigger, loading, last } =
     props;
   const ref = useRef(null);
