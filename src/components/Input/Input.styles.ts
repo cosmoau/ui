@@ -50,7 +50,7 @@ export const InputCoreStyled = styled("div", {
 export const InputAreaStyled = styled("input", {
   "&::placeholder": {
     color: "$text",
-    fontSize: "16px",
+    fontSize: "$default",
     opacity: "0.5",
   },
 
@@ -62,7 +62,7 @@ export const InputAreaStyled = styled("input", {
   border: "none",
   color: "$text",
   fontFamily: "$default",
-  fontSize: "$p",
+  fontSize: "$default",
   letterSpacing: "0",
   margin: "0",
   minHeight: "2.4rem",
@@ -73,7 +73,7 @@ export const InputAreaStyled = styled("input", {
   width: "100%",
 
   [breakpoints.phone]: {
-    fontSize: "16px !important",
+    fontSize: "$default !important",
   },
 });
 

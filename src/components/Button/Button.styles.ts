@@ -2,7 +2,6 @@ import { styled } from "../../stitches.config";
 import { TextSizes } from "../Text/Text.styles";
 
 export const ButtonStyled = styled("button", {
-  ...TextSizes.p,
   "&::-moz-focus-inner": {
     border: 0,
     outline: 0,

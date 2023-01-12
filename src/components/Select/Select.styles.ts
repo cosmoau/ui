@@ -1,5 +1,4 @@
 import { fadeIn, fadeOut, styled } from "../../stitches.config";
-import { TextSizes } from "../Text/Text.styles";
 
 export const SelectStyled = styled("div", {
   display: "inline-block",
@@ -45,8 +44,6 @@ export const SelectGroupStyled = styled("div", {
 });
 
 export const SelectItemStyled = styled("div", {
-  ...TextSizes.p,
-
   "&:hover": {
     backgroundColor: "$default",
     borderBottomColor: "transparent",
@@ -58,9 +55,7 @@ export const SelectItemStyled = styled("div", {
   borderRadius: 0,
   cursor: "pointer",
   display: "flex",
-  lineHeight: "normal",
-  marginBottom: "0 !important",
-
+  fontSize: "$default",
   padding: "$smaller $small",
   transition: "$default",
 });

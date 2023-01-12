@@ -1,5 +1,4 @@
 import { breakpoints, fadeIn, fadeOut, styled } from "../../stitches.config";
-import { TextSizes } from "../Text/Text.styles";
 
 export const ToastStyled = styled("div", {
   backgroundColor: "$background",
@@ -8,7 +7,7 @@ export const ToastStyled = styled("div", {
   boxShadow: "$large",
   cursor: "pointer",
   width: "fit-content",
-  ...TextSizes.p,
+  fontSize: "$default",
   margin: "$medium auto 0 auto !important",
   maxWidth: "60%",
   padding: "$smallest $small",

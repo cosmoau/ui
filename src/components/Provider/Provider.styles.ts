@@ -53,7 +53,7 @@ export const providerReset = globalCss({
       fontDisplay: "auto",
       fontFamily: "Tiempos Headline",
       fontStyle: "normal",
-      fontWeight: "normal",
+      fontWeight: "bold",
       src: `url(${baseFontURL}/tiempos-headline-regular.woff2)`,
     },
   ],
@@ -65,10 +65,10 @@ export const providerReset = globalCss({
   },
 
   body: {
-    fontFamily: "Untitled Sans, system-ui, -apple-system, sans-serif",
-    fontSize: "1.6rem",
-    fontWeight: "400",
-    lineHeight: "1.4",
+    fontFamily: "$default, system-ui, -apple-system, sans-serif",
+    fontSize: "$default",
+    fontWeight: "normal",
+    lineHeight: "$default",
     margin: 0,
     padding: 0,
 

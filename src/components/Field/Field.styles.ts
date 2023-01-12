@@ -57,7 +57,7 @@ export const FieldAreaStyled = styled("textarea", {
   color: "$text",
   display: "block",
   fontFamily: "$default",
-  fontSize: "16px",
+  fontSize: "$default",
   margin: "0 auto",
   padding: "$smaller $small",
   width: "100%",

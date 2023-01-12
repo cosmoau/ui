@@ -1,5 +1,4 @@
 import { styled, keyframes, fadeOut } from "../../stitches.config";
-import { TextSizes } from "../Text/Text.styles";
 
 const pulse = keyframes({
   "0%": {
@@ -22,7 +21,9 @@ export const BadgeStyled = styled("div", {
   display: "inline-flex",
   justifyContent: "center",
   padding: "$smallest $small",
-  ...TextSizes.p,
+  fontSize: "$default",
+  lineHeight: "$default",
+
   marginBottom: "0 !important",
 
   svg: {

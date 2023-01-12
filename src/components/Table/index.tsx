@@ -1,17 +1,10 @@
 import { FunnelSimple, SortAscending, SortDescending } from "phosphor-react";
 import { ReactNode, useState } from "react";
 
-import { Button } from "../../index";
+import { Button, Text } from "../../index";
 import { TableProps } from "../../types";
 
-import {
-  TableBodyStyled,
-  TableCellStyled,
-  TableHeadCellStyled,
-  TableHeadStyled,
-  TableRowStyled,
-  TableStyled,
-} from "./Table.styles";
+import { TableStyled } from "./Table.styles";
 
 export default function Table(props: TableProps): JSX.Element {
   const { headChildren, bodyChildren, css, sort, sortDisabled, ...rest } = props;
@@ -49,67 +42,71 @@ export default function Table(props: TableProps): JSX.Element {
     : [];
 
   return (
-    <TableStyled css={css} {...rest}>
-      {headChildren && (
-        <TableHeadStyled>
-          <TableRowStyled>
-            {headChildren.map((child, index) =>
-              !sort ||
-              sortDisabled === index ||
-              (Array.isArray(sortDisabled) && sortDisabled.includes(index)) ? (
-                <TableHeadCellStyled key={index}>{child}</TableHeadCellStyled>
-              ) : (
-                <TableHeadCellStyled key={index} onClick={(): void => handleSort(index)}>
-                  <Button
-                    block
-                    css={{
-                      svg: {
-                        opacity: sortBy === index ? 1 : 0.33,
-                      },
-                    }}
-                    icon={
-                      sortBy === index ? (
-                        sortDirection === "asc" ? (
-                          <SortAscending />
+    <TableStyled css={css}>
+      <table {...rest}>
+        {headChildren && (
+          <thead>
+            <tr>
+              {headChildren.map((child, index) =>
+                !sort ||
+                sortDisabled === index ||
+                (Array.isArray(sortDisabled) && sortDisabled.includes(index)) ? (
+                  <th key={index}>{child}</th>
+                ) : (
+                  <th key={index} onClick={(): void => handleSort(index)}>
+                    <Button
+                      block
+                      css={{
+                        svg: {
+                          opacity: sortBy === index ? 1 : 0.33,
+                        },
+                      }}
+                      icon={
+                        sortBy === index ? (
+                          sortDirection === "asc" ? (
+                            <SortAscending />
+                          ) : (
+                            <SortDescending />
+                          )
                         ) : (
-                          <SortDescending />
+                          <FunnelSimple />
                         )
-                      ) : (
-                        <FunnelSimple />
-                      )
-                    }
-                    iconPosition="right"
-                    theme={sortBy === index ? "default" : "minimal"}>
-                    {child}
-                  </Button>
-                </TableHeadCellStyled>
-              )
-            )}
-          </TableRowStyled>
-        </TableHeadStyled>
-      )}
-
-      <TableBodyStyled>
-        {bodyChildren ? (
-          sortedBodyChildren.map((row, index) => (
-            <TableRowStyled key={index}>
-              {row.map((cell, index) => (
-                <TableCellStyled key={index}>{cell}</TableCellStyled>
-              ))}
-            </TableRowStyled>
-          ))
-        ) : (
-          <TableRowStyled>
-            <TableCellStyled
-              colSpan={headChildren?.length || 1}
-              css={{
-                textAlign: "left !important",
-              }}>
-              No results found.
-            </TableCellStyled>
-          </TableRowStyled>
+                      }
+                      iconPosition="right"
+                      theme={sortBy === index ? "default" : "minimal"}>
+                      {child}
+                    </Button>
+                  </th>
+                )
+              )}
+            </tr>
+          </thead>
         )}
-      </TableBodyStyled>
+
+        <tbody>
+          {bodyChildren ? (
+            sortedBodyChildren.map((row, index) => (
+              <tr key={index}>
+                {row.map((cell, index) => (
+                  <td key={index}>{cell}</td>
+                ))}
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan={headChildren?.length || 1}>
+                <Text
+                  accent
+                  css={{
+                    textAlign: "center",
+                  }}>
+                  No results found.
+                </Text>
+              </td>
+            </tr>
+          )}
+        </tbody>
+      </table>
     </TableStyled>
   );
 }
