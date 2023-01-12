@@ -1,7 +1,7 @@
 {
   "name": "@cosmoau/ui",
   "description": "A library of UI components used to enforce consistency across every product at Cosmo and make development easier.",
-  "version": "1.2.30",
+  "version": "1.2.31",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "bugs": {
@@ -13,6 +13,8 @@
     "react-hot-toast": "^2.4.0"
   },
   "devDependencies": {
+    "@swc/cli": "^0.1.59",
+    "@swc/core": "^1.3.26",
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.26",
     "eslint": "^8.31.0",
@@ -52,8 +54,7 @@
     "user interface"
   ],
   "license": "GPL-3.0",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
+  "main": "./dist/index.js",
   "peerDependencies": {
     "next": "^13.1.1",
     "react": "^18.2.0",
@@ -80,6 +81,5 @@
     "tidy": "pnpm lint && pnpm prettier"
   },
   "sideEffects": false,
-  "source": "src/index.tsx",
-  "types": "./dist/esm/index.d.ts"
+  "source": "src/index.ts"
 }

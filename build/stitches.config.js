@@ -1,0 +1,190 @@
+function _defineProperty(obj, key, value) {
+    if (key in obj) {
+        Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: true,
+            configurable: true,
+            writable: true
+        });
+    } else {
+        obj[key] = value;
+    }
+    return obj;
+}
+import { createStitches, createTheme } from "@stitches/react";
+export var breakpoints = {
+    desktop: "@media only screen and (max-width: 2000px)",
+    desktopX: "@media only screen and (min-width: 1601px) and (max-width: 2000px)",
+    laptop: "@media only screen and (max-width: 1600px)",
+    laptopX: "@media only screen and (min-width: 1001px) and (max-width: 1600px)",
+    phone: "@media only screen and (max-width: 800px)",
+    special: {
+        micro: "@media only screen and (max-width: 400px)",
+        retina: "@media only screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx)"
+    },
+    tablet: "@media only screen and (max-width: 1000px)",
+    tabletX: "@media only screen and (min-width: 801px) and (max-width: 1000px)",
+    wide: "@media only screen and (min-width: 2001px)"
+};
+var _createStitches = createStitches({
+    theme: {
+        colors: {
+            accent: "rgb(137, 150, 184)",
+            accentIHM: "rgb(0, 48, 74)",
+            background: "rgb(8, 12, 36)",
+            blueBorder: "rgba(115, 172, 255, 0.5)",
+            blueOverlay: "rgba(151, 193, 255, 0.25)",
+            blueText: "rgb(166, 179, 255)",
+            border: "rgba(253, 250, 246, 0.2)",
+            default: "rgba(253, 250, 246, 0.1)",
+            defaultHover: "rgba(253, 250, 246, 0.15)",
+            greenBorder: "rgba(0, 200, 83, 0.5)",
+            greenOverlay: "rgba(101, 227, 124, 0.25)",
+            greenText: "rgb(124, 241, 151)",
+            orangeBorder: "rgba(255, 172, 115, 0.5)",
+            orangeOverlay: "rgba(255, 172, 115, 0.25)",
+            orangeText: "rgb(254, 177, 141)",
+            pinkBorder: "rgba(255, 115, 172, 0.5)",
+            pinkOverlay: "rgba(255, 115, 172, 0.25)",
+            pinkText: "rgb(255, 142, 221)",
+            purpleBorder: "rgba(172, 115, 255, 0.5)",
+            purpleOverlay: "rgba(172, 115, 255, 0.25)",
+            purpleText: "rgb(210, 142, 255)",
+            redBorder: "rgba(255, 115, 115, 0.5)",
+            redOverlay: "rgba(255, 115, 115, 0.25)",
+            redText: "rgb(251, 127, 143)",
+            soft: "$background",
+            text: "rgb(253, 250, 246)"
+        },
+        fontSizes: {
+            default: "1.6rem"
+        },
+        fonts: {
+            default: "Untitled Sans, apple-system, sans-serif",
+            serif: "Tiempos Headline, $default"
+        },
+        lineHeights: {
+            default: "1.4"
+        },
+        radii: {
+            large: "1rem",
+            medium: "0.75rem",
+            small: "0.5rem"
+        },
+        shadows: {
+            large: "0 0.6rem 0.9rem 0 rgba(65, 66, 68, 0.05)",
+            medium: "0 0.6rem 0.6rem 0 rgba(87, 87, 89, 0.05)",
+            small: "0 0.3rem 0.4rem 0 rgba(81, 82, 85, 0.05)"
+        },
+        space: {
+            large: "4rem",
+            larger: "6rem",
+            largest: "8rem",
+            excess: "16rem",
+            medium: "2rem",
+            small: "1rem",
+            smaller: "0.5rem",
+            smallest: "0.25rem"
+        },
+        transitions: {
+            default: "all 0.2420s linear"
+        },
+        zIndices: {
+            dialog: 999,
+            popover: 998,
+            select: 997,
+            toast: 996
+        }
+    },
+    utils: {
+        desktop: function(value) {
+            return _defineProperty({}, breakpoints.desktop, value);
+        },
+        desktopX: function(value) {
+            return _defineProperty({}, breakpoints.desktopX, value);
+        },
+        hidden: function(value) {
+            return _defineProperty({}, breakpoints[value], {
+                display: "none !important"
+            });
+        },
+        hiddenInline: function(value) {
+            return _defineProperty({
+                display: "inline-block !important"
+            }, breakpoints[value], {
+                display: "none !important"
+            });
+        },
+        laptop: function(value) {
+            return _defineProperty({}, breakpoints.laptop, value);
+        },
+        laptopX: function(value) {
+            return _defineProperty({}, breakpoints.laptopX, value);
+        },
+        phone: function(value) {
+            return _defineProperty({}, breakpoints.phone, value);
+        },
+        tablet: function(value) {
+            return _defineProperty({}, breakpoints.tablet, value);
+        },
+        tabletX: function(value) {
+            return _defineProperty({}, breakpoints.tabletX, value);
+        },
+        visible: function(value) {
+            return _defineProperty({
+                display: "none"
+            }, breakpoints[value], {
+                display: "block"
+            });
+        },
+        visibleInline: function(value) {
+            return _defineProperty({
+                display: "none"
+            }, breakpoints[value], {
+                display: "inline-block"
+            });
+        },
+        wide: function(value) {
+            return _defineProperty({}, breakpoints.wide, value);
+        }
+    }
+});
+export var theme = _createStitches.theme, css = _createStitches.css, styled = _createStitches.styled, getCssText = _createStitches.getCssText, globalCss = _createStitches.globalCss, keyframes = _createStitches.keyframes;
+export var lightTheme = createTheme({
+    colors: {
+        accent: "rgb(55, 66, 88)",
+        background: "rgb(255, 250, 245)",
+        blueText: "rgb(32, 47, 136)",
+        border: "rgba(8, 12, 36, 0.2)",
+        default: "rgba(8, 12, 36, 0.04)",
+        defaultHover: "rgba(8, 12, 36, 0.08)",
+        greenText: "rgb(0, 76, 6)",
+        orangeText: "rgb(199, 84, 30)",
+        pinkText: "rgb(173, 22, 128)",
+        purpleText: "rgb(112, 23, 171)",
+        redText: "rgb(170, 28, 47)",
+        soft: "rgba(8, 12, 36, 0.035)",
+        text: "rgb(11, 26, 55)"
+    },
+    shadows: {
+        small: "0 0.3rem 0.4rem 0 rgba(8, 12, 36, 0.06)",
+        medium: "0 0.6rem 0.6rem 0 rgba(8, 12, 36, 0.09)",
+        large: "0 0.6rem 0.9rem 0 rgba(8, 12, 36, 0.12)"
+    }
+});
+export var fadeIn = keyframes({
+    "0%": {
+        opacity: 0
+    },
+    "100%": {
+        opacity: 1
+    }
+});
+export var fadeOut = keyframes({
+    "0%": {
+        opacity: 1
+    },
+    "100%": {
+        opacity: 0
+    }
+});
