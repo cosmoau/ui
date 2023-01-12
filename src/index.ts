@@ -1,3 +1,5 @@
+export * from "./stitches.config";
+
 export * from "./components/Avatar";
 export * from "./components/Badge";
 export * from "./components/Box";
@@ -17,16 +19,3 @@ export * from "./components/Stack";
 export * from "./components/Table";
 export * from "./components/Text";
 export * from "./components/View";
-
-export {
-  breakpoints,
-  theme,
-  css,
-  styled,
-  getCssText,
-  globalCss,
-  keyframes,
-  lightTheme,
-  fadeIn,
-  fadeOut,
-} from "./stitches.config";
