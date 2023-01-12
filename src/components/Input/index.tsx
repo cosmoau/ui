@@ -1,5 +1,6 @@
 import { Check, ClipboardText, Warning, Eye, EyeClosed } from "phosphor-react";
 import { ChangeEvent, useState } from "react";
+import toast from "react-hot-toast";
 import { useEventListener } from "usehooks-ts";
 
 import { Button, Badge, Loading } from "../../index";
@@ -54,6 +55,7 @@ export default function Input(props: InputProps): JSX.Element {
     if (copy) {
       navigator.clipboard.writeText(inputValue.toString());
       setIsCopied(true);
+      toast("Copied to clipboard");
       setTimeout(() => {
         setIsCopied(false);
       }, 3000);

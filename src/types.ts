@@ -79,7 +79,6 @@ export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
 
 export interface CodeProps {
   children: ReactNode;
-  copy?: boolean;
   css?: CSS;
 }
 

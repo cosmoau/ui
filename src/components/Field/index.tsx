@@ -1,5 +1,6 @@
 import { Check, ClipboardText, Warning } from "phosphor-react";
 import { ChangeEvent, useState } from "react";
+import toast from "react-hot-toast";
 
 import { Button, Badge, Loading } from "../../index";
 import { FieldProps } from "../../types";
@@ -42,6 +43,7 @@ export default function Field(props: FieldProps): JSX.Element {
     if (copy) {
       navigator.clipboard.writeText(value as string);
       setIsCopied(true);
+      toast("Copied to clipboard");
       setTimeout(() => {
         setIsCopied(false);
       }, 3000);
