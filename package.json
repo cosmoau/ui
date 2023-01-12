@@ -71,9 +71,8 @@
     "url": "git://github.com/cosmoau/ui.git"
   },
   "scripts": {
-    "build": "pnpm clean && pnpm build:esm && pnpm build:cjs",
-    "build:cjs": "tsc --module commonjs --outDir dist/cjs --declarationDir dist/cjs",
-    "build:esm": "tsc",
+    "build": "pnpm clean && tsc",
+    "build:swc": "swc src -d dist",
     "clean": "rm -rf dist lib",
     "dev": "echo '⚡️ Fetching device IP for development...' && ipconfig getifaddr en0 && echo '🫡' && parcel playground/index.html --dist-dir playground/dist --open --no-cache --port 420",
     "lint": "eslint src --ext .ts,.tsx",

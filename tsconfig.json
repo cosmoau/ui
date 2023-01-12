@@ -3,6 +3,6 @@
   "extends": "eslint-config-dolmios/configs/lib/tsconfig",
   "compilerOptions": {
     "rootDir": "./src",
-    "outDir": "./dist/esm"
+    "outDir": "./dist"
   }
 }
