@@ -14,7 +14,7 @@ import {
 } from "./Table.styles";
 
 export default function Table(props: TableProps): JSX.Element {
-  const { headChildren, bodyChildren, css, sort, sortDisabled } = props;
+  const { headChildren, bodyChildren, css, sort, sortDisabled, ...rest } = props;
 
   const [sortBy, setSortBy] = useState(0);
   const [sortDirection, setSortDirection] = useState("asc");
@@ -49,7 +49,7 @@ export default function Table(props: TableProps): JSX.Element {
     : [];
 
   return (
-    <TableStyled css={css}>
+    <TableStyled css={css} {...rest}>
       {headChildren && (
         <TableHeadStyled>
           <TableRowStyled>
@@ -61,7 +61,6 @@ export default function Table(props: TableProps): JSX.Element {
               ) : (
                 <TableHeadCellStyled key={index} onClick={(): void => handleSort(index)}>
                   <Button
-                    ariaLabel="Sort"
                     block
                     css={{
                       svg: {
@@ -80,7 +79,6 @@ export default function Table(props: TableProps): JSX.Element {
                       )
                     }
                     iconPosition="right"
-                    name="sort"
                     theme={sortBy === index ? "default" : "minimal"}>
                     {child}
                   </Button>

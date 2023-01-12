@@ -25,7 +25,6 @@ export default function Code(props: CodeProps): JSX.Element {
       <CodeFunctionStyled>
         {copy && (
           <Button
-            ariaLabel="Copy"
             icon={
               isCopied ? (
                 <ClipboardText opacity={0.5} weight="duotone" />
@@ -33,7 +32,6 @@ export default function Code(props: CodeProps): JSX.Element {
                 <ClipboardText weight="duotone" />
               )
             }
-            name="copy"
             small
             onClick={
               isCopied

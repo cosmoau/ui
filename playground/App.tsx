@@ -290,7 +290,6 @@ export function App(): ReactElement {
             </Stack>
 
             <Button
-              ariaLabel="button"
               external
               icon={<ArrowRight />}
               iconPosition="right"
@@ -304,7 +303,6 @@ export function App(): ReactElement {
             </Button>
 
             <Button
-              ariaLabel="button"
               external
               icon={<ArrowRight />}
               iconPosition="right"
@@ -314,7 +312,7 @@ export function App(): ReactElement {
             </Button>
             <Popover
               trigger={
-                <Button ariaLabel="button" icon={<ArrowRight />} iconPosition="right">
+                <Button icon={<ArrowRight />} iconPosition="right">
                   Popover hover
                 </Button>
               }
@@ -323,7 +321,7 @@ export function App(): ReactElement {
             </Popover>
             <Popover
               trigger={
-                <Button ariaLabel="button" icon={<ArrowRight />} iconPosition="right">
+                <Button icon={<ArrowRight />} iconPosition="right">
                   Popover hover
                 </Button>
               }>
@@ -331,7 +329,7 @@ export function App(): ReactElement {
             </Popover>
             <Dialog
               trigger={
-                <Button ariaLabel="button" icon={<ArrowRight />} iconPosition="right">
+                <Button icon={<ArrowRight />} iconPosition="right">
                   Dialog
                 </Button>
               }>
@@ -339,7 +337,7 @@ export function App(): ReactElement {
             </Dialog>
 
             <Button
-              ariaLabel="button"
+
               block
               icon={<ArrowRight />}
               iconPosition="right"

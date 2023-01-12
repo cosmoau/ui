@@ -64,7 +64,6 @@ export interface BoxProps {
 }
 
 export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
-  ariaLabel?: string;
   block?: boolean;
   children: ReactNode | string;
   css?: CSS;
@@ -74,7 +73,6 @@ export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   iconPosition?: "left" | "right";
   inline?: ThemeSpacing | "auto";
   loading?: boolean;
-  name?: string;
   small?: boolean;
   theme?: "default" | "fill" | "minimal" | "solid";
 }
@@ -92,7 +90,7 @@ export interface DialogProps {
   trigger: ReactNode;
 }
 
-export interface DividerProps {
+export interface DividerProps extends HTMLAttributes<HTMLHRElement> {
   bottom?: ThemeSpacing;
   css?: CSS;
   top?: ThemeSpacing;
@@ -222,11 +220,8 @@ export interface TableProps {
   sortDisabled?: number | number[];
 }
 
-export interface TextProps {
+export interface TextProps extends HTMLAttributes<HTMLDivElement> {
   accent?: boolean;
-  ariaLabel?: string;
-  ariaLabelledBy?: string;
-  ariaTitle?: string;
   as?: keyof typeof TextSizes;
   bottom?: ThemeSpacing;
   children: ReactNode;

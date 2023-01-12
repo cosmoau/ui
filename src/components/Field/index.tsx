@@ -80,7 +80,6 @@ export default function Field(props: FieldProps): JSX.Element {
           )}
           {copy && (
             <Button
-              ariaLabel="Copy"
               icon={
                 isCopied ? (
                   <ClipboardText opacity={0.5} weight="duotone" />
@@ -97,9 +96,7 @@ export default function Field(props: FieldProps): JSX.Element {
 
           {submit && (
             <Button
-              ariaLabel="Submit"
               disabled={!submitValid}
-              name="submit"
               onClick={(): void => {
                 if (submitFunction && submitValid) {
                   submitFunction(value || "");

@@ -60,7 +60,7 @@ export default function Dialog(props: DialogProps): JSX.Element {
         <DialogOverlayStyled animation={isOpen}>
           <DialogContentStyled ref={ref} animation={isOpen} css={css}>
             <DialogExitStyled onClick={(): void => handleClose()}>
-              <Button ariaLabel="Close" icon={<X />} name="close" small theme="minimal">
+              <Button icon={<X />} small theme="minimal">
                 Close
               </Button>
             </DialogExitStyled>

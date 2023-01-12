@@ -101,7 +101,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       smallest: "0.25rem",
     },
     transitions: {
-      default: "all 0.2s linear",
+      default: "all 0.2420s linear",
     },
     zIndices: {
       dialog: 999,
@@ -172,10 +172,10 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
 
 export const lightTheme = createTheme({
   colors: {
-    accent: "rgb(52, 58, 76)",
+    accent: "rgb(55, 66, 88)",
     background: "rgb(255, 250, 245)",
     blueText: "rgb(32, 47, 136)",
-    border: "rgba(8, 12, 36, 0.16)",
+    border: "rgba(8, 12, 36, 0.2)",
     default: "rgba(8, 12, 36, 0.04)",
     defaultHover: "rgba(8, 12, 36, 0.08)",
     greenText: "rgb(0, 76, 6)",
@@ -184,7 +184,7 @@ export const lightTheme = createTheme({
     purpleText: "rgb(112, 23, 171)",
     redText: "rgb(170, 28, 47)",
     soft: "rgba(8, 12, 36, 0.035)",
-    text: "rgb(16, 36, 72)",
+    text: "rgb(11, 26, 55)",
   },
   shadows: {
     small: "0 0.3rem 0.4rem 0 rgba(8, 12, 36, 0.06)",

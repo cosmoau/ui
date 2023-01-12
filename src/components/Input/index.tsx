@@ -98,7 +98,6 @@ export default function Input(props: InputProps): JSX.Element {
             {loading && <Loading />}
             {copy && (
               <Button
-                ariaLabel="Copy"
                 css={{
                   marginLeft: "$smaller",
                 }}
@@ -109,7 +108,6 @@ export default function Input(props: InputProps): JSX.Element {
                     <ClipboardText weight="duotone" />
                   )
                 }
-                name="copy"
                 small
                 onClick={(): void => {
                   handleCopy();
@@ -119,12 +117,10 @@ export default function Input(props: InputProps): JSX.Element {
             )}
             {reveal && (
               <Button
-                ariaLabel="Reveal"
                 css={{
                   marginLeft: "$smaller",
                 }}
                 icon={!isRevealed ? <Eye weight="duotone" /> : <EyeClosed weight="duotone" />}
-                name="reveal"
                 small
                 onClick={(): void => {
                   handleReveal();
@@ -135,12 +131,10 @@ export default function Input(props: InputProps): JSX.Element {
 
             {submit && (
               <Button
-                ariaLabel="Submit"
                 css={{
                   marginLeft: "$smaller",
                 }}
                 disabled={!submitValid}
-                name="submit"
                 small
                 onClick={(): void => {
                   if (submitFunction && submitValid) {

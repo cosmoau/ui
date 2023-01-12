@@ -16,15 +16,13 @@ export default function Button(props: ButtonProps): JSX.Element {
     disabled,
     inline,
     children,
-    ariaLabel,
-    name,
     block,
     css,
     onClick,
+    ...rest
   } = props;
   return (
     <ButtonStyled
-      aria-label={ariaLabel || name || typeof children === "string" ? children?.toString() : ""}
       block={block}
       css={{
         ...(inline && {
@@ -36,10 +34,10 @@ export default function Button(props: ButtonProps): JSX.Element {
         ...css,
       }}
       disabled={disabled || loading || false}
-      name={name}
       small={small}
       theme={theme || "default"}
-      onClick={onClick}>
+      onClick={onClick}
+      {...rest}>
       {loading && (
         <ButtonIconStyled align="left">
           <Loading />

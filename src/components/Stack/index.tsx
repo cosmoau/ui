@@ -26,6 +26,7 @@ export default function Stack(props: StackProps): JSX.Element {
     widthWide,
     offsetWide,
     css,
+    ...rest
   } = props;
 
   const StackElement =
@@ -86,7 +87,8 @@ export default function Stack(props: StackProps): JSX.Element {
         }),
         ...css,
       }}
-      flexduo={flexduo}>
+      flexduo={flexduo}
+      {...rest}>
       {children}
     </StackElement>
   );

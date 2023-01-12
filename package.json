@@ -1,7 +1,7 @@
 {
   "name": "@cosmoau/ui",
   "description": "A library of UI components used to enforce consistency across every product at Cosmo and make development easier.",
-  "version": "1.2.28",
+  "version": "1.2.29",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "bugs": {

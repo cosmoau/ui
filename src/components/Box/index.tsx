@@ -90,7 +90,7 @@ export default function Box(props: BoxProps): JSX.Element {
         {children}
         {closable && (
           <BoxExitStyled onClick={(): void => handleClose()}>
-            <Button ariaLabel="Close" name="close" small theme={"minimal"}>
+            <Button small theme={"minimal"}>
               <X />
             </Button>
           </BoxExitStyled>
