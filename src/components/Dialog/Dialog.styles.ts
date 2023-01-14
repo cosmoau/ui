@@ -45,7 +45,6 @@ export const DialogContentStyled = styled("div", {
   boxShadow: "$large",
   left: "50%",
   maxHeight: "85vh",
-  maxWidth: "90%",
   overflowX: "hidden",
   overflowY: "auto",
   padding: "$large",
@@ -67,10 +66,12 @@ export const DialogContentStyled = styled("div", {
     },
   },
 
-  width: "70rem",
+  minWidth: "70rem",
+  maxWidth: "85%",
 
   [breakpoints.phone]: {
     width: "90%",
+    padding: "$medium",
   },
 });
 

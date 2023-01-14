@@ -1,9 +1,8 @@
-import { breakpoints, globalCss, lightTheme, styled, theme } from "../../stitches.config";
+import { breakpoints, globalCss, styled, theme, darkTheme } from "../../stitches.config";
 
 export const ProviderStyled = styled("main", {
   backgroundColor: "$background",
   color: "$text",
-
   minHeight: "100vh",
   position: "relative",
 
@@ -11,17 +10,10 @@ export const ProviderStyled = styled("main", {
     backgroundColor: "$background",
     color: "$text",
   },
-  [`.${lightTheme}`]: {
+  [`.${darkTheme}`]: {
     backgroundColor: "$background",
     color: "$text",
   },
-});
-
-export const ProviderTriggerStyled = styled("div", {
-  cursor: "pointer",
-  display: "inline-flex",
-  position: "relative",
-  verticalAlign: "middle",
 });
 
 const baseFontURL = "https://cosmogroup.io/fonts";

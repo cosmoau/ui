@@ -1,38 +1,33 @@
 import { IconContext } from "phosphor-react";
-import { useDarkMode } from "usehooks-ts";
 
-import { lightTheme, theme } from "../../stitches.config";
+import { darkTheme, theme } from "../../stitches.config";
 import { ProviderProps } from "../../types";
 import { Toast } from "../Toast";
 
-import { ProviderStyled, ProviderTriggerStyled, providerReset } from "./Provider.styles";
+import { ProviderStyled, providerReset } from "./Provider.styles";
+
+export function checkTheme(): "dark" | "light" {
+  const preference =
+    window && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
+
+  return preference?.matches ? "dark" : "light";
+}
 
 export function Provider(props: ProviderProps): JSX.Element {
-  const { locked, initial, children, css } = props;
+  const { locked, children, css } = props;
+
   providerReset();
 
-  const { isDarkMode } = useDarkMode(locked === "dark" || initial === "dark");
-
-  const active = locked === "dark" ? theme : isDarkMode ? theme : lightTheme;
+  const className = locked ? locked : checkTheme();
 
   return (
-    <ProviderStyled className={active} css={css}>
+    <ProviderStyled
+      className={className === "dark" ? darkTheme.toString() : theme.toString()}
+      css={css}>
       <IconContext.Provider value={{ mirrored: false, weight: "regular" }}>
         <Toast />
         {children}
       </IconContext.Provider>
     </ProviderStyled>
-  );
-}
-
-export function ProviderToggle(props: Omit<ProviderProps, "children">): JSX.Element {
-  const { trigger, triggerActive, css } = props;
-
-  const { isDarkMode, toggle } = useDarkMode(false);
-
-  return (
-    <ProviderTriggerStyled css={css} onClick={toggle}>
-      {isDarkMode ? triggerActive || trigger : trigger}
-    </ProviderTriggerStyled>
   );
 }

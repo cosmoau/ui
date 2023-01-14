@@ -14,7 +14,7 @@ import {
 } from "./Dialog.styles";
 
 export function Dialog(props: DialogProps): JSX.Element {
-  const { css, trigger, children, locked } = props;
+  const { css, trigger, children, locked, width } = props;
   const ref = useRef(null);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -58,7 +58,13 @@ export function Dialog(props: DialogProps): JSX.Element {
       </DialogTriggerStyled>
       {isMounted && (
         <DialogOverlayStyled animation={isOpen}>
-          <DialogContentStyled ref={ref} animation={isOpen} css={css}>
+          <DialogContentStyled
+            ref={ref}
+            animation={isOpen}
+            css={{
+              width: width ? width : "auto",
+              ...css,
+            }}>
             <DialogExitStyled onClick={(): void => handleClose()}>
               <Button icon={<X />} small theme="minimal">
                 Close

@@ -87,6 +87,7 @@ export interface DialogProps {
   css?: CSS;
   locked?: boolean;
   trigger: ReactNode;
+  width?: number | string;
 }
 
 export interface DividerProps extends HTMLAttributes<HTMLHRElement> {

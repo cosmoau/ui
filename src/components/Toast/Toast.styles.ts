@@ -8,7 +8,7 @@ export const ToastStyled = styled("div", {
   cursor: "pointer",
   width: "fit-content",
   fontSize: "$default",
-  margin: "$medium auto 0 auto !important",
+  margin: "$small auto 0 auto !important",
   maxWidth: "60%",
   padding: "$smallest $small",
   pointerEvents: "all",

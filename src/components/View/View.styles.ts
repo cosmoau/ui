@@ -9,8 +9,6 @@ export const ViewStyled = styled("section", {
 });
 
 export const ViewContainerStyled = styled("div", {
-  position: "relative",
-
   variants: {
     container: {
       false: {
@@ -20,10 +18,10 @@ export const ViewContainerStyled = styled("div", {
         margin: "auto",
 
         [breakpoints.phone]: {
-          width: "96%",
+          width: "95%",
         },
         [breakpoints.tabletX]: {
-          width: "96%",
+          width: "98%",
         },
         [breakpoints.laptopX]: {
           maxWidth: "1440px",
