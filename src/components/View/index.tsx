@@ -8,7 +8,7 @@ export function View(props: ViewProps): JSX.Element {
 
   return (
     <ViewStyled
-      className={inverted ? darkTheme : undefined}
+      className={inverted ? darkTheme.toString() : undefined}
       css={{
         ...(top && {
           marginTop: 0,

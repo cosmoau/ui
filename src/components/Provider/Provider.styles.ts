@@ -1,19 +1,10 @@
-import { breakpoints, globalCss, styled, theme, darkTheme } from "../../stitches.config";
+import { breakpoints, globalCss, styled } from "../../stitches.config";
 
 export const ProviderStyled = styled("main", {
   backgroundColor: "$background",
   color: "$text",
   minHeight: "100vh",
   position: "relative",
-
-  [`.${theme}`]: {
-    backgroundColor: "$background",
-    color: "$text",
-  },
-  [`.${darkTheme}`]: {
-    backgroundColor: "$background",
-    color: "$text",
-  },
 });
 
 const baseFontURL = "https://cosmogroup.io/fonts";
