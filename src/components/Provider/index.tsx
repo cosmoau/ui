@@ -7,10 +7,12 @@ import { Toast } from "../Toast";
 import { ProviderStyled, providerReset } from "./Provider.styles";
 
 export function checkTheme(): "dark" | "light" {
-  const preference =
-    window && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
-
-  return preference?.matches ? "dark" : "light";
+  if (typeof window !== "undefined") {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+  }
+  return "light";
 }
 
 export function Provider(props: ProviderProps): JSX.Element {
