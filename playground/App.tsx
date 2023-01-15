@@ -1,15 +1,13 @@
 import React, { ReactElement } from "react";
 
-import { Provider, View, Code, Table, Text, Button, Popover } from "../src/index";
+import { Provider, View, Code, Table, Text, Button } from "../src/index";
 
 export function App(): ReactElement {
   return (
     <Provider>
       <View bottom="largest" container inverted top="largest">
         <Button>Test</Button>
-        <Popover trigger={<Button>Test Popover</Button>} type="click">
-          <h1>t</h1>
-        </Popover>
+
         <Text as="h1">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
         </Text>
@@ -43,6 +41,7 @@ export function App(): ReactElement {
           TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test Test Test Test Test
           Test Test Test Test Test Test
         </Code>
+        <Code>Test T</Code>
       </View>
       <View
         bottom="largest"

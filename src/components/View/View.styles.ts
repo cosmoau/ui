@@ -6,6 +6,8 @@ export const ViewStyled = styled("section", {
   paddingRight: "$small",
   position: "relative",
   width: "100%",
+  backgroundColor: "$background",
+  color: "$text",
 });
 
 export const ViewContainerStyled = styled("div", {

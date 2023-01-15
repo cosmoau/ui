@@ -3,7 +3,7 @@ import { breakpoints, styled } from "../../stitches.config";
 export const CodeStyled = styled("div", {
   border: "0.1rem solid $border !important",
   borderRadius: "$small",
-  padding: "$small",
+  padding: "$smaller $small",
   width: "100%",
   display: "flex",
   justifyContent: "space-between",
@@ -11,11 +11,13 @@ export const CodeStyled = styled("div", {
 
   [breakpoints.tablet]: {
     display: "block",
+    padding: "$medium",
   },
 });
 
 export const CodeBlockStyled = styled("code", {
   flex: "1 1 auto",
+  alignSelf: "center",
 
   [breakpoints.tablet]: {
     display: "block",
