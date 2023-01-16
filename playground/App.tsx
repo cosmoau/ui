@@ -1,12 +1,17 @@
 import React, { ReactElement } from "react";
 
-import { Provider, View, Code, Table, Text, Button } from "../src/index";
+import { Provider, View, Code, Table, Text, Button, Dialog } from "../src/index";
 
 export function App(): ReactElement {
   return (
     <Provider>
       <View bottom="largest" container inverted top="largest">
-        <Button>Test</Button>
+        <Dialog trigger={<Button>Test</Button>}>
+          <Text as="h3">Test</Text>
+          <Text as="p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
+          </Text>
+        </Dialog>
 
         <Text as="h1">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec

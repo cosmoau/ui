@@ -71,6 +71,8 @@ export const DialogContentStyled = styled("div", {
 
   [breakpoints.phone]: {
     width: "90%",
+    minWidth: "90%",
+    maxWidth: "90%",
     padding: "$medium",
   },
 });
