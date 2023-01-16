@@ -1,9 +1,6 @@
 import { breakpoints, styled } from "../../stitches.config";
 
 export const StackRowStyled = styled("div", {
-  "*": {
-    boxSizing: "border-box",
-  },
   display: "flex",
   flexDirection: "row",
   flexFlow: "row wrap",

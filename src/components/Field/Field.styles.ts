@@ -22,7 +22,7 @@ export const FieldStyled = styled("div", {
     disabled: {
       true: {
         cursor: "not-allowed",
-        opacity: "0.7",
+        opacity: "0.6",
       },
     },
     state: {
@@ -57,7 +57,7 @@ export const FieldAreaStyled = styled("textarea", {
   color: "$text",
   display: "block",
   fontFamily: "$default",
-  fontSize: "$default",
+  fontSize: "16px",
   margin: "0 auto",
   padding: "$smaller $small",
   width: "100%",

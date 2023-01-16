@@ -46,7 +46,7 @@ export function Field(props: FieldProps): JSX.Element {
       toast("Copied to clipboard");
       setTimeout(() => {
         setIsCopied(false);
-      }, 3000);
+      }, 2000);
     }
   }
 
@@ -84,7 +84,7 @@ export function Field(props: FieldProps): JSX.Element {
             <Button
               icon={
                 isCopied ? (
-                  <ClipboardText opacity={0.5} weight="duotone" />
+                  <ClipboardText opacity={0.6} weight="duotone" />
                 ) : (
                   <ClipboardText weight="duotone" />
                 )

@@ -78,15 +78,11 @@ export const DialogContentStyled = styled("div", {
 });
 
 export const DialogExitStyled = styled("div", {
-  "&:hover": {
-    opacity: 1,
-  },
   cursor: "pointer",
   padding: "$smaller",
   position: "absolute",
   right: 0,
   top: 0,
-  transition: "$default",
 });
 
 export default DialogStyled;

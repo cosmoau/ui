@@ -19,7 +19,7 @@ export const PopoverContentStyled = styled("div", {
   borderRadius: "$small",
   boxShadow: "$large",
   lineBreak: "auto",
-  marginTop: ".85%",
+  marginTop: "10%",
   overflowY: "auto",
   padding: "$smaller $small",
   position: "absolute",

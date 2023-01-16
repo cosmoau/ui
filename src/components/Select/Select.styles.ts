@@ -21,13 +21,45 @@ export const SelectGroupStyled = styled("div", {
   borderRadius: "$small",
   boxShadow: "$large",
   lineBreak: "auto",
-  marginTop: "5%",
   overflowY: "auto",
-  padding: "calc($smaller / 1.5)",
+  padding: "calc($smallest)",
   position: "absolute",
   textAlign: "left !important",
   transition: "$default",
   variants: {
+    vertical: {
+      top: {
+        bottom: "100%",
+        marginTop: "0",
+        top: "auto",
+        marginBottom: "10%",
+      },
+      bottom: {
+        bottom: "auto",
+        top: "100%",
+        marginTop: "10%",
+      },
+      center: {
+        bottom: "auto",
+        top: "50%",
+        transform: "translateY(-50%)",
+      },
+    },
+    horizontal: {
+      left: {
+        left: "0",
+        right: "auto",
+      },
+      right: {
+        left: "auto",
+        right: "0",
+      },
+      center: {
+        left: "50%",
+        right: "auto",
+        transform: "translateX(-50%)",
+      },
+    },
     animation: {
       false: {
         animation: `${fadeOut} .2s linear`,

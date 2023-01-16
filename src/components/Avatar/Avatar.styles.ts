@@ -1,6 +1,5 @@
 import { styled } from "../../stitches.config";
 import { ImageStyled } from "../Image/Image.styles";
-import { TextStyled } from "../Text/Text.styles";
 
 export const AvatarStyled = styled("div", {
   backgroundColor: "$default !important",
@@ -20,12 +19,10 @@ export const AvatarStyled = styled("div", {
     width: "100%",
   },
 
-  [`& ${TextStyled}`]: {
-    alignSelf: "center",
-
-    opacity: "0.5",
-    textTransform: "uppercase",
-  },
+  alignSelf: "center",
+  fontWeight: "bold",
+  color: "$accent",
+  textTransform: "uppercase",
 });
 
 export default AvatarStyled;

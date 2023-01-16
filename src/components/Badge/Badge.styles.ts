@@ -1,19 +1,4 @@
-import { styled, keyframes, fadeOut } from "../../stitches.config";
-
-const pulse = keyframes({
-  "0%": {
-    opacity: 0.5,
-    transform: "scale(0.95)",
-  },
-  "100%": {
-    opacity: 0.5,
-    transform: "scale(0.95)",
-  },
-  "50%": {
-    opacity: 1,
-    transform: "scale(1)",
-  },
-});
+import { styled, fadeOut } from "../../stitches.config";
 
 export const BadgeStyled = styled("div", {
   alignItems: "center",
@@ -94,52 +79,6 @@ export const BadgeLoadingStyled = styled("span", {
   display: "inline",
   svg: {
     marginTop: "-0.4rem",
-  },
-  verticalAlign: "middle",
-});
-
-export const BadgeDotStyled = styled("span", {
-  display: "inline",
-  paddingRight: "$smaller",
-
-  svg: {
-    height: "1rem",
-    marginTop: "-0.2rem",
-    width: "1rem",
-  },
-
-  variants: {
-    dotColor: {
-      blue: {
-        color: "$blueText",
-      },
-      border: {
-        color: "$border",
-      },
-      default: {
-        color: "$text",
-      },
-      green: {
-        color: "$greenText",
-      },
-      orange: {
-        color: "$orangeText",
-      },
-      pink: {
-        color: "$pinkText",
-      },
-      purple: {
-        color: "$purpleText",
-      },
-      red: {
-        color: "$redText",
-      },
-    },
-    pulse: {
-      true: {
-        animation: `${pulse} 1.5s infinite`,
-      },
-    },
   },
   verticalAlign: "middle",
 });

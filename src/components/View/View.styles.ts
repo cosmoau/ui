@@ -1,7 +1,6 @@
 import { breakpoints, styled } from "../../stitches.config";
 
 export const ViewStyled = styled("section", {
-  boxSizing: "border-box",
   paddingLeft: "$small",
   paddingRight: "$small",
   position: "relative",

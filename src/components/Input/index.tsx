@@ -58,7 +58,7 @@ export function Input(props: InputProps): JSX.Element {
       toast("Copied to clipboard");
       setTimeout(() => {
         setIsCopied(false);
-      }, 3000);
+      }, 2000);
     }
   }
 
@@ -105,7 +105,7 @@ export function Input(props: InputProps): JSX.Element {
                 }}
                 icon={
                   isCopied ? (
-                    <ClipboardText opacity={0.5} weight="duotone" />
+                    <ClipboardText opacity={0.6} weight="duotone" />
                   ) : (
                     <ClipboardText weight="duotone" />
                   )

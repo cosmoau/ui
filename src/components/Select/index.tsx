@@ -12,8 +12,19 @@ import {
 } from "./Select.styles";
 
 export function Select(props: SelectProps): JSX.Element {
-  const { options, css, onSelection, locked, selection, width, align, trigger, loading, last } =
-    props;
+  const {
+    options,
+    css,
+    onSelection,
+    locked,
+    selection,
+    width,
+    horizontal = "left",
+    vertical = "bottom",
+    trigger,
+    loading,
+    last,
+  } = props;
   const ref = useRef(null);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -79,11 +90,11 @@ export function Select(props: SelectProps): JSX.Element {
           ref={ref}
           animation={isOpen}
           css={{
-            left: align === "left" ? "0" : "auto",
             maxWidth: width || "30rem",
             minWidth: width || "20rem",
-            right: align === "right" ? "0" : "auto",
-          }}>
+          }}
+          horizontal={horizontal}
+          vertical={vertical}>
           {filter && (
             <Stack bottom="small" top="small">
               <Input
@@ -124,10 +135,4 @@ export function Select(props: SelectProps): JSX.Element {
       )}
     </SelectStyled>
   );
-}
-
-export function Dropdown(props: SelectProps): JSX.Element {
-  // eslint-disable-next-line no-console
-  console.warn("Dropdown was renamed. Please use Select instead.");
-  return <Select {...props} />;
 }

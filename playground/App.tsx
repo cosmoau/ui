@@ -1,6 +1,17 @@
 import React, { ReactElement } from "react";
 
-import { Provider, View, Code, Table, Text, Button, Dialog } from "../src/index";
+import {
+  Provider,
+  View,
+  Code,
+  Table,
+  Text,
+  Button,
+  Dialog,
+  Badge,
+  Box,
+  Select,
+} from "../src/index";
 
 export function App(): ReactElement {
   return (
@@ -13,6 +24,7 @@ export function App(): ReactElement {
           </Text>
         </Dialog>
 
+        <Badge closable>Test</Badge>
         <Text as="h1">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
         </Text>
@@ -57,14 +69,48 @@ export function App(): ReactElement {
           },
         }}
         top="largest">
-        <Table
-          bodyChildren={[
-            ["Body 1", "Body 2"],
-            ["Body 1", "Body 2"],
-          ]}
-          headChildren={["Head 1", "Head 2"]}
-          sort
-        />
+        <Box minimal>
+          <Table
+            bodyChildren={[
+              [
+                "Body 1",
+                "Body 2",
+                "Body 2",
+                "Body 2",
+                "Body 2",
+                "Body 2",
+                <Select
+                  vertical="top"
+                  horizontal="left"
+                  trigger={<Button>Test</Button>}
+                  options={[
+                    { label: "Test", value: "test" },
+                    { label: "Test 2", value: "test2" },
+                  ]}
+                />,
+              ],
+              [
+                "Body 1",
+                "Body 2",
+                "Body 2",
+                "Body 2",
+                "Body 2",
+                "Body 2",
+                <Select
+                  vertical="top"
+                  horizontal="right"
+                  trigger={<Button>Test</Button>}
+                  options={[
+                    { label: "Test", value: "test" },
+                    { label: "Test 2", value: "test2" },
+                  ]}
+                />,
+              ],
+            ]}
+            headChildren={["Head 1", "Head 2", "Head 2", "Head 2", "Head 2", "Head 2", "Head 2"]}
+            sort
+          />
+        </Box>
       </View>
     </Provider>
   );

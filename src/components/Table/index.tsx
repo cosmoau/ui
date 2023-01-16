@@ -58,7 +58,7 @@ export function Table(props: TableProps): JSX.Element {
                       block
                       css={{
                         svg: {
-                          opacity: sortBy === index ? 1 : 0.33,
+                          opacity: sortBy === index ? 1 : 0.6,
                         },
                       }}
                       icon={

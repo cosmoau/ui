@@ -56,7 +56,6 @@ export function Box(props: BoxProps): JSX.Element {
               fillFit={imageFit || "cover"}
               fillHeight={imageHeight || "20rem"}
               fillPosition={imagePosition || "center"}
-              hover={hover}
               src={image}
             />
           </a>
@@ -73,7 +72,6 @@ export function Box(props: BoxProps): JSX.Element {
             fillFit={imageFit || "cover"}
             fillHeight={imageHeight || "20rem"}
             fillPosition={imagePosition || "center"}
-            hover={hover}
             src={image}
           />
         )}

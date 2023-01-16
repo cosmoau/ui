@@ -16,12 +16,9 @@ export const CodeStyled = styled("div", {
 });
 
 export const CodeBlockStyled = styled("code", {
-  flex: "1 1 auto",
   alignSelf: "center",
-
   [breakpoints.tablet]: {
     display: "block",
-    flex: "0 0 auto",
     minWidth: "100%",
   },
 });

@@ -12,12 +12,12 @@ export function Code(props: CodeProps): JSX.Element {
   const [isCopied, setIsCopied] = useState(false);
 
   function handleCopy(): void {
-    navigator.clipboard.writeText(children?.toString() || "");
+    navigator?.clipboard?.writeText(children?.toString() || "");
     setIsCopied(true);
     toast("Copied to clipboard");
     setTimeout(() => {
       setIsCopied(false);
-    }, 3000);
+    }, 2000);
   }
 
   return (
@@ -27,7 +27,7 @@ export function Code(props: CodeProps): JSX.Element {
         <Button
           icon={
             isCopied ? (
-              <ClipboardText opacity={0.5} weight="duotone" />
+              <ClipboardText opacity={0.6} weight="duotone" />
             ) : (
               <ClipboardText weight="duotone" />
             )

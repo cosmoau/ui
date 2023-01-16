@@ -1,6 +1,6 @@
 # @cosmoau/ui
 
-> A library of UI components used to enforce consistency across every product at Cosmo and make development easier.
+> A library of React components used to enforce consistency across every product at Cosmo and make development easier, intended for use with Next.js and TypeScript.
 
 ## Install
 

@@ -80,11 +80,7 @@ export const BoxImageChildrenStyled = styled("div", {
 });
 
 export const BoxExitStyled = styled("div", {
-  "&:hover": {
-    opacity: 1,
-  },
   cursor: "pointer",
-  opacity: 0.7,
   padding: "1rem",
   position: "absolute",
   right: 0,

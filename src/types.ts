@@ -121,7 +121,6 @@ export interface ImageProps extends NextImageProps {
   fillFit?: CSSProperties["objectFit"];
   fillHeight?: string | number;
   fillPosition?: CSSProperties["objectPosition"];
-  hover?: boolean;
 }
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -172,9 +171,9 @@ export interface ProviderProps {
 }
 
 export interface SelectProps {
-  align?: "left" | "right" | "center";
   css?: CSS;
   filter?: boolean;
+  horizontal?: "left" | "right" | "center";
   last?: boolean;
   loading?: boolean;
   locked?: boolean;
@@ -185,6 +184,7 @@ export interface SelectProps {
   }>;
   selection?: string;
   trigger: ReactNode;
+  vertical?: "top" | "bottom" | "center";
   width?: number | string;
 }
 

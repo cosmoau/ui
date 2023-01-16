@@ -1,26 +1,14 @@
-import { Circle, X } from "phosphor-react";
+import { X } from "phosphor-react";
 import { useState } from "react";
 
 import { Loading } from "../../index";
 import { BadgeProps } from "../../types";
 
-import { BadgeIconStyled, BadgeStyled, BadgeDotStyled, BadgeLoadingStyled } from "./Badge.styles";
+import { BadgeIconStyled, BadgeStyled, BadgeLoadingStyled } from "./Badge.styles";
 
 export function Badge(props: BadgeProps): JSX.Element {
-  const {
-    closable,
-    dot,
-    icon,
-    iconPosition,
-    loading,
-    theme,
-    inline,
-    block,
-    css,
-    onClick,
-    dotColor,
-    children,
-  } = props;
+  const { closable, icon, iconPosition, loading, theme, inline, block, css, onClick, children } =
+    props;
   const [isOpen, setIsOpen] = useState(true);
   const [isMounted, setIsMounted] = useState(true);
 
@@ -51,11 +39,7 @@ export function Badge(props: BadgeProps): JSX.Element {
       {icon && (iconPosition === "left" || !iconPosition) && (
         <BadgeIconStyled align="left">{icon}</BadgeIconStyled>
       )}
-      {dot && (
-        <BadgeDotStyled dotColor={dotColor || theme || "default"} pulse={dot === "pulse"}>
-          <Circle weight="fill" />
-        </BadgeDotStyled>
-      )}
+
       {loading ? (
         <BadgeLoadingStyled>
           <Loading />
@@ -68,7 +52,7 @@ export function Badge(props: BadgeProps): JSX.Element {
       )}
       {closable && (
         <BadgeIconStyled align="right" onClick={(): void => handleClose()}>
-          <X style={{ cursor: "pointer", opacity: 0.7 }} weight="fill" />
+          <X style={{ cursor: "pointer" }} weight="fill" />
         </BadgeIconStyled>
       )}
     </BadgeStyled>
