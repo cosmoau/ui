@@ -52,7 +52,14 @@ export function App(): ReactElement {
           },
         }}
         top="largest">
-        <Table bodyChildren={[["Body 1", "Body 2"]]} headChildren={["Head 1", "Head 2"]} sort />
+        <Table
+          bodyChildren={[
+            ["Body 1", "Body 2"],
+            ["Body 1", "Body 2"],
+          ]}
+          headChildren={["Head 1", "Head 2"]}
+          sort
+        />
       </View>
     </Provider>
   );

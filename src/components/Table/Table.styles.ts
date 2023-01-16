@@ -9,9 +9,8 @@ export const TableStyled = styled("div", {
   overflowX: "auto",
 
   table: {
-    borderCollapse: "collapse",
     borderSpacing: 0,
-
+    border: 0,
     minWidth: "100%",
     width: "100%",
 
@@ -36,6 +35,7 @@ export const TableStyled = styled("div", {
           borderTop: "0.1rem solid $border",
           borderRight: "0.1rem solid $border",
           padding: "$small $medium",
+
           "&:last-child": {
             borderRight: 0,
           },
