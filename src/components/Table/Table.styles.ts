@@ -7,12 +7,12 @@ export const TableStyled = styled("div", {
   },
   width: "100%",
   overflowX: "auto",
-  overflowY: "visible",
 
   table: {
     borderSpacing: 0,
     border: 0,
-    tableLayout: "fixed",
+    tableLayout: "auto",
+    minWidth: "100%",
 
     thead: {
       backgroundColor: "$default",

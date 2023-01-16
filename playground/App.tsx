@@ -73,9 +73,6 @@ export function App(): ReactElement {
           <Table
             bodyChildren={[
               [
-                "Body 1",
-                "Body 2",
-                "Body 2",
                 "Body 2",
                 "Body 2",
                 "Body 2",
@@ -90,15 +87,12 @@ export function App(): ReactElement {
                 />,
               ],
               [
-                "Body 1",
-                "Body 2",
-                "Body 2",
                 "Body 2",
                 "Body 2",
                 "Body 2",
                 <Select
                   vertical="top"
-                  horizontal="right"
+                  horizontal="center"
                   trigger={<Button>Test</Button>}
                   options={[
                     { label: "Test", value: "test" },
@@ -107,7 +101,7 @@ export function App(): ReactElement {
                 />,
               ],
             ]}
-            headChildren={["Head 1", "Head 2", "Head 2", "Head 2", "Head 2", "Head 2", "Head 2"]}
+            headChildren={["Head 2", "Head 2", "Head 2", "Head 2"]}
             sort
           />
         </Box>
