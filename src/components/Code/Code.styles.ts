@@ -11,7 +11,7 @@ export const CodeStyled = styled("div", {
 
   [breakpoints.tablet]: {
     display: "block",
-    padding: "$medium",
+    padding: "$small",
   },
 });
 
@@ -31,10 +31,10 @@ export const CodeFunctionStyled = styled("div", {
   textAlign: "right",
 
   [breakpoints.tablet]: {
-    marginTop: "$small",
     display: "block",
     textAlign: "left",
     minWidth: "100%",
+    marginTop: "$small",
 
     button: {
       width: "100%",
