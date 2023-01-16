@@ -81,9 +81,8 @@
   },
   "scripts": {
     "build": "pnpm clean && pnpm build:esm && pnpm build:cjs",
-    "build:cjs": "tsc --module commonjs --outDir dist/cjs --declarationDir dist/cjs",
-    "build:esm": "tsc",
-    "build:mjs": "tsc --module esnext --outDir dist/mjs --declarationDir dist/mjs",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "build:esm": "tsc --module esnext --outDir dist/esm",
     "clean": "rm -rf dist lib",
     "dev": "echo '⚡️ Fetching device IP for development...' && ipconfig getifaddr en0 && echo '🫡' && parcel playground/index.html --dist-dir playground/dist --open --no-cache --port 420",
     "lint": "eslint src --ext .ts,.tsx",
@@ -92,5 +91,5 @@
   },
   "sideEffects": false,
   "source": "src/index.ts",
-  "types": "./dist/esm/index.d.ts"
+  "types": "dist/types/index.d.ts"
 }

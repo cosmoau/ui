@@ -10,6 +10,7 @@ export const breakpoints = {
     micro: "@media only screen and (max-width: 400px)",
     retina:
       "@media only screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx)",
+    print: "@media print",
   },
   tablet: "@media only screen and (max-width: 1000px)",
   tabletX: "@media only screen and (min-width: 801px) and (max-width: 1000px)",
@@ -78,7 +79,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       smallest: "0.25rem",
     },
     transitions: {
-      default: "all 0.2420s linear",
+      default: "all 0.2s linear",
     },
     zIndices: {
       dialog: 999,
@@ -106,6 +107,11 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     ) => ({
       display: "inline-block !important",
       [breakpoints[value]]: {
+        display: "none !important",
+      },
+    }),
+    hiddenSpecial: (value: "micro" | "retina" | "print") => ({
+      [breakpoints.special[value]]: {
         display: "none !important",
       },
     }),
@@ -139,6 +145,12 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       display: "none",
       [breakpoints[value]]: {
         display: "inline-block",
+      },
+    }),
+    visibleSpecial: (value: "micro" | "retina" | "print") => ({
+      display: "none",
+      [breakpoints.special[value]]: {
+        display: "block",
       },
     }),
     wide: (value: unknown) => ({

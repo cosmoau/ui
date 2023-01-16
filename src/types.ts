@@ -197,6 +197,7 @@ export interface StackProps {
   flex?: CSSProperties["alignItems"];
   flexduo?: boolean;
   minimal?: boolean;
+  noPrint?: boolean;
   offset?: number;
   offsetDesktop?: number;
   offsetLaptop?: number;
@@ -239,5 +240,6 @@ export interface ViewProps {
   container?: boolean;
   css?: CSS;
   inverted?: boolean;
+  noPrint?: boolean;
   top?: ThemeSpacing;
 }

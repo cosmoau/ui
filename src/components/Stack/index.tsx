@@ -26,6 +26,7 @@ export function Stack(props: StackProps): JSX.Element {
     widthWide,
     offsetWide,
     css,
+    noPrint,
     ...rest
   } = props;
 
@@ -84,6 +85,11 @@ export function Stack(props: StackProps): JSX.Element {
             alignItems: flex || "normal",
           },
           alignItems: flex || "normal",
+        }),
+        ...(noPrint && {
+          [breakpoints.special.print]: {
+            display: "none",
+          },
         }),
         ...css,
       }}
