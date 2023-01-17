@@ -30,13 +30,13 @@ export const FieldStyled = styled("div", {
         border: "0.1rem solid $border",
       },
       error: {
-        border: "0.2rem solid $redOverlay",
+        border: "0.2rem solid $redBackground",
       },
       success: {
-        border: "0.2rem solid $greenOverlay",
+        border: "0.2rem solid $greenBackground",
       },
       warning: {
-        border: "0.2rem solid $orangeOverlay",
+        border: "0.2rem solid $orangeBackground",
       },
     },
   },

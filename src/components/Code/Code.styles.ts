@@ -1,13 +1,13 @@
 import { breakpoints, styled } from "../../stitches.config";
 
 export const CodeStyled = styled("div", {
+  alignContent: "center",
   border: "0.1rem solid $border !important",
   borderRadius: "$small",
-  padding: "$smaller $small",
-  width: "100%",
   display: "flex",
   justifyContent: "space-between",
-  alignContent: "center",
+  padding: "$smaller $small",
+  width: "100%",
 
   [breakpoints.tablet]: {
     display: "block",
@@ -28,15 +28,15 @@ export const CodeFunctionStyled = styled("div", {
   textAlign: "right",
 
   [breakpoints.tablet]: {
-    display: "block",
-    textAlign: "left",
-    minWidth: "100%",
-    marginTop: "$small",
-
     button: {
-      width: "100%",
       display: "block",
+      width: "100%",
     },
+    display: "block",
+    marginTop: "$small",
+    minWidth: "100%",
+
+    textAlign: "left",
   },
 });
 

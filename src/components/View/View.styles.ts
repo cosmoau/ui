@@ -1,12 +1,12 @@
 import { breakpoints, styled } from "../../stitches.config";
 
 export const ViewStyled = styled("section", {
+  backgroundColor: "$background",
+  color: "$text",
   paddingLeft: "$small",
   paddingRight: "$small",
   position: "relative",
   width: "100%",
-  backgroundColor: "$background",
-  color: "$text",
 });
 
 export const ViewContainerStyled = styled("div", {

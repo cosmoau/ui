@@ -8,9 +8,9 @@ export const breakpoints = {
   phone: "@media only screen and (max-width: 800px)",
   special: {
     micro: "@media only screen and (max-width: 400px)",
+    print: "@media print",
     retina:
       "@media only screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx)",
-    print: "@media print",
   },
   tablet: "@media only screen and (max-width: 1000px)",
   tabletX: "@media only screen and (min-width: 801px) and (max-width: 1000px)",
@@ -21,31 +21,25 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
   theme: {
     colors: {
       accent: "rgb(60, 70, 80)",
+      accentIHM: "rgb(0, 48, 74)",
       background: "rgb(255, 250, 245)",
-      blueText: "rgb(32, 47, 136)",
+      blueBackground: "rgb(193, 221, 255)",
+      blueText: "rgb(32, 66, 107)",
       border: "rgba(8, 12, 36, 0.1)",
       default: "rgba(8, 12, 36, 0.033)",
       defaultHover: "rgba(8, 12, 36, 0.066)",
-      greenText: "rgb(0, 76, 6)",
-      orangeText: "rgb(199, 84, 30)",
-      pinkText: "rgb(173, 22, 128)",
-      purpleText: "rgb(112, 23, 171)",
-      redText: "rgb(170, 28, 47)",
+      greenBackground: "rgba(204, 238, 222,0.9)",
+      greenText: "rgb(22, 70, 80)",
+      orangeBackground: "rgb(255, 211, 197)",
+      orangeText: "rgb(124, 46, 22)",
+      purpleBackground: "rgb(207, 210, 255)",
+      purpleText: "rgb(39, 40, 93)",
+      redBackground: "rgb(255, 203, 205)",
+      redText: "rgb(122, 34, 38)",
       soft: "rgba(8, 12, 36, 0.035)",
       text: "rgb(11, 26, 55)",
-      accentIHM: "rgb(0, 48, 74)",
-      blueBorder: "rgba(115, 172, 255, 0.5)",
-      blueOverlay: "rgba(151, 193, 255, 0.25)",
-      greenBorder: "rgba(0, 200, 83, 0.5)",
-      greenOverlay: "rgba(101, 227, 124, 0.25)",
-      orangeBorder: "rgba(255, 172, 115, 0.5)",
-      orangeOverlay: "rgba(255, 172, 115, 0.25)",
-      pinkBorder: "rgba(255, 115, 172, 0.5)",
-      pinkOverlay: "rgba(255, 115, 172, 0.25)",
-      purpleBorder: "rgba(172, 115, 255, 0.5)",
-      purpleOverlay: "rgba(172, 115, 255, 0.25)",
-      redBorder: "rgba(255, 115, 115, 0.5)",
-      redOverlay: "rgba(255, 115, 115, 0.25)",
+      yellowBackground: "rgb(255, 222, 175)",
+      yellowText: "rgb(113, 82, 20)",
     },
     fontSizes: {
       default: "1.6rem",
@@ -64,15 +58,15 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       small: "0.5rem",
     },
     shadows: {
-      small: "0 0.3rem 0.4rem 0 rgba(8, 12, 36, 0.06)",
-      medium: "0 0.6rem 0.6rem 0 rgba(8, 12, 36, 0.09)",
       large: "0 0.6rem 0.9rem 0 rgba(8, 12, 36, 0.12)",
+      medium: "0 0.6rem 0.6rem 0 rgba(8, 12, 36, 0.09)",
+      small: "0 0.3rem 0.4rem 0 rgba(8, 12, 36, 0.06)",
     },
     space: {
+      excess: "16rem",
       large: "4rem",
       larger: "6rem",
       largest: "8rem",
-      excess: "16rem",
       medium: "2rem",
       small: "1rem",
       smaller: "0.5rem",
@@ -89,6 +83,9 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     },
   },
   utils: {
+    darkThemeSpec: (value: unknown) => ({
+      "@media (prefers-color-scheme: dark)": value,
+    }),
     desktop: (value: unknown) => ({
       [breakpoints.desktop]: value,
     }),
@@ -121,10 +118,13 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     laptopX: (value: unknown) => ({
       [breakpoints.laptopX]: value,
     }),
+
+    lightThemeSpec: (value: unknown) => ({
+      "@media (prefers-color-scheme: light)": value,
+    }),
     phone: (value: unknown) => ({
       [breakpoints.phone]: value,
     }),
-
     tablet: (value: unknown) => ({
       [breakpoints.tablet]: value,
     }),
@@ -156,28 +156,16 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     wide: (value: unknown) => ({
       [breakpoints.wide]: value,
     }),
-    darkThemeSpec: (value: unknown) => ({
-      "@media (prefers-color-scheme: dark)": value,
-    }),
-    lightThemeSpec: (value: unknown) => ({
-      "@media (prefers-color-scheme: light)": value,
-    }),
   },
 });
 
 export const darkTheme = createTheme({
   colors: {
-    accent: "rgb(180, 190, 210)",
+    accent: "rgb(145, 165, 215)",
     background: "rgb(8, 12, 36)",
-    blueText: "rgb(166, 179, 255)",
     border: "rgba(253, 250, 246, 0.2)",
     default: "rgba(253, 250, 246, 0.075)",
     defaultHover: "rgba(253, 250, 246, 0.125)",
-    greenText: "rgb(124, 241, 151)",
-    orangeText: "rgb(254, 177, 141)",
-    pinkText: "rgb(255, 142, 221)",
-    purpleText: "rgb(210, 142, 255)",
-    redText: "rgb(251, 127, 143)",
     soft: "$background",
     text: "rgb(253, 250, 246)",
   },

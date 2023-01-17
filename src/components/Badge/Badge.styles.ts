@@ -4,12 +4,12 @@ export const BadgeStyled = styled("div", {
   alignItems: "center",
   borderRadius: "$large",
   display: "inline-flex",
-  justifyContent: "center",
-  padding: "$smallest $small",
   fontSize: "$default",
+  justifyContent: "center",
   lineHeight: "$default",
-
   marginBottom: "0 !important",
+
+  padding: "$smallest $small",
 
   svg: {
     marginTop: "-0.25rem",
@@ -23,7 +23,7 @@ export const BadgeStyled = styled("div", {
     },
     theme: {
       blue: {
-        backgroundColor: "$blueOverlay",
+        backgroundColor: "$blueBackground",
         color: "$blueText",
       },
       border: {
@@ -35,24 +35,25 @@ export const BadgeStyled = styled("div", {
         color: "$text",
       },
       green: {
-        backgroundColor: "$greenOverlay",
+        backgroundColor: "$greenBackground",
         color: "$greenText",
       },
       orange: {
-        backgroundColor: "$orangeOverlay",
+        backgroundColor: "$orangeBackground",
         color: "$orangeText",
       },
-      pink: {
-        backgroundColor: "$pinkOverlay",
-        color: "$pinkText",
-      },
+
       purple: {
-        backgroundColor: "$purpleOverlay",
+        backgroundColor: "$purpleBackground",
         color: "$purpleText",
       },
       red: {
-        backgroundColor: "$redOverlay",
+        backgroundColor: "$redBackground",
         color: "$redText",
+      },
+      yellow: {
+        backgroundColor: "$yellowBackground",
+        color: "$yellowText",
       },
     },
   },

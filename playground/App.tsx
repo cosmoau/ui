@@ -11,11 +11,62 @@ import {
   Badge,
   Box,
   Select,
+  Stack,
 } from "../src/index";
 
 export function App(): ReactElement {
   return (
     <Provider>
+      <View bottom="largest" container top="largest">
+        <Stack direction="row">
+          <Stack direction="column">
+            <Stack bottom="small">
+              <Badge theme="green">A green badge</Badge>
+            </Stack>
+            <Stack bottom="small">
+              <Badge theme="red">A red badge</Badge>
+            </Stack>
+            <Stack bottom="small">
+              <Badge theme="orange">An orange badge</Badge>
+            </Stack>
+            <Stack bottom="small">
+              <Badge theme="yellow">A yellow badge</Badge>
+            </Stack>
+
+            <Stack bottom="small">
+              <Badge theme="purple">A purple badge</Badge>
+            </Stack>
+            <Stack bottom="small">
+              <Badge theme="blue">A blue badge</Badge>
+            </Stack>
+          </Stack>
+        </Stack>
+      </View>
+      <View bottom="largest" container inverted top="largest">
+        <Stack direction="row">
+          <Stack direction="column">
+            <Stack bottom="small">
+              <Badge theme="green">An inverted green badge</Badge>
+            </Stack>
+            <Stack bottom="small">
+              <Badge theme="red">An inverted red badge</Badge>
+            </Stack>
+            <Stack bottom="small">
+              <Badge theme="orange">An inverted orange badge</Badge>
+            </Stack>
+            <Stack bottom="small">
+              <Badge theme="yellow">An inverted yellow badge</Badge>
+            </Stack>
+
+            <Stack bottom="small">
+              <Badge theme="purple">An inverted purple badge</Badge>
+            </Stack>
+            <Stack bottom="small">
+              <Badge theme="blue">An inverted blue badge</Badge>
+            </Stack>
+          </Stack>
+        </Stack>
+      </View>
       <View bottom="largest" container inverted top="largest">
         <Dialog trigger={<Button>Test</Button>}>
           <Text as="h3">Test</Text>
@@ -76,28 +127,30 @@ export function App(): ReactElement {
                 "Body 2",
                 "Body 2",
                 "Body 2",
+                // eslint-disable-next-line react/jsx-key
                 <Select
-                  vertical="top"
                   horizontal="left"
-                  trigger={<Button>Test</Button>}
                   options={[
                     { label: "Test", value: "test" },
                     { label: "Test 2", value: "test2" },
                   ]}
+                  trigger={<Button>Test</Button>}
+                  vertical="top"
                 />,
               ],
               [
                 "Body 2",
                 "Body 2",
                 "Body 2",
+                // eslint-disable-next-line react/jsx-key
                 <Select
-                  vertical="top"
                   horizontal="center"
-                  trigger={<Button>Test</Button>}
                   options={[
                     { label: "Test", value: "test" },
                     { label: "Test 2", value: "test2" },
                   ]}
+                  trigger={<Button>Test</Button>}
+                  vertical="top"
                 />,
               ],
             ]}

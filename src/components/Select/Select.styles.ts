@@ -27,39 +27,6 @@ export const SelectGroupStyled = styled("div", {
   textAlign: "left !important",
   transition: "$default",
   variants: {
-    vertical: {
-      top: {
-        bottom: "100%",
-        marginTop: "0",
-        top: "auto",
-        marginBottom: "10%",
-      },
-      bottom: {
-        bottom: "auto",
-        top: "100%",
-        marginTop: "10%",
-      },
-      center: {
-        bottom: "auto",
-        top: "50%",
-        transform: "translateY(-50%)",
-      },
-    },
-    horizontal: {
-      left: {
-        left: "0",
-        right: "auto",
-      },
-      right: {
-        left: "auto",
-        right: "0",
-      },
-      center: {
-        left: "50%",
-        right: "auto",
-        transform: "translateX(-50%)",
-      },
-    },
     animation: {
       false: {
         animation: `${fadeOut} .2s linear`,
@@ -68,6 +35,39 @@ export const SelectGroupStyled = styled("div", {
       true: {
         animation: `${fadeIn} .2s linear`,
         animationFillMode: "forwards",
+      },
+    },
+    horizontal: {
+      center: {
+        left: "50%",
+        right: "auto",
+        transform: "translateX(-50%)",
+      },
+      left: {
+        left: "0",
+        right: "auto",
+      },
+      right: {
+        left: "auto",
+        right: "0",
+      },
+    },
+    vertical: {
+      bottom: {
+        bottom: "auto",
+        marginTop: "10%",
+        top: "100%",
+      },
+      center: {
+        bottom: "auto",
+        top: "50%",
+        transform: "translateY(-50%)",
+      },
+      top: {
+        bottom: "100%",
+        marginBottom: "10%",
+        marginTop: "0",
+        top: "auto",
       },
     },
   },

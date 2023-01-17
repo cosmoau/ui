@@ -46,16 +46,14 @@ export const BoxStyled = styled("article", {
         borderColor: "$border",
       },
       error: {
-        backgroundColor: "$redOverlay",
-        borderColor: "$redBorder",
+        backgroundColor: "$redBackground",
         color: "$redText",
       },
       fill: {
         backgroundColor: "$default",
       },
       success: {
-        backgroundColor: "$greenOverlay",
-        borderColor: "$greenBorder",
+        backgroundColor: "$greenBackground",
         color: "$greenText",
       },
       transparent: {
@@ -63,8 +61,7 @@ export const BoxStyled = styled("article", {
         borderColor: "transparent",
       },
       warning: {
-        backgroundColor: "$orangeOverlay",
-        borderColor: "$orangeBorder",
+        backgroundColor: "$orangeBackground",
         color: "$orangeText",
       },
     },

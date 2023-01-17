@@ -37,13 +37,13 @@ export interface BadgeProps {
   closable?: boolean;
   css?: CSS;
   dot?: boolean | "pulse";
-  dotColor?: "red" | "orange" | "pink" | "purple" | "blue" | "green" | "border" | "default";
+  dotColor?: "red" | "orange" | "purple" | "blue" | "green" | "border" | "default";
   icon?: ReactNode;
   iconPosition?: "left" | "right";
   inline?: ThemeSpacing | "auto";
   loading?: boolean;
   onClick?: MouseEventHandler<HTMLDivElement>;
-  theme?: "red" | "orange" | "pink" | "purple" | "blue" | "green" | "border" | "default";
+  theme?: "red" | "orange" | "yellow" | "purple" | "blue" | "green" | "border" | "default";
 }
 
 export interface BoxProps {

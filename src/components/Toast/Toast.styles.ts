@@ -6,17 +6,12 @@ export const ToastStyled = styled("div", {
   borderRadius: "$small",
   boxShadow: "$large",
   cursor: "pointer",
-  width: "fit-content",
   fontSize: "$default",
   margin: "$small auto 0 auto !important",
   maxWidth: "60%",
   padding: "$smallest $small",
   pointerEvents: "all",
   transition: "$default",
-
-  [breakpoints.phone]: {
-    maxWidth: "100%",
-  },
   variants: {
     animation: {
       false: {
@@ -29,6 +24,11 @@ export const ToastStyled = styled("div", {
       },
     },
   },
+
+  [breakpoints.phone]: {
+    maxWidth: "100%",
+  },
+  width: "fit-content",
 });
 
 export const ToastContainerStyled = styled("div", {

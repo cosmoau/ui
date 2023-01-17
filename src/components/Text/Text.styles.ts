@@ -9,19 +9,19 @@ export const TextSizes = {
   },
   h2: {
     fontFamily: "$serif",
-    fontSize: "2.75rem",
+    fontSize: "2.5rem",
     lineHeight: "1.2",
     marginBottom: "$medium",
   },
   h3: {
     fontFamily: "$serif",
-    fontSize: "2.5rem",
+    fontSize: "2.25rem",
     lineHeight: "1.2",
     marginBottom: "$medium",
   },
   h4: {
     fontFamily: "$serif",
-    fontSize: "2.25rem",
+    fontSize: "2rem",
     lineHeight: "1.2",
     marginBottom: "$small",
   },
@@ -38,9 +38,6 @@ export const TextSizes = {
   li: {
     listStylePosition: "inside",
     marginBottom: "$smaller",
-  },
-  strong: {
-    fontWeight: "bold",
   },
   ol: {
     marginBottom: 0,
@@ -61,6 +58,9 @@ export const TextSizes = {
     fontSize: "inherit",
     fontWeight: "inherit",
     lineHeight: "inherit",
+  },
+  strong: {
+    fontWeight: "bold",
   },
   ul: {
     marginBottom: 0,

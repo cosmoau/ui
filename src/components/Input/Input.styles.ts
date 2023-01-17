@@ -34,13 +34,13 @@ export const InputCoreStyled = styled("div", {
         border: "0.1rem solid $border",
       },
       error: {
-        border: "0.1rem solid $redOverlay",
+        border: "0.1rem solid $redBackground",
       },
       success: {
-        border: "0.1rem solid $greenOverlay",
+        border: "0.1rem solid $greenBackground",
       },
       warning: {
-        border: "0.1rem solid $orangeOverlay",
+        border: "0.1rem solid $orangeBackground",
       },
     },
   },

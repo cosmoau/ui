@@ -1,39 +1,27 @@
 import { styled } from "../../stitches.config";
 
 export const LoadingOverlayStyled = styled("div", {
-  position: "fixed",
-  top: 0,
-  left: 0,
-  right: 0,
-  bottom: 0,
-  display: "flex",
   alignItems: "center",
-  justifyContent: "center",
-  zIndex: 1000,
-  pointerEvents: "none",
-  userSelect: "none",
   backgroundColor: "$background",
-  padding: "$smaller",
-  borderRadius: "$medium",
   border: "0.1rem solid $border",
+  borderRadius: "$medium",
+  bottom: 0,
   boxShadow: "$medium",
-
+  display: "flex",
+  justifyContent: "center",
+  left: 0,
+  padding: "$smaller",
+  pointerEvents: "none",
+  position: "fixed",
+  right: 0,
   svg: {
-    width: "auto",
     height: "auto",
+    width: "auto",
   },
+  top: 0,
+  userSelect: "none",
 
   variants: {
-    vertical: {
-      top: {
-        top: "$medium",
-        bottom: "auto",
-      },
-      bottom: {
-        top: "auto",
-        bottom: "$medium",
-      },
-    },
     horizontal: {
       left: {
         left: "$medium",
@@ -44,5 +32,17 @@ export const LoadingOverlayStyled = styled("div", {
         right: "$medium",
       },
     },
+    vertical: {
+      bottom: {
+        bottom: "$medium",
+        top: "auto",
+      },
+      top: {
+        bottom: "auto",
+        top: "$medium",
+      },
+    },
   },
+
+  zIndex: 1000,
 });
