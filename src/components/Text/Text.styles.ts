@@ -3,25 +3,25 @@ import { styled } from "../../stitches.config";
 export const TextSizes = {
   h1: {
     fontFamily: "$serif",
-    fontSize: "3rem",
+    fontSize: "3.2rem",
     lineHeight: "1.2",
     marginBottom: "$medium",
   },
   h2: {
     fontFamily: "$serif",
-    fontSize: "2.5rem",
+    fontSize: "2.9rem",
     lineHeight: "1.2",
     marginBottom: "$medium",
   },
   h3: {
     fontFamily: "$serif",
-    fontSize: "2.25rem",
+    fontSize: "2.4rem",
     lineHeight: "1.2",
     marginBottom: "$medium",
   },
   h4: {
     fontFamily: "$serif",
-    fontSize: "2rem",
+    fontSize: "2.1rem",
     lineHeight: "1.2",
     marginBottom: "$small",
   },

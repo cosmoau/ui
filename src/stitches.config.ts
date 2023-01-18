@@ -6,8 +6,9 @@ export const breakpoints = {
   laptop: "@media only screen and (max-width: 1600px)",
   laptopX: "@media only screen and (min-width: 1001px) and (max-width: 1600px)",
   phone: "@media only screen and (max-width: 800px)",
+  phoneX: "@media only screen and (min-width: 601px) and (max-width: 800px)",
   special: {
-    micro: "@media only screen and (max-width: 400px)",
+    micro: "@media only screen and (max-width: 350px)",
     print: "@media print",
     retina:
       "@media only screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx)",
@@ -20,11 +21,11 @@ export const breakpoints = {
 export const { theme, css, styled, getCssText, globalCss, keyframes } = createStitches({
   theme: {
     colors: {
-      accent: "rgb(60, 70, 80)",
-      accentIHM: "rgb(0, 48, 74)",
+      accent: "rgb(58, 68, 78)",
+      accentIHM: "rgb(12, 48, 84)",
       background: "rgb(255, 250, 245)",
-      blueBackground: "rgb(193, 221, 255)",
-      blueText: "rgb(32, 66, 107)",
+      blueBackground: "rgb(190, 220, 250)",
+      blueText: "rgb(33, 66, 99)",
       border: "rgba(8, 12, 36, 0.1)",
       default: "rgba(8, 12, 36, 0.033)",
       defaultHover: "rgba(8, 12, 36, 0.066)",
@@ -36,7 +37,6 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       purpleText: "rgb(39, 40, 93)",
       redBackground: "rgb(255, 203, 205)",
       redText: "rgb(122, 34, 38)",
-      soft: "rgba(8, 12, 36, 0.035)",
       text: "rgb(11, 26, 55)",
       yellowBackground: "rgb(255, 222, 175)",
       yellowText: "rgb(113, 82, 20)",
@@ -161,13 +161,12 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
 
 export const darkTheme = createTheme({
   colors: {
-    accent: "rgb(145, 165, 215)",
+    accent: "rgb(200, 210, 220)",
     background: "rgb(8, 12, 36)",
-    border: "rgba(253, 250, 246, 0.2)",
-    default: "rgba(253, 250, 246, 0.075)",
-    defaultHover: "rgba(253, 250, 246, 0.125)",
-    soft: "$background",
-    text: "rgb(253, 250, 246)",
+    border: "rgba(255, 250, 245, 0.3)",
+    default: "rgba(255, 250, 245, 0.1)",
+    defaultHover: "rgba(255, 250, 245, 0.15)",
+    text: "rgb(255, 250, 245)",
   },
   shadows: {
     large: "0 0.6rem 0.9rem 0 rgba(65, 66, 68, 0.05)",
