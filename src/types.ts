@@ -39,6 +39,7 @@ export interface BadgeProps {
   dot?: boolean | "pulse";
   dotColor?: "red" | "orange" | "purple" | "blue" | "green" | "border" | "default";
   icon?: ReactNode;
+  iconOnly?: boolean;
   iconPosition?: "left" | "right";
   inline?: ThemeSpacing | "auto";
   loading?: boolean;

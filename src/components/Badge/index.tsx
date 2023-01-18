@@ -7,8 +7,19 @@ import { BadgeProps } from "../../types";
 import { BadgeIconStyled, BadgeStyled, BadgeLoadingStyled } from "./Badge.styles";
 
 export function Badge(props: BadgeProps): JSX.Element {
-  const { closable, icon, iconPosition, loading, theme, inline, block, css, onClick, children } =
-    props;
+  const {
+    closable,
+    icon,
+    iconPosition,
+    loading,
+    theme,
+    inline,
+    block,
+    css,
+    onClick,
+    children,
+    iconOnly,
+  } = props;
   const [isOpen, setIsOpen] = useState(true);
   const [isMounted, setIsMounted] = useState(true);
 
@@ -34,20 +45,23 @@ export function Badge(props: BadgeProps): JSX.Element {
         }),
         ...css,
       }}
+      iconOnly={iconOnly}
       theme={theme || "default"}
       onClick={onClick}>
-      {icon && (iconPosition === "left" || !iconPosition) && (
+      {iconOnly && <BadgeIconStyled>{icon}</BadgeIconStyled>}
+      {!iconOnly && icon && (iconPosition === "left" || !iconPosition) && (
         <BadgeIconStyled align="left">{icon}</BadgeIconStyled>
       )}
 
-      {loading ? (
-        <BadgeLoadingStyled>
-          <Loading />
-        </BadgeLoadingStyled>
-      ) : (
-        children
-      )}
-      {icon && iconPosition === "right" && !closable && (
+      {!iconOnly &&
+        (loading ? (
+          <BadgeLoadingStyled>
+            <Loading />
+          </BadgeLoadingStyled>
+        ) : (
+          children
+        ))}
+      {!iconOnly && icon && iconPosition === "right" && !closable && (
         <BadgeIconStyled align="right">{icon}</BadgeIconStyled>
       )}
       {closable && (

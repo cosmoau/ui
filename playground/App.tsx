@@ -1,3 +1,4 @@
+import { CurrencyEth } from "phosphor-react";
 import React, { ReactElement } from "react";
 
 import {
@@ -39,6 +40,11 @@ export function App(): ReactElement {
             <Stack bottom="small">
               <Badge theme="blue">A blue badge</Badge>
             </Stack>
+            <Stack bottom="small">
+              <Badge icon={<CurrencyEth />} iconOnly>
+                An icon only badge
+              </Badge>
+            </Stack>
           </Stack>
         </Stack>
       </View>
@@ -63,6 +69,11 @@ export function App(): ReactElement {
             </Stack>
             <Stack bottom="small">
               <Badge theme="blue">An inverted blue badge</Badge>
+            </Stack>
+            <Stack bottom="small">
+              <Badge icon={<CurrencyEth />} iconOnly>
+                An icon only badge
+              </Badge>
             </Stack>
           </Stack>
         </Stack>

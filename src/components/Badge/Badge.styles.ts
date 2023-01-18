@@ -8,17 +8,28 @@ export const BadgeStyled = styled("div", {
   justifyContent: "center",
   lineHeight: "$default",
   marginBottom: "0 !important",
-
   padding: "$smallest $small",
 
-  svg: {
-    marginTop: "-0.25rem",
-  },
   variants: {
     animation: {
       true: {
         animation: `${fadeOut} .2s linear`,
         animationFillMode: "forwards",
+      },
+    },
+    iconOnly: {
+      false: {
+        svg: {
+          marginTop: "-0.25rem",
+        },
+      },
+      true: {
+        height: "3rem",
+        svg: {
+          alignSelf: "center",
+          verticalAlign: "middle",
+        },
+        width: "3rem",
       },
     },
     theme: {
@@ -62,7 +73,7 @@ export const BadgeStyled = styled("div", {
 });
 
 export const BadgeIconStyled = styled("span", {
-  display: "inline",
+  display: "inline-flex",
   variants: {
     align: {
       left: {
