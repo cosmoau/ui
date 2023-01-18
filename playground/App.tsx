@@ -33,12 +33,16 @@ export function App(): ReactElement {
             <Stack bottom="small">
               <Badge theme="yellow">A yellow badge</Badge>
             </Stack>
-
             <Stack bottom="small">
               <Badge theme="purple">A purple badge</Badge>
             </Stack>
             <Stack bottom="small">
               <Badge theme="blue">A blue badge</Badge>
+            </Stack>
+            <Stack bottom="small">
+              <Badge icon={<CurrencyEth />} theme="blue">
+                A blue badge
+              </Badge>
             </Stack>
             <Stack bottom="small">
               <Badge icon={<CurrencyEth />} iconOnly>

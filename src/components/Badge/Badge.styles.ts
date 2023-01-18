@@ -20,7 +20,7 @@ export const BadgeStyled = styled("div", {
     iconOnly: {
       false: {
         svg: {
-          marginTop: "-0.25rem",
+          marginTop: "-0.3rem",
         },
       },
       true: {
@@ -73,7 +73,7 @@ export const BadgeStyled = styled("div", {
 });
 
 export const BadgeIconStyled = styled("span", {
-  display: "inline-flex",
+  display: "inline",
   variants: {
     align: {
       left: {

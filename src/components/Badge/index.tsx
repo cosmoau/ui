@@ -59,7 +59,7 @@ export function Badge(props: BadgeProps): JSX.Element {
             <Loading />
           </BadgeLoadingStyled>
         ) : (
-          children
+          children || ""
         ))}
       {!iconOnly && icon && iconPosition === "right" && !closable && (
         <BadgeIconStyled align="right">{icon}</BadgeIconStyled>

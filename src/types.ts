@@ -33,7 +33,7 @@ export interface AvatarProps {
 
 export interface BadgeProps {
   block?: boolean;
-  children: ReactNode;
+  children?: ReactNode;
   closable?: boolean;
   css?: CSS;
   dot?: boolean | "pulse";
