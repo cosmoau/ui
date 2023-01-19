@@ -25,11 +25,11 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       accentIHM: "rgb(12, 48, 84)",
       background: "rgb(255, 250, 245)",
       blueBackground: "rgb(190, 220, 250)",
-      blueText: "rgb(33, 66, 99)",
+      blueText: "rgb(24, 54, 84)",
       border: "rgba(8, 12, 36, 0.1)",
-      default: "rgba(8, 12, 36, 0.033)",
-      defaultHover: "rgba(8, 12, 36, 0.066)",
-      greenBackground: "rgba(204, 238, 222,0.9)",
+      default: "rgba(8, 12, 36, 0.03)",
+      defaultHover: "rgba(8, 12, 36, 0.06)",
+      greenBackground: "rgb(204, 238, 222)",
       greenText: "rgb(22, 70, 80)",
       orangeBackground: "rgb(255, 211, 197)",
       orangeText: "rgb(124, 46, 22)",
@@ -161,11 +161,11 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
 
 export const darkTheme = createTheme({
   colors: {
-    accent: "rgb(200, 210, 220)",
-    background: "rgb(8, 12, 36)",
-    border: "rgba(255, 250, 245, 0.3)",
-    default: "rgba(255, 250, 245, 0.1)",
-    defaultHover: "rgba(255, 250, 245, 0.15)",
+    accent: "rgb(200, 220, 240)",
+    background: "rgb(10, 20, 40)",
+    border: "rgba(200, 220, 240, 0.2)",
+    default: "rgba(200, 220, 240, 0.15)",
+    defaultHover: "rgba(200, 220, 240, 0.3)",
     text: "rgb(255, 250, 245)",
   },
   shadows: {

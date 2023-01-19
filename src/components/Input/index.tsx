@@ -66,8 +66,6 @@ export function Input(props: InputProps): JSX.Element {
     setIsRevealed(!isRevealed);
   }
 
-  // event listener
-
   useEventListener("keydown", (e: KeyboardEvent) => {
     if (listen && e.key === "Enter" && submitFunction && submitValid) {
       submitFunction(inputValue || "");

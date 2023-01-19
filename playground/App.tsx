@@ -109,8 +109,12 @@ export function App(): ReactElement {
         <Text as="h6">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
         </Text>
-        <Text as="p">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
+        <Text as="p" accent>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec. Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec? Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec. Lorem ipsum dolor
+          sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec! Lorem ipsum dolor sit
+          amet, consectetur adipiscing elit. Nullam auctor, nisl nec.
         </Text>
 
         <Text as="small">
