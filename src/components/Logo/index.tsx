@@ -1,11 +1,17 @@
-import { SVGProps } from "react";
+import { LogoProps } from "../../types";
 
 import { LogoStyled } from "./Logo.styles";
 
-export function Logo(props: SVGProps<SVGSVGElement>): JSX.Element {
-  const { height = 70.7, width = 231.85, ...rest } = props;
+export const Logo = (props: LogoProps): JSX.Element => {
+  const { height = 70.7, width = 231.85, css, inline, ...rest } = props;
   return (
-    <LogoStyled>
+    <LogoStyled
+      css={{
+        ...(inline && {
+          marginRight: inline === "auto" ? "auto" : `$${inline}`,
+        }),
+        ...css,
+      }}>
       <svg height={height} viewBox="0 0 463.7 141.4" width={width} {...rest}>
         <g fill="currentColor">
           <path d="m182.9 105.9c-10.5 0-18.7-3.1-24.5-9.3s-8.7-14.6-8.7-25.2v-.8c0-10.1 3.1-18.4 9.4-24.9 6.2-6.5 14.1-9.7 23.6-9.7 8.1 0 14.8 2 20.1 6.1 5.3 4 8.3 9.9 9.1 17.7h-12.8c-1.5-9.1-6.9-13.7-16.2-13.7-6 0-10.8 2.2-14.4 6.6s-5.4 10.4-5.4 17.9v.8c0 7.7 1.7 13.6 5.2 17.9s8.4 6.4 14.6 6.4c4.8 0 8.7-1.2 11.8-3.7 3.1-2.4 4.9-6 5.6-10.7h12.3c-1 8-4.1 14.1-9.4 18.3-5.2 4.2-12 6.3-20.3 6.3z" />
@@ -45,13 +51,19 @@ export function Logo(props: SVGProps<SVGSVGElement>): JSX.Element {
       </svg>
     </LogoStyled>
   );
-}
+};
 
-export function LogoIcon(props: SVGProps<SVGSVGElement>): JSX.Element {
-  const { height = 50, width = 50, ...rest } = props;
+export function LogoIcon(props: LogoProps): JSX.Element {
+  const { height = 50, width = 50, inline, css, ...rest } = props;
 
   return (
-    <LogoStyled>
+    <LogoStyled
+      css={{
+        ...(inline && {
+          marginRight: inline === "auto" ? "auto" : `$${inline}`,
+        }),
+        ...css,
+      }}>
       <svg height={height} viewBox="0 0 133.9 141.4" width={width} x="0px" y="0px" {...rest}>
         <path
           d="M44.4,96.3C44.4,96.3,44.4,96.3,44.4,96.3c-7.5-10.3-13.3-22.9-16.1-35.8c-7.3,6.4-14.7,16.2-18.4,27.2

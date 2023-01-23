@@ -9,6 +9,7 @@ import {
   MouseEventHandler,
   ElementType,
   ComponentType,
+  SVGProps,
 } from "react";
 import { Toaster } from "react-hot-toast";
 
@@ -150,6 +151,11 @@ export interface LoadingProps {
   stroke?: string;
   vertical?: "top" | "bottom";
   width?: number | string;
+}
+
+export interface LogoProps extends SVGProps<SVGSVGElement> {
+  css?: CSS;
+  inline?: ThemeSpacing | "auto";
 }
 
 export interface PopoverProps {
