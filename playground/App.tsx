@@ -84,7 +84,9 @@ export function App(): ReactElement {
       </View>
       <View bottom="largest" container inverted top="largest">
         <Dialog trigger={<Button>Test</Button>}>
-          <Text as="h3">Test</Text>
+          <Text as="h3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
+          </Text>
           <Text as="p">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
           </Text>
@@ -109,7 +111,7 @@ export function App(): ReactElement {
         <Text as="h6">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
         </Text>
-        <Text as="p" accent>
+        <Text accent as="p">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec. Lorem
           ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec? Lorem ipsum
           dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec. Lorem ipsum dolor

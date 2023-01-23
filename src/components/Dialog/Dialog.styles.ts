@@ -70,10 +70,10 @@ export const DialogContentStyled = styled("div", {
   },
 
   [breakpoints.phone]: {
-    maxWidth: "90%",
-    minWidth: "90%",
-    padding: "$medium",
-    width: "90%",
+    maxWidth: "95%",
+    minWidth: "95%",
+    padding: "calc($large * 0.8)",
+    width: "95%",
   },
 });
 
