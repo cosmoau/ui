@@ -1,7 +1,7 @@
 {
   "name": "@cosmoau/ui",
   "description": "Cosmo's internal component library - Next.js + TypeScript.",
-  "version": "1.2.50",
+  "version": "1.2.51",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "bugs": {
@@ -14,7 +14,7 @@
     "usehooks-ts": "^2.9.1"
   },
   "devDependencies": {
-    "@types/node": "^18.11.19",
+    "@types/node": "^18.13.0",
     "@types/react": "^18.0.27",
     "csstype": "^3.1.1",
     "eslint": "^8.33.0",
