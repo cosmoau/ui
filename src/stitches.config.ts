@@ -63,10 +63,10 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       small: "0 0.3rem 0.4rem 0 rgba(8, 12, 36, 0.06)",
     },
     space: {
-      excess: "16rem",
+      excess: "14rem",
       large: "4rem",
-      larger: "6rem",
-      largest: "8rem",
+      larger: "5.5rem",
+      largest: "7rem",
       medium: "2rem",
       small: "1rem",
       smaller: "0.5rem",

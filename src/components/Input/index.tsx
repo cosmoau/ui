@@ -1,4 +1,4 @@
-import { Check, ClipboardText, Warning, Eye, EyeClosed } from "phosphor-react";
+import { Check, ClipboardText, Warning, Eye, EyeClosed, XCircle } from "phosphor-react";
 import { ChangeEvent, useState } from "react";
 import toast from "react-hot-toast";
 import { useEventListener } from "usehooks-ts";
@@ -39,8 +39,10 @@ export function Input(props: InputProps): JSX.Element {
     submitFunction,
     submitValid,
     listen,
+    reset,
+    resetFunction,
   } = props;
-  const [inputValue, setInputValue] = useState(value || "");
+  const [inputValue, setInputValue] = useState(value || "") as [string, (value: string) => void];
   const [isCopied, setIsCopied] = useState(false);
   const [isRevealed, setIsRevealed] = useState(false);
 
@@ -64,6 +66,14 @@ export function Input(props: InputProps): JSX.Element {
 
   function handleReveal(): void {
     setIsRevealed(!isRevealed);
+  }
+
+  function handleReset(): void {
+    setInputValue("");
+
+    if (resetFunction) {
+      resetFunction();
+    }
   }
 
   useEventListener("keydown", (e: KeyboardEvent) => {
@@ -93,7 +103,7 @@ export function Input(props: InputProps): JSX.Element {
             handleChange(e);
           }}
         />
-        {(loading || submit || copy || reveal) && (
+        {(loading || submit || copy || reveal || reset) && (
           <InputFunctionStyled>
             {loading && <Loading />}
             {copy && (
@@ -126,6 +136,19 @@ export function Input(props: InputProps): JSX.Element {
                   handleReveal();
                 }}>
                 {isRevealed ? "Hide" : "Show"}
+              </Button>
+            )}
+
+            {reset && inputValue && (
+              <Button
+                css={{
+                  marginLeft: "$smaller",
+                }}
+                small
+                onClick={(): void => {
+                  handleReset();
+                }}>
+                <XCircle />
               </Button>
             )}
 

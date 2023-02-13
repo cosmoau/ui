@@ -90,7 +90,6 @@ export const InputFunctionStyled = styled("div", {
 export const InputIconStyled = styled("div", {
   display: "inline-block",
   height: "100%",
-  marginRight: "$small",
   paddingRight: "$small",
 });
 

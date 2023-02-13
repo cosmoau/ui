@@ -1,7 +1,8 @@
+import { MagnifyingGlass } from "phosphor-react";
 import { useRef, useState } from "react";
 import { useEventListener, useLockedBody, useOnClickOutside } from "usehooks-ts";
 
-import { Input, Loading, Stack, Text } from "../../index";
+import { Input, Loading } from "../../index";
 import { SelectProps } from "../../types";
 
 import {
@@ -9,6 +10,8 @@ import {
   SelectTriggerStyled,
   SelectGroupStyled,
   SelectItemStyled,
+  SelectFilterStyled,
+  SelectEmptyStyled,
 } from "./Select.styles";
 
 export function Select(props: SelectProps): JSX.Element {
@@ -90,21 +93,23 @@ export function Select(props: SelectProps): JSX.Element {
           ref={ref}
           animation={isOpen}
           css={{
-            maxWidth: width || "30rem",
-            minWidth: width || "20rem",
+            maxWidth: width || "50rem",
+            minWidth: width || "25rem",
           }}
           horizontal={horizontal}
           vertical={vertical}>
-          {options.length > 6 && (
-            <Stack bottom="small" top="small">
+          {options.length > 10 && (
+            <SelectFilterStyled>
               <Input
                 disabled={!options}
-                placeholder="Search"
+                icon={<MagnifyingGlass />}
+                reset
+                resetFunction={(): void => setFilter("")}
                 submitValid={filter.length > 0}
                 value={filter}
                 onChange={(event): void => setFilter(event.target.value)}
               />
-            </Stack>
+            </SelectFilterStyled>
           )}
           {loading ? (
             <Loading />
@@ -127,9 +132,7 @@ export function Select(props: SelectProps): JSX.Element {
               </SelectItemStyled>
             ))
           ) : (
-            <Text accent as="p" css={{ padding: "$smallest $small" }}>
-              No results found.
-            </Text>
+            <SelectEmptyStyled>No results found.</SelectEmptyStyled>
           )}
         </SelectGroupStyled>
       )}

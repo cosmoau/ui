@@ -75,6 +75,15 @@ export const SelectGroupStyled = styled("div", {
   zIndex: "$select",
 });
 
+export const SelectFilterStyled = styled("div", {
+  borderBottom: "0.1rem solid $border",
+  input: {
+    width: "100%",
+  },
+
+  padding: "$smaller $small",
+});
+
 export const SelectItemStyled = styled("div", {
   "&:hover": {
     backgroundColor: "$default",
@@ -90,6 +99,12 @@ export const SelectItemStyled = styled("div", {
   fontSize: "$default",
   padding: "$smaller $small",
   transition: "$default",
+});
+
+export const SelectEmptyStyled = styled("div", {
+  color: "$accent",
+  fontSize: "$small",
+  padding: "$small",
 });
 
 export default SelectStyled;

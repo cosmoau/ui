@@ -19,6 +19,27 @@ export function App(): ReactElement {
   return (
     <Provider>
       <View bottom="largest" container top="largest">
+        <Stack bottom="larger" direction="row">
+          <Select
+            horizontal="left"
+            options={[
+              { label: "Test", value: "test" },
+              { label: "Test 2", value: "test2" },
+              { label: "Test 2", value: "test2" },
+              { label: "Test 2", value: "test2" },
+              { label: "Test 2", value: "test2" },
+              { label: "Test 2", value: "test2" },
+              { label: "Test 2", value: "test2" },
+              { label: "Test 2", value: "test2" },
+              { label: "Test 2", value: "test2" },
+              { label: "Test 2", value: "test2" },
+              { label: "Test 2", value: "test2" },
+              { label: "Test 2", value: "test2" },
+              { label: "Test 2", value: "test2" },
+            ]}
+            trigger={<Button>Test</Button>}
+          />
+        </Stack>
         <Stack direction="row">
           <Stack direction="column">
             <Stack bottom="small">

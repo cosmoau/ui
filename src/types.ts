@@ -148,6 +148,8 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   listen?: boolean;
   loading?: boolean;
   mustRef?: RefObject<HTMLInputElement>;
+  reset?: boolean;
+  resetFunction?: () => void;
   reveal?: boolean;
   submit?: string;
   submitFunction?: (value: string | number | unknown) => void;
