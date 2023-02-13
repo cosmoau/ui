@@ -8,6 +8,7 @@ export * from "./components/Code";
 export * from "./components/Dialog";
 export * from "./components/Divider";
 export * from "./components/Field";
+export * from "./components/Form";
 export * from "./components/Image";
 export * from "./components/Input";
 export * from "./components/Loading";

@@ -8,18 +8,17 @@ export const TableStyled = styled("div", {
   overflowX: "auto",
   table: {
     border: 0,
-    borderSpacing: 0,
+    borderCollapse: "separate",
+    borderSpacing: "0 0.5rem",
     minWidth: "100%",
     tableLayout: "auto",
 
     tbody: {
       tr: {
+        backgroundColor: "$background",
+
         td: {
-          "&:last-child": {
-            borderRight: 0,
-          },
-          borderRight: "0.1rem solid $border",
-          borderTop: "0.1rem solid $border",
+          backgroundColor: "$default",
 
           padding: "$small $medium",
         },
@@ -28,16 +27,12 @@ export const TableStyled = styled("div", {
       },
     },
     thead: {
-      backgroundColor: "$default",
-
       th: {
-        "&:last-child": {
-          borderRight: 0,
-        },
-        borderRight: "0.1rem solid $border",
         fontSize: "$default",
         fontWeight: "normal",
-        padding: "$small $medium",
+        padding: "$smaller $small",
+
+        textAlign: "left",
       },
     },
   },

@@ -10,6 +10,7 @@ import {
   ElementType,
   ComponentType,
   SVGProps,
+  FormHTMLAttributes,
 } from "react";
 import { Toaster } from "react-hot-toast";
 
@@ -114,6 +115,18 @@ export interface FieldProps extends TextareaHTMLAttributes<HTMLTextAreaElement> 
   warning?: boolean;
   warningMessage?: string;
   width?: number | string;
+}
+
+export interface FormProps extends FormHTMLAttributes<HTMLFormElement> {
+  children: ReactNode;
+  css?: CSS;
+  disabled?: boolean;
+  listen?: boolean;
+  mustRef?: RefObject<HTMLFormElement>;
+  submit?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  submitFunction?: any;
+  submitValid?: boolean;
 }
 
 export interface ImageProps extends NextImageProps {

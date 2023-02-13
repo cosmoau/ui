@@ -55,10 +55,9 @@ export function Table(props: TableProps): JSX.Element {
                 ) : (
                   <th key={index} onClick={(): void => handleSort(index)}>
                     <Button
-                      block
                       css={{
                         svg: {
-                          opacity: sortBy === index ? 1 : 0.6,
+                          opacity: sortBy === index ? 1 : 0.25,
                         },
                       }}
                       icon={

@@ -57,17 +57,6 @@ export function Select(props: SelectProps): JSX.Element {
     }
     handleClose();
   }
-
-  function handleFilter(): Array<{
-    label: string;
-    value: string;
-  }> {
-    if (filter) {
-      return options.filter((option) => option.label.toLowerCase().includes(filter.toLowerCase()));
-    }
-    return options;
-  }
-
   useOnClickOutside(ref, handleClose);
 
   useEventListener("keydown", (event: KeyboardEvent) => {
@@ -77,6 +66,17 @@ export function Select(props: SelectProps): JSX.Element {
   });
 
   useLockedBody(locked ? isOpen : false);
+
+  // Filter options and sort alphabetically, sometimes options are not available on first render, so we need to check for that, sometimes filter isn't set, so the options should just be sorted alphabetically
+  const filteredOptions = options
+    ? options.filter((option) => {
+        if (filter) {
+          return option.label.toLowerCase().includes(filter.toLowerCase());
+        } else {
+          return option;
+        }
+      })
+    : [];
 
   return (
     <SelectStyled css={css}>
@@ -95,7 +95,7 @@ export function Select(props: SelectProps): JSX.Element {
           }}
           horizontal={horizontal}
           vertical={vertical}>
-          {filter && (
+          {options.length > 6 && (
             <Stack bottom="small" top="small">
               <Input
                 disabled={!options}
@@ -108,8 +108,8 @@ export function Select(props: SelectProps): JSX.Element {
           )}
           {loading ? (
             <Loading />
-          ) : handleFilter().length ? (
-            handleFilter().map((option) => (
+          ) : filteredOptions && filteredOptions.length > 0 ? (
+            filteredOptions.map((option) => (
               <SelectItemStyled
                 key={option.value + Math.random()}
                 css={{
@@ -127,7 +127,7 @@ export function Select(props: SelectProps): JSX.Element {
               </SelectItemStyled>
             ))
           ) : (
-            <Text accent as="p" css={{ padding: "$b $small $smallest $small" }}>
+            <Text accent as="p" css={{ padding: "$smallest $small" }}>
               No results found.
             </Text>
           )}

@@ -51,6 +51,7 @@ export const InputAreaStyled = styled("input", {
   "&::placeholder": {
     color: "$accent",
     fontSize: "$small",
+    opacity: 0.75,
   },
 
   "&:focus": {
