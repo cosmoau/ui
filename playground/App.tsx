@@ -167,7 +167,7 @@ export function App(): ReactElement {
             bodyChildren={[
               [
                 "Body 2",
-                "Body 2",
+                "Body 2 test test",
                 "Body 2",
                 // eslint-disable-next-line react/jsx-key
                 <Select
@@ -197,6 +197,7 @@ export function App(): ReactElement {
               ],
             ]}
             headChildren={["Head 2", "Head 2", "Head 2", "Head 2"]}
+            rowNumbers
             sort
           />
         </Box>

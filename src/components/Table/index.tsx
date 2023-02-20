@@ -7,7 +7,7 @@ import { TableProps } from "../../types";
 import { TableStyled } from "./Table.styles";
 
 export function Table(props: TableProps): JSX.Element {
-  const { headChildren, bodyChildren, css, sort, sortDisabled, ...rest } = props;
+  const { headChildren, bodyChildren, css, sort, sortDisabled, rowNumbers, ...rest } = props;
 
   const [sortBy, setSortBy] = useState(0);
   const [sortDirection, setSortDirection] = useState("asc");
@@ -47,6 +47,15 @@ export function Table(props: TableProps): JSX.Element {
         {headChildren && (
           <thead>
             <tr>
+              {rowNumbers && (
+                <th
+                  style={{
+                    opacity: 0.6,
+                    width: "1%",
+                  }}>
+                  &nbsp;
+                </th>
+              )}
               {headChildren.map((child, index) =>
                 !sort ||
                 sortDisabled === index ||
@@ -86,6 +95,15 @@ export function Table(props: TableProps): JSX.Element {
           {bodyChildren ? (
             sortedBodyChildren.map((row, index) => (
               <tr key={index}>
+                {rowNumbers && (
+                  <td
+                    style={{
+                      opacity: 0.6,
+                      width: "1%",
+                    }}>
+                    {index + 1}
+                  </td>
+                )}
                 {row.map((cell, index) => (
                   <td key={index}>{cell}</td>
                 ))}

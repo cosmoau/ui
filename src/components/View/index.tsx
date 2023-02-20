@@ -6,7 +6,6 @@ import { ViewStyled, ViewContainerStyled } from "./View.styles";
 export function View(props: ViewProps): JSX.Element {
   const { container, inverted, top, bottom, css, children, noPrint } = props;
 
-  // why does it flash before applying inverted theme?
   const className = inverted ? darkTheme.className : "";
 
   return (

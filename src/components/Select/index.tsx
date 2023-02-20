@@ -70,7 +70,6 @@ export function Select(props: SelectProps): JSX.Element {
 
   useLockedBody(locked ? isOpen : false);
 
-  // Filter options and sort alphabetically, sometimes options are not available on first render, so we need to check for that, sometimes filter isn't set, so the options should just be sorted alphabetically
   const filteredOptions = options
     ? options.filter((option) => {
         if (filter) {
