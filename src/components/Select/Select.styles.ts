@@ -44,12 +44,12 @@ export const SelectGroupStyled = styled("div", {
         transform: "translateX(-50%)",
       },
       left: {
-        left: "0",
+        left: 0,
         right: "auto",
       },
       right: {
         left: "auto",
-        right: "0",
+        right: 0,
       },
     },
     vertical: {
@@ -66,7 +66,7 @@ export const SelectGroupStyled = styled("div", {
       top: {
         bottom: "100%",
         marginBottom: "10%",
-        marginTop: "0",
+        marginTop: 0,
         top: "auto",
       },
     },

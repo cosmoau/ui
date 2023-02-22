@@ -13,6 +13,7 @@ import {
   Box,
   Select,
   Stack,
+  Avatar,
 } from "../src/index";
 
 export function App(): ReactElement {
@@ -42,6 +43,9 @@ export function App(): ReactElement {
         </Stack>
         <Stack direction="row">
           <Stack direction="column">
+            <Stack bottom="medium">
+              <Avatar fallback="JD" />
+            </Stack>
             <Stack bottom="small">
               <Badge theme="green">A green badge</Badge>
             </Stack>
@@ -143,6 +147,10 @@ export function App(): ReactElement {
         <Text as="small">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
         </Text>
+        <Text as="label">
+          This is a label Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor,
+          nisl nec
+        </Text>
         <Code>
           Test Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest
           Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test
@@ -158,7 +166,7 @@ export function App(): ReactElement {
         container
         css={{
           darkThemeSpec: {
-            paddingTop: "0",
+            paddingTop: 0,
           },
         }}
         top="largest">

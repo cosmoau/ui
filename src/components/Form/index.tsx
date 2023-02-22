@@ -21,10 +21,9 @@ export function Form(props: FormProps): JSX.Element {
       {submit && (
         <Button
           css={{
-            marginTop: "$small",
+            marginTop: "$medium",
           }}
           disabled={!submitValid || disabled}
-          small
           onClick={(): void => {
             submitFunction();
           }}>

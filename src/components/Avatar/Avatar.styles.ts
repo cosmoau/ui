@@ -7,7 +7,6 @@ export const AvatarStyled = styled("div", {
   borderRadius: "100%",
   color: "$accent",
   display: "inline-flex",
-  fontWeight: "bold",
   height: "100%",
 
   [`& ${ImageStyled}`]: {
@@ -18,9 +17,19 @@ export const AvatarStyled = styled("div", {
     },
     width: "100%",
   },
-
   justifyContent: "center",
+
   overflow: "hidden",
+  span: {
+    alignItems: "center",
+    color: "$accent",
+    display: "flex",
+    fontWeight: "bold",
+    height: "100%",
+    justifyContent: "center",
+    opacity: 0.3,
+    width: "100%",
+  },
   textTransform: "uppercase",
   verticalAlign: "middle",
 });

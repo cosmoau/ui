@@ -33,10 +33,10 @@ export const ToastStyled = styled("div", {
 
 export const ToastContainerStyled = styled("div", {
   bottom: "$medium",
-  left: "0",
+  left: 0,
   pointerEvents: "none",
   position: "fixed",
-  right: "0",
+  right: 0,
   textAlign: "center",
   userSelect: "none",
   zIndex: "$toast",

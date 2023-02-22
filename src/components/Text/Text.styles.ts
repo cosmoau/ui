@@ -35,6 +35,13 @@ export const TextSizes = {
     lineHeight: "1.3",
     marginBottom: "$small",
   },
+  label: {
+    color: "$accent",
+    display: "block",
+    fontSize: "1.4rem",
+    lineHeight: "1.3",
+    marginBottom: "$smaller",
+  },
   li: {
     listStylePosition: "inside",
     marginBottom: "$smaller",

@@ -31,8 +31,8 @@ export const StackElementStyled = styled("div", {
       true: {
         "*": {
           alignSelf: "center",
-          marginBottom: "0",
-          marginTop: "0",
+          marginBottom: 0,
+          marginTop: 0,
           verticalAlign: "middle",
         },
         alignItems: "center",
