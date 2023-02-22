@@ -6,7 +6,7 @@ export const breakpoints = {
   laptop: "@media only screen and (max-width: 1600px)",
   laptopX: "@media only screen and (min-width: 1001px) and (max-width: 1600px)",
   phone: "@media only screen and (max-width: 800px)",
-  phoneX: "@media only screen and (min-width: 601px) and (max-width: 800px)",
+  phoneX: "@media only screen and (min-width: 351px) and (max-width: 800px)",
   special: {
     micro: "@media only screen and (max-width: 350px)",
     print: "@media print",
