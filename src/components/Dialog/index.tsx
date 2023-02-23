@@ -14,7 +14,7 @@ import {
 } from "./Dialog.styles";
 
 export function Dialog(props: DialogProps): JSX.Element {
-  const { css, trigger, children, locked, width } = props;
+  const { css, trigger, children, locked = true, width } = props;
   const ref = useRef(null);
 
   const [isOpen, setIsOpen] = useState(false);
