@@ -12,18 +12,13 @@ export const StackRowStyled = styled("div", {
 export const StackColumnStyled = styled("div", {
   flex: "1 1 auto",
   maxWidth: "100%",
-  paddingLeft: "$medium",
-  paddingRight: "$medium",
+  paddingLeft: "$small",
+  paddingRight: "$small",
   width: "100%",
 
   [breakpoints.phone]: {
     paddingLeft: "$smaller",
     paddingRight: "$smaller",
-  },
-
-  [breakpoints.tabletX]: {
-    paddingLeft: "$small",
-    paddingRight: "$small",
   },
 });
 
