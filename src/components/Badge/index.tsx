@@ -1,5 +1,6 @@
 import { X } from "phosphor-react";
 import { useState } from "react";
+import { toast } from "react-hot-toast";
 
 import { Loading } from "../../index";
 import { BadgeProps } from "../../types";
@@ -19,6 +20,8 @@ export function Badge(props: BadgeProps): JSX.Element {
     onClick,
     children,
     iconOnly,
+    copy,
+    copyText,
   } = props;
   const [isOpen, setIsOpen] = useState(true);
   const [isMounted, setIsMounted] = useState(true);
@@ -28,6 +31,15 @@ export function Badge(props: BadgeProps): JSX.Element {
     setTimeout(() => {
       setIsMounted(false);
     }, 250);
+  }
+
+  function handleCopy(): void {
+    if (copyText) {
+      navigator.clipboard.writeText(copyText.toString());
+      toast("Copied to clipboard");
+    } else {
+      toast("Nothing to copy");
+    }
   }
 
   return isMounted ? (
@@ -47,7 +59,7 @@ export function Badge(props: BadgeProps): JSX.Element {
       }}
       iconOnly={iconOnly}
       theme={theme || "default"}
-      onClick={onClick}>
+      onClick={copy ? (): void => handleCopy() : onClick}>
       {iconOnly && <BadgeIconStyled>{icon}</BadgeIconStyled>}
       {!iconOnly && icon && (iconPosition === "left" || !iconPosition) && (
         <BadgeIconStyled align="left">{icon}</BadgeIconStyled>

@@ -1,13 +1,18 @@
 import { styled, fadeOut } from "../../stitches.config";
 
 export const BadgeStyled = styled("div", {
-  alignItems: "center",
+  "*": {
+    alignContent: "center !important",
+  },
+  alignContent: "center !important",
+  alignItems: "center !important",
   borderRadius: "$large",
   display: "inline-flex",
   fontSize: "$default",
   justifyContent: "center",
   lineHeight: "$default",
   marginBottom: "0 !important",
+
   padding: "$smallest $small",
 
   variants: {

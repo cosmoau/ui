@@ -54,13 +54,15 @@ export function Input(props: InputProps): JSX.Element {
   }
 
   function handleCopy(): void {
-    if (copy) {
+    if (copy && inputValue) {
       navigator.clipboard.writeText(inputValue.toString());
       setIsCopied(true);
       toast("Copied to clipboard");
       setTimeout(() => {
         setIsCopied(false);
       }, 2000);
+    } else {
+      toast("Nothing to copy");
     }
   }
 

@@ -37,6 +37,8 @@ export interface BadgeProps {
   block?: boolean;
   children?: ReactNode;
   closable?: boolean;
+  copy?: boolean;
+  copyText?: string | number | undefined;
   css?: CSS;
   dot?: boolean | "pulse";
   dotColor?: "red" | "orange" | "purple" | "blue" | "green" | "border" | "default";

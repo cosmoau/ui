@@ -47,7 +47,9 @@ export function App(): ReactElement {
               <Avatar fallback="JD" />
             </Stack>
             <Stack bottom="small">
-              <Badge theme="green">A green badge</Badge>
+              <Badge copy copyText="green" icon={<Avatar fallback="JD" />} theme="green">
+                A green badge
+              </Badge>
             </Stack>
             <Stack bottom="small">
               <Badge theme="red">A red badge</Badge>

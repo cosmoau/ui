@@ -40,13 +40,15 @@ export function Field(props: FieldProps): JSX.Element {
   }
 
   function handleCopy(): void {
-    if (copy) {
-      navigator.clipboard.writeText(value as string);
+    if (copy && value) {
+      navigator.clipboard.writeText(value.toString());
       setIsCopied(true);
       toast("Copied to clipboard");
       setTimeout(() => {
         setIsCopied(false);
       }, 2000);
+    } else {
+      toast("Nothing to copy");
     }
   }
 
