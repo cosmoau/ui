@@ -39,4 +39,4 @@ Feel free to get in touch with feedback, advice or suggestions. See [Conventiona
 
 ## License
 
-[GPL-3.0](https://github.com/cosmoau/ui/blob/main/LICENSE.md) © Cosmo AU Pty Ltd. Code by [Planare](https://github.com/planare)
+[MIT](https://github.com/cosmoau/ui/blob/main/LICENSE.md) © Cosmo AU Pty Ltd.
