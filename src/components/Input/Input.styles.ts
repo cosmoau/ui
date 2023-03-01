@@ -11,9 +11,9 @@ export const InputCoreStyled = styled("div", {
     boxShadow: "$medium",
   },
   "*": {
+    alignContent: "center !important",
     verticalAlign: "middle",
   },
-  alignContent: "center",
   alignSelf: "center",
   borderRadius: "$small",
   boxShadow: "$small",
@@ -57,6 +57,7 @@ export const InputAreaStyled = styled("input", {
   "&:focus": {
     outline: "none",
   },
+
   appearance: "none",
   backgroundColor: "transparent",
   border: "none",

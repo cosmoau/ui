@@ -89,6 +89,7 @@ export interface CodeProps {
 
 export interface DialogProps {
   children: ReactNode;
+  close?: () => void;
   css?: CSS;
   locked?: boolean;
   trigger: ReactNode;

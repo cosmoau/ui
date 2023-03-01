@@ -21,20 +21,27 @@ export function Table(props: TableProps): JSX.Element {
     }
   }
 
-  function parseSort(a: Array<ReactNode | string>, b: Array<ReactNode | string>): number {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    if (a[sortBy] < b[sortBy]) {
-      return sortDirection === "asc" ? -1 : 1;
-    }
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    if (a[sortBy] > b[sortBy]) {
-      return sortDirection === "asc" ? 1 : -1;
-    }
+  function parseSort(a: Array<ReactNode>, b: Array<ReactNode>): number {
+    const aChild = a[sortBy];
+    const bChild = b[sortBy];
 
-    return 0;
+    if (typeof aChild === "string" && typeof bChild === "string") {
+      if (sortDirection === "asc") {
+        return aChild.localeCompare(bChild);
+      } else {
+        return bChild.localeCompare(aChild);
+      }
+    } else if (typeof aChild === "number" && typeof bChild === "number") {
+      if (sortDirection === "asc") {
+        return aChild - bChild;
+      } else {
+        return bChild - aChild;
+      }
+    } else {
+      return 0;
+    }
   }
+
   const sortedBodyChildren = bodyChildren
     ? sort
       ? bodyChildren.sort(parseSort)
@@ -59,7 +66,11 @@ export function Table(props: TableProps): JSX.Element {
               {headChildren.map((child, index) =>
                 !sort ||
                 sortDisabled === index ||
-                (Array.isArray(sortDisabled) && sortDisabled.includes(index)) ? (
+                (Array.isArray(sortDisabled) && sortDisabled.includes(index)) ||
+                (bodyChildren &&
+                  bodyChildren.some(
+                    (row) => typeof row[index] !== "string" && typeof row[index] !== "number"
+                  )) ? (
                   <th key={index}>{child}</th>
                 ) : (
                   <th key={index} onClick={(): void => handleSort(index)}>
@@ -98,7 +109,7 @@ export function Table(props: TableProps): JSX.Element {
                 {rowNumbers && (
                   <td
                     style={{
-                      opacity: 0.6,
+                      opacity: 0.5,
                       width: "1%",
                     }}>
                     {index + 1}

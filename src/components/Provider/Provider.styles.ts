@@ -49,7 +49,7 @@ export const providerReset = globalCss({
 
   body: {
     fontFamily: "Untitled Sans, system-ui, -apple-system, sans-serif",
-    fontSize: "1.6rem",
+    fontSize: "16px",
     fontWeight: "normal",
     lineHeight: 1.4,
     margin: 0,
@@ -65,13 +65,13 @@ export const providerReset = globalCss({
     fontSize: "62.5%",
 
     [breakpoints.phoneX]: {
-      fontSize: "60.5%",
+      fontSize: "60%",
     },
     [breakpoints.tabletX]: {
-      fontSize: "61.5%",
+      fontSize: "61%",
     },
     [breakpoints.special.micro]: {
-      fontSize: "59.5%",
+      fontSize: "58%",
     },
     [breakpoints.special.print]: {
       fontSize: "62.5%",

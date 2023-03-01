@@ -21,6 +21,27 @@ export function App(): ReactElement {
     <Provider>
       <View bottom="largest" container top="largest">
         <Stack bottom="larger" direction="row">
+          <Stack direction="column">
+            <Text as="h1">Scaling Test</Text>
+            <Text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec Lorem ipsum dolor sit
+              amet, consectetur.
+            </Text>
+            <Text accent>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec Lorem ipsum dolor sit
+              amet, consectetur.
+            </Text>
+          </Stack>
+        </Stack>
+      </View>
+      <View bottom="largest" container top="largest">
+        <Stack bottom="larger" direction="row">
           <Select
             horizontal="left"
             options={[
@@ -176,9 +197,9 @@ export function App(): ReactElement {
           <Table
             bodyChildren={[
               [
-                "Body 2",
-                "Body 2 test test",
-                "Body 2",
+                "Body 1-1",
+                "Body 1-2",
+                "Body 1-3",
                 // eslint-disable-next-line react/jsx-key
                 <Select
                   horizontal="left"
@@ -191,9 +212,10 @@ export function App(): ReactElement {
                 />,
               ],
               [
-                "Body 2",
-                "Body 2",
-                "Body 2",
+                "Body 2-1",
+                "Body 2-2",
+                "Body 3-3",
+
                 // eslint-disable-next-line react/jsx-key
                 <Select
                   horizontal="center"
@@ -205,8 +227,9 @@ export function App(): ReactElement {
                   vertical="top"
                 />,
               ],
+              ["Body 3-1", "Body 3-2", "Body 3-3", "Body 3-4"],
             ]}
-            headChildren={["Head 2", "Head 2", "Head 2", "Head 2"]}
+            headChildren={["Head 1", "Head 2", "Head 3", "Head 4"]}
             rowNumbers
             sort
           />

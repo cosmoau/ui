@@ -33,9 +33,9 @@ export function Field(props: FieldProps): JSX.Element {
 
   const [isCopied, setIsCopied] = useState(false);
 
-  function handleChange(e: ChangeEvent<HTMLTextAreaElement>): void {
+  function handleChange(event: ChangeEvent<HTMLTextAreaElement>): void {
     if (onChange) {
-      onChange(e);
+      onChange(event);
     }
   }
 
@@ -63,17 +63,17 @@ export function Field(props: FieldProps): JSX.Element {
       {(error || success || warning || loading || submit || copy || reveal) && (
         <FieldFunctionStyled>
           {error && (
-            <Badge icon={<Warning weight="duotone" />} theme="red">
+            <Badge icon={<Warning />} theme="red">
               {errorMessage || "Error"}
             </Badge>
           )}
           {success && (
-            <Badge icon={<Check weight="duotone" />} theme="green">
+            <Badge icon={<Check />} theme="green">
               {successMessage || "Success"}
             </Badge>
           )}
           {warning && (
-            <Badge icon={<Warning weight="duotone" />} theme="orange">
+            <Badge icon={<Warning />} theme="orange">
               {warningMessage || "Warning"}
             </Badge>
           )}
@@ -82,25 +82,20 @@ export function Field(props: FieldProps): JSX.Element {
               <Loading />
             </Badge>
           )}
-          {copy && (
-            <Button
-              icon={
-                isCopied ? (
-                  <ClipboardText opacity={0.6} weight="duotone" />
-                ) : (
-                  <ClipboardText weight="duotone" />
-                )
-              }
-              onClick={(): void => {
-                handleCopy();
-              }}>
-              Copy
-            </Button>
-          )}
+          <Button
+            disabled={isCopied}
+            icon={<ClipboardText />}
+            small
+            onClick={(): void => {
+              handleCopy();
+            }}>
+            Copy
+          </Button>
 
           {submit && (
             <Button
               disabled={!submitValid}
+              small
               onClick={(): void => {
                 if (submitFunction && submitValid) {
                   submitFunction(value || "");
@@ -118,8 +113,8 @@ export function Field(props: FieldProps): JSX.Element {
         placeholder={placeholder}
         rows={rows}
         value={value}
-        onChange={(e: ChangeEvent<HTMLTextAreaElement>): void => {
-          handleChange(e);
+        onChange={(event: ChangeEvent<HTMLTextAreaElement>): void => {
+          handleChange(event);
         }}
       />
     </FieldStyled>

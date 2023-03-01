@@ -64,6 +64,7 @@ export function Select(props: SelectProps): JSX.Element {
 
   useEventListener("keydown", (event: KeyboardEvent) => {
     if (event.key === "Escape") {
+      event.preventDefault();
       handleClose();
     }
   });

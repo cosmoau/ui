@@ -10,7 +10,7 @@ pnpm install
 
 ## Demo
 
-[codesandbox.io/p/sandbox/cosmoau-ui-demos-f2kuy5](https://codesandbox.io/p/sandbox/cosmoau-ui-demos-f2kuy5).
+[https://ui.cosmogroup.io/](https://ui.cosmogroup.io/)
 
 ## Usage
 
@@ -20,7 +20,7 @@ To work on components in the browser, use Parcel. Run the development server and
 pnpm dev
 ```
 
-Before you deploy, lint your code and format it. Then run the build to compile the code with `TSC`.
+Before you deploy, lint your code and format it. Then run the build to compile the code with `TSC & TSLib`.
 
 ```sh
 pnpm tidy
@@ -39,4 +39,7 @@ Feel free to get in touch with feedback, advice or suggestions. See [Conventiona
 
 ## License
 
-[MIT](https://github.com/cosmoau/ui/blob/main/LICENSE.md) © Cosmo AU Pty Ltd.
+[MIT](https://github.com/cosmoau/ui/blob/main/LICENSE.md) © Cosmo AU Pty Ltd, 2023.
+
+## Author
+[@dolmios](https://github.com/dolmios)

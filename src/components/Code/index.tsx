@@ -25,21 +25,12 @@ export function Code(props: CodeProps): JSX.Element {
       <CodeBlockStyled {...rest}>{children}</CodeBlockStyled>
       <CodeFunctionStyled>
         <Button
-          icon={
-            isCopied ? (
-              <ClipboardText opacity={0.6} weight="duotone" />
-            ) : (
-              <ClipboardText weight="duotone" />
-            )
-          }
+          disabled={isCopied}
+          icon={<ClipboardText />}
           small
-          onClick={
-            isCopied
-              ? undefined
-              : (): void => {
-                  handleCopy();
-                }
-          }>
+          onClick={(): void => {
+            handleCopy();
+          }}>
           Copy
         </Button>
       </CodeFunctionStyled>

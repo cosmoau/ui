@@ -46,10 +46,10 @@ export function Input(props: InputProps): JSX.Element {
   const [isCopied, setIsCopied] = useState(false);
   const [isRevealed, setIsRevealed] = useState(false);
 
-  function handleChange(e: ChangeEvent<HTMLInputElement>): void {
-    setInputValue(e.target.value);
+  function handleChange(event: ChangeEvent<HTMLInputElement>): void {
+    setInputValue(event.target.value);
     if (onChange) {
-      onChange(e);
+      onChange(event);
     }
   }
 
@@ -78,8 +78,8 @@ export function Input(props: InputProps): JSX.Element {
     }
   }
 
-  useEventListener("keydown", (e: KeyboardEvent) => {
-    if (listen && e.key === "Enter" && submitFunction && submitValid) {
+  useEventListener("keydown", (event: KeyboardEvent) => {
+    if (listen && event.key === "Enter" && submitFunction && submitValid) {
       submitFunction(inputValue || "");
     }
   });
@@ -110,16 +110,8 @@ export function Input(props: InputProps): JSX.Element {
             {loading && <Loading />}
             {copy && (
               <Button
-                css={{
-                  marginLeft: "$smaller",
-                }}
-                icon={
-                  isCopied ? (
-                    <ClipboardText opacity={0.6} weight="duotone" />
-                  ) : (
-                    <ClipboardText weight="duotone" />
-                  )
-                }
+                disabled={isCopied}
+                icon={<ClipboardText />}
                 small
                 onClick={(): void => {
                   handleCopy();
@@ -132,7 +124,7 @@ export function Input(props: InputProps): JSX.Element {
                 css={{
                   marginLeft: "$smaller",
                 }}
-                icon={!isRevealed ? <Eye weight="duotone" /> : <EyeClosed weight="duotone" />}
+                icon={!isRevealed ? <Eye /> : <EyeClosed />}
                 small
                 onClick={(): void => {
                   handleReveal();
@@ -179,7 +171,7 @@ export function Input(props: InputProps): JSX.Element {
               backgroundColor: "transparent",
               padding: 0,
             }}
-            icon={<Warning weight="duotone" />}
+            icon={<Warning />}
             theme="red">
             {errorMessage || "Error"}
           </Badge>
@@ -190,7 +182,7 @@ export function Input(props: InputProps): JSX.Element {
               backgroundColor: "transparent",
               padding: 0,
             }}
-            icon={<Check weight="duotone" />}
+            icon={<Check />}
             theme="green">
             {successMessage || "Success"}
           </Badge>
@@ -201,7 +193,7 @@ export function Input(props: InputProps): JSX.Element {
               backgroundColor: "transparent",
               padding: 0,
             }}
-            icon={<Warning weight="duotone" />}
+            icon={<Warning />}
             theme="orange">
             {warningMessage || "Invalid"}
           </Badge>

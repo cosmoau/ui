@@ -78,7 +78,7 @@ export function Badge(props: BadgeProps): JSX.Element {
       )}
       {closable && (
         <BadgeIconStyled align="right" onClick={(): void => handleClose()}>
-          <X style={{ cursor: "pointer" }} weight="fill" />
+          <X style={{ cursor: "pointer" }} />
         </BadgeIconStyled>
       )}
     </BadgeStyled>

@@ -45,6 +45,7 @@ export function Dialog(props: DialogProps): JSX.Element {
 
   useEventListener("keydown", (event: KeyboardEvent) => {
     if (event.key === "Escape") {
+      event.preventDefault();
       handleClose();
     }
   });

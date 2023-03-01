@@ -9,8 +9,8 @@ export function Form(props: FormProps): JSX.Element {
   const { children, css, disabled, listen, mustRef, submit, submitFunction, submitValid, ...rest } =
     props;
 
-  useEventListener("keydown", (e: KeyboardEvent) => {
-    if (listen && e.key === "Enter" && submitFunction && submit && submitValid) {
+  useEventListener("keydown", (event: KeyboardEvent) => {
+    if (listen && event.key === "Enter" && submitFunction && submit && submitValid) {
       submitFunction();
     }
   });
