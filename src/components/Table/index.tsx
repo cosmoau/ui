@@ -106,7 +106,7 @@ export function Table(props: TableProps): JSX.Element {
         )}
 
         <tbody>
-          {bodyChildren ? (
+          {bodyChildren && bodyChildren.length > 0 ? (
             sortedBodyChildren.map((row, index) => (
               <tr key={index}>
                 {rowNumbers && (
@@ -125,15 +125,8 @@ export function Table(props: TableProps): JSX.Element {
             ))
           ) : (
             <tr>
-              <td colSpan={headChildren?.length || 1}>
-                <Text
-                  accent
-                  css={{
-                    textAlign: "center",
-                  }}>
-                  No results found.
-                </Text>
-              </td>
+              {rowNumbers && <td>&nbsp;</td>}
+              <td colSpan={headChildren ? headChildren.length : 1}>No results found.</td>
             </tr>
           )}
         </tbody>
