@@ -161,7 +161,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
 
 export const darkTheme = createTheme({
   colors: {
-    accent: "rgb(200, 220, 240)",
+    accent: "rgb(177, 207, 234)",
     background: "rgb(10, 20, 40)",
     border: "rgba(200, 220, 240, 0.2)",
     default: "rgba(200, 220, 240, 0.15)",

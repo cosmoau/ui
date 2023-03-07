@@ -1,10 +1,12 @@
 import { fadeIn, fadeOut, styled } from "../../stitches.config";
 
 export const SelectStyled = styled("div", {
+  display: "inline-block",
   position: "relative",
 });
 
 export const SelectTriggerStyled = styled("div", {
+  alignItems: "center",
   display: "inline-flex",
   position: "relative",
 });
