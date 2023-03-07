@@ -1,13 +1,14 @@
 import { FunnelSimple, SortAscending, SortDescending } from "phosphor-react";
 import { ReactNode, useState } from "react";
 
-import { Button, Text } from "../../index";
+import { Button, Loading, Text } from "../../index";
 import { TableProps } from "../../types";
 
 import { TableStyled } from "./Table.styles";
 
 export function Table(props: TableProps): JSX.Element {
-  const { headChildren, bodyChildren, css, sort, sortDisabled, rowNumbers, ...rest } = props;
+  const { headChildren, bodyChildren, css, sort, sortDisabled, rowNumbers, loading, ...rest } =
+    props;
 
   const [sortBy, setSortBy] = useState(0);
   const [sortDirection, setSortDirection] = useState("asc");
@@ -106,7 +107,7 @@ export function Table(props: TableProps): JSX.Element {
         )}
 
         <tbody>
-          {bodyChildren && bodyChildren.length > 0 ? (
+          {!loading && bodyChildren && bodyChildren.length > 0 ? (
             sortedBodyChildren.map((row, index) => (
               <tr key={index}>
                 {rowNumbers && (
@@ -126,7 +127,9 @@ export function Table(props: TableProps): JSX.Element {
           ) : (
             <tr>
               {rowNumbers && <td>&nbsp;</td>}
-              <td colSpan={headChildren ? headChildren.length : 1}>No results found.</td>
+              <td colSpan={headChildren ? headChildren.length : 1}>
+                {loading ? <Loading /> : "No data available"}
+              </td>
             </tr>
           )}
         </tbody>

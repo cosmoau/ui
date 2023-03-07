@@ -194,7 +194,46 @@ export function App(): ReactElement {
         }}
         top="largest">
         <Box minimal>
-          <Table headChildren={["Head 1", "Head 2", "Head 3", "Head 4"]} rowNumbers sort />
+          <Table
+            bodyChildren={[
+              [
+                "Body 1-1",
+                "Body 1-2",
+                "Body 1-3",
+                // eslint-disable-next-line react/jsx-key
+                <Select
+                  horizontal="left"
+                  options={[
+                    { label: "Test", value: "test" },
+                    { label: "Test 2", value: "test2" },
+                  ]}
+                  trigger={<Button>Test</Button>}
+                  vertical="top"
+                />,
+              ],
+              [
+                "Body 2-1",
+                "Body 2-2",
+                "Body 3-3",
+
+                // eslint-disable-next-line react/jsx-key
+                <Select
+                  horizontal="center"
+                  options={[
+                    { label: "Test", value: "test" },
+                    { label: "Test 2", value: "test2" },
+                  ]}
+                  trigger={<Button>Test</Button>}
+                  vertical="top"
+                />,
+              ],
+              ["Body 3-1", "Body 3-2", "Body 3-3", "Body 3-4"],
+            ]}
+            headChildren={["Head 1", "Head 2", "Head 3", "Head 4"]}
+            loading
+            rowNumbers
+            sort
+          />
         </Box>
       </View>
     </Provider>

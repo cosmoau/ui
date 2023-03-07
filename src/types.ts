@@ -242,6 +242,7 @@ export interface TableProps {
   bodyChildren?: Array<Array<ReactNode | string>>;
   css?: CSS;
   headChildren?: Array<string>;
+  loading?: boolean;
   rowNumbers?: boolean;
   sort?: boolean;
   sortDisabled?: number | number[];
