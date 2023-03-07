@@ -71,9 +71,11 @@ export function Table(props: TableProps): JSX.Element {
                   bodyChildren.some(
                     (row) => typeof row[index] !== "string" && typeof row[index] !== "number"
                   )) ? (
-                  <th key={index}>{child}</th>
+                  <th key={index}>
+                    <Text as="span">{child}</Text>
+                  </th>
                 ) : (
-                  <th key={index} onClick={(): void => handleSort(index)}>
+                  <th key={index}>
                     <Button
                       css={{
                         svg: {
@@ -92,7 +94,8 @@ export function Table(props: TableProps): JSX.Element {
                         )
                       }
                       iconPosition="right"
-                      theme={sortBy === index ? "default" : "minimal"}>
+                      theme={sortBy === index ? "default" : "minimal"}
+                      onClick={(): void => handleSort(index)}>
                       {child}
                     </Button>
                   </th>

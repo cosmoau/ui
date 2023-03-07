@@ -1,18 +1,12 @@
 import { fadeIn, fadeOut, styled } from "../../stitches.config";
 
 export const SelectStyled = styled("div", {
-  display: "inline-block",
   position: "relative",
-  verticalAlign: "middle",
 });
 
 export const SelectTriggerStyled = styled("div", {
-  "*": {
-    cursor: "pointer",
-  },
   display: "inline-flex",
   position: "relative",
-  verticalAlign: "middle",
 });
 
 export const SelectGroupStyled = styled("div", {
@@ -22,7 +16,7 @@ export const SelectGroupStyled = styled("div", {
   boxShadow: "$large",
   lineBreak: "auto",
   overflowY: "auto",
-  padding: "calc($smallest)",
+  padding: "$smallest",
   position: "absolute",
   textAlign: "left !important",
   transition: "$default",
@@ -55,7 +49,7 @@ export const SelectGroupStyled = styled("div", {
     vertical: {
       bottom: {
         bottom: "auto",
-        marginTop: "10%",
+        marginTop: "$small",
         top: "100%",
       },
       center: {
@@ -65,7 +59,7 @@ export const SelectGroupStyled = styled("div", {
       },
       top: {
         bottom: "100%",
-        marginBottom: "10%",
+        marginBottom: "$small",
         marginTop: 0,
         top: "auto",
       },

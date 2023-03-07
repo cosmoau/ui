@@ -48,6 +48,8 @@ export const providerReset = globalCss({
   },
 
   body: {
+    backgroundColor: "$background",
+    color: "$text",
     fontFamily: "Untitled Sans, system-ui, -apple-system, sans-serif",
     fontSize: "16px",
     fontWeight: "normal",

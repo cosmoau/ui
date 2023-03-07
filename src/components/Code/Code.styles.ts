@@ -17,6 +17,7 @@ export const CodeStyled = styled("div", {
 
 export const CodeBlockStyled = styled("code", {
   alignSelf: "center",
+  fontSize: "$default !important",
   [breakpoints.tablet]: {
     display: "block",
     minWidth: "100%",

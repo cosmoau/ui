@@ -19,8 +19,12 @@ export const TableStyled = styled("div", {
 
         td: {
           backgroundColor: "$default",
-
+          fontSize: "$default",
           padding: "$small $medium",
+
+          phone: {
+            padding: "$smaller $small",
+          },
         },
 
         transition: "$default",
@@ -28,9 +32,16 @@ export const TableStyled = styled("div", {
     },
     thead: {
       th: {
+        "& > span": {
+          paddingLeft: "$small",
+        },
         fontSize: "$default",
         fontWeight: "normal",
         padding: "$smaller $small",
+
+        phone: {
+          padding: "$smaller $small",
+        },
 
         textAlign: "left",
       },
