@@ -43,6 +43,8 @@ export const TextSizes = {
     marginBottom: "$smaller",
   },
   li: {
+    fontSize: "$default",
+    lineHeight: "$default",
     listStylePosition: "inside",
     marginBottom: "$smaller",
   },
@@ -67,7 +69,9 @@ export const TextSizes = {
     lineHeight: "inherit",
   },
   strong: {
+    fontSize: "inherit",
     fontWeight: "bold",
+    lineHeight: "inherit",
   },
   ul: {
     marginBottom: 0,
