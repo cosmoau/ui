@@ -22,20 +22,21 @@ export function Table(props: TableProps): JSX.Element {
     }
   }
 
-  const sortedBodyChildren = bodyChildren
-    ? bodyChildren.sort((a, b) => {
-        const aValue = a[sortBy].value;
-        const bValue = b[sortBy].value;
+  const sortedBodyChildren =
+    sort && bodyChildren
+      ? bodyChildren.sort((a, b) => {
+          const aValue = a[sortBy].value;
+          const bValue = b[sortBy].value;
 
-        if (aValue < bValue) {
-          return sortDirection === "asc" ? -1 : 1;
-        }
-        if (aValue > bValue) {
-          return sortDirection === "asc" ? 1 : -1;
-        }
-        return 0;
-      })
-    : [];
+          if (aValue < bValue) {
+            return sortDirection === "asc" ? -1 : 1;
+          }
+          if (aValue > bValue) {
+            return sortDirection === "asc" ? 1 : -1;
+          }
+          return 0;
+        })
+      : bodyChildren;
 
   return (
     <TableStyled css={css}>
@@ -89,7 +90,7 @@ export function Table(props: TableProps): JSX.Element {
         )}
 
         <tbody>
-          {!loading && bodyChildren && bodyChildren.length > 0 ? (
+          {!loading && sortedBodyChildren && sortedBodyChildren.length > 0 ? (
             sortedBodyChildren.map((row, index) => (
               <tr key={index}>
                 {rowNumbers && (
@@ -101,7 +102,7 @@ export function Table(props: TableProps): JSX.Element {
                   </td>
                 )}
                 {row.map((cell, index) => (
-                  <td key={index}>{cell.label}</td>
+                  <td key={index}>{cell.label || cell.value}</td>
                 ))}
               </tr>
             ))

@@ -197,26 +197,19 @@ export function App(): ReactElement {
           <Table
             bodyChildren={[
               [
-                { label: "1", value: "1" },
-                { label: <Button>
-                  22
-                </Button>, value: "22" },
-                { label: "22", value: "22" },
+                { value: 3,  },
               ],
               [
-                { label: "4", value: "4" },
-                { label: <Button>204</Button>, value: "204" },
-                { label: "204", value: "204" },
+            
+                { value: 5},
               ],
               [
-                { label: "7", value: "7" },
-                { label: <Button>3</Button>, value: "3" },
-                { label: "3", value: "3" },
+                    { value: 400 },
               ],
             ]}
-            headChildren={["Head 1", "Head 2", "Head 3"]}
+            headChildren={["Head 1"]}
             rowNumbers
-            
+            sort
           />
         </Box>
       </View>
