@@ -239,7 +239,7 @@ export interface StackProps {
 }
 
 export interface TableProps {
-  bodyChildren?: Array<Array<ReactNode | string>>;
+  bodyChildren?: Array<Array<{ label: ReactNode; value: string | number }>>;
   css?: CSS;
   headChildren?: Array<string>;
   loading?: boolean;

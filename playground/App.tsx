@@ -197,40 +197,24 @@ export function App(): ReactElement {
           <Table
             bodyChildren={[
               [
-                "Body 1-1",
-                "Body 1-2",
-                "Body 1-3",
-                // eslint-disable-next-line react/jsx-key
-                <Select
-                  horizontal="left"
-                  options={[
-                    { label: "Test", value: "test" },
-                    { label: "Test 2", value: "test2" },
-                  ]}
-                  trigger={<Button>Test</Button>}
-                  vertical="top"
-                />,
+                { label: "1", value: "1" },
+                { label: <Button>
+                  22
+                </Button>, value: "22" },
+                { label: "22", value: "22" },
               ],
               [
-                "Body 2-1",
-                "Body 2-2",
-                "Body 3-3",
-
-                // eslint-disable-next-line react/jsx-key
-                <Select
-                  horizontal="center"
-                  options={[
-                    { label: "Test", value: "test" },
-                    { label: "Test 2", value: "test2" },
-                  ]}
-                  trigger={<Button>Test</Button>}
-                  vertical="top"
-                />,
+                { label: "4", value: "4" },
+                { label: <Button>204</Button>, value: "204" },
+                { label: "204", value: "204" },
               ],
-              ["Body 3-1", "Body 3-2", "Body 3-3", "Body 3-4"],
+              [
+                { label: "7", value: "7" },
+                { label: <Button>3</Button>, value: "3" },
+                { label: "3", value: "3" },
+              ],
             ]}
-            headChildren={["Head 1", "Head 2", "Head 3", "Head 4"]}
-            loading
+            headChildren={["Head 1", "Head 2", "Head 3"]}
             rowNumbers
             sort
           />

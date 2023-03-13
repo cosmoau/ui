@@ -1,5 +1,5 @@
 import { FunnelSimple, SortAscending, SortDescending } from "phosphor-react";
-import { ReactNode, useState } from "react";
+import { useState } from "react";
 
 import { Button, Loading, Text } from "../../index";
 import { TableProps } from "../../types";
@@ -22,31 +22,19 @@ export function Table(props: TableProps): JSX.Element {
     }
   }
 
-  function parseSort(a: Array<ReactNode>, b: Array<ReactNode>): number {
-    const aChild = a[sortBy];
-    const bChild = b[sortBy];
-
-    if (typeof aChild === "string" && typeof bChild === "string") {
-      if (sortDirection === "asc") {
-        return aChild.localeCompare(bChild);
-      } else {
-        return bChild.localeCompare(aChild);
-      }
-    } else if (typeof aChild === "number" && typeof bChild === "number") {
-      if (sortDirection === "asc") {
-        return aChild - bChild;
-      } else {
-        return bChild - aChild;
-      }
-    } else {
-      return 0;
-    }
-  }
-
   const sortedBodyChildren = bodyChildren
-    ? sort
-      ? bodyChildren.sort(parseSort)
-      : bodyChildren
+    ? bodyChildren.sort((a, b) => {
+        const aValue = a[sortBy].value;
+        const bValue = b[sortBy].value;
+
+        if (aValue < bValue) {
+          return sortDirection === "asc" ? -1 : 1;
+        }
+        if (aValue > bValue) {
+          return sortDirection === "asc" ? 1 : -1;
+        }
+        return 0;
+      })
     : [];
 
   return (
@@ -65,13 +53,7 @@ export function Table(props: TableProps): JSX.Element {
                 </th>
               )}
               {headChildren.map((child, index) =>
-                !sort ||
-                sortDisabled === index ||
-                (Array.isArray(sortDisabled) && sortDisabled.includes(index)) ||
-                (bodyChildren &&
-                  bodyChildren.some(
-                    (row) => typeof row[index] !== "string" && typeof row[index] !== "number"
-                  )) ? (
+                !sort || sortDisabled === index ? (
                   <th key={index}>
                     <Text as="span">{child}</Text>
                   </th>
@@ -110,17 +92,9 @@ export function Table(props: TableProps): JSX.Element {
           {!loading && bodyChildren && bodyChildren.length > 0 ? (
             sortedBodyChildren.map((row, index) => (
               <tr key={index}>
-                {rowNumbers && (
-                  <td
-                    style={{
-                      opacity: 0.5,
-                      width: "1%",
-                    }}>
-                    {index + 1}
-                  </td>
-                )}
+                {rowNumbers && <td>{index + 1}</td>}
                 {row.map((cell, index) => (
-                  <td key={index}>{cell}</td>
+                  <td key={index}>{cell.label}</td>
                 ))}
               </tr>
             ))
