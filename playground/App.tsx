@@ -216,7 +216,7 @@ export function App(): ReactElement {
             ]}
             headChildren={["Head 1", "Head 2", "Head 3"]}
             rowNumbers
-            sort
+            
           />
         </Box>
       </View>

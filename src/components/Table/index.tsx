@@ -92,7 +92,14 @@ export function Table(props: TableProps): JSX.Element {
           {!loading && bodyChildren && bodyChildren.length > 0 ? (
             sortedBodyChildren.map((row, index) => (
               <tr key={index}>
-                {rowNumbers && <td>{index + 1}</td>}
+                {rowNumbers && (
+                  <td
+                    style={{
+                      opacity: 0.5,
+                    }}>
+                    {index + 1}
+                  </td>
+                )}
                 {row.map((cell, index) => (
                   <td key={index}>{cell.label}</td>
                 ))}
@@ -100,7 +107,7 @@ export function Table(props: TableProps): JSX.Element {
             ))
           ) : (
             <tr>
-              {rowNumbers && <td>&nbsp;</td>}
+              {rowNumbers && <td style={{ opacity: 0.5 }}>&nbsp;</td>}
               <td colSpan={headChildren ? headChildren.length : 1}>
                 {loading ? <Loading /> : "No data available"}
               </td>
