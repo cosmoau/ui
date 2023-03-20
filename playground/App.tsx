@@ -22,6 +22,257 @@ export function App(): ReactElement {
       <View bottom="largest" container top="largest">
         <Stack bottom="larger" direction="row">
           <Stack direction="column">
+            <Text as="h1">metricColorA/B</Text>
+            <Stack
+              css={{
+                background: "$metricBlueA",
+                display: "inline-block",
+                height: "10rem",
+                marginRight: "1rem",
+                width: "4rem",
+              }}>
+              &nbsp;
+            </Stack>
+            <Stack
+              css={{
+                background: "$metricBlueB",
+                display: "inline-block",
+                height: "10rem",
+                marginRight: "1rem",
+                width: "4rem",
+              }}>
+              &nbsp;
+            </Stack>
+            <Stack
+              css={{
+                background: "$metricGreenA",
+                display: "inline-block",
+                height: "10rem",
+                marginRight: "1rem",
+                width: "4rem",
+              }}>
+              &nbsp;
+            </Stack>
+            <Stack
+              css={{
+                background: "$metricGreenB",
+                display: "inline-block",
+                height: "10rem",
+                marginRight: "1rem",
+                width: "4rem",
+              }}>
+              &nbsp;
+            </Stack>
+            <Stack
+              css={{
+                background: "$metricOrangeA",
+                display: "inline-block",
+                height: "10rem",
+                marginRight: "1rem",
+                width: "4rem",
+              }}>
+              &nbsp;
+            </Stack>
+            <Stack
+              css={{
+                background: "$metricOrangeB",
+                display: "inline-block",
+                height: "10rem",
+                marginRight: "1rem",
+                width: "4rem",
+              }}>
+              &nbsp;
+            </Stack>
+            <Stack
+              css={{
+                background: "$metricPurpleA",
+                display: "inline-block",
+                height: "10rem",
+                marginRight: "1rem",
+                width: "4rem",
+              }}>
+              &nbsp;
+            </Stack>
+            <Stack
+              css={{
+                background: "$metricPurpleB",
+                display: "inline-block",
+                height: "10rem",
+                marginRight: "1rem",
+                width: "4rem",
+              }}>
+              &nbsp;
+            </Stack>
+            <Stack
+              css={{
+                background: "$metricRedA",
+                display: "inline-block",
+                height: "10rem",
+                marginRight: "1rem",
+                width: "4rem",
+              }}>
+              &nbsp;
+            </Stack>
+            <Stack
+              css={{
+                background: "$metricRedB",
+                display: "inline-block",
+                height: "10rem",
+                marginRight: "1rem",
+                width: "4rem",
+              }}>
+              &nbsp;
+            </Stack>
+            <Stack
+              css={{
+                background: "$metricYellowA",
+                display: "inline-block",
+                height: "10rem",
+                marginRight: "1rem",
+                width: "4rem",
+              }}>
+              &nbsp;
+            </Stack>
+            <Stack
+              css={{
+                background: "$metricYellowB",
+                display: "inline-block",
+                height: "10rem",
+                marginRight: "1rem",
+                width: "4rem",
+              }}>
+              &nbsp;
+            </Stack>
+            <Stack top="medium">
+              <Text as="h1">colorText</Text>
+              <Stack
+                css={{
+                  background: "$blueText",
+                  display: "inline-block",
+                  height: "10rem",
+                  marginRight: "1rem",
+                  width: "4rem",
+                }}>
+                &nbsp;
+              </Stack>
+              <Stack
+                css={{
+                  background: "$greenText",
+                  display: "inline-block",
+                  height: "10rem",
+                  marginRight: "1rem",
+                  width: "4rem",
+                }}>
+                &nbsp;
+              </Stack>
+              <Stack
+                css={{
+                  background: "$orangeText",
+                  display: "inline-block",
+                  height: "10rem",
+                  marginRight: "1rem",
+                  width: "4rem",
+                }}>
+                &nbsp;
+              </Stack>
+              <Stack
+                css={{
+                  background: "$purpleText",
+                  display: "inline-block",
+                  height: "10rem",
+                  marginRight: "1rem",
+                  width: "4rem",
+                }}>
+                &nbsp;
+              </Stack>
+              <Stack
+                css={{
+                  background: "$redText",
+                  display: "inline-block",
+                  height: "10rem",
+                  marginRight: "1rem",
+                  width: "4rem",
+                }}>
+                &nbsp;
+              </Stack>
+              <Stack
+                css={{
+                  background: "$yellowText",
+                  display: "inline-block",
+                  height: "10rem",
+                  marginRight: "1rem",
+                  width: "4rem",
+                }}>
+                &nbsp;
+              </Stack>
+            </Stack>
+            <Stack top="medium">
+              <Text as="h1">colorBackground</Text>
+              <Stack
+                css={{
+                  background: "$blueBackground",
+                  display: "inline-block",
+                  height: "10rem",
+                  marginRight: "1rem",
+                  width: "4rem",
+                }}>
+                &nbsp;
+              </Stack>
+              <Stack
+                css={{
+                  background: "$greenBackground",
+                  display: "inline-block",
+                  height: "10rem",
+                  marginRight: "1rem",
+                  width: "4rem",
+                }}>
+                &nbsp;
+              </Stack>
+              <Stack
+                css={{
+                  background: "$orangeBackground",
+                  display: "inline-block",
+                  height: "10rem",
+                  marginRight: "1rem",
+                  width: "4rem",
+                }}>
+                &nbsp;
+              </Stack>
+              <Stack
+                css={{
+                  background: "$purpleBackground",
+                  display: "inline-block",
+                  height: "10rem",
+                  marginRight: "1rem",
+                  width: "4rem",
+                }}>
+                &nbsp;
+              </Stack>
+              <Stack
+                css={{
+                  background: "$redBackground",
+                  display: "inline-block",
+                  height: "10rem",
+                  marginRight: "1rem",
+                  width: "4rem",
+                }}>
+                &nbsp;
+              </Stack>
+              <Stack
+                css={{
+                  background: "$yellowBackground",
+                  display: "inline-block",
+                  height: "10rem",
+                  marginRight: "1rem",
+                  width: "4rem",
+                }}>
+                &nbsp;
+              </Stack>
+            </Stack>
+          </Stack>
+        </Stack>
+        <Stack bottom="larger" direction="row">
+          <Stack direction="column">
             <Text as="h1">Scaling Test</Text>
             <Text>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec Lorem
@@ -195,18 +446,7 @@ export function App(): ReactElement {
         top="largest">
         <Box minimal>
           <Table
-            bodyChildren={[
-              [
-                { value: 3,  },
-              ],
-              [
-            
-                { value: 5},
-              ],
-              [
-                    { value: 400 },
-              ],
-            ]}
+            bodyChildren={[[{ value: 3 }], [{ value: 5 }], [{ value: 400 }]]}
             headChildren={["Head 1"]}
             rowNumbers
             sort
