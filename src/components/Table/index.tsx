@@ -1,17 +1,27 @@
 import { FunnelSimple, SortAscending, SortDescending } from "phosphor-react";
 import { useState } from "react";
 
-import { Button, Loading, Text } from "../../index";
+import { Badge, Loading, Text } from "../../index";
 import { TableProps } from "../../types";
 
 import { TableStyled } from "./Table.styles";
 
 export function Table(props: TableProps): JSX.Element {
-  const { headChildren, bodyChildren, css, sort, sortDisabled, rowNumbers, loading, ...rest } =
-    props;
+  const {
+    headChildren,
+    bodyChildren,
+    css,
+    sort,
+    sortDisabled,
+    defaultSort,
+    defaultDirection,
+    rowNumbers,
+    loading,
+    ...rest
+  } = props;
 
-  const [sortBy, setSortBy] = useState(0);
-  const [sortDirection, setSortDirection] = useState("asc");
+  const [sortBy, setSortBy] = useState(defaultSort || 0);
+  const [sortDirection, setSortDirection] = useState(defaultDirection || "asc");
 
   function handleSort(index: number): void {
     if (sortBy === index) {
@@ -54,34 +64,38 @@ export function Table(props: TableProps): JSX.Element {
                 </th>
               )}
               {headChildren.map((child, index) =>
-                !sort || sortDisabled === index ? (
+                !sort || sortDisabled?.includes(index) ? (
                   <th key={index}>
                     <Text as="span">{child}</Text>
                   </th>
                 ) : (
-                  <th key={index}>
-                    <Button
-                      css={{
-                        svg: {
-                          opacity: sortBy === index ? 1 : 0.25,
-                        },
-                      }}
-                      icon={
-                        sortBy === index ? (
-                          sortDirection === "asc" ? (
-                            <SortAscending />
-                          ) : (
-                            <SortDescending />
-                          )
-                        ) : (
-                          <FunnelSimple />
-                        )
-                      }
-                      iconPosition="right"
-                      theme={sortBy === index ? "default" : "minimal"}
-                      onClick={(): void => handleSort(index)}>
+                  <th
+                    key={index}
+                    style={{ cursor: "pointer" }}
+                    onClick={(): void => handleSort(index)}>
+                    <Text as="span" inline="small">
                       {child}
-                    </Button>
+                    </Text>
+
+                    <Badge
+                      css={{
+                        "&:hover": {
+                          background: "$defaultHover",
+                          opacity: 1,
+                        },
+                        opacity: sortBy === index ? 1 : 0.6,
+                        transition: "$default",
+                      }}>
+                      {sortBy === index ? (
+                        sortDirection === "asc" ? (
+                          <SortAscending />
+                        ) : (
+                          <SortDescending />
+                        )
+                      ) : (
+                        <FunnelSimple />
+                      )}
+                    </Badge>
                   </th>
                 )
               )}
@@ -94,11 +108,10 @@ export function Table(props: TableProps): JSX.Element {
             sortedBodyChildren.map((row, index) => (
               <tr key={index}>
                 {rowNumbers && (
-                  <td
-                    style={{
-                      opacity: 0.5,
-                    }}>
-                    {index + 1}
+                  <td>
+                    <Text as="span" css={{ opacity: 0.6 }}>
+                      {index + 1}
+                    </Text>
                   </td>
                 )}
                 {row.map((cell, index) => (

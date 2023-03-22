@@ -14,6 +14,7 @@ import {
   Select,
   Stack,
   Avatar,
+  Input,
 } from "../src/index";
 
 export function App(): ReactElement {
@@ -446,9 +447,24 @@ export function App(): ReactElement {
         }}
         top="largest">
         <Box minimal>
+          <Stack
+            css={{
+              padding: "$small",
+            }}>
+            <Input copy placeholder="Search" />
+          </Stack>
           <Table
-            bodyChildren={[[{ value: 3 }], [{ value: 5 }], [{ value: 400 }]]}
-            headChildren={["Head 1"]}
+            bodyChildren={[
+              [{ value: 3 }, { value: 5 }],
+              [{ value: 5 }, { value: 10 }],
+              [{ value: 400 }, { value: 500 }],
+            ]}
+            css={{
+              borderTop: "0.1rem solid $border",
+            }}
+            defaultDirection="desc"
+            defaultSort={1}
+            headChildren={["Head 1", "Head 2"]}
             rowNumbers
             sort
           />

@@ -13,7 +13,11 @@ export function Avatar(props: AvatarProps): JSX.Element {
         width: width,
         ...css,
       }}>
-      {src ? <Image alt={alt || fallback} fill src={src} /> : <Text as="span">89ekjfjksdnjfsdnkjfsjk{fallback}</Text>}
+      {src ? (
+        <Image alt={alt || fallback} fill src={src} />
+      ) : (
+        <Text as="span">89ekjfjksdnjfsdnkjfsjk{fallback}</Text>
+      )}
     </AvatarStyled>
   );
 }

@@ -5,20 +5,22 @@ export const TableStyled = styled("div", {
     alignContent: "center",
     verticalAlign: "middle",
   },
+  borderRadius: "$medium",
   overflowX: "auto",
+
   table: {
     border: 0,
     borderCollapse: "separate",
-    borderSpacing: "0 0.5rem",
+    borderSpacing: "0",
+    margin: 0,
     minWidth: "100%",
+    padding: 0,
     tableLayout: "auto",
 
     tbody: {
       tr: {
-        backgroundColor: "$background",
-
         td: {
-          backgroundColor: "$default",
+          borderTop: "0.1rem solid $borderTable",
           fontSize: "$default",
           padding: "$small $medium",
 
@@ -31,6 +33,8 @@ export const TableStyled = styled("div", {
       },
     },
     thead: {
+      backgroundColor: "$default",
+
       th: {
         "& > span": {
           paddingLeft: "$small",
