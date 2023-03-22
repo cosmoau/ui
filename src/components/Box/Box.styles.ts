@@ -16,6 +16,7 @@ export const BoxStyled = styled("article", {
   display: "block",
   height: "100%",
   margin: 0,
+  overflow: "hidden",
   paddingBlock: 0,
   position: "relative",
   transition: "$default",

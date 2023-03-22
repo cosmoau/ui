@@ -5,7 +5,6 @@ export const TableStyled = styled("div", {
     alignContent: "center",
     verticalAlign: "middle",
   },
-  borderRadius: "$medium",
   overflowX: "auto",
 
   table: {

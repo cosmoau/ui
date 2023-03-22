@@ -241,8 +241,8 @@ export interface StackProps {
 export interface TableProps {
   bodyChildren?: Array<Array<{ label?: ReactNode; value: string | number }>>;
   css?: CSS;
-  defaultSort?: number;
   defaultDirection?: "asc" | "desc";
+  defaultSort?: number;
   headChildren?: Array<string>;
   loading?: boolean;
   rowNumbers?: boolean;

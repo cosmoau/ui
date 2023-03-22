@@ -459,9 +459,6 @@ export function App(): ReactElement {
               [{ value: 5 }, { value: 10 }],
               [{ value: 400 }, { value: 500 }],
             ]}
-            css={{
-              borderTop: "0.1rem solid $border",
-            }}
             defaultDirection="desc"
             defaultSort={1}
             headChildren={["Head 1", "Head 2"]}
