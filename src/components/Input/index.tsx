@@ -6,14 +6,7 @@ import { useEventListener } from "usehooks-ts";
 import { Button, Badge, Loading } from "../../index";
 import { InputProps } from "../../types";
 
-import {
-  InputAreaStyled,
-  InputCallbackStyled,
-  InputFunctionStyled,
-  InputStyled,
-  InputCoreStyled,
-  InputIconStyled,
-} from "./Input.styles";
+import { InputAreaStyled, InputCallbackStyled, InputFunctionStyled, InputStyled, InputCoreStyled, InputIconStyled } from "./Input.styles";
 
 export function Input(props: InputProps): JSX.Element {
   const {
@@ -90,9 +83,7 @@ export function Input(props: InputProps): JSX.Element {
         maxWidth: width || "100%",
         width: width || "100%",
       }}>
-      <InputCoreStyled
-        disabled={disabled}
-        state={success ? "success" : warning ? "warning" : error ? "error" : "default"}>
+      <InputCoreStyled disabled={disabled} state={success ? "success" : warning ? "warning" : error ? "error" : "default"}>
         {icon && <InputIconStyled>{icon}</InputIconStyled>}
         <InputAreaStyled
           ref={mustRef || undefined}

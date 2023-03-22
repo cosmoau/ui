@@ -5,13 +5,7 @@ import { useEventListener, useLockedBody, useOnClickOutside } from "usehooks-ts"
 import { Button } from "../../index";
 import { DialogProps } from "../../types";
 
-import {
-  DialogContentStyled,
-  DialogExitStyled,
-  DialogOverlayStyled,
-  DialogStyled,
-  DialogTriggerStyled,
-} from "./Dialog.styles";
+import { DialogContentStyled, DialogExitStyled, DialogOverlayStyled, DialogStyled, DialogTriggerStyled } from "./Dialog.styles";
 
 export function Dialog(props: DialogProps): JSX.Element {
   const { css, trigger, children, locked = true, width } = props;
@@ -54,9 +48,7 @@ export function Dialog(props: DialogProps): JSX.Element {
 
   return (
     <DialogStyled>
-      <DialogTriggerStyled onClickCapture={(): void => handleClick()}>
-        {trigger}
-      </DialogTriggerStyled>
+      <DialogTriggerStyled onClickCapture={(): void => handleClick()}>{trigger}</DialogTriggerStyled>
       {isMounted && (
         <DialogOverlayStyled animation={isOpen}>
           <DialogContentStyled

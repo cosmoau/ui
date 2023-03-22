@@ -6,8 +6,7 @@ import { Button } from "../Button";
 import { FormStyled } from "./Form.styles";
 
 export function Form(props: FormProps): JSX.Element {
-  const { children, css, disabled, listen, mustRef, submit, submitFunction, submitValid, ...rest } =
-    props;
+  const { children, css, disabled, listen, mustRef, submit, submitFunction, submitValid, ...rest } = props;
 
   useEventListener("keydown", (event: KeyboardEvent) => {
     if (listen && event.key === "Enter" && submitFunction && submit && submitValid) {

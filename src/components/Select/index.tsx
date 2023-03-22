@@ -15,19 +15,7 @@ import {
 } from "./Select.styles";
 
 export function Select(props: SelectProps): JSX.Element {
-  const {
-    options,
-    css,
-    onSelection,
-    locked,
-    selection,
-    width,
-    horizontal = "left",
-    vertical = "bottom",
-    trigger,
-    loading,
-    last,
-  } = props;
+  const { options, css, onSelection, locked, selection, width, horizontal = "left", vertical = "bottom", trigger, loading, last } = props;
   const ref = useRef(null);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -83,9 +71,7 @@ export function Select(props: SelectProps): JSX.Element {
 
   return (
     <SelectStyled css={css}>
-      <SelectTriggerStyled
-        key={selection || Math.random()}
-        onClickCapture={(): void => handleTriggerClick()}>
+      <SelectTriggerStyled key={selection || Math.random()} onClickCapture={(): void => handleTriggerClick()}>
         {trigger}
       </SelectTriggerStyled>
       {isMounted && (

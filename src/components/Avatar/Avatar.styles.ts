@@ -14,6 +14,7 @@ export const AvatarStyled = styled("div", {
     height: "100%",
     img: {
       borderRadius: "100% !important",
+      objectFit: "cover",
     },
     width: "100%",
   },

@@ -10,8 +10,7 @@ export const breakpoints = {
   special: {
     micro: "@media only screen and (max-width: 350px)",
     print: "@media print",
-    retina:
-      "@media only screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx)",
+    retina: "@media only screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx)",
   },
   tablet: "@media only screen and (max-width: 1000px)",
   tabletX: "@media only screen and (min-width: 801px) and (max-width: 1000px)",
@@ -105,16 +104,12 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     desktopX: (value: unknown) => ({
       [breakpoints.desktopX]: value,
     }),
-    hidden: (
-      value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide"
-    ) => ({
+    hidden: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => ({
       [breakpoints[value]]: {
         display: "none !important",
       },
     }),
-    hiddenInline: (
-      value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide"
-    ) => ({
+    hiddenInline: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => ({
       display: "inline-block !important",
       [breakpoints[value]]: {
         display: "none !important",
@@ -144,17 +139,13 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     tabletX: (value: unknown) => ({
       [breakpoints.tabletX]: value,
     }),
-    visible: (
-      value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide"
-    ) => ({
+    visible: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => ({
       display: "none",
       [breakpoints[value]]: {
         display: "block",
       },
     }),
-    visibleInline: (
-      value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide"
-    ) => ({
+    visibleInline: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => ({
       display: "none",
       [breakpoints[value]]: {
         display: "inline-block",

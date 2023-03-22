@@ -30,12 +30,7 @@ export function Stack(props: StackProps): JSX.Element {
     ...rest
   } = props;
 
-  const StackElement =
-    direction === "row"
-      ? StackRowStyled
-      : direction === "column"
-      ? StackColumnStyled
-      : StackElementStyled;
+  const StackElement = direction === "row" ? StackRowStyled : direction === "column" ? StackColumnStyled : StackElementStyled;
 
   return (
     <StackElement

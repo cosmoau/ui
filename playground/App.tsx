@@ -1,21 +1,7 @@
 import { CurrencyEth } from "phosphor-react";
 import React, { ReactElement } from "react";
 
-import {
-  Provider,
-  View,
-  Code,
-  Table,
-  Text,
-  Button,
-  Dialog,
-  Badge,
-  Box,
-  Select,
-  Stack,
-  Avatar,
-  Input,
-} from "../src/index";
+import { Provider, View, Code, Table, Text, Button, Dialog, Badge, Box, Select, Stack, Avatar, Input } from "../src/index";
 
 export function App(): ReactElement {
   return (
@@ -276,18 +262,14 @@ export function App(): ReactElement {
           <Stack direction="column">
             <Text as="h1">Scaling Test</Text>
             <Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec Lorem ipsum dolor
-              sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec Lorem ipsum dolor sit
-              amet, consectetur.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Nullam auctor, nisl nec Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec Lorem ipsum dolor sit amet, consectetur.
             </Text>
             <Text accent>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec Lorem ipsum dolor
-              sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec Lorem ipsum dolor sit
-              amet, consectetur.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Nullam auctor, nisl nec Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec Lorem ipsum dolor sit amet, consectetur.
             </Text>
           </Stack>
         </Stack>
@@ -385,55 +367,31 @@ export function App(): ReactElement {
       </View>
       <View bottom="largest" container inverted top="largest">
         <Dialog trigger={<Button>Test</Button>}>
-          <Text as="h3">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
-          </Text>
-          <Text as="p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
-          </Text>
+          <Text as="h3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec</Text>
+          <Text as="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec</Text>
         </Dialog>
 
         <Badge closable>Test</Badge>
-        <Text as="h1">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
-        </Text>
-        <Text as="h2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
-        </Text>
-        <Text as="h3">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
-        </Text>
-        <Text as="h4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
-        </Text>
-        <Text as="h5">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
-        </Text>
-        <Text as="h6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
-        </Text>
+        <Text as="h1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec</Text>
+        <Text as="h2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec</Text>
+        <Text as="h3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec</Text>
+        <Text as="h4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec</Text>
+        <Text as="h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec</Text>
+        <Text as="h6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec</Text>
         <Text accent as="p">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec. Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec? Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec. Lorem ipsum dolor
-          sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec! Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit. Nullam auctor, nisl nec.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Nullam auctor, nisl nec? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec. Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec! Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Nullam auctor, nisl nec.
         </Text>
 
-        <Text as="small">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
-        </Text>
-        <Text as="label">
-          This is a label Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor,
-          nisl nec
-        </Text>
+        <Text as="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec</Text>
+        <Text as="label">This is a label Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec</Text>
         <Code>
-          Test Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest
-          Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test
-          Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test
-          TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test
-          TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test Test Test Test Test
-          Test Test Test Test Test Test
+          Test Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test
+          Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest
+          Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test
+          TeTest Test Test TeTest Test Test Test Test Test Test Test Test Test Test Test Test
         </Code>
         <Code>Test T</Code>
       </View>
