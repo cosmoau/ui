@@ -119,6 +119,7 @@ export function Select(props: SelectProps): JSX.Element {
                 key={option.value + Math.random()}
                 css={{
                   color: selection === (option.value || option.label) ? "$accent" : "$text",
+                  opacity: selection === (option.value || option.label) ? "0.6" : "1",
                   ...(last &&
                     !filter && {
                       "&:last-child": {

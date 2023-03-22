@@ -24,14 +24,12 @@ export const AvatarStyled = styled("div", {
     alignItems: "center",
     color: "$accent",
     display: "flex",
-    fontFamily: "monospace",
-
-    height: "100%",
+    fontSize: "1.3rem",
+    fontWeight: "bold",
     justifyContent: "center",
-    opacity: 0.5,
-    width: "100%",
+    opacity: 0.6,
+    textTransform: "uppercase",
   },
-  textTransform: "uppercase",
   verticalAlign: "middle",
 });
 

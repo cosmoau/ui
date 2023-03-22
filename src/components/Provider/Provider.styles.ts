@@ -17,7 +17,7 @@ export const providerReset = globalCss({
   },
   "@font-face": [
     {
-      fontDisplay: "auto",
+      fontDisplay: "swap",
       fontFamily: "Untitled Sans",
       fontStyle: "normal",
       fontWeight: "normal",
@@ -25,7 +25,7 @@ export const providerReset = globalCss({
     },
 
     {
-      fontDisplay: "auto",
+      fontDisplay: "swap",
       fontFamily: "Untitled Sans",
       fontStyle: "normal",
       fontWeight: "bold",

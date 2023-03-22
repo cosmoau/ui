@@ -310,6 +310,7 @@ export function App(): ReactElement {
               { label: "Test 2", value: "test2" },
               { label: "Test 2", value: "test2" },
             ]}
+            selection="test"
             trigger={<Button>Test</Button>}
           />
         </Stack>
