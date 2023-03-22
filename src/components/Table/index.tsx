@@ -1,7 +1,7 @@
 import { FunnelSimple, SortAscending, SortDescending } from "phosphor-react";
 import { useState } from "react";
 
-import { Badge, Loading, Text } from "../../index";
+import { Button, Loading, Text } from "../../index";
 import { TableProps } from "../../types";
 
 import { TableStyled } from "./Table.styles";
@@ -28,7 +28,6 @@ export function Table(props: TableProps): JSX.Element {
       setSortDirection(sortDirection === "asc" ? "desc" : "asc");
     } else {
       setSortBy(index);
-      setSortDirection("asc");
     }
   }
 
@@ -57,6 +56,7 @@ export function Table(props: TableProps): JSX.Element {
               {rowNumbers && (
                 <th
                   style={{
+                    minWidth: "0",
                     opacity: 0.6,
                     width: "1%",
                   }}>
@@ -69,23 +69,21 @@ export function Table(props: TableProps): JSX.Element {
                     <Text as="span">{child}</Text>
                   </th>
                 ) : (
-                  <th
-                    key={index}
-                    style={{ cursor: "pointer" }}
-                    onClick={(): void => handleSort(index)}>
+                  <th key={index}>
                     <Text as="span" inline="small">
                       {child}
                     </Text>
 
-                    <Badge
+                    <Button
                       css={{
                         "&:hover": {
-                          background: "$defaultHover",
                           opacity: 1,
                         },
-                        opacity: sortBy === index ? 1 : 0.6,
-                        transition: "$default",
-                      }}>
+                        opacity: sortBy === index ? 1 : 0.3,
+                      }}
+                      small
+                      theme="minimal"
+                      onClick={(): void => handleSort(index)}>
                       {sortBy === index ? (
                         sortDirection === "asc" ? (
                           <SortAscending />
@@ -95,7 +93,7 @@ export function Table(props: TableProps): JSX.Element {
                       ) : (
                         <FunnelSimple />
                       )}
-                    </Badge>
+                    </Button>
                   </th>
                 )
               )}

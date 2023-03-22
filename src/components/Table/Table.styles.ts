@@ -21,8 +21,8 @@ export const TableStyled = styled("div", {
         td: {
           borderTop: "0.1rem solid $borderTable",
           fontSize: "$default",
+          minWidth: "15rem",
           padding: "$small $medium",
-
           phone: {
             padding: "$smaller $small",
           },
@@ -47,6 +47,9 @@ export const TableStyled = styled("div", {
         },
 
         textAlign: "left",
+
+        // prevent wrapping
+        whiteSpace: "nowrap",
       },
     },
   },

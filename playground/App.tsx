@@ -455,13 +455,13 @@ export function App(): ReactElement {
           </Stack>
           <Table
             bodyChildren={[
-              [{ value: 3 }, { value: 5 }],
-              [{ value: 5 }, { value: 10 }],
-              [{ value: 400 }, { value: 500 }],
+              [{ value: 3 }, { value: 5 }, { value: 5 }, { value: 5 }, { value: 5 }],
+              [{ value: 5 }, { value: 10 }, { value: 5 }, { value: 5 }, { value: 5 }],
+              [{ value: 400 }, { value: 50000000000 }, { value: 5 }, { value: 5 }, { value: 5 }],
             ]}
             defaultDirection="desc"
             defaultSort={1}
-            headChildren={["Head 1", "Head 2"]}
+            headChildren={["Head 1", "Head 2", "Head 3", "Head 4", "Head 5 lorem ipsum "]}
             rowNumbers
             sort
           />
