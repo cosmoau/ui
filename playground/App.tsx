@@ -1,7 +1,7 @@
 import { CurrencyEth } from "phosphor-react";
 import React, { ReactElement } from "react";
 
-import { Provider, View, Code, Table, Text, Button, Dialog, Badge, Box, Select, Stack, Avatar, Input } from "../src/index";
+import { Provider, View, Code, Table, Text, Button, Dialog, Badge, Box, Select, Stack, Avatar, Input, Popover } from "../src/index";
 
 export function App(): ReactElement {
   return (
@@ -276,6 +276,9 @@ export function App(): ReactElement {
       </View>
       <View bottom="largest" container top="largest">
         <Stack bottom="larger" direction="row">
+          <Popover horizontal="left" minimal trigger={<Button>Popover</Button>} vertical="bottom">
+            Popover
+          </Popover>
           <Select
             horizontal="left"
             label="Test Label for Selectionsjsjsjsjsjsjsjs"

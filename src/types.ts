@@ -177,12 +177,13 @@ export interface LogoProps extends SVGProps<SVGSVGElement> {
 }
 
 export interface PopoverProps {
-  align?: "left" | "right" | "center";
   children: ReactNode;
   css?: CSS;
+  horizontal?: "left" | "right" | "center";
   minimal?: boolean;
   trigger: ReactNode;
   type?: "click" | "hover";
+  vertical?: "top" | "bottom" | "center";
   width?: number | string;
 }
 

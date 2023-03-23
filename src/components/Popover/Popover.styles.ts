@@ -19,10 +19,10 @@ export const PopoverContentStyled = styled("div", {
   borderRadius: "$small",
   boxShadow: "$large",
   lineBreak: "auto",
-  marginTop: "10%",
   overflowY: "auto",
   padding: "$smaller $small",
   position: "absolute",
+  textAlign: "left !important",
   transition: "$default",
   variants: {
     animation: {
@@ -35,9 +35,42 @@ export const PopoverContentStyled = styled("div", {
         animationFillMode: "forwards",
       },
     },
+    horizontal: {
+      center: {
+        left: "50%",
+        right: "auto",
+        transform: "translateX(-50%)",
+      },
+      left: {
+        left: 0,
+        right: "auto",
+      },
+      right: {
+        left: "auto",
+        right: 0,
+      },
+    },
     minimal: {
       true: {
         padding: 0,
+      },
+    },
+    vertical: {
+      bottom: {
+        bottom: "auto",
+        marginTop: "$small",
+        top: "100%",
+      },
+      center: {
+        bottom: "auto",
+        top: "50%",
+        transform: "translateY(-50%)",
+      },
+      top: {
+        bottom: "100%",
+        marginBottom: "$small",
+        marginTop: 0,
+        top: "auto",
       },
     },
   },

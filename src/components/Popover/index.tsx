@@ -6,7 +6,7 @@ import { PopoverProps } from "../../types";
 import { PopoverContentStyled, PopoverStyled, PopoverTriggerStyled } from "./Popover.styles";
 
 export function Popover(props: PopoverProps): JSX.Element {
-  const { css, trigger, children, type, align, width, minimal } = props;
+  const { css, trigger, children, type, horizontal, vertical, width, minimal } = props;
   const ref = useRef(null);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -52,7 +52,7 @@ export function Popover(props: PopoverProps): JSX.Element {
   useOnClickOutside(ref, trigger !== "hover" ? (): void => handleClose() : (): void => {});
 
   return (
-    <PopoverStyled>
+    <PopoverStyled css={css}>
       <PopoverTriggerStyled
         onClickCapture={(): void => {
           handleClick();
@@ -70,13 +70,12 @@ export function Popover(props: PopoverProps): JSX.Element {
           ref={ref}
           animation={isOpen}
           css={{
-            ...css,
-            left: align === "left" ? "0" : "auto",
-            maxWidth: width || "25rem",
-            minWidth: width || "15rem",
-            right: align === "right" ? "0" : "auto",
+            maxWidth: width || "50rem",
+            minWidth: width || "25rem",
           }}
-          minimal={minimal}>
+          horizontal={horizontal}
+          minimal={minimal}
+          vertical={vertical}>
           {children}
         </PopoverContentStyled>
       )}
