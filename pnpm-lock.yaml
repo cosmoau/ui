@@ -1,7 +1,6 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@phosphor-icons/react': ^2.0.6
   '@stitches/react': ^1.2.8
   '@types/node': ^18.15.6
   '@types/react': ^18.0.28
@@ -23,7 +22,6 @@ specifiers:
   util: ^0.12.5
 
 dependencies:
-  '@phosphor-icons/react': 2.0.6_biqbaboplfbrettd7655fr4n2y
   '@stitches/react': 1.2.8_react@18.2.0
   phosphor-react: 1.4.1_react@18.2.0
   react-hot-toast: 2.4.0_biqbaboplfbrettd7655fr4n2y
@@ -1103,17 +1101,6 @@ packages:
       chrome-trace-event: 1.0.3
       nullthrows: 1.1.1
     dev: true
-
-  /@phosphor-icons/react/2.0.6_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-vT5Tv+isibcRO1ATPW+cZs2w46n512SfShRX9kqZbETht8ME11CT387APBbcW9EAeBFEGM6buoYxP+0/IJJRKg==}
-    engines: {node: '>=10'}
-    peerDependencies:
-      react: '>= 16.8'
-      react-dom: '>= 16.8'
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-    dev: false
 
   /@pkgr/utils/2.3.1:
     resolution: {integrity: sha512-wfzX8kc1PMyUILA+1Z/EqoE4UCXGy0iRGMhPwdfae1+f0OXlLqCk+By+aMzgJBzR9AzS4CDizioG6Ss1gvAFJw==}

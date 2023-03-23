@@ -1,4 +1,4 @@
-import { FunnelSimple, SortAscending, SortDescending } from "@phosphor-icons/react";
+import { FunnelSimple, SortAscending, SortDescending } from "phosphor-react";
 import { useState } from "react";
 
 import { Button, Loading, Text } from "../../index";
