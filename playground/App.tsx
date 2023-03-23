@@ -278,6 +278,7 @@ export function App(): ReactElement {
         <Stack bottom="larger" direction="row">
           <Select
             horizontal="left"
+            label="Test Label for Selectionsjsjsjsjsjsjsjs"
             options={[
               { label: "Test", value: "test" },
               { label: "Test 2", value: "test2" },

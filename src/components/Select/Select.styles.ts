@@ -101,7 +101,11 @@ export const SelectItemStyled = styled("div", {
 
 export const SelectEmptyStyled = styled("div", {
   color: "$accent",
-  fontSize: "$small",
+  padding: "$small",
+});
+
+export const SelectLabelStyled = styled("div", {
+  fontWeight: "bold",
   padding: "$small",
 });
 

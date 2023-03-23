@@ -199,6 +199,7 @@ export interface SelectProps {
   css?: CSS;
   filter?: boolean;
   horizontal?: "left" | "right" | "center";
+  label?: string;
   last?: boolean;
   loading?: boolean;
   locked?: boolean;

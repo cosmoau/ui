@@ -7,7 +7,12 @@ export function Avatar(props: AvatarProps): JSX.Element {
   const { src, alt, fallback, width = 30, css } = props;
 
   return (
-    <AvatarStyled css={css}>
+    <AvatarStyled
+      css={{
+        height: width,
+        width: width,
+        ...css,
+      }}>
       {src ? (
         <Image alt={alt || fallback} height={width} src={src} width={width} />
       ) : (

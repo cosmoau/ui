@@ -12,10 +12,24 @@ import {
   SelectItemStyled,
   SelectFilterStyled,
   SelectEmptyStyled,
+  SelectLabelStyled,
 } from "./Select.styles";
 
 export function Select(props: SelectProps): JSX.Element {
-  const { options, css, onSelection, locked, selection, width, horizontal = "left", vertical = "bottom", trigger, loading, last } = props;
+  const {
+    options,
+    css,
+    onSelection,
+    label,
+    locked,
+    selection,
+    width,
+    horizontal = "left",
+    vertical = "bottom",
+    trigger,
+    loading,
+    last,
+  } = props;
   const ref = useRef(null);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -71,9 +85,7 @@ export function Select(props: SelectProps): JSX.Element {
 
   return (
     <SelectStyled css={css}>
-      <SelectTriggerStyled key={selection || Math.random()} onClickCapture={(): void => handleTriggerClick()}>
-        {trigger}
-      </SelectTriggerStyled>
+      <SelectTriggerStyled onClickCapture={(): void => handleTriggerClick()}>{trigger}</SelectTriggerStyled>
       {isMounted && (
         <SelectGroupStyled
           ref={ref}
@@ -84,6 +96,7 @@ export function Select(props: SelectProps): JSX.Element {
           }}
           horizontal={horizontal}
           vertical={vertical}>
+          {label && <SelectLabelStyled>{label}</SelectLabelStyled>}
           {options.length > 10 && (
             <SelectFilterStyled>
               <Input
