@@ -1,4 +1,4 @@
-import { CurrencyEth } from "phosphor-react";
+import { CurrencyEth } from "@phosphor-icons/react";
 import React, { ReactElement } from "react";
 
 import { Provider, View, Code, Table, Text, Button, Dialog, Badge, Box, Select, Stack, Avatar, Input, Popover } from "../src/index";

@@ -1,4 +1,4 @@
-import { IconContext } from "phosphor-react";
+import { IconContext } from "@phosphor-icons/react";
 
 import { ProviderProps } from "../../types";
 import { Toast } from "../Toast";

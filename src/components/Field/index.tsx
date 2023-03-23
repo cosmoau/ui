@@ -1,4 +1,4 @@
-import { Check, ClipboardText, Warning } from "phosphor-react";
+import { Check, ClipboardText, Warning } from "@phosphor-icons/react";
 import { ChangeEvent, useState } from "react";
 import toast from "react-hot-toast";
 

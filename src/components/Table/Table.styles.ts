@@ -21,12 +21,11 @@ export const TableStyled = styled("div", {
         td: {
           borderTop: "0.1rem solid $borderTable",
           fontSize: "$default",
-          padding: "$small $medium",
+          padding: "$small",
           phone: {
             padding: "$smaller $small",
           },
         },
-
         transition: "$default",
       },
     },
@@ -34,20 +33,10 @@ export const TableStyled = styled("div", {
       backgroundColor: "$default",
 
       th: {
-        "& > span": {
-          paddingLeft: "$small",
-        },
-        fontSize: "$default",
+        fontSize: "1.5rem",
         fontWeight: "normal",
         padding: "$smaller $small",
-
-        phone: {
-          padding: "$smaller $small",
-        },
-
-        textAlign: "left",
-
-        // prevent wrapping
+        textAlign: "left !important",
         whiteSpace: "nowrap",
       },
     },

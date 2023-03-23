@@ -242,7 +242,7 @@ export interface StackProps {
 }
 
 export interface TableProps {
-  bodyChildren?: Array<Array<{ label?: ReactNode; value: string | number, width?: string | number }>>;
+  bodyChildren?: Array<Array<{ label?: ReactNode; value: string | number; width?: string | number }>>;
   css?: CSS;
   defaultDirection?: "asc" | "desc";
   defaultSort?: number;
