@@ -276,8 +276,8 @@ export function App(): ReactElement {
       </View>
       <View bottom="largest" container top="largest">
         <Stack bottom="larger" direction="row">
-          <Popover horizontal="left" minimal trigger={<Button>Popover</Button>} vertical="bottom">
-            Popover
+          <Popover horizontal="left" trigger={<Button>Popover</Button>} vertical="bottom">
+            <Text as="h6">Test Label for Selectionsjsjsjsjsjsjsjs</Text>
           </Popover>
           <Select
             horizontal="left"
