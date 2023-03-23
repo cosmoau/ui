@@ -12,6 +12,7 @@ export function Table(props: TableProps): JSX.Element {
   const [sortBy, setSortBy] = useState(defaultSort || 0);
   const [sortDirection, setSortDirection] = useState(defaultDirection || "asc");
 
+
   function handleSort(index: number): void {
     if (sortBy === index) {
       setSortDirection(sortDirection === "asc" ? "desc" : "asc");
@@ -94,7 +95,9 @@ export function Table(props: TableProps): JSX.Element {
                   </td>
                 )}
                 {row.map((cell, index) => (
-                  <td key={index}>{cell.label || cell.value}</td>
+                  <td key={index} style={{
+                    ...(cell.width && { width: cell.width }),
+                  }}>{cell.label || cell.value}</td>
                 ))}
               </tr>
             ))

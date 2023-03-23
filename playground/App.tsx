@@ -304,7 +304,28 @@ export function App(): ReactElement {
         <Stack direction="row">
           <Stack direction="column">
             <Stack bottom="medium">
-              <Avatar fallback="JD" />
+              <Avatar fallback="A" />
+            </Stack>
+            <Stack bottom="medium">
+              <Avatar colors fallback="A" />
+            </Stack>
+            <Stack bottom="medium">
+              <Avatar colors fallback="B" />
+            </Stack>
+            <Stack bottom="medium">
+              <Avatar colors fallback="C" />
+            </Stack>
+            <Stack bottom="medium">
+              <Avatar colors fallback="D" />
+            </Stack>
+            <Stack bottom="medium">
+              <Avatar colors fallback="E" />
+            </Stack>
+            <Stack bottom="medium">
+              <Avatar colors fallback="Z" />
+            </Stack>
+            <Stack bottom="medium">
+              <Avatar colors fallback="JD" />
             </Stack>
             <Stack bottom="small">
               <Badge copy copyText="green" icon={<Avatar fallback="JD" />} theme="green">
