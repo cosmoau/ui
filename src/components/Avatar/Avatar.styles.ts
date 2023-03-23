@@ -28,7 +28,7 @@ export const AvatarStyled = styled("div", {
     fontSize: "1.4rem",
     fontWeight: "bold",
     justifyContent: "center",
-    opacity: 0.6,
+    opacity: 0.8,
     textTransform: "uppercase",
   },
   verticalAlign: "middle",
