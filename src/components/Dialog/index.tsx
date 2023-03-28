@@ -8,7 +8,7 @@ import { DialogProps } from "../../types";
 import { DialogContentStyled, DialogExitStyled, DialogOverlayStyled, DialogStyled, DialogTriggerStyled } from "./Dialog.styles";
 
 export function Dialog(props: DialogProps): JSX.Element {
-  const { css, trigger, children, locked = true, width } = props;
+  const { css, trigger, children, height, locked = true, width } = props;
   const ref = useRef(null);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -56,6 +56,8 @@ export function Dialog(props: DialogProps): JSX.Element {
             animation={isOpen}
             css={{
               width: width ? width : "auto",
+              minWidth: width ? width : "60rem",
+              height:  height ? height : "auto",
               ...css,
             }}>
             <DialogExitStyled onClick={(): void => handleClose()}>

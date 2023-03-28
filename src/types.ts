@@ -95,6 +95,7 @@ export interface DialogProps {
   locked?: boolean;
   trigger: ReactNode;
   width?: number | string;
+  height?: number | string;
 }
 
 export interface DividerProps extends HTMLAttributes<HTMLHRElement> {
