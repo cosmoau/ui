@@ -92,10 +92,10 @@ export interface DialogProps {
   children: ReactNode;
   close?: () => void;
   css?: CSS;
+  height?: number | string;
   locked?: boolean;
   trigger: ReactNode;
   width?: number | string;
-  height?: number | string;
 }
 
 export interface DividerProps extends HTMLAttributes<HTMLHRElement> {
@@ -201,6 +201,7 @@ export interface ProviderProps {
 export interface SelectProps {
   css?: CSS;
   filter?: boolean;
+  height?: number | string;
   horizontal?: "left" | "right" | "center";
   label?: string;
   last?: boolean;

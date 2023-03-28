@@ -391,7 +391,7 @@ export function App(): ReactElement {
         </Stack>
       </View>
       <View bottom="largest" container inverted top="largest">
-        <Dialog width={350} height={200} trigger={<Button>Test Dialog</Button>}>
+        <Dialog height={200} trigger={<Button>Test Dialog</Button>} width={350}>
           <Text as="h3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec</Text>
           <Text as="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec</Text>
         </Dialog>

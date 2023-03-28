@@ -24,6 +24,7 @@ export function Select(props: SelectProps): JSX.Element {
     locked,
     selection,
     width,
+    height,
     horizontal = "left",
     vertical = "bottom",
     trigger,
@@ -91,6 +92,7 @@ export function Select(props: SelectProps): JSX.Element {
           ref={ref}
           animation={isOpen}
           css={{
+            maxHeight: height || "50rem",
             maxWidth: width || "50rem",
             minWidth: width || "25rem",
           }}

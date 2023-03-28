@@ -55,9 +55,9 @@ export function Dialog(props: DialogProps): JSX.Element {
             ref={ref}
             animation={isOpen}
             css={{
-              width: width ? width : "auto",
+              height: height ? height : "auto",
               minWidth: width ? width : "60rem",
-              height:  height ? height : "auto",
+              width: width ? width : "auto",
               ...css,
             }}>
             <DialogExitStyled onClick={(): void => handleClose()}>
