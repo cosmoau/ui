@@ -61,6 +61,7 @@ export const FieldAreaStyled = styled("textarea", {
   margin: "0 auto",
   padding: "$smaller $small",
   resize: "none",
+  whiteSpace: "pre-wrap",
   width: "100%",
 });
 

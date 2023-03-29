@@ -95,15 +95,17 @@ export function Field(props: FieldProps): JSX.Element {
               <Loading />
             </Badge>
           )}
-          <Button
-            disabled={isCopied}
-            icon={<ClipboardText />}
-            small
-            onClick={(): void => {
-              handleCopy();
-            }}>
-            Copy
-          </Button>
+          {copy && (
+            <Button
+              disabled={isCopied}
+              icon={<ClipboardText />}
+              small
+              onClick={(): void => {
+                handleCopy();
+              }}>
+              Copy
+            </Button>
+          )}
 
           {submit && (
             <Button
