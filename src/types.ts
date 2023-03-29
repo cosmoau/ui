@@ -112,7 +112,7 @@ export interface FieldProps extends TextareaHTMLAttributes<HTMLTextAreaElement> 
   errorMessage?: string;
   loading?: boolean;
   submit?: string;
-  submitFunction?: (value: string | number | unknown) => void;
+  submitFunction?: (value: string | number) => void | Promise<void>;
   submitValid?: boolean;
   success?: boolean;
   successMessage?: string;
@@ -156,7 +156,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   resetFunction?: () => void;
   reveal?: boolean;
   submit?: string;
-  submitFunction?: (value: string | number | unknown) => void;
+  submitFunction?: (value: string | number) => void | Promise<void>;
   submitValid?: boolean;
   success?: boolean;
   successMessage?: string;

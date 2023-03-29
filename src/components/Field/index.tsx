@@ -113,7 +113,7 @@ export function Field(props: FieldProps): JSX.Element {
               small
               onClick={(): void => {
                 if (submitFunction && submitValid) {
-                  submitFunction(value || "");
+                  submitFunction(inputValue);
                 }
               }}>
               {submit}
