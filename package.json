@@ -1,7 +1,7 @@
 {
   "name": "@cosmoau/ui",
   "description": "Cosmo's internal component library - Next.js + TypeScript.",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "bugs": {
@@ -94,7 +94,8 @@
     "dev": "echo '⚡️ Fetching device IP for development...' && ipconfig getifaddr en0 && echo '🫡' && parcel playground/index.html --dist-dir playground/dist --open --no-cache --port 420",
     "lint": "eslint src playground --ext .ts,.tsx",
     "prettier": "prettier --check --write src playground",
-    "tidy": "pnpm lint && pnpm prettier"
+    "tidy": "pnpm lint && pnpm prettier",
+    "kill": "lsof -ti tcp:420 | xargs kill"
   },
   "sideEffects": false,
   "source": "src/index.ts",

@@ -49,6 +49,7 @@ export interface BadgeProps {
   inline?: ThemeSpacing | "auto";
   loading?: boolean;
   onClick?: MouseEventHandler<HTMLDivElement>;
+  small?: boolean;
   theme?: "red" | "orange" | "yellow" | "purple" | "blue" | "green" | "border" | "default";
 }
 

@@ -95,7 +95,7 @@ export const InputIconStyled = styled("div", {
 
 export const InputCallbackStyled = styled("div", {
   display: "block",
-  paddingTop: "$smaller",
+  paddingTop: "$small",
 });
 
 export default InputStyled;

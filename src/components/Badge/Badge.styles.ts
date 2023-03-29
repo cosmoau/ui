@@ -1,4 +1,5 @@
 import { styled, fadeOut } from "../../stitches.config";
+import { TextSizes } from "../Text/Text.styles";
 
 export const BadgeStyled = styled("div", {
   "*": {
@@ -22,6 +23,12 @@ export const BadgeStyled = styled("div", {
         animationFillMode: "forwards",
       },
     },
+    block: {
+      true: {
+        justifyContent: "initial",
+        width: "100%",
+      },
+    },
     iconOnly: {
       false: {
         svg: {
@@ -35,6 +42,19 @@ export const BadgeStyled = styled("div", {
           verticalAlign: "middle",
         },
         width: "3rem",
+      },
+    },
+    small: {
+      true: {
+        ...TextSizes.small,
+        display: "inline",
+        marginBottom: "0 !important",
+
+        svg: {
+          height: "1.6rem",
+          marginTop: "-0.25rem",
+          width: "1.6rem",
+        },
       },
     },
     theme: {

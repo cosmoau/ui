@@ -8,7 +8,7 @@ import { BadgeProps } from "../../types";
 import { BadgeIconStyled, BadgeStyled, BadgeLoadingStyled } from "./Badge.styles";
 
 export function Badge(props: BadgeProps): JSX.Element {
-  const { closable, icon, iconPosition, loading, theme, inline, block, css, onClick, children, iconOnly, copy, copyText } = props;
+  const { closable, icon, iconPosition, loading, theme, small, inline, block, css, onClick, children, iconOnly, copy, copyText } = props;
   const [isOpen, setIsOpen] = useState(true);
   const [isMounted, setIsMounted] = useState(true);
 
@@ -31,19 +31,17 @@ export function Badge(props: BadgeProps): JSX.Element {
   return isMounted ? (
     <BadgeStyled
       animation={!isOpen}
+      block={block}
       css={{
         ...(inline && {
           display: "inline-flex",
           marginRight: inline === "auto" ? "auto" : `$${inline}`,
           verticalAlign: "middle",
         }),
-        ...(block && {
-          justifyContent: "initial",
-          width: "100%",
-        }),
         ...css,
       }}
       iconOnly={iconOnly}
+      small={small}
       theme={theme || "default"}
       onClick={copy ? (): void => handleCopy() : onClick}>
       {iconOnly && <BadgeIconStyled>{icon}</BadgeIconStyled>}

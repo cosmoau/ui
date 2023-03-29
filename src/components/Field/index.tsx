@@ -76,22 +76,22 @@ export function Field(props: FieldProps): JSX.Element {
       {(error || success || warning || loading || submit || copy) && (
         <FieldFunctionStyled>
           {error && (
-            <Badge icon={<Warning />} theme="red">
+            <Badge icon={<Warning />} small theme="red">
               {errorMessage || "Error"}
             </Badge>
           )}
           {success && (
-            <Badge icon={<Check />} theme="green">
+            <Badge icon={<Check />} small theme="green">
               {successMessage || "Success"}
             </Badge>
           )}
           {warning && (
-            <Badge icon={<Warning />} theme="orange">
+            <Badge icon={<Warning />} small theme="orange">
               {warningMessage || "Warning"}
             </Badge>
           )}
           {loading && (
-            <Badge>
+            <Badge small>
               <Loading />
             </Badge>
           )}
