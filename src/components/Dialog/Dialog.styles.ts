@@ -72,7 +72,6 @@ export const DialogContentStyled = styled("div", {
     maxWidth: "95%",
     minWidth: "95%",
     padding: "calc($large * 0.8)",
-    width: "95%",
   },
 });
 

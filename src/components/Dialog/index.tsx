@@ -56,7 +56,6 @@ export function Dialog(props: DialogProps): JSX.Element {
             animation={isOpen}
             css={{
               height: height ? height : "auto",
-              minWidth: width ? width : "60rem",
               width: width ? width : "auto",
               ...css,
             }}>
