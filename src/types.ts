@@ -111,7 +111,6 @@ export interface FieldProps extends TextareaHTMLAttributes<HTMLTextAreaElement> 
   error?: boolean;
   errorMessage?: string;
   loading?: boolean;
-  reveal?: boolean;
   submit?: string;
   submitFunction?: (value: string | number | unknown) => void;
   submitValid?: boolean;

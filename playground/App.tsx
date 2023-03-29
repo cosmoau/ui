@@ -1,7 +1,7 @@
 import { CurrencyEth } from "phosphor-react";
 import React, { ReactElement } from "react";
 
-import { Provider, View, Code, Table, Text, Button, Dialog, Badge, Box, Select, Stack, Avatar, Input, Popover } from "../src/index";
+import { Provider, View, Code, Table, Text, Button, Dialog, Badge, Box, Select, Stack, Avatar, Input, Popover, Field } from "../src/index";
 
 export function App(): ReactElement {
   return (
@@ -418,7 +418,9 @@ export function App(): ReactElement {
           Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test
           TeTest Test Test TeTest Test Test Test Test Test Test Test Test Test Test Test Test
         </Code>
-        <Code>Test T</Code>
+        <Input copy submit="Saveeeee" success successMessage="sdfkldfnjkdfjkds" warning warningMessage="failllllllllll" />
+
+        <Field copy submit="Saveeeee" warning warningMessage="failllllllllll" />
       </View>
       <View
         bottom="largest"

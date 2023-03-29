@@ -22,7 +22,6 @@ export function Field(props: FieldProps): JSX.Element {
     warningMessage,
     error,
     errorMessage,
-    reveal,
     loading,
     submit,
     submitFunction,
@@ -31,17 +30,20 @@ export function Field(props: FieldProps): JSX.Element {
     cols,
   } = props;
 
+  const [inputValue, setInputValue] = useState(value || "") as [string, (value: string) => void];
   const [isCopied, setIsCopied] = useState(false);
 
   function handleChange(event: ChangeEvent<HTMLTextAreaElement>): void {
+    setInputValue(event.target.value);
+
     if (onChange) {
       onChange(event);
     }
   }
 
   function handleCopy(): void {
-    if (copy && value) {
-      navigator.clipboard.writeText(value.toString());
+    if (copy && inputValue) {
+      navigator.clipboard.writeText(inputValue.toString());
       setIsCopied(true);
       toast("Copied to clipboard");
       setTimeout(() => {
@@ -60,7 +62,18 @@ export function Field(props: FieldProps): JSX.Element {
       }}
       disabled={disabled}
       state={success ? "success" : warning ? "warning" : error ? "error" : "default"}>
-      {(error || success || warning || loading || submit || copy || reveal) && (
+      <FieldAreaStyled
+        cols={cols}
+        css={css}
+        disabled={disabled}
+        placeholder={placeholder}
+        rows={rows}
+        value={value}
+        onChange={(event: ChangeEvent<HTMLTextAreaElement>): void => {
+          handleChange(event);
+        }}
+      />
+      {(error || success || warning || loading || submit || copy) && (
         <FieldFunctionStyled>
           {error && (
             <Badge icon={<Warning />} theme="red">
@@ -106,17 +119,6 @@ export function Field(props: FieldProps): JSX.Element {
           )}
         </FieldFunctionStyled>
       )}
-      <FieldAreaStyled
-        cols={cols}
-        css={css}
-        disabled={disabled}
-        placeholder={placeholder}
-        rows={rows}
-        value={value}
-        onChange={(event: ChangeEvent<HTMLTextAreaElement>): void => {
-          handleChange(event);
-        }}
-      />
     </FieldStyled>
   );
 }

@@ -30,13 +30,13 @@ export const FieldStyled = styled("div", {
         border: "0.1rem solid $border",
       },
       error: {
-        border: "0.2rem solid $redBackground",
+        border: "0.1rem solid $redBackground",
       },
       success: {
-        border: "0.2rem solid $greenBackground",
+        border: "0.1rem solid $greenBackground",
       },
       warning: {
-        border: "0.2rem solid $orangeBackground",
+        border: "0.1rem solid $orangeBackground",
       },
     },
   },
@@ -60,19 +60,23 @@ export const FieldAreaStyled = styled("textarea", {
   fontSize: "16px",
   margin: "0 auto",
   padding: "$smaller $small",
+  resize: "none",
   width: "100%",
 });
 
 export const FieldFunctionStyled = styled("div", {
-  borderBottom: "0.1rem solid $border",
+  alignItems: "center",
+  borderTop: "0.1rem solid $border",
   button: {
-    marginLeft: "$smaller",
+    marginLeft: "$small",
     paddingBottom: "$smallest",
     paddingLeft: "$small",
     paddingRight: "$small",
     paddingTop: "$smallest",
   },
+  display: "flex",
   height: "100%",
+  justifyContent: "flex-end",
   padding: "$smaller $small",
   position: "relative",
   svg: {
