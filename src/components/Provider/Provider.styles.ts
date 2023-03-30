@@ -1,4 +1,4 @@
-import { globalCss, styled } from "../../stitches.config";
+import { breakpoints, darkTheme, globalCss, styled, theme } from "../../stitches.config";
 
 export const ProviderStyled = styled("main", {
   backgroundColor: "$background",
@@ -48,16 +48,22 @@ export const providerReset = globalCss({
   },
 
   body: {
-    backgroundColor: "$background",
-    color: "$text",
+    [`.${darkTheme}`]: {
+      backgroundColor: darkTheme.colors.background,
+      color: darkTheme.colors.text,
+    },
     fontFamily: "Untitled Sans, system-ui, -apple-system, sans-serif",
-    fontSize: "16px",
+    fontSize: theme.fontSizes.default,
     fontWeight: "normal",
-    lineHeight: 1.4,
+    lineHeight: theme.lineHeights.default,
     margin: 0,
     padding: 0,
+    [`.${theme}`]: {
+      backgroundColor: theme.colors.background,
+      color: theme.colors.text,
+    },
 
-    retina: {
+    [breakpoints.special.retina]: {
       MozOsxFontSmoothing: "grayscale",
       WebkitFontSmoothing: "antialiased",
     },
@@ -66,17 +72,17 @@ export const providerReset = globalCss({
   html: {
     fontSize: "62.5%",
 
-    micro: {
-      fontSize: "58%",
+    [breakpoints.special.micro]: {
+      fontSize: "57%",
     },
-    phoneX: {
+    [breakpoints.phoneX]: {
+      fontSize: "59%",
+    },
+    [breakpoints.tabletX]: {
       fontSize: "60%",
     },
-    print: {
+    [breakpoints.special.print]: {
       fontSize: "62.5%",
-    },
-    tabletX: {
-      fontSize: "61%",
     },
   },
 
@@ -86,6 +92,7 @@ export const providerReset = globalCss({
   },
 
   svg: {
+    alignSelf: "center",
     height: "1.8rem",
     verticalAlign: "middle",
     width: "1.8rem",

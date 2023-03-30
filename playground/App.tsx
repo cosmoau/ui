@@ -328,7 +328,7 @@ export function App(): ReactElement {
               <Avatar colors fallback="JD" />
             </Stack>
             <Stack bottom="small">
-              <Badge copy copyText="green" icon={<Avatar fallback="JD" />} theme="green">
+              <Badge copy copyText="green" icon={<Avatar fallback="JD" />} loading theme="green">
                 A green badge
               </Badge>
             </Stack>
@@ -418,7 +418,9 @@ export function App(): ReactElement {
           Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test TeTest Test Test
           TeTest Test Test TeTest Test Test Test Test Test Test Test Test Test Test Test Test
         </Code>
-        <Input copy submit="Saveeeee" success successMessage="sdfkldfnjkdfjkds" warning warningMessage="failllllllllll" />
+        <Box>
+          <Input copy loading submit="Saveeeee" success successMessage="sdfkldfnjkdfjkds" warning warningMessage="failllllllllll" />
+        </Box>
 
         <Field copy submit="Saveeeee" warning warningMessage="failllllllllll" />
       </View>
