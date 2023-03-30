@@ -1,6 +1,5 @@
 import { styled } from "../../stitches.config";
 
-
 export const ButtonStyled = styled("button", {
   "&::-moz-focus-inner": {
     border: 0,
@@ -58,8 +57,8 @@ export const ButtonStyled = styled("button", {
     },
     small: {
       true: {
-        fontSize: '$small',
-        lineHeight: '$small',
+        fontSize: "$small",
+        lineHeight: "$small",
 
         svg: {
           height: "1.6rem",

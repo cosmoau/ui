@@ -55,13 +55,13 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     },
     fontSizes: {
       default: "1.6rem",
-      h1: '3.5rem',
-      h2: '3.2rem',
-      h3: '2.5rem',
-      h4: '2.2rem',
-      h5: '1.7rem',
-      h6: '1.5rem',
-      small: '1.4rem',
+      h1: "3.5rem",
+      h2: "3.2rem",
+      h3: "2.5rem",
+      h4: "2.2rem",
+      h5: "1.7rem",
+      h6: "1.5rem",
+      small: "1.4rem",
     },
     fonts: {
       default: "Untitled Sans, apple-system, sans-serif",
@@ -149,10 +149,10 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     retina: (value: unknown) => ({
       [breakpoints.special.retina]: value,
     }),
-        tablet: (value: unknown) => ({
+    tablet: (value: unknown) => ({
       [breakpoints.tablet]: value,
     }),
-       tabletX: (value: unknown) => ({
+    tabletX: (value: unknown) => ({
       [breakpoints.tabletX]: value,
     }),
     visible: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => ({

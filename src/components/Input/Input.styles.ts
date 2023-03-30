@@ -69,7 +69,7 @@ export const InputAreaStyled = styled("input", {
   outline: "none",
   padding: 0,
   phone: {
-  fontSize: "16px !important",
+    fontSize: "16px !important",
   },
   textAlign: "left",
   transition: "$default",

@@ -1,4 +1,4 @@
-import { breakpoints, fadeIn, fadeOut, styled } from "../../stitches.config";
+import { fadeIn, fadeOut, styled } from "../../stitches.config";
 
 export const DialogStyled = styled("div", {
   display: "inline-block",
@@ -49,12 +49,18 @@ export const DialogContentStyled = styled("div", {
   overflowX: "hidden",
   overflowY: "auto",
   padding: "$large",
+  phone: {
+    maxWidth: "95%",
+    minWidth: "95%",
+    padding: "calc($large * 0.8)",
+  },
   position: "fixed",
   textAlign: "left",
   top: "50%",
-  transform: "translate(-50%, -50%)",
 
+  transform: "translate(-50%, -50%)",
   transition: "$default",
+
   variants: {
     animation: {
       false: {
@@ -66,12 +72,6 @@ export const DialogContentStyled = styled("div", {
         animationFillMode: "forwards",
       },
     },
-  },
-
-  phone: {
-    maxWidth: "95%",
-    minWidth: "95%",
-    padding: "calc($large * 0.8)",
   },
 });
 

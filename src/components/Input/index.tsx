@@ -35,7 +35,7 @@ export function Input(props: InputProps): JSX.Element {
     reset,
     resetFunction,
   } = props;
-  const [inputValue, setInputValue] = useState(value as string || "");
+  const [inputValue, setInputValue] = useState((value as string) || "");
   const [isCopied, setIsCopied] = useState(false);
   const [isRevealed, setIsRevealed] = useState(false);
 

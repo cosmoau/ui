@@ -1,4 +1,4 @@
-import { breakpoints, fadeIn, fadeOut, styled } from "../../stitches.config";
+import { fadeIn, fadeOut, styled } from "../../stitches.config";
 
 export const ToastStyled = styled("div", {
   backgroundColor: "$background",
@@ -10,8 +10,12 @@ export const ToastStyled = styled("div", {
   margin: "$small auto 0 auto !important",
   maxWidth: "60%",
   padding: "$smallest $small",
+  phone: {
+    maxWidth: "95%",
+  },
   pointerEvents: "all",
   transition: "$default",
+
   variants: {
     animation: {
       false: {
@@ -23,10 +27,6 @@ export const ToastStyled = styled("div", {
         animationFillMode: "forwards",
       },
     },
-  },
-
-  phone: {
-    maxWidth: "95%",
   },
   width: "fit-content",
 });

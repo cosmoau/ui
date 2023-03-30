@@ -6,7 +6,7 @@ import { Provider, View, Code, Table, Text, Button, Dialog, Badge, Box, Select, 
 export function App(): ReactElement {
   return (
     <Provider>
-      <View  bottom="largest" container top="largest">
+      <View bottom="largest" container top="largest">
         <Stack bottom="larger" direction="row">
           <Stack direction="column">
             <Text as="h1">metricColorA/B</Text>
