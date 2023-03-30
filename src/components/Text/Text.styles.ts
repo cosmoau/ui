@@ -3,43 +3,43 @@ import { styled } from "../../stitches.config";
 export const TextSizes = {
   h1: {
     fontFamily: "$serif",
-    fontSize: "3.4rem",
-    lineHeight: "1.2",
+    fontSize: '$h1',
+    lineHeight: "$small",
     marginBottom: "$medium",
   },
   h2: {
     fontFamily: "$serif",
-    fontSize: "3.1rem",
-    lineHeight: "1.2",
+    fontSize: '$h2',
+    lineHeight: "$small",
     marginBottom: "$medium",
   },
   h3: {
     fontFamily: "$serif",
-    fontSize: "2.5rem",
-    lineHeight: "1.2",
+    fontSize: '$h3',
+    lineHeight: "$small",
     marginBottom: "$medium",
   },
   h4: {
     fontFamily: "$serif",
-    fontSize: "2.1rem",
-    lineHeight: "1.2",
+    fontSize: '$h4',
+    lineHeight: "$small",
     marginBottom: "$small",
   },
   h5: {
-    fontSize: "1.7rem",
-    lineHeight: "1.3",
+    fontSize: "$h5",
+    lineHeight: '$default',
     marginBottom: "$small",
   },
   h6: {
-    fontSize: "1.5rem",
-    lineHeight: "1.3",
+    fontSize: "$h6",
+    lineHeight: '$default',
     marginBottom: "$small",
   },
   label: {
     color: "$accent",
     display: "block",
-    fontSize: "1.4rem",
-    lineHeight: "1.3",
+    fontSize: "$small",
+    lineHeight: '$default',
     marginBottom: "$smaller",
   },
   li: {
@@ -59,8 +59,8 @@ export const TextSizes = {
   },
   small: {
     display: "block",
-    fontSize: "1.4rem",
-    lineHeight: "1.3",
+    fontSize: "$small",
+    lineHeight: '$default',
     marginBottom: "$smaller",
   },
   span: {

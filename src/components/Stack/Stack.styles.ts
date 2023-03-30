@@ -16,7 +16,7 @@ export const StackColumnStyled = styled("div", {
   paddingRight: "$small",
   width: "100%",
 
-  [breakpoints.phone]: {
+  phone: {
     paddingLeft: "$smaller",
     paddingRight: "$smaller",
   },

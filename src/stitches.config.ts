@@ -20,7 +20,7 @@ export const breakpoints = {
 export const { theme, css, styled, getCssText, globalCss, keyframes } = createStitches({
   theme: {
     colors: {
-      accent: "rgb(71, 86, 99)",
+      accent: "rgb(81, 104, 123)",
       accentIHM: "rgb(12, 48, 84)",
       background: "rgb(255, 250, 245)",
       blueBackground: "rgb(190, 220, 250)",
@@ -55,14 +55,21 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     },
     fontSizes: {
       default: "1.6rem",
+      h1: '3.5rem',
+      h2: '3.2rem',
+      h3: '2.5rem',
+      h4: '2.2rem',
+      h5: '1.7rem',
+      h6: '1.5rem',
+      small: '1.4rem',
     },
-
     fonts: {
       default: "Untitled Sans, apple-system, sans-serif",
       serif: "Tiempos Headline, $default",
     },
     lineHeights: {
-      default: "1.4",
+      default: "1.35",
+      small: "1.2",
     },
     radii: {
       large: "1rem",
@@ -130,13 +137,22 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     lightThemeSpec: (value: unknown) => ({
       "@media (prefers-color-scheme: light)": value,
     }),
+    micro: (value: unknown) => ({
+      [breakpoints.special.micro]: value,
+    }),
     phone: (value: unknown) => ({
       [breakpoints.phone]: value,
     }),
-    tablet: (value: unknown) => ({
+    print: (value: unknown) => ({
+      [breakpoints.special.print]: value,
+    }),
+    retina: (value: unknown) => ({
+      [breakpoints.special.retina]: value,
+    }),
+        tablet: (value: unknown) => ({
       [breakpoints.tablet]: value,
     }),
-    tabletX: (value: unknown) => ({
+       tabletX: (value: unknown) => ({
       [breakpoints.tabletX]: value,
     }),
     visible: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => ({
@@ -165,7 +181,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
 
 export const darkTheme = createTheme({
   colors: {
-    accent: "rgb(177, 207, 234)",
+    accent: "rgb(185, 210, 231)",
     background: "rgb(10, 20, 40)",
     border: "rgba(200, 220, 240, 0.2)",
     default: "rgba(200, 220, 240, 0.15)",

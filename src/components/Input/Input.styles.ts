@@ -1,4 +1,4 @@
-import { breakpoints, styled } from "../../stitches.config";
+import { styled } from "../../stitches.config";
 
 export const InputStyled = styled("div", {
   position: "relative",
@@ -62,19 +62,19 @@ export const InputAreaStyled = styled("input", {
   border: "none",
   color: "$text",
   fontFamily: "$default",
-  fontSize: "16px !important",
+  fontSize: "$default",
   letterSpacing: 0,
   margin: 0,
   minHeight: "2.4rem",
   outline: "none",
   padding: 0,
+  phone: {
+  fontSize: "16px !important",
+  },
   textAlign: "left",
   transition: "$default",
-  width: "100%",
 
-  [breakpoints.phone]: {
-    fontSize: "$default !important",
-  },
+  width: "100%",
 });
 
 export const InputFunctionStyled = styled("div", {

@@ -1,5 +1,4 @@
 import { styled, fadeOut } from "../../stitches.config";
-import { TextSizes } from "../Text/Text.styles";
 
 export const BadgeStyled = styled("div", {
   "*": {
@@ -46,9 +45,8 @@ export const BadgeStyled = styled("div", {
     },
     small: {
       true: {
-        ...TextSizes.small,
-        display: "inline",
-        marginBottom: "0 !important",
+        fontSize: "$small",
+        lineHeight: "$small",
 
         svg: {
           height: "1.6rem",

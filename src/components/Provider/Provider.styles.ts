@@ -1,4 +1,4 @@
-import { breakpoints, globalCss, styled } from "../../stitches.config";
+import { globalCss, styled } from "../../stitches.config";
 
 export const ProviderStyled = styled("main", {
   backgroundColor: "$background",
@@ -57,7 +57,7 @@ export const providerReset = globalCss({
     margin: 0,
     padding: 0,
 
-    [breakpoints.special.retina]: {
+    retina: {
       MozOsxFontSmoothing: "grayscale",
       WebkitFontSmoothing: "antialiased",
     },
@@ -66,17 +66,17 @@ export const providerReset = globalCss({
   html: {
     fontSize: "62.5%",
 
-    [breakpoints.phoneX]: {
-      fontSize: "60%",
-    },
-    [breakpoints.tabletX]: {
-      fontSize: "61%",
-    },
-    [breakpoints.special.micro]: {
+    micro: {
       fontSize: "58%",
     },
-    [breakpoints.special.print]: {
+    phoneX: {
+      fontSize: "60%",
+    },
+    print: {
       fontSize: "62.5%",
+    },
+    tabletX: {
+      fontSize: "61%",
     },
   },
 

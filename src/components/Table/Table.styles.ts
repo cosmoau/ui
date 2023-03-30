@@ -22,9 +22,6 @@ export const TableStyled = styled("div", {
           borderTop: "0.1rem solid $borderTable",
           fontSize: "$default",
           padding: "$small",
-          phone: {
-            padding: "$smaller $small",
-          },
         },
         transition: "$default",
       },

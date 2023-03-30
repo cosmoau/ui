@@ -25,7 +25,7 @@ export const ToastStyled = styled("div", {
     },
   },
 
-  [breakpoints.phone]: {
+  phone: {
     maxWidth: "95%",
   },
   width: "fit-content",

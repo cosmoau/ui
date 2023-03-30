@@ -25,6 +25,10 @@ export function View(props: ViewProps): JSX.Element {
             display: "none",
           },
         }),
+        ...(inverted && {
+          backgroundColor: darkTheme.colors.background,
+          color: darkTheme.colors.text,
+        }),
         ...css,
       }}>
       <ViewContainerStyled container={container}>{children}</ViewContainerStyled>

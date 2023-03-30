@@ -1,4 +1,4 @@
-import { breakpoints, styled } from "../../stitches.config";
+import { styled } from "../../stitches.config";
 
 export const CodeStyled = styled("div", {
   alignContent: "center",
@@ -7,18 +7,18 @@ export const CodeStyled = styled("div", {
   display: "flex",
   justifyContent: "space-between",
   padding: "$smaller $small",
-  width: "100%",
-
-  [breakpoints.tablet]: {
+  tablet: {
     display: "block",
     padding: "$small",
   },
+
+  width: "100%",
 });
 
 export const CodeBlockStyled = styled("code", {
   alignSelf: "center",
-  fontSize: "1.4rem !important",
-  [breakpoints.tablet]: {
+  fontSize: "$small",
+  tablet: {
     display: "block",
     minWidth: "100%",
   },
@@ -26,19 +26,17 @@ export const CodeBlockStyled = styled("code", {
 
 export const CodeFunctionStyled = styled("div", {
   minWidth: "10rem",
-  textAlign: "right",
-
-  [breakpoints.tablet]: {
+  tablet: {
     button: {
       display: "block",
+      textAlign: "center",
       width: "100%",
     },
     display: "block",
     marginTop: "$small",
     minWidth: "100%",
-
-    textAlign: "left",
   },
+  textAlign: "right",
 });
 
 export default CodeStyled;
