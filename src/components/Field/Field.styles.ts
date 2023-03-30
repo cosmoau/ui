@@ -57,12 +57,16 @@ export const FieldAreaStyled = styled("textarea", {
   color: "$text",
   display: "block",
   fontFamily: "$default",
-  fontSize: "16px",
+  fontSize: "$default",
   margin: "0 auto",
   padding: "$smaller $small",
+  phone: {
+  fontSize: "16px !important",
+  },
   resize: "none",
   whiteSpace: "pre-wrap",
-  width: "100%",
+
+    width: "100%",
 });
 
 export const FieldFunctionStyled = styled("div", {

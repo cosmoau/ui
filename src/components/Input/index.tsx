@@ -35,7 +35,7 @@ export function Input(props: InputProps): JSX.Element {
     reset,
     resetFunction,
   } = props;
-  const [inputValue, setInputValue] = useState(value || "") as [string, (value: string) => void];
+  const [inputValue, setInputValue] = useState(value as string || "");
   const [isCopied, setIsCopied] = useState(false);
   const [isRevealed, setIsRevealed] = useState(false);
 
@@ -48,7 +48,7 @@ export function Input(props: InputProps): JSX.Element {
 
   function handleCopy(): void {
     if (copy && inputValue) {
-      navigator.clipboard.writeText(inputValue.toString());
+      navigator?.clipboard?.writeText(inputValue.toString());
       setIsCopied(true);
       toast("Copied to clipboard");
       setTimeout(() => {
