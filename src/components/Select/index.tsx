@@ -86,7 +86,9 @@ export function Select(props: SelectProps): JSX.Element {
 
   return (
     <SelectStyled css={css}>
-      <SelectTriggerStyled onClickCapture={(): void => handleTriggerClick()}>{trigger}</SelectTriggerStyled>
+      <SelectTriggerStyled onClickCapture={(): void => handleTriggerClick()}>
+        {trigger}
+      </SelectTriggerStyled>
       {isMounted && (
         <SelectGroupStyled
           ref={ref}

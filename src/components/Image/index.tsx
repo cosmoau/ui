@@ -6,6 +6,7 @@ import { ImageStyled } from "./Image.styles";
 
 export function Image(props: ImageProps): JSX.Element {
   const { css, borderRadius, fill, fillFit, fillPosition, fillHeight, ...rest } = props;
+
   return (
     <ImageStyled
       css={{

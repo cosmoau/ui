@@ -20,6 +20,7 @@ const getLetter = (text: string): string => {
   const colorIndex = Math.floor(letterIndex / lettersPerColor);
   const color = colorOptions[colorIndex];
   const soften = color?.replace("rgb", "rgba").replace(")", ",0.4)");
+
   return soften;
 };
 
@@ -27,6 +28,7 @@ export function Avatar(props: AvatarProps): JSX.Element {
   const { src, alt, fallback, width = 30, css, colors } = props;
 
   const backgroundColor = colors ? getLetter(fallback) : "transparent";
+
   return (
     <AvatarStyled
       css={{
@@ -40,7 +42,11 @@ export function Avatar(props: AvatarProps): JSX.Element {
         }),
         ...css,
       }}>
-      {src ? <Image alt={alt || fallback} height={width} src={src} width={width} /> : <Text as="span">{fallback}</Text>}
+      {src ? (
+        <Image alt={alt || fallback} height={width} src={src} width={width} />
+      ) : (
+        <Text as="span">{fallback}</Text>
+      )}
     </AvatarStyled>
   );
 }

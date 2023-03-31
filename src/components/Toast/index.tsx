@@ -20,6 +20,7 @@ export function Toast(props: ToastProps): JSX.Element {
     <ToastContainerStyled onMouseEnter={startPause} onMouseLeave={endPause} {...props}>
       {toasts.map((t) => {
         t.duration = 4200;
+
         return (
           <ToastStyled key={t.id} animation={t.visible} onClick={(): void => toast.dismiss(t.id)}>
             {t.message?.toString() || t.message?.toString() || ""}

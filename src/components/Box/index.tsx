@@ -35,7 +35,13 @@ export function Box(props: BoxProps): JSX.Element {
 
   return isMounted ? (
     image ? (
-      <BoxStyled animation={!isOpen} css={css} hover={hover} loading={loading || false} padding={"none"} theme={theme || "default"}>
+      <BoxStyled
+        animation={!isOpen}
+        css={css}
+        hover={hover}
+        loading={loading || false}
+        padding={"none"}
+        theme={theme || "default"}>
         {imageCTA ? (
           <a href={imageCTA} rel="noopener noreferrer" target={imageTarget || "_blank"}>
             <Image

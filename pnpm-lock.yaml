@@ -25,8 +25,8 @@ devDependencies:
     specifier: ^8.37.0
     version: 8.37.0
   eslint-config-dolmios:
-    specifier: ^1.4.2
-    version: 1.4.2
+    specifier: ^1.4.3
+    version: 1.4.3
   eslint-plugin-sort-keys-fix:
     specifier: ^1.1.2
     version: 1.1.2
@@ -1498,7 +1498,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001473
-      electron-to-chromium: 1.4.346
+      electron-to-chromium: 1.4.347
       node-releases: 2.0.10
       update-browserslist-db: 1.0.10(browserslist@4.21.5)
     dev: true
@@ -1770,8 +1770,8 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /electron-to-chromium@1.4.346:
-    resolution: {integrity: sha512-9ZpKQD8hyWAoYf5bccm2qpaWogAGxb833DVC0arHo9nIbiAMh+aAKHZWABR2P9sK4a3zoCq7eXg8tylqPAnuNw==}
+  /electron-to-chromium@1.4.347:
+    resolution: {integrity: sha512-LNi3+/9nV0vT6Bz1OsSoZ/w7IgNuWdefZ7mjKNjZxyRlI/ag6uMXxsxAy5Etvuixq3Q26exw2fc4bNYvYQqXSw==}
     dev: true
 
   /emoji-regex@9.2.2:
@@ -1894,8 +1894,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-config-dolmios@1.4.2:
-    resolution: {integrity: sha512-xUEvkf6jupHdiZxwNLJ6tzoI1qrRMlZnTFDNYF/saex102EV6WidumyZd3gxfMj8c5DWP7xlmPTv+CEwGGCLlg==}
+  /eslint-config-dolmios@1.4.3:
+    resolution: {integrity: sha512-GYkTzNUztq7qW7gvn2Qn/12jLG0QJIdWDEb/m2fMwVVVRXk3gjFgerwu6zHWQiRZ+UpAiNO7KY16tEmwpiruyQ==}
     dependencies:
       '@typescript-eslint/eslint-plugin': 5.57.0(@typescript-eslint/parser@5.57.0)(eslint@8.37.0)(typescript@4.9.5)
       '@typescript-eslint/parser': 5.57.0(eslint@8.37.0)(typescript@4.9.5)

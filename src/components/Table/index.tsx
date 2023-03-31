@@ -7,7 +7,18 @@ import { TableProps } from "../../types";
 import { TableStyled } from "./Table.styles";
 
 export function Table(props: TableProps): JSX.Element {
-  const { headChildren, bodyChildren, css, sort, sortDisabled, defaultSort, defaultDirection, rowNumbers, loading, ...rest } = props;
+  const {
+    headChildren,
+    bodyChildren,
+    css,
+    sort,
+    sortDisabled,
+    defaultSort,
+    defaultDirection,
+    rowNumbers,
+    loading,
+    ...rest
+  } = props;
 
   const [sortBy, setSortBy] = useState(defaultSort || 0);
   const [sortDirection, setSortDirection] = useState(defaultDirection || "asc");
@@ -32,6 +43,7 @@ export function Table(props: TableProps): JSX.Element {
           if (aValue > bValue) {
             return sortDirection === "asc" ? 1 : -1;
           }
+
           return 0;
         })
       : bodyChildren;
@@ -73,7 +85,15 @@ export function Table(props: TableProps): JSX.Element {
                       small
                       theme="minimal"
                       onClick={(): void => handleSort(index)}>
-                      {sortBy === index ? sortDirection === "asc" ? <SortAscending /> : <SortDescending /> : <FunnelSimple />}
+                      {sortBy === index ? (
+                        sortDirection === "asc" ? (
+                          <SortAscending />
+                        ) : (
+                          <SortDescending />
+                        )
+                      ) : (
+                        <FunnelSimple />
+                      )}
                     </Button>
                   </th>
                 )
@@ -107,7 +127,9 @@ export function Table(props: TableProps): JSX.Element {
           ) : (
             <tr>
               {rowNumbers && <td style={{ opacity: 0.5 }}>&nbsp;</td>}
-              <td colSpan={headChildren ? headChildren.length : 1}>{loading ? <Loading /> : "No data available"}</td>
+              <td colSpan={headChildren ? headChildren.length : 1}>
+                {loading ? <Loading /> : "No data available"}
+              </td>
             </tr>
           )}
         </tbody>
