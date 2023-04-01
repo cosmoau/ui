@@ -84,9 +84,9 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     },
     space: {
       excess: "12rem",
-      large: "3rem",
-      larger: "5rem",
-      largest: "6rem",
+      large: "4rem",
+      larger: "6rem",
+      largest: "8rem",
       medium: "2rem",
       small: "1rem",
       smaller: "0.5rem",
