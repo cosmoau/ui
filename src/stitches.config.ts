@@ -30,7 +30,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       borderTable: "rgba(8, 12, 36, 0.075)",
       default: "rgba(8, 12, 36, 0.03)",
       defaultHover: "rgba(8, 12, 36, 0.06)",
-      greenBackground: "rgb(216, 245, 228)",
+      greenBackground: "rgb(220, 243, 222)",
       greenText: "rgb(26, 90, 51)",
       metricBlueA: "rgb(0, 105, 209)",
       metricBlueB: "rgb(84, 177, 239)",
