@@ -83,7 +83,7 @@ export function Table(props: TableProps): JSX.Element {
                         opacity: sortBy === index ? 1 : 0.3,
                       }}
                       small
-                      theme="minimal"
+                      theme={sortBy !== index ? "minimal" : undefined}
                       onClick={(): void => handleSort(index)}>
                       {sortBy === index ? (
                         sortDirection === "asc" ? (

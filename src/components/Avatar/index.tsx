@@ -19,7 +19,7 @@ const getLetter = (text: string): string => {
   const lettersPerColor = Math.floor(letters.length / colorOptions.length);
   const colorIndex = Math.floor(letterIndex / lettersPerColor);
   const color = colorOptions[colorIndex];
-  const soften = color?.replace("rgb", "rgba").replace(")", ",0.4)");
+  const soften = color?.replace("rgb", "rgba").replace(")", ",0.6)");
 
   return soften;
 };

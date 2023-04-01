@@ -19,7 +19,7 @@ export const InputCoreStyled = styled("div", {
   boxShadow: "$small",
   display: "inline-flex",
   justifyContent: "center",
-  padding: "$smaller $small",
+  padding: "$small",
   position: "relative",
   transition: "$default",
   variants: {

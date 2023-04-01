@@ -2,7 +2,6 @@ import { styled } from "../../stitches.config";
 
 export const TableStyled = styled("div", {
   "*": {
-    alignContent: "center",
     verticalAlign: "middle",
   },
   overflowX: "auto",
@@ -30,9 +29,9 @@ export const TableStyled = styled("div", {
       backgroundColor: "$default",
 
       th: {
-        fontSize: "1.5rem",
+        fontSize: "$default",
         fontWeight: "normal",
-        padding: "$smaller $small",
+        padding: "$small",
         textAlign: "left !important",
         whiteSpace: "nowrap",
       },

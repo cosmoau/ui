@@ -1,4 +1,4 @@
-import { breakpoints, darkTheme, theme } from "../../stitches.config";
+import { darkTheme, theme } from "../../stitches.config";
 import { ViewProps } from "../../types";
 
 import { ViewStyled, ViewContainerStyled } from "./View.styles";
@@ -21,7 +21,7 @@ export function View(props: ViewProps): JSX.Element {
           paddingBottom: `$${bottom}`,
         }),
         ...(noPrint && {
-          [breakpoints.special.print]: {
+          print: {
             display: "none",
           },
         }),

@@ -13,9 +13,7 @@ export const FieldStyled = styled("div", {
   alignContent: "center",
   alignSelf: "center",
   borderRadius: "$small",
-
   justifyContent: "center",
-
   position: "relative",
   transition: "$default",
   variants: {
@@ -65,7 +63,6 @@ export const FieldAreaStyled = styled("textarea", {
   },
   resize: "none",
   whiteSpace: "pre-wrap",
-
   width: "100%",
 });
 
@@ -74,10 +71,6 @@ export const FieldFunctionStyled = styled("div", {
   borderTop: "0.1rem solid $border",
   button: {
     marginLeft: "$small",
-    paddingBottom: "$smallest",
-    paddingLeft: "$small",
-    paddingRight: "$small",
-    paddingTop: "$smallest",
   },
   display: "flex",
   height: "100%",

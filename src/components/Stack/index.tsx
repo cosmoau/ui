@@ -1,4 +1,3 @@
-import { breakpoints } from "../../stitches.config";
 import { StackProps } from "../../types";
 
 import { StackColumnStyled, StackRowStyled, StackElementStyled } from "./Stack.styles";
@@ -87,7 +86,7 @@ export function Stack(props: StackProps): JSX.Element {
           alignItems: flex || "normal",
         }),
         ...(noPrint && {
-          [breakpoints.special.print]: {
+          print: {
             display: "none",
           },
         }),

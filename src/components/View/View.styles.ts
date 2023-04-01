@@ -27,7 +27,7 @@ export const ViewContainerStyled = styled("div", {
         },
         margin: "auto",
         phone: {
-          width: "95%",
+          width: "96%",
         },
         tabletX: {
           width: "98%",

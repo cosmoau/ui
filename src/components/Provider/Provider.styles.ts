@@ -53,9 +53,9 @@ export const providerReset = globalCss({
       color: darkTheme.colors.text,
     },
     fontFamily: "Untitled Sans, system-ui, -apple-system, sans-serif",
-    fontSize: theme.fontSizes.default,
+    fontSize: "16px",
     fontWeight: "normal",
-    lineHeight: theme.lineHeights.default,
+    lineHeight: 1.4,
     margin: 0,
     padding: 0,
     [`.${theme}`]: {
@@ -76,7 +76,7 @@ export const providerReset = globalCss({
       fontSize: "57%",
     },
     [breakpoints.phoneX]: {
-      fontSize: "59%",
+      fontSize: "60%",
     },
     [breakpoints.tabletX]: {
       fontSize: "60%",

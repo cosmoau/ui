@@ -107,7 +107,6 @@ export function Input(props: InputProps): JSX.Element {
         />
         {(loading || submit || copy || reveal || reset) && (
           <InputFunctionStyled>
-            {loading && <Loading />}
             {copy && (
               <Button
                 disabled={isCopied}
@@ -152,6 +151,7 @@ export function Input(props: InputProps): JSX.Element {
                   marginLeft: "$smaller",
                 }}
                 disabled={!submitValid}
+                inline="smaller"
                 small
                 onClick={(): void => {
                   if (submitFunction && submitValid) {
@@ -161,6 +161,7 @@ export function Input(props: InputProps): JSX.Element {
                 {submit}
               </Button>
             )}
+            {loading && <Loading />}
           </InputFunctionStyled>
         )}
       </InputCoreStyled>

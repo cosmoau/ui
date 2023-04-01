@@ -20,6 +20,18 @@ import {
 } from "../src/index";
 
 export function App(): ReactElement {
+  const temp = {
+    "*": {
+      height: "100%",
+      opacity: 0.15,
+      width: "100%",
+    },
+    display: "inline-block",
+    height: "10rem",
+    marginRight: "1rem",
+    width: "4rem",
+  };
+
   return (
     <Provider>
       <View bottom="largest" container top="largest">
@@ -28,123 +40,147 @@ export function App(): ReactElement {
             <Text as="h1">metricColorA/B</Text>
             <Stack
               css={{
-                background: "$metricBlueA",
-                display: "inline-block",
-                height: "10rem",
-                marginRight: "1rem",
-                width: "4rem",
+                borderTop: "0.2rem solid $metricBlueA",
+                ...temp,
               }}>
-              &nbsp;
+              <Stack
+                css={{
+                  backgroundColor: "$metricBlueA",
+                }}>
+                &nbsp;
+              </Stack>
             </Stack>
             <Stack
               css={{
-                background: "$metricBlueB",
-                display: "inline-block",
-                height: "10rem",
-                marginRight: "1rem",
-                width: "4rem",
+                borderTop: "0.2rem solid $metricBlueB",
+                ...temp,
               }}>
-              &nbsp;
+              <Stack
+                css={{
+                  backgroundColor: "$metricBlueB",
+                }}>
+                &nbsp;
+              </Stack>
             </Stack>
             <Stack
               css={{
-                background: "$metricGreenA",
-                display: "inline-block",
-                height: "10rem",
-                marginRight: "1rem",
-                width: "4rem",
+                borderTop: "0.2rem solid $metricGreenA",
+                ...temp,
               }}>
-              &nbsp;
+              <Stack
+                css={{
+                  backgroundColor: "$metricGreenA",
+                }}>
+                &nbsp;
+              </Stack>
             </Stack>
             <Stack
               css={{
-                background: "$metricGreenB",
-                display: "inline-block",
-                height: "10rem",
-                marginRight: "1rem",
-                width: "4rem",
+                borderTop: "0.2rem solid $metricGreenB",
+                ...temp,
               }}>
-              &nbsp;
+              <Stack
+                css={{
+                  backgroundColor: "$metricGreenB",
+                }}>
+                &nbsp;
+              </Stack>
             </Stack>
             <Stack
               css={{
-                background: "$metricOrangeA",
-                display: "inline-block",
-                height: "10rem",
-                marginRight: "1rem",
-                width: "4rem",
+                borderTop: "0.2rem solid $metricOrangeA",
+                ...temp,
               }}>
-              &nbsp;
+              <Stack
+                css={{
+                  backgroundColor: "$metricOrangeA",
+                }}>
+                &nbsp;
+              </Stack>
             </Stack>
             <Stack
               css={{
-                background: "$metricOrangeB",
-                display: "inline-block",
-                height: "10rem",
-                marginRight: "1rem",
-                width: "4rem",
+                borderTop: "0.2rem solid $metricOrangeB",
+                ...temp,
               }}>
-              &nbsp;
+              <Stack
+                css={{
+                  backgroundColor: "$metricOrangeB",
+                }}>
+                &nbsp;
+              </Stack>
             </Stack>
             <Stack
               css={{
-                background: "$metricPurpleA",
-                display: "inline-block",
-                height: "10rem",
-                marginRight: "1rem",
-                width: "4rem",
+                borderTop: "0.2rem solid $metricPurpleA",
+                ...temp,
               }}>
-              &nbsp;
+              <Stack
+                css={{
+                  backgroundColor: "$metricPurpleA",
+                }}>
+                &nbsp;
+              </Stack>
             </Stack>
             <Stack
               css={{
-                background: "$metricPurpleB",
-                display: "inline-block",
-                height: "10rem",
-                marginRight: "1rem",
-                width: "4rem",
+                borderTop: "0.2rem solid $metricPurpleB",
+                ...temp,
               }}>
-              &nbsp;
+              <Stack
+                css={{
+                  backgroundColor: "$metricPurpleB",
+                }}>
+                &nbsp;
+              </Stack>
             </Stack>
             <Stack
               css={{
-                background: "$metricRedA",
-                display: "inline-block",
-                height: "10rem",
-                marginRight: "1rem",
-                width: "4rem",
+                borderTop: "0.2rem solid $metricRedA",
+                ...temp,
               }}>
-              &nbsp;
+              <Stack
+                css={{
+                  backgroundColor: "$metricRedA",
+                }}>
+                &nbsp;
+              </Stack>
             </Stack>
             <Stack
               css={{
-                background: "$metricRedB",
-                display: "inline-block",
-                height: "10rem",
-                marginRight: "1rem",
-                width: "4rem",
+                borderTop: "0.2rem solid $metricRedB",
+                ...temp,
               }}>
-              &nbsp;
+              <Stack
+                css={{
+                  backgroundColor: "$metricRedB",
+                }}>
+                &nbsp;
+              </Stack>
             </Stack>
             <Stack
               css={{
-                background: "$metricYellowA",
-                display: "inline-block",
-                height: "10rem",
-                marginRight: "1rem",
-                width: "4rem",
+                borderTop: "0.2rem solid $metricYellowA",
+                ...temp,
               }}>
-              &nbsp;
+              <Stack
+                css={{
+                  backgroundColor: "$metricYellowA",
+                }}>
+                &nbsp;
+              </Stack>
             </Stack>
             <Stack
               css={{
-                background: "$metricYellowB",
-                display: "inline-block",
-                height: "10rem",
-                marginRight: "1rem",
-                width: "4rem",
+                borderTop: "0.2rem solid $metricYellowB",
+                ...temp,
               }}>
-              &nbsp;
+              <Stack
+                css={{
+                  backgroundColor: "$metricYellowB",
+                }}>
+                &nbsp;
+              </Stack>
             </Stack>
             <Stack top="medium">
               <Text as="h1">colorText</Text>

@@ -39,6 +39,7 @@ export const ButtonStyled = styled("button", {
   fontFamily: "$default",
   fontSize: "$default",
   justifyContent: "center",
+  lineHeight: "$default",
   margin: 0,
   "marginBottom:": "0 !important",
   outline: "none",
@@ -59,6 +60,10 @@ export const ButtonStyled = styled("button", {
       true: {
         fontSize: "$small",
         lineHeight: "$small",
+
+        phone: {
+          fontSize: "$h6",
+        },
 
         svg: {
           height: "1.6rem",
