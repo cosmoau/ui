@@ -15,8 +15,8 @@ export const StackColumnStyled = styled("div", {
   paddingLeft: "$small",
   paddingRight: "$small",
   phone: {
-    paddingLeft: "$smaller",
-    paddingRight: "$smaller",
+    paddingLeft: "$smaller !important",
+    paddingRight: "$smaller !important",
   },
 
   width: "100%",
