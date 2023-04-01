@@ -59,7 +59,7 @@ export function Stack(props: StackProps): JSX.Element {
             marginLeft: offsetDesktop ? `${offsetDesktop}%` : `${offset}%`,
             width: widthDesktop ? `${widthDesktop}%` : `${width}%`,
           },
-          [breakpoints.tabletX]: {
+          [breakpoints.laptopX]: {
             flex: widthLaptop ? `0 0 ${widthLaptop}%` : `0 0 ${width}%`,
             marginLeft: offsetLaptop ? `${offsetLaptop}%` : `${offset}%`,
             width: widthLaptop ? `${widthLaptop}%` : `${width}%`,
