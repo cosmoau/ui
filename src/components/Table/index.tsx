@@ -8,7 +8,7 @@ import { TableProps } from "../../types";
 
 import { TableCoreStyled, TablePaginationStyled, TableStyled } from "./Table.styles";
 
-const pageSizes = [10, 20, 50, 100, 200];
+const pageSizes = [10, 25, 50, 100, 200];
 
 export function Table(props: TableProps): JSX.Element {
   const {
@@ -39,7 +39,7 @@ export function Table(props: TableProps): JSX.Element {
 
   const [limit, setLimit] = useLocalStorage(
     `${identifier || Math.random().toString(36).substring(7)}-limit`,
-    10
+    25
   );
 
   function handleSortMapping(index: number): void {
@@ -143,7 +143,7 @@ export function Table(props: TableProps): JSX.Element {
                     </td>
                   )}
                   {row.map((cell, index) => (
-                    <td key={index}>{cell?.value}</td>
+                    <td key={index}>{cell?.label || cell?.value}</td>
                   ))}
                 </tr>
               ))
