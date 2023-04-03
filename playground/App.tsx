@@ -456,12 +456,8 @@ export function App(): ReactElement {
           </Text>
         </Dialog>
         <Dialog trigger={<Button>Test Dialog</Button>}>
-          <Text as="h3">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
-          </Text>
-          <Text as="p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
-          </Text>
+          <Text as="h3">Lorem</Text>
+          <Text as="p">Lorem</Text>
         </Dialog>
         <Badge closable>Test</Badge>
         <Text as="h1">
