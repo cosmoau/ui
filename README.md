@@ -36,6 +36,7 @@ Feel free to get in touch with feedback, advice or suggestions. See [Conventiona
 - [@stitches/react](https://github.com/stitchesjs/stitches)
 - [phosphor-react](https://github.com/phosphor-icons/phosphor-react)
 - [react-hot-toast](https://github.com/timolins/react-hot-toast)
+- [fast-sort](https://github.com/snovakovic/fast-sort)
 
 ## License
 

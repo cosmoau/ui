@@ -1,6 +1,11 @@
 import { styled } from "../../stitches.config";
 
 export const TableStyled = styled("div", {
+  position: "relative",
+  width: "100%",
+});
+
+export const TableCoreStyled = styled("div", {
   "*": {
     verticalAlign: "middle",
   },
@@ -39,4 +44,12 @@ export const TableStyled = styled("div", {
   },
 
   width: "100%",
+});
+
+export const TablePaginationStyled = styled("div", {
+  alignItems: "center",
+  borderTop: "0.1rem solid $borderTable",
+  display: "flex",
+  justifyContent: "space-between",
+  padding: "$small",
 });

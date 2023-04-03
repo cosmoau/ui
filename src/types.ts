@@ -251,10 +251,12 @@ export interface TableProps {
   defaultDirection?: "asc" | "desc";
   defaultSort?: number;
   headChildren?: Array<string>;
+  identifier?: string;
   loading?: boolean;
+  pagination?: boolean;
   rowNumbers?: boolean;
-  sort?: boolean;
   sortDisabled?: number[];
+  sortable?: boolean;
 }
 
 export interface TextProps extends HTMLAttributes<HTMLDivElement> {

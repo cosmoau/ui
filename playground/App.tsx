@@ -32,6 +32,53 @@ export function App(): ReactElement {
     width: "4rem",
   };
 
+  /* create an array like this:
+ [
+  [
+    {
+      value: 1,
+    },
+    {
+      value: A,
+    },
+    {
+      value: 1A,
+    },
+  ],
+  [
+    {
+      value: 2,
+    },
+    {
+      value: B,
+    },
+    {
+      value: 2B,
+    },
+  ],
+  * 5000
+ ]
+  */
+
+  const data = Array.from({ length: Math.floor(Math.random() * 9000) + 1000 }, (_, i) => [
+    {
+      value: i + 1,
+    },
+    {
+      value:
+        i > 25
+          ? `${String.fromCharCode(65 + Math.floor(i / 26))}${String.fromCharCode(65 + (i % 26))}`
+          : String.fromCharCode(65 + i),
+    },
+    {
+      value: `${i + 1}${
+        i > 25
+          ? `${String.fromCharCode(65 + Math.floor(i / 26))}${String.fromCharCode(65 + (i % 26))}`
+          : String.fromCharCode(65 + i)
+      }`,
+    },
+  ]);
+
   return (
     <Provider>
       <View bottom="largest" container top="largest">
@@ -525,23 +572,15 @@ export function App(): ReactElement {
         }}
         top="largest">
         <Box minimal>
-          <Stack
-            css={{
-              padding: "$small",
-            }}>
-            <Input copy placeholder="Search" />
-          </Stack>
           <Table
-            bodyChildren={[
-              [{ value: 3 }, { value: 5 }, { value: 5 }, { value: 5 }, { value: 5 }],
-              [{ value: 5 }, { value: 10 }, { value: 5 }, { value: 5 }, { value: 5 }],
-              [{ value: 400 }, { value: 50000000000 }, { value: 5 }, { value: 5 }, { value: 5 }],
-            ]}
+            bodyChildren={data}
             defaultDirection="desc"
             defaultSort={1}
-            headChildren={["Head 1", "Head 2", "Head 3", "Head 4", "Head 5 lorem ipsum "]}
+            headChildren={["Head 1", "Head 2", "Head 3"]}
+            identifier="fucks2"
+            pagination
             rowNumbers
-            sort
+            sortable
           />
         </Box>
       </View>
