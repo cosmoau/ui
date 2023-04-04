@@ -88,6 +88,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       larger: "6rem",
       largest: "8rem",
       medium: "2rem",
+      none: "0",
       small: "1rem",
       smaller: "0.5rem",
       smallest: "0.25rem",
