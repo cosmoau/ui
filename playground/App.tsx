@@ -359,7 +359,15 @@ export function App(): ReactElement {
             label="Test Label for Selectionsjsjsjsjsjsjsjs"
             options={[
               { icon: <CheckCircle />, iconPosition: "right", label: "Test", value: "test" },
+              {
+                icon: <CheckCircle />,
+                iconPosition: "right",
+                label: "Test Selectionsjsjsjsjsjsjsjs Selectionsjsjsjsjsjsjsjs ",
+                value: "test",
+              },
+
               { label: "Test 2", value: "test2" },
+
               { label: "Test 2", value: "test2" },
               { label: "Test 2", value: "test2" },
               { label: "Test 2", value: "test2" },
@@ -373,6 +381,21 @@ export function App(): ReactElement {
               { label: "Test 2", value: "test2" },
             ]}
             selection={["testvv", "test"]}
+            trigger={<Button>Test</Button>}
+          />
+          <Select
+            horizontal="left"
+            label="Test Label for Selectionsjsjsjsjsjsjsjs"
+            last
+            options={[
+              { icon: <CheckCircle />, iconPosition: "right", label: "Test", value: "test" },
+              {
+                icon: <CheckCircle />,
+                iconPosition: "right",
+                label: "Test Selectionsjsjsjsjsjsjsjs Selectionsjsjsjsjsjsjsjs ",
+                value: "test",
+              },
+            ]}
             trigger={<Button>Test</Button>}
           />
         </Stack>

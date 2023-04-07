@@ -13,6 +13,7 @@ import {
   SelectFilterStyled,
   SelectEmptyStyled,
   SelectLabelStyled,
+  SelectIconStyled,
 } from "./Select.styles";
 
 export function Select(props: SelectProps): JSX.Element {
@@ -120,20 +121,16 @@ export function Select(props: SelectProps): JSX.Element {
             filteredOptions.map((option) => (
               <SelectItemStyled
                 key={option.value + Math.random()}
-                css={{
-                  ...(last &&
-                    !filter && {
-                      "&:last-child": {
-                        borderTop: "0.1rem solid $border",
-                        marginTop: "$medium",
-                      },
-                    }),
-                }}
+                last={last && !filter}
                 selected={selection?.includes(option.value)}
                 onClick={(): void => handleSelection(option.value, option.label)}>
-                {option.icon && option.iconPosition !== "right" && option.icon}
+                {option.icon && option.iconPosition !== "right" && (
+                  <SelectIconStyled align="left">{option.icon}</SelectIconStyled>
+                )}
                 {option.label}
-                {option.icon && option.iconPosition === "right" && option.icon}
+                {option.icon && option.iconPosition === "right" && (
+                  <SelectIconStyled align="right">{option.icon}</SelectIconStyled>
+                )}
               </SelectItemStyled>
             ))
           ) : (

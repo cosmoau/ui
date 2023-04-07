@@ -88,16 +88,27 @@ export const SelectItemStyled = styled("div", {
     backgroundColor: "$defaultHover",
     borderBottomColor: "transparent",
   },
-  "&:last-child": {},
   borderRadius: "$small",
   cursor: "pointer",
   display: "flex",
   fontSize: "$default",
   justifyContent: "space-between",
+  marginTop: "$smallest",
   padding: "$smaller $small",
 
   transition: "$default",
   variants: {
+    last: {
+      true: {
+        "&:last-child": {
+          borderTop: "0.1rem solid $border",
+          borderTopLeftRadius: 0,
+          borderTopRightRadius: 0,
+          marginTop: "$small",
+          paddingTop: "$small",
+        },
+      },
+    },
     selected: {
       true: {
         backgroundColor: "$default",
@@ -116,6 +127,28 @@ export const SelectLabelStyled = styled("div", {
   fontSize: "$h6",
   fontWeight: "bold",
   padding: "$small",
+});
+
+export const SelectIconStyled = styled("div", {
+  alignItems: "center",
+  display: "flex",
+  justifyContent: "center",
+  svg: {
+    height: "1.7rem",
+    width: "1.7rem",
+  },
+  variants: {
+    align: {
+      left: {
+        marginRight: "$small",
+      },
+      right: {
+        marginLeft: "$small",
+      },
+    },
+  },
+
+  verticalAlign: "middle",
 });
 
 export default SelectStyled;
