@@ -121,8 +121,6 @@ export function Select(props: SelectProps): JSX.Element {
               <SelectItemStyled
                 key={option.value + Math.random()}
                 css={{
-                  color: selection === (option.value || option.label) ? "$accent" : "$text",
-                  opacity: selection === (option.value || option.label) ? "0.6" : "1",
                   ...(last &&
                     !filter && {
                       "&:last-child": {
@@ -131,8 +129,11 @@ export function Select(props: SelectProps): JSX.Element {
                       },
                     }),
                 }}
+                selected={selection?.includes(option.value)}
                 onClick={(): void => handleSelection(option.value, option.label)}>
+                {option.icon && option.iconPosition !== "right" && option.icon}
                 {option.label}
+                {option.icon && option.iconPosition === "right" && option.icon}
               </SelectItemStyled>
             ))
           ) : (

@@ -78,25 +78,32 @@ export const SelectFilterStyled = styled("div", {
   input: {
     width: "100%",
   },
+  marginBottom: "$small",
 
   padding: "$smaller $small",
 });
 
 export const SelectItemStyled = styled("div", {
   "&:hover": {
-    backgroundColor: "$default",
+    backgroundColor: "$defaultHover",
     borderBottomColor: "transparent",
-    borderRadius: "$small",
   },
-  "&:last-child": {
-    borderBottom: 0,
-  },
-  borderRadius: 0,
+  "&:last-child": {},
+  borderRadius: "$small",
   cursor: "pointer",
   display: "flex",
   fontSize: "$default",
+  justifyContent: "space-between",
   padding: "$smaller $small",
+
   transition: "$default",
+  variants: {
+    selected: {
+      true: {
+        backgroundColor: "$default",
+      },
+    },
+  },
 });
 
 export const SelectEmptyStyled = styled("div", {

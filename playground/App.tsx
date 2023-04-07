@@ -1,4 +1,4 @@
-import { CurrencyEth } from "phosphor-react";
+import { CheckCircle, CurrencyEth } from "phosphor-react";
 import React, { ReactElement } from "react";
 
 import {
@@ -31,34 +31,6 @@ export function App(): ReactElement {
     marginRight: "1rem",
     width: "4rem",
   };
-
-  /* create an array like this:
- [
-  [
-    {
-      value: 1,
-    },
-    {
-      value: A,
-    },
-    {
-      value: 1A,
-    },
-  ],
-  [
-    {
-      value: 2,
-    },
-    {
-      value: B,
-    },
-    {
-      value: 2B,
-    },
-  ],
-  * 5000
- ]
-  */
 
   const data = Array.from({ length: Math.floor(Math.random() * 9000) + 1000 }, (_, i) => [
     {
@@ -386,7 +358,7 @@ export function App(): ReactElement {
             horizontal="left"
             label="Test Label for Selectionsjsjsjsjsjsjsjs"
             options={[
-              { label: "Test", value: "test" },
+              { icon: <CheckCircle />, iconPosition: "right", label: "Test", value: "test" },
               { label: "Test 2", value: "test2" },
               { label: "Test 2", value: "test2" },
               { label: "Test 2", value: "test2" },
@@ -396,11 +368,11 @@ export function App(): ReactElement {
               { label: "Test 2", value: "test2" },
               { label: "Test 2", value: "test2" },
               { label: "Test 2", value: "test2" },
-              { label: "Test 2", value: "test2" },
+              { icon: <CurrencyEth />, iconPosition: "left", label: "Testvvvvvv", value: "testvv" },
               { label: "Test 2", value: "test2" },
               { label: "Test 2", value: "test2" },
             ]}
-            selection="test"
+            selection={["testvv", "test"]}
             trigger={<Button>Test</Button>}
           />
         </Stack>

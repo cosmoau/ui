@@ -209,10 +209,12 @@ export interface SelectProps {
   locked?: boolean;
   onSelection?: (value: string, label: string) => void;
   options: Array<{
+    icon?: ReactNode;
+    iconPosition?: "left" | "right";
     label: string;
     value: string;
   }>;
-  selection?: string;
+  selection?: string | string[];
   trigger: ReactNode;
   vertical?: "top" | "bottom" | "center";
   width?: number | string;
