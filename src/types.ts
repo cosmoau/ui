@@ -253,6 +253,7 @@ export interface TableProps {
   defaultDirection?: "asc" | "desc";
   defaultSort?: number;
   headChildren?: Array<string>;
+  hover?: boolean;
   identifier?: string;
   loading?: boolean;
   pagination?: boolean;

@@ -43,6 +43,20 @@ export const TableCoreStyled = styled("div", {
     },
   },
 
+  variants: {
+    hover: {
+      true: {
+        tbody: {
+          tr: {
+            "&:hover": {
+              backgroundColor: "$default",
+            },
+          },
+        },
+      },
+    },
+  },
+
   width: "100%",
 });
 

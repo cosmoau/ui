@@ -572,6 +572,7 @@ export function App(): ReactElement {
             defaultDirection="desc"
             defaultSort={1}
             headChildren={["Head 1", "Head 2", "Head 3"]}
+            hover
             pagination
             rowNumbers
             sortable

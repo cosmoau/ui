@@ -23,6 +23,7 @@ export function Table(props: TableProps): JSX.Element {
     loading,
     pagination,
     identifier,
+    hover,
     ...rest
   } = props;
 
@@ -78,7 +79,7 @@ export function Table(props: TableProps): JSX.Element {
 
   return (
     <TableStyled css={css}>
-      <TableCoreStyled>
+      <TableCoreStyled hover={hover}>
         <table {...rest}>
           {headChildren && (
             <thead>
