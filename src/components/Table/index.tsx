@@ -28,18 +28,13 @@ export function Table(props: TableProps): JSX.Element {
 
   const [sortBy, setSortBy] = useState(defaultSort || 0);
   const [sortDirection, setSortDirection] = useState(defaultDirection || "asc");
-  const [page, setPage] = useLocalStorage(
-    `${identifier || Math.random().toString(36).substring(7)}-pages`,
-    1
-  );
-  const [offset, setOffset] = useLocalStorage(
-    `${identifier || Math.random().toString(36).substring(7)}-offset`,
-    0
-  );
-
-  const [limit, setLimit] = useLocalStorage(
-    `${identifier || Math.random().toString(36).substring(7)}-limit`,
-    25
+  const [storage, setStorage] = useLocalStorage(
+    `${identifier || Math.random().toString(36).substring(7)}-table`,
+    {
+      limit: 25,
+      offset: 0,
+      page: 1,
+    }
   );
 
   function handleSortMapping(index: number): void {
@@ -51,18 +46,26 @@ export function Table(props: TableProps): JSX.Element {
   }
 
   function handlePageSelection(value: string): void {
-    setPage(1);
-    setOffset(0);
-    setLimit(parseInt(value));
+    setStorage({
+      limit: parseInt(value),
+      offset: 0,
+      page: 1,
+    });
   }
 
   function handlePageChange(direction: "next" | "prev"): void {
     if (direction === "next") {
-      setPage(page + 1);
-      setOffset(offset + limit);
+      setStorage({
+        limit: storage.limit,
+        offset: storage.offset + storage.limit,
+        page: storage.page + 1,
+      });
     } else {
-      setPage(page - 1);
-      setOffset(offset - limit);
+      setStorage({
+        limit: storage.limit,
+        offset: storage.offset - storage.limit,
+        page: storage.page - 1,
+      });
     }
   }
 
@@ -130,23 +133,25 @@ export function Table(props: TableProps): JSX.Element {
 
           <tbody>
             {!loading && sortedBodyChildren && sortedBodyChildren.length > 0 ? (
-              sortedBodyChildren.slice(offset, offset + limit).map((row, index) => (
-                <tr key={index}>
-                  {rowNumbers && (
-                    <td
-                      style={{
-                        minWidth: "0",
-                        opacity: 0.6,
-                        width: "1%",
-                      }}>
-                      {offset + index + 1}
-                    </td>
-                  )}
-                  {row.map((cell, index) => (
-                    <td key={index}>{cell?.label || cell?.value}</td>
-                  ))}
-                </tr>
-              ))
+              sortedBodyChildren
+                .slice(storage.offset, storage.offset + storage.limit)
+                .map((row, index) => (
+                  <tr key={index}>
+                    {rowNumbers && (
+                      <td
+                        style={{
+                          minWidth: "0",
+                          opacity: 0.6,
+                          width: "1%",
+                        }}>
+                        {storage.offset + index + 1}
+                      </td>
+                    )}
+                    {row.map((cell, index) => (
+                      <td key={index}>{cell?.label || cell?.value}</td>
+                    ))}
+                  </tr>
+                ))
             ) : (
               <tr>
                 {rowNumbers && <td style={{ opacity: 0.5 }}>&nbsp;</td>}
@@ -168,8 +173,8 @@ export function Table(props: TableProps): JSX.Element {
                 value: size.toString(),
               }))}
               trigger={
-                <Button disabled={sortedBodyChildren?.length < limit}>
-                  <Text>{limit} per page</Text>
+                <Button>
+                  <Text>{storage.limit} per page</Text>
                 </Button>
               }
               vertical="top"
@@ -181,14 +186,14 @@ export function Table(props: TableProps): JSX.Element {
           </Stack>
           <Stack>
             <Text accent as="small" inline="medium">
-              {offset + 1} -{" "}
-              {offset + limit > sortedBodyChildren.length
+              {storage.offset + 1} -{" "}
+              {storage.offset + storage.limit > sortedBodyChildren.length
                 ? sortedBodyChildren.length
-                : offset + limit}{" "}
+                : storage.offset + storage.limit}{" "}
               of {sortedBodyChildren.length}
             </Text>
             <Button
-              disabled={page === 1}
+              disabled={storage.page === 1}
               inline="small"
               onClick={(): void => {
                 handlePageChange("prev");
@@ -196,7 +201,7 @@ export function Table(props: TableProps): JSX.Element {
               <ArrowLeft />
             </Button>
             <Button
-              disabled={offset + limit >= sortedBodyChildren.length}
+              disabled={storage.offset + storage.limit >= sortedBodyChildren.length}
               onClick={(): void => {
                 handlePageChange("next");
               }}>
