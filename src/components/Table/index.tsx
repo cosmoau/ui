@@ -23,7 +23,7 @@ export function Table(props: TableProps): JSX.Element {
     loading,
     pagination,
     identifier,
-    hover,
+    hover = true,
     ...rest
   } = props;
 
