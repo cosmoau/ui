@@ -356,31 +356,22 @@ export function App(): ReactElement {
           </Popover>
           <Select
             horizontal="left"
-            label="Test Label for Selectionsjsjsjsjsjsjsjs"
+            label="Test Label"
             options={[
-              { icon: <CheckCircle />, iconPosition: "right", label: "Test", value: "test" },
               {
-                icon: <CheckCircle />,
-                iconPosition: "right",
-                label: "Test Selectionsjsjsjsjsjsjsjs Selectionsjsjsjsjsjsjsjs ",
-                value: "test",
+                label: "home",
+                value: "/"
               },
-
-              { label: "Test 2", value: "test2" },
-
-              { label: "Test 2", value: "test2" },
-              { label: "Test 2", value: "test2" },
-              { label: "Test 2", value: "test2" },
-              { label: "Test 2", value: "test2" },
-              { label: "Test 2", value: "test2" },
-              { label: "Test 2", value: "test2" },
-              { label: "Test 2", value: "test2" },
-              { label: "Test 2", value: "test2" },
-              { icon: <CurrencyEth />, iconPosition: "left", label: "Testvvvvvv", value: "testvv" },
-              { label: "Test 2", value: "test2" },
-              { label: "Test 2", value: "test2" },
+              {
+                label: "about",
+                value: "/about"
+              },
+              {
+                label: "contact",
+                value: "/contact"
+              }
             ]}
-            selection={["testvv", "test"]}
+            selection={["/about"]}
             trigger={<Button>Test</Button>}
           />
           <Select
@@ -402,7 +393,7 @@ export function App(): ReactElement {
         <Stack direction="row">
           <Stack direction="column">
             <Stack bottom="medium">
-              <Avatar fallback="A" />
+              <Avatar fallback="djksfjksjkf" />
             </Stack>
             <Stack bottom="medium">
               <Avatar colors fallback="A" />

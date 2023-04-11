@@ -61,7 +61,7 @@ export function Field(props: FieldProps): JSX.Element {
         width: width || "80%",
       }}
       disabled={disabled}
-      state={success ? "success" : warning ? "warning" : error ? "error" : "default"}>
+>
       <FieldAreaStyled
         cols={cols}
         css={css}

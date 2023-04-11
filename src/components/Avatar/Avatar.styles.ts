@@ -20,7 +20,6 @@ export const AvatarStyled = styled("div", {
   },
   justifyContent: "center",
 
-  overflow: "hidden",
   span: {
     alignItems: "center",
     color: "$accent",
@@ -29,6 +28,7 @@ export const AvatarStyled = styled("div", {
     fontWeight: "bold",
     justifyContent: "center",
     opacity: 0.8,
+    overflow: "hidden",
     textTransform: "uppercase",
   },
   verticalAlign: "middle",

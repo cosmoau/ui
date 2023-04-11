@@ -92,7 +92,7 @@ export function Input(props: InputProps): JSX.Element {
       }}>
       <InputCoreStyled
         disabled={disabled}
-        state={success ? "success" : warning ? "warning" : error ? "error" : "default"}>
+>
         {icon && <InputIconStyled>{icon}</InputIconStyled>}
         <InputAreaStyled
           ref={mustRef || undefined}

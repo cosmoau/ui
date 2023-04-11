@@ -122,7 +122,9 @@ export function Select(props: SelectProps): JSX.Element {
               <SelectItemStyled
                 key={option.value + Math.random()}
                 last={last && !filter}
-                selected={selection?.includes(option.value)}
+                selected={
+                  selection && selection.find((item) => item === option.value) ? true : false
+                }
                 onClick={(): void => handleSelection(option.value, option.label)}>
                 {option.icon && option.iconPosition !== "right" && (
                   <SelectIconStyled align="left">{option.icon}</SelectIconStyled>

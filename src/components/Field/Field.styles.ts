@@ -12,29 +12,17 @@ export const FieldStyled = styled("div", {
   },
   alignContent: "center",
   alignSelf: "center",
+  border: "0.1rem solid $border",
   borderRadius: "$small",
   justifyContent: "center",
-  position: "relative",
+          position: "relative",
+
   transition: "$default",
   variants: {
     disabled: {
       true: {
         cursor: "not-allowed",
         opacity: 0.6,
-      },
-    },
-    state: {
-      default: {
-        border: "0.1rem solid $border",
-      },
-      error: {
-        border: "0.1rem solid $redBackground",
-      },
-      success: {
-        border: "0.1rem solid $greenBackground",
-      },
-      warning: {
-        border: "0.1rem solid $orangeBackground",
       },
     },
   },

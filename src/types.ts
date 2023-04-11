@@ -185,7 +185,7 @@ export interface PopoverProps {
   minimal?: boolean;
   trigger: ReactNode;
   type?: "click" | "hover";
-  vertical?: "top" | "bottom" | "center";
+  vertical?: "top" | "bottom";
   width?: number | string;
 }
 
@@ -214,9 +214,9 @@ export interface SelectProps {
     label: string;
     value: string;
   }>;
-  selection?: string | string[];
+  selection?: string[];
   trigger: ReactNode;
-  vertical?: "top" | "bottom" | "center";
+  vertical?: "top" | "bottom";
   width?: number | string;
 }
 

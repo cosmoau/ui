@@ -174,8 +174,8 @@ export function Table(props: TableProps): JSX.Element {
                 value: size.toString(),
               }))}
               trigger={
-                <Button>
-                  <Text>{storage.limit} per page</Text>
+                <Button small>
+{storage.limit} per page
                 </Button>
               }
               vertical="top"
@@ -194,15 +194,17 @@ export function Table(props: TableProps): JSX.Element {
               of {sortedBodyChildren.length}
             </Text>
             <Button
-              disabled={storage.page === 1}
+            disabled={storage.page === 1}
               inline="small"
+              small
               onClick={(): void => {
                 handlePageChange("prev");
               }}>
               <ArrowLeft />
             </Button>
             <Button
-              disabled={storage.offset + storage.limit >= sortedBodyChildren.length}
+            disabled={storage.offset + storage.limit >= sortedBodyChildren.length}
+              small
               onClick={(): void => {
                 handlePageChange("next");
               }}>

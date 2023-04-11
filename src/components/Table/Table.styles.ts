@@ -31,14 +31,16 @@ export const TableCoreStyled = styled("div", {
       },
     },
     thead: {
-      backgroundColor: "$default",
+      backgroundColor: "$defaultTableHover",
 
       th: {
-        fontSize: "$default",
+        color: "$accent",
+        fontSize: "$h6",
         fontWeight: "normal",
         padding: "$small",
-        textAlign: "left !important",
-        whiteSpace: "nowrap",
+          textAlign: "left !important", 
+  whiteSpace: "nowrap",
+
       },
     },
   },

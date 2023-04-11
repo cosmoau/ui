@@ -28,8 +28,9 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       blueText: "rgb(21, 71, 121)",
       border: "rgba(8, 12, 36, 0.15)",
       borderTable: "rgba(8, 12, 36, 0.075)",
-      default: "rgba(8, 12, 36, 0.03)",
-      defaultHover: "rgba(8, 12, 36, 0.05)",
+      default: "rgba(8, 12, 36, 0.033)",
+      defaultHover: "rgba(8, 12, 36, 0.055)",
+      defaultTableHover: "rgba(8, 12, 36, 0.0166)",
       greenBackground: "rgb(220, 243, 222)",
       greenText: "rgb(26, 90, 51)",
       metricBlueA: "rgb(0, 105, 209)",
@@ -56,13 +57,13 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     },
     fontSizes: {
       default: "1.6rem",
-      h1: "3.5rem",
-      h2: "3.2rem",
-      h3: "2.5rem",
-      h4: "2.2rem",
+      h1: "3.6rem",
+      h2: "3.3rem",
+      h3: "2.6rem",
+      h4: "2rem",
       h5: "1.7rem",
       h6: "1.5rem",
-      small: "1.4rem",
+      small: "1.45rem",
     },
     fonts: {
       default: "Untitled Sans, apple-system, sans-serif",
@@ -191,7 +192,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
 
 export const darkTheme = createTheme({
   colors: {
-    accent: "rgb(185, 210, 231)",
+    accent: "rgb(194, 218, 238)",
     background: "rgb(10, 20, 40)",
     border: "rgba(200, 220, 240, 0.2)",
     default: "rgba(200, 220, 240, 0.15)",

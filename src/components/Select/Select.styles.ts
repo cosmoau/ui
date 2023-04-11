@@ -53,17 +53,12 @@ export const SelectGroupStyled = styled("div", {
     vertical: {
       bottom: {
         bottom: "auto",
-        marginTop: "$small",
+        marginTop: "$small !important",
         top: "100%",
-      },
-      center: {
-        bottom: "auto",
-        top: "50%",
-        transform: "translateY(-50%)",
       },
       top: {
         bottom: "100%",
-        marginBottom: "$small",
+        marginBottom: "$small !important",
         marginTop: 0,
         top: "auto",
       },
@@ -124,8 +119,8 @@ export const SelectEmptyStyled = styled("div", {
 });
 
 export const SelectLabelStyled = styled("div", {
-  fontSize: "$h6",
-  fontWeight: "bold",
+  color: "$accent", 
+  fontSize: "$small",
   padding: "$small",
 });
 
