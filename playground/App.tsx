@@ -41,6 +41,7 @@ export function App(): ReactElement {
         i > 25
           ? `${String.fromCharCode(65 + Math.floor(i / 26))}${String.fromCharCode(65 + (i % 26))}`
           : String.fromCharCode(65 + i),
+      width: "30rem",
     },
     {
       value: `${i + 1}${
@@ -360,16 +361,16 @@ export function App(): ReactElement {
             options={[
               {
                 label: "home",
-                value: "/"
+                value: "/",
               },
               {
                 label: "about",
-                value: "/about"
+                value: "/about",
               },
               {
                 label: "contact",
-                value: "/contact"
-              }
+                value: "/contact",
+              },
             ]}
             selection={["/about"]}
             trigger={<Button>Test</Button>}

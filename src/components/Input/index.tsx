@@ -90,9 +90,7 @@ export function Input(props: InputProps): JSX.Element {
         maxWidth: width || "100%",
         width: width || "100%",
       }}>
-      <InputCoreStyled
-        disabled={disabled}
->
+      <InputCoreStyled disabled={disabled}>
         {icon && <InputIconStyled>{icon}</InputIconStyled>}
         <InputAreaStyled
           ref={mustRef || undefined}

@@ -15,7 +15,7 @@ export const FieldStyled = styled("div", {
   border: "0.1rem solid $border",
   borderRadius: "$small",
   justifyContent: "center",
-          position: "relative",
+  position: "relative",
 
   transition: "$default",
   variants: {

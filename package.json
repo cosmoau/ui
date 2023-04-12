@@ -1,7 +1,7 @@
 {
   "name": "@cosmoau/ui",
   "description": "Cosmo's internal component library - Next.js + TypeScript.",
-  "version": "1.4.26",
+  "version": "1.4.27",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "bugs": {
@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
-    "@types/react": "^18.0.34",
+    "@types/react": "^18.0.35",
     "eslint": "^8.38.0",
     "eslint-config-dolmios": "^1.4.4",
     "eslint-plugin-sort-keys-fix": "^1.1.2",

@@ -149,7 +149,17 @@ export function Table(props: TableProps): JSX.Element {
                       </td>
                     )}
                     {row.map((cell, index) => (
-                      <td key={index}>{cell?.label || cell?.value}</td>
+                      <td
+                        key={index}
+                        style={{
+                          ...(cell.width && {
+                            maxWidth: cell.width,
+                            minWidth: cell.width,
+                            width: cell.width,
+                          }),
+                        }}>
+                        {cell?.label || cell?.value}
+                      </td>
                     ))}
                   </tr>
                 ))
@@ -173,11 +183,7 @@ export function Table(props: TableProps): JSX.Element {
                 label: size.toString(),
                 value: size.toString(),
               }))}
-              trigger={
-                <Button small>
-{storage.limit} per page
-                </Button>
-              }
+              trigger={<Button small>{storage.limit} per page</Button>}
               vertical="top"
               width={125}
               onSelection={(value): void => {
@@ -194,7 +200,7 @@ export function Table(props: TableProps): JSX.Element {
               of {sortedBodyChildren.length}
             </Text>
             <Button
-            disabled={storage.page === 1}
+              disabled={storage.page === 1}
               inline="small"
               small
               onClick={(): void => {
@@ -203,7 +209,7 @@ export function Table(props: TableProps): JSX.Element {
               <ArrowLeft />
             </Button>
             <Button
-            disabled={storage.offset + storage.limit >= sortedBodyChildren.length}
+              disabled={storage.offset + storage.limit >= sortedBodyChildren.length}
               small
               onClick={(): void => {
                 handlePageChange("next");

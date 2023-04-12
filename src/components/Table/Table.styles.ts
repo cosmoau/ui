@@ -38,9 +38,8 @@ export const TableCoreStyled = styled("div", {
         fontSize: "$h6",
         fontWeight: "normal",
         padding: "$small",
-          textAlign: "left !important", 
-  whiteSpace: "nowrap",
-
+        textAlign: "left !important",
+        whiteSpace: "nowrap",
       },
     },
   },

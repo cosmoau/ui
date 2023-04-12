@@ -16,7 +16,7 @@ export const InputCoreStyled = styled("div", {
   },
   alignSelf: "center",
   border: "0.1rem solid $border",
-          borderRadius: "$small",
+  borderRadius: "$small",
 
   boxShadow: "$small",
   display: "inline-flex",

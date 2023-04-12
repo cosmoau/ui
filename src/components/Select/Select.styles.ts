@@ -119,7 +119,7 @@ export const SelectEmptyStyled = styled("div", {
 });
 
 export const SelectLabelStyled = styled("div", {
-  color: "$accent", 
+  color: "$accent",
   fontSize: "$small",
   padding: "$small",
 });

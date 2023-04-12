@@ -60,8 +60,7 @@ export function Field(props: FieldProps): JSX.Element {
         maxWidth: width || "80%",
         width: width || "80%",
       }}
-      disabled={disabled}
->
+      disabled={disabled}>
       <FieldAreaStyled
         cols={cols}
         css={css}
