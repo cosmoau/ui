@@ -251,12 +251,14 @@ export interface TableProps {
   >;
   css?: CSS;
   defaultDirection?: "asc" | "desc";
+  defaultLimit?: 10 | 25 | 50 | 100 | 200;
   defaultSort?: number;
   headChildren?: Array<string>;
   hover?: boolean;
   identifier?: string;
   loading?: boolean;
   pagination?: boolean;
+  restrictLimit?: number;
   rowNumbers?: boolean;
   sortDisabled?: number[];
   sortable?: boolean;

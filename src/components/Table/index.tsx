@@ -22,6 +22,8 @@ export function Table(props: TableProps): JSX.Element {
     rowNumbers,
     loading,
     pagination,
+    restrictLimit,
+    defaultLimit,
     identifier,
     hover = true,
     ...rest
@@ -32,7 +34,7 @@ export function Table(props: TableProps): JSX.Element {
   const [storage, setStorage] = useLocalStorage(
     `${identifier || Math.random().toString(36).substring(7)}-table`,
     {
-      limit: 25,
+      limit: restrictLimit || defaultLimit || 10,
       offset: 0,
       page: 1,
     }
@@ -176,22 +178,23 @@ export function Table(props: TableProps): JSX.Element {
       </TableCoreStyled>
       {pagination && sortedBodyChildren && (
         <TablePaginationStyled>
-          <Stack>
-            <Select
-              label="Page Size"
-              options={pageSizes.map((size) => ({
-                label: size.toString(),
-                value: size.toString(),
-              }))}
-              trigger={<Button small>{storage.limit} per page</Button>}
-              vertical="top"
-              width={125}
-              onSelection={(value): void => {
-                handlePageSelection(value);
-              }}
-            />
-          </Stack>
-          <Stack>
+          {!restrictLimit ? (
+            <Stack>
+              <Select
+                label="Page Size"
+                options={pageSizes.map((size) => ({
+                  label: size.toString(),
+                  value: size.toString(),
+                }))}
+                trigger={<Button small>{storage.limit} per page</Button>}
+                vertical="top"
+                width={125}
+                onSelection={(value): void => {
+                  handlePageSelection(value);
+                }}
+              />
+            </Stack>
+          ) : (
             <Text accent as="small" inline="medium">
               {storage.offset + 1} -{" "}
               {storage.offset + storage.limit > sortedBodyChildren.length
@@ -199,6 +202,18 @@ export function Table(props: TableProps): JSX.Element {
                 : storage.offset + storage.limit}{" "}
               of {sortedBodyChildren.length}
             </Text>
+          )}
+
+          <Stack>
+            {!restrictLimit && (
+              <Text accent as="small" inline="medium">
+                {storage.offset + 1} -{" "}
+                {storage.offset + storage.limit > sortedBodyChildren.length
+                  ? sortedBodyChildren.length
+                  : storage.offset + storage.limit}{" "}
+                of {sortedBodyChildren.length}
+              </Text>
+            )}
             <Button
               disabled={storage.page === 1}
               inline="small"

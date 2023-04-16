@@ -562,10 +562,12 @@ export function App(): ReactElement {
           <Table
             bodyChildren={data}
             defaultDirection="desc"
+            defaultLimit={50}
             defaultSort={1}
-            headChildren={["Head 1", "Head 2", "Head 3"]}
+            headChildren={["Check In", "Head 2", "Head 3"]}
             hover
             pagination
+            restrictLimit={4}
             rowNumbers
             sortable
           />

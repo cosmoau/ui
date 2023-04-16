@@ -67,4 +67,8 @@ export const TablePaginationStyled = styled("div", {
   display: "flex",
   justifyContent: "space-between",
   padding: "$small",
+
+  small: {
+    opacity: 0.6,
+  },
 });
