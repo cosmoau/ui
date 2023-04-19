@@ -35,7 +35,7 @@ export const TableCoreStyled = styled("div", {
 
       th: {
         color: "$accent",
-        fontSize: "$h6",
+        fontSize: "$small",
         fontWeight: "normal",
         padding: "$small",
         textAlign: "left !important",

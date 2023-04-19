@@ -24,6 +24,7 @@ export function Stack(props: StackProps): JSX.Element {
     widthDesktop,
     offsetDesktop,
     widthWide,
+    className,
     offsetWide,
     css,
     noPrint,
@@ -39,6 +40,7 @@ export function Stack(props: StackProps): JSX.Element {
 
   return (
     <StackElement
+      className={className}
       css={{
         textAlign: align,
         ...(top && {

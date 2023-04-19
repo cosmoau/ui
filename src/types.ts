@@ -224,6 +224,7 @@ export interface StackProps {
   align?: CSSProperties["textAlign"];
   bottom?: ThemeSpacing;
   children: ReactNode;
+  className?: string;
   css?: CSS;
   direction?: "row" | "column";
   flex?: CSSProperties["alignItems"];

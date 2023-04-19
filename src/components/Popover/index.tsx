@@ -48,6 +48,8 @@ export function Popover(props: PopoverProps): JSX.Element {
     }
   }
 
+  const deviceWidth = typeof window !== "undefined" ? Number(window?.innerWidth || 0) : 0;
+
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   useOnClickOutside(ref, trigger !== "hover" ? (): void => handleClose() : (): void => {});
 
@@ -65,6 +67,7 @@ export function Popover(props: PopoverProps): JSX.Element {
         }}>
         {trigger}
       </PopoverTriggerStyled>
+
       {isMounted && (
         <PopoverContentStyled
           ref={ref}
@@ -72,6 +75,10 @@ export function Popover(props: PopoverProps): JSX.Element {
           css={{
             maxWidth: width || "50rem",
             minWidth: width || "25rem",
+            phone: {
+              maxWidth: deviceWidth > 250 ? deviceWidth * 0.95 : "100%",
+              minWidth: deviceWidth > 100 ? deviceWidth * 0.8 : "100%",
+            },
           }}
           horizontal={horizontal}
           minimal={minimal}

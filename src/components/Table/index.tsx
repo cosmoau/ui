@@ -46,6 +46,11 @@ export function Table(props: TableProps): JSX.Element {
     } else {
       setSortBy(index);
     }
+    setStorage({
+      limit: storage.limit,
+      offset: 0,
+      page: 1,
+    });
   }
 
   function handlePageSelection(value: string): void {
@@ -80,7 +85,7 @@ export function Table(props: TableProps): JSX.Element {
       : bodyChildren;
 
   return (
-    <TableStyled css={css}>
+    <TableStyled css={css} id={identifier}>
       <TableCoreStyled hover={hover}>
         <table {...rest}>
           {headChildren && (

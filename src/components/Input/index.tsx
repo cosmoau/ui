@@ -163,23 +163,25 @@ export function Input(props: InputProps): JSX.Element {
           </InputFunctionStyled>
         )}
       </InputCoreStyled>
-      <InputCallbackStyled>
-        {error && (
-          <Badge icon={<Warning />} small theme="red">
-            {errorMessage || "Error"}
-          </Badge>
-        )}
-        {success && (
-          <Badge icon={<Check />} small theme="green">
-            {successMessage || "Success"}
-          </Badge>
-        )}
-        {warning && (
-          <Badge icon={<Warning />} small theme="orange">
-            {warningMessage || "Warning"}
-          </Badge>
-        )}
-      </InputCallbackStyled>
+      {(error || success || warning) && (
+        <InputCallbackStyled>
+          {error && (
+            <Badge icon={errorMessage ? <Warning /> : undefined} small theme="red">
+              {errorMessage || <Warning />}
+            </Badge>
+          )}
+          {success && (
+            <Badge icon={successMessage ? <Check /> : undefined} small theme="green">
+              {successMessage || <Check />}
+            </Badge>
+          )}
+          {warning && (
+            <Badge icon={warningMessage ? <Warning /> : undefined} small theme="orange">
+              {warningMessage || <Warning />}
+            </Badge>
+          )}
+        </InputCallbackStyled>
+      )}
     </InputStyled>
   );
 }

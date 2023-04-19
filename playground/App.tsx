@@ -1,5 +1,5 @@
 import { CheckCircle, CurrencyEth } from "phosphor-react";
-import React, { ReactElement } from "react";
+import React, { ReactElement, useState } from "react";
 
 import {
   Provider,
@@ -51,6 +51,8 @@ export function App(): ReactElement {
       }`,
     },
   ]);
+
+  const [forceClose, setForceClose] = useState(false);
 
   return (
     <Provider>
@@ -352,44 +354,74 @@ export function App(): ReactElement {
       </View>
       <View bottom="largest" container top="largest">
         <Stack bottom="larger" direction="row">
-          <Popover horizontal="left" trigger={<Button>Popover</Button>} vertical="bottom">
-            <Text as="h6">Test Label for Selectionsjsjsjsjsjsjsjs</Text>
-          </Popover>
-          <Select
-            horizontal="left"
-            label="Test Label"
-            options={[
-              {
-                label: "home",
-                value: "/",
-              },
-              {
-                label: "about",
-                value: "/about",
-              },
-              {
-                label: "contact",
-                value: "/contact",
-              },
-            ]}
-            selection={["/about"]}
-            trigger={<Button>Test</Button>}
-          />
-          <Select
-            horizontal="left"
-            label="Test Label for Selectionsjsjsjsjsjsjsjs"
-            last
-            options={[
-              { icon: <CheckCircle />, iconPosition: "right", label: "Test", value: "test" },
-              {
-                icon: <CheckCircle />,
-                iconPosition: "right",
-                label: "Test Selectionsjsjsjsjsjsjsjs Selectionsjsjsjsjsjsjsjs ",
-                value: "test",
-              },
-            ]}
-            trigger={<Button>Test</Button>}
-          />
+          <Stack direction="column">
+            <Stack bottom="large" flexduo>
+              <Popover
+                horizontal="left"
+                trigger={<Button>Popover</Button>}
+                vertical="bottom"
+                width={300}>
+                <Text as="h6">
+                  Test Label for Selectionsjsjsjsjsjsjsjs{forceClose ? "true" : "false"}
+                </Text>
+                <Button onClick={(): void => setForceClose(!forceClose)}>Toggle Menu</Button>
+                <Input copy />
+              </Popover>
+              <Popover
+                horizontal="center"
+                trigger={<Button>Popover</Button>}
+                vertical="bottom"
+                width={400}>
+                <Text as="h6">
+                  Test Label for Selectionsjsjsjsjsjsjsjs{forceClose ? "true" : "false"}
+                </Text>
+                <Button onClick={(): void => setForceClose(!forceClose)}>Toggle Menu</Button>
+                <Input error />
+              </Popover>
+              <Popover
+                horizontal="right"
+                trigger={<Button>Popover</Button>}
+                vertical="bottom"
+                width={600}>
+                <Input copy />
+              </Popover>
+            </Stack>
+            <Select
+              horizontal="left"
+              label="Test Label"
+              options={[
+                {
+                  label: "home",
+                  value: "/",
+                },
+                {
+                  label: "about",
+                  value: "/about",
+                },
+                {
+                  label: "contact",
+                  value: "/contact",
+                },
+              ]}
+              selection={["/about"]}
+              trigger={<Button>Test</Button>}
+            />
+            <Select
+              horizontal="left"
+              label="Test Label for Selectionsjsjsjsjsjsjsjs"
+              last
+              options={[
+                { icon: <CheckCircle />, iconPosition: "right", label: "Test", value: "test" },
+                {
+                  icon: <CheckCircle />,
+                  iconPosition: "right",
+                  label: "Test Selectionsjsjsjsjsjsjsjs Selectionsjsjsjsjsjsjsjs ",
+                  value: "test",
+                },
+              ]}
+              trigger={<Button>Test</Button>}
+            />
+          </Stack>
         </Stack>
         <Stack direction="row">
           <Stack direction="column">

@@ -20,3 +20,5 @@ export * from "./components/Stack";
 export * from "./components/Table";
 export * from "./components/Text";
 export * from "./components/View";
+
+export * from "./types";
