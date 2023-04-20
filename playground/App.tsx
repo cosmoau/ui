@@ -605,6 +605,19 @@ export function App(): ReactElement {
           />
         </Box>
       </View>
+      <View
+        bottom="largest"
+        container
+        css={{
+          darkThemeSpec: {
+            paddingTop: 0,
+          },
+        }}
+        top="largest">
+        <Box minimal>
+          <Table bodyChildren={data} headChildren={["Check In", "Head 2", "Head 3"]} rowNumbers />
+        </Box>
+      </View>
     </Provider>
   );
 }

@@ -28,13 +28,14 @@ export function Table(props: TableProps): JSX.Element {
     hover = true,
     ...rest
   } = props;
-
+  const initialLimit =
+    restrictLimit || defaultLimit || pagination ? pageSizes[0] : bodyChildren?.length || 1000;
   const [sortBy, setSortBy] = useState(defaultSort || 0);
   const [sortDirection, setSortDirection] = useState(defaultDirection || "asc");
   const [storage, setStorage] = useLocalStorage(
     `${identifier || Math.random().toString(36).substring(7)}-table`,
     {
-      limit: restrictLimit || defaultLimit || 10,
+      limit: initialLimit,
       offset: 0,
       page: 1,
     }
