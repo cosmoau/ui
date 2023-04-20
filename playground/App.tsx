@@ -513,7 +513,7 @@ export function App(): ReactElement {
         </Stack>
       </View>
       <View bottom="largest" container inverted top="largest">
-        <Dialog height={200} trigger={<Button>Test Dialog</Button>} width={8000}>
+        <Dialog trigger={<Button>Test Dialog</Button>} width={8000}>
           <Text as="h3">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec
           </Text>
