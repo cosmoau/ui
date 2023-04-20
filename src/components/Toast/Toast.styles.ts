@@ -6,12 +6,12 @@ export const ToastStyled = styled("div", {
   borderRadius: "$small",
   boxShadow: "$large",
   cursor: "pointer",
-  fontSize: "$default",
+  fontSize: "$small",
   margin: "$small auto 0 auto !important",
   maxWidth: "60%",
   padding: "$smallest $small",
   phone: {
-    maxWidth: "95%",
+    maxWidth: "80%",
   },
   pointerEvents: "all",
   transition: "$default",
@@ -34,11 +34,16 @@ export const ToastStyled = styled("div", {
 export const ToastContainerStyled = styled("div", {
   bottom: "$medium",
   left: 0,
+  phone: {
+    bottom: "auto",
+    top: "$medium",
+  },
   pointerEvents: "none",
   position: "fixed",
   right: 0,
   textAlign: "center",
   userSelect: "none",
+
   zIndex: "$toast",
 });
 
