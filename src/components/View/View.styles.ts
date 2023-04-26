@@ -13,7 +13,7 @@ export const ViewContainerStyled = styled("div", {
   variants: {
     container: {
       false: {
-        minWidth: "100%",
+        width: "100%",
       },
       true: {
         desktopX: {

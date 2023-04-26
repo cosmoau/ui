@@ -23,7 +23,7 @@ export const TextSizes = {
     fontFamily: "$serif",
     fontSize: "$h4",
     lineHeight: "$small",
-    marginBottom: "$small",
+    marginBottom: "$medium",
   },
   h5: {
     fontSize: "$h5",

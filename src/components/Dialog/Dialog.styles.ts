@@ -17,7 +17,6 @@ export const DialogOverlayStyled = styled("div", {
   backgroundColor: "rgba(116, 116, 121, 0.4)",
   bottom: 0,
   left: 0,
-  minWidth: "100vw",
   overflowY: "scroll",
   position: "fixed",
   right: 0,
@@ -35,7 +34,7 @@ export const DialogOverlayStyled = styled("div", {
       },
     },
   },
-  width: "100%",
+  width: "100vw",
   zIndex: "$dialog",
 });
 
@@ -51,9 +50,9 @@ export const DialogContentStyled = styled("div", {
   overflowY: "auto",
   padding: "$large",
   phone: {
-    maxWidth: "94%",
-    minWidth: "94%",
-    padding: "calc($large - $smaller) $medium",
+    maxWidth: "90%",
+    minWidth: "90%",
+    padding: "calc($large - $small) $medium",
   },
   position: "fixed",
   textAlign: "left",

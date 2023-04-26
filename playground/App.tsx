@@ -356,16 +356,8 @@ export function App(): ReactElement {
         <Stack bottom="larger" direction="row">
           <Stack direction="column">
             <Stack bottom="large" flexduo>
-              <Popover
-                horizontal="left"
-                trigger={<Button>Popover</Button>}
-                vertical="bottom"
-                width={300}>
-                <Text as="h6">
-                  Test Label for Selectionsjsjsjsjsjsjsjs{forceClose ? "true" : "false"}
-                </Text>
-                <Button onClick={(): void => setForceClose(!forceClose)}>Toggle Menu</Button>
-                <Input copy />
+              <Popover horizontal="left" trigger={<Button>Popover</Button>} vertical="bottom">
+                <Text as="h6">Test Label</Text>
               </Popover>
               <Popover
                 horizontal="center"
@@ -547,9 +539,12 @@ export function App(): ReactElement {
         <Text accent as="p">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec. Lorem
           ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec? Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec. Lorem ipsum dolor
-          sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec! Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit. Nullam auctor, nisl nec.
+          dolor sit amet.
+        </Text>
+        <Text accent as="p">
+          Consectetur adipiscing elit. Nullam auctor, nisl nec. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Nullam auctor, nisl nec! Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Nullam auctor, nisl nec.
         </Text>
 
         <Text as="small">

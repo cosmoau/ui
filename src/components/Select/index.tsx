@@ -64,6 +64,9 @@ export function Select(props: SelectProps): JSX.Element {
     }
     handleClose();
   }
+
+  const deviceWidth = typeof window !== "undefined" ? Number(window?.innerWidth || 0) : 0;
+
   useOnClickOutside(ref, handleClose);
 
   useEventListener("keydown", (event: KeyboardEvent) => {
@@ -97,7 +100,10 @@ export function Select(props: SelectProps): JSX.Element {
           css={{
             maxHeight: height || "50rem",
             maxWidth: width || "50rem",
-            minWidth: width || "25rem",
+            phone: {
+              maxWidth: deviceWidth > 600 ? width : deviceWidth * 0.8,
+            },
+            width: width || "auto",
           }}
           horizontal={horizontal}
           vertical={vertical}>

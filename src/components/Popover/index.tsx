@@ -74,11 +74,10 @@ export function Popover(props: PopoverProps): JSX.Element {
           animation={isOpen}
           css={{
             maxWidth: width || "50rem",
-            minWidth: width || "25rem",
             phone: {
-              maxWidth: deviceWidth > 250 ? deviceWidth * 0.95 : "100%",
-              minWidth: deviceWidth > 100 ? deviceWidth * 0.8 : "100%",
+              maxWidth: deviceWidth > 600 ? width : deviceWidth * 0.8,
             },
+            width: width || "auto",
           }}
           horizontal={horizontal}
           minimal={minimal}

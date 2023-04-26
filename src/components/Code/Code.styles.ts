@@ -20,12 +20,11 @@ export const CodeBlockStyled = styled("code", {
   fontSize: "$small",
   tablet: {
     display: "block",
-    minWidth: "100%",
+    width: "100%",
   },
 });
 
 export const CodeFunctionStyled = styled("div", {
-  minWidth: "10rem",
   tablet: {
     button: {
       display: "block",
@@ -34,9 +33,10 @@ export const CodeFunctionStyled = styled("div", {
     },
     display: "block",
     marginTop: "$small",
-    minWidth: "100%",
+    width: "100%",
   },
   textAlign: "right",
+  width: "10rem",
 });
 
 export default CodeStyled;

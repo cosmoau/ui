@@ -4,8 +4,6 @@ export const StackRowStyled = styled("div", {
   display: "flex",
   flexDirection: "row",
   flexFlow: "row wrap",
-  maxWidth: "100%",
-  minWidth: "100%",
   width: "100%",
 });
 
