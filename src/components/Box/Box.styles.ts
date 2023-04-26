@@ -10,6 +10,7 @@ export const paddingVariants = {
     },
   },
 };
+
 export const BoxStyled = styled("article", {
   border: "0.1rem solid transparent",
   borderRadius: "$medium",
@@ -71,7 +72,13 @@ export const BoxStyled = styled("article", {
   width: "100%",
 });
 
-export const BoxImageChildrenStyled = styled("div", {
+export const BoxHeaderStyled = styled("div", {
+  backgroundColor: "$defaultTableHover",
+  borderBottom: "0.1rem solid $borderTable",
+  padding: "$small $medium",
+});
+
+export const BoxInnerStyled = styled("div", {
   variants: {
     ...paddingVariants,
   },

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button, Image } from "../../index";
 import { BoxProps } from "../../types";
 
-import { BoxExitStyled, BoxImageChildrenStyled, BoxStyled } from "./Box.styles";
+import { BoxExitStyled, BoxHeaderStyled, BoxInnerStyled, BoxStyled } from "./Box.styles";
 
 export function Box(props: BoxProps): JSX.Element {
   const {
@@ -17,6 +17,7 @@ export function Box(props: BoxProps): JSX.Element {
     imageTarget,
     css,
     hover,
+    header,
     loading,
     theme,
     children,
@@ -34,15 +35,15 @@ export function Box(props: BoxProps): JSX.Element {
   }
 
   return isMounted ? (
-    image ? (
-      <BoxStyled
-        animation={!isOpen}
-        css={css}
-        hover={hover}
-        loading={loading || false}
-        padding={"none"}
-        theme={theme || "default"}>
-        {imageCTA ? (
+    <BoxStyled
+      animation={!isOpen}
+      css={css}
+      hover={hover}
+      loading={loading || false}
+      padding={header || image ? "none" : minimal ? "none" : "default"}
+      theme={theme || "default"}>
+      {image &&
+        (imageCTA ? (
           <a href={imageCTA} rel="noopener noreferrer" target={imageTarget || "_blank"}>
             <Image
               alt={imageAlt || ""}
@@ -74,27 +75,21 @@ export function Box(props: BoxProps): JSX.Element {
             fillPosition={imagePosition || "center"}
             src={image}
           />
-        )}
-        <BoxImageChildrenStyled padding={"default"}>{children}</BoxImageChildrenStyled>
-      </BoxStyled>
-    ) : (
-      <BoxStyled
-        animation={!isOpen}
-        css={css}
-        hover={hover}
-        loading={loading || false}
-        padding={minimal ? "none" : "default"}
-        theme={theme || "default"}>
-        {children}
-        {closable && (
-          <BoxExitStyled onClick={(): void => handleClose()}>
-            <Button small theme={"minimal"}>
-              <X />
-            </Button>
-          </BoxExitStyled>
-        )}
-      </BoxStyled>
-    )
+        ))}
+      {header && <BoxHeaderStyled>{header}</BoxHeaderStyled>}
+      {image || header ? (
+        <BoxInnerStyled padding={minimal ? "none" : "default"}>{children}</BoxInnerStyled>
+      ) : (
+        children
+      )}
+      {closable && (
+        <BoxExitStyled onClick={(): void => handleClose()}>
+          <Button small theme={"minimal"}>
+            <X />
+          </Button>
+        </BoxExitStyled>
+      )}
+    </BoxStyled>
   ) : (
     <> </>
   );

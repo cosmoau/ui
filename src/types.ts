@@ -57,6 +57,7 @@ export interface BoxProps {
   children: ReactNode;
   closable?: boolean;
   css?: CSS;
+  header?: ReactNode;
   hover?: boolean;
   image?: string;
   imageAlt?: string;

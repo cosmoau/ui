@@ -58,6 +58,15 @@ export function App(): ReactElement {
     <Provider>
       <View bottom="largest" container top="largest">
         <Stack bottom="larger" direction="row">
+          <Stack direction="column" width={33}>
+            <Box header={<Text as="h4">Yo</Text>}>
+              <Text>metricColorA/B</Text>
+            </Box>
+          </Stack>
+        </Stack>
+      </View>
+      <View bottom="largest" container top="largest">
+        <Stack bottom="larger" direction="row">
           <Stack direction="column">
             <Text as="h1">metricColorA/B</Text>
             <Stack
