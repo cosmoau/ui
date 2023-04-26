@@ -9,6 +9,7 @@ import { TableProps } from "../../types";
 import { TableCoreStyled, TablePaginationStyled, TableStyled } from "./Table.styles";
 
 const pageSizes = [10, 25, 50, 100, 200];
+const maxSize = 500;
 
 export function Table(props: TableProps): JSX.Element {
   const {
@@ -29,7 +30,9 @@ export function Table(props: TableProps): JSX.Element {
     ...rest
   } = props;
   const initialLimit =
-    restrictLimit || defaultLimit || pagination ? pageSizes[0] : bodyChildren?.length || 1000;
+    restrictLimit ||
+    defaultLimit ||
+    (bodyChildren && bodyChildren.length <= maxSize ? bodyChildren.length : maxSize);
   const [sortBy, setSortBy] = useState(defaultSort || 0);
   const [sortDirection, setSortDirection] = useState(defaultDirection || "asc");
   const [storage, setStorage] = useLocalStorage(

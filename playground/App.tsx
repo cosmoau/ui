@@ -615,7 +615,12 @@ export function App(): ReactElement {
         }}
         top="largest">
         <Box minimal>
-          <Table bodyChildren={data} headChildren={["Check In", "Head 2", "Head 3"]} rowNumbers />
+          <Table
+            bodyChildren={data}
+            defaultLimit={50}
+            headChildren={["Check In", "Head 2", "Head 3"]}
+            rowNumbers
+          />
         </Box>
       </View>
     </Provider>
