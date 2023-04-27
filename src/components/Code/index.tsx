@@ -3,11 +3,11 @@ import { useState } from "react";
 import { toast } from "react-hot-toast";
 
 import { Button } from "../../index";
-import { CodeProps } from "../../types";
+import { ICode } from "../../types";
 
 import { CodeStyled, CodeFunctionStyled, CodeBlockStyled } from "./Code.styles";
 
-export function Code(props: CodeProps): JSX.Element {
+export function Code(props: ICode): JSX.Element {
   const { children, css, ...rest } = props;
   const [isCopied, setIsCopied] = useState(false);
 

@@ -3,11 +3,11 @@ import { useState } from "react";
 import { toast } from "react-hot-toast";
 
 import { Loading } from "../../index";
-import { BadgeProps } from "../../types";
+import { IBadge } from "../../types";
 
 import { BadgeIconStyled, BadgeStyled, BadgeLoadingStyled } from "./Badge.styles";
 
-export function Badge(props: BadgeProps): JSX.Element {
+export function Badge(props: IBadge): JSX.Element {
   const {
     closable,
     icon,

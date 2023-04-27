@@ -1,8 +1,8 @@
-import { LoadingProps } from "../../types";
+import { ILoading } from "../../types";
 
 import { LoadingOverlayStyled } from "./Loading.styles";
 
-export function Loading({ width = 18 }: LoadingProps): JSX.Element {
+export function Loading({ width = 18 }: ILoading): JSX.Element {
   return (
     <svg height={width} stroke="currentColor" viewBox="0 0 38 38" width={width}>
       <g fill="none" fillRule="evenodd">
@@ -28,7 +28,7 @@ export function LoadingOverlay({
   vertical = "bottom",
   horizontal = "right",
   width,
-}: LoadingProps): JSX.Element {
+}: ILoading): JSX.Element {
   return (
     <LoadingOverlayStyled horizontal={horizontal} vertical={vertical}>
       <Loading width={width} />

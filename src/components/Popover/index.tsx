@@ -1,11 +1,11 @@
 import { useRef, useState } from "react";
 import { useOnClickOutside } from "usehooks-ts";
 
-import { PopoverProps } from "../../types";
+import { IPopover } from "../../types";
 
 import { PopoverContentStyled, PopoverStyled, PopoverTriggerStyled } from "./Popover.styles";
 
-export function Popover(props: PopoverProps): JSX.Element {
+export function Popover(props: IPopover): JSX.Element {
   const { css, trigger, children, type, horizontal, vertical, width, minimal } = props;
   const ref = useRef(null);
 

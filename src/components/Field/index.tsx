@@ -3,11 +3,11 @@ import { ChangeEvent, useState } from "react";
 import toast from "react-hot-toast";
 
 import { Button, Badge, Loading } from "../../index";
-import { FieldProps } from "../../types";
+import { IField } from "../../types";
 
 import { FieldStyled, FieldAreaStyled, FieldFunctionStyled } from "./Field.styles";
 
-export function Field(props: FieldProps): JSX.Element {
+export function Field(props: IField): JSX.Element {
   const {
     copy,
     disabled,

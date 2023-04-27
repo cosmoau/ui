@@ -1,8 +1,8 @@
-import { TextProps } from "../../types";
+import { IText } from "../../types";
 
 import { TextStyled } from "./Text.styles";
 
-export function Text(props: TextProps): JSX.Element {
+export function Text(props: IText): JSX.Element {
   const { accent, top, bottom, inline, as, override, css, children, ...rest } = props;
 
   return (

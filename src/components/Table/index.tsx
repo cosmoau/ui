@@ -4,14 +4,14 @@ import { useState } from "react";
 import { useLocalStorage } from "usehooks-ts";
 
 import { Button, Loading, Select, Stack, Text } from "../../index";
-import { TableProps } from "../../types";
+import { ITable } from "../../types";
 
 import { TableCoreStyled, TablePaginationStyled, TableStyled } from "./Table.styles";
 
 const pageSizes = [10, 25, 50, 100, 200];
 const maxSize = 500;
 
-export function Table(props: TableProps): JSX.Element {
+export function Table(props: ITable): JSX.Element {
   const {
     headChildren,
     bodyChildren,

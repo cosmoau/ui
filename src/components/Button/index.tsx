@@ -1,11 +1,11 @@
 import { ArrowSquareOut } from "phosphor-react";
 
 import { Loading } from "../../index";
-import { ButtonProps } from "../../types";
+import { IButton } from "../../types";
 
 import { ButtonIconStyled, ButtonStyled } from "./Button.styles";
 
-export function Button(props: ButtonProps): JSX.Element {
+export function Button(props: IButton): JSX.Element {
   const {
     external,
     icon,

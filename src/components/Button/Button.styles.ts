@@ -61,10 +61,6 @@ export const ButtonStyled = styled("button", {
         fontSize: "$small",
         lineHeight: "$small",
 
-        phone: {
-          fontSize: "$h6",
-        },
-
         svg: {
           height: "1.6rem",
           marginTop: "-0.25rem",

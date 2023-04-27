@@ -17,6 +17,7 @@ import {
   Input,
   Popover,
   Field,
+  Command,
 } from "../src/index";
 
 export function App(): ReactElement {
@@ -56,6 +57,9 @@ export function App(): ReactElement {
 
   return (
     <Provider>
+      <Command>
+        <Button>do something</Button>
+      </Command>
       <View bottom="largest" container top="largest">
         <Stack bottom="larger" direction="row">
           <Stack direction="column" width={33}>

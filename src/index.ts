@@ -6,6 +6,7 @@ export * from "./components/Box";
 export * from "./components/Button";
 export * from "./components/Code";
 export * from "./components/Dialog";
+export * from "./components/Command";
 export * from "./components/Divider";
 export * from "./components/Field";
 export * from "./components/Form";

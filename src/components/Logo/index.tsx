@@ -1,8 +1,8 @@
-import { LogoProps } from "../../types";
+import { ILogo } from "../../types";
 
 import { LogoStyled } from "./Logo.styles";
 
-export const Logo = (props: LogoProps): JSX.Element => {
+export const Logo = (props: ILogo): JSX.Element => {
   const { height = 70.7, width = 231.85, css, inline, ...rest } = props;
 
   return (
@@ -54,7 +54,7 @@ export const Logo = (props: LogoProps): JSX.Element => {
   );
 };
 
-export function LogoIcon(props: LogoProps): JSX.Element {
+export function LogoIcon(props: ILogo): JSX.Element {
   const { height = 50, width = 50, inline, css, ...rest } = props;
 
   return (

@@ -1,10 +1,10 @@
 import { default as NextImage } from "next/image";
 
-import { ImageProps } from "../../types";
+import { IImage } from "../../types";
 
 import { ImageStyled } from "./Image.styles";
 
-export function Image(props: ImageProps): JSX.Element {
+export function Image(props: IImage): JSX.Element {
   const { css, borderRadius, fill, fillFit, fillPosition, fillHeight, ...rest } = props;
 
   return (

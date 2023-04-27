@@ -1,11 +1,11 @@
 import toast, { useToaster } from "react-hot-toast";
 import { useEventListener } from "usehooks-ts";
 
-import { ToastProps } from "../../types";
+import { IToast } from "../../types";
 
 import { ToastContainerStyled, ToastStyled } from "./Toast.styles";
 
-export function Toast(props: ToastProps): JSX.Element {
+export function Toast(props: IToast): JSX.Element {
   const { toasts, handlers } = useToaster();
   const { startPause, endPause } = handlers;
 

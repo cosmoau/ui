@@ -2,11 +2,11 @@ import { X } from "phosphor-react";
 import { useState } from "react";
 
 import { Button, Image } from "../../index";
-import { BoxProps } from "../../types";
+import { IBox } from "../../types";
 
 import { BoxExitStyled, BoxHeaderStyled, BoxInnerStyled, BoxStyled } from "./Box.styles";
 
-export function Box(props: BoxProps): JSX.Element {
+export function Box(props: IBox): JSX.Element {
   const {
     image,
     imageAlt,

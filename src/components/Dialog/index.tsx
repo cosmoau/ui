@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import { useEventListener, useLockedBody, useOnClickOutside } from "usehooks-ts";
 
 import { Button } from "../../index";
-import { DialogProps } from "../../types";
+import { IDialog } from "../../types";
 
 import {
   DialogContentStyled,
@@ -13,7 +13,7 @@ import {
   DialogTriggerStyled,
 } from "./Dialog.styles";
 
-export function Dialog(props: DialogProps): JSX.Element {
+export function Dialog(props: IDialog): JSX.Element {
   const { css, trigger, children, height, locked = true, width } = props;
   const ref = useRef(null);
 

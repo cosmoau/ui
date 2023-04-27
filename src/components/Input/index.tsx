@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import { useEventListener } from "usehooks-ts";
 
 import { Button, Badge, Loading } from "../../index";
-import { InputProps } from "../../types";
+import { IInput } from "../../types";
 
 import {
   InputAreaStyled,
@@ -15,7 +15,7 @@ import {
   InputIconStyled,
 } from "./Input.styles";
 
-export function Input(props: InputProps): JSX.Element {
+export function Input(props: IInput): JSX.Element {
   const {
     copy,
     icon,

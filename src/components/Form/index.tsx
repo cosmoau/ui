@@ -1,11 +1,11 @@
 import { useEventListener } from "usehooks-ts";
 
-import { FormProps } from "../../types";
+import { IForm } from "../../types";
 import { Button } from "../Button";
 
 import { FormStyled } from "./Form.styles";
 
-export function Form(props: FormProps): JSX.Element {
+export function Form(props: IForm): JSX.Element {
   const { children, css, disabled, listen, mustRef, submit, submitFunction, submitValid, ...rest } =
     props;
 

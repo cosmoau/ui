@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import { useEventListener, useLockedBody, useOnClickOutside } from "usehooks-ts";
 
 import { Input, Loading } from "../../index";
-import { SelectProps } from "../../types";
+import { ISelect } from "../../types";
 
 import {
   SelectStyled,
@@ -16,7 +16,7 @@ import {
   SelectIconStyled,
 } from "./Select.styles";
 
-export function Select(props: SelectProps): JSX.Element {
+export function Select(props: ISelect): JSX.Element {
   const {
     options,
     css,

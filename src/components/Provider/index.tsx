@@ -1,11 +1,11 @@
 import { IconContext } from "phosphor-react";
 
-import { ProviderProps } from "../../types";
+import { IProvider } from "../../types";
 import { Toast } from "../Toast";
 
 import { ProviderStyled, providerReset } from "./Provider.styles";
 
-export function Provider(props: ProviderProps): JSX.Element {
+export function Provider(props: IProvider): JSX.Element {
   const { children, css } = props;
 
   providerReset();

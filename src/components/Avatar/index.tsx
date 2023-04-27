@@ -1,5 +1,5 @@
 import { Image, Text, theme } from "../../index";
-import { AvatarProps } from "../../types";
+import { IAvatar } from "../../types";
 
 import { AvatarStyled } from "./Avatar.styles";
 
@@ -24,7 +24,7 @@ const getLetter = (text: string): string => {
   return soften;
 };
 
-export function Avatar(props: AvatarProps): JSX.Element {
+export function Avatar(props: IAvatar): JSX.Element {
   const { src, alt, fallback, width = 30, css, colors } = props;
 
   const backgroundColor = colors ? getLetter(fallback) : "transparent";

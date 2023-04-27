@@ -1,5 +1,5 @@
 import { CSSProperties, CSS } from "@stitches/react";
-import { ImageProps as NextImageProps } from "next/image";
+import { ImageProps } from "next/image";
 import {
   ReactNode,
   TextareaHTMLAttributes,
@@ -17,7 +17,7 @@ import { Toaster } from "react-hot-toast";
 import { TextSizes } from "./components/Text/Text.styles";
 import { theme } from "./stitches.config";
 
-type ThemeSpacing = keyof typeof theme.space;
+type IThemeSpacing = keyof typeof theme.space;
 
 type InferComponentProps<T extends ElementType> = T extends ComponentType<infer U>
   ? U
@@ -25,7 +25,7 @@ type InferComponentProps<T extends ElementType> = T extends ComponentType<infer 
   ? JSX.IntrinsicElements[T]
   : Record<string, never>;
 
-export interface AvatarProps {
+export interface IAvatar {
   alt?: string;
   colors?: boolean;
   css?: CSS;
@@ -34,7 +34,7 @@ export interface AvatarProps {
   width?: number;
 }
 
-export interface BadgeProps {
+export interface IBadge {
   block?: boolean;
   children?: ReactNode;
   closable?: boolean;
@@ -46,14 +46,14 @@ export interface BadgeProps {
   icon?: ReactNode;
   iconOnly?: boolean;
   iconPosition?: "left" | "right";
-  inline?: ThemeSpacing | "auto";
+  inline?: IThemeSpacing | "auto";
   loading?: boolean;
   onClick?: MouseEventHandler<HTMLDivElement>;
   small?: boolean;
   theme?: "red" | "orange" | "yellow" | "purple" | "blue" | "green" | "border" | "default";
 }
 
-export interface BoxProps {
+export interface IBox {
   children: ReactNode;
   closable?: boolean;
   css?: CSS;
@@ -71,7 +71,7 @@ export interface BoxProps {
   theme?: "default" | "success" | "warning" | "error" | "transparent" | "fill";
 }
 
-export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
+export interface IButton extends HTMLAttributes<HTMLButtonElement> {
   block?: boolean;
   children: ReactNode | string;
   css?: CSS;
@@ -79,18 +79,18 @@ export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   external?: boolean;
   icon?: ReactNode;
   iconPosition?: "left" | "right";
-  inline?: ThemeSpacing | "auto";
+  inline?: IThemeSpacing | "auto";
   loading?: boolean;
   small?: boolean;
   theme?: "default" | "fill" | "minimal" | "solid";
 }
 
-export interface CodeProps {
+export interface ICode {
   children: ReactNode;
   css?: CSS;
 }
 
-export interface DialogProps {
+export interface IDialog {
   children: ReactNode;
   close?: () => void;
   css?: CSS;
@@ -100,13 +100,18 @@ export interface DialogProps {
   width?: number | string;
 }
 
-export interface DividerProps extends HTMLAttributes<HTMLHRElement> {
-  bottom?: ThemeSpacing;
+export interface ICommand {
+  children: ReactNode;
   css?: CSS;
-  top?: ThemeSpacing;
 }
 
-export interface FieldProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+export interface IDivider extends HTMLAttributes<HTMLHRElement> {
+  bottom?: IThemeSpacing;
+  css?: CSS;
+  top?: IThemeSpacing;
+}
+
+export interface IField extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   copy?: boolean;
   css?: CSS;
   disabled?: boolean;
@@ -123,7 +128,7 @@ export interface FieldProps extends TextareaHTMLAttributes<HTMLTextAreaElement> 
   width?: number | string;
 }
 
-export interface FormProps extends FormHTMLAttributes<HTMLFormElement> {
+export interface IForm extends FormHTMLAttributes<HTMLFormElement> {
   children: ReactNode;
   css?: CSS;
   disabled?: boolean;
@@ -135,7 +140,7 @@ export interface FormProps extends FormHTMLAttributes<HTMLFormElement> {
   submitValid?: boolean;
 }
 
-export interface ImageProps extends NextImageProps {
+export interface IImage extends ImageProps {
   borderRadius?: keyof typeof theme.radii;
   css?: CSS;
   fill?: boolean;
@@ -144,7 +149,7 @@ export interface ImageProps extends NextImageProps {
   fillPosition?: CSSProperties["objectPosition"];
 }
 
-export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface IInput extends InputHTMLAttributes<HTMLInputElement> {
   copy?: boolean;
   css?: CSS;
   disabled?: boolean;
@@ -167,19 +172,19 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   width?: number | string;
 }
 
-export interface LoadingProps {
+export interface ILoading {
   horizontal?: "left" | "right";
   stroke?: string;
   vertical?: "top" | "bottom";
   width?: number | string;
 }
 
-export interface LogoProps extends SVGProps<SVGSVGElement> {
+export interface ILogo extends SVGProps<SVGSVGElement> {
   css?: CSS;
-  inline?: ThemeSpacing | "auto";
+  inline?: IThemeSpacing | "auto";
 }
 
-export interface PopoverProps {
+export interface IPopover {
   children: ReactNode;
   css?: CSS;
   horizontal?: "left" | "right" | "center";
@@ -190,7 +195,7 @@ export interface PopoverProps {
   width?: number | string;
 }
 
-export interface ProviderProps {
+export interface IProvider {
   children: ReactNode;
   css?: CSS;
   initial?: "dark" | "light";
@@ -199,7 +204,7 @@ export interface ProviderProps {
   triggerActive?: ReactNode;
 }
 
-export interface SelectProps {
+export interface ISelect {
   css?: CSS;
   filter?: boolean;
   height?: number | string;
@@ -221,9 +226,9 @@ export interface SelectProps {
   width?: number | string;
 }
 
-export interface StackProps {
+export interface IStack {
   align?: CSSProperties["textAlign"];
-  bottom?: ThemeSpacing;
+  bottom?: IThemeSpacing;
   children: ReactNode;
   className?: string;
   css?: CSS;
@@ -238,7 +243,7 @@ export interface StackProps {
   offsetPhone?: number;
   offsetTablet?: number;
   offsetWide?: number;
-  top?: ThemeSpacing;
+  top?: IThemeSpacing;
   width?: number;
   widthDesktop?: number;
   widthLaptop?: number;
@@ -247,7 +252,7 @@ export interface StackProps {
   widthWide?: number;
 }
 
-export interface TableProps {
+export interface ITable {
   bodyChildren?: Array<
     Array<{ label?: ReactNode; value: string | number; width?: string | number }>
   >;
@@ -266,25 +271,25 @@ export interface TableProps {
   sortable?: boolean;
 }
 
-export interface TextProps extends HTMLAttributes<HTMLDivElement> {
+export interface IText extends HTMLAttributes<HTMLDivElement> {
   accent?: boolean;
   as?: keyof typeof TextSizes;
-  bottom?: ThemeSpacing;
+  bottom?: IThemeSpacing;
   children: ReactNode;
   css?: CSS;
-  inline?: ThemeSpacing | "auto";
+  inline?: IThemeSpacing | "auto";
   override?: keyof typeof TextSizes;
-  top?: ThemeSpacing;
+  top?: IThemeSpacing;
 }
 
-export type ToastProps = InferComponentProps<typeof Toaster>;
+export type IToast = InferComponentProps<typeof Toaster>;
 
-export interface ViewProps {
-  bottom?: ThemeSpacing;
+export interface IView {
+  bottom?: IThemeSpacing;
   children: ReactNode;
   container?: boolean;
   css?: CSS;
   inverted?: boolean;
   noPrint?: boolean;
-  top?: ThemeSpacing;
+  top?: IThemeSpacing;
 }
