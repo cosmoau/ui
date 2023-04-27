@@ -37,6 +37,7 @@ export const TableCoreStyled = styled("div", {
         color: "$accent",
         fontSize: "$small",
         fontWeight: "normal",
+        opacity: 0.8,
         padding: "$small",
         textAlign: "left !important",
         whiteSpace: "nowrap",

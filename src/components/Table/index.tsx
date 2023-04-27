@@ -8,7 +8,7 @@ import { ITable } from "../../types";
 
 import { TableCoreStyled, TablePaginationStyled, TableStyled } from "./Table.styles";
 
-const pageSizes = [10, 25, 50, 100, 200];
+const pageSizes = [10, 25, 50, 100, 250];
 const maxSize = 500;
 
 export function Table(props: ITable): JSX.Element {
@@ -29,10 +29,7 @@ export function Table(props: ITable): JSX.Element {
     hover = true,
     ...rest
   } = props;
-  const initialLimit =
-    restrictLimit ||
-    defaultLimit ||
-    (bodyChildren && bodyChildren.length <= maxSize ? bodyChildren.length : maxSize);
+  const initialLimit = restrictLimit || defaultLimit || (pagination ? pageSizes[1] : maxSize);
   const [sortBy, setSortBy] = useState(defaultSort || 0);
   const [sortDirection, setSortDirection] = useState(defaultDirection || "asc");
   const [storage, setStorage] = useLocalStorage(
