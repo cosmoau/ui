@@ -62,7 +62,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       h3: "2.4rem",
       h4: "2rem",
       h5: "1.8rem",
-      h6: "1.5rem",
+      h6: "1.6rem",
       small: "1.45rem",
     },
     fonts: {
