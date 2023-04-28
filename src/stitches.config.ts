@@ -74,14 +74,12 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       small: "1.2",
     },
     radii: {
-      large: "1rem",
-      medium: "0.75rem",
-      small: "0.5rem",
+      large: "1.2rem",
+      small: "0.6rem",
     },
     shadows: {
-      large: "0 0.6rem 0.9rem 0 rgba(8, 12, 36, 0.12)",
-      medium: "0 0.6rem 0.6rem 0 rgba(8, 12, 36, 0.09)",
-      small: "0 0.3rem 0.4rem 0 rgba(8, 12, 36, 0.06)",
+      large: "0 0.6rem 0.9rem 0 rgba(8, 12, 36, 0.1)",
+      small: "0 0.3rem 0.4rem 0 rgba(8, 12, 36, 0.1)",
     },
     space: {
       excess: "12rem",
@@ -201,7 +199,6 @@ export const darkTheme = createTheme({
   },
   shadows: {
     large: "0 0.6rem 0.9rem 0 rgba(65, 66, 68, 0.05)",
-    medium: "0 0.6rem 0.6rem 0 rgba(87, 87, 89, 0.05)",
     small: "0 0.3rem 0.4rem 0 rgba(81, 82, 85, 0.05)",
   },
 });

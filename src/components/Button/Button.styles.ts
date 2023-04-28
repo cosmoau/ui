@@ -23,7 +23,7 @@ export const ButtonStyled = styled("button", {
   "&:hover": {
     backgroundColor: "$defaultHover",
     borderColor: "$border",
-    boxShadow: "$medium",
+    boxShadow: "$large",
     color: "$text",
   },
 
@@ -39,9 +39,7 @@ export const ButtonStyled = styled("button", {
   fontFamily: "$default",
   fontSize: "$default",
   justifyContent: "center",
-  lineHeight: "$default",
   margin: 0,
-  "marginBottom:": "0 !important",
   outline: "none",
   padding: "$smallest $small",
   svg: {
@@ -87,11 +85,8 @@ export const ButtonStyled = styled("button", {
       },
     },
   },
-
   verticalAlign: "middle",
-
   whiteSpace: "nowrap",
-
   width: "auto",
 });
 

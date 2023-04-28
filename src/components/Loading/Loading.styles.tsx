@@ -4,9 +4,9 @@ export const LoadingOverlayStyled = styled("div", {
   alignItems: "center",
   backgroundColor: "$background",
   border: "0.1rem solid $border",
-  borderRadius: "$medium",
+  borderRadius: "$large",
   bottom: 0,
-  boxShadow: "$medium",
+  boxShadow: "$large",
   display: "flex",
   justifyContent: "center",
   left: 0,
@@ -14,10 +14,6 @@ export const LoadingOverlayStyled = styled("div", {
   pointerEvents: "none",
   position: "fixed",
   right: 0,
-  svg: {
-    height: "auto",
-    width: "auto",
-  },
   top: 0,
   userSelect: "none",
 

@@ -11,7 +11,7 @@ export function Loading({ width = 18 }: ILoading): JSX.Element {
           <path d="M36 18c0-9.94-8.06-18-18-18">
             <animateTransform
               attributeName="transform"
-              dur=".55s"
+              dur="1s"
               from="0 18 18"
               repeatCount="indefinite"
               to="360 18 18"

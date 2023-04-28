@@ -8,7 +8,7 @@ export const InputCoreStyled = styled("div", {
     boxShadow: "$small",
   },
   "&:hover": {
-    boxShadow: "$medium",
+    boxShadow: "$small",
   },
   "*": {
     alignContent: "center !important",
@@ -18,7 +18,6 @@ export const InputCoreStyled = styled("div", {
   border: "0.1rem solid $border",
   borderRadius: "$small",
 
-  boxShadow: "$small",
   display: "inline-flex",
   justifyContent: "center",
   padding: "$smaller $small",

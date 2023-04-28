@@ -25,7 +25,7 @@ export const TableCoreStyled = styled("div", {
         td: {
           borderTop: "0.1rem solid $borderTable",
           fontSize: "$default",
-          padding: "$small",
+          padding: "$small $medium",
         },
         transition: "$default",
       },
@@ -38,7 +38,7 @@ export const TableCoreStyled = styled("div", {
         fontSize: "$small",
         fontWeight: "normal",
         opacity: 0.8,
-        padding: "$small",
+        padding: "$small $medium",
         textAlign: "left !important",
         whiteSpace: "nowrap",
       },

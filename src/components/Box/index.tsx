@@ -16,7 +16,6 @@ export function Box(props: IBox): JSX.Element {
     imagePosition,
     imageTarget,
     css,
-    hover,
     header,
     loading,
     theme,
@@ -38,7 +37,6 @@ export function Box(props: IBox): JSX.Element {
     <BoxStyled
       animation={!isOpen}
       css={css}
-      hover={hover}
       loading={loading || false}
       padding={header || image ? "none" : minimal ? "none" : "default"}
       theme={theme || "default"}>

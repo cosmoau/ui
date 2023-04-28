@@ -18,6 +18,7 @@ import {
   Popover,
   Field,
   Command,
+  LoadingOverlay,
 } from "../src/index";
 
 export function App(): ReactElement {
@@ -57,14 +58,25 @@ export function App(): ReactElement {
 
   return (
     <Provider>
+      <LoadingOverlay />
       <Command>
         <Button>do something</Button>
       </Command>
       <View bottom="largest" container top="largest">
-        <Stack bottom="larger" direction="row">
+        <Stack bottom="larger" direction="row" flex="stretch">
           <Stack direction="column" width={33}>
-            <Box header={<Text as="h4">Yo</Text>}>
+            <Box>
               <Text>metricColorA/B</Text>
+            </Box>
+          </Stack>
+           <Stack direction="column" width={33}>
+            <Box>
+              <Text>metricColorA/B</Text>
+            </Box>
+          </Stack>
+           <Stack direction="column" width={33} >
+            <Box>
+              <Text bottom="medium" top="medium">metricColorA/B</Text>
             </Box>
           </Stack>
         </Stack>

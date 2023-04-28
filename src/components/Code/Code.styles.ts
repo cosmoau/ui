@@ -6,10 +6,10 @@ export const CodeStyled = styled("div", {
   borderRadius: "$small",
   display: "flex",
   justifyContent: "space-between",
-  padding: "$smaller $small",
+  padding: "$small $medium",
   tablet: {
     display: "block",
-    padding: "$small",
+
   },
 
   width: "100%",

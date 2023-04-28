@@ -33,7 +33,7 @@ export const CommandOverlayStyled = styled("div", {
 
 export const CommandContentStyled = styled("div", {
   backgroundColor: "$background",
-  borderRadius: "$medium",
+  borderRadius: "$small",
   boxShadow: "$large",
   left: "50%",
   maxHeight: "60vh",

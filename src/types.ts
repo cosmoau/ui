@@ -58,7 +58,6 @@ export interface IBox {
   closable?: boolean;
   css?: CSS;
   header?: ReactNode;
-  hover?: boolean;
   image?: string;
   imageAlt?: string;
   imageCTA?: string;

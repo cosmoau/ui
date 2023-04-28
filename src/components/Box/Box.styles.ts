@@ -13,7 +13,7 @@ export const paddingVariants = {
 
 export const BoxStyled = styled("article", {
   border: "0.1rem solid transparent",
-  borderRadius: "$medium",
+  borderRadius: "$small",
   display: "block",
   height: "100%",
   margin: 0,
@@ -27,13 +27,6 @@ export const BoxStyled = styled("article", {
       true: {
         animation: `${fadeOut} .2s linear`,
         animationFillMode: "forwards",
-      },
-    },
-    hover: {
-      true: {
-        "&:hover": {
-          boxShadow: "$medium",
-        },
       },
     },
     loading: {
