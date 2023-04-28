@@ -103,7 +103,7 @@ export function Table(props: ITable): JSX.Element {
                   </th>
                 )}
                 {headChildren.map((child, index) =>
-                  !sort || sortDisabled?.includes(index) ? (
+                  !sortable || sortDisabled?.includes(index) ? (
                     <th key={index}>
                       <Text as="span">{child}</Text>
                     </th>
