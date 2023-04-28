@@ -1,5 +1,5 @@
 import { styled } from "../../stitches.config";
-import {TextStyled} from "../Text/Text.styles";
+import { TextStyled } from "../Text/Text.styles";
 
 export const StackRowStyled = styled("div", {
   display: "flex",

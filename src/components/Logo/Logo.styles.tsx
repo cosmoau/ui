@@ -7,7 +7,7 @@ export const LogoStyled = styled("div", {
   svg: {
     height: "auto",
     marginTop: "0",
-    width: "auto"
+    width: "auto",
   },
   verticalAlign: "middle",
 });
