@@ -65,9 +65,6 @@ export const FieldFunctionStyled = styled("div", {
   justifyContent: "flex-end",
   padding: "$smaller $small",
   position: "relative",
-  svg: {
-    marginTop: "-0.1rem",
-  },
   verticalAlign: "middle",
   width: "100%",
 });

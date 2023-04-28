@@ -6,7 +6,8 @@ export const LogoStyled = styled("div", {
   padding: 0,
   svg: {
     height: "auto",
-    width: "auto",
+    marginTop: "0",
+    width: "auto"
   },
   verticalAlign: "middle",
 });

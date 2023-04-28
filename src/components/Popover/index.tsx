@@ -77,6 +77,7 @@ export function Popover(props: IPopover): JSX.Element {
             minWidth: width || "15rem",
             phone: {
               maxWidth: deviceWidth ? deviceWidth * 0.8 : "80vw",
+              minWidth: deviceWidth ? deviceWidth * 0.5 : "50vw",
             },
             width: width || "auto",
           }}

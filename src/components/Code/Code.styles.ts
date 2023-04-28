@@ -9,7 +9,6 @@ export const CodeStyled = styled("div", {
   padding: "$small $medium",
   tablet: {
     display: "block",
-
   },
 
   width: "100%",

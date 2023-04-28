@@ -86,7 +86,7 @@ export const SelectItemStyled = styled("div", {
   borderRadius: "$small",
   cursor: "pointer",
   display: "flex",
-  fontSize: "$default",
+  fontSize: "16px",
   justifyContent: "space-between",
   marginTop: "$smallest",
   padding: "$smaller $small",
@@ -128,10 +128,6 @@ export const SelectIconStyled = styled("div", {
   alignItems: "center",
   display: "flex",
   justifyContent: "center",
-  svg: {
-    height: "1.7rem",
-    width: "1.7rem",
-  },
   variants: {
     align: {
       left: {

@@ -4,7 +4,7 @@ export const LoadingOverlayStyled = styled("div", {
   alignItems: "center",
   backgroundColor: "$background",
   border: "0.1rem solid $border",
-  borderRadius: "$large",
+  borderRadius: "$small",
   bottom: 0,
   boxShadow: "$large",
   display: "flex",

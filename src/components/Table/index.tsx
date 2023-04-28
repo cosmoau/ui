@@ -26,7 +26,6 @@ export function Table(props: ITable): JSX.Element {
     restrictLimit,
     defaultLimit,
     identifier,
-    hover = true,
     ...rest
   } = props;
   const initialLimit = restrictLimit || defaultLimit || (pagination ? pageSizes[1] : maxSize);
@@ -87,7 +86,7 @@ export function Table(props: ITable): JSX.Element {
 
   return (
     <TableStyled css={css} id={identifier}>
-      <TableCoreStyled hover={hover}>
+      <TableCoreStyled>
         <table {...rest}>
           {headChildren && (
             <thead>

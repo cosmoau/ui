@@ -260,7 +260,6 @@ export interface ITable {
   defaultLimit?: 10 | 25 | 50 | 100 | 200;
   defaultSort?: number;
   headChildren?: Array<string>;
-  hover?: boolean;
   identifier?: string;
   loading?: boolean;
   pagination?: boolean;

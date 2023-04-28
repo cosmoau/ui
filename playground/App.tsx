@@ -25,13 +25,13 @@ export function App(): ReactElement {
   const temp = {
     "*": {
       height: "100%",
-      opacity: 0.15,
+      opacity: 0.25,
       width: "100%",
     },
     display: "inline-block",
     height: "10rem",
     marginRight: "1rem",
-    width: "4rem",
+    width: "5rem",
   };
 
   const data = Array.from({ length: Math.floor(Math.random() * 9000) + 1000 }, (_, i) => [
@@ -63,21 +63,78 @@ export function App(): ReactElement {
         <Button>do something</Button>
       </Command>
       <View bottom="largest" container top="largest">
-        <Stack bottom="larger" direction="row" flex="stretch">
+        <Text as="h3" bottom="larger" top="largest">
+          Hello World, it is <i>good</i> to see you!
+        </Text>
+        <Badge>Test</Badge>
+
+        <Stack bottom="larger" direction="row" flex="stretch" top="largest">
           <Stack direction="column" width={33}>
-            <Box>
+            <Box
+              header={
+                <Stack flexduo>
+                  <Text as="h5">Testing</Text>
+                  <Badge small>10 day</Badge>
+                </Stack>
+              }>
               <Text>metricColorA/B</Text>
             </Box>
           </Stack>
-           <Stack direction="column" width={33}>
-            <Box>
-              <Text>metricColorA/B</Text>
-            </Box>
+        </Stack>
+      </View>
+      <View bottom="largest" container top="largest">
+        <Stack align="center" bottom="larger" direction="row" flex="center">
+          <Stack direction="column" width={33.33}>
+            <Stack
+              css={{
+                borderTop: "0.2rem solid $default",
+                justifyContent: "center",
+                margin: "0 auto",
+                width: "20rem",
+              }}>
+              <Stack
+                css={{
+                  backgroundColor: "$default !important",
+                  height: "80rem",
+                  margin: "0 auto",
+                }}>
+                <h1>default</h1>
+              </Stack>
+            </Stack>
           </Stack>
-           <Stack direction="column" width={33} >
-            <Box>
-              <Text bottom="medium" top="medium">metricColorA/B</Text>
-            </Box>
+          <Stack direction="column" width={33.33}>
+            <Stack
+              css={{
+                borderTop: "0.2rem solid $defaultHover",
+                justifyContent: "center",
+                margin: "0 auto",
+                width: "20rem",
+              }}>
+              <Stack
+                css={{
+                  backgroundColor: "$defaultHover !important",
+                  height: "80rem",
+                }}>
+                <h1>defaultHover</h1>
+              </Stack>
+            </Stack>
+          </Stack>
+          <Stack direction="column" width={33.33}>
+            <Stack
+              css={{
+                borderTop: "0.2rem solid $default",
+                justifyContent: "center",
+                margin: "0 auto",
+                width: "20rem",
+              }}>
+              <Stack
+                css={{
+                  backgroundColor: "$default !important",
+                  height: "80rem",
+                }}>
+                <h1>default</h1>
+              </Stack>
+            </Stack>
           </Stack>
         </Stack>
       </View>
@@ -502,6 +559,9 @@ export function App(): ReactElement {
       <View bottom="largest" container inverted top="largest">
         <Stack direction="row">
           <Stack direction="column">
+            <Stack bottom="largest">
+              <Button theme="fill">Lorem Ipsum</Button>
+            </Stack>
             <Stack bottom="small">
               <Badge theme="green">An inverted green badge</Badge>
             </Stack>
@@ -617,7 +677,6 @@ export function App(): ReactElement {
             defaultLimit={50}
             defaultSort={1}
             headChildren={["Check In", "Head 2", "Head 3"]}
-            hover
             pagination
             restrictLimit={4}
             rowNumbers

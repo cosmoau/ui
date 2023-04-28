@@ -84,7 +84,7 @@ export function Stack(props: IStack): JSX.Element {
         }),
         ...(direction === "row" && {
           alignItems: flex || "normal",
-          justifyContent: flex || 'normal',
+          justifyContent: flex || "normal",
         }),
         ...(noPrint && {
           [breakpoints.special.print]: {

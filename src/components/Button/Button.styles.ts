@@ -37,14 +37,11 @@ export const ButtonStyled = styled("button", {
   cursor: "pointer",
   display: "inline",
   fontFamily: "$default",
-  fontSize: "$default",
+  fontSize: "16px",
   justifyContent: "center",
   margin: 0,
   outline: "none",
   padding: "$smallest $small",
-  svg: {
-    marginTop: "-0.3rem",
-  },
   textOverflow: "ellipsis",
   transition: "$default",
   variants: {
@@ -58,12 +55,7 @@ export const ButtonStyled = styled("button", {
       true: {
         fontSize: "$small",
         lineHeight: "$small",
-
-        svg: {
-          height: "1.6rem",
-          marginTop: "-0.25rem",
-          width: "1.6rem",
-        },
+        padding: "0.2rem $small",
       },
     },
     theme: {

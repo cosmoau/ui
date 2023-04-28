@@ -1,4 +1,5 @@
 import { styled } from "../../stitches.config";
+import {TextStyled} from "../Text/Text.styles";
 
 export const StackRowStyled = styled("div", {
   display: "flex",
@@ -27,8 +28,8 @@ export const StackElementStyled = styled("div", {
   variants: {
     flexduo: {
       true: {
-        "*": {
-          marginBottom: 0,
+        [`& ${TextStyled}`]: {
+          marginBottom: "0 !important",
           verticalAlign: "middle",
         },
         alignItems: "center",

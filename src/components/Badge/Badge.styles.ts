@@ -12,7 +12,6 @@ export const BadgeStyled = styled("div", {
   justifyContent: "center",
   lineHeight: "$default",
   marginBottom: "0 !important",
-
   padding: "$smallest $small",
 
   variants: {
@@ -29,17 +28,8 @@ export const BadgeStyled = styled("div", {
       },
     },
     iconOnly: {
-      false: {
-        svg: {
-          marginTop: "-0.3rem",
-        },
-      },
       true: {
         height: "3rem",
-        svg: {
-          alignSelf: "center",
-          verticalAlign: "middle",
-        },
         width: "3rem",
       },
     },
@@ -47,12 +37,6 @@ export const BadgeStyled = styled("div", {
       true: {
         fontSize: "$small",
         lineHeight: "$small",
-
-        svg: {
-          height: "1.6rem",
-          marginTop: "-0.25rem",
-          width: "1.6rem",
-        },
       },
     },
     theme: {
@@ -112,9 +96,6 @@ export const BadgeIconStyled = styled("span", {
 
 export const BadgeLoadingStyled = styled("span", {
   display: "inline",
-  svg: {
-    marginTop: "-0.4rem",
-  },
   verticalAlign: "middle",
 });
 
