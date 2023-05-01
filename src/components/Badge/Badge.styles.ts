@@ -27,12 +27,7 @@ export const BadgeStyled = styled("div", {
         width: "100%",
       },
     },
-    iconOnly: {
-      true: {
-        height: "3rem",
-        width: "3rem",
-      },
-    },
+
     small: {
       true: {
         fontSize: "$small",

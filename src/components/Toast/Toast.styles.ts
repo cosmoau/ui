@@ -6,11 +6,12 @@ export const ToastStyled = styled("div", {
   borderRadius: "$small",
   boxShadow: "$large",
   cursor: "pointer",
-  fontSize: "$small",
+  fontSize: "$default",
   margin: "$small auto 0 auto !important",
   maxWidth: "60%",
   padding: "$smallest $small",
   phone: {
+    fontSize: "$small",
     maxWidth: "80%",
   },
   pointerEvents: "all",

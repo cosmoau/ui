@@ -41,10 +41,7 @@ export interface IBadge {
   copy?: boolean;
   copyText?: string | number | undefined;
   css?: CSS;
-  dot?: boolean | "pulse";
-  dotColor?: "red" | "orange" | "purple" | "blue" | "green" | "border" | "default";
   icon?: ReactNode;
-  iconOnly?: boolean;
   iconPosition?: "left" | "right";
   inline?: IThemeSpacing | "auto";
   loading?: boolean;

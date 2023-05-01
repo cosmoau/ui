@@ -67,6 +67,7 @@ export function App(): ReactElement {
           Hello World, it is <i>good</i> to see you!
         </Text>
         <Badge>Test</Badge>
+        <Badge small>Test small</Badge>
 
         <Stack bottom="larger" direction="row" flex="stretch" top="largest">
           <Stack direction="column" width={33}>
@@ -549,9 +550,7 @@ export function App(): ReactElement {
               </Badge>
             </Stack>
             <Stack bottom="small">
-              <Badge icon={<CurrencyEth />} iconOnly>
-                An icon only badge
-              </Badge>
+              <Badge icon={<CurrencyEth />}>An icon only badge</Badge>
             </Stack>
           </Stack>
         </Stack>
@@ -582,9 +581,7 @@ export function App(): ReactElement {
               <Badge theme="blue">An inverted blue badge</Badge>
             </Stack>
             <Stack bottom="small">
-              <Badge icon={<CurrencyEth />} iconOnly>
-                An icon only badge
-              </Badge>
+              <Badge icon={<CurrencyEth />}>An icon only badge</Badge>
             </Stack>
           </Stack>
         </Stack>

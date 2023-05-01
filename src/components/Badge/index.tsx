@@ -20,7 +20,6 @@ export function Badge(props: IBadge): JSX.Element {
     css,
     onClick,
     children,
-    iconOnly,
     copy,
     copyText,
   } = props;
@@ -55,24 +54,21 @@ export function Badge(props: IBadge): JSX.Element {
         }),
         ...css,
       }}
-      iconOnly={iconOnly}
       small={small}
       theme={theme || "default"}
       onClick={copy ? (): void => handleCopy() : onClick}>
-      {iconOnly && <BadgeIconStyled>{icon}</BadgeIconStyled>}
-      {!iconOnly && icon && (iconPosition === "left" || !iconPosition) && (
+      {icon && (iconPosition === "left" || !iconPosition) && (
         <BadgeIconStyled align="left">{icon}</BadgeIconStyled>
       )}
 
-      {!iconOnly &&
-        (loading ? (
-          <BadgeLoadingStyled>
-            <Loading />
-          </BadgeLoadingStyled>
-        ) : (
-          children || ""
-        ))}
-      {!iconOnly && icon && iconPosition === "right" && !closable && (
+      {loading ? (
+        <BadgeLoadingStyled>
+          <Loading />
+        </BadgeLoadingStyled>
+      ) : (
+        children || ""
+      )}
+      {icon && iconPosition === "right" && !closable && (
         <BadgeIconStyled align="right">{icon}</BadgeIconStyled>
       )}
       {closable && (
