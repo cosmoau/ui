@@ -191,6 +191,7 @@ export const darkTheme = createTheme({
   colors: {
     accent: "rgb(190, 210, 230)",
     background: "rgb(10, 20, 40)",
+    backgroundSpecial: "rgb(20, 30, 50)",
     border: "rgba(255, 255, 255, 0.2)",
     borderTable: "rgba(255, 255, 255, 0.1)",
     default: "rgba(255, 250, 245, 0.1)",

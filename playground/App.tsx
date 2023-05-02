@@ -1,5 +1,6 @@
 import { CurrencyEth } from "phosphor-react";
 import React, { ReactElement, useState } from "react";
+import toast from "react-hot-toast";
 
 import {
   Provider,
@@ -14,7 +15,7 @@ import {
   LoadingOverlay,
 } from "../src/index";
 
-const data = Array.from({ length: Math.floor(Math.random() * 100) }, (_, i) => [
+const data = Array.from({ length: Math.floor(Math.random() * 20) }, (_, i) => [
   {
     value: i + 1,
   },
@@ -68,7 +69,7 @@ export function App(): ReactElement {
         <Badge theme="blue">Test small</Badge>
         <Badge theme="purple">Test small</Badge>
         <Badge theme="border">Test small</Badge>
-
+        <Button>Testing</Button>
         <Stack bottom="larger" direction="row" flex="stretch" top="largest">
           <Stack direction="column" width={33}>
             <Box
@@ -77,8 +78,13 @@ export function App(): ReactElement {
                   <Text as="h5">Testing</Text>
                   <Badge small>10 day</Badge>
                 </Stack>
-              }>
-              <Text>metricColorA/B</Text>
+              }
+              minimal>
+              <Table
+                bodyChildren={fullDataSet ? data : smallData}
+                headChildren={["Check In", "Head 2", "Head 3"]}
+                pagination
+              />
             </Box>
           </Stack>
         </Stack>
@@ -416,7 +422,21 @@ export function App(): ReactElement {
           </Stack>
         </Stack>
       </View>
-      <View bottom="largest" container inverted top="largest">
+      <View container inverted top="largest">
+        <Stack flexduo>
+          <Text as="h5">Cosmo</Text>
+          <Button onClick={(): string => toast("WAZZZZUP")}>Toggle Cosmo</Button>
+        </Stack>
+      </View>
+      <View
+        bottom="largest"
+        container
+        css={{
+          borderBottom: "0.1rem solid $border",
+        }}
+        gradient
+        inverted
+        top="largest">
         <Box minimal>
           <Table
             bodyChildren={fullDataSet ? data : smallData}
@@ -427,6 +447,9 @@ export function App(): ReactElement {
         <Button block onClick={(): void => setFullDataSet(!fullDataSet)}>
           Toggle Full Data Set
         </Button>
+      </View>
+      <View bottom="largest" container inverted top="largest">
+        <h1>Looking good</h1>
       </View>
     </Provider>
   );

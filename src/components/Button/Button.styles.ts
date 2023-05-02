@@ -39,6 +39,7 @@ export const ButtonStyled = styled("button", {
   fontFamily: "$default",
   fontSize: "$default",
   justifyContent: "center",
+  lineHeight: "$default",
   margin: 0,
   outline: "none",
   padding: "$smallest $small",

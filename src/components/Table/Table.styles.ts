@@ -22,16 +22,10 @@ export const TableCoreStyled = styled("div", {
 
     tbody: {
       tr: {
-        "&:hover": {
-          "&:active": {
-            cursor: "grabbing",
-          },
-          cursor: "grab",
-        },
         td: {
           borderTop: "0.1rem solid $borderTable",
           fontSize: "$default",
-          padding: "$small $medium",
+          padding: "$medium",
         },
         transition: "$default",
       },
@@ -40,12 +34,24 @@ export const TableCoreStyled = styled("div", {
       backgroundColor: "$default",
 
       th: {
-        color: "$accent",
+        "*": {
+          color: "$accent",
+        },
         fontSize: "$small",
         fontWeight: "normal",
-        padding: "$small $medium",
+        padding: "$smaller $medium",
         textAlign: "left !important",
         whiteSpace: "nowrap",
+      },
+    },
+  },
+
+  variants: {
+    slim: {
+      true: {
+        td: {
+          padding: "$small $medium !important",
+        },
       },
     },
   },

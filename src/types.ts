@@ -262,6 +262,7 @@ export interface ITable {
   pagination?: boolean;
   restrictLimit?: number;
   rowNumbers?: boolean;
+  slim?: boolean;
   sortDisabled?: number[];
   sortable?: boolean;
 }
@@ -284,6 +285,7 @@ export interface IView {
   children: ReactNode;
   container?: boolean;
   css?: CSS;
+  gradient?: boolean;
   inverted?: boolean;
   noPrint?: boolean;
   top?: IThemeSpacing;

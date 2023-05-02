@@ -1,9 +1,16 @@
 import { sort } from "fast-sort";
-import { ArrowLeft, ArrowRight, FunnelSimple, SortAscending, SortDescending } from "phosphor-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  FunnelSimple,
+  MagnifyingGlassMinus,
+  SortAscending,
+  SortDescending,
+} from "phosphor-react";
 import { useEffect, useState } from "react";
 import { useLocalStorage } from "usehooks-ts";
 
-import { Button, Loading, Select, Stack, Text } from "../../index";
+import { Badge, Button, Loading, Select, Stack, Text, theme } from "../../index";
 import { ITable } from "../../types";
 
 import { TableCoreStyled, TablePaginationStyled, TableStyled } from "./Table.styles";
@@ -21,6 +28,7 @@ export function Table(props: ITable): JSX.Element {
     defaultSort,
     defaultDirection,
     rowNumbers,
+    slim,
     loading,
     pagination,
     restrictLimit,
@@ -102,7 +110,7 @@ export function Table(props: ITable): JSX.Element {
 
   return (
     <TableStyled css={css} id={identifier}>
-      <TableCoreStyled>
+      <TableCoreStyled slim={slim || (sortedBodyChildren && sortedBodyChildren.length > 10)}>
         <table {...rest}>
           {headChildren && (
             <thead>
@@ -189,8 +197,16 @@ export function Table(props: ITable): JSX.Element {
             ) : (
               <tr>
                 {rowNumbers && <td style={{ opacity: 0.5 }}>&nbsp;</td>}
-                <td colSpan={headChildren ? headChildren.length : 1}>
-                  {loading ? <Loading /> : "No data available"}
+                <td
+                  colSpan={headChildren ? headChildren.length : 1}
+                  style={{
+                    color: theme.colors.accent.toString(),
+                  }}>
+                  {loading ? (
+                    <Loading />
+                  ) : (
+                    <Badge icon={<MagnifyingGlassMinus />}>No results found</Badge>
+                  )}
                 </td>
               </tr>
             )}
