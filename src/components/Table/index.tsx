@@ -36,7 +36,7 @@ export function Table(props: ITable): JSX.Element {
     identifier,
     ...rest
   } = props;
-  const initialLimit = restrictLimit || defaultLimit || (pagination ? pageSizes[1] : maxSize);
+  const initialLimit = restrictLimit || defaultLimit || (pagination ? pageSizes[0] : maxSize);
   const [sortBy, setSortBy] = useState(defaultSort || 0);
   const [sortDirection, setSortDirection] = useState(defaultDirection || "asc");
   const [storage, setStorage] = useLocalStorage(
@@ -101,8 +101,12 @@ export function Table(props: ITable): JSX.Element {
       : bodyChildren;
 
   useEffect(() => {
-    if (sortedBodyChildren && storage.offset >= sortedBodyChildren.length) {
-      // reset as data has changed
+    if (
+      sortedBodyChildren &&
+      sortedBodyChildren.length &&
+      storage.offset >= sortedBodyChildren.length &&
+      storage.page > 1
+    ) {
       resetPagination();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -110,7 +114,7 @@ export function Table(props: ITable): JSX.Element {
 
   return (
     <TableStyled css={css} id={identifier}>
-      <TableCoreStyled slim={slim || (sortedBodyChildren && sortedBodyChildren.length > 10)}>
+      <TableCoreStyled slim={slim || (sortedBodyChildren && sortedBodyChildren.length >= 10)}>
         <table {...rest}>
           {headChildren && (
             <thead>
