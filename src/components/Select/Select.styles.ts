@@ -86,7 +86,7 @@ export const SelectItemStyled = styled("div", {
   borderRadius: "$small",
   cursor: "pointer",
   display: "flex",
-  fontSize: "16px",
+  fontSize: "$default",
   justifyContent: "space-between",
   marginTop: "$smallest",
   padding: "$smaller $small",

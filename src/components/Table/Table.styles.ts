@@ -29,7 +29,7 @@ export const TableCoreStyled = styled("div", {
           cursor: "grab",
         },
         td: {
-          borderTop: "0.1rem solid $border",
+          borderTop: "0.1rem solid $borderTable",
           fontSize: "$default",
           padding: "$small $medium",
         },

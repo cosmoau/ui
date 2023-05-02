@@ -1,6 +1,6 @@
 import { sort } from "fast-sort";
 import { ArrowLeft, ArrowRight, FunnelSimple, SortAscending, SortDescending } from "phosphor-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocalStorage } from "usehooks-ts";
 
 import { Button, Loading, Select, Stack, Text } from "../../index";
@@ -77,12 +77,28 @@ export function Table(props: ITable): JSX.Element {
     }
   }
 
+  function resetPagination(): void {
+    setStorage({
+      limit: storage.limit,
+      offset: 0,
+      page: 1,
+    });
+  }
+
   const sortedBodyChildren =
     bodyChildren && sortable
       ? sortDirection === "asc"
         ? sort(bodyChildren).asc((row) => row[sortBy].value)
         : sort(bodyChildren).desc((row) => row[sortBy].value)
       : bodyChildren;
+
+  useEffect(() => {
+    if (sortedBodyChildren && storage.offset >= sortedBodyChildren.length) {
+      // reset as data has changed
+      resetPagination();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [storage.offset, sortedBodyChildren, storage.limit, setStorage]);
 
   return (
     <TableStyled css={css} id={identifier}>
@@ -191,7 +207,11 @@ export function Table(props: ITable): JSX.Element {
                   label: size.toString(),
                   value: size.toString(),
                 }))}
-                trigger={<Button small>{storage.limit} per page</Button>}
+                trigger={
+                  <Button disabled={sortedBodyChildren && sortedBodyChildren.length < 10} small>
+                    {storage.limit} per page
+                  </Button>
+                }
                 vertical="top"
                 width={125}
                 onSelection={(value): void => {

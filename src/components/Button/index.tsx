@@ -1,6 +1,6 @@
 import { ArrowSquareOut } from "phosphor-react";
 
-import { Loading } from "../../index";
+import { Loading, darkTheme } from "../../index";
 import { IButton } from "../../types";
 
 import { ButtonIconStyled, ButtonStyled } from "./Button.styles";
@@ -36,7 +36,7 @@ export function Button(props: IButton): JSX.Element {
       }}
       disabled={disabled || loading || false}
       small={small}
-      theme={theme || "default"}
+      theme={theme || darkTheme ? "fill" : "default"}
       onClick={onClick}
       {...rest}>
       {loading && (

@@ -37,7 +37,7 @@ export const ButtonStyled = styled("button", {
   cursor: "pointer",
   display: "inline",
   fontFamily: "$default",
-  fontSize: "16px",
+  fontSize: "$default",
   justifyContent: "center",
   margin: 0,
   outline: "none",
@@ -83,9 +83,6 @@ export const ButtonStyled = styled("button", {
 });
 
 export const ButtonIconStyled = styled("span", {
-  alignContent: "center",
-  alignItems: "center",
-  alignSelf: "center",
   display: "inline-flex",
   justifyContent: "center",
   variants: {
