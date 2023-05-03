@@ -1,9 +1,7 @@
 import { fadeIn, fadeOut, styled } from "../../stitches.config";
 
 export const CommandStyled = styled("div", {
-  display: "inline-block",
   position: "relative",
-  verticalAlign: "middle",
 });
 
 export const CommandOverlayStyled = styled("div", {
