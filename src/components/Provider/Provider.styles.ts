@@ -96,8 +96,8 @@ export const providerReset = globalCss({
     height: "18px",
     verticalAlign: "middle",
     [breakpoints.phone]: {
-      height: "16px",
-      width: "16px",
+      height: "17px",
+      width: "17px",
     },
     width: "18px",
   },
