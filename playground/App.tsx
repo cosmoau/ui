@@ -70,6 +70,7 @@ export function App(): ReactElement {
         <Badge theme="purple">Test small</Badge>
         <Badge theme="border">Test small</Badge>
         <Button>Testing</Button>
+        <Button icon={<CurrencyEth />}>Testing</Button>
         <Stack bottom="larger" direction="row" flex="stretch" top="largest">
           <Stack direction="column" width={33}>
             <Box

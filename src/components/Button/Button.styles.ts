@@ -35,7 +35,7 @@ export const ButtonStyled = styled("button", {
   boxShadow: "$small",
   color: "$text",
   cursor: "pointer",
-  display: "inline",
+  display: "inline-flex",
   fontFamily: "$default",
   fontSize: "$default",
   justifyContent: "center",
