@@ -17,24 +17,23 @@ export const ViewContainerStyled = styled("div", {
       },
       true: {
         desktopX: {
-          maxWidth: "1628px",
-          width: "92%",
-        },
-
-        laptopX: {
-          maxWidth: "1480px",
+          maxWidth: "1800px",
           width: "94%",
+        },
+        laptopX: {
+          maxWidth: "1500px",
+          width: "95%",
         },
         margin: "auto",
         phone: {
-          width: "96%",
+          width: "97%",
         },
         tabletX: {
-          width: "98%",
+          width: "95%",
         },
         wide: {
-          maxWidth: "1776px",
-          width: "90%",
+          maxWidth: "2100px",
+          width: "92%",
         },
       },
     },
