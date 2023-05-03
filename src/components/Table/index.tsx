@@ -114,7 +114,8 @@ export function Table(props: ITable): JSX.Element {
 
   return (
     <TableStyled css={css} id={identifier}>
-      <TableCoreStyled slim={slim || (sortedBodyChildren && sortedBodyChildren.length >= 10)}>
+      <TableCoreStyled
+        slim={slim || (storage.limit > 10 && sortedBodyChildren && sortedBodyChildren.length > 10)}>
         <table {...rest}>
           {headChildren && (
             <thead>

@@ -441,6 +441,7 @@ export function App(): ReactElement {
           <Table
             bodyChildren={fullDataSet ? data : smallData}
             headChildren={["Check In", "Head 2", "Head 3"]}
+            identifier="test"
             pagination
           />
         </Box>
