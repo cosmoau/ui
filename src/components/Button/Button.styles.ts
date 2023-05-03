@@ -41,6 +41,7 @@ export const ButtonStyled = styled("button", {
   justifyContent: "center",
   lineHeight: "$default",
   margin: 0,
+  minHeight: "3rem",
   outline: "none",
   padding: "$smallest $small",
   textOverflow: "ellipsis",
@@ -56,6 +57,7 @@ export const ButtonStyled = styled("button", {
       true: {
         fontSize: "$small",
         lineHeight: "$small",
+        minHeight: "2rem",
         padding: "0.2rem $small",
       },
     },
