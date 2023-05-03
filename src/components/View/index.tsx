@@ -1,4 +1,4 @@
-import { darkTheme, theme } from "../../stitches.config";
+import { darkTheme } from "../../stitches.config";
 import { IView } from "../../types";
 
 import { ViewStyled, ViewContainerStyled } from "./View.styles";
@@ -6,7 +6,7 @@ import { ViewStyled, ViewContainerStyled } from "./View.styles";
 export function View(props: IView): JSX.Element {
   const { container, inverted, gradient, top, bottom, css, children, noPrint } = props;
 
-  const className = inverted ? darkTheme.className : theme.className;
+  const className = inverted ? darkTheme.className : undefined;
 
   return (
     <ViewStyled

@@ -194,10 +194,7 @@ export interface IPopover {
 export interface IProvider {
   children: ReactNode;
   css?: CSS;
-  initial?: "dark" | "light";
-  locked?: "dark" | "light";
-  trigger?: ReactNode;
-  triggerActive?: ReactNode;
+  dark?: boolean;
 }
 
 export interface ISelect {
