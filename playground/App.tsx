@@ -58,8 +58,11 @@ export function App(): ReactElement {
         <Button>do something</Button>
       </Command>
       <View bottom="largest" container top="largest">
-        <Text as="h3" bottom="larger" top="largest">
+        <Text as="h3" top="largest">
           Hello World, it is <i>good</i> to see you!
+        </Text>
+        <Text accent bottom="large">
+          This is an accent text
         </Text>
         <Badge icon={<CurrencyEth />}>Test</Badge>
         <Badge theme="red">Test small</Badge>
@@ -71,6 +74,10 @@ export function App(): ReactElement {
         <Badge theme="border">Test small</Badge>
         <Button>Testing</Button>
         <Button icon={<CurrencyEth />}>Testing</Button>
+        <Button>
+          <CurrencyEth />
+        </Button>
+
         <Stack bottom="larger" direction="row" flex="stretch" top="largest">
           <Stack direction="column" width={33}>
             <Box

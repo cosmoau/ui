@@ -21,7 +21,7 @@ export const breakpoints = {
 export const { theme, css, styled, getCssText, globalCss, keyframes } = createStitches({
   theme: {
     colors: {
-      accent: "rgb(69, 73, 82)",
+      accent: "rgb(77, 89, 113)",
       accentIHM: "rgb(12, 48, 84)",
       background: "rgb(255, 250, 245)",
       blueBackground: "rgb(210, 231, 252)",
@@ -59,7 +59,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       h1: "3.4rem",
       h2: "2.8rem",
       h3: "2.5rem",
-      h4: "2rem",
+      h4: "2.1rem",
       h5: "1.8rem",
       h6: "1.6rem",
       small: "1.5rem",
@@ -189,7 +189,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
 
 export const darkTheme = createTheme({
   colors: {
-    accent: "rgb(190, 210, 230)",
+    accent: "rgb(200, 215, 231)",
     background: "rgb(10, 20, 40)",
     backgroundSpecial: "rgb(20, 30, 50)",
     border: "rgba(255, 255, 255, 0.2)",

@@ -6,6 +6,7 @@ import {
   MagnifyingGlassMinus,
   SortAscending,
   SortDescending,
+  Table as TableIcon,
 } from "phosphor-react";
 import { useEffect, useState } from "react";
 import { useLocalStorage } from "usehooks-ts";
@@ -229,8 +230,14 @@ export function Table(props: ITable): JSX.Element {
                   value: size.toString(),
                 }))}
                 trigger={
-                  <Button disabled={sortedBodyChildren && sortedBodyChildren.length < 10} small>
-                    {storage.limit} per page
+                  <Button
+                    disabled={sortedBodyChildren && sortedBodyChildren.length < 10}
+                    icon={<TableIcon />}
+                    small>
+                    {storage.limit}
+                    <Text as="span" css={{ hiddenInline: "phone" }}>
+                      &nbsp;rows
+                    </Text>
                   </Button>
                 }
                 vertical="top"
@@ -241,7 +248,7 @@ export function Table(props: ITable): JSX.Element {
               />
             </Stack>
           ) : (
-            <Text accent as="small" inline="medium">
+            <Text accent as="small" inline="small">
               {storage.offset + 1} -{" "}
               {storage.offset + storage.limit > sortedBodyChildren.length
                 ? sortedBodyChildren.length
