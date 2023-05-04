@@ -5,7 +5,14 @@ import { IImage } from "../../types";
 import { ImageStyled } from "./Image.styles";
 
 export function Image(props: IImage): JSX.Element {
-  const { css, borderRadius, fill, fillFit, fillPosition, fillHeight, ...rest } = props;
+  const { css, borderRadius, fill, fillFit, fillPosition, fillHeight, sizes, quality, ...rest } =
+    props;
+
+  if (fill && !sizes) {
+    throw new Error(
+      "Define responsive sizes when using fill. See https://nextjs.org/docs/pages/api-reference/components/image#sizes"
+    );
+  }
 
   return (
     <ImageStyled
@@ -14,6 +21,10 @@ export function Image(props: IImage): JSX.Element {
           objectFit: fillFit || "contain",
           objectPosition: fillPosition || "center",
         },
+
+        ...(fill && {
+          overflow: "hidden",
+        }),
 
         ...(borderRadius && {
           borderRadius: `$${borderRadius}`,
@@ -25,15 +36,7 @@ export function Image(props: IImage): JSX.Element {
         height: fillHeight || "100%",
         ...css,
       }}>
-      <NextImage
-        {...rest}
-        fill={fill}
-        style={{
-          borderRadius: borderRadius ? "$" + borderRadius : undefined,
-          objectFit: fillFit || "cover",
-          objectPosition: fillPosition || "center",
-        }}
-      />
+      <NextImage {...rest} decoding="async" fill={fill} quality={quality || 70} sizes={sizes} />
     </ImageStyled>
   );
 }
