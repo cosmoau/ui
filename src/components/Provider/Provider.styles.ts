@@ -16,7 +16,7 @@ export const providerReset = globalCss({
 
   "::selection": {
     backgroundColor: theme.colors.yellowBackground,
-    color: '#000',
+    color: "#000",
   },
 
   "@font-face": [

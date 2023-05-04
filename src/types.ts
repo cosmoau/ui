@@ -56,11 +56,12 @@ export interface IBox {
   css?: CSS;
   header?: ReactNode;
   image?: string;
-  imageAlt?: string;
+  imageAlt?: ImageProps["alt"];
   imageCTA?: string;
   imageFit?: CSSProperties["objectFit"];
   imageHeight?: string;
   imagePosition?: CSSProperties["objectPosition"];
+  imageSizes?: ImageProps["sizes"];
   imageTarget?: "_blank" | "_self";
   loading?: boolean;
   minimal?: boolean;

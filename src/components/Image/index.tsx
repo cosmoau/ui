@@ -9,7 +9,8 @@ export function Image(props: IImage): JSX.Element {
     props;
 
   if (fill && !sizes) {
-    throw new Error(
+    // eslint-disable-next-line no-console
+    console.warn(
       "Define responsive sizes when using fill. See https://nextjs.org/docs/pages/api-reference/components/image#sizes"
     );
   }

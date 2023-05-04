@@ -28,7 +28,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       blueText: "rgb(21, 71, 121)",
       border: "rgba(0, 0, 0, 0.1)",
       borderTable: "rgba(0, 0, 0, 0.05)",
-      default: "rgba(51, 51, 51, 0.05)",
+      default: "rgba(51, 51, 51, 0.04)",
       defaultHover: "rgba(51, 51, 51, 0.08)",
       greenBackground: "rgb(220, 243, 222)",
       greenText: "rgb(26, 90, 51)",
