@@ -34,6 +34,13 @@ export function Box(props: IBox): JSX.Element {
     }, 250);
   }
 
+   if (image && !imageSizes) {
+    // eslint-disable-next-line no-console
+    console.warn(
+      "Define responsive sizes when using Image with Box. Defaulted to unideal 50vw."
+    );
+  }
+
   return isMounted ? (
     <BoxStyled
       animation={!isOpen}
