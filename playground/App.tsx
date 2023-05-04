@@ -15,7 +15,7 @@ import {
   LoadingOverlay,
 } from "../src/index";
 
-const data = Array.from({ length: Math.floor(Math.random() * 20) }, (_, i) => [
+const data = Array.from({ length: Math.floor(Math.random() * 2000) }, (_, i) => [
   {
     value: i + 1,
   },

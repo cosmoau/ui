@@ -1,8 +1,6 @@
 import { breakpoints, darkTheme, globalCss, styled, theme } from "../../stitches.config";
 
 export const ProviderStyled = styled("main", {
-  backgroundColor: "$background",
-  color: "$text",
   minHeight: "100vh",
   position: "relative",
 });
@@ -10,11 +8,17 @@ export const ProviderStyled = styled("main", {
 const baseFontURL = "https://cosmogroup.io/fonts";
 
 export const providerReset = globalCss({
-  "*, *::before, *::after": {
+  "*": {
     boxSizing: "border-box",
     marginBlock: 0,
     paddingBlock: 0,
   },
+
+  "::selection": {
+    backgroundColor: theme.colors.yellowBackground,
+    color: '#000',
+  },
+
   "@font-face": [
     {
       fontDisplay: "swap",
@@ -52,6 +56,7 @@ export const providerReset = globalCss({
       backgroundColor: darkTheme.colors.background,
       color: darkTheme.colors.text,
     },
+    boxSizing: "border-box",
     fontFamily: "Untitled Sans, system-ui, -apple-system, sans-serif",
     fontSize: "16px",
     fontWeight: "normal",
@@ -83,6 +88,9 @@ export const providerReset = globalCss({
     },
     [breakpoints.special.print]: {
       fontSize: "62.5%",
+    },
+    [breakpoints.wide]: {
+      fontSize: "65%",
     },
   },
 

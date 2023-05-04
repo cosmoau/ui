@@ -16,7 +16,7 @@ import { ITable } from "../../types";
 
 import { TableCoreStyled, TablePaginationStyled, TableStyled } from "./Table.styles";
 
-const pageSizes = [10, 25, 50, 100, 250];
+const pageSizes = [10, 25, 50, 100, 200];
 const maxSize = 500;
 
 export function Table(props: ITable): JSX.Element {
@@ -221,8 +221,8 @@ export function Table(props: ITable): JSX.Element {
       </TableCoreStyled>
       {pagination && sortedBodyChildren && (
         <TablePaginationStyled>
-          {!restrictLimit ? (
-            <Stack>
+          <Stack>
+            {!restrictLimit && (
               <Select
                 label="Page Size"
                 options={pageSizes.map((size) => ({
@@ -233,9 +233,10 @@ export function Table(props: ITable): JSX.Element {
                   <Button
                     disabled={sortedBodyChildren && sortedBodyChildren.length < 10}
                     icon={<TableIcon />}
+                    inline="small"
                     small>
                     {storage.limit}
-                    <Text as="span" css={{ hiddenInline: "phone" }}>
+                    <Text as="span" css={{ hiddenInline: "tablet" }}>
                       &nbsp;rows
                     </Text>
                   </Button>
@@ -246,27 +247,19 @@ export function Table(props: ITable): JSX.Element {
                   handlePageSelection(value);
                 }}
               />
-            </Stack>
-          ) : (
-            <Text accent as="small" inline="small">
+            )}
+            <Text accent as="small" css={{ hiddenInline: "tablet" }} inline="small">
               {storage.offset + 1} -{" "}
               {storage.offset + storage.limit > sortedBodyChildren.length
                 ? sortedBodyChildren.length
                 : storage.offset + storage.limit}{" "}
               of {sortedBodyChildren.length}
             </Text>
-          )}
-
+            <Text accent as="small" css={{ visibleInline: "tablet" }} inline="small">
+              {`${storage.page} / ${Math.ceil(sortedBodyChildren.length / storage.limit)}`}
+            </Text>
+          </Stack>
           <Stack>
-            {!restrictLimit && (
-              <Text accent as="small" inline="medium">
-                {storage.offset + 1} -{" "}
-                {storage.offset + storage.limit > sortedBodyChildren.length
-                  ? sortedBodyChildren.length
-                  : storage.offset + storage.limit}{" "}
-                of {sortedBodyChildren.length}
-              </Text>
-            )}
             <Button
               disabled={storage.page === 1}
               inline="small"
