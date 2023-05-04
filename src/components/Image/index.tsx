@@ -18,26 +18,27 @@ export function Image(props: IImage): JSX.Element {
   return (
     <ImageStyled
       css={{
-        img: {
-          objectFit: fillFit || (fill ? "cover" : "contain"),
-          objectPosition: fillPosition || "center",
-        },
-
         ...(fill && {
           overflow: "hidden",
         }),
-
         ...(borderRadius && {
           borderRadius: `$${borderRadius}`,
-
-          img: {
-            borderRadius: `$${borderRadius}`,
-          },
         }),
         height: fillHeight || "100%",
         ...css,
       }}>
-      <NextImage {...rest} decoding="async" fill={fill} quality={quality || 70} sizes={sizes} />
+      <NextImage
+        {...rest}
+        decoding="async"
+        fill={fill}
+        quality={quality || 70}
+        sizes={sizes}
+        style={{
+          borderRadius: `$${borderRadius}`,
+          objectFit: fillFit || (fill ? "cover" : "contain"),
+          objectPosition: fillPosition || "center",
+        }}
+      />
     </ImageStyled>
   );
 }
