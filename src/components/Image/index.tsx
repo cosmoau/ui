@@ -19,7 +19,7 @@ export function Image(props: IImage): JSX.Element {
     <ImageStyled
       css={{
         img: {
-          objectFit: fillFit || "contain",
+          objectFit: fillFit || (fill ? "cover" : "contain"),
           objectPosition: fillPosition || "center",
         },
 

@@ -34,11 +34,9 @@ export function Box(props: IBox): JSX.Element {
     }, 250);
   }
 
-   if (image && !imageSizes) {
+  if (image && !imageSizes) {
     // eslint-disable-next-line no-console
-    console.warn(
-      "Define responsive sizes when using Image with Box. Defaulted to unideal 50vw."
-    );
+    console.warn("Define responsive sizes when using Image with Box. Defaulted to unideal 50vw.");
   }
 
   return isMounted ? (
@@ -60,9 +58,9 @@ export function Box(props: IBox): JSX.Element {
                 },
               }}
               fill
-              fillFit={imageFit || "cover"}
+              fillFit={imageFit}
               fillHeight={imageHeight || "20rem"}
-              fillPosition={imagePosition || "center"}
+              fillPosition={imagePosition}
               sizes={imageSizes || "50vw"}
               src={image}
             />
@@ -77,9 +75,9 @@ export function Box(props: IBox): JSX.Element {
               },
             }}
             fill
-            fillFit={imageFit || "cover"}
+            fillFit={imageFit}
             fillHeight={imageHeight || "20rem"}
-            fillPosition={imagePosition || "center"}
+            fillPosition={imagePosition}
             sizes={imageSizes || "50vw"}
             src={image}
           />
