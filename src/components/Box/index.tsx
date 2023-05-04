@@ -12,6 +12,7 @@ export function Box(props: IBox): JSX.Element {
     imageAlt,
     imageCTA,
     imageFit,
+    imageSizes,
     imageHeight,
     imagePosition,
     imageTarget,
@@ -55,6 +56,7 @@ export function Box(props: IBox): JSX.Element {
               fillFit={imageFit || "cover"}
               fillHeight={imageHeight || "20rem"}
               fillPosition={imagePosition || "center"}
+              sizes={imageSizes || "50vw"}
               src={image}
             />
           </a>
@@ -71,6 +73,7 @@ export function Box(props: IBox): JSX.Element {
             fillFit={imageFit || "cover"}
             fillHeight={imageHeight || "20rem"}
             fillPosition={imagePosition || "center"}
+            sizes={imageSizes || "50vw"}
             src={image}
           />
         ))}
