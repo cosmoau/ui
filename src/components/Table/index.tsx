@@ -229,6 +229,7 @@ export function Table(props: ITable): JSX.Element {
                   label: size.toString(),
                   value: size.toString(),
                 }))}
+                selection={[storage.limit.toString()]}
                 trigger={
                   <Button
                     disabled={sortedBodyChildren && sortedBodyChildren.length < 10}
