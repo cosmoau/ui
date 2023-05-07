@@ -25,7 +25,6 @@ const data = Array.from({ length: Math.floor(Math.random() * 2000) }, (_, i) => 
         ? `${String.fromCharCode(65 + Math.floor(i / 26))}${String.fromCharCode(65 + (i % 26))}`
         : String.fromCharCode(65 + i),
     width: "30rem",
-
   },
   {
     value: `${i + 1}${
@@ -69,7 +68,9 @@ export function App(): ReactElement {
         <Badge theme="red">Test small</Badge>
         <Badge theme="orange">Test small</Badge>
         <Badge theme="yellow">Test small</Badge>
-        <Badge theme="green"><b>Test small</b></Badge>
+        <Badge theme="green">
+          <b>Test small</b>
+        </Badge>
         <Badge theme="blue">Test small</Badge>
         <Badge theme="purple">Test small</Badge>
         <Badge theme="border">Test small</Badge>
@@ -81,11 +82,7 @@ export function App(): ReactElement {
 
         <Stack bottom="larger" direction="row" flex="stretch" top="largest">
           <Stack direction="column" width={33}>
-            <Box
-              header={
-                  <Text as="h5">Testing</Text>
-              }
-              minimal>
+            <Box header={<Text as="h5">Testing</Text>} minimal>
               <Table
                 bodyChildren={fullDataSet ? data : smallData}
                 headChildren={["Check In", "Head 2", "Head 3"]}
@@ -93,12 +90,8 @@ export function App(): ReactElement {
               />
             </Box>
           </Stack>
-           <Stack direction="column" width={33}>
-            <Box
-              header={
-                  <Text as="h5">Testing</Text>
-              }
-              minimal>
+          <Stack direction="column" width={33}>
+            <Box header={<Text as="h5">Testing</Text>} minimal>
               <Table
                 bodyChildren={fullDataSet ? data : smallData}
                 headChildren={["Check In", "Head 2", "Head 3"]}
@@ -106,17 +99,13 @@ export function App(): ReactElement {
               />
             </Box>
           </Stack>
-           <Stack direction="column" width={33}>
-            <Box
-              header={
-                  <Text as="h5">Testing</Text>
-              }
-              minimal>
+          <Stack direction="column" width={33}>
+            <Box header={<Text as="h5">Testing</Text>} minimal>
               <Table
-              sortable
                 bodyChildren={fullDataSet ? data : smallData}
                 headChildren={["Check In", "Head 2", "Head 3"]}
                 pagination
+                sortable
               />
             </Box>
           </Stack>

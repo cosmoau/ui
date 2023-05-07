@@ -5,8 +5,17 @@ import { IImage } from "../../types";
 import { ImageStyled } from "./Image.styles";
 
 export function Image(props: IImage): JSX.Element {
-  const { css, borderRadius, fill, fillFit = 'contain', fillPosition, fillHeight = "100%", sizes, quality, ...rest } =
-    props;
+  const {
+    css,
+    borderRadius,
+    fill,
+    fillFit = "contain",
+    fillPosition,
+    fillHeight = "100%",
+    sizes,
+    quality,
+    ...rest
+  } = props;
 
   if (fill && !sizes) {
     // eslint-disable-next-line no-console
@@ -32,7 +41,7 @@ export function Image(props: IImage): JSX.Element {
         sizes={sizes}
         style={{
           borderRadius: `$${borderRadius}`,
-          objectFit: fillFit || (fill ? 'cover' : "contain"),
+          objectFit: fillFit || (fill ? "cover" : "contain"),
           objectPosition: fillPosition,
         }}
       />

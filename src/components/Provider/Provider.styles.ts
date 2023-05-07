@@ -101,13 +101,13 @@ export const providerReset = globalCss({
 
   svg: {
     alignSelf: "center",
-    height: "18px",
+    height: "19px",
     verticalAlign: "middle",
     [breakpoints.phone]: {
-      height: "17px",
-      width: "17px",
+      height: "18px",
+      width: "18px",
     },
-    width: "18px",
+    width: "19px",
   },
 });
 

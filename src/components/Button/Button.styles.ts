@@ -59,6 +59,11 @@ export const ButtonStyled = styled("button", {
         lineHeight: "$small",
         minHeight: "2rem",
         padding: "0.2rem $small",
+
+        svg: {
+          height: "18px",
+          width: "18px",
+        },
       },
     },
     theme: {
