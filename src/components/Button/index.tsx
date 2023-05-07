@@ -37,7 +37,7 @@ export function Button(props: IButton): JSX.Element {
       disabled={disabled || loading || false}
       small={small}
       theme={theme || "default"}
-      onClick={onClick}
+      onClick={!disabled ? onClick : undefined}
       {...rest}>
       {loading && (
         <ButtonIconStyled align="left">
