@@ -25,7 +25,7 @@ const getLetter = (text: string): string => {
 };
 
 export function Avatar(props: IAvatar): JSX.Element {
-  const { src, alt, fallback, width = 30, css, colors } = props;
+  const { src, alt, fallback, width = 20, css, colors } = props;
 
   const backgroundColor = colors ? getLetter(fallback) : "transparent";
 
@@ -43,7 +43,7 @@ export function Avatar(props: IAvatar): JSX.Element {
         ...css,
       }}>
       {src ? (
-        <Image alt={alt || fallback} height={width} src={src} width={width} />
+        <Image alt={alt || fallback} fillFit="cover" height={width} src={src} width={width} />
       ) : (
         <Text as="span">{fallback}</Text>
       )}

@@ -5,7 +5,7 @@ import { IImage } from "../../types";
 import { ImageStyled } from "./Image.styles";
 
 export function Image(props: IImage): JSX.Element {
-  const { css, borderRadius, fill, fillFit, fillPosition, fillHeight, sizes, quality, ...rest } =
+  const { css, borderRadius, fill, fillFit = 'contain', fillPosition, fillHeight = "100%", sizes, quality, ...rest } =
     props;
 
   if (fill && !sizes) {
@@ -18,13 +18,10 @@ export function Image(props: IImage): JSX.Element {
   return (
     <ImageStyled
       css={{
-        ...(fill && {
-          overflow: "hidden",
-        }),
         ...(borderRadius && {
           borderRadius: `$${borderRadius}`,
         }),
-        height: fillHeight || "100%",
+        height: fillHeight,
         ...css,
       }}>
       <NextImage
@@ -35,8 +32,8 @@ export function Image(props: IImage): JSX.Element {
         sizes={sizes}
         style={{
           borderRadius: `$${borderRadius}`,
-          objectFit: fillFit || (fill ? "cover" : "contain"),
-          objectPosition: fillPosition || "center",
+          objectFit: fillFit || (fill ? 'cover' : "contain"),
+          objectPosition: fillPosition,
         }}
       />
     </ImageStyled>
