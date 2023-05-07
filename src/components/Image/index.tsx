@@ -9,7 +9,7 @@ export function Image(props: IImage): JSX.Element {
     css,
     borderRadius,
     fill,
-    fillFit = "contain",
+    fillFit,
     fillPosition,
     fillHeight = "100%",
     sizes,
@@ -31,6 +31,7 @@ export function Image(props: IImage): JSX.Element {
           borderRadius: `$${borderRadius}`,
         }),
         height: fillHeight,
+        overflow: "hidden",
         ...css,
       }}>
       <NextImage
@@ -40,8 +41,8 @@ export function Image(props: IImage): JSX.Element {
         quality={quality || 70}
         sizes={sizes}
         style={{
-          borderRadius: `$${borderRadius}`,
-          objectFit: fillFit || (fill ? "cover" : "contain"),
+          borderRadius: `$${borderRadius} `,
+          objectFit: fill ? fillFit || "cover" : "contain",
           objectPosition: fillPosition,
         }}
       />
