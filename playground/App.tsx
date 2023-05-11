@@ -14,6 +14,7 @@ import {
   Command,
   LoadingOverlay,
   Dialog,
+  Input,
 } from "../src/index";
 
 const data = Array.from({ length: Math.floor(Math.random() * 2000) }, (_, i) => [
@@ -58,7 +59,16 @@ export function App(): ReactElement {
       <Command>
         <Button>do something</Button>
       </Command>
-      <div style={{ height: "50vh" }}>this should match the view colors</div>
+      <div style={{ height: "50vh" }}>
+        <Input
+          placeholder="Enter 5 characters or more"
+          submit="Test"
+          submitFunction={(value): void => {
+            toast(value.toString());
+          }}
+          submitValid={(value): boolean => value.toString().length > 4}
+        />
+      </div>
       <View top="largest">
         <Dialog trigger={<Button>test button</Button>}>
           <Button onClick={(): string => toast("overlap?")}>toast</Button>

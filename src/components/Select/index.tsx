@@ -116,7 +116,7 @@ export function Select(props: ISelect): JSX.Element {
                 icon={<MagnifyingGlass />}
                 reset
                 resetFunction={(): void => setFilter("")}
-                submitValid={filter.length > 0}
+                submitValid={(): boolean => filter.length > 0}
                 value={filter}
                 onChange={(event): void => setFilter(event.target.value)}
               />

@@ -79,7 +79,13 @@ export function Input(props: IInput): JSX.Element {
   }
 
   useEventListener("keydown", (event: KeyboardEvent) => {
-    if (listen && event.key === "Enter" && submitFunction && submitValid) {
+    if (
+      listen &&
+      event.key === "Enter" &&
+      submitFunction &&
+      submitValid &&
+      submitValid(inputValue)
+    ) {
       submitFunction(inputValue || "");
     }
   });
@@ -148,11 +154,11 @@ export function Input(props: IInput): JSX.Element {
                 css={{
                   marginLeft: "$smaller",
                 }}
-                disabled={!submitValid}
+                disabled={!submitValid || !submitValid(inputValue)}
                 inline="smaller"
                 small
                 onClick={(): void => {
-                  if (submitFunction && submitValid) {
+                  if (submitFunction && submitValid && submitValid(inputValue)) {
                     submitFunction(inputValue || "");
                   }
                 }}>

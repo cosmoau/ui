@@ -108,10 +108,10 @@ export function Field(props: IField): JSX.Element {
 
           {submit && (
             <Button
-              disabled={!submitValid}
+              disabled={!submitValid || !submitValid(inputValue)}
               small
               onClick={(): void => {
-                if (submitFunction && submitValid) {
+                if (submitFunction && submitValid && submitValid(inputValue)) {
                   submitFunction(inputValue);
                 }
               }}>

@@ -117,7 +117,7 @@ export interface IField extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   loading?: boolean;
   submit?: string;
   submitFunction?: (value: string | number) => void | Promise<void>;
-  submitValid?: boolean;
+  submitValid?: (value: string | number) => boolean;
   success?: boolean;
   successMessage?: string;
   warning?: boolean;
@@ -161,7 +161,7 @@ export interface IInput extends InputHTMLAttributes<HTMLInputElement> {
   reveal?: boolean;
   submit?: string;
   submitFunction?: (value: string | number) => void | Promise<void>;
-  submitValid?: boolean;
+  submitValid?: (value: string | number) => boolean;
   success?: boolean;
   successMessage?: string;
   warning?: boolean;
