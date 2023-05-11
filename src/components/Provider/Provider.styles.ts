@@ -56,17 +56,15 @@ export const providerReset = globalCss({
       backgroundColor: darkTheme.colors.background,
       color: darkTheme.colors.text,
     },
+    backgroundColor: theme.colors.background,
     boxSizing: "border-box",
+    color: theme.colors.text,
     fontFamily: "Untitled Sans, system-ui, -apple-system, sans-serif",
     fontSize: "16px",
     fontWeight: "normal",
     lineHeight: 1.4,
     margin: 0,
     padding: 0,
-    [`.${theme}`]: {
-      backgroundColor: theme.colors.background,
-      color: theme.colors.text,
-    },
 
     [breakpoints.special.retina]: {
       MozOsxFontSmoothing: "grayscale",

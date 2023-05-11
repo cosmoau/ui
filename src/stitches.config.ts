@@ -22,12 +22,11 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
   theme: {
     colors: {
       accent: "rgb(77, 89, 113)",
-      accentIHM: "rgb(12, 48, 84)",
       background: "rgb(255, 250, 245)",
       blueBackground: "rgb(210, 231, 252)",
       blueText: "rgb(21, 71, 121)",
-      border: "rgba(30, 40, 80, 0.125)",
-      borderTable: "rgba(30, 40, 80, 0.075)",
+      border: "rgba(0, 0, 0, 0.15)",
+      borderTable: "rgba(0, 0, 0, 0.075)",
       default: "rgba(30, 40, 80, 0.04)",
       defaultHover: "rgba(30, 40, 80, 0.08)",
       greenBackground: "rgb(220, 243, 222)",
