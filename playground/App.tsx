@@ -13,6 +13,7 @@ import {
   Stack,
   Command,
   LoadingOverlay,
+  Dialog,
 } from "../src/index";
 
 const data = Array.from({ length: Math.floor(Math.random() * 2000) }, (_, i) => [
@@ -59,7 +60,9 @@ export function App(): ReactElement {
       </Command>
       <div style={{ height: "50vh" }}>this should match the view colors</div>
       <View top="largest">
-        <Button>test button</Button>
+        <Dialog trigger={<Button>test button</Button>}>
+          <Button onClick={(): string => toast("overlap?")}>toast</Button>
+        </Dialog>
       </View>
       <View bottom="largest" container top="largest">
         <Text as="h3" top="largest">
