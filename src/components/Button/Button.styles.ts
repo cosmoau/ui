@@ -1,13 +1,6 @@
 import { styled } from "../../stitches.config";
 
 export const ButtonStyled = styled("button", {
-  "&::-moz-focus-inner": {
-    border: 0,
-    outline: 0,
-    outlineOffset: 0,
-    padding: 0,
-  },
-
   "&:active": {
     outline: 0,
   },
@@ -26,7 +19,6 @@ export const ButtonStyled = styled("button", {
     boxShadow: "$large",
     color: "$text",
   },
-
   alignContent: "center",
   alignItems: "center",
   appearance: "none",
@@ -40,10 +32,13 @@ export const ButtonStyled = styled("button", {
   fontSize: "$default",
   justifyContent: "center",
   lineHeight: "$default",
+
   margin: 0,
   minHeight: "3rem",
-  outline: "none",
+  outline: 0,
+
   padding: "$smallest $small",
+  position: "relative",
   textOverflow: "ellipsis",
   transition: "$default",
   variants: {
@@ -85,9 +80,11 @@ export const ButtonStyled = styled("button", {
       },
     },
   },
+
   verticalAlign: "middle",
   whiteSpace: "nowrap",
   width: "auto",
+  zIndex: 1,
 });
 
 export const ButtonIconStyled = styled("span", {

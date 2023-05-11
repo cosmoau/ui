@@ -58,6 +58,9 @@ export function App(): ReactElement {
         <Button>do something</Button>
       </Command>
       <div style={{ height: "50vh" }}>this should match the view colors</div>
+      <View top="largest">
+        <Button>test button</Button>
+      </View>
       <View bottom="largest" container top="largest">
         <Text as="h3" top="largest">
           Hello World, it is <i>good</i> to see you!
