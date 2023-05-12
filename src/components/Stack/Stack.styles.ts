@@ -34,6 +34,7 @@ export const StackElementStyled = styled("div", {
         },
         alignItems: "center",
         display: "flex",
+        gap: "$small",
         justifyContent: "space-between",
         verticalAlign: "middle",
       },

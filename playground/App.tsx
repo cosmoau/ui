@@ -463,8 +463,8 @@ export function App(): ReactElement {
       </View>
       <View container inverted top="largest">
         <Stack flexduo>
-          <Text as="h5">Cosmo</Text>
-          <Button onClick={(): string => toast("WAZZZZUP")}>Toggle Cosmo</Button>
+          <Button block>Block Button A</Button>
+          <Button block>Block Button B</Button>
         </Stack>
       </View>
       <View
