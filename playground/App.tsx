@@ -17,7 +17,7 @@ import {
   Input,
 } from "../src/index";
 
-const data = Array.from({ length: Math.floor(Math.random() * 2000) }, (_, i) => [
+const data = Array.from({ length: Math.floor(Math.random() * 10) }, (_, i) => [
   {
     value: i + 1,
   },
@@ -70,7 +70,7 @@ export function App(): ReactElement {
         />
       </div>
       <View top="largest">
-        <Dialog trigger={<Button>test button</Button>}>
+        <Dialog disabled trigger={<Button disabled>test button</Button>}>
           <Button onClick={(): string => toast("overlap?")}>toast</Button>
         </Dialog>
       </View>

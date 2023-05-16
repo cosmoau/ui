@@ -42,10 +42,6 @@ export const DialogContentStyled = styled("div", {
   backgroundColor: "$background",
   borderRadius: "$small",
   boxShadow: "$large",
-  left: "50%",
-  maxHeight: "80vh",
-  maxWidth: "85%",
-  minWidth: "40%",
   overflowX: "hidden",
   overflowY: "auto",
   padding: "$large",
@@ -56,9 +52,6 @@ export const DialogContentStyled = styled("div", {
   },
   position: "fixed",
   textAlign: "left",
-  top: "50%",
-
-  transform: "translate(-50%, -50%)",
   transition: "$default",
 
   variants: {

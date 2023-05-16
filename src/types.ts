@@ -91,10 +91,9 @@ export interface IDialog {
   children: ReactNode;
   close?: () => void;
   css?: CSS;
-  height?: number | string;
-  locked?: boolean;
+  disabled?: boolean;
+  small?: boolean;
   trigger: ReactNode;
-  width?: number | string;
 }
 
 export interface ICommand {
@@ -184,6 +183,7 @@ export interface ILogo extends SVGProps<SVGSVGElement> {
 export interface IPopover {
   children: ReactNode;
   css?: CSS;
+  disabled?: boolean;
   horizontal?: "left" | "right" | "center";
   minimal?: boolean;
   trigger: ReactNode;
@@ -200,13 +200,13 @@ export interface IProvider {
 
 export interface ISelect {
   css?: CSS;
+  disabled?: boolean;
   filter?: boolean;
   height?: number | string;
   horizontal?: "left" | "right" | "center";
   label?: string;
   last?: boolean;
   loading?: boolean;
-  locked?: boolean;
   onSelection?: (value: string, label: string) => void;
   options: Array<{
     icon?: ReactNode;

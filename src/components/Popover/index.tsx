@@ -6,7 +6,7 @@ import { IPopover } from "../../types";
 import { PopoverContentStyled, PopoverStyled, PopoverTriggerStyled } from "./Popover.styles";
 
 export function Popover(props: IPopover): JSX.Element {
-  const { css, trigger, children, type, horizontal, vertical, width, minimal } = props;
+  const { css, trigger, children, type, disabled, horizontal, vertical, width, minimal } = props;
   const ref = useRef(null);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -57,13 +57,19 @@ export function Popover(props: IPopover): JSX.Element {
     <PopoverStyled css={css}>
       <PopoverTriggerStyled
         onClickCapture={(): void => {
-          handleClick();
+          if (!disabled) {
+            handleClick();
+          }
         }}
         onMouseEnter={(): void => {
-          handleMouseEnter();
+          if (!disabled) {
+            handleMouseEnter();
+          }
         }}
         onMouseLeave={(): void => {
-          handleMouseLeave();
+          if (!disabled) {
+            handleMouseLeave();
+          }
         }}>
         {trigger}
       </PopoverTriggerStyled>

@@ -1,6 +1,6 @@
 import { MagnifyingGlass } from "phosphor-react";
 import { useRef, useState } from "react";
-import { useEventListener, useLockedBody, useOnClickOutside } from "usehooks-ts";
+import { useEventListener, useOnClickOutside } from "usehooks-ts";
 
 import { Input, Loading } from "../../index";
 import { ISelect } from "../../types";
@@ -22,7 +22,7 @@ export function Select(props: ISelect): JSX.Element {
     css,
     onSelection,
     label,
-    locked,
+    disabled,
     selection,
     width,
     height,
@@ -76,8 +76,6 @@ export function Select(props: ISelect): JSX.Element {
     }
   });
 
-  useLockedBody(locked ? isOpen : false);
-
   const filteredOptions = options
     ? options.filter((option) => {
         if (filter) {
@@ -90,7 +88,12 @@ export function Select(props: ISelect): JSX.Element {
 
   return (
     <SelectStyled css={css}>
-      <SelectTriggerStyled onClickCapture={(): void => handleTriggerClick()}>
+      <SelectTriggerStyled
+        onClickCapture={(): void => {
+          if (!disabled) {
+            handleTriggerClick();
+          }
+        }}>
         {trigger}
       </SelectTriggerStyled>
       {isMounted && (

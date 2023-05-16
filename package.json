@@ -26,6 +26,7 @@
     "prettier": "^2.8.8",
     "process": "^0.11.10",
     "react": "^18.2.0",
+    "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
     "tslib": "^2.5.0",
     "typescript": "^5.0.4",
@@ -93,7 +94,7 @@
     "build:esm": "tsc --module esnext --outDir dist/esm",
     "clean": "rm -rf dist lib",
     "dev": "echo '⚡️ Fetching device IP for development...' && ipconfig getifaddr en0 && echo '🫡' && parcel playground/index.html --dist-dir playground/dist --open --no-cache --port 420",
-    "lint": "eslint src playground --ext .ts,.tsx",
+    "lint": "eslint src playground --ext .ts,.tsx --fix",
     "prettier": "prettier --check --write src playground",
     "tidy": "pnpm lint && pnpm prettier",
     "kill": "lsof -ti tcp:420 | xargs kill"

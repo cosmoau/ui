@@ -224,6 +224,7 @@ export function Table(props: ITable): JSX.Element {
           <Stack>
             {!restrictLimit && (
               <Select
+                disabled={sortedBodyChildren && sortedBodyChildren.length < 10}
                 label="Page Size"
                 options={pageSizes.map((size) => ({
                   label: size.toString(),
