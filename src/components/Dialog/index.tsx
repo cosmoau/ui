@@ -86,7 +86,12 @@ export function Dialog(props: IDialog): JSX.Element {
       {isMounted && (
         <DialogOverlayStyled animation={isOpen}>
           <DialogExitStyled onClick={(): void => handleClose()}>
-            <Button icon={<X />} small theme="minimal">
+            <Button
+              css={{
+                backgroundColor: "$background",
+              }}
+              icon={<X />}
+              small>
               Close
             </Button>
           </DialogExitStyled>
