@@ -14,10 +14,10 @@ export const DialogTriggerStyled = styled("div", {
 });
 
 export const DialogOverlayStyled = styled("div", {
-  backgroundColor: "rgba(147, 148, 161, 0.3)",
+  backgroundColor: "rgba(147, 148, 161, 0.2)",
   bottom: 0,
+  height: "100%",
   left: 0,
-  overflowY: "scroll",
   position: "fixed",
   right: 0,
   top: 0,
@@ -34,7 +34,7 @@ export const DialogOverlayStyled = styled("div", {
       },
     },
   },
-  width: "100vw",
+  width: "100%",
   zIndex: "$dialog",
 });
 
@@ -46,9 +46,7 @@ export const DialogContentStyled = styled("div", {
   overflowY: "auto",
   padding: "$large",
   phone: {
-    maxWidth: "90%",
-    minWidth: "90%",
-    padding: "calc($large - $small) $medium",
+    padding: "$medium",
   },
   position: "fixed",
   textAlign: "left",
@@ -72,8 +70,8 @@ export const DialogExitStyled = styled("div", {
   cursor: "pointer",
   padding: "$smaller",
   position: "absolute",
-  right: 0,
-  top: 0,
+  right: "$smaller",
+  top: "$smaller",
 });
 
 export default DialogStyled;

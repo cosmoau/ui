@@ -93,6 +93,7 @@ export interface IDialog {
   css?: CSS;
   disabled?: boolean;
   small?: boolean;
+  title?: string;
   trigger: ReactNode;
 }
 

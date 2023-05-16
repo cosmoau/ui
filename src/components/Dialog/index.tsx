@@ -1,9 +1,8 @@
 import { X } from "phosphor-react";
 import { useRef, useState } from "react";
-import { isMobile } from "react-device-detect";
 import { useEventListener, useLockedBody, useOnClickOutside } from "usehooks-ts";
 
-import { Button } from "../../index";
+import { Button, Text } from "../../index";
 import { IDialog } from "../../types";
 
 import {
@@ -15,7 +14,7 @@ import {
 } from "./Dialog.styles";
 
 export function Dialog(props: IDialog): JSX.Element {
-  const { css, trigger, children, disabled, small } = props;
+  const { css, trigger, children, title, disabled, small } = props;
   const ref = useRef(null);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -51,24 +50,28 @@ export function Dialog(props: IDialog): JSX.Element {
     }
   });
 
-  useLockedBody(isMobile && isOpen);
+  useLockedBody(isOpen);
 
-  const deviceWidth = typeof window !== "undefined" ? Number(window?.innerWidth || 0) : 0;
-  const deviceHeight = typeof window !== "undefined" ? Number(window?.innerHeight || 0) : 0;
+  const device = typeof window !== "undefined" ? Number(window?.innerWidth || 0) : 0;
 
-  const stylings = small
-    ? {
-        height: deviceHeight < 900 ? "60%" : deviceHeight < 1200 ? "50%" : "40%",
-        left: deviceWidth < 900 ? "5%" : deviceWidth < 1200 ? "25%" : "30%",
-        top: deviceHeight < 900 ? "20%" : deviceHeight < 1200 ? "25%" : "25%",
-        width: deviceWidth < 900 ? "90%" : deviceWidth < 1200 ? "50%" : "40%",
-      }
-    : {
-        height: deviceHeight < 900 ? "90%" : deviceHeight < 1200 ? "70%" : "60%",
-        left: deviceWidth < 900 ? "5%" : deviceWidth < 1200 ? "15%" : "20%",
-        top: deviceHeight < 900 ? "5%" : deviceHeight < 1200 ? "15%" : "15%",
-        width: deviceWidth < 900 ? "90%" : deviceWidth < 1200 ? "70%" : "60%",
-      };
+  const sizing = {
+    height: {
+      default: device < 900 ? "85%" : device < 1200 ? "80%" : "75%",
+      small: device < 800 ? "50%" : device < 1200 ? "50%" : "45%",
+    },
+    left: {
+      default: device < 900 ? "5%" : device < 1200 ? "10%" : "15%",
+      small: device < 900 ? "10%" : device < 1200 ? "20%" : "27.5%",
+    },
+    top: {
+      default: device < 900 ? "7.5%" : device < 1200 ? "10%" : "12.5%",
+      small: device < 900 ? "25%" : device < 1200 ? "25%" : "27.5%",
+    },
+    width: {
+      default: device < 900 ? "90%" : device < 1200 ? "80%" : "70%",
+      small: device < 900 ? "80%" : device < 1200 ? "60%" : "45%",
+    },
+  };
 
   return (
     <DialogStyled>
@@ -82,18 +85,23 @@ export function Dialog(props: IDialog): JSX.Element {
       </DialogTriggerStyled>
       {isMounted && (
         <DialogOverlayStyled animation={isOpen}>
+          <DialogExitStyled onClick={(): void => handleClose()}>
+            <Button icon={<X />} small theme="minimal">
+              Close
+            </Button>
+          </DialogExitStyled>
           <DialogContentStyled
             ref={ref}
             animation={isOpen}
             css={{
+              height: small ? sizing.height.small : sizing.height.default,
+              left: small ? sizing.left.small : sizing.left.default,
+              top: small ? sizing.top.small : sizing.top.default,
+              width: small ? sizing.width.small : sizing.width.default,
               ...css,
-              ...stylings,
             }}>
-            <DialogExitStyled onClick={(): void => handleClose()}>
-              <Button icon={<X />} small theme="minimal">
-                Close
-              </Button>
-            </DialogExitStyled>
+            {title && <Text as="h4">{title}</Text>}
+
             {children}
           </DialogContentStyled>
         </DialogOverlayStyled>

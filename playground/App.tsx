@@ -1,46 +1,9 @@
 import { CurrencyEth } from "phosphor-react";
-import React, { ReactElement, useState } from "react";
-import toast from "react-hot-toast";
+import React, { ReactElement } from "react";
 
-import {
-  Provider,
-  View,
-  Table,
-  Text,
-  Button,
-  Badge,
-  Box,
-  Stack,
-  Command,
-  LoadingOverlay,
-  Dialog,
-  Input,
-} from "../src/index";
-
-const data = Array.from({ length: Math.floor(Math.random() * 10) }, (_, i) => [
-  {
-    value: i + 1,
-  },
-  {
-    value:
-      i > 25
-        ? `${String.fromCharCode(65 + Math.floor(i / 26))}${String.fromCharCode(65 + (i % 26))}`
-        : String.fromCharCode(65 + i),
-    width: "30rem",
-  },
-  {
-    value: `${i + 1}${
-      i > 25
-        ? `${String.fromCharCode(65 + Math.floor(i / 26))}${String.fromCharCode(65 + (i % 26))}`
-        : String.fromCharCode(65 + i)
-    }`,
-  },
-]);
-
-const smallData = data.slice(0, data.length / 2);
+import { Provider, View, Text, Button, Badge, Stack, Dialog } from "../src/index";
 
 export function App(): ReactElement {
-  const [fullDataSet, setFullDataSet] = useState(true);
   const temp = {
     "*": {
       height: "100%",
@@ -55,24 +18,165 @@ export function App(): ReactElement {
 
   return (
     <Provider>
-      <LoadingOverlay />
-      <Command>
-        <Button>do something</Button>
-      </Command>
-      <div style={{ height: "50vh" }}>
-        <Input
-          placeholder="Enter 5 characters or more"
-          submit="Test"
-          submitFunction={(value): void => {
-            toast(value.toString());
-          }}
-          submitValid={(value): boolean => value.toString().length > 4}
-        />
-      </div>
       <View top="largest">
-        <Dialog disabled trigger={<Button disabled>test button</Button>}>
-          <Button onClick={(): string => toast("overlap?")}>toast</Button>
-        </Dialog>
+        <Stack direction="row">
+          <Stack direction="column">
+            <Dialog title="Test" trigger={<Button>Normal Dialog</Button>}>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+            </Dialog>
+            <Dialog small title="Test 2" trigger={<Button>Small Dialog</Button>}>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+            </Dialog>
+          </Stack>
+        </Stack>
       </View>
       <View bottom="largest" container top="largest">
         <Text as="h3" top="largest">
@@ -93,40 +197,6 @@ export function App(): ReactElement {
         <Badge theme="border">Test small</Badge>
         <Button>Testing</Button>
         <Button icon={<CurrencyEth />}>Testing</Button>
-        <Button>
-          <CurrencyEth />
-        </Button>
-
-        <Stack bottom="larger" direction="row" flex="stretch" top="largest">
-          <Stack direction="column" width={33}>
-            <Box header={<Text as="h5">Testing</Text>} minimal>
-              <Table
-                bodyChildren={fullDataSet ? data : smallData}
-                headChildren={["Check In", "Head 2", "Head 3"]}
-                pagination
-              />
-            </Box>
-          </Stack>
-          <Stack direction="column" width={33}>
-            <Box header={<Text as="h5">Testing</Text>} minimal>
-              <Table
-                bodyChildren={fullDataSet ? data : smallData}
-                headChildren={["Check In", "Head 2", "Head 3"]}
-                pagination
-              />
-            </Box>
-          </Stack>
-          <Stack direction="column" width={33}>
-            <Box header={<Text as="h5">Testing</Text>} minimal>
-              <Table
-                bodyChildren={fullDataSet ? data : smallData}
-                headChildren={["Check In", "Head 2", "Head 3"]}
-                pagination
-                sortable
-              />
-            </Box>
-          </Stack>
-        </Stack>
       </View>
       <View bottom="largest" container top="largest">
         <Stack align="center" bottom="larger" direction="row" flex="center">
@@ -466,30 +536,6 @@ export function App(): ReactElement {
           <Button block>Block Button A</Button>
           <Button block>Block Button B</Button>
         </Stack>
-      </View>
-      <View
-        bottom="largest"
-        container
-        css={{
-          borderBottom: "0.1rem solid $border",
-        }}
-        gradient
-        inverted
-        top="largest">
-        <Box minimal>
-          <Table
-            bodyChildren={fullDataSet ? data : smallData}
-            headChildren={["Check In", "Head 2", "Head 3"]}
-            identifier="test"
-            pagination
-          />
-        </Box>
-        <Button block onClick={(): void => setFullDataSet(!fullDataSet)}>
-          Toggle Full Data Set
-        </Button>
-      </View>
-      <View bottom="largest" container inverted top="largest">
-        <h1>Looking good</h1>
       </View>
     </Provider>
   );
