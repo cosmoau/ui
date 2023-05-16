@@ -175,6 +175,13 @@ export function App(): ReactElement {
                 quam.
               </Text>
             </Dialog>
+            <Dialog title="Test" trigger={<Button>Normal Dialog</Button>}>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+            </Dialog>
           </Stack>
         </Stack>
       </View>

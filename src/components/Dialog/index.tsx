@@ -7,7 +7,8 @@ import { IDialog } from "../../types";
 
 import {
   DialogContentStyled,
-  DialogExitStyled,
+  DialogCoreStyled,
+  DialogHeaderStyled,
   DialogOverlayStyled,
   DialogStyled,
   DialogTriggerStyled,
@@ -15,7 +16,7 @@ import {
 
 export function Dialog(props: IDialog): JSX.Element {
   const { css, trigger, children, title, disabled, small } = props;
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -52,24 +53,24 @@ export function Dialog(props: IDialog): JSX.Element {
 
   useLockedBody(isOpen);
 
-  const device = typeof window !== "undefined" ? Number(window?.innerWidth || 0) : 0;
+  const innerWidth = typeof window !== "undefined" ? Number(window?.innerWidth || 0) : 0;
+  const innerHeight = typeof window !== "undefined" ? Number(window?.innerHeight || 0) : 0;
+  const content = ref?.current?.clientHeight || 0;
 
   const sizing = {
-    height: {
-      default: device < 900 ? "85%" : device < 1200 ? "80%" : "75%",
-      small: device < 800 ? "50%" : device < 1200 ? "50%" : "45%",
-    },
+    height: "auto",
     left: {
-      default: device < 900 ? "5%" : device < 1200 ? "10%" : "15%",
-      small: device < 900 ? "10%" : device < 1200 ? "20%" : "27.5%",
+      default: innerWidth < 900 ? "5%" : innerWidth < 1200 ? "10%" : "15%",
+      small: innerWidth < 900 ? "10%" : innerWidth < 1200 ? "20%" : "27.5%",
     },
-    top: {
-      default: device < 900 ? "7.5%" : device < 1200 ? "10%" : "12.5%",
-      small: device < 900 ? "25%" : device < 1200 ? "25%" : "27.5%",
+    maxHeight: {
+      default: innerWidth < 900 ? "85%" : innerWidth < 1200 ? "70%" : "50%",
+      small: innerWidth < 900 ? "70%" : innerWidth < 1200 ? "50%" : "30%",
     },
+    top: content && innerHeight > 0 ? (innerHeight - content) / 2 : "10rem",
     width: {
-      default: device < 900 ? "90%" : device < 1200 ? "80%" : "70%",
-      small: device < 900 ? "80%" : device < 1200 ? "60%" : "45%",
+      default: innerWidth < 900 ? "90%" : innerWidth < 1200 ? "80%" : "70%",
+      small: innerWidth < 900 ? "80%" : innerWidth < 1200 ? "60%" : "45%",
     },
   };
 
@@ -85,30 +86,27 @@ export function Dialog(props: IDialog): JSX.Element {
       </DialogTriggerStyled>
       {isMounted && (
         <DialogOverlayStyled animation={isOpen}>
-          <DialogExitStyled onClick={(): void => handleClose()}>
-            <Button
-              css={{
-                backgroundColor: "$background",
-              }}
-              icon={<X />}
-              small>
-              Close
-            </Button>
-          </DialogExitStyled>
-          <DialogContentStyled
+          <DialogCoreStyled
             ref={ref}
             animation={isOpen}
             css={{
-              height: small ? sizing.height.small : sizing.height.default,
+              height: "auto",
               left: small ? sizing.left.small : sizing.left.default,
-              top: small ? sizing.top.small : sizing.top.default,
+              maxHeight: small ? sizing.maxHeight.small : sizing.maxHeight.default,
+              minHeight: "10%",
+              top: sizing.top,
               width: small ? sizing.width.small : sizing.width.default,
               ...css,
             }}>
-            {title && <Text as="h4">{title}</Text>}
+            <DialogHeaderStyled>
+              <Text as="h4">{title}</Text>
 
-            {children}
-          </DialogContentStyled>
+              <Button icon={<X />} small onClick={(): void => handleClose()}>
+                Close
+              </Button>
+            </DialogHeaderStyled>
+            <DialogContentStyled>{children}</DialogContentStyled>
+          </DialogCoreStyled>
         </DialogOverlayStyled>
       )}
     </DialogStyled>

@@ -6,10 +6,6 @@ export const ProviderStyled = styled("main", {
 });
 
 const baseFontURL = "https://cosmogroup.io/fonts";
-const smoothing = {
-  MozOsxFontSmoothing: "grayscale",
-  WebkitFontSmoothing: "antialiased",
-};
 
 export const providerReset = globalCss({
   "*": {
@@ -60,6 +56,8 @@ export const providerReset = globalCss({
       backgroundColor: darkTheme.colors.background,
       color: darkTheme.colors.text,
     },
+    MozOsxFontSmoothing: "grayscale",
+    WebkitFontSmoothing: "antialiased",
     backgroundColor: theme.colors.background,
     boxSizing: "border-box",
     color: theme.colors.text,
@@ -69,10 +67,6 @@ export const providerReset = globalCss({
     lineHeight: 1.4,
     margin: 0,
     padding: 0,
-
-    [breakpoints.special.retina]: smoothing,
-    [breakpoints.wide]: smoothing,
-    [breakpoints.phone]: smoothing,
   },
 
   html: {

@@ -21,6 +21,7 @@ export const DialogOverlayStyled = styled("div", {
   position: "fixed",
   right: 0,
   top: 0,
+
   transition: "$default",
   variants: {
     animation: {
@@ -38,17 +39,13 @@ export const DialogOverlayStyled = styled("div", {
   zIndex: "$dialog",
 });
 
-export const DialogContentStyled = styled("div", {
+export const DialogCoreStyled = styled("div", {
   backgroundColor: "$background",
   borderRadius: "$small",
   boxShadow: "$large",
   overflowX: "hidden",
   overflowY: "auto",
-  padding: "$large",
-  phone: {
-    padding: "$medium",
-  },
-  position: "fixed",
+  position: "relative",
   textAlign: "left",
   transition: "$default",
 
@@ -66,12 +63,28 @@ export const DialogContentStyled = styled("div", {
   },
 });
 
-export const DialogExitStyled = styled("div", {
-  cursor: "pointer",
-  padding: "$smaller",
-  position: "absolute",
-  right: "$smaller",
-  top: "$smaller",
+export const DialogHeaderStyled = styled("div", {
+  alignItems: "center",
+  backgroundColor: "$default",
+  borderBottom: "0.1rem solid $border",
+  display: "flex",
+  gap: "$small",
+  h4: {
+    margin: 0,
+  },
+  justifyContent: "space-between",
+  padding: "$medium",
+  position: "sticky",
+  top: 0,
+
+  verticalAlign: "middle",
+});
+
+export const DialogContentStyled = styled("div", {
+  padding: "$large",
+  phone: {
+    padding: "$medium",
+  },
 });
 
 export default DialogStyled;
