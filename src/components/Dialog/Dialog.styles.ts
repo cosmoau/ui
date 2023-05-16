@@ -76,8 +76,8 @@ export const DialogHeaderStyled = styled("div", {
   padding: "$medium",
   position: "sticky",
   top: 0,
-
   verticalAlign: "middle",
+  zIndex: "$special",
 });
 
 export const DialogContentStyled = styled("div", {

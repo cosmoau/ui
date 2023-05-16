@@ -94,10 +94,11 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       default: "all 0.2s linear",
     },
     zIndices: {
-      dialog: 998,
-      popover: 997,
-      select: 996,
-      toast: 999,
+      dialog: 997,
+      popover: 996,
+      select: 995,
+      special: 999,
+      toast: 998,
     },
   },
   utils: {

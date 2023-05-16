@@ -27,6 +27,7 @@ export function App(): ReactElement {
                 risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
                 quam.
               </Text>
+              <Button>Test</Button>
               <Text>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
                 risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
