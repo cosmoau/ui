@@ -1,13 +1,13 @@
-import { CurrencyEth } from "phosphor-react";
+import { CurrencyEth } from "@phosphor-icons/react";
 import React, { ReactElement } from "react";
 
-import { Provider, View, Text, Button, Badge, Stack, Dialog } from "../src/index";
+import { Provider, View, Text, Button, Badge, Stack, Dialog, Avatar, Table } from "../src/index";
 
 export function App(): ReactElement {
   const temp = {
     "*": {
       height: "100%",
-      opacity: 0.25,
+      opacity: 0.5,
       width: "100%",
     },
     display: "inline-block",
@@ -18,7 +18,7 @@ export function App(): ReactElement {
 
   return (
     <Provider>
-      <View top="largest">
+      <View gradient top="largest">
         <Stack direction="row">
           <Stack direction="column">
             <Dialog title="Test" trigger={<Button>Normal Dialog</Button>}>
@@ -193,13 +193,16 @@ export function App(): ReactElement {
         <Text accent bottom="large">
           This is an accent text
         </Text>
+        {
+          // for each letter of the alphabet, create a text element
+          "abcdefghijklmnopqrstuvwxyz".split("").map((letter) => (
+            <Avatar key={letter} colors fallback={letter} />
+          ))
+        }
         <Badge icon={<CurrencyEth />}>Test</Badge>
         <Badge theme="red">Test small</Badge>
         <Badge theme="orange">Test small</Badge>
-        <Badge theme="yellow">Test small</Badge>
-        <Badge theme="green">
-          <b>Test small</b>
-        </Badge>
+        <Badge theme="green">Test small</Badge>
         <Badge theme="blue">Test small</Badge>
         <Badge theme="purple">Test small</Badge>
         <Badge theme="border">Test small</Badge>
@@ -211,7 +214,7 @@ export function App(): ReactElement {
           <Stack direction="column" width={33.33}>
             <Stack
               css={{
-                borderTop: "0.2rem solid $default",
+                borderTop: "0.4rem solid $default",
                 justifyContent: "center",
                 margin: "0 auto",
                 width: "20rem",
@@ -229,7 +232,7 @@ export function App(): ReactElement {
           <Stack direction="column" width={33.33}>
             <Stack
               css={{
-                borderTop: "0.2rem solid $defaultHover",
+                borderTop: "0.4rem solid $defaultHover",
                 justifyContent: "center",
                 margin: "0 auto",
                 width: "20rem",
@@ -246,7 +249,7 @@ export function App(): ReactElement {
           <Stack direction="column" width={33.33}>
             <Stack
               css={{
-                borderTop: "0.2rem solid $default",
+                borderTop: "0.4rem solid $default",
                 justifyContent: "center",
                 margin: "0 auto",
                 width: "20rem",
@@ -268,144 +271,120 @@ export function App(): ReactElement {
             <Text as="h1">metricColorA/B</Text>
             <Stack
               css={{
-                borderTop: "0.2rem solid $metricBlueA",
+                borderTop: "0.4rem solid $blueData",
                 ...temp,
               }}>
               <Stack
                 css={{
-                  backgroundColor: "$metricBlueA",
+                  backgroundColor: "$blueData",
                 }}>
                 &nbsp;
               </Stack>
             </Stack>
             <Stack
               css={{
-                borderTop: "0.2rem solid $metricBlueB",
+                borderTop: "0.4rem solid $blueDataAlt",
                 ...temp,
               }}>
               <Stack
                 css={{
-                  backgroundColor: "$metricBlueB",
+                  backgroundColor: "$blueDataAlt",
                 }}>
                 &nbsp;
               </Stack>
             </Stack>
             <Stack
               css={{
-                borderTop: "0.2rem solid $metricGreenA",
+                borderTop: "0.4rem solid $greenData",
                 ...temp,
               }}>
               <Stack
                 css={{
-                  backgroundColor: "$metricGreenA",
+                  backgroundColor: "$greenData",
                 }}>
                 &nbsp;
               </Stack>
             </Stack>
             <Stack
               css={{
-                borderTop: "0.2rem solid $metricGreenB",
+                borderTop: "0.4rem solid $greenDataAlt",
                 ...temp,
               }}>
               <Stack
                 css={{
-                  backgroundColor: "$metricGreenB",
+                  backgroundColor: "$greenDataAlt",
                 }}>
                 &nbsp;
               </Stack>
             </Stack>
             <Stack
               css={{
-                borderTop: "0.2rem solid $metricOrangeA",
+                borderTop: "0.4rem solid $orangeData",
                 ...temp,
               }}>
               <Stack
                 css={{
-                  backgroundColor: "$metricOrangeA",
+                  backgroundColor: "$orangeData",
                 }}>
                 &nbsp;
               </Stack>
             </Stack>
             <Stack
               css={{
-                borderTop: "0.2rem solid $metricOrangeB",
+                borderTop: "0.4rem solid $orangeDataAlt",
                 ...temp,
               }}>
               <Stack
                 css={{
-                  backgroundColor: "$metricOrangeB",
+                  backgroundColor: "$orangeDataAlt",
                 }}>
                 &nbsp;
               </Stack>
             </Stack>
             <Stack
               css={{
-                borderTop: "0.2rem solid $metricPurpleA",
+                borderTop: "0.4rem solid $purpleData",
                 ...temp,
               }}>
               <Stack
                 css={{
-                  backgroundColor: "$metricPurpleA",
+                  backgroundColor: "$purpleData",
                 }}>
                 &nbsp;
               </Stack>
             </Stack>
             <Stack
               css={{
-                borderTop: "0.2rem solid $metricPurpleB",
+                borderTop: "0.4rem solid $purpleDataAlt",
                 ...temp,
               }}>
               <Stack
                 css={{
-                  backgroundColor: "$metricPurpleB",
+                  backgroundColor: "$purpleDataAlt",
                 }}>
                 &nbsp;
               </Stack>
             </Stack>
             <Stack
               css={{
-                borderTop: "0.2rem solid $metricRedA",
+                borderTop: "0.4rem solid $redData",
                 ...temp,
               }}>
               <Stack
                 css={{
-                  backgroundColor: "$metricRedA",
+                  backgroundColor: "$redData",
                 }}>
                 &nbsp;
               </Stack>
             </Stack>
             <Stack
               css={{
-                borderTop: "0.2rem solid $metricRedB",
+                borderTop: "0.4rem solid $redDataAlt",
                 ...temp,
               }}>
               <Stack
                 css={{
-                  backgroundColor: "$metricRedB",
-                }}>
-                &nbsp;
-              </Stack>
-            </Stack>
-            <Stack
-              css={{
-                borderTop: "0.2rem solid $metricYellowA",
-                ...temp,
-              }}>
-              <Stack
-                css={{
-                  backgroundColor: "$metricYellowA",
-                }}>
-                &nbsp;
-              </Stack>
-            </Stack>
-            <Stack
-              css={{
-                borderTop: "0.2rem solid $metricYellowB",
-                ...temp,
-              }}>
-              <Stack
-                css={{
-                  backgroundColor: "$metricYellowB",
+                  backgroundColor: "$redDataAlt",
                 }}>
                 &nbsp;
               </Stack>
@@ -455,16 +434,6 @@ export function App(): ReactElement {
               <Stack
                 css={{
                   background: "$redText",
-                  display: "inline-block",
-                  height: "10rem",
-                  marginRight: "1rem",
-                  width: "4rem",
-                }}>
-                &nbsp;
-              </Stack>
-              <Stack
-                css={{
-                  background: "$yellowText",
                   display: "inline-block",
                   height: "10rem",
                   marginRight: "1rem",
@@ -525,16 +494,6 @@ export function App(): ReactElement {
                 }}>
                 &nbsp;
               </Stack>
-              <Stack
-                css={{
-                  background: "$yellowBackground",
-                  display: "inline-block",
-                  height: "10rem",
-                  marginRight: "1rem",
-                  width: "4rem",
-                }}>
-                &nbsp;
-              </Stack>
             </Stack>
           </Stack>
         </Stack>
@@ -543,6 +502,32 @@ export function App(): ReactElement {
         <Stack flexduo>
           <Button block>Block Button A</Button>
           <Button block>Block Button B</Button>
+        </Stack>
+        <Stack top="largest">
+          <Table
+            bodyChildren={
+              // generate 1000 rows in the format of { value: number, label: string }
+              Array.from(Array(1000).keys()).map((i) => [
+                {
+                  label: `Row ${i}`,
+                  value: i,
+                },
+                {
+                  label: `Row ${i * 2}`,
+                  value: i * 2,
+                },
+                {
+                  label: `Row ${i * 3}`,
+                  value: i * 3,
+                },
+              ])
+            }
+            headChildren={["Column A", "Column B", "Column C"]}
+            identifier="table"
+            kbd
+            pagination
+            sortable
+          />
         </Stack>
       </View>
     </Provider>

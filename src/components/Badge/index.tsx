@@ -1,4 +1,4 @@
-import { X } from "phosphor-react";
+import { X } from "@phosphor-icons/react";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
 

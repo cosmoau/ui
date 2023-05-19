@@ -1,4 +1,4 @@
-import { ClipboardText } from "phosphor-react";
+import { ClipboardText } from "@phosphor-icons/react";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
 

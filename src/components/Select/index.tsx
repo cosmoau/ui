@@ -1,4 +1,4 @@
-import { MagnifyingGlass } from "phosphor-react";
+import { MagnifyingGlass } from "@phosphor-icons/react";
 import { useRef, useState } from "react";
 import { useEventListener, useOnClickOutside } from "usehooks-ts";
 

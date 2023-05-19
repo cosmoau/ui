@@ -1,4 +1,4 @@
-import { Check, ClipboardText, Warning, Eye, EyeClosed, XCircle } from "phosphor-react";
+import { Check, ClipboardText, Warning, Eye, EyeClosed, X } from "@phosphor-icons/react";
 import { ChangeEvent, useState } from "react";
 import toast from "react-hot-toast";
 import { useEventListener } from "usehooks-ts";
@@ -145,7 +145,7 @@ export function Input(props: IInput): JSX.Element {
                 onClick={(): void => {
                   handleReset();
                 }}>
-                <XCircle />
+                <X />
               </Button>
             )}
 

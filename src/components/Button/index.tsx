@@ -1,4 +1,4 @@
-import { ArrowSquareOut } from "phosphor-react";
+import { ArrowSquareOut } from "@phosphor-icons/react";
 
 import { Loading } from "../../index";
 import { IButton } from "../../types";
