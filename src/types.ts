@@ -47,7 +47,7 @@ export interface IBadge {
   loading?: boolean;
   onClick?: MouseEventHandler<HTMLDivElement>;
   small?: boolean;
-  theme?: "red" | "orange" | "yellow" | "purple" | "blue" | "green" | "border" | "default";
+  theme?: "red" | "orange" | "purple" | "blue" | "green" | "border" | "default";
 }
 
 export interface IBox {
@@ -257,6 +257,7 @@ export interface ITable {
   defaultSort?: number;
   headChildren?: Array<string>;
   identifier?: string;
+  kbd?: boolean;
   loading?: boolean;
   pagination?: boolean;
   restrictLimit?: number;

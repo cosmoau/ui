@@ -65,10 +65,6 @@ export const BadgeStyled = styled("div", {
         backgroundColor: "$redBackground",
         color: "$redText",
       },
-      yellow: {
-        backgroundColor: "$yellowBackground",
-        color: "$yellowText",
-      },
     },
   },
 

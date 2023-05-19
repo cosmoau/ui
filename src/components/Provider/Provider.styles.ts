@@ -15,7 +15,7 @@ export const providerReset = globalCss({
   },
 
   "::selection": {
-    backgroundColor: theme.colors.yellowBackground,
+    backgroundColor: theme.colors.orangeSelection,
     color: "#000",
   },
 
@@ -85,7 +85,7 @@ export const providerReset = globalCss({
       fontSize: "62.5%",
     },
     [breakpoints.wide]: {
-      fontSize: "71%",
+      fontSize: "69%",
     },
   },
 
