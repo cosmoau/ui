@@ -7,9 +7,9 @@ import {
   SortAscending,
   SortDescending,
   Table as TableIcon,
-} from "phosphor-react";
+} from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
-import { useLocalStorage } from "usehooks-ts";
+import { useEventListener, useLocalStorage } from "usehooks-ts";
 
 import { Badge, Button, Loading, Select, Stack, Text, theme } from "../../index";
 import { ITable } from "../../types";
@@ -33,10 +33,12 @@ export function Table(props: ITable): JSX.Element {
     loading,
     pagination,
     restrictLimit,
+    kbd,
     defaultLimit,
     identifier,
     ...rest
   } = props;
+
   const initialLimit = restrictLimit || defaultLimit || (pagination ? pageSizes[0] : maxSize);
   const [sortBy, setSortBy] = useState(defaultSort || 0);
   const [sortDirection, setSortDirection] = useState(defaultDirection || "asc");
@@ -48,6 +50,13 @@ export function Table(props: ITable): JSX.Element {
       page: 1,
     }
   );
+
+  const sortedBodyChildren =
+    bodyChildren && sortable
+      ? sortDirection === "asc"
+        ? sort(bodyChildren).asc((row) => row[sortBy].value)
+        : sort(bodyChildren).desc((row) => row[sortBy].value)
+      : bodyChildren;
 
   function handleSortMapping(index: number): void {
     if (sortBy === index) {
@@ -71,13 +80,19 @@ export function Table(props: ITable): JSX.Element {
   }
 
   function handlePageChange(direction: "next" | "prev"): void {
-    if (direction === "next") {
+    if (direction === "next" && sortedBodyChildren) {
+      if (storage.offset + storage.limit >= sortedBodyChildren.length) {
+        return;
+      }
       setStorage({
         limit: storage.limit,
         offset: storage.offset + storage.limit,
         page: storage.page + 1,
       });
     } else {
+      if (storage.offset === 0) {
+        return;
+      }
       setStorage({
         limit: storage.limit,
         offset: storage.offset - storage.limit,
@@ -94,12 +109,13 @@ export function Table(props: ITable): JSX.Element {
     });
   }
 
-  const sortedBodyChildren =
-    bodyChildren && sortable
-      ? sortDirection === "asc"
-        ? sort(bodyChildren).asc((row) => row[sortBy].value)
-        : sort(bodyChildren).desc((row) => row[sortBy].value)
-      : bodyChildren;
+  function endPagination(): void {
+    setStorage({
+      limit: storage.limit,
+      offset: sortedBodyChildren ? sortedBodyChildren.length - storage.limit : 0,
+      page: Math.ceil(sortedBodyChildren ? sortedBodyChildren.length / storage.limit : 0),
+    });
+  }
 
   useEffect(() => {
     if (
@@ -112,6 +128,25 @@ export function Table(props: ITable): JSX.Element {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [storage.offset, sortedBodyChildren, storage.limit, setStorage]);
+
+  useEventListener("keydown", (event: KeyboardEvent) => {
+    if (pagination && kbd) {
+      if ((event.ctrlKey || event.metaKey) && event.key === "ArrowLeft") {
+        event.preventDefault();
+
+        handlePageChange("prev");
+      } else if ((event.ctrlKey || event.metaKey) && event.key === "ArrowRight") {
+        event.preventDefault();
+        handlePageChange("next");
+      } else if ((event.ctrlKey || event.metaKey) && event.key === "ArrowUp") {
+        event.preventDefault();
+        resetPagination();
+      } else if ((event.ctrlKey || event.metaKey) && event.key === "ArrowDown") {
+        event.preventDefault();
+        endPagination();
+      }
+    }
+  });
 
   return (
     <TableStyled css={css} id={identifier}>
