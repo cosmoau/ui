@@ -1,4 +1,4 @@
-import { X } from "phosphor-react";
+import { X } from "@phosphor-icons/react";
 import { useRef, useState } from "react";
 import { useEventListener, useLockedBody, useOnClickOutside } from "usehooks-ts";
 
@@ -60,17 +60,17 @@ export function Dialog(props: IDialog): JSX.Element {
   const sizing = {
     height: "auto",
     left: {
-      default: innerWidth < 900 ? "5%" : innerWidth < 1200 ? "10%" : "15%",
-      small: innerWidth < 900 ? "10%" : innerWidth < 1200 ? "20%" : "27.5%",
+      default: innerWidth < 900 ? "5%" : innerWidth < 1800 ? "15%" : "25%",
+      small: innerWidth < 900 ? "10%" : innerWidth < 1800 ? "25%" : "30%",
     },
     maxHeight: {
-      default: innerWidth < 900 ? "85%" : innerWidth < 1200 ? "70%" : "50%",
-      small: innerWidth < 900 ? "70%" : innerWidth < 1200 ? "50%" : "30%",
+      default: innerWidth < 900 ? "80%" : innerWidth < 1800 ? "70%" : "60%",
+      small: innerWidth < 900 ? "60%" : innerWidth < 1800 ? "60%" : "50%",
     },
     top: content && innerHeight > 0 ? (innerHeight - content) / 2 : "10rem",
     width: {
-      default: innerWidth < 900 ? "90%" : innerWidth < 1200 ? "80%" : "70%",
-      small: innerWidth < 900 ? "80%" : innerWidth < 1200 ? "60%" : "45%",
+      default: innerWidth < 900 ? "90%" : innerWidth < 1800 ? "70%" : "50%",
+      small: innerWidth < 900 ? "80%" : innerWidth < 1800 ? "50%" : "40%",
     },
   };
 
