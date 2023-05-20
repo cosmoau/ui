@@ -21,90 +21,13 @@ export function App(): ReactElement {
       <View gradient top="largest">
         <Stack direction="row">
           <Stack direction="column">
-            <Dialog title="Test" trigger={<Button>Normal Dialog</Button>}>
+            <Dialog title="Test" trigger={<Button inline="medium">Normal Dialog</Button>}>
               <Text>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
                 risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
                 quam.
               </Text>
-              <Button>Test</Button>
-              <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
-                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
-                quam.
-              </Text>
-              <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
-                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
-                quam.
-              </Text>
-              <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
-                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
-                quam.
-              </Text>
-              <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
-                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
-                quam.
-              </Text>
-              <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
-                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
-                quam.
-              </Text>
-              <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
-                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
-                quam.
-              </Text>
-              <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
-                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
-                quam.
-              </Text>
-              <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
-                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
-                quam.
-              </Text>
-              <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
-                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
-                quam.
-              </Text>
-              <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
-                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
-                quam.
-              </Text>
-              <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
-                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
-                quam.
-              </Text>
-              <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
-                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
-                quam.
-              </Text>
-              <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
-                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
-                quam.
-              </Text>
-              <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
-                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
-                quam.
-              </Text>
-            </Dialog>
-            <Dialog small title="Test 2" trigger={<Button>Small Dialog</Button>}>
-              <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
-                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
-                quam.
-              </Text>
+              <Button inline="medium">Test</Button>
               <Text>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
                 risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
@@ -176,13 +99,91 @@ export function App(): ReactElement {
                 quam.
               </Text>
             </Dialog>
-            <Dialog title="Test" trigger={<Button>Normal Dialog</Button>}>
+            <Dialog small title="Test 2" trigger={<Button inline="medium">Small Dialog</Button>}>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
               <Text>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
                 risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
                 quam.
               </Text>
             </Dialog>
+            <Dialog title="Test" trigger={<Button inline="medium">Normal Dialog</Button>}>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
+                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
+                quam.
+              </Text>
+            </Dialog>
+            <Button small>Small Button</Button>
           </Stack>
         </Stack>
       </View>
@@ -203,7 +204,7 @@ export function App(): ReactElement {
         <Badge theme="blue">Test small</Badge>
         <Badge theme="purple">Test small</Badge>
         <Badge theme="border">Test small</Badge>
-        <Button>Testing</Button>
+        <Button inline="medium">Testing</Button>
         <Button icon={<CurrencyEth />}>Testing</Button>
       </View>
       <View bottom="largest" container top="largest">

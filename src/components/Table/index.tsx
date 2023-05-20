@@ -173,7 +173,7 @@ export function Table(props: ITable): JSX.Element {
                           "&:hover": {
                             opacity: 1,
                           },
-                          opacity: sortBy === index ? 1 : 0.3,
+                          opacity: sortBy === index ? 1 : 0.25,
                         }}
                         small
                         theme={sortBy !== index ? "minimal" : undefined}
@@ -185,7 +185,7 @@ export function Table(props: ITable): JSX.Element {
                             <Icons.SortDescending />
                           )
                         ) : (
-                          <Icons.Funnel />
+                          <Icons.Columns />
                         )}
                       </Button>
                     </th>
