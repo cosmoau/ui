@@ -1,7 +1,7 @@
-import { Check, ClipboardText, Warning } from "@phosphor-icons/react";
 import { ChangeEvent, useState } from "react";
 import toast from "react-hot-toast";
 
+import { Icons } from "../../icons";
 import { Button, Badge, Loading } from "../../index";
 import { IField } from "../../types";
 
@@ -75,17 +75,17 @@ export function Field(props: IField): JSX.Element {
       {(error || success || warning || loading || submit || copy) && (
         <FieldFunctionStyled>
           {error && (
-            <Badge icon={<Warning />} small theme="red">
+            <Badge icon={<Icons.Warning />} small theme="red">
               {errorMessage || "Error"}
             </Badge>
           )}
           {success && (
-            <Badge icon={<Check />} small theme="green">
+            <Badge icon={<Icons.Check />} small theme="green">
               {successMessage || "Success"}
             </Badge>
           )}
           {warning && (
-            <Badge icon={<Warning />} small theme="orange">
+            <Badge icon={<Icons.Warning />} small theme="orange">
               {warningMessage || "Warning"}
             </Badge>
           )}
@@ -97,7 +97,7 @@ export function Field(props: IField): JSX.Element {
           {copy && (
             <Button
               disabled={isCopied}
-              icon={<ClipboardText />}
+              icon={<Icons.ClipboardText />}
               small
               onClick={(): void => {
                 handleCopy();

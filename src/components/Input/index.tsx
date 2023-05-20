@@ -1,8 +1,8 @@
-import { Check, ClipboardText, Warning, Eye, EyeClosed, X } from "@phosphor-icons/react";
 import { ChangeEvent, useState } from "react";
 import toast from "react-hot-toast";
 import { useEventListener } from "usehooks-ts";
 
+import { Icons } from "../../icons";
 import { Button, Badge, Loading } from "../../index";
 import { IInput } from "../../types";
 
@@ -114,7 +114,7 @@ export function Input(props: IInput): JSX.Element {
             {copy && (
               <Button
                 disabled={isCopied}
-                icon={<ClipboardText />}
+                icon={<Icons.ClipboardText />}
                 small
                 onClick={(): void => {
                   handleCopy();
@@ -127,7 +127,7 @@ export function Input(props: IInput): JSX.Element {
                 css={{
                   marginLeft: "$smaller",
                 }}
-                icon={!isRevealed ? <Eye /> : <EyeClosed />}
+                icon={!isRevealed ? <Icons.Eye /> : <Icons.EyeClosed />}
                 small
                 onClick={(): void => {
                   handleReveal();
@@ -145,7 +145,7 @@ export function Input(props: IInput): JSX.Element {
                 onClick={(): void => {
                   handleReset();
                 }}>
-                <X />
+                <Icons.X />
               </Button>
             )}
 
@@ -172,18 +172,18 @@ export function Input(props: IInput): JSX.Element {
       {(error || success || warning) && (
         <InputCallbackStyled>
           {error && (
-            <Badge icon={errorMessage ? <Warning /> : undefined} small theme="red">
-              {errorMessage || <Warning />}
+            <Badge icon={errorMessage ? <Icons.Warning /> : undefined} small theme="red">
+              {errorMessage || <Icons.Warning />}
             </Badge>
           )}
           {success && (
-            <Badge icon={successMessage ? <Check /> : undefined} small theme="green">
-              {successMessage || <Check />}
+            <Badge icon={successMessage ? <Icons.Check /> : undefined} small theme="green">
+              {successMessage || <Icons.Check />}
             </Badge>
           )}
           {warning && (
-            <Badge icon={warningMessage ? <Warning /> : undefined} small theme="orange">
-              {warningMessage || <Warning />}
+            <Badge icon={warningMessage ? <Icons.Warning /> : undefined} small theme="orange">
+              {warningMessage || <Icons.Warning />}
             </Badge>
           )}
         </InputCallbackStyled>

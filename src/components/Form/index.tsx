@@ -10,7 +10,7 @@ export function Form(props: IForm): JSX.Element {
     props;
 
   useEventListener("keydown", (event: KeyboardEvent) => {
-    if (listen && event.key === "Enter" && submitFunction && submit && submitValid) {
+    if (listen && event.key === "Enter" && submit && submitValid) {
       submitFunction();
     }
   });

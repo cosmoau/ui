@@ -1,7 +1,7 @@
-import { X } from "@phosphor-icons/react";
 import { useRef, useState } from "react";
 import { useEventListener, useOnClickOutside } from "usehooks-ts";
 
+import { Icons } from "../../icons";
 import { Button } from "../../index";
 import { ICommand } from "../../types";
 
@@ -54,7 +54,7 @@ export function Command(props: ICommand): JSX.Element {
         <CommandOverlayStyled animation={isOpen}>
           <CommandContentStyled ref={ref} animation={isOpen} css={css}>
             <CommandExitStyled onClick={(): void => handleClose()}>
-              <Button icon={<X />} small theme="minimal">
+              <Button icon={<Icons.X />} small theme="minimal">
                 Close
               </Button>
             </CommandExitStyled>

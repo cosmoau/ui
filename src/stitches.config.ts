@@ -48,7 +48,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       redData: "#d80000",
       redDataAlt: "#f76f74",
       redText: "#550805",
-      text: "#0b1934",
+      text: "#0f1d3a",
     },
     fontSizes: {
       default: "1.6rem",
@@ -191,8 +191,8 @@ export const darkTheme = createTheme({
     backgroundSpecial: "rgb(20, 30, 50)",
     border: "rgba(255, 255, 255, 0.15)",
     borderTable: "rgba(255, 255, 255, 0.075)",
-    default: "rgba(255, 250, 245, 0.07)",
-    defaultHover: "rgba(255, 250, 245, 0.14)",
+    default: "rgba(255, 250, 245, 0.05)",
+    defaultHover: "rgba(255, 250, 245, 0.1)",
     text: "#fffaf5",
   },
   shadows: {

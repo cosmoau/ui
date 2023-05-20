@@ -1,5 +1,4 @@
-import { IconContext } from "@phosphor-icons/react";
-
+import { Icons } from "../../icons";
 import { darkTheme } from "../../stitches.config";
 import { IProvider } from "../../types";
 import { Toast } from "../Toast";
@@ -13,10 +12,11 @@ export function Provider(props: IProvider): JSX.Element {
 
   return (
     <ProviderStyled className={dark ? darkTheme : undefined} css={css}>
-      <IconContext.Provider value={{ height: 19, mirrored: false, weight: "regular", width: 19 }}>
+      <Icons.IconContext.Provider
+        value={{ height: 19, mirrored: false, weight: "regular", width: 19 }}>
         <Toast />
         {children}
-      </IconContext.Provider>
+      </Icons.IconContext.Provider>
     </ProviderStyled>
   );
 }

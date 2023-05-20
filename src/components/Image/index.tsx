@@ -17,13 +17,6 @@ export function Image(props: IImage): JSX.Element {
     ...rest
   } = props;
 
-  if (fill && !sizes) {
-    // eslint-disable-next-line no-console
-    console.warn(
-      "Define responsive sizes when using fill. See https://nextjs.org/docs/pages/api-reference/components/image#sizes"
-    );
-  }
-
   return (
     <ImageStyled
       css={{

@@ -1,7 +1,7 @@
-import { X } from "@phosphor-icons/react";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
 
+import { Icons } from "../../icons";
 import { Loading } from "../../index";
 import { IBadge } from "../../types";
 
@@ -73,7 +73,7 @@ export function Badge(props: IBadge): JSX.Element {
       )}
       {closable && (
         <BadgeIconStyled align="right" onClick={(): void => handleClose()}>
-          <X style={{ cursor: "pointer" }} />
+          <Icons.X style={{ cursor: "pointer" }} />
         </BadgeIconStyled>
       )}
     </BadgeStyled>

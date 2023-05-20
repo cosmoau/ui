@@ -1,7 +1,7 @@
-import { ClipboardText } from "@phosphor-icons/react";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
 
+import { Icons } from "../../icons";
 import { Button } from "../../index";
 import { ICode } from "../../types";
 
@@ -26,7 +26,7 @@ export function Code(props: ICode): JSX.Element {
       <CodeFunctionStyled>
         <Button
           disabled={isCopied}
-          icon={<ClipboardText />}
+          icon={<Icons.ClipboardText />}
           small
           onClick={(): void => {
             handleCopy();

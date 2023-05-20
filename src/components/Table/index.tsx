@@ -1,16 +1,8 @@
 import { sort } from "fast-sort";
-import {
-  ArrowLeft,
-  ArrowRight,
-  FunnelSimple,
-  MagnifyingGlassMinus,
-  SortAscending,
-  SortDescending,
-  Table as TableIcon,
-} from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { useEventListener, useLocalStorage } from "usehooks-ts";
 
+import { Icons } from "../../icons";
 import { Badge, Button, Loading, Select, Stack, Text, theme } from "../../index";
 import { ITable } from "../../types";
 
@@ -126,7 +118,6 @@ export function Table(props: ITable): JSX.Element {
     ) {
       resetPagination();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [storage.offset, sortedBodyChildren, storage.limit, setStorage]);
 
   useEventListener("keydown", (event: KeyboardEvent) => {
@@ -189,12 +180,12 @@ export function Table(props: ITable): JSX.Element {
                         onClick={(): void => handleSortMapping(index)}>
                         {sortBy === index ? (
                           sortDirection === "asc" ? (
-                            <SortAscending />
+                            <Icons.SortAscending />
                           ) : (
-                            <SortDescending />
+                            <Icons.SortDescending />
                           )
                         ) : (
-                          <FunnelSimple />
+                          <Icons.Funnel />
                         )}
                       </Button>
                     </th>
@@ -246,7 +237,7 @@ export function Table(props: ITable): JSX.Element {
                   {loading ? (
                     <Loading />
                   ) : (
-                    <Badge icon={<MagnifyingGlassMinus />}>No results found</Badge>
+                    <Badge icon={<Icons.MagnifyingGlassMinus />}>No results found</Badge>
                   )}
                 </td>
               </tr>
@@ -269,7 +260,7 @@ export function Table(props: ITable): JSX.Element {
                 trigger={
                   <Button
                     disabled={sortedBodyChildren && sortedBodyChildren.length < 10}
-                    icon={<TableIcon />}
+                    icon={<Icons.TableRows />}
                     inline="small"
                     small>
                     {storage.limit}
@@ -304,7 +295,7 @@ export function Table(props: ITable): JSX.Element {
               onClick={(): void => {
                 handlePageChange("prev");
               }}>
-              <ArrowLeft />
+              <Icons.ArrowLeft />
             </Button>
             <Button
               disabled={storage.offset + storage.limit >= sortedBodyChildren.length}
@@ -312,7 +303,7 @@ export function Table(props: ITable): JSX.Element {
               onClick={(): void => {
                 handlePageChange("next");
               }}>
-              <ArrowRight />
+              <Icons.ArrowRight />
             </Button>
           </Stack>
         </TablePaginationStyled>

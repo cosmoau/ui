@@ -50,8 +50,11 @@ export function Popover(props: IPopover): JSX.Element {
 
   const deviceWidth = typeof window !== "undefined" ? Number(window?.innerWidth || 0) : 0;
 
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  useOnClickOutside(ref, trigger !== "hover" ? (): void => handleClose() : (): void => {});
+  useOnClickOutside(ref, () => {
+    if (type !== "hover") {
+      handleClose();
+    }
+  });
 
   return (
     <PopoverStyled css={css}>

@@ -1,7 +1,7 @@
-import { X } from "@phosphor-icons/react";
 import { useRef, useState } from "react";
 import { useEventListener, useLockedBody, useOnClickOutside } from "usehooks-ts";
 
+import { Icons } from "../../icons";
 import { Button, Text } from "../../index";
 import { IDialog } from "../../types";
 
@@ -101,7 +101,7 @@ export function Dialog(props: IDialog): JSX.Element {
             <DialogHeaderStyled>
               <Text as="h4">{title}</Text>
 
-              <Button icon={<X />} small onClick={(): void => handleClose()}>
+              <Button icon={<Icons.X />} small onClick={(): void => handleClose()}>
                 Close
               </Button>
             </DialogHeaderStyled>

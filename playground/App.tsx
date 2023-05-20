@@ -193,12 +193,9 @@ export function App(): ReactElement {
         <Text accent bottom="large">
           This is an accent text
         </Text>
-        {
-          // for each letter of the alphabet, create a text element
-          "abcdefghijklmnopqrstuvwxyz".split("").map((letter) => (
-            <Avatar key={letter} colors fallback={letter} />
-          ))
-        }
+        {"abcdefghijklmnopqrstuvwxyz".split("").map((letter) => (
+          <Avatar key={letter} colors fallback={letter} />
+        ))}
         <Badge icon={<CurrencyEth />}>Test</Badge>
         <Badge theme="red">Test small</Badge>
         <Badge theme="orange">Test small</Badge>
@@ -505,23 +502,20 @@ export function App(): ReactElement {
         </Stack>
         <Stack top="largest">
           <Table
-            bodyChildren={
-              // generate 1000 rows in the format of { value: number, label: string }
-              Array.from(Array(1000).keys()).map((i) => [
-                {
-                  label: `Row ${i}`,
-                  value: i,
-                },
-                {
-                  label: `Row ${i * 2}`,
-                  value: i * 2,
-                },
-                {
-                  label: `Row ${i * 3}`,
-                  value: i * 3,
-                },
-              ])
-            }
+            bodyChildren={Array.from(Array(1000).keys()).map((i) => [
+              {
+                label: `Row ${i}`,
+                value: i,
+              },
+              {
+                label: `Row ${i * 2}`,
+                value: i * 2,
+              },
+              {
+                label: `Row ${i * 3}`,
+                value: i * 3,
+              },
+            ])}
             headChildren={["Column A", "Column B", "Column C"]}
             identifier="table"
             kbd

@@ -132,8 +132,7 @@ export interface IForm extends FormHTMLAttributes<HTMLFormElement> {
   listen?: boolean;
   mustRef?: RefObject<HTMLFormElement>;
   submit?: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  submitFunction?: any;
+  submitFunction: () => void | Promise<void>;
   submitValid?: boolean;
 }
 

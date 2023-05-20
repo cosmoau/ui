@@ -1,5 +1,4 @@
-import { ArrowSquareOut } from "@phosphor-icons/react";
-
+import { Icons } from "../../icons";
 import { Loading } from "../../index";
 import { IButton } from "../../types";
 
@@ -53,7 +52,7 @@ export function Button(props: IButton): JSX.Element {
       )}
       {external && (
         <ButtonIconStyled align="right">
-          <ArrowSquareOut />
+          <Icons.ArrowSquareOut />
         </ButtonIconStyled>
       )}
     </ButtonStyled>

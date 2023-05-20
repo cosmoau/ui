@@ -1,6 +1,6 @@
-import { X } from "@phosphor-icons/react";
 import { useState } from "react";
 
+import { Icons } from "../../icons";
 import { Button, Image } from "../../index";
 import { IBox } from "../../types";
 
@@ -32,11 +32,6 @@ export function Box(props: IBox): JSX.Element {
     setTimeout(() => {
       setIsMounted(false);
     }, 250);
-  }
-
-  if (image && !imageSizes) {
-    // eslint-disable-next-line no-console
-    console.warn("Define responsive sizes when using Image with Box. Defaulted to unideal 50vw.");
   }
 
   return isMounted ? (
@@ -91,7 +86,7 @@ export function Box(props: IBox): JSX.Element {
       {closable && (
         <BoxExitStyled onClick={(): void => handleClose()}>
           <Button small theme={"minimal"}>
-            <X />
+            <Icons.X />
           </Button>
         </BoxExitStyled>
       )}

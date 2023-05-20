@@ -1,7 +1,7 @@
-import { MagnifyingGlass } from "@phosphor-icons/react";
 import { useRef, useState } from "react";
 import { useEventListener, useOnClickOutside } from "usehooks-ts";
 
+import { Icons } from "../../icons";
 import { Input, Loading } from "../../index";
 import { ISelect } from "../../types";
 
@@ -116,7 +116,7 @@ export function Select(props: ISelect): JSX.Element {
             <SelectFilterStyled>
               <Input
                 disabled={!options}
-                icon={<MagnifyingGlass />}
+                icon={<Icons.MagnifyingGlass />}
                 reset
                 resetFunction={(): void => setFilter("")}
                 submitValid={(): boolean => filter.length > 0}

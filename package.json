@@ -1,20 +1,20 @@
 {
   "name": "@cosmoau/ui",
   "description": "Cosmo's internal component library - Next.js + TypeScript.",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "bugs": {
     "url": "https://github.com/cosmoau/ui/issues"
   },
   "dependencies": {
-    "@phosphor-icons/react": "^2.0.9",
     "@stitches/react": "^1.2.8",
     "fast-sort": "^3.4.0",
     "react-hot-toast": "^2.4.1",
     "usehooks-ts": "^2.9.1"
   },
   "devDependencies": {
+    "@phosphor-icons/react": "^2.0.9",
     "@types/node": "^20.2.1",
     "@types/react": "^18.2.6",
     "eslint": "^8.41.0",
@@ -40,7 +40,8 @@
       "sort-keys-fix"
     ],
     "rules": {
-      "sort-keys-fix/sort-keys-fix": "warn"
+      "sort-keys-fix/sort-keys-fix": "warn",
+      "react-hooks/exhaustive-deps": "off"
     }
   },
   "exports": {
@@ -76,11 +77,10 @@
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "peerDependencies": {
-    "@phosphor-icons/react": "^2.0.9",
-    "next": "^13.3.4",
+    "next": "^13.4.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-hot-toast": "^2.4.0",
+    "react-hot-toast": "^2.4.1",
     "usehooks-ts": "^2.9.1"
   },
   "prettier": "eslint-config-dolmios/configs/prettier",
@@ -94,10 +94,10 @@
     "build:esm": "tsc --module esnext --outDir dist/esm",
     "clean": "rm -rf dist lib",
     "dev": "echo '⚡️ Fetching device IP for development...' && ipconfig getifaddr en0 && echo '🫡' && parcel playground/index.html --dist-dir playground/dist --open --no-cache --port 420",
+    "kill": "lsof -ti tcp:420 | xargs kill",
     "lint": "eslint src playground --ext .ts,.tsx --fix",
     "prettier": "prettier --check --write src playground",
-    "tidy": "pnpm lint && pnpm prettier",
-    "kill": "lsof -ti tcp:420 | xargs kill"
+    "tidy": "pnpm lint && pnpm prettier"
   },
   "sideEffects": false,
   "source": "src/index.ts",
