@@ -180,6 +180,18 @@ export interface ILogo extends SVGProps<SVGSVGElement> {
   inline?: IThemeSpacing | "auto";
 }
 
+export interface IPlaces extends IInput {
+  apiKey: string;
+  country?: string | string[];
+  onAutocomplete?: (
+    data: {
+      address: string;
+      city: string;
+      state: string;
+    } | null
+  ) => void;
+}
+
 export interface IPopover {
   children: ReactNode;
   css?: CSS;
@@ -222,6 +234,7 @@ export interface ISelect {
 
 export interface IStack {
   align?: CSSProperties["textAlign"];
+  as?: keyof JSX.IntrinsicElements;
   bottom?: IThemeSpacing;
   children: ReactNode;
   className?: string;

@@ -17,7 +17,7 @@ export function App(): ReactElement {
   };
 
   return (
-    <Provider>
+    <Provider dark>
       <View gradient top="largest">
         <Stack direction="row">
           <Stack direction="column">

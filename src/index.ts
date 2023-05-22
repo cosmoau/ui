@@ -14,6 +14,7 @@ export * from "./components/Image";
 export * from "./components/Input";
 export * from "./components/Loading";
 export * from "./components/Logo";
+export * from "./components/Places";
 export * from "./components/Popover";
 export * from "./components/Provider";
 export * from "./components/Select";

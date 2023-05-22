@@ -1,4 +1,5 @@
 import { breakpoints, darkTheme, globalCss, styled, theme } from "../../stitches.config";
+import { placesReset } from "../Places/Places.styles";
 
 export const ProviderStyled = styled("main", {
   minHeight: "100vh",
@@ -52,6 +53,7 @@ export const providerReset = globalCss({
   },
 
   body: {
+    ...placesReset,
     [`.${darkTheme}`]: {
       backgroundColor: darkTheme.colors.background,
       color: darkTheme.colors.text,
@@ -71,7 +73,6 @@ export const providerReset = globalCss({
 
   html: {
     fontSize: "62.5%",
-
     [breakpoints.special.micro]: {
       fontSize: "53%",
     },

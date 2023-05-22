@@ -1,19 +1,21 @@
 {
   "name": "@cosmoau/ui",
   "description": "Cosmo's internal component library - Next.js + TypeScript.",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "bugs": {
     "url": "https://github.com/cosmoau/ui/issues"
   },
   "dependencies": {
+    "@googlemaps/js-api-loader": "github:googlemaps/js-api-loader",
     "@stitches/react": "^1.2.8",
+    "@types/google.maps": "^3.53.1",
     "fast-sort": "^3.4.0"
   },
   "devDependencies": {
     "@phosphor-icons/react": "^2.0.9",
-    "@types/node": "^20.2.1",
+    "@types/node": "^20.2.3",
     "@types/react": "^18.2.6",
     "eslint": "^8.41.0",
     "eslint-config-dolmios": "^1.5.1",
