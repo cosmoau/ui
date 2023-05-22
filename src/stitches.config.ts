@@ -18,6 +18,23 @@ export const breakpoints = {
   wide: "@media only screen and (min-width: 2001px)",
 };
 
+export const darkTheme = createTheme({
+  colors: {
+    accent: "#c8d7e7",
+    background: "#070f1f",
+    backgroundSpecial: "#131926",
+    border: "#394155",
+    borderTable: "#1c212e",
+    default: "#151b2a",
+    defaultHover: "#212735",
+    text: "#fffaf5",
+  },
+  shadows: {
+    large: "0",
+    small: "0",
+  },
+});
+
 export const { theme, css, styled, getCssText, globalCss, keyframes } = createStitches({
   theme: {
     colors: {
@@ -99,6 +116,8 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     },
   },
   utils: {
+    darkModeSpec: (value: unknown) => ({
+      [`.${darkTheme} &`]: value,}),
     darkThemeSpec: (value: unknown) => ({
       "@media (prefers-color-scheme: dark)": value,
     }),
@@ -181,23 +200,6 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     wide: (value: unknown) => ({
       [breakpoints.wide]: value,
     }),
-  },
-});
-
-export const darkTheme = createTheme({
-  colors: {
-    accent: "#c8d7e7",
-    background: "#070f1f",
-    backgroundSpecial: "rgb(20, 30, 50)",
-    border: "rgba(255, 255, 255, 0.2)",
-    borderTable: "rgba(255, 255, 255, 0.1)",
-    default: "rgba(255, 250, 245, 0.05)",
-    defaultHover: "rgba(255, 250, 245, 0.1)",
-    text: "#fffaf5",
-  },
-  shadows: {
-    large: "0",
-    small: "0",
   },
 });
 

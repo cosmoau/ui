@@ -3,7 +3,7 @@ import { ImageStyled } from "../Image/Image.styles";
 
 export const AvatarStyled = styled("div", {
   alignSelf: "center",
-  backgroundColor: "$default !important",
+  backgroundColor: "$default",
   borderRadius: "100%",
   color: "$accent",
   display: "inline-flex",
@@ -27,9 +27,10 @@ export const AvatarStyled = styled("div", {
     fontSize: "$small",
     fontWeight: "bold",
     justifyContent: "center",
-    opacity: 0.8,
     overflow: "hidden",
-    textTransform: "uppercase",
+
+    textTransform: "uppercase"
+
   },
   verticalAlign: "middle",
 });

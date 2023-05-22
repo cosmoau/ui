@@ -3,14 +3,13 @@ import { IAvatar } from "../../types";
 
 import { AvatarStyled } from "./Avatar.styles";
 
-const hexToRgba = (hex: string, opacity: number): string => {
-  const hexValue = hex.replace("#", "");
-  const r = parseInt(hexValue.substring(0, 2), 16);
-  const g = parseInt(hexValue.substring(2, 4), 16);
-  const b = parseInt(hexValue.substring(4, 6), 16);
+const hexToRGB = (hex: string): string => {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5), 16);
 
-  return `rgba(${r}, ${g}, ${b}, ${opacity})`;
-};
+  return `${r}, ${g}, ${b}`;
+}
 
 const getLetter = (
   text: string
@@ -21,11 +20,11 @@ const getLetter = (
 } => {
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const backgroundOptions = [
-    hexToRgba(theme.colors.blueBackground.value, 0.4),
-    hexToRgba(theme.colors.greenBackground.value, 0.4),
-    hexToRgba(theme.colors.orangeBackground.value, 0.4),
-    hexToRgba(theme.colors.redBackground.value, 0.4),
-    hexToRgba(theme.colors.purpleBackground.value, 0.4),
+    hexToRGB(theme.colors.blueBackground.value),
+    hexToRGB(theme.colors.greenBackground.value),
+    hexToRGB(theme.colors.orangeBackground.value),
+    hexToRGB(theme.colors.redBackground.value),
+    hexToRGB(theme.colors.purpleBackground.value),
   ];
   const colorOptions = [
     theme.colors.blueText.value,
@@ -35,17 +34,17 @@ const getLetter = (
     theme.colors.purpleText.value,
   ];
   const borderColorOptions = [
-    hexToRgba(theme.colors.blueText.value, 0.2),
-    hexToRgba(theme.colors.greenText.value, 0.2),
-    hexToRgba(theme.colors.orangeText.value, 0.2),
-    hexToRgba(theme.colors.redText.value, 0.2),
-    hexToRgba(theme.colors.purpleText.value, 0.2),
+    hexToRGB(theme.colors.blueText.value),
+    hexToRGB(theme.colors.greenText.value),
+    hexToRGB(theme.colors.orangeText.value),
+    hexToRGB(theme.colors.redText.value),
+    hexToRGB(theme.colors.purpleText.value),
   ];
 
   const letter = text.charAt(0).toUpperCase();
   const index = letters.indexOf(letter);
   const color = colorOptions[index % colorOptions.length];
-  const backgroundColor = backgroundOptions[index % backgroundOptions.length] + " !important";
+  const backgroundColor = backgroundOptions[index % backgroundOptions.length];
   const borderColor = borderColorOptions[index % borderColorOptions.length];
 
   return {
@@ -66,10 +65,14 @@ export function Avatar(props: IAvatar): JSX.Element {
         height: width,
         width: width,
         ...(colors && {
-          backgroundColor,
-          border: `0.1rem solid ${borderColor}`,
+          backgroundColor: `rgba(${backgroundColor}, 0.4)`,
+             border: `0.1rem solid ${borderColor}`,
+          darkModeSpec: {
+              backgroundColor: `rgba(${backgroundColor}, 0.95)`,
+            },
           span: {
             color,
+         
           },
         }),
         ...css,
