@@ -40,7 +40,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     colors: {
       accent: "#4d5971",
       background: "#fffaf5",
-      blueBackground: "#bcdbe6",
+      blueBackground: "#c6dee8",
       blueData: "#0D4EA6",
       blueDataAlt: "#278e9c",
       blueText: "#041647",
@@ -117,7 +117,8 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
   },
   utils: {
     darkModeSpec: (value: unknown) => ({
-      [`.${darkTheme} &`]: value,}),
+      [`.${darkTheme} &`]: value,
+    }),
     darkThemeSpec: (value: unknown) => ({
       "@media (prefers-color-scheme: dark)": value,
     }),

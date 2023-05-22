@@ -13,6 +13,7 @@ import {
   Avatar,
   Table,
   Places,
+  Input,
 } from "../src/index";
 
 export function App(): ReactElement {
@@ -29,7 +30,7 @@ export function App(): ReactElement {
   };
 
   return (
-    <Provider dark>
+    <Provider>
       <View bottom="largest" container gradient inverted top="largest">
         <Stack direction="row">
           <Stack direction="column">
@@ -523,7 +524,7 @@ export function App(): ReactElement {
           </Stack>
         </Stack>
       </View>
-      <View container inverted top="largest">
+      <View container top="largest">
         <Stack flexduo>
           <Button block>Block Button A</Button>
           <Button block>Block Button B</Button>
@@ -544,7 +545,13 @@ export function App(): ReactElement {
                 value: i * 3,
               },
             ])}
+            filters={<Input placeholder="Filter" />}
             headChildren={["Column A", "Column B", "Column C"]}
+            header={{
+              count: "1000",
+              options: <Button>Options</Button>,
+              title: "Table",
+            }}
             identifier="table"
             kbd
             pagination

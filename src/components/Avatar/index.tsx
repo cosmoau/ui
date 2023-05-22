@@ -9,7 +9,7 @@ const hexToRGB = (hex: string): string => {
   const b = parseInt(hex.slice(5), 16);
 
   return `${r}, ${g}, ${b}`;
-}
+};
 
 const getLetter = (
   text: string
@@ -55,7 +55,7 @@ const getLetter = (
 };
 
 export function Avatar(props: IAvatar): JSX.Element {
-  const { src, alt, fallback, width = 22, css, colors } = props;
+  const { src, alt, fallback, width = 24, css, colors } = props;
 
   const { color, backgroundColor, borderColor } = getLetter(fallback);
 
@@ -65,14 +65,13 @@ export function Avatar(props: IAvatar): JSX.Element {
         height: width,
         width: width,
         ...(colors && {
-          backgroundColor: `rgba(${backgroundColor}, 0.4)`,
-             border: `0.1rem solid ${borderColor}`,
+          backgroundColor: `rgba(${backgroundColor}, 0.475)`,
+          border: `0.1rem solid ${borderColor}`,
           darkModeSpec: {
-              backgroundColor: `rgba(${backgroundColor}, 0.95)`,
-            },
+            backgroundColor: `rgba(${backgroundColor}, 0.95)`,
+          },
           span: {
             color,
-         
           },
         }),
         ...css,

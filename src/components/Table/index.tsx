@@ -1,18 +1,27 @@
+import { ArrowUp } from "@phosphor-icons/react";
 import { sort } from "fast-sort";
 import { useEffect, useState } from "react";
 import { useEventListener, useLocalStorage } from "usehooks-ts";
 
 import { Icons } from "../../icons";
-import { Badge, Button, Loading, Select, Stack, Text, theme } from "../../index";
+import { Badge, Button, Loading, Select, Stack, Text, fadeIn, theme } from "../../index";
 import { ITable } from "../../types";
 
-import { TableCoreStyled, TablePaginationStyled, TableStyled } from "./Table.styles";
+import {
+  TableCoreStyled,
+  TableFiltersStyled,
+  TableHeaderStyled,
+  TablePaginationStyled,
+  TableStyled,
+} from "./Table.styles";
 
 const pageSizes = [10, 25, 50, 100, 200];
 const maxSize = 500;
 
 export function Table(props: ITable): JSX.Element {
   const {
+    header,
+    filters,
     headChildren,
     bodyChildren,
     css,
@@ -109,6 +118,19 @@ export function Table(props: ITable): JSX.Element {
     });
   }
 
+  function scrollToTop(): void {
+    if (identifier && typeof window !== "undefined") {
+      const element = document.getElementById(identifier);
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }
+  }
+
   useEffect(() => {
     if (
       sortedBodyChildren &&
@@ -141,7 +163,26 @@ export function Table(props: ITable): JSX.Element {
 
   return (
     <TableStyled css={css} id={identifier}>
+      {header && (
+        <TableHeaderStyled>
+          <Stack>
+            <Text as="h4" inline={header.count !== undefined ? "small" : undefined}>
+              {header.title}
+            </Text>
+            {header.count && (
+              <Badge css={{ hiddenInline: "phone" }} small theme="blue">
+                {header.count}
+              </Badge>
+            )}
+          </Stack>
+          {header.options && <Stack>{header.options}</Stack>}
+        </TableHeaderStyled>
+      )}
+
+      {filters && <TableFiltersStyled>{filters}</TableFiltersStyled>}
+
       <TableCoreStyled
+        border={header !== undefined}
         slim={slim || (storage.limit > 10 && sortedBodyChildren && sortedBodyChildren.length > 10)}>
         <table {...rest}>
           {headChildren && (
@@ -157,6 +198,7 @@ export function Table(props: ITable): JSX.Element {
                     &nbsp;
                   </th>
                 )}
+
                 {headChildren.map((child, index) =>
                   !sortable || sortDisabled?.includes(index) ? (
                     <th key={index}>
@@ -185,7 +227,7 @@ export function Table(props: ITable): JSX.Element {
                             <Icons.SortDescending />
                           )
                         ) : (
-                          <Icons.Columns />
+                          <Icons.Database />
                         )}
                       </Button>
                     </th>
@@ -276,15 +318,24 @@ export function Table(props: ITable): JSX.Element {
                 }}
               />
             )}
-            <Text accent as="small" css={{ hiddenInline: "tablet" }} inline="small">
-              {storage.offset + 1} -{" "}
-              {storage.offset + storage.limit > sortedBodyChildren.length
-                ? sortedBodyChildren.length
-                : storage.offset + storage.limit}{" "}
-              of {sortedBodyChildren.length}
-            </Text>
-            <Text accent as="small" css={{ visibleInline: "tablet" }} inline="small">
-              {`${storage.page} / ${Math.ceil(sortedBodyChildren.length / storage.limit)}`}
+            <Text
+              accent
+              as="small"
+              inline="small"
+              onClick={(): void => {
+                scrollToTop();
+              }}>
+              <ArrowUp style={{ animation: `${fadeIn} 0.3s ease-in-out`, marginRight: "0.5rem" }} />
+              <Text as="span" css={{ hiddenInline: "tablet" }}>
+                {storage.offset + 1} -{" "}
+                {storage.offset + storage.limit > sortedBodyChildren.length
+                  ? sortedBodyChildren.length
+                  : storage.offset + storage.limit}{" "}
+                of {sortedBodyChildren.length}
+              </Text>
+              <Text as="span" css={{ visibleInline: "tablet" }}>
+                {`${storage.page} / ${Math.ceil(sortedBodyChildren.length / storage.limit)}`}
+              </Text>
             </Text>
           </Stack>
           <Stack>

@@ -6,7 +6,7 @@ export const BadgeStyled = styled("div", {
   },
   alignContent: "center !important",
   alignItems: "center !important",
-  border: "0.1rem solid $borderTable",
+  border: "0.1rem solid transparent",
   borderRadius: "$large",
   display: "inline-flex",
   fontSize: "$default",
@@ -41,6 +41,7 @@ export const BadgeStyled = styled("div", {
         color: "$blueText",
       },
       border: {
+        backgroundColor: "$background",
         borderColor: "$border",
         color: "$text",
       },

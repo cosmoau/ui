@@ -269,7 +269,13 @@ export interface ITable {
   defaultDirection?: "asc" | "desc";
   defaultLimit?: 10 | 25 | 50 | 100 | 200;
   defaultSort?: number;
+  filters?: ReactNode;
   headChildren?: Array<string>;
+  header?: {
+    count?: string | number;
+    options?: ReactNode;
+    title: string;
+  } | null;
   identifier?: string;
   kbd?: boolean;
   loading?: boolean;

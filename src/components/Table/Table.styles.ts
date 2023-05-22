@@ -47,10 +47,15 @@ export const TableCoreStyled = styled("div", {
   },
 
   variants: {
+    border: {
+      true: {
+        border: "0.1rem solid $border",
+      },
+    },
     slim: {
       true: {
         td: {
-          padding: "$small $medium !important",
+          padding: "0.65rem $medium !important",
         },
       },
     },
@@ -59,12 +64,39 @@ export const TableCoreStyled = styled("div", {
   width: "100%",
 });
 
+export const TableHeaderStyled = styled("div", {
+  "*": {
+    verticalAlign: "middle",
+  },
+
+  alignItems: "center",
+  backgroundColor: "$background",
+  display: "flex",
+  gap: "$small",
+  h4: {
+    marginBottom: 0,
+  },
+  justifyContent: "space-between",
+  paddingBottom: "$small",
+  verticalAlign: "middle",
+});
+
+export const TableFiltersStyled = styled("div", {
+  borderBottom: "0.1rem solid $borderTable",
+  display: "block",
+  input: {
+    width: "100%",
+  },
+  paddingBottom: "calc($medium * 1.5)",
+  paddingTop: "$medium",
+  width: "100%",
+});
+
 export const TablePaginationStyled = styled("div", {
   alignItems: "center",
-  borderTop: "0.1rem solid $border",
   display: "flex",
   justifyContent: "space-between",
-  padding: "$small $medium",
+  paddingTop: "$medium",
 
   small: {
     opacity: 0.6,

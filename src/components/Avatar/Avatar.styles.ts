@@ -29,8 +29,7 @@ export const AvatarStyled = styled("div", {
     justifyContent: "center",
     overflow: "hidden",
 
-    textTransform: "uppercase"
-
+    textTransform: "uppercase",
   },
   verticalAlign: "middle",
 });

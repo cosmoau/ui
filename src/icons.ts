@@ -10,11 +10,11 @@ import {
   X,
   ArrowLeft,
   ArrowRight,
-  Columns,
   MagnifyingGlassMinus,
   SortAscending,
   SortDescending,
   Table,
+  Database,
 } from "@phosphor-icons/react";
 
 export const Icons = {
@@ -23,7 +23,7 @@ export const Icons = {
   ArrowSquareOut,
   Check,
   ClipboardText,
-  Columns,
+  Database,
   Eye,
   EyeClosed,
   IconContext,
