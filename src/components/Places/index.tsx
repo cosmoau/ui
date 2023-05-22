@@ -7,11 +7,12 @@ import { IPlaces } from "../../types";
 import { PlacesStyled } from "./Places.styles";
 
 export function Places(props: IPlaces): JSX.Element {
-  const { placeholder, country = "au", apiKey, onAutocomplete, ...rest } = props;
+  const { placeholder, country = "au", restrict, apiKey, onAutocomplete, ...rest } = props;
   const ref = useRef<HTMLInputElement | null>(null) as React.MutableRefObject<HTMLInputElement>;
   const [data, setData] = useState<{
     address: string;
     city: string;
+    restrictedAddress: string;
     state: string;
   } | null>(null);
 
@@ -29,7 +30,7 @@ export function Places(props: IPlaces): JSX.Element {
       .then((google) => {
         const autocomplete = new google.maps.places.Autocomplete(ref.current, {
           componentRestrictions: { country },
-          fields: ["address_components", "formatted_address", "geometry"],
+          fields: ["address_components", "formatted_address", "geometry", "name"],
           types: ["address"],
         });
 
@@ -38,12 +39,11 @@ export function Places(props: IPlaces): JSX.Element {
 
           if (place.geometry) {
             const init = {
-              address: place.formatted_address
-                ? place.formatted_address.replace(/^[0-9]+ /, "")
-                : "",
+              address: place?.formatted_address || "",
               city:
                 place?.address_components?.find((component) => component.types.includes("locality"))
                   ?.long_name || "",
+              restrictedAddress: place?.formatted_address?.replace(/^[0-9]+ /, "") || "",
               state:
                 place?.address_components?.find((component) =>
                   component.types.includes("administrative_area_level_1")
@@ -69,7 +69,7 @@ export function Places(props: IPlaces): JSX.Element {
 
   return (
     <PlacesStyled
-      key={data?.address || ""}
+      key={data?.address}
       mustRef={ref}
       name="address"
       placeholder={placeholder || "Enter your address"}
@@ -78,7 +78,7 @@ export function Places(props: IPlaces): JSX.Element {
       }}
       submitValid={(): boolean => !!data?.address}
       type="text"
-      value={data?.address}
+      value={restrict ? data?.restrictedAddress : data?.address}
       {...rest}
     />
   );

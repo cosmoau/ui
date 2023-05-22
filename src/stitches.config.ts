@@ -73,7 +73,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       small: "0.6rem",
     },
     shadows: {
-      large: "0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.3)",
+      large: "0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2)",
       small: "0 0.2rem 0.3rem 0 rgba(0, 0, 0, 0.15)",
     },
     space: {

@@ -1,7 +1,19 @@
 import { CurrencyEth } from "@phosphor-icons/react";
 import React, { ReactElement } from "react";
+import toast from "react-hot-toast";
 
-import { Provider, View, Text, Button, Badge, Stack, Dialog, Avatar, Table } from "../src/index";
+import {
+  Provider,
+  View,
+  Text,
+  Button,
+  Badge,
+  Stack,
+  Dialog,
+  Avatar,
+  Table,
+  Places,
+} from "../src/index";
 
 export function App(): ReactElement {
   const temp = {
@@ -18,7 +30,22 @@ export function App(): ReactElement {
 
   return (
     <Provider dark>
-      <View gradient top="largest">
+      <View bottom="largest" container gradient inverted top="largest">
+        <Stack direction="row">
+          <Stack direction="column">
+            <Places
+              apiKey={process.env.GOOGLE_API_KEY || ""}
+              placeholder="Search"
+              submit="Save"
+              // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+              submitFunction={(data) => {
+                toast.success(JSON.stringify(data));
+              }}
+            />
+          </Stack>
+        </Stack>
+      </View>
+      <View container gradient top="largest">
         <Stack direction="row">
           <Stack direction="column">
             <Dialog title="Test" trigger={<Button inline="medium">Normal Dialog</Button>}>

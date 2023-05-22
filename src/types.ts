@@ -187,9 +187,11 @@ export interface IPlaces extends IInput {
     data: {
       address: string;
       city: string;
+      restrictedAddress: string;
       state: string;
     } | null
   ) => void;
+  restrict?: boolean;
 }
 
 export interface IPopover {

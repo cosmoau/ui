@@ -9,7 +9,7 @@ export const placesReset = {
   ".pac-container": {
     "*": {
       fontFamily: "$default",
-      fontSize: "13px",
+      fontSize: "14px",
     },
     ".pac-item": {
       "&:hover": {

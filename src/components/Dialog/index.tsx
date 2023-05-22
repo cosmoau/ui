@@ -51,7 +51,7 @@ export function Dialog(props: IDialog): JSX.Element {
     }
   });
 
-  useLockedBody(isOpen);
+  useLockedBody(isMounted);
 
   const innerWidth = typeof window !== "undefined" ? Number(window?.innerWidth || 0) : 0;
   const innerHeight = typeof window !== "undefined" ? Number(window?.innerHeight || 0) : 0;
