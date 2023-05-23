@@ -60,6 +60,13 @@ export function Places(props: IPlaces): JSX.Element {
       })
       .catch((error) => {
         toast(error.message || "Error loading Google Maps for autocomplete, please refresh.");
+      })
+      .finally(() => {
+        const container = document?.querySelector(".pac-container");
+
+        if (container) {
+          container.remove();
+        }
       });
   }, [data, onAutocomplete, ref]);
 
