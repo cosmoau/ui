@@ -11,6 +11,7 @@ export const placesReset = {
       fontFamily: "$default",
       fontSize: "14px",
     },
+
     ".pac-item": {
       "&:hover": {
         backgroundColor: "$default",
@@ -27,20 +28,19 @@ export const placesReset = {
       color: "$accent",
       padding: "$smallest $small",
     },
-
     backgroundColor: "$background",
     border: "0.1rem solid $border",
     borderRadius: "$small",
     boxShadow: "$small",
-    color: "$text",
 
+    color: "$text",
     marginTop: "$small",
-    width: "100%",
     [breakpoints.phone]: {
       margin: "0 auto",
       marginTop: "$small",
       width: "85% !important",
     },
+    width: "100%",
   },
   ".pac-logo:after": {
     display: "none",

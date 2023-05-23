@@ -14,7 +14,10 @@ import {
   SortAscending,
   SortDescending,
   Table,
+  Moon,
   Database,
+  Gear,
+  Sun,
 } from "@phosphor-icons/react";
 
 export const Icons = {
@@ -26,11 +29,14 @@ export const Icons = {
   Database,
   Eye,
   EyeClosed,
+  Gear,
   IconContext,
   MagnifyingGlass,
   MagnifyingGlassMinus,
+  Moon,
   SortAscending,
   SortDescending,
+  Sun,
   TableRows: Table,
   Warning,
   X,

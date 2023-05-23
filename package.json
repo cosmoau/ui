@@ -1,7 +1,7 @@
 {
   "name": "@cosmoau/ui",
   "description": "Cosmo's internal component library - Next.js + TypeScript.",
-  "version": "1.5.8",
+  "version": "1.5.9",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": [
     "defaults",

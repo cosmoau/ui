@@ -38,6 +38,16 @@ export function App(): ReactElement {
         <Stack direction="row">
           <Stack direction="column">
             <h1>{tempAddress}</h1>
+            <Text as="ul">
+              <Text as="li">test</Text>
+              <Text as="li">test</Text>
+              <li>test</li>
+            </Text>
+            <Text as="ol">
+              <Text as="li">test</Text>
+              <Text as="li">test</Text>
+              <li>test</li>
+            </Text>
 
             <Places
               apiKey={process.env.GOOGLE_API_KEY || ""}
