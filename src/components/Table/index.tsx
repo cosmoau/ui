@@ -15,7 +15,7 @@ import {
   TableStyled,
 } from "./Table.styles";
 
-const pageSizes = [10, 25, 50, 100, 200];
+const pageSizes = [10, 25, 50, 100];
 const maxSize = 500;
 
 export function Table(props: ITable): JSX.Element {
@@ -320,6 +320,17 @@ export function Table(props: ITable): JSX.Element {
             <Text
               accent
               as="small"
+              css={{
+                "&:hover": {
+                  svg: {
+                    transform: "scale(1.2)",
+                  },
+                },
+                cursor: "pointer",
+                svg: {
+                  transition: "$default",
+                },
+              }}
               inline="small"
               onClick={(): void => {
                 scrollToTop();

@@ -53,7 +53,7 @@ export const TableCoreStyled = styled("div", {
     slim: {
       true: {
         td: {
-          padding: "0.65rem $medium !important",
+          padding: "0.8rem $medium !important",
         },
       },
     },
