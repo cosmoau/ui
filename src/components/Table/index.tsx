@@ -182,7 +182,6 @@ export function Table(props: ITable): JSX.Element {
       {filters && <TableFiltersStyled>{filters}</TableFiltersStyled>}
 
       <TableCoreStyled
-        border={header !== undefined}
         slim={slim || (storage.limit > 10 && sortedBodyChildren && sortedBodyChildren.length > 10)}>
         <table {...rest}>
           {headChildren && (

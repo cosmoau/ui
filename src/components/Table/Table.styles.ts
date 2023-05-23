@@ -9,6 +9,9 @@ export const TableCoreStyled = styled("div", {
   "*": {
     verticalAlign: "middle",
   },
+  border: "0.1rem solid $border",
+
+  borderRadius: "$small",
   overflowX: "auto",
 
   table: {
@@ -47,11 +50,6 @@ export const TableCoreStyled = styled("div", {
   },
 
   variants: {
-    border: {
-      true: {
-        border: "0.1rem solid $border",
-      },
-    },
     slim: {
       true: {
         td: {
@@ -77,18 +75,16 @@ export const TableHeaderStyled = styled("div", {
     marginBottom: 0,
   },
   justifyContent: "space-between",
-  paddingBottom: "$small",
+  paddingBottom: "calc($medium * 1.5)",
   verticalAlign: "middle",
 });
 
 export const TableFiltersStyled = styled("div", {
-  borderBottom: "0.1rem solid $borderTable",
   display: "block",
   input: {
     width: "100%",
   },
   paddingBottom: "calc($medium * 1.5)",
-  paddingTop: "$medium",
   width: "100%",
 });
 

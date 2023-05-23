@@ -42,7 +42,9 @@ export function Stack(props: IStack): JSX.Element {
     <StackElement
       className={className}
       css={{
-        textAlign: align || "left",
+        ...(align && {
+          textAlign: align,
+        }),
         ...(top && {
           marginTop: 0,
           paddingTop: `$${top}`,
