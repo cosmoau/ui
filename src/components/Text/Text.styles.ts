@@ -45,11 +45,11 @@ export const TextSizes = {
   li: {
     fontSize: "$default",
     lineHeight: "$default",
-    listStylePosition: "inside",
     marginBottom: "$smaller",
   },
   ol: {
     marginBottom: 0,
+    paddingLeft: "$small",
   },
   p: {
     fontFamily: "$default",
@@ -75,6 +75,7 @@ export const TextSizes = {
   },
   ul: {
     marginBottom: 0,
+    paddingLeft: "$small",
   },
 };
 
