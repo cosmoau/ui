@@ -50,11 +50,11 @@ export function Places(props: IPlaces): JSX.Element {
                 )?.short_name || "",
             };
 
+            setData(init);
+
             if (onAutocomplete) {
               onAutocomplete(init);
             }
-
-            setData(init);
           }
         });
       })

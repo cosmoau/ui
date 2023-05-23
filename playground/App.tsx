@@ -1,6 +1,7 @@
+/* eslint-disable no-console */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { CurrencyEth } from "@phosphor-icons/react";
 import React, { ReactElement } from "react";
-import toast from "react-hot-toast";
 
 import {
   Provider,
@@ -29,18 +30,21 @@ export function App(): ReactElement {
     width: "5rem",
   };
 
+  const [tempAddress, setTempAddress] = React.useState("");
+
   return (
     <Provider>
       <View bottom="largest" container gradient inverted top="largest">
         <Stack direction="row">
           <Stack direction="column">
+            <h1>{tempAddress}</h1>
+
             <Places
               apiKey={process.env.GOOGLE_API_KEY || ""}
               placeholder="Search"
-              submit="Save"
-              // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-              submitFunction={(data) => {
-                toast.success(JSON.stringify(data));
+              onAutocomplete={(data) => {
+                console.log(data);
+                setTempAddress(data?.address || "");
               }}
             />
           </Stack>
