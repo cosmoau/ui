@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useTernaryDarkMode } from "usehooks-ts";
 
 import { Icons } from "../../icons";
@@ -12,11 +13,21 @@ import { ProviderStyled, providerReset } from "./Provider.styles";
 export function Provider(props: IProvider): JSX.Element {
   const { children, css } = props;
   const { isDarkMode } = useTernaryDarkMode();
+  const [display, setDisplay] = useState("none");
 
   providerReset();
 
+  useEffect(() => {
+    setDisplay("block");
+  }, []);
+
   return (
-    <ProviderStyled className={isDarkMode ? darkTheme : undefined} css={css}>
+    <ProviderStyled
+      className={isDarkMode ? darkTheme : undefined}
+      css={{
+        ...css,
+        display,
+      }}>
       <Icons.IconContext.Provider
         value={{ height: 19, mirrored: false, weight: "regular", width: 19 }}>
         <Toast />

@@ -10,10 +10,9 @@ export function Image(props: IImage): JSX.Element {
     borderRadius,
     fill,
     fillFit,
-    fillPosition,
+    fillPosition = "center",
     fillHeight = "100%",
-    sizes,
-    quality,
+    quality = 60,
     ...rest
   } = props;
 
@@ -29,12 +28,12 @@ export function Image(props: IImage): JSX.Element {
       }}>
       <NextImage
         {...rest}
-        decoding="async"
         fill={fill}
-        quality={quality || 70}
-        sizes={sizes}
+        quality={quality}
         style={{
-          borderRadius: `$${borderRadius} `,
+          ...(borderRadius && {
+            borderRadius: `$${borderRadius}`,
+          }),
           objectFit: fill ? fillFit || "cover" : "contain",
           objectPosition: fillPosition,
         }}
