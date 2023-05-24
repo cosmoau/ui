@@ -44,10 +44,10 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       blueData: "#0D4EA6",
       blueDataAlt: "#278e9c",
       blueText: "#041647",
-      border: "rgba(0, 0, 0, 0.15)",
-      borderTable: "rgba(0, 0, 0, 0.075)",
-      default: "#f3f0e9",
-      defaultHover: "#e3e0da",
+      border: "rgba(0, 0, 0, 0.12)",
+      borderTable: "rgba(0, 0, 0, 0.06)",
+      default: "#f1efed",
+      defaultHover: "#e9e5e2",
       greenBackground: "#d1ece9",
       greenData: "#52A31D",
       greenDataAlt: "#077D55",
@@ -105,7 +105,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       smallest: "0.25rem",
     },
     transitions: {
-      default: "all 0.2s linear",
+      default: "all 0.23s ease",
     },
     zIndices: {
       dialog: 997,

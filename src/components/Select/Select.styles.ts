@@ -78,11 +78,8 @@ export const SelectFilterStyled = styled("div", {
   padding: "$smaller $small",
 });
 
-export const SelectItemStyled = styled("div", {
-  "&:hover": {
-    backgroundColor: "$defaultHover",
-    borderBottomColor: "transparent",
-  },
+export const SelectItemStyled = styled("option", {
+  backgroundColor: "$background",
   borderRadius: "$small",
   cursor: "pointer",
   display: "flex",
@@ -90,9 +87,14 @@ export const SelectItemStyled = styled("div", {
   justifyContent: "space-between",
   marginTop: "$smallest",
   padding: "$smaller $small",
-
   transition: "$default",
   variants: {
+    focused: {
+      true: {
+        backgroundColor: "$defaultHover",
+        borderBottomColor: "transparent",
+      },
+    },
     last: {
       true: {
         "&:last-child": {

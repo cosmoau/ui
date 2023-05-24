@@ -101,8 +101,8 @@ export function Dialog(props: IDialog): JSX.Element {
             <DialogHeaderStyled>
               <Text as="h4">{title}</Text>
 
-              <Button icon={<Icons.X />} small onClick={(): void => handleClose()}>
-                Close
+              <Button small theme="fill" onClick={(): void => handleClose()}>
+                <Icons.X />
               </Button>
             </DialogHeaderStyled>
             <DialogContentStyled>{children}</DialogContentStyled>

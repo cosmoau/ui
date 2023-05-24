@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
 import { useTernaryDarkMode } from "usehooks-ts";
 
 import { Icons } from "../../icons";
-import { darkTheme } from "../../stitches.config";
+import { darkTheme, theme } from "../../stitches.config";
 import { IProvider, ISelect } from "../../types";
 import { Button } from "../Button";
 import { Select } from "../Select";
@@ -11,22 +10,16 @@ import { Toast } from "../Toast";
 import { ProviderStyled, providerReset } from "./Provider.styles";
 
 export function Provider(props: IProvider): JSX.Element {
-  const { children, css } = props;
+  const { children, css, disableTheme } = props;
   const { isDarkMode } = useTernaryDarkMode();
-  const [display, setDisplay] = useState("none");
 
   providerReset();
 
-  useEffect(() => {
-    setDisplay("block");
-  }, []);
-
   return (
     <ProviderStyled
-      className={isDarkMode ? darkTheme : undefined}
+      className={isDarkMode && !disableTheme ? darkTheme : theme}
       css={{
         ...css,
-        display,
       }}>
       <Icons.IconContext.Provider
         value={{ height: 19, mirrored: false, weight: "regular", width: 19 }}>

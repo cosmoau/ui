@@ -37,9 +37,11 @@ export function Select(props: ISelect): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const [filter, setFilter] = useState("");
+  const [focused, setFocused] = useState(selection ? selection[0] : "");
 
   function handleClose(): void {
     setIsOpen(false);
+    setFocused(selection ? selection[0] : "");
     setTimeout(() => {
       setIsMounted(false);
     }, 250);
@@ -73,6 +75,30 @@ export function Select(props: ISelect): JSX.Element {
     if (event.key === "Escape") {
       event.preventDefault();
       handleClose();
+    }
+    if (isOpen && event.key === "ArrowDown") {
+      event.preventDefault();
+      const index = options.findIndex((option) => option.value === focused);
+
+      if (index < options.length - 1) {
+        setFocused(options[index + 1].value);
+      }
+    }
+    if (isOpen && event.key === "ArrowUp") {
+      event.preventDefault();
+      const index = options.findIndex((option) => option.value === focused);
+
+      if (index > 0) {
+        setFocused(options[index - 1].value);
+      }
+    }
+    if (isOpen && event.key === "Enter") {
+      event.preventDefault();
+      const index = options.findIndex((option) => option.value === focused);
+
+      if (index >= 0) {
+        handleSelection(options[index].value, options[index].label);
+      }
     }
   });
 
@@ -131,11 +157,17 @@ export function Select(props: ISelect): JSX.Element {
             filteredOptions.map((option) => (
               <SelectItemStyled
                 key={option.value + Math.random()}
+                focused={option.value === focused}
                 last={last && !filter}
                 selected={
-                  selection && selection.find((item) => item === option.value) ? true : false
+                  selection &&
+                  selection.find((item) => item === option.value) &&
+                  focused !== option.value
+                    ? true
+                    : false
                 }
-                onClick={(): void => handleSelection(option.value, option.label)}>
+                onClick={(): void => handleSelection(option.value, option.label)}
+                onMouseOverCapture={(): void => setFocused(option.value)}>
                 {option.icon && option.iconPosition !== "right" && (
                   <SelectIconStyled align="left">{option.icon}</SelectIconStyled>
                 )}

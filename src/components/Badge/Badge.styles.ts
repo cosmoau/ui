@@ -15,6 +15,10 @@ export const BadgeStyled = styled("div", {
   marginBottom: "0 !important",
   padding: "$smallest $small",
 
+  phone: {
+    minHeight: "3.1rem",
+  },
+
   variants: {
     animation: {
       true: {
