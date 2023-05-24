@@ -78,7 +78,7 @@ export const SelectFilterStyled = styled("div", {
   padding: "$smaller $small",
 });
 
-export const SelectItemStyled = styled("option", {
+export const SelectItemStyled = styled("div", {
   backgroundColor: "$background",
   borderRadius: "$small",
   cursor: "pointer",
