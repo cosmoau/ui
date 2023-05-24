@@ -1,5 +1,7 @@
 import { styled } from "../../stitches.config";
 
+const highlight = { borderRadius: "0.25rem", paddingLeft: "$smaller", paddingRight: "$smaller" };
+
 export const TextSizes = {
   h1: {
     fontFamily: "$serif",
@@ -93,6 +95,47 @@ export const TextStyled = styled("div", {
     bold: {
       true: {
         fontWeight: "bold",
+      },
+    },
+    highlight: {
+      blue: {
+        ...highlight,
+        backgroundColor: "$blueBackground",
+        darkModeSpec: {
+          backgroundColor: "$blueText",
+        },
+      },
+      default: {
+        ...highlight,
+        backgroundColor: "$border",
+      },
+      green: {
+        ...highlight,
+        backgroundColor: "$greenBackground",
+        darkModeSpec: {
+          backgroundColor: "$greenText",
+        },
+      },
+      orange: {
+        ...highlight,
+        backgroundColor: "$orangeBackground",
+        darkModeSpec: {
+          backgroundColor: "$orangeText",
+        },
+      },
+      purple: {
+        ...highlight,
+        backgroundColor: "$purpleBackground",
+        darkModeSpec: {
+          backgroundColor: "$purpleText",
+        },
+      },
+      red: {
+        ...highlight,
+        backgroundColor: "$redBackground",
+        darkModeSpec: {
+          backgroundColor: "$redText",
+        },
       },
     },
     size: TextSizes,

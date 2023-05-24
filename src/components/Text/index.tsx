@@ -3,7 +3,7 @@ import { IText } from "../../types";
 import { TextStyled } from "./Text.styles";
 
 export function Text(props: IText): JSX.Element {
-  const { accent, top, bottom, inline, as, override, css, children, ...rest } = props;
+  const { accent, top, bottom, highlight, inline, as, override, css, children, ...rest } = props;
 
   return (
     <TextStyled
@@ -28,6 +28,7 @@ export function Text(props: IText): JSX.Element {
 
         ...css,
       }}
+      highlight={highlight}
       size={as || "p"}
       {...rest}>
       {children}
