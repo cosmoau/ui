@@ -10,14 +10,14 @@ import { Toast } from "../Toast";
 import { ProviderStyled, providerReset } from "./Provider.styles";
 
 export function Provider(props: IProvider): JSX.Element {
-  const { children, css, disableTheme } = props;
+  const { children, css, enableThemes } = props;
   const { isDarkMode } = useTernaryDarkMode();
 
   providerReset();
 
   return (
     <ProviderStyled
-      className={isDarkMode && !disableTheme ? darkTheme : theme}
+      className={isDarkMode && enableThemes ? darkTheme : theme}
       css={{
         ...css,
       }}>

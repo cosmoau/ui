@@ -209,7 +209,7 @@ export interface IPopover {
 export interface IProvider {
   children: ReactNode;
   css?: CSS;
-  disableTheme?: boolean;
+  enableThemes?: boolean;
 }
 
 export interface ISelect {
