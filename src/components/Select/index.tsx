@@ -166,8 +166,7 @@ export function Select(props: ISelect): JSX.Element {
                     ? true
                     : false
                 }
-                onClick={(): void => handleSelection(option.value, option.label)}
-                onMouseOverCapture={(): void => setFocused(option.value)}>
+                onClick={(): void => handleSelection(option.value, option.label)}>
                 {option.icon && option.iconPosition !== "right" && (
                   <SelectIconStyled align="left">{option.icon}</SelectIconStyled>
                 )}

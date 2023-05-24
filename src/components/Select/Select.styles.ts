@@ -79,6 +79,11 @@ export const SelectFilterStyled = styled("div", {
 });
 
 export const SelectItemStyled = styled("div", {
+  "&:hover": {
+    backgroundColor: "$defaultHover",
+    borderBottomColor: "transparent",
+  },
+
   backgroundColor: "$background",
   borderRadius: "$small",
   cursor: "pointer",
