@@ -555,7 +555,7 @@ export function App(): ReactElement {
           </Stack>
         </Stack>
       </View>
-      <View container top="largest">
+      <View container inverted top="largest">
         <Stack flexduo>
           <Button block>Block Button A</Button>
           <Button block>Block Button B</Button>

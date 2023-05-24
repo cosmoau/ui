@@ -27,6 +27,9 @@ export const TableCoreStyled = styled("div", {
 
     tbody: {
       tr: {
+        "&:hover": {
+          backgroundColor: "$defaultTable",
+        },
         td: {
           borderTop: "0.1rem solid $borderTable",
           fontSize: "$default",
@@ -96,4 +99,5 @@ export const TablePaginationStyled = styled("div", {
   small: {
     opacity: 0.6,
   },
+  transition: "$default",
 });
