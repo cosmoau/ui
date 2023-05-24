@@ -41,7 +41,7 @@ export function Select(props: ISelect): JSX.Element {
 
   function handleClose(): void {
     setIsOpen(false);
-    setFocused(selection ? selection[0] : "");
+    setFocused("");
     setTimeout(() => {
       setIsMounted(false);
     }, 250);

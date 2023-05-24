@@ -59,6 +59,19 @@ export function Table(props: ITable): JSX.Element {
         : sort(bodyChildren).desc((row) => row[sortBy].value)
       : bodyChildren;
 
+  function scrollToTop(): void {
+    if (identifier && typeof window !== "undefined") {
+      const element = document.getElementById(identifier);
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }
+  }
+
   function handleSortMapping(index: number): void {
     if (sortBy === index) {
       setSortDirection(sortDirection === "asc" ? "desc" : "asc");
@@ -78,6 +91,8 @@ export function Table(props: ITable): JSX.Element {
       offset: 0,
       page: 1,
     });
+    // scroll to top
+    scrollToTop();
   }
 
   function handlePageChange(direction: "next" | "prev"): void {
@@ -116,19 +131,6 @@ export function Table(props: ITable): JSX.Element {
       offset: sortedBodyChildren ? sortedBodyChildren.length - storage.limit : 0,
       page: Math.ceil(sortedBodyChildren ? sortedBodyChildren.length / storage.limit : 0),
     });
-  }
-
-  function scrollToTop(): void {
-    if (identifier && typeof window !== "undefined") {
-      const element = document.getElementById(identifier);
-
-      if (element) {
-        element.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      }
-    }
   }
 
   useEffect(() => {
@@ -186,7 +188,7 @@ export function Table(props: ITable): JSX.Element {
         <table {...rest}>
           {headChildren && (
             <thead>
-              <tr>
+              <tr style={{ position: "sticky", top: 0 }}>
                 {rowNumbers && (
                   <th
                     style={{

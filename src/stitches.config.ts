@@ -119,9 +119,6 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     darkModeSpec: (value: unknown) => ({
       [`.${darkTheme} &`]: value,
     }),
-    darkThemeSpec: (value: unknown) => ({
-      "@media (prefers-color-scheme: dark)": value,
-    }),
     desktop: (value: unknown) => ({
       [breakpoints.desktop]: value,
     }),

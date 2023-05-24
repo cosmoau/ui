@@ -10,17 +10,19 @@ export const TableCoreStyled = styled("div", {
     verticalAlign: "middle",
   },
   border: "0.1rem solid $border",
-
   borderRadius: "$small",
-  overflowX: "auto",
+
+  position: "relative",
 
   table: {
     border: 0,
     borderCollapse: "separate",
     borderSpacing: "0",
+    height: "100%",
     margin: 0,
     minWidth: "100%",
     padding: 0,
+    position: "relative",
     tableLayout: "auto",
 
     tbody: {
@@ -34,17 +36,17 @@ export const TableCoreStyled = styled("div", {
       },
     },
     thead: {
-      backgroundColor: "$default",
-
       th: {
-        "*": {
-          color: "$accent",
-        },
+        backgroundColor: "$default",
+        color: "$accent",
         fontSize: "$small",
         fontWeight: "normal",
         padding: "$smaller $medium",
+        position: "sticky",
         textAlign: "left !important",
+        top: 0,
         whiteSpace: "nowrap",
+        zIndex: 1,
       },
     },
   },
@@ -53,7 +55,7 @@ export const TableCoreStyled = styled("div", {
     slim: {
       true: {
         td: {
-          padding: "0.8rem $medium !important",
+          padding: "$small $medium !important",
         },
       },
     },
@@ -66,8 +68,6 @@ export const TableHeaderStyled = styled("div", {
   "*": {
     verticalAlign: "middle",
   },
-
-  alignItems: "center",
   backgroundColor: "$background",
   display: "flex",
   gap: "$small",
@@ -93,7 +93,6 @@ export const TablePaginationStyled = styled("div", {
   display: "flex",
   justifyContent: "space-between",
   paddingTop: "$medium",
-
   small: {
     opacity: 0.6,
   },

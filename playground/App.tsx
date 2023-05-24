@@ -39,9 +39,20 @@ export function App(): ReactElement {
           <Stack direction="column">
             <h1>{tempAddress}</h1>
             <Text as="ul">
-              <Text as="li">test</Text>
+              <Text as="li">
+                Wow this is a{" "}
+                <Text as="span" highlight="green">
+                  test
+                </Text>
+              </Text>
               <Text as="li">test</Text>
               <li>test</li>
+              <Text as="li">
+                Another wow a{" "}
+                <Text as="span" highlight="default">
+                  test
+                </Text>
+              </Text>
             </Text>
             <Text as="ol">
               <Text as="li">test</Text>
@@ -231,7 +242,13 @@ export function App(): ReactElement {
       </View>
       <View bottom="largest" container top="largest">
         <Text as="h3" top="largest">
-          Hello World, it is <i>good</i> to see you!
+          Text as{" "}
+          <Text as="span" highlight="green">
+            h3 with top
+          </Text>{" "}
+          largest spacing and bottom default spacing (large) and default size (medium) and default
+          weight (normal) and default color (black) and default align (left) and default transform
+          (none) and default decoration (none) and default spacing (normal)
         </Text>
         <Text accent bottom="large">
           This is an accent text
