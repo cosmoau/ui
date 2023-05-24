@@ -47,7 +47,7 @@ export const TableCoreStyled = styled("div", {
         padding: "$smaller $medium",
         textAlign: "left !important",
         whiteSpace: "nowrap",
-        zIndex: 1,
+        zIndex: "$table",
       },
     },
   },
