@@ -285,6 +285,7 @@ export interface ITable {
   slim?: boolean;
   sortDisabled?: number[];
   sortable?: boolean;
+  sticky?: boolean;
 }
 
 export interface IText extends HTMLAttributes<HTMLDivElement> {

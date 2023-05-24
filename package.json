@@ -1,7 +1,7 @@
 {
   "name": "@cosmoau/ui",
   "description": "Cosmo's internal component library - Next.js + TypeScript.",
-  "version": "1.5.15",
+  "version": "1.5.16",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": [
     "defaults",
@@ -13,7 +13,7 @@
     "url": "https://github.com/cosmoau/ui/issues"
   },
   "dependencies": {
-    "@googlemaps/js-api-loader": "github:googlemaps/js-api-loader",
+    "@googlemaps/js-api-loader": "^1.15.2",
     "@stitches/react": "^1.2.8",
     "fast-sort": "^3.4.0"
   },

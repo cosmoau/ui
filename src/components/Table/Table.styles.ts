@@ -45,9 +45,7 @@ export const TableCoreStyled = styled("div", {
         fontSize: "$small",
         fontWeight: "normal",
         padding: "$smaller $medium",
-        position: "sticky",
         textAlign: "left !important",
-        top: 0,
         whiteSpace: "nowrap",
         zIndex: 1,
       },
@@ -59,6 +57,14 @@ export const TableCoreStyled = styled("div", {
       true: {
         td: {
           padding: "$small $medium !important",
+        },
+      },
+    },
+    sticky: {
+      true: {
+        th: {
+          position: "sticky",
+          top: 0,
         },
       },
     },

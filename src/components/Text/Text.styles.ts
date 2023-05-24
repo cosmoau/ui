@@ -107,7 +107,10 @@ export const TextStyled = styled("div", {
       },
       default: {
         ...highlight,
-        backgroundColor: "$border",
+        backgroundColor: "$default",
+        darkModeSpec: {
+          backgroundColor: "$border",
+        },
       },
       green: {
         ...highlight,

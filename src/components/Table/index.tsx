@@ -26,6 +26,7 @@ export function Table(props: ITable): JSX.Element {
     bodyChildren,
     css,
     sortable,
+    sticky,
     sortDisabled,
     defaultSort,
     defaultDirection,
@@ -184,11 +185,12 @@ export function Table(props: ITable): JSX.Element {
       {filters && <TableFiltersStyled>{filters}</TableFiltersStyled>}
 
       <TableCoreStyled
-        slim={slim || (storage.limit > 10 && sortedBodyChildren && sortedBodyChildren.length > 10)}>
+        slim={slim || (storage.limit > 10 && sortedBodyChildren && sortedBodyChildren.length > 10)}
+        sticky={sticky}>
         <table {...rest}>
           {headChildren && (
             <thead>
-              <tr style={{ position: "sticky", top: 0 }}>
+              <tr>
                 {rowNumbers && (
                   <th
                     style={{
