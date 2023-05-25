@@ -11,18 +11,17 @@ export const TableCoreStyled = styled("div", {
   },
   border: "0.1rem solid $border",
   borderRadius: "$small",
-
-  position: "relative",
+  overflowX: "auto",
 
   table: {
     border: 0,
     borderCollapse: "separate",
     borderSpacing: "0",
-    height: "100%",
+
     margin: 0,
     minWidth: "100%",
     padding: 0,
-    position: "relative",
+
     tableLayout: "auto",
 
     tbody: {
@@ -39,8 +38,9 @@ export const TableCoreStyled = styled("div", {
       },
     },
     thead: {
+      backgroundColor: "$default",
+
       th: {
-        backgroundColor: "$default",
         color: "$accent",
         fontSize: "$small",
         fontWeight: "normal",
@@ -63,6 +63,7 @@ export const TableCoreStyled = styled("div", {
     sticky: {
       true: {
         th: {
+          backgroundColor: "$default",
           position: "sticky",
           top: 0,
         },
