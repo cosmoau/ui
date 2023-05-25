@@ -48,10 +48,12 @@ export const TextSizes = {
     fontSize: "$default",
     lineHeight: "$default",
     marginBottom: "$smaller",
+
   },
   ol: {
+    listStylePosition: "inside",
     marginBottom: 0,
-    paddingLeft: "$small",
+  paddingLeft: "$small",
   },
   p: {
     fontFamily: "$default",
@@ -76,6 +78,7 @@ export const TextSizes = {
     lineHeight: "inherit",
   },
   ul: {
+    listStylePosition: "inside",
     marginBottom: 0,
     paddingLeft: "$small",
   },
