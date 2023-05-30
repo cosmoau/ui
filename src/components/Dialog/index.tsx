@@ -61,16 +61,16 @@ export function Dialog(props: IDialog): JSX.Element {
     height: "auto",
     left: {
       default: innerWidth < 900 ? "5%" : innerWidth < 1800 ? "15%" : "25%",
-      small: innerWidth < 900 ? "10%" : innerWidth < 1800 ? "25%" : "30%",
+      small: innerWidth < 900 ? "5%" : innerWidth < 1800 ? "25%" : "30%",
     },
     maxHeight: {
       default: innerWidth < 900 ? "80%" : innerWidth < 1800 ? "75%" : "60%",
-      small: innerWidth < 900 ? "60%" : innerWidth < 1800 ? "65%" : "50%",
+      small: innerWidth < 900 ? "70%" : innerWidth < 1800 ? "65%" : "50%",
     },
     top: content && innerHeight > 0 ? (innerHeight - content) / 2 : "10rem",
     width: {
       default: innerWidth < 900 ? "90%" : innerWidth < 1800 ? "70%" : "50%",
-      small: innerWidth < 900 ? "80%" : innerWidth < 1800 ? "50%" : "40%",
+      small: innerWidth < 900 ? "90%" : innerWidth < 1800 ? "50%" : "40%",
     },
   };
 
