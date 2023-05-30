@@ -48,12 +48,11 @@ export const TextSizes = {
     fontSize: "$default",
     lineHeight: "$default",
     marginBottom: "$smaller",
-
   },
   ol: {
     listStylePosition: "inside",
     marginBottom: 0,
-  paddingLeft: "$small",
+    paddingLeft: "$small",
   },
   p: {
     fontFamily: "$default",

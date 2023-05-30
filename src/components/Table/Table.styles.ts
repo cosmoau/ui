@@ -2,7 +2,6 @@ import { styled } from "../../stitches.config";
 
 export const TableStyled = styled("div", {
   position: "relative",
-  width: "100%",
 });
 
 export const TableCoreStyled = styled("div", {
@@ -11,17 +10,16 @@ export const TableCoreStyled = styled("div", {
   },
   border: "0.1rem solid $border",
   borderRadius: "$small",
+  maxHeight: "calc(100vh - 5rem)",
   overflowX: "auto",
 
   table: {
     border: 0,
     borderCollapse: "separate",
     borderSpacing: "0",
-
     margin: 0,
     minWidth: "100%",
     padding: 0,
-
     tableLayout: "auto",
 
     tbody: {
@@ -41,6 +39,7 @@ export const TableCoreStyled = styled("div", {
       backgroundColor: "$default",
 
       th: {
+        backgroundColor: "$default",
         color: "$accent",
         fontSize: "$small",
         fontWeight: "normal",
@@ -70,8 +69,6 @@ export const TableCoreStyled = styled("div", {
       },
     },
   },
-
-  width: "100%",
 });
 
 export const TableHeaderStyled = styled("div", {
