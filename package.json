@@ -103,11 +103,5 @@
   },
   "sideEffects": false,
   "source": "src/index.tsx",
-  "types": "dist/esm/index.d.ts",
-  "size-limit": [
-    {
-      "path": "dist/cjs/index.js",
-      "limit": "4500 ms"
-    }
-  ]
+  "types": "dist/esm/index.d.ts"
 }

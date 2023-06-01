@@ -1,20 +1,15 @@
 {
-  "include": ["src"],
-  "extends": "eslint-config-dolmios/configs/lib/tsconfig",
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "importHelpers": false,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "outDir": "./dist/esm",
     "preserveConstEnums": true,
-        "target": "es6",
-            "importHelpers": false,
-                  "noEmit": true,
-                    "lib": [
-                      "dom",
-                      "dom.iterable",
-                      "esnext"
-                    ],
-    "sourceMap": false,
     "rootDir": "./src",
-    "outDir": "./dist/esm"
-  }
+    "sourceMap": false,
+    "target": "es6"
+  },
+  "extends": "eslint-config-dolmios/configs/lib/tsconfig",
+  "include": ["src"]
 }
