@@ -285,7 +285,6 @@ export interface ITable {
   slim?: boolean;
   sortDisabled?: number[];
   sortable?: boolean;
-  sticky?: boolean;
 }
 
 export interface IText extends HTMLAttributes<HTMLDivElement> {
@@ -311,4 +310,11 @@ export interface IView {
   inverted?: boolean;
   noPrint?: boolean;
   top?: IThemeSpacing;
+}
+
+export interface IIcon {
+  children: ReactNode;
+  css?: CSS;
+  forceSize?: number | string;
+  inline?: IThemeSpacing | "auto";
 }
