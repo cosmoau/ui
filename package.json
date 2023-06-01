@@ -25,6 +25,8 @@
   },
   "devDependencies": {
     "@phosphor-icons/react": "^2.0.9",
+    "@size-limit/preset-big-lib": "^8.2.4",
+        "size-limit": "^8.2.4",
     "@types/google.maps": "^3.53.2",
     "@types/node": "^20.2.5",
     "@types/react": "^18.2.7",
@@ -99,9 +101,33 @@
     "kill": "lsof -ti tcp:420 | xargs kill",
     "lint": "eslint src playground --ext .ts,.tsx --fix",
     "prettier": "prettier --check --write src playground",
-    "tidy": "pnpm lint && pnpm prettier"
+    "tidy": "pnpm lint && pnpm prettier",
+        "size": "pnpm build:esm && size-limit"
   },
   "sideEffects": false,
   "source": "src/index.tsx",
-  "types": "dist/esm/index.d.ts"
+  "types": "dist/esm/index.d.ts",
+  "size-limit": [
+
+    {
+      "path": "dist/esm/index.js",
+      "limit": "1 KB",
+      "name": "esm",
+      "webpack": false
+    },
+    {
+      "path": "dist/cjs/index.js",
+      "limit": "1 MB",
+      "name": "cjs"
+    },
+    {
+      "path": [
+        "dist/esm/index.js",
+        "dist/cjs/index.js"
+      ],
+      "limit": "1 MB",
+      "name": "both",
+      "running": "pnpm build"
+    }
+  ]
 }
