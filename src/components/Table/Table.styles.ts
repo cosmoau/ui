@@ -10,7 +10,6 @@ export const TableCoreStyled = styled("div", {
   },
   border: "0.1rem solid $border",
   borderRadius: "$small",
-  maxHeight: "calc(100vh - 5rem)",
   overflowX: "auto",
 
   table: {
@@ -56,15 +55,6 @@ export const TableCoreStyled = styled("div", {
       true: {
         td: {
           padding: "$small $medium !important",
-        },
-      },
-    },
-    sticky: {
-      true: {
-        th: {
-          backgroundColor: "$default",
-          position: "sticky",
-          top: 0,
         },
       },
     },

@@ -1,14 +1,20 @@
 {
   "name": "@cosmoau/ui",
   "description": "Cosmo's internal component library - Next.js + TypeScript.",
-  "version": "1.5.20",
+  "version": "1.5.21",
   "author": "Jackson Dolman <mail@dolmios.com>",
-  "browserslist": [
-    "defaults",
-    "not IE 11",
-    "not IE_Mob 11",
-    "maintained node versions"
-  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "bugs": {
     "url": "https://github.com/cosmoau/ui/issues"
   },
@@ -26,7 +32,7 @@
     "eslint-config-dolmios": "^1.5.1",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
     "next": "^13.4.4",
-    "parcel": "^2.9.1",
+    "parcel": "^2.8.3",
     "path-browserify": "^1.0.1",
     "prettier": "^2.8.8",
     "process": "^0.11.10",
@@ -50,17 +56,8 @@
       "react-hooks/exhaustive-deps": "off"
     }
   },
-  "exports": {
-    ".": {
-      "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.js"
-    },
-    "./package.json": "./package.json"
-  },
   "files": [
-    "dist",
-    "LICENSE",
-    "README.md"
+    "dist"
   ],
   "homepage": "https://github.com/cosmoau/ui",
   "keywords": [
@@ -105,6 +102,12 @@
     "tidy": "pnpm lint && pnpm prettier"
   },
   "sideEffects": false,
-  "source": "src/index.ts",
-  "types": "dist/esm/index.d.ts"
+  "source": "src/index.tsx",
+  "types": "dist/esm/index.d.ts",
+  "size-limit": [
+    {
+      "path": "dist/cjs/index.js",
+      "limit": "4500 ms"
+    }
+  ]
 }

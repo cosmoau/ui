@@ -1,9 +1,65 @@
-import { breakpoints, darkTheme, globalCss, styled, theme } from "../../stitches.config";
+import {
+  breakpoints,
+  darkTheme,
+  fadeIn,
+  fadeOut,
+  globalCss,
+  styled,
+  theme,
+} from "../../stitches.config";
 import { placesReset } from "../Places/Places.styles";
 
 export const ProviderStyled = styled("main", {
   minHeight: "100vh",
   position: "relative",
+});
+
+export const ToastStyled = styled("div", {
+  backgroundColor: "$background",
+  border: "0.1rem solid $border",
+  borderRadius: "$small",
+  boxShadow: "$large",
+  cursor: "pointer",
+  fontSize: "$default",
+  margin: "$small auto 0 auto !important",
+  maxWidth: "60%",
+  padding: "$smallest $small",
+  phone: {
+    fontSize: "$small",
+    maxWidth: "80%",
+  },
+  pointerEvents: "all",
+  transition: "$default",
+
+  variants: {
+    animation: {
+      false: {
+        animation: `${fadeOut} .2s linear`,
+        animationFillMode: "forwards",
+      },
+      true: {
+        animation: `${fadeIn} .2s linear`,
+        animationFillMode: "forwards",
+      },
+    },
+  },
+  width: "fit-content",
+});
+
+export const ToastContainerStyled = styled("div", {
+  bottom: "$medium",
+  left: 0,
+  phone: {
+    bottom: "auto",
+    top: "$medium",
+  },
+  pointerEvents: "none",
+  position: "fixed",
+  right: 0,
+  textAlign: "center",
+  userSelect: "none",
+
+  zIndex: "$toast",
 });
 
 const baseFontURL = "https://cosmogroup.io/fonts";

@@ -15,6 +15,7 @@ import {
   Table,
   Places,
   Input,
+  Box,
 } from "../src/index";
 
 export function App(): ReactElement {
@@ -36,29 +37,37 @@ export function App(): ReactElement {
     <Provider>
       <View bottom="largest" container gradient inverted top="largest">
         <Stack direction="row">
-          <Stack direction="column">
-            <h1>{tempAddress}</h1>
-            <Text as="ul">
-              <Text as="li">
-                Wow this is a{" "}
-                <Text as="span" highlight="green">
-                  test
+          <Stack
+            direction="column"
+            widthDesktop={80}
+            widthLaptop={70}
+            widthPhone={50}
+            widthTablet={60}
+            widthWide={90}>
+            <Box closable>
+              <h1>{tempAddress}</h1>
+              <Text as="ul">
+                <Text as="li">
+                  Wow this is a{" "}
+                  <Text as="span" highlight="green">
+                    test
+                  </Text>
+                </Text>
+                <Text as="li">test</Text>
+                <li>test</li>
+                <Text as="li">
+                  Another wow a{" "}
+                  <Text as="span" highlight="default">
+                    test
+                  </Text>
                 </Text>
               </Text>
-              <Text as="li">test</Text>
-              <li>test</li>
-              <Text as="li">
-                Another wow a{" "}
-                <Text as="span" highlight="default">
-                  test
-                </Text>
+              <Text as="ol">
+                <Text as="li">test</Text>
+                <Text as="li">test</Text>
+                <li>test</li>
               </Text>
-            </Text>
-            <Text as="ol">
-              <Text as="li">test</Text>
-              <Text as="li">test</Text>
-              <li>test</li>
-            </Text>
+            </Box>
 
             <Places
               apiKey={process.env.GOOGLE_API_KEY || ""}
@@ -651,7 +660,6 @@ export function App(): ReactElement {
             kbd
             pagination
             sortable
-            sticky
           />
         </Stack>
       </View>

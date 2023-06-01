@@ -1,5 +1,5 @@
-import { breakpoints, styled } from "../../stitches.config";
-import { Input } from "../Input";
+import { Input } from "../../index";
+import { styled } from "../../stitches.config";
 
 export const PlacesStyled = styled(Input, {
   width: "100%",
@@ -35,7 +35,7 @@ export const placesReset = {
 
     color: "$text",
     marginTop: "$small",
-    [breakpoints.phone]: {
+    phone: {
       margin: "0 auto",
       marginTop: "$small",
       width: "85% !important",

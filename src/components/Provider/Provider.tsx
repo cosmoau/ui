@@ -1,11 +1,18 @@
 import toast, { useToaster } from "react-hot-toast";
 import { useEventListener } from "usehooks-ts";
 
-import { IToast } from "../../types";
+import { Icons } from "../../icons";
+import { darkTheme } from "../../stitches.config";
+import { IProvider, IToast } from "../../types";
 
-import { ToastContainerStyled, ToastStyled } from "./Toast.styles";
+import {
+  ProviderStyled,
+  ToastContainerStyled,
+  ToastStyled,
+  providerReset,
+} from "./Provider.styles";
 
-export function Toast(props: IToast): JSX.Element {
+function ToastController(props: IToast): JSX.Element {
   const { toasts, handlers } = useToaster();
   const { startPause, endPause } = handlers;
 
@@ -28,5 +35,23 @@ export function Toast(props: IToast): JSX.Element {
         );
       })}
     </ToastContainerStyled>
+  );
+}
+
+export default function Provider({ children, css, dark }: IProvider): JSX.Element {
+  providerReset();
+
+  return (
+    <ProviderStyled
+      className={dark ? darkTheme : ""}
+      css={{
+        ...css,
+      }}>
+      <Icons.IconContext.Provider
+        value={{ height: 19, mirrored: false, weight: "regular", width: 19 }}>
+        <ToastController />
+        {children}
+      </Icons.IconContext.Provider>
+    </ProviderStyled>
   );
 }
