@@ -16,6 +16,7 @@ import {
   Places,
   Input,
   Box,
+  Icon,
 } from "../src/index";
 
 export function App(): ReactElement {
@@ -46,7 +47,14 @@ export function App(): ReactElement {
             widthWide={90}>
             <Box closable>
               <h1>{tempAddress}</h1>
-              <Text as="ul">
+              <br />
+              <Input copy submit='Submit' submitValid={() => true} />
+              <Text link="default">
+                <Icon icon={<CurrencyEth />} inline="smaller" />
+                This is a link (at least in appearance)
+              </Text>
+
+              <Text as="ul" top="largest">
                 <Text as="li">
                   Wow this is a{" "}
                   <Text as="span" highlight="green">
@@ -83,6 +91,14 @@ export function App(): ReactElement {
       <View container gradient top="largest">
         <Stack direction="row">
           <Stack direction="column">
+            <h1>{tempAddress}</h1>
+            
+            <Text link="minimal">
+              <Icon icon={<CurrencyEth />} inline="smaller" />
+              This is a link (at least in appearance)
+            </Text>
+            <br/>
+            <Input copy submit='Submit' submitValid={() => true} />
             <Dialog title="Test" trigger={<Button inline="medium">Normal Dialog</Button>}>
               <Text>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non

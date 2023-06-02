@@ -12,6 +12,7 @@ export default function Text({
   override,
   css,
   children,
+  link,
   ...rest
 }: IText): JSX.Element {
   return (
@@ -38,6 +39,7 @@ export default function Text({
         ...css,
       }}
       highlight={highlight}
+      link={link}
       size={as || "p"}
       {...rest}>
       {children}

@@ -295,6 +295,7 @@ export interface IText extends HTMLAttributes<HTMLDivElement> {
   css?: CSS;
   highlight?: "red" | "orange" | "purple" | "blue" | "green" | "default";
   inline?: IThemeSpacing | "auto";
+  link?: "minimal" | "default";
   override?: keyof typeof TextSizes;
   top?: IThemeSpacing;
 }
@@ -313,8 +314,8 @@ export interface IView {
 }
 
 export interface IIcon {
-  children: ReactNode;
   css?: CSS;
   forceSize?: number | string;
+  icon: ReactNode;
   inline?: IThemeSpacing | "auto";
 }

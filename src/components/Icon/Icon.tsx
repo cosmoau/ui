@@ -2,7 +2,7 @@ import { IIcon } from "../../types";
 
 import { IconStyled } from "./Icon.styles";
 
-export default function Icon({ css, inline, forceSize, children }: IIcon): JSX.Element {
+export default function Icon({ css, inline, forceSize, icon }: IIcon): JSX.Element {
   return (
     <IconStyled
       css={{
@@ -17,7 +17,7 @@ export default function Icon({ css, inline, forceSize, children }: IIcon): JSX.E
         }),
         ...css,
       }}>
-      {children}
+      {icon}
     </IconStyled>
   );
 }

@@ -1,6 +1,25 @@
 import { styled } from "../../stitches.config";
 
-const highlight = { borderRadius: "0.25rem", paddingLeft: "$smaller", paddingRight: "$smaller" };
+const highlight = { borderRadius: "$small", paddingLeft: "$smaller", paddingRight: "$smaller" };
+const link = {
+  "&:hover": {
+    backgroundColor: "$default",
+
+    borderBottom: "1px solid $border",
+    borderRadius: "$small",
+
+    darkModeSpec: {
+      backgroundColor: "$border",
+    },
+  },
+  cursor: "pointer",
+  display: "inline-block",
+  margin: 0,
+  padding: 0,
+  paddingLeft: "$smallest",
+  paddingRight: "$smallest",
+  transition: "$default",
+};
 
 export const TextSizes = {
   h1: {
@@ -141,6 +160,16 @@ export const TextStyled = styled("div", {
         darkModeSpec: {
           backgroundColor: "$redText",
         },
+      },
+    },
+    link: {
+      default: {
+        ...link,
+        borderBottom: "1px solid $border",
+      },
+      minimal: {
+        borderColor: "transparent",
+        ...link,
       },
     },
     size: TextSizes,
