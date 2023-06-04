@@ -1,7 +1,7 @@
 {
   "name": "@cosmoau/ui",
   "description": "Cosmo's internal component library - Next.js + TypeScript.",
-  "version": "1.5.22",
+  "version": "1.5.23",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": {
     "production": [
@@ -78,7 +78,7 @@
     "ui",
     "user interface"
   ],
-  "license": "GPL-3.0",
+  "license": "MIT",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "peerDependencies": {
@@ -93,17 +93,15 @@
     "url": "git://github.com/cosmoau/ui.git"
   },
   "scripts": {
-    "build": "pnpm clean && pnpm build:esm && pnpm build:cjs && size-limit",
-    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "build": "rm -rf dist lib && pnpm build:esm && pnpm build:cjs && size-limit --json > size-limit.json",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs", 
     "build:esm": "tsc --module esnext --outDir dist/esm",
-    "clean": "rm -rf dist lib",
     "dev": "echo '⚡️ Fetching device IP for development...' && ipconfig getifaddr en0 && echo '🫡' && parcel playground/index.html --dist-dir playground/dist --open --no-cache --port 420",
     "kill": "lsof -ti tcp:420 | xargs kill",
     "lint": "eslint src playground --ext .ts,.tsx --fix",
     "prettier": "prettier --check --write src playground",
     "tidy": "pnpm lint && pnpm prettier"
   },
-  "sideEffects": false,
   "source": "src/index.tsx",
   "types": "dist/esm/index.d.ts",
   "size-limit": [

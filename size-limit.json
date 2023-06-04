@@ -1,0 +1,26 @@
+[
+  {
+    "name": "esm",
+    "passed": true,
+    "size": 194,
+    "sizeLimit": 1000,
+    "running": 0.05575,
+    "loading": 0.01
+  },
+  {
+    "name": "cjs",
+    "passed": true,
+    "size": 819597,
+    "sizeLimit": 849000,
+    "running": 0.34805,
+    "loading": 16.00775390625
+  },
+  {
+    "name": "both",
+    "passed": true,
+    "size": 846616,
+    "sizeLimit": 850000,
+    "running": 0.36834999999999996,
+    "loading": 16.53546875
+  }
+]

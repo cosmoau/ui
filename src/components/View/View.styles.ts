@@ -17,11 +17,11 @@ export const ViewContainerStyled = styled("div", {
       },
       true: {
         desktopX: {
-          maxWidth: "1800px",
+          maxWidth: "1700px",
           width: "94%",
         },
         laptopX: {
-          width: "95%",
+          width: "94%",
         },
         margin: "auto",
         phone: {

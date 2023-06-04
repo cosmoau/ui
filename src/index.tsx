@@ -22,5 +22,3 @@ export * from "./components/Stack/index";
 export * from "./components/Table/index";
 export * from "./components/Text/index";
 export * from "./components/View/index";
-
-export * from "./types";
