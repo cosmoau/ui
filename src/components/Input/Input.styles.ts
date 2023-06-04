@@ -11,13 +11,12 @@ export const InputCoreStyled = styled("div", {
     boxShadow: "$small",
   },
   "*": {
-    alignContent: "center !important",
     verticalAlign: "middle",
   },
+  alignContent: "center",
   alignSelf: "center",
   border: "0.1rem solid $border",
   borderRadius: "$small",
-
   display: "inline-flex",
   justifyContent: "center",
   padding: "$smaller $small",

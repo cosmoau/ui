@@ -1,9 +1,6 @@
 import { styled, fadeOut } from "../../stitches.config";
 
 export const BadgeStyled = styled("div", {
-  "*": {
-    alignContent: "center !important",
-  },
   alignContent: "center !important",
   alignItems: "center !important",
   border: "0.1rem solid transparent",
@@ -33,13 +30,27 @@ export const BadgeStyled = styled("div", {
       },
     },
 
+    link: {
+      true: {
+        "&:hover": {
+          backgroundColor: "$defaultHover",
+        },
+        cursor: "pointer",
+        transition: "$default",
+      },
+    },
+
     small: {
       true: {
         fontSize: "$small",
         lineHeight: "$small",
       },
     },
+
     theme: {
+      alternate: {
+        backgroundColor: "$defaultHover",
+      },
       blue: {
         backgroundColor: "$blueBackground",
         color: "$blueText",

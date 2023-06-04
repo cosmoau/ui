@@ -20,7 +20,6 @@ export default function Badge({
   onClick,
   children,
   copy,
-  copyText,
 }: IBadge): JSX.Element | null {
   const [isOpen, setIsOpen] = useState(true);
   const [isMounted, setIsMounted] = useState(true);
@@ -33,8 +32,8 @@ export default function Badge({
   }
 
   function handleCopy(): void {
-    if (copyText) {
-      navigator.clipboard.writeText(copyText.toString());
+    if (copy) {
+      navigator.clipboard.writeText(copy.toString());
       toast("Copied to clipboard");
     } else {
       toast("Nothing to copy");
@@ -55,11 +54,17 @@ export default function Badge({
         }),
         ...css,
       }}
+      link={!!onClick || !!copy}
       small={small}
       theme={theme || "default"}
       onClick={copy ? (): void => handleCopy() : onClick}>
-      {icon && (iconPosition === "left" || !iconPosition) && (
+      {icon && iconPosition !== "right" && !copy && (
         <BadgeIconStyled align="left">{icon}</BadgeIconStyled>
+      )}
+      {copy && (
+        <BadgeIconStyled align="left">
+          <Icons.ClipboardText style={{ cursor: "pointer" }} />
+        </BadgeIconStyled>
       )}
 
       {loading ? (
@@ -69,9 +74,10 @@ export default function Badge({
       ) : (
         children || ""
       )}
-      {icon && iconPosition === "right" && !closable && (
+      {icon && iconPosition === "right" && !closable && !copy && (
         <BadgeIconStyled align="right">{icon}</BadgeIconStyled>
       )}
+
       {closable && (
         <BadgeIconStyled align="right" onClick={(): void => handleClose()}>
           <Icons.X style={{ cursor: "pointer" }} />

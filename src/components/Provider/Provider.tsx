@@ -47,8 +47,7 @@ export default function Provider({ children, css, dark }: IProvider): JSX.Elemen
       css={{
         ...css,
       }}>
-      <Icons.IconContext.Provider
-        value={{ height: 19, mirrored: false, weight: "regular", width: 19 }}>
+      <Icons.IconContext.Provider value={{ weight: "regular" }}>
         <ToastController />
         {children}
       </Icons.IconContext.Provider>

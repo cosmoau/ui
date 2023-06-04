@@ -2,10 +2,8 @@
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "importHelpers": false,
     "lib": ["dom", "dom.iterable", "esnext"],
     "outDir": "./dist/esm",
-    "preserveConstEnums": true,
     "rootDir": "./src",
     "sourceMap": false,
     "target": "es6"

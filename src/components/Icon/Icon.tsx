@@ -2,7 +2,7 @@ import { IIcon } from "../../types";
 
 import { IconStyled } from "./Icon.styles";
 
-export default function Icon({ css, inline, forceSize, icon }: IIcon): JSX.Element {
+export default function Icon({ css, inline, forceColor, forceSize, icon }: IIcon): JSX.Element {
   return (
     <IconStyled
       css={{
@@ -11,10 +11,11 @@ export default function Icon({ css, inline, forceSize, icon }: IIcon): JSX.Eleme
           marginRight: inline === "auto" ? "auto" : `$${inline}`,
           verticalAlign: "middle",
         }),
-        ...(forceSize && {
-          height: `$${forceSize}`,
-          width: `$${forceSize}`,
-        }),
+        svg: {
+          color: forceColor ? `$${forceColor} !important` : "inherit",
+          height: forceSize ? `${forceSize}px !important` : "inherit",
+          width: forceSize ? `${forceSize}px !important` : "inherit",
+        },
         ...css,
       }}>
       {icon}

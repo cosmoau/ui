@@ -209,7 +209,7 @@ export default function Table({
                           "&:hover": {
                             opacity: 1,
                           },
-                          opacity: sortBy === index ? 1 : 0.25,
+                          opacity: sortBy === index ? 0.8 : 0.3,
                         }}
                         small
                         theme={sortBy !== index ? "minimal" : undefined}

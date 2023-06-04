@@ -38,16 +38,16 @@ export interface IBadge {
   block?: boolean;
   children?: ReactNode;
   closable?: boolean;
-  copy?: boolean;
-  copyText?: string | number | undefined;
+  copy?: string | number | undefined;
   css?: CSS;
   icon?: ReactNode;
   iconPosition?: "left" | "right";
   inline?: IThemeSpacing | "auto";
+  link?: boolean;
   loading?: boolean;
   onClick?: MouseEventHandler<HTMLDivElement>;
   small?: boolean;
-  theme?: "red" | "orange" | "purple" | "blue" | "green" | "border" | "default";
+  theme?: "red" | "orange" | "purple" | "blue" | "green" | "border" | "default" | "alternate";
 }
 
 export interface IBox {
@@ -295,7 +295,7 @@ export interface IText extends HTMLAttributes<HTMLDivElement> {
   css?: CSS;
   highlight?: "red" | "orange" | "purple" | "blue" | "green" | "default";
   inline?: IThemeSpacing | "auto";
-  link?: "minimal" | "default";
+  link?: "minimal" | "default" | "alternate";
   override?: keyof typeof TextSizes;
   top?: IThemeSpacing;
 }
@@ -315,7 +315,8 @@ export interface IView {
 
 export interface IIcon {
   css?: CSS;
-  forceSize?: number | string;
+  forceColor?: keyof typeof theme.colors;
+  forceSize?: number;
   icon: ReactNode;
   inline?: IThemeSpacing | "auto";
 }
