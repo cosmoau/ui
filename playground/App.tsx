@@ -37,7 +37,11 @@ export function App(): ReactElement {
               />
             </C.Stack>
             <C.Stack top="larger">
-              <C.Box theme="fill">
+              <C.Box
+                css={{
+                  borderRadius: "$large",
+                }}
+                theme="fill">
                 <C.Stack flexduo>
                   <C.Icon icon={<CurrencyEth />} inline="smaller" />
                   <C.Text link="minimal">This is a link (at least in appearance)</C.Text>

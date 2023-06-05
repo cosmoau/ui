@@ -34,7 +34,7 @@ export default function View({
           backgroundColor: darkTheme.colors.background,
           color: darkTheme.colors.text,
           ...(gradient && {
-            backgroundImage: `linear-gradient(180deg, ${darkTheme.colors.background} 0%, ${darkTheme.colors.backgroundSpecial} 100%)`,
+            backgroundImage: `linear-gradient(180deg, ${darkTheme.colors.background} 0%, ${darkTheme.colors.defaultTable} 100%)`,
           }),
         }),
         ...css,

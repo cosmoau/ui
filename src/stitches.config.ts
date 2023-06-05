@@ -21,13 +21,12 @@ export const breakpoints = {
 export const darkTheme = createTheme({
   colors: {
     accent: "#c8d7e7",
-    background: "#0f1118",
-    backgroundSpecial: "#191a20",
-    border: "rgba(255, 255, 255, 0.25)",
-    borderTable: "rgba(255, 255, 255, 0.125)",
-    default: "#292b33",
-    defaultHover: "#3e4049",
-    defaultTable: "#1a1c22",
+    background: "#0f1219",
+    border: "rgba(255, 255, 255, 0.2)",
+    borderTable: "rgba(255, 255, 255, 0.1)",
+    default: "#20232f",
+    defaultHover: "#343745",
+    defaultTable: "#191b24",
     text: "#fef7f2",
   },
   shadows: {
@@ -47,9 +46,9 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       blueText: "#041647",
       border: "rgba(0, 0, 0, 0.15)",
       borderTable: "rgba(0, 0, 0, 0.075)",
-      default: "#f1e9e3",
-      defaultHover: "#e4ded7",
-      defaultTable: "#faf1ea",
+      default: "#f1eae6",
+      defaultHover: "#e6ddd7",
+      defaultTable: "#f9f4f0",
       greenBackground: "#d1ece9",
       greenData: "#52A31D",
       greenDataAlt: "#077D55",
@@ -67,7 +66,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       redData: "#d80000",
       redDataAlt: "#f76f74",
       redText: "#550805",
-      text: "#0f1d3a",
+      text: "#20232f",
     },
     fontSizes: {
       default: "1.6rem",
@@ -88,8 +87,8 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       small: "1.2",
     },
     radii: {
-      large: "1.2rem",
-      small: "0.6rem",
+      large: "1.25rem",
+      small: "0.75rem",
     },
     shadows: {
       large: "0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2)",
