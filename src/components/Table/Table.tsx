@@ -40,7 +40,7 @@ export default function Table({
   const initialLimit = restrictLimit || defaultLimit || (pagination ? pageSizes[0] : maxSize);
   const [sortBy, setSortBy] = useState(defaultSort || 0);
   const [sortDirection, setSortDirection] = useState(defaultDirection || "asc");
-  const [storage, setStorage] = useLocalStorage(identifier || "table", {
+  const [storage, setStorage] = useLocalStorage(`${identifier || "unknown"}-table`, {
     limit: initialLimit,
     offset: 0,
     page: 1,
@@ -292,7 +292,7 @@ export default function Table({
                   label: size.toString(),
                   value: size.toString(),
                 }))}
-                selection={[storage.limit.toString()]}
+                selection={[storage?.limit?.toString() || pageSizes[0].toString()]}
                 trigger={
                   <Button
                     disabled={sortedBodyChildren && sortedBodyChildren?.length < 10}

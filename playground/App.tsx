@@ -66,6 +66,11 @@ export function App(): ReactElement {
                 <C.Text accent as="p">
                   This is a paragraph
                 </C.Text>
+                <C.Stack top="small">
+                  <C.Dialog title="Open Dialog" trigger={<C.Button>Open Dialog</C.Button>}>
+                    <C.Text as="h1">This is a heading (h1)</C.Text>
+                  </C.Dialog>
+                </C.Stack>
               </C.Box>
             </C.Stack>
             <C.Stack top="medium">

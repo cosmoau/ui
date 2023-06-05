@@ -14,9 +14,13 @@ export const DialogTriggerStyled = styled("div", {
 });
 
 export const DialogOverlayStyled = styled("div", {
-  backdropFilter: "blur(.6px)",
-  backgroundColor: "rgba(147, 148, 161, 0.35)",
+  backdropFilter: "blur(0.4px)",
+  backgroundColor: "$border",
   bottom: 0,
+  darkModeSpec: {
+    backdropFilter: "blur(0.8px)",
+    backgroundColor: "$borderTable",
+  },
   height: "100%",
   left: 0,
   position: "fixed",
@@ -66,7 +70,7 @@ export const DialogCoreStyled = styled("div", {
 export const DialogHeaderStyled = styled("div", {
   alignItems: "center",
   backgroundColor: "$default",
-  borderBottom: "0.1rem solid $border",
+  borderBottom: "0.1rem solid $borderTable",
   display: "flex",
   gap: "$small",
   h4: {
