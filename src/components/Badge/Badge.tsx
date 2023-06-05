@@ -15,6 +15,7 @@ export default function Badge({
   theme,
   small,
   inline,
+  link,
   block,
   css,
   onClick,
@@ -54,7 +55,7 @@ export default function Badge({
         }),
         ...css,
       }}
-      link={!!onClick || !!copy}
+      link={link || !!onClick || !!copy}
       small={small}
       theme={theme || "default"}
       onClick={copy ? (): void => handleCopy() : onClick}>
