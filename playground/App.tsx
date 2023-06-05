@@ -40,11 +40,12 @@ export function App(): ReactElement {
               <C.Box
                 css={{
                   borderRadius: "$large",
-                }}
-                theme="fill">
+                }}>
                 <C.Stack flexduo>
                   <C.Icon icon={<CurrencyEth />} inline="smaller" />
-                  <C.Text link="minimal">This is a link (at least in appearance)</C.Text>
+                  <C.Text link="default">This is a default link (at least in appearance)</C.Text>
+                  <C.Icon icon={<CurrencyEth />} inline="smaller" />
+                  <C.Text link="minimal">This is a minimal link (at least in appearance)</C.Text>
                   <C.Icon icon={<CurrencyEth />} inline="smaller" />
 
                   <C.Text link="alternate" onClick={(): void => setDark(!dark)}>
@@ -69,7 +70,9 @@ export function App(): ReactElement {
             </C.Stack>
             <C.Stack top="medium">
               <C.Badge inline="large">This is a badge</C.Badge>
-              <C.Badge theme="alternate">This is a badge</C.Badge>
+              <C.Badge link theme="border">
+                This is a badge
+              </C.Badge>
             </C.Stack>
             <C.Stack top="largest">
               <C.Table

@@ -178,8 +178,8 @@ export const TextStyled = styled("div", {
         ...link,
       },
       minimal: {
-        borderColor: "transparent",
         ...link,
+        borderColor: "transparent",
       },
     },
     size: TextSizes,

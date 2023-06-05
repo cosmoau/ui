@@ -34,6 +34,7 @@ export const BadgeStyled = styled("div", {
       true: {
         "&:hover": {
           backgroundColor: "$defaultHover",
+          borderColor: "$defaultHover",
         },
         cursor: "pointer",
         transition: "$default",
