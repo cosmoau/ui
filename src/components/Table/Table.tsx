@@ -276,9 +276,6 @@ export default function Table({
             {!restrictLimit && (
               <Select
                 disabled={sortedBodyChildren && sortedBodyChildren.length < 10}
-                handleSelection={(value): void => {
-                  handlePageSelection(value);
-                }}
                 label="Page Size"
                 options={pageSizes.map((size) => ({
                   label: size.toString(),
@@ -299,6 +296,9 @@ export default function Table({
                 }
                 vertical="top"
                 width={125}
+                onSelection={(value): void => {
+                  handlePageSelection(value);
+                }}
               />
             )}
             <Text

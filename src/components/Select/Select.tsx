@@ -19,7 +19,7 @@ import {
 export default function Select({
   options,
   css,
-  handleSelection,
+  onSelection,
   label,
   disabled,
   selection,
@@ -60,8 +60,8 @@ export default function Select({
   }
 
   function handleSelection(value: string, label: string): void {
-    if (handleSelection) {
-      handleSelection(value, label);
+    if (onSelection) {
+      onSelection(value, label);
     }
     handleClose();
   }
