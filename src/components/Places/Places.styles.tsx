@@ -48,7 +48,7 @@ export const placesReset = {
     },
     position: "absolute !important",
     top: "100% !important",
-    width: "100%",
+    width: "100% !important",
     zIndex: 9999999,
   },
   ".pac-logo:after": {
