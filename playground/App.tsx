@@ -17,6 +17,13 @@ export function App(): ReactElement {
       <C.View bottom="largest" container top="largest">
         <C.Stack direction="row">
           <C.Stack direction="column">
+            <C.Stack top="medium">
+              <C.Places
+                apiKey={process.env.GOOGLE_API_KEY || ""}
+                handleAutocomplete={console.log}
+                submit="DJKASDJFHSDJFSJDFJKSD"
+              />
+            </C.Stack>
             <C.Stack align="center">
               <C.Icon
                 forceColor="default"
@@ -67,7 +74,7 @@ export function App(): ReactElement {
                   This is a paragraph
                 </C.Text>
                 <C.Stack top="small">
-                  <C.Dialog title="Open Dialog" trigger={<C.Button>Open Dialog</C.Button>}>
+                  <C.Dialog small title="Open Dialog" trigger={<C.Button>Open Dialog</C.Button>}>
                     <C.Text as="h1">This is a heading (h1)</C.Text>
                   </C.Dialog>
                 </C.Stack>
