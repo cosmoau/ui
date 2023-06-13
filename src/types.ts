@@ -183,7 +183,7 @@ export interface ILogo extends SVGProps<SVGSVGElement> {
 export interface IPlaces extends IInput {
   apiKey: string;
   country?: string | string[];
-  onAutocomplete?: (
+  handleAutocomplete?: (
     data: {
       address: string;
       city: string;
@@ -216,12 +216,12 @@ export interface ISelect {
   css?: CSS;
   disabled?: boolean;
   filter?: boolean;
+  handleSelection?: (value: string, label: string) => void;
   height?: number | string;
   horizontal?: "left" | "right" | "center";
   label?: string;
   last?: boolean;
   loading?: boolean;
-  onSelection?: (value: string, label: string) => void;
   options: Array<{
     icon?: ReactNode;
     iconPosition?: "left" | "right";
