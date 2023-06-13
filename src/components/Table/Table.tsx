@@ -1,6 +1,6 @@
-import { sort } from "fast-sort";
+import { sortBy } from "lodash";
 import { useEffect, useState } from "react";
-import { useEventListener, useLocalStorage } from "usehooks-ts";
+import { useLocalStorage } from "usehooks-ts";
 
 import { Icons } from "../../icons";
 import { Badge, Button, Loading, Select, Stack, Text, fadeIn, theme } from "../../index";
@@ -38,7 +38,7 @@ export default function Table({
   ...rest
 }: ITable): JSX.Element {
   const initialLimit = restrictLimit || defaultLimit || (pagination ? pageSizes[0] : maxSize);
-  const [sortBy, setSortBy] = useState(defaultSort || 0);
+  const [sortColumn, sortSortColumn] = useState(defaultSort || 0);
   const [sortDirection, setSortDirection] = useState(defaultDirection || "asc");
   const [storage, setStorage] = useLocalStorage(`${identifier || "unknown"}-table`, {
     limit: initialLimit,
@@ -49,28 +49,20 @@ export default function Table({
   const sortedBodyChildren =
     bodyChildren && sortable
       ? sortDirection === "asc"
-        ? sort(bodyChildren).asc((row) => row[sortBy].value)
-        : sort(bodyChildren).desc((row) => row[sortBy].value)
+        ? sortBy(bodyChildren, (row) => row[sortColumn].value)
+        : sortBy(bodyChildren, (row) => row[sortColumn].value).reverse()
       : bodyChildren;
 
   function scrollToTop(): void {
-    if (identifier && typeof window !== "undefined") {
-      const element = document.getElementById(identifier);
-
-      if (element) {
-        element.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      }
-    }
+    window.scrollTo({ behavior: "smooth", top: 0 });
   }
 
   function handleSortMapping(index: number): void {
-    if (sortBy === index) {
+    if (sortColumn === index) {
       setSortDirection(sortDirection === "asc" ? "desc" : "asc");
     } else {
-      setSortBy(index);
+      sortSortColumn(index);
+      setSortDirection("asc");
     }
     setStorage({
       limit: storage.limit,
@@ -89,25 +81,15 @@ export default function Table({
   }
 
   function handlePageChange(direction: "next" | "prev"): void {
-    if (direction === "next" && sortedBodyChildren) {
-      if (storage.offset + storage.limit >= sortedBodyChildren.length) {
-        return;
-      }
-      setStorage({
-        limit: storage.limit,
-        offset: storage.offset + storage.limit,
-        page: storage.page + 1,
-      });
-    } else {
-      if (storage.offset === 0) {
-        return;
-      }
-      setStorage({
-        limit: storage.limit,
-        offset: storage.offset - storage.limit,
-        page: storage.page - 1,
-      });
-    }
+    const offset =
+      direction === "next" ? storage.offset + storage.limit : storage.offset - storage.limit;
+    const page = direction === "next" ? storage.page + 1 : storage.page - 1;
+
+    setStorage({
+      limit: storage.limit,
+      offset: offset,
+      page: page,
+    });
   }
 
   function resetPagination(): void {
@@ -137,24 +119,31 @@ export default function Table({
     }
   }, [storage.offset, sortedBodyChildren, storage.limit, setStorage]);
 
-  useEventListener("keydown", (event: KeyboardEvent) => {
-    if (pagination && kbd) {
-      if ((event.ctrlKey || event.metaKey) && event.key === "ArrowLeft") {
-        event.preventDefault();
-
-        handlePageChange("prev");
-      } else if ((event.ctrlKey || event.metaKey) && event.key === "ArrowRight") {
-        event.preventDefault();
-        handlePageChange("next");
-      } else if ((event.ctrlKey || event.metaKey) && event.key === "ArrowUp") {
-        event.preventDefault();
-        resetPagination();
-      } else if ((event.ctrlKey || event.metaKey) && event.key === "ArrowDown") {
-        event.preventDefault();
-        endPagination();
+  useEffect(() => {
+    function handleKeyDown(event: KeyboardEvent): void {
+      if (pagination && kbd) {
+        if ((event.ctrlKey || event.metaKey) && event.key === "ArrowLeft") {
+          event.preventDefault();
+          handlePageChange("prev");
+        } else if ((event.ctrlKey || event.metaKey) && event.key === "ArrowRight") {
+          event.preventDefault();
+          handlePageChange("next");
+        } else if ((event.ctrlKey || event.metaKey) && event.key === "ArrowUp") {
+          event.preventDefault();
+          resetPagination();
+        } else if ((event.ctrlKey || event.metaKey) && event.key === "ArrowDown") {
+          event.preventDefault();
+          endPagination();
+        }
       }
     }
-  });
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [pagination, kbd, handlePageChange, resetPagination, endPagination]);
 
   return (
     <TableStyled css={css} id={identifier}>
@@ -209,12 +198,12 @@ export default function Table({
                           "&:hover": {
                             opacity: 1,
                           },
-                          opacity: sortBy === index ? 0.8 : 0.3,
+                          opacity: sortColumn === index ? 0.8 : 0.3,
                         }}
                         small
-                        theme={sortBy !== index ? "minimal" : undefined}
+                        theme={sortColumn !== index ? "minimal" : undefined}
                         onClick={(): void => handleSortMapping(index)}>
-                        {sortBy === index ? (
+                        {sortColumn === index ? (
                           sortDirection === "asc" ? (
                             <Icons.SortAscending />
                           ) : (
@@ -287,6 +276,9 @@ export default function Table({
             {!restrictLimit && (
               <Select
                 disabled={sortedBodyChildren && sortedBodyChildren.length < 10}
+                handleSelection={(value): void => {
+                  handlePageSelection(value);
+                }}
                 label="Page Size"
                 options={pageSizes.map((size) => ({
                   label: size.toString(),
@@ -307,9 +299,6 @@ export default function Table({
                 }
                 vertical="top"
                 width={125}
-                onSelection={(value): void => {
-                  handlePageSelection(value);
-                }}
               />
             )}
             <Text
