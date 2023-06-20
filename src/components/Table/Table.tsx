@@ -1,4 +1,4 @@
-import { sortBy } from "lodash";
+import { sort } from "fast-sort";
 import { useEffect, useState } from "react";
 import { useLocalStorage } from "usehooks-ts";
 
@@ -49,8 +49,8 @@ export default function Table({
   const sortedBodyChildren =
     bodyChildren && sortable
       ? sortDirection === "asc"
-        ? sortBy(bodyChildren, (row) => row[sortColumn].value)
-        : sortBy(bodyChildren, (row) => row[sortColumn].value).reverse()
+        ? sort(bodyChildren).asc((row) => row[sortColumn].value)
+        : sort(bodyChildren).desc((row) => row[sortColumn].value)
       : bodyChildren;
 
   function scrollToTop(): void {

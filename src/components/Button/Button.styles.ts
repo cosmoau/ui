@@ -37,7 +37,8 @@ export const ButtonStyled = styled("button", {
   outline: 0,
   padding: "$smallest $small",
   phone: {
-    minHeight: "3.3rem",
+    minHeight: "3.4rem",
+    minWidth: "5.1rem",
   },
   position: "relative",
   textOverflow: "ellipsis",
@@ -59,8 +60,8 @@ export const ButtonStyled = styled("button", {
         padding: "0.2rem $small",
 
         phone: {
-          minHeight: "3.1rem",
-          padding: "0.4rem $small",
+          minHeight: "3.2rem",
+          minWidth: "4.8rem",
         },
 
         svg: {
