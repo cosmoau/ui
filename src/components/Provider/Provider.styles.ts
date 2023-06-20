@@ -93,12 +93,20 @@ export const providerReset = globalCss({
       src: `url(${baseFontURL}/untitled-sans-web-medium.woff2)`,
     },
 
-    {
+    /*  {
       fontDisplay: "auto",
       fontFamily: "Tiempos Headline",
       fontStyle: "normal",
       fontWeight: "bold",
       src: `url(${baseFontURL}/tiempos-headline-regular.woff2)`,
+    }, */
+
+    {
+      fontDisplay: "auto",
+      fontFamily: "Martina Plantijn",
+      fontStyle: "normal",
+      fontWeight: "bold",
+      src: `url(${baseFontURL}/martina-plantijn-medium.woff2)`,
     },
   ],
 

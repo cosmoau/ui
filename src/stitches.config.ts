@@ -70,17 +70,17 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     },
     fontSizes: {
       default: "1.6rem",
-      h1: "3.5rem",
-      h2: "3rem",
+      h1: "3.8rem",
+      h2: "3.2rem",
       h3: "2.6rem",
       h4: "2.2rem",
-      h5: "1.8rem",
-      h6: "1.6rem",
+      h5: "2rem",
+      h6: "1.7rem",
       small: "1.5rem",
     },
     fonts: {
       default: "Untitled Sans, apple-system, sans-serif",
-      serif: "Tiempos Headline, $default",
+      serif: "Martina Plantijn, $default",
     },
     lineHeights: {
       default: "1.4",
