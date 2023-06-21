@@ -50,7 +50,10 @@ export const BadgeStyled = styled("div", {
 
     theme: {
       alternate: {
-        backgroundColor: "$defaultHover",
+        backgroundColor: "$background",
+        darkModeSpec: {
+          backgroundColor: "$defaultHover",
+        },
       },
       blue: {
         backgroundColor: "$blueBackground",

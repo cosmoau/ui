@@ -46,7 +46,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       blueText: "#041647",
       border: "rgba(0, 0, 0, 0.125)",
       borderTable: "rgba(0, 0, 0, 0.075)",
-      default: "#f1eae6",
+      default: "#f2ebe6",
       defaultHover: "#e6ddd7",
       defaultTable: "#faf3ed",
       greenBackground: "#d1ece9",

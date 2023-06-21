@@ -293,7 +293,7 @@ export interface IText extends HTMLAttributes<HTMLDivElement> {
   bottom?: IThemeSpacing;
   children: ReactNode;
   css?: CSS;
-  highlight?: "red" | "orange" | "purple" | "blue" | "green" | "default";
+  highlight?: "red" | "orange" | "purple" | "blue" | "green" | "default" | "alternate";
   inline?: IThemeSpacing | "auto";
   link?: "minimal" | "default" | "alternate";
   override?: keyof typeof TextSizes;

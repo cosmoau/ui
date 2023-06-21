@@ -123,6 +123,13 @@ export const TextStyled = styled("div", {
       },
     },
     highlight: {
+      alternate: {
+        ...highlight,
+        backgroundColor: "$background",
+        darkModeSpec: {
+          backgroundColor: "$defaultHover",
+        },
+      },
       blue: {
         ...highlight,
         backgroundColor: "$blueBackground",

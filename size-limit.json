@@ -4,23 +4,23 @@
     "passed": true,
     "size": 194,
     "sizeLimit": 1000,
-    "running": 0.05268333333333333,
+    "running": 0.08095000000000001,
     "loading": 0.01
   },
   {
     "name": "cjs",
     "passed": true,
-    "size": 819816,
+    "size": 819828,
     "sizeLimit": 849000,
-    "running": 0.3323500000000001,
-    "loading": 16.01203125
+    "running": 0.36074999999999996,
+    "loading": 16.012265625
   },
   {
     "name": "both",
     "passed": true,
-    "size": 844456,
+    "size": 844477,
     "sizeLimit": 850000,
-    "running": 0.3232166666666667,
-    "loading": 16.49328125
+    "running": 0.36178333333333335,
+    "loading": 16.49369140625
   }
 ]

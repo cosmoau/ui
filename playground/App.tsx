@@ -62,8 +62,11 @@ export function App(): ReactElement {
               </C.Box>
             </C.Stack>
             <C.Stack top="medium">
-              <C.Box>
-                <C.Text as="h1">This is a heading (h1)</C.Text>
+              <C.Box theme="fill">
+                <C.Badge theme="alternate">Test</C.Badge>
+                <C.Text as="span" highlight="alternate">
+                  This is a heading (h1)
+                </C.Text>
                 <C.Text as="h2">This is a heading (h2)</C.Text>
                 <C.Text as="h3">This is a heading (h3)</C.Text>
                 <C.Text as="h4">This is a heading (h4)</C.Text>
