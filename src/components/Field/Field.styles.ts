@@ -16,13 +16,12 @@ export const FieldStyled = styled("div", {
   borderRadius: "$small",
   justifyContent: "center",
   position: "relative",
-
   transition: "$default",
   variants: {
     disabled: {
       true: {
         cursor: "not-allowed",
-        opacity: 0.6,
+        opacity: 0.7,
       },
     },
   },
@@ -30,6 +29,10 @@ export const FieldStyled = styled("div", {
 });
 
 export const FieldAreaStyled = styled("textarea", {
+  "&::placeholder": {
+    color: "$accent",
+    opacity: 0.7,
+  },
   "&:after": {
     clear: "both",
     content: '""',
@@ -56,7 +59,7 @@ export const FieldAreaStyled = styled("textarea", {
 
 export const FieldFunctionStyled = styled("div", {
   alignItems: "center",
-  borderTop: "0.1rem solid $border",
+  borderTop: "0.1rem solid $borderTable",
   button: {
     marginLeft: "$small",
   },

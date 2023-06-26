@@ -26,7 +26,7 @@ export const InputCoreStyled = styled("div", {
     disabled: {
       true: {
         cursor: "not-allowed",
-        opacity: 0.6,
+        opacity: 0.7,
       },
     },
   },
@@ -36,7 +36,7 @@ export const InputCoreStyled = styled("div", {
 export const InputAreaStyled = styled("input", {
   "&::placeholder": {
     color: "$accent",
-    opacity: 0.6,
+    opacity: 0.7,
   },
 
   "&:focus": {

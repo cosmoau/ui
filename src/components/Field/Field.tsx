@@ -19,6 +19,8 @@ export default function Field({
   successMessage,
   warning,
   warningMessage,
+  reset,
+  resetFunction,
   error,
   errorMessage,
   loading,
@@ -52,11 +54,19 @@ export default function Field({
     }
   }
 
+  function handleReset(): void {
+    setInputValue("");
+
+    if (resetFunction) {
+      resetFunction();
+    }
+  }
+
   return (
     <FieldStyled
       css={{
-        maxWidth: width || "80%",
-        width: width || "80%",
+        maxWidth: width || "100%",
+        width: width || "100%",
       }}
       disabled={disabled}>
       <FieldAreaStyled
@@ -65,7 +75,7 @@ export default function Field({
         disabled={disabled}
         placeholder={placeholder}
         rows={rows}
-        value={value}
+        value={inputValue}
         onChange={(event: ChangeEvent<HTMLTextAreaElement>): void => {
           handleChange(event);
         }}
@@ -87,11 +97,6 @@ export default function Field({
               {warningMessage || "Warning"}
             </Badge>
           )}
-          {loading && (
-            <Badge small>
-              <Loading />
-            </Badge>
-          )}
           {copy && (
             <Button
               disabled={isCopied}
@@ -104,9 +109,23 @@ export default function Field({
             </Button>
           )}
 
+          {reset && inputValue && (
+            <Button
+              css={{
+                marginLeft: "$smaller",
+              }}
+              small
+              onClick={(): void => {
+                handleReset();
+              }}>
+              <Icons.X />
+            </Button>
+          )}
+
           {submit && (
             <Button
               disabled={!submitValid || !submitValid(inputValue)}
+              inline={loading ? "small" : undefined}
               small
               onClick={(): void => {
                 if (submitFunction && submitValid && submitValid(inputValue)) {
@@ -116,6 +135,7 @@ export default function Field({
               {submit}
             </Button>
           )}
+          {loading && <Loading />}
         </FieldFunctionStyled>
       )}
     </FieldStyled>

@@ -175,7 +175,7 @@ export default function Table({
                   <th
                     style={{
                       minWidth: "0",
-                      opacity: 0.6,
+                      opacity: 0.7,
                       width: "1%",
                     }}>
                     &nbsp;
@@ -230,7 +230,7 @@ export default function Table({
                       <td
                         style={{
                           minWidth: "0",
-                          opacity: 0.6,
+                          opacity: 0.7,
                           width: "1%",
                         }}>
                         {storage.offset + index + 1}

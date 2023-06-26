@@ -7,7 +7,7 @@ export const ButtonStyled = styled("button", {
 
   "&:disabled": {
     cursor: "not-allowed",
-    opacity: 0.6,
+    opacity: 0.7,
   },
   "&:focus": {
     outline: 0,

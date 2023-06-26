@@ -115,6 +115,8 @@ export interface IField extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   error?: boolean;
   errorMessage?: string;
   loading?: boolean;
+  reset?: boolean;
+  resetFunction?: () => void;
   submit?: string;
   submitFunction?: (value: string | number) => void | Promise<void>;
   submitValid?: (value: string | number) => boolean;

@@ -13,7 +13,10 @@ export function App(): ReactElement {
       <C.View bottom="largest" container gradient inverted top="largest">
         <C.Text as="h1">This is the gradient.</C.Text>
       </C.View>
-
+      <C.View bottom="largest" container top="largest">
+        <C.Input loading placeholder="Filter" reset submit="Save" />
+        <C.Field loading placeholder="Filter" reset submit="Save" />
+      </C.View>
       <C.View bottom="largest" container top="largest">
         <C.Stack direction="row">
           <C.Stack direction="column">

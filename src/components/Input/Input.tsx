@@ -154,7 +154,7 @@ export default function Input({
                   marginLeft: "$smaller",
                 }}
                 disabled={!submitValid || !submitValid(inputValue)}
-                inline="smaller"
+                inline={loading ? "small" : undefined}
                 small
                 onClick={(): void => {
                   if (submitFunction && submitValid && submitValid(inputValue)) {
