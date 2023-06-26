@@ -96,66 +96,27 @@ export function App(): ReactElement {
               <C.Table
                 bodyChildren={Array.from(Array(1000).keys()).map((i) => [
                   {
-                    label: `Row ${i * 1}`,
+                    label: `Column 1 - ${i * 1}`,
                     value: i * 1,
                   },
                   {
-                    label: `Row ${i * 2}`,
+                    label: `Column 2 - ${i * 2}`,
                     value: i * 2,
                   },
                   {
-                    label: `Row ${i * 3}`,
+                    label: `Column 3 - ${i * 3}`,
                     value: i * 3,
                   },
                   {
-                    label: `Row ${i * 4}`,
+                    label: `Column 4 - ${i * 4}`,
                     value: i * 4,
                   },
                   {
-                    label: `Row ${i * 5}`,
+                    label: `Column 5 - ${i * 5}`,
                     value: i * 5,
                   },
-                  {
-                    label: `Row ${i * 6}`,
-                    value: i * 6,
-                  },
-                  {
-                    label: `Row ${i * 7}`,
-                    value: i * 7,
-                  },
-                  {
-                    label: `Row ${i * 8}`,
-                    value: i * 8,
-                  },
-                  {
-                    label: `Row ${i * 9}`,
-                    value: i * 9,
-                  },
-                  {
-                    label: `Row ${i * 10}`,
-                    value: i * 10,
-                  },
-                  {
-                    label: `Row ${i * 11}`,
-                    value: i * 11,
-                  },
-                  {
-                    label: `Row ${i * 12}`,
-                    value: i * 13,
-                  },
-                  {
-                    label: `Row ${i * 13}`,
-                    value: i * 13,
-                  },
-                  {
-                    label: `Row ${i * 14}`,
-                    value: i * 14,
-                  },
-                  {
-                    label: `Row ${i * 15}`,
-                    value: i * 15,
-                  },
                 ])}
+                collapse
                 filters={<C.Input placeholder="Filter" />}
                 headChildren={[
                   "Column A",

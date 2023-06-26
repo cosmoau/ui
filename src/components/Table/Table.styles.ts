@@ -51,6 +51,42 @@ export const TableCoreStyled = styled("div", {
   },
 
   variants: {
+    collapse: {
+      true: {
+        table: {
+          borderCollapse: "collapse",
+        },
+        tbody: {
+          tr: {
+            "&:last-child": {
+              td: {
+                "&:last-child": {
+                  borderBottom: "0 !important",
+                },
+              },
+            },
+            border: 0,
+            display: "block",
+            padding: "0 !important",
+            td: {
+              "&:first-child": {
+                paddingTop: "$medium !important",
+              },
+              "&:last-child": {
+                borderBottom: "0.1rem solid $border !important",
+              },
+              borderTop: "0 !important",
+              display: "block",
+              paddingTop: "0 !important",
+            },
+            width: "100%",
+          },
+        },
+        thead: {
+          display: "none",
+        },
+      },
+    },
     slim: {
       true: {
         td: {

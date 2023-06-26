@@ -23,6 +23,8 @@ export default function Table({
   headChildren,
   bodyChildren,
   css,
+  collapse,
+  collapseDisabled,
   sortable,
   sortDisabled,
   defaultSort,
@@ -46,12 +48,22 @@ export default function Table({
     page: 1,
   });
 
-  const sortedBodyChildren =
-    bodyChildren && sortable
-      ? sortDirection === "asc"
-        ? sort(bodyChildren).asc((row) => row[sortColumn].value)
-        : sort(bodyChildren).desc((row) => row[sortColumn].value)
+  const parsedBodyChildren =
+    bodyChildren && collapse && collapseDisabled && collapseDisabled.length > 0
+      ? // remove all COLUMNS by index
+        bodyChildren.map((row) => {
+          const newRow = row.filter((_column, index) => !collapseDisabled.includes(index));
+
+          return newRow;
+        })
       : bodyChildren;
+
+  const sortedBodyChildren =
+    parsedBodyChildren && sortable
+      ? sortDirection === "asc"
+        ? sort(parsedBodyChildren).asc((row) => row[sortColumn].value)
+        : sort(parsedBodyChildren).desc((row) => row[sortColumn].value)
+      : parsedBodyChildren;
 
   function scrollToTop(): void {
     window.scrollTo({ behavior: "smooth", top: 0 });
@@ -166,6 +178,7 @@ export default function Table({
       {filters && <TableFiltersStyled>{filters}</TableFiltersStyled>}
 
       <TableCoreStyled
+        collapse={collapse}
         slim={slim || (storage.limit > 10 && sortedBodyChildren && sortedBodyChildren.length > 10)}>
         <table {...rest}>
           {headChildren && (
@@ -226,7 +239,7 @@ export default function Table({
                 .slice(storage.offset, storage.offset + storage.limit)
                 .map((row, index) => (
                   <tr key={index}>
-                    {rowNumbers && (
+                    {rowNumbers && !collapse && (
                       <td
                         style={{
                           minWidth: "0",
@@ -246,6 +259,11 @@ export default function Table({
                             width: cell.width,
                           }),
                         }}>
+                        {collapse && index >= 1 && (
+                          <Stack bottom="smaller">
+                            <Text as="label">{headChildren && headChildren[index]}</Text>
+                          </Stack>
+                        )}
                         {cell?.label || cell?.value}
                       </td>
                     ))}

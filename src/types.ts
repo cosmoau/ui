@@ -267,6 +267,8 @@ export interface ITable {
   bodyChildren?: Array<
     Array<{ label?: ReactNode; value: string | number; width?: string | number }>
   >;
+  collapse?: boolean;
+  collapseDisabled?: number[];
   css?: CSS;
   defaultDirection?: "asc" | "desc";
   defaultLimit?: 10 | 25 | 50 | 100 | 200;
