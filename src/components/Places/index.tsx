@@ -1,5 +1,5 @@
 import { Loader } from "@googlemaps/js-api-loader";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { toast } from "react-hot-toast";
 
 import { Input } from "../../index";
@@ -16,7 +16,7 @@ export default function Places({
   css,
   ...rest
 }: IPlaces): JSX.Element {
-  const ref = useRef<HTMLInputElement | null>(null) as React.MutableRefObject<HTMLInputElement>;
+  const ref = useRef<HTMLInputElement | null>(null);
   const autocompleteRef = useRef<google.maps.places.Autocomplete | null>(null);
   const [data, setData] = useState<{
     address: string;
@@ -66,9 +66,11 @@ export default function Places({
       version: "weekly",
     });
 
-    const loadGoogleMaps = async (): Promise<typeof google> => {
+    const loadGoogleMaps = async (): Promise<typeof google | void> => {
       try {
         const google = await loader.load();
+
+        if (!ref.current) return;
 
         autocompleteRef.current = new google.maps.places.Autocomplete(ref.current, {
           componentRestrictions: { country },
@@ -111,7 +113,7 @@ export default function Places({
     <PlacesStyled css={css}>
       <Input
         key={data?.address || undefined}
-        ref={ref}
+        mustRef={ref}
         name="address"
         placeholder={placeholder || "Enter your address"}
         resetFunction={(): void => {

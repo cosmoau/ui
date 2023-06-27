@@ -18,7 +18,7 @@ import {
 export default function Input({
   copy,
   icon,
-  ref,
+  mustRef,
   type,
   disabled,
   placeholder,
@@ -100,7 +100,7 @@ export default function Input({
       <InputCoreStyled disabled={disabled}>
         {icon && <InputIconStyled>{icon}</InputIconStyled>}
         <InputAreaStyled
-          ref={ref || undefined}
+          ref={mustRef || undefined}
           css={css}
           disabled={disabled}
           placeholder={placeholder}

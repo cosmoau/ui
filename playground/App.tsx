@@ -57,6 +57,9 @@ export function App(): ReactElement {
         <C.Stack direction="row">
           <C.Stack direction="column">
             <C.Stack top="medium">
+              <C.Text as="h1">
+                Google Places
+              </C.Text>
               <C.Places
                 apiKey={process.env.GOOGLE_API_KEY || ""}
                 handleAutocomplete={console.log}

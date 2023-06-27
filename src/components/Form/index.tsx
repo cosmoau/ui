@@ -11,7 +11,6 @@ export default function Form({
   css,
   disabled,
   listen,
-  ref,
   submit,
   submitFunction,
   submitValid,
@@ -27,7 +26,6 @@ export default function Form({
 
   return (
     <FormStyled
-      ref={ref}
       css={css}
       disabled={disabled}
       onChange={(): void => setIsSubmitted(false)}

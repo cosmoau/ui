@@ -7,6 +7,7 @@ import {
   MouseEventHandler,
   ElementType,
   ComponentType,
+  RefObject,
 } from "react";
 import { Toaster } from "react-hot-toast";
 
@@ -147,6 +148,7 @@ export interface IInput extends ComponentPropsWithRef<"input"> {
   icon?: ReactNode;
   listen?: boolean;
   loading?: boolean;
+  mustRef?: RefObject<HTMLInputElement>;
   reset?: boolean;
   resetFunction?: () => void;
   reveal?: boolean;
