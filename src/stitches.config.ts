@@ -66,7 +66,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
       redData: "#d80000",
       redDataAlt: "#f76f74",
       redText: "#550805",
-      text: "#29303c",
+      text: "#0a2540",
     },
     fontSizes: {
       default: "1.6rem",

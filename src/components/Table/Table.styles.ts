@@ -58,6 +58,9 @@ export const TableCoreStyled = styled("div", {
         },
         tbody: {
           tr: {
+            "&:first-child": {
+              borderTop: "0 !important",
+            },
             "&:last-child": {
               td: {
                 "&:last-child": {
@@ -65,19 +68,23 @@ export const TableCoreStyled = styled("div", {
                 },
               },
             },
-            border: 0,
-            display: "block",
-            padding: "0 !important",
+            borderTop: "0.1rem solid $border !important",
+
             td: {
               "&:first-child": {
                 paddingTop: "$medium !important",
               },
               "&:last-child": {
-                borderBottom: "0.1rem solid $border !important",
+                paddingBottom: "$medium !important",
               },
-              borderTop: "0 !important",
+              "*": {
+                verticalAlign: "middle",
+              },
+              border: "0 !important",
               display: "block",
-              paddingTop: "0 !important",
+              paddingBottom: "0 !important",
+              verticalAlign: "middle",
+              width: "50%",
             },
             width: "100%",
           },

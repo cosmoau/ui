@@ -1,12 +1,30 @@
 {
-  "compilerOptions": {
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "outDir": "./dist/esm",
-    "rootDir": "./src",
-    "sourceMap": false,
-    "target": "ESNext"
+  "compilerOptions": { 
+  "emitDecoratorMetadata": true,
+  "experimentalDecorators": true,
+  "importHelpers": true,
+  "declaration": true,
+  "sourceMap": true,
+  "strict": true,
+  "noImplicitReturns": true,
+  "noFallthroughCasesInSwitch": true,
+  "noUnusedLocals": true,
+  "noUnusedParameters": true,
+  "moduleResolution": "node",
+  "esModuleInterop": true,
+  "skipLibCheck": true,
+  "forceConsistentCasingInFileNames": true,
+  "allowSyntheticDefaultImports": true,
+  "jsx": "react-jsx",
+  "lib": [
+    "dom",
+    "dom.iterable",
+    "esnext"
+  ],
+  "target": "es2022",
+  "allowJs": true,
+  "resolveJsonModule": true,
+  "isolatedModules": true
   },
   "extends": "eslint-config-dolmios/configs/lib/tsconfig",
   "include": ["src"]

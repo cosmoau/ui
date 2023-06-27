@@ -18,7 +18,7 @@ import {
 export default function Input({
   copy,
   icon,
-  mustRef,
+  ref,
   type,
   disabled,
   placeholder,
@@ -44,9 +44,11 @@ export default function Input({
   const [inputValue, setInputValue] = useState((value as string) || "");
   const [isCopied, setIsCopied] = useState(false);
   const [isRevealed, setIsRevealed] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   function handleChange(event: ChangeEvent<HTMLInputElement>): void {
     setInputValue(event.target.value);
+    setIsSubmitted(false);
     if (onChange) {
       onChange(event);
     }
@@ -98,7 +100,7 @@ export default function Input({
       <InputCoreStyled disabled={disabled}>
         {icon && <InputIconStyled>{icon}</InputIconStyled>}
         <InputAreaStyled
-          ref={mustRef || undefined}
+          ref={ref || undefined}
           css={css}
           disabled={disabled}
           placeholder={placeholder}
@@ -153,12 +155,15 @@ export default function Input({
                 css={{
                   marginLeft: "$smaller",
                 }}
-                disabled={!submitValid || !submitValid(inputValue)}
+                disabled={!submitValid || !submitValid(inputValue) || isSubmitted}
                 inline={loading ? "small" : undefined}
                 small
+                theme="solid"
+                type="submit"
                 onClick={(): void => {
                   if (submitFunction && submitValid && submitValid(inputValue)) {
                     submitFunction(inputValue || "");
+                    setIsSubmitted(true);
                   }
                 }}>
                 {submit}

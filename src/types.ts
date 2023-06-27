@@ -2,15 +2,11 @@ import { CSSProperties, CSS } from "@stitches/react";
 import { ImageProps } from "next/image";
 import {
   ReactNode,
-  TextareaHTMLAttributes,
-  InputHTMLAttributes,
-  RefObject,
-  HTMLAttributes,
+  ComponentPropsWithRef,
+  ComponentPropsWithoutRef,
   MouseEventHandler,
   ElementType,
   ComponentType,
-  SVGProps,
-  FormHTMLAttributes,
 } from "react";
 import { Toaster } from "react-hot-toast";
 
@@ -68,11 +64,9 @@ export interface IBox {
   theme?: "default" | "success" | "warning" | "error" | "transparent" | "fill";
 }
 
-export interface IButton extends HTMLAttributes<HTMLButtonElement> {
+export interface IButton extends ComponentPropsWithoutRef<"button"> {
   block?: boolean;
-  children: ReactNode | string;
   css?: CSS;
-  disabled?: boolean;
   external?: boolean;
   icon?: ReactNode;
   iconPosition?: "left" | "right";
@@ -102,24 +96,23 @@ export interface ICommand {
   css?: CSS;
 }
 
-export interface IDivider extends HTMLAttributes<HTMLHRElement> {
+export interface IDivider {
   bottom?: IThemeSpacing;
   css?: CSS;
   top?: IThemeSpacing;
 }
 
-export interface IField extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+export interface IField extends ComponentPropsWithRef<"textarea"> {
   copy?: boolean;
   css?: CSS;
-  disabled?: boolean;
   error?: boolean;
   errorMessage?: string;
   loading?: boolean;
   reset?: boolean;
   resetFunction?: () => void;
   submit?: string;
-  submitFunction?: (value: string | number) => void | Promise<void>;
-  submitValid?: (value: string | number) => boolean;
+  submitFunction?: (value: string) => void | Promise<void> | unknown;
+  submitValid?: (value: string) => boolean;
   success?: boolean;
   successMessage?: string;
   warning?: boolean;
@@ -127,14 +120,13 @@ export interface IField extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   width?: number | string;
 }
 
-export interface IForm extends FormHTMLAttributes<HTMLFormElement> {
+export interface IForm extends ComponentPropsWithRef<"form"> {
   children: ReactNode;
   css?: CSS;
   disabled?: boolean;
   listen?: boolean;
-  mustRef?: RefObject<HTMLFormElement>;
   submit?: string;
-  submitFunction: () => void | Promise<void>;
+  submitFunction: () => void | Promise<void> | unknown;
   submitValid?: boolean;
 }
 
@@ -147,22 +139,20 @@ export interface IImage extends ImageProps {
   fillPosition?: CSSProperties["objectPosition"];
 }
 
-export interface IInput extends InputHTMLAttributes<HTMLInputElement> {
+export interface IInput extends ComponentPropsWithRef<"input"> {
   copy?: boolean;
   css?: CSS;
-  disabled?: boolean;
   error?: boolean;
   errorMessage?: string;
   icon?: ReactNode;
   listen?: boolean;
   loading?: boolean;
-  mustRef?: RefObject<HTMLInputElement>;
   reset?: boolean;
   resetFunction?: () => void;
   reveal?: boolean;
   submit?: string;
-  submitFunction?: (value: string | number) => void | Promise<void>;
-  submitValid?: (value: string | number) => boolean;
+  submitFunction?: (value: string) => void | Promise<void> | unknown;
+  submitValid?: (value: string) => boolean;
   success?: boolean;
   successMessage?: string;
   warning?: boolean;
@@ -177,9 +167,11 @@ export interface ILoading {
   width?: number | string;
 }
 
-export interface ILogo extends SVGProps<SVGSVGElement> {
+export interface ILogo {
   css?: CSS;
+  height?: number | string;
   inline?: IThemeSpacing | "auto";
+  width?: number | string;
 }
 
 export interface IPlaces extends IInput {
@@ -291,7 +283,7 @@ export interface ITable {
   sortable?: boolean;
 }
 
-export interface IText extends HTMLAttributes<HTMLDivElement> {
+export interface IText extends ComponentPropsWithoutRef<"div"> {
   accent?: boolean;
   as?: keyof typeof TextSizes;
   bottom?: IThemeSpacing;

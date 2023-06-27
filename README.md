@@ -1,6 +1,6 @@
 # @cosmoau/ui
 
-> A library of React components used to enforce consistency across every product at Cosmo and make development easier, intended for use with Next.js and TypeScript.
+> Cosmo's internal component library, built with React, Next.js, and Stitches.
 
 ## Install
 
@@ -10,7 +10,7 @@ pnpm install
 
 ## Demo
 
-[https://ui.cosmogroup.io/](https://ui.cosmogroup.io/)
+[https://ui.cosmogroup.io/](https://ui.cosmogroup.io/) (Coming soon)
 
 ## Usage
 

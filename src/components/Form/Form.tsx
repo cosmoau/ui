@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useEventListener } from "usehooks-ts";
 
 import { Button } from "../../index";
@@ -10,12 +11,14 @@ export default function Form({
   css,
   disabled,
   listen,
-  mustRef,
+  ref,
   submit,
   submitFunction,
   submitValid,
   ...rest
 }: IForm): JSX.Element {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   useEventListener("keydown", (event: KeyboardEvent) => {
     if (listen && event.key === "Enter" && submit && submitValid) {
       submitFunction();
@@ -23,16 +26,24 @@ export default function Form({
   });
 
   return (
-    <FormStyled ref={mustRef} css={css} disabled={disabled} {...rest}>
+    <FormStyled
+      ref={ref}
+      css={css}
+      disabled={disabled}
+      onChange={(): void => setIsSubmitted(false)}
+      {...rest}>
       {children}
       {submit && (
         <Button
           css={{
             marginTop: "$medium",
           }}
-          disabled={!submitValid || disabled}
+          disabled={!submitValid || disabled || isSubmitted}
+          theme="solid"
+          type="submit"
           onClick={(): void => {
             submitFunction();
+            setIsSubmitted(true);
           }}>
           {submit}
         </Button>

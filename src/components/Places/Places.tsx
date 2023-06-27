@@ -111,7 +111,7 @@ export default function Places({
     <PlacesStyled css={css}>
       <Input
         key={data?.address || undefined}
-        mustRef={ref}
+        ref={ref}
         name="address"
         placeholder={placeholder || "Enter your address"}
         resetFunction={(): void => {

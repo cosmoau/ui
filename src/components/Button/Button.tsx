@@ -28,7 +28,6 @@ export default function Button({
           marginRight: inline === "auto" ? "auto" : `$${inline}`,
           verticalAlign: "middle",
         }),
-
         ...css,
       }}
       disabled={disabled || loading || false}

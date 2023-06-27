@@ -32,10 +32,11 @@ export default function Field({
 }: IField): JSX.Element {
   const [inputValue, setInputValue] = useState(value || "") as [string, (value: string) => void];
   const [isCopied, setIsCopied] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   function handleChange(event: ChangeEvent<HTMLTextAreaElement>): void {
     setInputValue(event.target.value);
-
+    setIsSubmitted(false);
     if (onChange) {
       onChange(event);
     }
@@ -124,12 +125,15 @@ export default function Field({
 
           {submit && (
             <Button
-              disabled={!submitValid || !submitValid(inputValue)}
+              disabled={!submitValid || !submitValid(inputValue) || isSubmitted}
               inline={loading ? "small" : undefined}
               small
+              theme="solid"
+              type="submit"
               onClick={(): void => {
                 if (submitFunction && submitValid && submitValid(inputValue)) {
                   submitFunction(inputValue);
+                  setIsSubmitted(true);
                 }
               }}>
               {submit}
