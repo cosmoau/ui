@@ -82,8 +82,9 @@
     "user interface"
   ],
   "license": "MIT",
-  "main": "./dist/esm/index.js",
-  "type":"module",  
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "sideEffects": true,
   "peerDependencies": {
     "next": "^13.4.3",
     "react": "^18.2.0",
@@ -95,7 +96,7 @@
     "url": "git://github.com/cosmoau/ui.git"
   },
   "scripts": {
-    "build": "parcel build src/index.tsx --dist-dir ./dist",
+    "build": "parcel build src/index.tsx --dist-dir dist",
     "dev": "echo '⚡️ Fetching device IP for development...' && ipconfig getifaddr en0 && echo '🫡' && parcel playground/index.html --dist-dir playground/dist --open --no-cache --port 420",
     "kill": "lsof -ti tcp:420 | xargs kill",
     "lint": "eslint src --ext .ts,.tsx --fix",
