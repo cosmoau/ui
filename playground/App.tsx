@@ -1,12 +1,16 @@
+/* eslint-disable no-alert */
 /* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { CurrencyEth, Hexagon } from "@phosphor-icons/react";
 import React, { ReactElement, useState } from "react";
+import { toast } from "react-hot-toast";
 
 import * as C from "../src/index";
 
 export function App(): ReactElement {
   const [dark, setDark] = useState<boolean>(false);
+  const [tempInput, setTempInput] = useState<string>("");
+  const [tempField, setTempField] = useState<string>("");
 
   return (
     <C.Provider dark={dark}>
@@ -14,8 +18,40 @@ export function App(): ReactElement {
         <C.Text as="h1">This is the gradient.</C.Text>
       </C.View>
       <C.View bottom="largest" container top="largest">
-        <C.Input loading placeholder="Filter" reset submit="Save" />
-        <C.Field loading placeholder="Filter" reset submit="Save" />
+        <C.Form
+          listen
+          submit="Submit"
+          submitFunction={() => toast("submitted")}
+          submitValid={tempInput.length > 0 && tempField.length > 0}>
+          <C.Input
+            placeholder="Input"
+            reset
+            submit="Save"
+            onChange={(e) => setTempInput(e.target.value)}
+          />
+          <C.Field
+            placeholder="Field"
+            reset
+            submit="Save"
+            onChange={(e) => setTempField(e.target.value)}
+          />
+        </C.Form>
+      </C.View>
+      <C.View bottom="largest" container top="largest">
+        <C.Input
+          loading
+          placeholder="Filter"
+          reset
+          submit="Save"
+          submitFunction={(value) => toast(value)}
+        />
+        <C.Field
+          loading
+          placeholder="Filter"
+          reset
+          submit="Save"
+          submitFunction={(value) => toast(value)}
+        />
       </C.View>
       <C.View bottom="largest" container top="largest">
         <C.Stack direction="row">
