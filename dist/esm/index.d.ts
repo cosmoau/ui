@@ -1451,7 +1451,9 @@ export function Icon({ css, inline, forceColor, forceSize, icon }: IIcon): JSX.E
 export function Image({ css, borderRadius, fill, fillFit, fillPosition, fillHeight, quality, ...rest }: IImage): JSX.Element;
 export function Input({ copy, icon, ref, type, disabled, placeholder, width, css, value, onChange, success, successMessage, warning, warningMessage, error, errorMessage, reveal, loading, submit, submitFunction, submitValid, listen, reset, resetFunction, }: IInput): JSX.Element;
 export function Loading({ width }: ILoading): JSX.Element;
+export function LoadingOverlay({ vertical, horizontal, width, }: ILoading): JSX.Element;
 export function Logo({ height, width, css, inline, ...rest }: ILogo): JSX.Element;
+export function LogoIcon({ height, width, inline, css, ...rest }: ILogo): JSX.Element;
 export function Places({ placeholder, country, restrict, apiKey, handleAutocomplete, css, ...rest }: IPlaces): JSX.Element;
 export function Popover({ css, trigger, children, type, disabled, horizontal, vertical, width, minimal, }: IPopover): JSX.Element;
 export function Provider({ children, css, dark }: IProvider): JSX.Element;
