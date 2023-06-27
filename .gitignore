@@ -5,3 +5,4 @@ node_modules
 *.pem
 .env.local
 playground/dist
+dist
