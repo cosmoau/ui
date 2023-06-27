@@ -11,6 +11,7 @@ export default function Form({
   css,
   disabled,
   listen,
+  loading,
   submit,
   submitFunction,
   submitValid,
@@ -37,6 +38,7 @@ export default function Form({
             marginTop: "$medium",
           }}
           disabled={!submitValid || disabled || isSubmitted}
+          loading={loading}
           onClick={(): void => {
             submitFunction();
             setIsSubmitted(true);

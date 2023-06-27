@@ -126,6 +126,7 @@ export interface IForm extends ComponentPropsWithRef<"form"> {
   css?: CSS;
   disabled?: boolean;
   listen?: boolean;
+  loading?: boolean;
   submit?: string;
   submitFunction: () => void | Promise<void> | unknown;
   submitValid?: boolean;
