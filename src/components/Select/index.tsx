@@ -14,7 +14,7 @@ import {
   SelectEmptyStyled,
   SelectLabelStyled,
   SelectIconStyled,
-} from "./Select.styles";
+} from "./styles";
 
 export default function Select({
   options,

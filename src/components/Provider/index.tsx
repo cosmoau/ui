@@ -5,12 +5,7 @@ import { Icons } from "../../icons";
 import { darkTheme } from "../../stitches.config";
 import { IProvider, IToast } from "../../types";
 
-import {
-  ProviderStyled,
-  ToastContainerStyled,
-  ToastStyled,
-  providerReset,
-} from "./Provider.styles";
+import { ProviderStyled, ToastContainerStyled, ToastStyled, providerReset } from "./styles";
 
 function ToastController(props: IToast): JSX.Element {
   const { toasts, handlers } = useToaster();

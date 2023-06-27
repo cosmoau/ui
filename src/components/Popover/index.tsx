@@ -3,7 +3,7 @@ import { useOnClickOutside } from "usehooks-ts";
 
 import { IPopover } from "../../types";
 
-import { PopoverContentStyled, PopoverStyled, PopoverTriggerStyled } from "./Popover.styles";
+import { PopoverContentStyled, PopoverStyled, PopoverTriggerStyled } from "./styles";
 
 export default function Popover({
   css,

@@ -5,7 +5,7 @@ import { Icons } from "../../icons";
 import { Loading } from "../../index";
 import { IBadge } from "../../types";
 
-import { BadgeIconStyled, BadgeStyled, BadgeLoadingStyled } from "./Badge.styles";
+import { BadgeIconStyled, BadgeStyled, BadgeLoadingStyled } from "./styles";
 
 export default function Badge({
   closable,

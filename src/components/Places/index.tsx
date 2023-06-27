@@ -5,7 +5,7 @@ import { toast } from "react-hot-toast";
 import { Input } from "../../index";
 import { IPlaces } from "../../types";
 
-import { PlacesStyled } from "./Places.styles";
+import { PlacesStyled } from "./styles";
 
 export default function Places({
   placeholder,

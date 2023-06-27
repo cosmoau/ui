@@ -4,7 +4,7 @@ import { Icons } from "../../icons";
 import { Button, Image } from "../../index";
 import { IBox } from "../../types";
 
-import { BoxExitStyled, BoxHeaderStyled, BoxInnerStyled, BoxStyled } from "./Box.styles";
+import { BoxExitStyled, BoxHeaderStyled, BoxInnerStyled, BoxStyled } from "./styles";
 
 export default function Box({
   image,

@@ -12,7 +12,7 @@ import {
   DialogOverlayStyled,
   DialogStyled,
   DialogTriggerStyled,
-} from "./Dialog.styles";
+} from "./styles";
 
 export default function Dialog({
   css,

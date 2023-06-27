@@ -7,7 +7,7 @@ import {
   styled,
   theme,
 } from "../../stitches.config";
-import { placesReset } from "../Places/Places.styles";
+import { placesReset } from "../Places/styles";
 
 export const ProviderStyled = styled("main", {
   minHeight: "100vh",

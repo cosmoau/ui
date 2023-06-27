@@ -1,5 +1,5 @@
 import { styled } from "../../stitches.config";
-import { ImageStyled } from "../Image/Image.styles";
+import { ImageStyled } from "../Image/styles";
 
 export const AvatarStyled = styled("div", {
   alignSelf: "center",

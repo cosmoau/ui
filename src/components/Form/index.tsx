@@ -4,7 +4,7 @@ import { useEventListener } from "usehooks-ts";
 import { Button } from "../../index";
 import { IForm } from "../../types";
 
-import { FormStyled } from "./Form.styles";
+import { FormStyled } from "./styles";
 
 export default function Form({
   children,
@@ -39,8 +39,6 @@ export default function Form({
             marginTop: "$medium",
           }}
           disabled={!submitValid || disabled || isSubmitted}
-          theme="solid"
-          type="submit"
           onClick={(): void => {
             submitFunction();
             setIsSubmitted(true);

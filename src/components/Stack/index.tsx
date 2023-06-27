@@ -1,6 +1,6 @@
 import { IStack } from "../../types";
 
-import { StackStyled, StackColumnStyled, StackRowStyled } from "./Stack.styles";
+import { StackStyled, StackColumnStyled, StackRowStyled } from "./styles";
 
 export default function Stack({
   direction,

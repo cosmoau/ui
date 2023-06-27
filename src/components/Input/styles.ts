@@ -1,6 +1,9 @@
 import { styled } from "../../stitches.config";
 
-export const FieldStyled = styled("div", {
+export const InputStyled = styled("div", {
+  position: "relative",
+});
+export const InputCoreStyled = styled("div", {
   "&:focus-within": {
     boxShadow: "$small",
   },
@@ -14,7 +17,9 @@ export const FieldStyled = styled("div", {
   alignSelf: "center",
   border: "0.1rem solid $border",
   borderRadius: "$small",
+  display: "inline-flex",
   justifyContent: "center",
+  padding: "$smaller $small",
   position: "relative",
   transition: "$default",
   variants: {
@@ -28,46 +33,54 @@ export const FieldStyled = styled("div", {
   width: "100%",
 });
 
-export const FieldAreaStyled = styled("textarea", {
+export const InputAreaStyled = styled("input", {
   "&::placeholder": {
     color: "$accent",
     opacity: 0.7,
   },
-  "&:after": {
-    clear: "both",
-    content: '""',
-  },
+
   "&:focus": {
     outline: "none",
   },
+
   appearance: "none",
   backgroundColor: "transparent",
   border: "none",
   color: "$text",
-  display: "block",
   fontFamily: "$default",
   fontSize: "$default",
-  margin: "0 auto",
-  padding: "$smaller $small",
+  letterSpacing: 0,
+  margin: 0,
+  minHeight: "2.4rem",
+  outline: "none",
+  padding: 0,
   phone: {
     fontSize: "16px !important",
   },
-  resize: "none",
-  whiteSpace: "pre-wrap",
+  textAlign: "left",
+  transition: "$default",
+
   width: "100%",
 });
 
-export const FieldFunctionStyled = styled("div", {
-  alignItems: "center",
-  borderTop: "0.1rem solid $borderTable",
-  button: {
-    marginLeft: "$small",
-  },
-  display: "flex",
+export const InputFunctionStyled = styled("div", {
+  display: "inline-flex",
   height: "100%",
-  justifyContent: "flex-end",
-  padding: "$smaller $small",
+  marginLeft: "$small",
   position: "relative",
   verticalAlign: "middle",
-  width: "100%",
+  width: "auto",
 });
+
+export const InputIconStyled = styled("div", {
+  display: "inline-block",
+  height: "100%",
+  paddingRight: "$small",
+});
+
+export const InputCallbackStyled = styled("div", {
+  display: "block",
+  paddingTop: "$small",
+});
+
+export default InputStyled;

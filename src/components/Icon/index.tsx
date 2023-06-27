@@ -1,6 +1,6 @@
 import { IIcon } from "../../types";
 
-import { IconStyled } from "./Icon.styles";
+import { IconStyled } from "./styles";
 
 export default function Icon({ css, inline, forceColor, forceSize, icon }: IIcon): JSX.Element {
   return (

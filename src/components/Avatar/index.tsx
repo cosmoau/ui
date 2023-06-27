@@ -1,7 +1,7 @@
 import { Image, Text, theme } from "../../index";
 import { IAvatar } from "../../types";
 
-import { AvatarStyled } from "./Avatar.styles";
+import { AvatarStyled } from "./styles";
 
 const hexToRGB = (hex: string): string => {
   const r = parseInt(hex.slice(1, 3), 16);

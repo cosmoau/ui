@@ -12,7 +12,7 @@ import {
   TableHeaderStyled,
   TablePaginationStyled,
   TableStyled,
-} from "./Table.styles";
+} from "./styles";
 
 const pageSizes = [10, 25, 50, 100];
 const maxSize = 500;

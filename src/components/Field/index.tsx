@@ -5,7 +5,7 @@ import { Icons } from "../../icons";
 import { Button, Badge, Loading } from "../../index";
 import { IField } from "../../types";
 
-import { FieldStyled, FieldAreaStyled, FieldFunctionStyled } from "./Field.styles";
+import { FieldStyled, FieldAreaStyled, FieldFunctionStyled } from "./styles";
 
 export default function Field({
   copy,
@@ -128,7 +128,6 @@ export default function Field({
               disabled={!submitValid || !submitValid(inputValue) || isSubmitted}
               inline={loading ? "small" : undefined}
               small
-              theme="solid"
               type="submit"
               onClick={(): void => {
                 if (submitFunction && submitValid && submitValid(inputValue)) {

@@ -1,6 +1,6 @@
 import { ILogo } from "../../types";
 
-import { LogoStyled } from "./Logo.styles";
+import { LogoStyled } from "./styles";
 
 const colors = ["#583749", "#3170B7", "#EE363D", "#A9C3CA", "#295F9C", "#AE282E", "#FFFFFF"];
 

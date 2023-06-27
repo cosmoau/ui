@@ -2,7 +2,7 @@ import { default as NextImage } from "next/image";
 
 import { IImage } from "../../types";
 
-import { ImageStyled } from "./Image.styles";
+import { ImageStyled } from "./styles";
 
 export default function Image({
   css,

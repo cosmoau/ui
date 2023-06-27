@@ -1,6 +1,6 @@
 import { IDivider } from "../../types";
 
-import { DividerStyled } from "./Divider.styles";
+import { DividerStyled } from "./styles";
 
 export default function Divider({ top, bottom, css, ...rest }: IDivider): JSX.Element {
   return (

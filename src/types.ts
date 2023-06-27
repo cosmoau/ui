@@ -10,7 +10,7 @@ import {
 } from "react";
 import { Toaster } from "react-hot-toast";
 
-import { TextSizes } from "./components/Text/Text.styles";
+import { TextSizes } from "./components/Text/styles";
 import { theme } from "./stitches.config";
 
 type IThemeSpacing = keyof typeof theme.space;

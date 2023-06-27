@@ -5,7 +5,7 @@ import { Icons } from "../../icons";
 import { Button } from "../../index";
 import { ICode } from "../../types";
 
-import { CodeStyled, CodeFunctionStyled, CodeBlockStyled } from "./Code.styles";
+import { CodeStyled, CodeFunctionStyled, CodeBlockStyled } from "./styles";
 
 export default function Code({ children, css, ...rest }: ICode): JSX.Element {
   const [isCopied, setIsCopied] = useState(false);

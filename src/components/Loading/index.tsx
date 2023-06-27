@@ -1,6 +1,6 @@
 import { ILoading } from "../../types";
 
-import { LoadingOverlayStyled } from "./Loading.styles";
+import { LoadingOverlayStyled } from "./styles";
 
 export default function Loading({ width = 18 }: ILoading): JSX.Element {
   return (

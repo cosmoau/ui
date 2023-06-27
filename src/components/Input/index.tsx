@@ -13,7 +13,7 @@ import {
   InputStyled,
   InputCoreStyled,
   InputIconStyled,
-} from "./Input.styles";
+} from "./styles";
 
 export default function Input({
   copy,
@@ -158,7 +158,6 @@ export default function Input({
                 disabled={!submitValid || !submitValid(inputValue) || isSubmitted}
                 inline={loading ? "small" : undefined}
                 small
-                theme="solid"
                 type="submit"
                 onClick={(): void => {
                   if (submitFunction && submitValid && submitValid(inputValue)) {

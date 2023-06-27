@@ -2,7 +2,7 @@ import { Icons } from "../../icons";
 import { Loading } from "../../index";
 import { IButton } from "../../types";
 
-import { ButtonIconStyled, ButtonStyled } from "./Button.styles";
+import { ButtonIconStyled, ButtonStyled } from "./styles";
 
 export default function Button({
   icon,

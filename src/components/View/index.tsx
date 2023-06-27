@@ -1,7 +1,7 @@
 import { darkTheme } from "../../stitches.config";
 import { IView } from "../../types";
 
-import { ViewStyled, ViewContainerStyled } from "./View.styles";
+import { ViewStyled, ViewContainerStyled } from "./styles";
 
 export default function View({
   container,
