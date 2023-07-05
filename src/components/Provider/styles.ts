@@ -1,12 +1,4 @@
-import {
-  breakpoints,
-  darkTheme,
-  fadeIn,
-  fadeOut,
-  globalCss,
-  styled,
-  theme,
-} from "../../stitches.config";
+import { breakpoints, darkTheme, fadeIn, fadeOut, globalCss, styled, theme } from "../../stitches.config";
 import { placesReset } from "../Places/styles";
 
 export const ProviderStyled = styled("main", {

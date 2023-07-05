@@ -44,9 +44,7 @@ export default function Button({
         <ButtonIconStyled align="left">{icon}</ButtonIconStyled>
       )}
       {children}
-      {icon && iconPosition === "right" && !external && (
-        <ButtonIconStyled align="right">{icon}</ButtonIconStyled>
-      )}
+      {icon && iconPosition === "right" && !external && <ButtonIconStyled align="right">{icon}</ButtonIconStyled>}
       {external && (
         <ButtonIconStyled align="right">
           <Icons.ArrowSquareOut />

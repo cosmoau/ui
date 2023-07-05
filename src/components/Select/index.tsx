@@ -158,13 +158,7 @@ export default function Select({
                 key={option.value + Math.random()}
                 focused={option.value === focused}
                 last={last && !filter}
-                selected={
-                  selection &&
-                  selection.find((item) => item === option.value) &&
-                  focused !== option.value
-                    ? true
-                    : false
-                }
+                selected={selection && selection.find((item) => item === option.value) && focused !== option.value ? true : false}
                 onClick={(): void => handleSelection(option.value, option.label)}>
                 {option.icon && option.iconPosition !== "right" && (
                   <SelectIconStyled align="left">{option.icon}</SelectIconStyled>

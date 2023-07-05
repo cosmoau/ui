@@ -14,14 +14,7 @@ import {
   DialogTriggerStyled,
 } from "./styles";
 
-export default function Dialog({
-  css,
-  trigger,
-  children,
-  title,
-  disabled,
-  small,
-}: IDialog): JSX.Element {
+export default function Dialog({ css, trigger, children, title, disabled, small }: IDialog): JSX.Element {
   const ref = useRef<HTMLDivElement>(null);
 
   const [isOpen, setIsOpen] = useState(false);

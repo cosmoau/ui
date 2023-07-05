@@ -24,11 +24,7 @@ export default function Loading({ width = 18 }: ILoading): JSX.Element {
   );
 }
 
-export function LoadingOverlay({
-  vertical = "bottom",
-  horizontal = "right",
-  width,
-}: ILoading): JSX.Element {
+export function LoadingOverlay({ vertical = "bottom", horizontal = "right", width }: ILoading): JSX.Element {
   return (
     <LoadingOverlayStyled horizontal={horizontal} vertical={vertical}>
       <Loading width={width} />

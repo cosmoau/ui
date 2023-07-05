@@ -6,13 +6,7 @@ import { Icons } from "../../icons";
 import { Badge, Button, Loading, Select, Stack, Text, fadeIn, theme } from "../../index";
 import { ITable } from "../../types";
 
-import {
-  TableCoreStyled,
-  TableFiltersStyled,
-  TableHeaderStyled,
-  TablePaginationStyled,
-  TableStyled,
-} from "./styles";
+import { TableCoreStyled, TableFiltersStyled, TableHeaderStyled, TablePaginationStyled, TableStyled } from "./styles";
 
 const pageSizes = [10, 25, 50, 100];
 const maxSize = 500;
@@ -93,8 +87,7 @@ export default function Table({
   }
 
   function handlePageChange(direction: "next" | "prev"): void {
-    const offset =
-      direction === "next" ? storage.offset + storage.limit : storage.offset - storage.limit;
+    const offset = direction === "next" ? storage.offset + storage.limit : storage.offset - storage.limit;
     const page = direction === "next" ? storage.page + 1 : storage.page - 1;
 
     setStorage({
@@ -121,12 +114,7 @@ export default function Table({
   }
 
   useEffect(() => {
-    if (
-      sortedBodyChildren &&
-      sortedBodyChildren.length &&
-      storage.offset >= sortedBodyChildren.length &&
-      storage.page > 1
-    ) {
+    if (sortedBodyChildren && sortedBodyChildren.length && storage.offset >= sortedBodyChildren.length && storage.page > 1) {
       resetPagination();
     }
   }, [storage.offset, sortedBodyChildren, storage.limit, setStorage]);
@@ -227,7 +215,7 @@ export default function Table({
                         )}
                       </Button>
                     </th>
-                  )
+                  ),
                 )}
               </tr>
             </thead>
@@ -235,40 +223,38 @@ export default function Table({
 
           <tbody>
             {!loading && sortedBodyChildren && sortedBodyChildren.length > 0 ? (
-              sortedBodyChildren
-                .slice(storage.offset, storage.offset + storage.limit)
-                .map((row, index) => (
-                  <tr key={index}>
-                    {rowNumbers && !collapse && (
-                      <td
-                        style={{
-                          minWidth: "0",
-                          opacity: 0.7,
-                          width: "1%",
-                        }}>
-                        {storage.offset + index + 1}
-                      </td>
-                    )}
-                    {row.map((cell, index) => (
-                      <td
-                        key={index}
-                        style={{
-                          ...(cell.width && {
-                            maxWidth: cell.width,
-                            minWidth: cell.width,
-                            width: cell.width,
-                          }),
-                        }}>
-                        {collapse && index >= 1 && (
-                          <Stack bottom="smaller">
-                            <Text as="label">{headChildren && headChildren[index]}</Text>
-                          </Stack>
-                        )}
-                        {cell?.label || cell?.value}
-                      </td>
-                    ))}
-                  </tr>
-                ))
+              sortedBodyChildren.slice(storage.offset, storage.offset + storage.limit).map((row, index) => (
+                <tr key={index}>
+                  {rowNumbers && !collapse && (
+                    <td
+                      style={{
+                        minWidth: "0",
+                        opacity: 0.7,
+                        width: "1%",
+                      }}>
+                      {storage.offset + index + 1}
+                    </td>
+                  )}
+                  {row.map((cell, index) => (
+                    <td
+                      key={index}
+                      style={{
+                        ...(cell.width && {
+                          maxWidth: cell.width,
+                          minWidth: cell.width,
+                          width: cell.width,
+                        }),
+                      }}>
+                      {collapse && index >= 1 && (
+                        <Stack bottom="smaller">
+                          <Text as="label">{headChildren && headChildren[index]}</Text>
+                        </Stack>
+                      )}
+                      {cell?.label || cell?.value}
+                    </td>
+                  ))}
+                </tr>
+              ))
             ) : (
               <tr>
                 {rowNumbers && <td style={{ opacity: 0.5 }}>&nbsp;</td>}
@@ -277,11 +263,7 @@ export default function Table({
                   style={{
                     color: theme.colors.accent.toString(),
                   }}>
-                  {loading ? (
-                    <Loading />
-                  ) : (
-                    <Badge icon={<Icons.MagnifyingGlassMinus />}>No results found</Badge>
-                  )}
+                  {loading ? <Loading /> : <Badge icon={<Icons.MagnifyingGlassMinus />}>No results found</Badge>}
                 </td>
               </tr>
             )}
@@ -337,9 +319,7 @@ export default function Table({
               onClick={(): void => {
                 scrollToTop();
               }}>
-              <Icons.ArrowUp
-                style={{ animation: `${fadeIn} 0.3s ease-in-out`, marginRight: "0.5rem" }}
-              />
+              <Icons.ArrowUp style={{ animation: `${fadeIn} 0.3s ease-in-out`, marginRight: "0.5rem" }} />
               <Text as="span" css={{ hiddenInline: "tablet" }}>
                 {storage.offset + 1} -{" "}
                 {storage.offset + storage.limit > sortedBodyChildren.length

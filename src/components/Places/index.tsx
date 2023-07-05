@@ -39,14 +39,11 @@ export default function Places({
     if (place.geometry) {
       const init = {
         address: place?.formatted_address || "",
-        city:
-          place?.address_components?.find((component) => component.types.includes("locality"))
-            ?.long_name || "",
+        city: place?.address_components?.find((component) => component.types.includes("locality"))?.long_name || "",
         restrictedAddress: place?.formatted_address?.replace(/^[0-9]+ /, "") || "",
         state:
-          place?.address_components?.find((component) =>
-            component.types.includes("administrative_area_level_1")
-          )?.short_name || "",
+          place?.address_components?.find((component) => component.types.includes("administrative_area_level_1"))?.short_name ||
+          "",
       };
 
       setData(init);
@@ -92,8 +89,7 @@ export default function Places({
 
         return google;
       } catch (error: unknown) {
-        const errorMessage =
-          (error as Error).message || "Error loading Google Maps for autocomplete, please refresh.";
+        const errorMessage = (error as Error).message || "Error loading Google Maps for autocomplete, please refresh.";
 
         toast(errorMessage);
         throw error;

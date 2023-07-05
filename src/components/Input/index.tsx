@@ -80,13 +80,7 @@ export default function Input({
   }
 
   useEventListener("keydown", (event: KeyboardEvent) => {
-    if (
-      listen &&
-      event.key === "Enter" &&
-      submitFunction &&
-      submitValid &&
-      submitValid(inputValue)
-    ) {
+    if (listen && event.key === "Enter" && submitFunction && submitValid && submitValid(inputValue)) {
       submitFunction(inputValue || "");
     }
   });

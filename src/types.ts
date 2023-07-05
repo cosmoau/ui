@@ -186,7 +186,7 @@ export interface IPlaces extends IInput {
       city: string;
       restrictedAddress: string;
       state: string;
-    } | null
+    } | null,
   ) => void;
   restrict?: boolean;
 }
@@ -259,9 +259,7 @@ export interface IStack {
 }
 
 export interface ITable {
-  bodyChildren?: Array<
-    Array<{ label?: ReactNode; value: string | number; width?: string | number }>
-  >;
+  bodyChildren?: Array<Array<{ label?: ReactNode; value: string | number; width?: string | number }>>;
   collapse?: boolean;
   collapseDisabled?: number[];
   css?: CSS;

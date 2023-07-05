@@ -4,13 +4,7 @@ import { LogoStyled } from "./styles";
 
 const colors = ["#583749", "#3170B7", "#EE363D", "#A9C3CA", "#295F9C", "#AE282E", "#FFFFFF"];
 
-export default function Logo({
-  height = 70,
-  width = 231,
-  css,
-  inline,
-  ...rest
-}: ILogo): JSX.Element {
+export default function Logo({ height = 70, width = 231, css, inline, ...rest }: ILogo): JSX.Element {
   return (
     <LogoStyled
       css={{

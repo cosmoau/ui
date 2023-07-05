@@ -26,11 +26,7 @@ export default function Form({
   });
 
   return (
-    <FormStyled
-      css={css}
-      disabled={disabled}
-      onChange={(): void => setIsSubmitted(false)}
-      {...rest}>
+    <FormStyled css={css} disabled={disabled} onChange={(): void => setIsSubmitted(false)} {...rest}>
       {children}
       {submit && (
         <Button
