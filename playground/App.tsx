@@ -57,6 +57,13 @@ export function App(): ReactElement {
           vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc nunc aliquet nunc, vitae
           aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc nunc
           </C.Text>
+            <C.Text as='p' balanced={balance}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget
+          ultricies ultricies, nunc nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec
+          euismod, nisl eget ultricies ultricies, nunc nunc aliquet nunc, vitae aliquam nunc nunc
+          vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc nunc aliquet nunc, vitae
+          aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc nunc
+          </C.Text>
           </C.Stack>
       </C.View>
       <C.View bottom="largest" container top="largest">

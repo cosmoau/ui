@@ -19,38 +19,36 @@ export default function Text({
   link,
   ...rest
 }: IText): JSX.Element {
-  const TextWrapper = balanced ? Balancer : Fragment;
+  const TextBalancer = balanced ? Balancer : Fragment;
 
   return (
-    <TextWrapper>
-      <TextStyled
-        accent={accent}
-        as={override || as || "p"}
-        css={{
-          ...(top && {
-            marginTop: 0,
-            paddingTop: `$${top}`,
-          }),
-          ...(bottom && {
-            marginBottom: 0,
-            paddingBottom: `$${bottom}`,
-          }),
-          ...(inline && {
-            alignSelf: "center",
-            display: "inline-flex",
-            marginBottom: "0 !important",
-            marginRight: inline === "auto" ? "auto" : `$${inline}`,
-            verticalAlign: "middle",
-          }),
+    <TextStyled
+      accent={accent}
+      as={override || as || "p"}
+      css={{
+        ...(top && {
+          marginTop: 0,
+          paddingTop: `$${top}`,
+        }),
+        ...(bottom && {
+          marginBottom: 0,
+          paddingBottom: `$${bottom}`,
+        }),
+        ...(inline && {
+          alignSelf: "center",
+          display: "inline-flex",
+          marginBottom: "0 !important",
+          marginRight: inline === "auto" ? "auto" : `$${inline}`,
+          verticalAlign: "middle",
+        }),
 
-          ...css,
-        }}
-        highlight={highlight}
-        link={link}
-        size={as || "p"}
-        {...rest}>
-        {children}
-      </TextStyled>
-    </TextWrapper>
+        ...css,
+      }}
+      highlight={highlight}
+      link={link}
+      size={as || "p"}
+      {...rest}>
+      <TextBalancer>{children}</TextBalancer>
+    </TextStyled>
   );
 }
