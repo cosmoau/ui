@@ -1,3 +1,6 @@
+import { Fragment } from "react";
+import Balancer from "react-wrap-balancer";
+
 import { IText } from "../../types";
 
 import { TextStyled } from "./styles";
@@ -12,37 +15,42 @@ export default function Text({
   override,
   css,
   children,
+  balanced,
   link,
   ...rest
 }: IText): JSX.Element {
-  return (
-    <TextStyled
-      accent={accent}
-      as={override || as || "p"}
-      css={{
-        ...(top && {
-          marginTop: 0,
-          paddingTop: `$${top}`,
-        }),
-        ...(bottom && {
-          marginBottom: 0,
-          paddingBottom: `$${bottom}`,
-        }),
-        ...(inline && {
-          alignSelf: "center",
-          display: "inline-flex",
-          marginBottom: "0 !important",
-          marginRight: inline === "auto" ? "auto" : `$${inline}`,
-          verticalAlign: "middle",
-        }),
+  const TextWrapper = balanced ? Balancer : Fragment;
 
-        ...css,
-      }}
-      highlight={highlight}
-      link={link}
-      size={as || "p"}
-      {...rest}>
-      {children}
-    </TextStyled>
+  return (
+    <TextWrapper>
+      <TextStyled
+        accent={accent}
+        as={override || as || "p"}
+        css={{
+          ...(top && {
+            marginTop: 0,
+            paddingTop: `$${top}`,
+          }),
+          ...(bottom && {
+            marginBottom: 0,
+            paddingBottom: `$${bottom}`,
+          }),
+          ...(inline && {
+            alignSelf: "center",
+            display: "inline-flex",
+            marginBottom: "0 !important",
+            marginRight: inline === "auto" ? "auto" : `$${inline}`,
+            verticalAlign: "middle",
+          }),
+
+          ...css,
+        }}
+        highlight={highlight}
+        link={link}
+        size={as || "p"}
+        {...rest}>
+        {children}
+      </TextStyled>
+    </TextWrapper>
   );
 }

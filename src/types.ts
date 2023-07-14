@@ -287,6 +287,7 @@ export interface ITable {
 export interface IText extends ComponentPropsWithoutRef<"div"> {
   accent?: boolean;
   as?: keyof typeof TextSizes;
+  balanced?: boolean;
   bottom?: IThemeSpacing;
   children: ReactNode;
   css?: CSS;

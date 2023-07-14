@@ -1,7 +1,7 @@
 {
   "name": "@cosmoau/ui",
   "description": "Cosmo's internal component library, built with React, Next.js, and Stitches.",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": {
     "production": [
@@ -25,6 +25,7 @@
     "@swc/helpers": "^0.4.14",
     "fast-sort": "^3.4.0",
     "react-hot-toast": "^2.4.1",
+    "react-wrap-balancer": "^1.0.0",
     "usehooks-ts": "^2.9.1"
   },
   "devDependencies": {
@@ -32,12 +33,12 @@
     "@parcel/packager-ts": "2.8.3",
     "@parcel/transformer-typescript-types": "2.8.3",
     "@types/google.maps": "^3.53.4",
-    "@types/node": "^20.3.3",
-    "@types/react": "^18.2.14",
-    "eslint": "^8.44.0",
+    "@types/node": "^20.4.2",
+    "@types/react": "^18.2.15",
+    "eslint": "^8.45.0",
     "eslint-config-dolmios": "^1.7.0",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
-    "next": "^13.4.8",
+    "next": "^13.4.10",
     "parcel": "2.8.3",
     "path-browserify": "^1.0.1",
     "prettier": "^3.0.0",
@@ -84,7 +85,6 @@
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "sideEffects": true,
   "peerDependencies": {
     "next": "^13.4.3",
     "react": "^18.2.0",
@@ -104,6 +104,7 @@
     "tidy": "pnpm lint && pnpm prettier",
     "typecheck": "tsc --noEmit"
   },
+  "sideEffects": true,
   "source": "src/index.tsx",
   "types": "dist/esm/index.d.ts"
 }

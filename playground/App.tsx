@@ -9,13 +9,55 @@ import * as C from "../src/index";
 
 export function App(): ReactElement {
   const [dark, setDark] = useState<boolean>(false);
+  const [balance, setBalance] = useState<boolean>(false);
   const [tempInput, setTempInput] = useState<string>("");
   const [tempField, setTempField] = useState<string>("");
+  const [tempText, setTempText] = useState<'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p'>("h1");
+
+  function handleTextCycle(): void {
+    switch (tempText) {
+      case "h1":
+        setTempText("h2");
+        break;
+      case "h2":
+        setTempText("h3");
+        break;
+      case "h3":
+        setTempText("h4");
+        break;
+      case "h4":
+        setTempText("h5");
+        break;
+      case "h5":
+        setTempText("h6");
+        break;
+      case "h6":
+        setTempText("p");
+        break;
+      case "p":
+        setTempText("h1");
+        break;
+      default:
+        setTempText("h1");
+        break;
+    }
+  }
 
   return (
     <C.Provider dark={dark}>
       <C.View bottom="largest" container gradient inverted top="largest">
-        <C.Text as="h1">This is the gradient.</C.Text>
+        <C.Stack align="center">
+          <C.Button inline="large" onClick={(): void => handleTextCycle()}>Cycle Text</C.Button>
+      <C.Button onClick={() => setBalance(!balance)}>Toggle Balance</C.Button>
+        <C.Text as="h1" top="larger">Balance</C.Text>
+        <C.Text as={tempText} balanced={balance}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget
+          ultricies ultricies, nunc nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec
+          euismod, nisl eget ultricies ultricies, nunc nunc aliquet nunc, vitae aliquam nunc nunc
+          vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc nunc aliquet nunc, vitae
+          aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc nunc
+          </C.Text>
+          </C.Stack>
       </C.View>
       <C.View bottom="largest" container top="largest">
         <C.Form
