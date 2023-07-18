@@ -84,7 +84,6 @@ export const TableCoreStyled = styled("div", {
               display: "block",
               paddingBottom: "0 !important",
               verticalAlign: "middle",
-              width: "50%",
             },
             width: "100%",
           },

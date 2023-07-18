@@ -14,13 +14,13 @@ pnpm install
 
 ## Usage
 
-To work on components in the browser, use Parcel. Run the development server and head to [http://localhost:420](http://localhost:420) in the browser.
+To work on components in the browser, run the development server and make changes in the `playground` directory.
 
 ```sh
 pnpm dev
 ```
 
-Before you deploy, lint your code and format it. Then run the build to compile the code with `TSC & TSLib`.
+Before you deploy, lint your code and format it. Then run the build script to generate the production bundle.
 
 ```sh
 pnpm tidy
@@ -41,6 +41,3 @@ Feel free to get in touch with feedback, advice or suggestions. See [Conventiona
 ## License
 
 [MIT](https://github.com/cosmoau/ui/blob/main/LICENSE.md) © Cosmo AU Pty Ltd, 2023.
-
-## Author
-[@dolmios](https://github.com/dolmios)
