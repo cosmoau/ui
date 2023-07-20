@@ -177,6 +177,18 @@ export interface ILogo {
   width?: number | string;
 }
 
+export interface IMenu {
+  children?: ReactNode;
+  css?: CSS;
+  onSelection?: (value: string, label: string) => void;
+  options: Array<{
+    label: string;
+    value: string;
+  }>;
+  selection?: string;
+  trigger: ReactNode;
+}
+
 export interface IPlaces extends IInput {
   apiKey: string;
   country?: string | string[];

@@ -109,9 +109,10 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     },
     zIndices: {
       dialog: 997,
+      menu: 999,
       popover: 996,
       select: 995,
-      special: 999,
+      special: 100,
       table: 100,
       toast: 998,
     },
