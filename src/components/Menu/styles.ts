@@ -2,6 +2,7 @@ import { fadeIn, fadeOut, styled } from "../../stitches.config";
 
 export const MenuStyled = styled("div", {
   display: "inline-flex",
+  height: "100%",
   verticalAlign: "middle",
 });
 
@@ -17,17 +18,15 @@ export const MenuGroupStyled = styled("div", {
   border: "0.1rem solid $border",
   borderRadius: "$small",
   boxShadow: "$large",
+
   left: "2rem",
   lineBreak: "auto",
-  marginTop: "$large !important",
-  overflowY: "auto",
+  marginTop: "$larger !important",
   padding: "$small",
   pointerEvents: "auto",
   position: "absolute",
-
   right: "auto",
   textAlign: "left !important",
-  top: "auto",
   transition: "$default",
   variants: {
     animation: {
@@ -49,9 +48,8 @@ export const MenuGroupStyled = styled("div", {
 export const MenuItemStyled = styled("div", {
   "&:hover": {
     backgroundColor: "$defaultHover",
-    borderBottomColor: "transparent",
   },
-  backgroundColor: "$background",
+
   borderRadius: "$small",
   cursor: "pointer",
   display: "flex",

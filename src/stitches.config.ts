@@ -21,16 +21,16 @@ export const darkTheme = createTheme({
   colors: {
     accent: "#c8d7e7",
     background: "#0e1623",
-    border: "rgba(255, 255, 255, 0.2)",
-    borderTable: "rgba(255, 255, 255, 0.1)",
-    default: "#192331",
+    border: "rgba(254, 248, 244, 0.2)",
+    borderTable: "rgba(254, 248, 244, 0.1)",
+    default: "#1b2532",
     defaultHover: "#333f4f",
     defaultTable: "#141d29",
     text: "#fef7f2",
   },
   shadows: {
-    large: "0",
-    small: "0",
+    large: "0 0.3rem 0.5rem 0.05rem rgba(254, 248, 244, 0.05)",
+    small: "0 0.125rem 0.25rem 0 rgba(254, 248, 244, 0.05)",
   },
 });
 

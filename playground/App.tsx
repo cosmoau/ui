@@ -45,7 +45,7 @@ export function App(): ReactElement {
 
   return (
     <C.Provider dark={dark}>
-      <C.View bottom="largest" container gradient top="largest">
+      <C.View bottom="largest" container gradient inverted top="largest">
         <C.Stack align="center">
           <C.Menu options={[
             {
