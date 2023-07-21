@@ -253,6 +253,7 @@ export interface IStack {
   direction?: "row" | "column";
   flex?: CSSProperties["alignItems"];
   flexduo?: boolean;
+  id?: string;
   minimal?: boolean;
   noPrint?: boolean;
   offset?: number;
@@ -324,9 +325,9 @@ export interface IView {
 }
 
 export interface IIcon {
+  children: ReactNode;
   css?: CSS;
   forceColor?: keyof typeof theme.colors;
   forceSize?: number;
-  icon: ReactNode;
   inline?: IThemeSpacing | "auto";
 }

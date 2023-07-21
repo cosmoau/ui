@@ -24,6 +24,7 @@ export default function Stack({
   widthWide,
   className,
   offsetWide,
+  id,
   css,
   noPrint,
   ...rest
@@ -56,7 +57,8 @@ export default function Stack({
           alignItems: flex || "normal",
           justifyContent: flex || "normal",
           ...shared,
-        }}>
+        }}
+        id={id}>
         {children}
       </StackRowStyled>
     );
