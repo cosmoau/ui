@@ -1,11 +1,20 @@
 import toast, { useToaster } from "react-hot-toast";
-import { useEventListener } from "usehooks-ts";
+import { useEffectOnce, useEventListener } from "usehooks-ts";
 
+import packageJson from "../../../package.json";
 import { Icons } from "../../icons";
 import { darkTheme } from "../../stitches.config";
 import { IProvider, IToast } from "../../types";
 
 import { ProviderStyled, ToastContainerStyled, ToastStyled, providerReset } from "./styles";
+
+const tag = ` ██████╗ ██████╗ ███████╗███╗   ███╗ ██████╗ 
+██╔════╝██╔═══██╗██╔════╝████╗ ████║██╔═══██╗
+██║     ██║   ██║███████╗██╔████╔██║██║   ██║
+██║     ██║   ██║╚════██║██║╚██╔╝██║██║   ██║
+╚██████╗╚██████╔╝███████║██║ ╚═╝ ██║╚██████╔╝
+ ╚═════╝ ╚═════╝ ╚══════╝╚═╝     ╚═╝ ╚═════╝ \n Cosmo UI v${packageJson.version}, ${packageJson.homepage}
+`;
 
 function ToastController(props: IToast): JSX.Element {
   const { toasts, handlers } = useToaster();
@@ -35,6 +44,11 @@ function ToastController(props: IToast): JSX.Element {
 
 export default function Provider({ children, css, dark }: IProvider): JSX.Element {
   providerReset();
+
+  useEffectOnce(() => {
+    // eslint-disable-next-line no-console
+    console.log(tag);
+  });
 
   return (
     <ProviderStyled

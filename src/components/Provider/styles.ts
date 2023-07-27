@@ -86,7 +86,7 @@ export const providerReset = globalCss({
     },
 
     {
-      fontDisplay: "auto",
+      fontDisplay: "swap",
       fontFamily: "Tiempos Headline",
       fontStyle: "normal",
       fontWeight: "bold",

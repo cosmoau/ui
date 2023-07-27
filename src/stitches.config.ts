@@ -79,7 +79,7 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
     },
     fonts: {
       default: "Untitled Sans, apple-system, sans-serif",
-      serif: "Tiempos Headline, $default",
+      serif: "Tiempos Headline, $default, apple-system, sans-serif",
     },
     lineHeights: {
       default: "1.4",
