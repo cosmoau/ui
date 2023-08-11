@@ -239,11 +239,12 @@ export default function Table({
                     <td
                       key={index}
                       style={{
-                        ...(cell.width && {
-                          maxWidth: cell.width,
-                          minWidth: cell.width,
-                          width: cell.width,
-                        }),
+                        ...(cell.width &&
+                          !collapse && {
+                            maxWidth: cell.width,
+                            minWidth: cell.width,
+                            width: cell.width,
+                          }),
                       }}>
                       {collapse && index >= 1 && (
                         <Stack bottom="smaller">
