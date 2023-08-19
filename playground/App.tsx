@@ -1,14 +1,12 @@
 /* eslint-disable no-alert */
 /* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-import { CurrencyEth, Hexagon } from "@phosphor-icons/react";
 import React, { ReactElement, useState } from "react";
 import { toast } from "react-hot-toast";
 
 import * as C from "../src/index";
 
 export function App(): ReactElement {
-  const [dark, setDark] = useState<boolean>(false);
   const [balance, setBalance] = useState<boolean>(false);
   const [tempInput, setTempInput] = useState<string>("");
   const [tempField, setTempField] = useState<string>("");
@@ -44,7 +42,7 @@ export function App(): ReactElement {
   }
 
   return (
-    <C.Provider dark={dark}>
+    <C.Provider>
       <C.View bottom="largest" container gradient inverted top="largest">
         <C.Stack align="center">
           <C.Menu options={[
@@ -148,6 +146,51 @@ export function App(): ReactElement {
       </C.View>
       <C.View bottom="largest" container top="largest">
         <C.Stack direction="row">
+          <C.Stack direction="column" width={33.33}>
+            <C.Box footer={
+              <C.Button>Call to action</C.Button>
+            }>
+              <C.Text as="h5">
+                Lorem A - First heading
+              </C.Text>
+              <C.Text accent>
+                Lorem ipsum dolor sit amet.
+              </C.Text>
+            </C.Box>
+          </C.Stack>
+          <C.Stack direction="column" width={33.33}>
+            <C.Box footer={
+              <C.Button>Call to action</C.Button>
+            }>
+              <C.Text as="h5">
+                Lorem A - First heading
+              </C.Text>
+              <C.Text accent>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+
+              </C.Text>
+            </C.Box>
+          </C.Stack>
+          <C.Stack direction="column" width={33.33}>
+            <C.Box footer={
+              <C.Button>Call to action</C.Button>
+            }>
+              <C.Text as="h5">
+                Lorem A - First heading
+              </C.Text>
+              <C.Text accent>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget.
+              </C.Text>
+            </C.Box>
+          </C.Stack>
+         
+          </C.Stack>
+      </C.View>
+      <C.View bottom="largest" container top="largest">
+        <C.Stack direction="row">
           <C.Stack direction="column">
             <C.Stack top="medium">
               <C.Text as="h1">
@@ -159,43 +202,7 @@ export function App(): ReactElement {
                 submit="DJKASDJFHSDJFSJDFJKSD"
               />
             </C.Stack>
-            <C.Stack align="center">
-              <C.Icon
-                forceColor="default"
-                forceSize={420}
-                icon={<Hexagon weight="fill" />}
-                inline="large"
-              />
-              <C.Icon
-                forceColor="defaultHover"
-                forceSize={420}
-                icon={<Hexagon weight="fill" />}
-                inline="large"
-              />
-              <C.Icon
-                forceColor="blueBackground"
-                forceSize={420}
-                icon={<Hexagon weight="fill" />}
-              />
-            </C.Stack>
-            <C.Stack top="larger">
-              <C.Box
-                css={{
-                  borderRadius: "$large",
-                }}>
-                <C.Stack flexduo>
-                  <C.Icon icon={<CurrencyEth />} inline="smaller" />
-                  <C.Text link="default">This is a default link (at least in appearance)</C.Text>
-                  <C.Icon icon={<CurrencyEth />} inline="smaller" />
-                  <C.Text link="minimal">This is a minimal link (at least in appearance)</C.Text>
-                  <C.Icon icon={<CurrencyEth />} inline="smaller" />
 
-                  <C.Text link="alternate" onClick={(): void => setDark(!dark)}>
-                    This too, and it toggles the theme
-                  </C.Text>
-                </C.Stack>
-              </C.Box>
-            </C.Stack>
             <C.Stack top="medium">
               <C.Box theme="fill">
                 <C.Badge theme="alternate">Test</C.Badge>
@@ -280,7 +287,7 @@ export function App(): ReactElement {
             </C.Stack>
           </C.Stack>
         </C.Stack>
-      </C.View>
+      C</C.View>
     </C.Provider>
   );
 }

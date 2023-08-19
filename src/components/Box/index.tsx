@@ -4,7 +4,7 @@ import { Icons } from "../../icons";
 import { Button, Image } from "../../index";
 import { IBox } from "../../types";
 
-import { BoxExitStyled, BoxHeaderStyled, BoxInnerStyled, BoxStyled } from "./styles";
+import { BoxExitStyled, BoxFooterStyled, BoxHeaderStyled, BoxInnerStyled, BoxStyled } from "./styles";
 
 export default function Box({
   image,
@@ -20,6 +20,7 @@ export default function Box({
   loading,
   theme,
   children,
+  footer,
   minimal,
   closable,
 }: IBox): JSX.Element | null {
@@ -39,6 +40,7 @@ export default function Box({
     <BoxStyled
       animation={!isOpen}
       css={css}
+      footer={footer ? true : false}
       loading={loading || false}
       padding={header || image ? "none" : minimal ? "none" : "default"}
       theme={theme || "default"}>
@@ -79,7 +81,11 @@ export default function Box({
           />
         ))}
       {header && <BoxHeaderStyled>{header}</BoxHeaderStyled>}
-      {image || header ? <BoxInnerStyled padding={minimal ? "none" : "default"}>{children}</BoxInnerStyled> : children}
+      {image || header || footer ? (
+        <BoxInnerStyled padding={minimal || footer ? "none" : "default"}>{children}</BoxInnerStyled>
+      ) : (
+        children
+      )}
       {closable && (
         <BoxExitStyled onClick={(): void => handleClose()}>
           <Button small theme={"minimal"}>
@@ -87,6 +93,7 @@ export default function Box({
           </Button>
         </BoxExitStyled>
       )}
+      {footer && <BoxFooterStyled>{footer}</BoxFooterStyled>}
     </BoxStyled>
   );
 }

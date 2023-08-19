@@ -29,6 +29,13 @@ export const BoxStyled = styled("article", {
         animationFillMode: "forwards",
       },
     },
+    footer: {
+      true: {
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+      },
+    },
     loading: {
       true: {
         cursor: "wait",
@@ -71,7 +78,14 @@ export const BoxHeaderStyled = styled("div", {
   padding: "$small $medium",
 });
 
+export const BoxFooterStyled = styled("div", {
+  paddingTop: "calc($large / 1.5)",
+});
+
 export const BoxInnerStyled = styled("div", {
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "flex-start",
   variants: {
     ...paddingVariants,
   },

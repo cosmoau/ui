@@ -51,6 +51,7 @@ export interface IBox {
   children: ReactNode;
   closable?: boolean;
   css?: CSS;
+  footer?: ReactNode;
   header?: ReactNode;
   image?: string;
   imageAlt?: ImageProps["alt"];
