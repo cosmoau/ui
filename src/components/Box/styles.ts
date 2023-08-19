@@ -79,13 +79,10 @@ export const BoxHeaderStyled = styled("div", {
 });
 
 export const BoxFooterStyled = styled("div", {
-  paddingTop: "calc($large / 1.5)",
+  padding: "0 $medium $medium $medium",
 });
 
 export const BoxInnerStyled = styled("div", {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "flex-start",
   variants: {
     ...paddingVariants,
   },

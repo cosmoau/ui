@@ -42,7 +42,7 @@ export default function Box({
       css={css}
       footer={footer ? true : false}
       loading={loading || false}
-      padding={header || image ? "none" : minimal ? "none" : "default"}
+      padding={header || footer || image ? "none" : minimal ? "none" : "default"}
       theme={theme || "default"}>
       {image &&
         (imageCTA ? (
@@ -81,11 +81,7 @@ export default function Box({
           />
         ))}
       {header && <BoxHeaderStyled>{header}</BoxHeaderStyled>}
-      {image || header || footer ? (
-        <BoxInnerStyled padding={minimal || footer ? "none" : "default"}>{children}</BoxInnerStyled>
-      ) : (
-        children
-      )}
+      {image || header || footer ? <BoxInnerStyled padding={minimal ? "none" : "default"}>{children}</BoxInnerStyled> : children}
       {closable && (
         <BoxExitStyled onClick={(): void => handleClose()}>
           <Button small theme={"minimal"}>
