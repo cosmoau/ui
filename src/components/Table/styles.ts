@@ -107,6 +107,7 @@ export const TableHeaderStyled = styled("div", {
   "*": {
     verticalAlign: "middle",
   },
+  alignItems: "center",
   backgroundColor: "$background",
   display: "flex",
   gap: "$small",
@@ -116,6 +117,7 @@ export const TableHeaderStyled = styled("div", {
   justifyContent: "space-between",
   paddingBottom: "calc($medium * 1.5)",
   verticalAlign: "middle",
+  width: "100%",
 });
 
 export const TableFiltersStyled = styled("div", {

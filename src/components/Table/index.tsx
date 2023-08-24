@@ -150,7 +150,7 @@ export default function Table({
       {header && (
         <TableHeaderStyled>
           <Stack>
-            <Text as="h4" inline={header.count ? "small" : undefined}>
+            <Text as="h4" bottom="none" inline={header.count ? "small" : undefined}>
               {header.title}
             </Text>
             {header.count && (

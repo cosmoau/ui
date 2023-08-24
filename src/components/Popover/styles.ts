@@ -3,7 +3,6 @@ import { fadeIn, fadeOut, styled } from "../../stitches.config";
 export const PopoverStyled = styled("div", {
   display: "inline-flex",
   position: "relative",
-
   verticalAlign: "middle",
 });
 
