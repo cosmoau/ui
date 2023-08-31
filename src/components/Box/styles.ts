@@ -22,6 +22,8 @@ export const BoxStyled = styled("article", {
   position: "relative",
   transition: "$default",
 
+  
+
   variants: {
     animation: {
       true: {
@@ -80,12 +82,18 @@ export const BoxHeaderStyled = styled("div", {
 
 export const BoxFooterStyled = styled("div", {
   padding: "0 $medium $medium $medium",
+
 });
 
 export const BoxInnerStyled = styled("div", {
   variants: {
     ...paddingVariants,
   },
+});
+
+export const BoxFlexStyled = styled("div", {
+  height: "100%",
+  width: "100%",
 });
 
 export const BoxExitStyled = styled("div", {

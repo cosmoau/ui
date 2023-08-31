@@ -4,7 +4,7 @@ import { Icons } from "../../icons";
 import { Button, Image } from "../../index";
 import { IBox } from "../../types";
 
-import { BoxExitStyled, BoxFooterStyled, BoxHeaderStyled, BoxInnerStyled, BoxStyled } from "./styles";
+import { BoxExitStyled, BoxFlexStyled, BoxFooterStyled, BoxHeaderStyled, BoxInnerStyled, BoxStyled } from "./styles";
 
 export default function Box({
   image,
@@ -44,6 +44,7 @@ export default function Box({
       loading={loading || false}
       padding={header || footer || image ? "none" : minimal ? "none" : "default"}
       theme={theme || "default"}>
+      <BoxFlexStyled>
       {image &&
         (imageCTA ? (
           <a href={imageCTA} rel="noopener noreferrer" target={imageTarget || "_blank"}>
@@ -86,6 +87,10 @@ export default function Box({
       ) : (
         children
       )}
+    
+      </BoxFlexStyled>
+      {footer && <BoxFooterStyled>{footer}</BoxFooterStyled>}
+
       {closable && (
         <BoxExitStyled onClick={(): void => handleClose()}>
           <Button small theme={"minimal"}>
@@ -93,7 +98,6 @@ export default function Box({
           </Button>
         </BoxExitStyled>
       )}
-      {footer && <BoxFooterStyled>{footer}</BoxFooterStyled>}
     </BoxStyled>
   );
 }
