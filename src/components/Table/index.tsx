@@ -114,7 +114,12 @@ export default function Table({
   }
 
   useEffect(() => {
-    if (sortedBodyChildren && sortedBodyChildren.length && storage.offset >= sortedBodyChildren.length && storage.page > 1) {
+    if (
+      sortedBodyChildren &&
+      sortedBodyChildren.length &&
+      storage.offset >= sortedBodyChildren.length &&
+      storage.page > 1
+    ) {
       resetPagination();
     }
   }, [storage.offset, sortedBodyChildren, storage.limit, setStorage]);

@@ -1,7 +1,7 @@
 {
   "name": "@cosmoau/ui",
   "description": "Cosmo's internal component library, built with React, Next.js, and Stitches.",
-  "version": "1.6.17",
+  "version": "1.6.18",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": {
     "production": [
@@ -34,15 +34,15 @@
     "@parcel/packager-ts": "2.8.3",
     "@parcel/transformer-typescript-types": "2.8.3",
     "@types/google.maps": "^3.54.0",
-    "@types/node": "^20.5.4",
+    "@types/node": "^20.5.7",
     "@types/react": "^18.2.21",
-    "eslint": "^8.47.0",
-    "eslint-config-dolmios": "^1.8.0",
+    "eslint": "^8.48.0",
+    "eslint-config-dolmios": "^1.8.1",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
     "next": "^13.4.19",
     "parcel": "2.8.3",
     "path-browserify": "^1.0.1",
-    "prettier": "^3.0.2",
+    "prettier": "^3.0.3",
     "process": "^0.11.10",
     "react": "^18.2.0",
     "react-device-detect": "^2.2.3",

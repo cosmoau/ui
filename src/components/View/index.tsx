@@ -3,7 +3,16 @@ import { IView } from "../../types";
 
 import { ViewStyled, ViewContainerStyled } from "./styles";
 
-export default function View({ container, inverted, gradient, top, bottom, css, children, noPrint }: IView): JSX.Element {
+export default function View({
+  container,
+  inverted,
+  gradient,
+  top,
+  bottom,
+  css,
+  children,
+  noPrint,
+}: IView): JSX.Element {
   return (
     <ViewStyled
       className={inverted ? darkTheme.className : ""}

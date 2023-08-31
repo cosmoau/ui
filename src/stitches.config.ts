@@ -177,7 +177,9 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
         display: "block",
       },
     }),
-    visibleInline: (value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide") => ({
+    visibleInline: (
+      value: "phone" | "tablet" | "tabletX" | "laptop" | "laptopX" | "desktop" | "desktopX" | "wide",
+    ) => ({
       display: "none",
       [breakpoints[value]]: {
         display: "inline-block",

@@ -81,7 +81,11 @@ export default function Box({
           />
         ))}
       {header && <BoxHeaderStyled>{header}</BoxHeaderStyled>}
-      {image || header || footer ? <BoxInnerStyled padding={minimal ? "none" : "default"}>{children}</BoxInnerStyled> : children}
+      {image || header || footer ? (
+        <BoxInnerStyled padding={minimal ? "none" : "default"}>{children}</BoxInnerStyled>
+      ) : (
+        children
+      )}
       {closable && (
         <BoxExitStyled onClick={(): void => handleClose()}>
           <Button small theme={"minimal"}>

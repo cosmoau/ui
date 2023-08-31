@@ -42,8 +42,8 @@ export default function Places({
         city: place?.address_components?.find((component) => component.types.includes("locality"))?.long_name || "",
         restrictedAddress: place?.formatted_address?.replace(/^[0-9]+ /, "") || "",
         state:
-          place?.address_components?.find((component) => component.types.includes("administrative_area_level_1"))?.short_name ||
-          "",
+          place?.address_components?.find((component) => component.types.includes("administrative_area_level_1"))
+            ?.short_name || "",
       };
 
       setData(init);

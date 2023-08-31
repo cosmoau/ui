@@ -73,7 +73,9 @@ export default function Badge({
       ) : (
         children || ""
       )}
-      {icon && iconPosition === "right" && !closable && !copy && <BadgeIconStyled align="right">{icon}</BadgeIconStyled>}
+      {icon && iconPosition === "right" && !closable && !copy && (
+        <BadgeIconStyled align="right">{icon}</BadgeIconStyled>
+      )}
 
       {closable && (
         <BadgeIconStyled align="right" onClick={(): void => handleClose()}>

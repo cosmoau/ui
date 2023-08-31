@@ -19,14 +19,18 @@ export const InputCoreStyled = styled("div", {
   borderRadius: "$small",
   display: "inline-flex",
   justifyContent: "center",
+  minHeight: "3.3rem",
   padding: "$smaller $small",
+  phone: {
+    minHeight: "3.5rem",
+  },
   position: "relative",
   transition: "$default",
   variants: {
     disabled: {
       true: {
         cursor: "not-allowed",
-        opacity: 0.7,
+        opacity: 0.5,
       },
     },
   },
@@ -51,7 +55,6 @@ export const InputAreaStyled = styled("input", {
   fontSize: "$default",
   letterSpacing: 0,
   margin: 0,
-  minHeight: "2.4rem",
   outline: "none",
   padding: 0,
   phone: {
