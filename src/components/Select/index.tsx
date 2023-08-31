@@ -1,8 +1,7 @@
 import { useRef, useState } from "react";
-import { useEventListener, useOnClickOutside } from "usehooks-ts";
 
 import { Icons } from "../../icons";
-import { Input, Loading } from "../../index";
+import { Input, Loading, useEventListener, useOutsideClick } from "../../index";
 import { ISelect } from "../../types";
 
 import {
@@ -68,7 +67,7 @@ export default function Select({
 
   const deviceWidth = typeof window !== "undefined" ? Number(window?.innerWidth || 0) : 0;
 
-  useOnClickOutside(ref, handleClose);
+  useOutsideClick(ref, handleClose);
 
   useEventListener("keydown", (event: KeyboardEvent) => {
     if (event.key === "Escape") {

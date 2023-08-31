@@ -1,8 +1,9 @@
+import { useEffect } from "react";
 import toast, { useToaster } from "react-hot-toast";
-import { useEffectOnce, useEventListener } from "usehooks-ts";
 
 import packageJson from "../../../package.json";
 import { Icons } from "../../icons";
+import { useEventListener } from "../../index";
 import { darkTheme } from "../../stitches.config";
 import { IProvider, IToast } from "../../types";
 
@@ -45,10 +46,10 @@ function ToastController(props: IToast): JSX.Element {
 export default function Provider({ children, css, dark }: IProvider): JSX.Element {
   providerReset();
 
-  useEffectOnce(() => {
+  useEffect(() => {
     // eslint-disable-next-line no-console
     console.log(tag);
-  });
+  }, []);
 
   return (
     <ProviderStyled

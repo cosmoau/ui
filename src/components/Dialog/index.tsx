@@ -1,8 +1,7 @@
 import { useRef, useState } from "react";
-import { useEventListener, useLockedBody, useOnClickOutside } from "usehooks-ts";
 
 import { Icons } from "../../icons";
-import { Button, Text } from "../../index";
+import { Button, Text, useEventListener, useOutsideClick, useScrollLock } from "../../index";
 import { IDialog } from "../../types";
 
 import {
@@ -41,7 +40,7 @@ export default function Dialog({ css, trigger, children, title, disabled, small 
     }
   }
 
-  useOnClickOutside(ref, () => handleClose());
+  useOutsideClick(ref, () => handleClose());
 
   useEventListener("keydown", (event: KeyboardEvent) => {
     if (event.key === "Escape") {
@@ -50,7 +49,7 @@ export default function Dialog({ css, trigger, children, title, disabled, small 
     }
   });
 
-  useLockedBody(isMounted);
+  useScrollLock(isMounted);
 
   const innerWidth = typeof window !== "undefined" ? Number(window?.innerWidth || 0) : 0;
   const innerHeight = typeof window !== "undefined" ? Number(window?.innerHeight || 0) : 0;

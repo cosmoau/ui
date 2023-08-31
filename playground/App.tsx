@@ -147,12 +147,47 @@ export function App(): ReactElement {
       <C.View bottom="largest" container top="largest">
         <C.Stack direction="row">
           <C.Stack direction="column" width={33.33}>
-            <C.Box footer={
+            <C.Box header={
+              <h1>test</h1>
+            } footer={
               <C.Button>Call to action</C.Button>
             }>
               <C.Text as="h5">
                 Lorem A - First heading
               </C.Text>
+              <C.Stack>
+                <h1>
+                  lorem ipsum
+                </h1>
+              </C.Stack>
+              <C.Stack>
+                <h1>
+                  lorem ipsum
+                </h1>
+              </C.Stack>
+              <C.Stack>
+                <h1>
+                  lorem ipsum
+                </h1>
+                <h1>
+                  lorem ipsum
+                </h1>  <h1>
+                  lorem ipsum
+                </h1>  <h1>
+                  lorem ipsum
+                </h1>  <h1>
+                  lorem ipsum
+                </h1>
+                <h1>
+                  lorem ipsum
+                </h1>
+                <h1>
+                  lorem ipsum
+                </h1>
+                <h1>
+                  lorem ipsum
+                </h1>
+              </C.Stack>
               <C.Text accent>
                 Lorem ipsum dolor sit amet.
               </C.Text>

@@ -1,9 +1,8 @@
 import { sort } from "fast-sort";
 import { useEffect, useState } from "react";
-import { useLocalStorage } from "usehooks-ts";
 
 import { Icons } from "../../icons";
-import { Badge, Button, Loading, Select, Stack, Text, fadeIn, theme } from "../../index";
+import { Badge, Button, Loading, Select, Stack, Text, fadeIn, theme, useLocalStorage } from "../../index";
 import { ITable } from "../../types";
 
 import { TableCoreStyled, TableFiltersStyled, TableHeaderStyled, TablePaginationStyled, TableStyled } from "./styles";

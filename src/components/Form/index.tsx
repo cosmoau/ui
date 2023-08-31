@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { useEventListener } from "usehooks-ts";
 
-import { Button } from "../../index";
+import { Button, useEventListener } from "../../index";
 import { IForm } from "../../types";
 
 import { FormStyled } from "./styles";

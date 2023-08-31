@@ -1,9 +1,8 @@
 import { ChangeEvent, useState } from "react";
 import toast from "react-hot-toast";
-import { useEventListener } from "usehooks-ts";
 
 import { Icons } from "../../icons";
-import { Button, Badge, Loading } from "../../index";
+import { Button, Badge, Loading, useEventListener } from "../../index";
 import { IInput } from "../../types";
 
 import {

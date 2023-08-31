@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
-import { useEventListener, useOnClickOutside } from "usehooks-ts";
 
+import { useEventListener, useOutsideClick } from "../../index";
 import { IMenu } from "../../types";
 
 import { MenuGroupStyled, MenuItemStyled, MenuStyled, MenuTriggerStyled, MenuContentStyled } from "./styles";
@@ -39,7 +39,7 @@ export default function Menu({ css, trigger, options, selection, onSelection, ch
     handleClose();
   }
 
-  useOnClickOutside(ref, () => handleClose());
+  useOutsideClick(ref, () => handleClose());
 
   useEventListener("keydown", (event: KeyboardEvent) => {
     if (event.key === "Escape") {

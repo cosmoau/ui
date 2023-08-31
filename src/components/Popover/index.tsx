@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
-import { useOnClickOutside } from "usehooks-ts";
 
+import { useOutsideClick } from "../../index";
 import { IPopover } from "../../types";
 
 import { PopoverContentStyled, PopoverStyled, PopoverTriggerStyled } from "./styles";
@@ -59,7 +59,7 @@ export default function Popover({
 
   const deviceWidth = typeof window !== "undefined" ? Number(window?.innerWidth || 0) : 0;
 
-  useOnClickOutside(ref, () => {
+  useOutsideClick(ref, () => {
     if (type !== "hover") {
       handleClose();
     }

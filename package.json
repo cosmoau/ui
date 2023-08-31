@@ -23,11 +23,10 @@
     "@phosphor-icons/react": "2.0.9",
     "@stitches/react": "^1.2.8",
     "@swc/helpers": "^0.4.36",
-    "dayjs": "^1.11.9",
+    "chrono-node": "^2.6.5",
     "fast-sort": "^3.4.0",
     "react-hot-toast": "^2.4.1",
-    "react-wrap-balancer": "^1.1.0",
-    "usehooks-ts": "^2.9.1"
+    "react-wrap-balancer": "^1.1.0"
   },
   "devDependencies": {
     "@parcel/optimizer-htmlnano": "2.8.3",
@@ -97,7 +96,7 @@
     "url": "git://github.com/cosmoau/ui.git"
   },
   "scripts": {
-    "build": "parcel build src/index.tsx --dist-dir dist",
+    "build": "parcel build src/index.ts --dist-dir dist",
     "dev": "echo '⚡️ Fetching device IP for development...' && ipconfig getifaddr en0 && echo '🫡' && parcel playground/index.html --dist-dir playground/dist --open --no-cache --port 420",
     "kill": "lsof -ti tcp:420 | xargs kill",
     "lint": "eslint src --ext .ts,.tsx --fix",
@@ -105,6 +104,6 @@
     "tidy": "pnpm lint && pnpm prettier",
     "typecheck": "tsc --noEmit"
   },
-  "source": "src/index.tsx",
+  "source": "src/index.ts",
   "types": "dist/esm/index.d.ts"
 }

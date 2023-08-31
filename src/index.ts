@@ -1,5 +1,7 @@
+// Stitches: https://stitches.dev/docs/installation
 export * from "./stitches.config";
 
+// Components: src/components/index.ts
 export { default as Avatar } from "./components/Avatar";
 export { default as Badge } from "./components/Badge";
 export { default as Box } from "./components/Box";
@@ -23,3 +25,10 @@ export { default as Stack } from "./components/Stack";
 export { default as Table } from "./components/Table";
 export { default as Text } from "./components/Text";
 export { default as View } from "./components/View";
+
+// Hooks: src/hooks/index.ts
+export { default as useOutsideClick } from "./hooks/useOutsideClick";
+export { default as useLocalStorage } from "./hooks/useLocalStorage";
+export { default as useScrollLock } from "./hooks/useScrollLock";
+export { default as useEventListener } from "./hooks/useEventListener";
+export { default as useNaturalDate } from "./hooks/useNaturalDate";
