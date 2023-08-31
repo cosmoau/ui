@@ -45,9 +45,26 @@ export default function Box({
       padding={header || footer || image ? "none" : minimal ? "none" : "default"}
       theme={theme || "default"}>
       <BoxFlexStyled>
-      {image &&
-        (imageCTA ? (
-          <a href={imageCTA} rel="noopener noreferrer" target={imageTarget || "_blank"}>
+        {image &&
+          (imageCTA ? (
+            <a href={imageCTA} rel="noopener noreferrer" target={imageTarget || "_blank"}>
+              <Image
+                alt={imageAlt || ""}
+                css={{
+                  img: {
+                    borderTopLeftRadius: "$medium !important",
+                    borderTopRightRadius: "$medium !important",
+                  },
+                }}
+                fill
+                fillFit={imageFit}
+                fillHeight={imageHeight || "20rem"}
+                fillPosition={imagePosition}
+                sizes={imageSizes || "50vw"}
+                src={image}
+              />
+            </a>
+          ) : (
             <Image
               alt={imageAlt || ""}
               css={{
@@ -63,31 +80,13 @@ export default function Box({
               sizes={imageSizes || "50vw"}
               src={image}
             />
-          </a>
+          ))}
+        {header && <BoxHeaderStyled>{header}</BoxHeaderStyled>}
+        {image || header || footer ? (
+          <BoxInnerStyled padding={minimal ? "none" : "default"}>{children}</BoxInnerStyled>
         ) : (
-          <Image
-            alt={imageAlt || ""}
-            css={{
-              img: {
-                borderTopLeftRadius: "$medium !important",
-                borderTopRightRadius: "$medium !important",
-              },
-            }}
-            fill
-            fillFit={imageFit}
-            fillHeight={imageHeight || "20rem"}
-            fillPosition={imagePosition}
-            sizes={imageSizes || "50vw"}
-            src={image}
-          />
-        ))}
-      {header && <BoxHeaderStyled>{header}</BoxHeaderStyled>}
-      {image || header || footer ? (
-        <BoxInnerStyled padding={minimal ? "none" : "default"}>{children}</BoxInnerStyled>
-      ) : (
-        children
-      )}
-    
+          children
+        )}
       </BoxFlexStyled>
       {footer && <BoxFooterStyled>{footer}</BoxFooterStyled>}
 

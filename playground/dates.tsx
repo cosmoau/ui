@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import { Check, Database } from '@phosphor-icons/react';
 import React, { useState } from 'react';
 
-import { useNaturalDate } from '../src/index';
+import { Badge, Box, Input, Stack, Text, useNaturalDate } from '../src/index';
 
 const DateParser = (): JSX.Element => {
     const [input, setInput] = useState("");
@@ -11,10 +13,35 @@ const DateParser = (): JSX.Element => {
     };
 
     return (
-        <div>
-            <input placeholder="Enter a date" type="text" value={input} onChange={handleInputChange} />
-            <h1>{date || "Invalid date"}</h1>
-        </div>
+        <Stack align='center'>
+            <Box>
+            <Input placeholder="Enter a date" reset resetFunction={
+                () => setInput("")
+
+            } type="text" value={input} onChange={handleInputChange} />
+            <Stack flexduo top='medium'>
+               
+                <Text accent>
+                    Natural Language
+                </Text>
+                <Badge icon={
+                    input ? <Database /> : undefined
+                }>
+                    {input || "..."}
+                </Badge>
+            </Stack>
+            <Stack flexduo top='small'>
+                <Text accent>
+                    Date (YYYY-MM-DD)
+                </Text>
+                <Badge icon={
+                    date ? <Check /> : undefined
+                }>
+                    {date || "..."}
+                </Badge>
+            </Stack>
+            </Box>
+        </Stack>
     );
 };
 

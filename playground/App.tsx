@@ -6,6 +6,7 @@ import { toast } from "react-hot-toast";
 
 import * as C from "../src/index";
 
+import DateParser from "./dates";
 export function App(): ReactElement {
   const [balance, setBalance] = useState<boolean>(false);
   const [tempInput, setTempInput] = useState<string>("");
@@ -145,12 +146,17 @@ export function App(): ReactElement {
         />
       </C.View>
       <C.View bottom="largest" container top="largest">
+        <C.Stack bottom="largest" direction="row">
+          <C.Stack direction="column" offset={33.33} width={33.33}>
+          <DateParser />
+        </C.Stack>
+        </C.Stack>
         <C.Stack direction="row">
           <C.Stack direction="column" width={33.33}>
-            <C.Box header={
-              <h1>test</h1>
-            } footer={
+            <C.Box footer={
               <C.Button>Call to action</C.Button>
+            } header={
+              <h1>test</h1>
             }>
               <C.Text as="h5">
                 Lorem A - First heading
