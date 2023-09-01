@@ -1,6 +1,6 @@
 import { useReducer, useEffect, useState } from "react";
 
-import { useLocalStorage } from "../index";
+import { useLocalStorage, useMountSSR } from "../index";
 
 type Theme = "system" | "dark" | "light";
 
@@ -11,7 +11,7 @@ interface UseThemeOutput {
 }
 
 export default function useTheme(): UseThemeOutput {
-  const isBrowser = typeof window !== "undefined";
+  const mounted = useMountSSR();
   const [systemTheme, setSystemTheme] = useState<boolean>(false);
   const [theme, setLocalStorageTheme] = useLocalStorage<Theme>("cosmo-ui-theme", "system");
   const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false);
@@ -32,7 +32,7 @@ export default function useTheme(): UseThemeOutput {
   }, [systemTheme, theme]);
 
   useEffect(() => {
-    if (isBrowser) {
+    if (mounted) {
       const themeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
       const handleThemeChange = (e: MediaQueryListEvent): void => {
@@ -49,7 +49,7 @@ export default function useTheme(): UseThemeOutput {
     }
 
     return () => {};
-  }, [isBrowser]);
+  }, [mounted]);
 
   return {
     isDarkTheme,
