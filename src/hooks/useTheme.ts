@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useReducer, useEffect, useState } from "react";
 
 import { useLocalStorage } from "../index";
 
@@ -13,8 +13,15 @@ interface UseThemeOutput {
 export default function useTheme(): UseThemeOutput {
   const isBrowser = typeof window !== "undefined";
   const [systemTheme, setSystemTheme] = useState<boolean>(false);
-  const [theme, setTheme] = useLocalStorage<Theme>("cosmo-ui-theme", "system");
+  const [theme, setLocalStorageTheme] = useLocalStorage<Theme>("cosmo-ui-theme", "system");
   const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false);
+
+  const [, forceUpdate] = useReducer((x) => x + 1, 0);
+
+  const setTheme = (newTheme: Theme): void => {
+    setLocalStorageTheme(newTheme);
+    forceUpdate();
+  };
 
   useEffect(() => {
     if (theme === "system") {
