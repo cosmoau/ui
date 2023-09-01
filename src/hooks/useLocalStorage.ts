@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 function getStorageValue<T>(key: string, defaultValue: T): T {
-  if (typeof window === 'undefined') {
+  if (typeof window === "undefined") {
     return defaultValue;
   }
 
@@ -20,7 +20,7 @@ export default function useLocalStorage<T>(key: string, defaultValue: T): [T, (v
   });
 
   useEffect(() => {
-    if (typeof window === 'undefined') {
+    if (typeof window === "undefined") {
       return;
     }
     localStorage.setItem(key, JSON.stringify(value));
