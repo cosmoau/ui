@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 
 import { useLocalStorage } from "../index";
 
@@ -16,12 +16,16 @@ export default function useTheme(): UseThemeOutput {
   const [theme, setTheme] = useLocalStorage<Theme>("cosmo-ui-theme", "system");
   const [isDarkTheme, setIsDarkTheme] = useState<boolean>(systemDarkMode);
 
+  const [, forceUpdate] = useReducer((x) => x + 1, 0);
+
   useEffect(() => {
     if (theme === "system") {
       setIsDarkTheme(systemDarkMode);
     } else {
       setIsDarkTheme(theme === "dark");
     }
+
+    forceUpdate();
   }, [systemDarkMode, theme]);
 
   return {

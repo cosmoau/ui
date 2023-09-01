@@ -29,6 +29,7 @@ export { default as View } from "./components/View";
 // Hooks: src/hooks
 export { default as useAdblockDetect } from "./hooks/useAdblockDetect";
 export { default as useBreakpoints } from "./hooks/useBreakpoints";
+export { default as useDebounce } from "./hooks/useDebounce";
 export { default as useEventListener } from "./hooks/useEventListener";
 export { default as useLocalStorage } from "./hooks/useLocalStorage";
 export { default as useLocalStorageReadOnly } from "./hooks/useLocalStorageReadOnly";
