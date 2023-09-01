@@ -1,7 +1,7 @@
 // Stitches: https://stitches.dev/docs/installation
 export * from "./stitches.config";
 
-// Components: src/components/index.ts
+// Components: src/components
 export { default as Avatar } from "./components/Avatar";
 export { default as Badge } from "./components/Badge";
 export { default as Box } from "./components/Box";
@@ -26,9 +26,14 @@ export { default as Table } from "./components/Table";
 export { default as Text } from "./components/Text";
 export { default as View } from "./components/View";
 
-// Hooks: src/hooks/index.ts
-export { default as useOutsideClick } from "./hooks/useOutsideClick";
-export { default as useLocalStorage } from "./hooks/useLocalStorage";
-export { default as useScrollLock } from "./hooks/useScrollLock";
+// Hooks: src/hooks
+export { default as useAdblockDetect } from "./hooks/useAdblockDetect";
+export { default as useBreakpoints } from "./hooks/useBreakpoints";
 export { default as useEventListener } from "./hooks/useEventListener";
+export { default as useLocalStorage } from "./hooks/useLocalStorage";
+export { default as useLocalStorageReadOnly } from "./hooks/useLocalStorageReadOnly";
+export { default as useMountSSR } from "./hooks/useMountSSR";
 export { default as useNaturalDate } from "./hooks/useNaturalDate";
+export { default as useOutsideClick } from "./hooks/useOutsideClick";
+export { default as useScrollLock } from "./hooks/useScrollLock";
+export { default as useTheme } from "./hooks/useTheme";

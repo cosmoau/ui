@@ -76,6 +76,7 @@ export const SelectFilterStyled = styled("div", {
   marginBottom: "$small",
 
   padding: "$smaller $small",
+  position: "sticky",
 });
 
 export const SelectItemStyled = styled("div", {

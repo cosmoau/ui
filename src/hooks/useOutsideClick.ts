@@ -1,41 +1,18 @@
-/* eslint-disable no-console */
-import { useState, useEffect } from "react";
+import { RefObject } from "react";
 
-function getStorageValue<T>(key: string, defaultValue: T): T {
-  if (typeof window === "undefined") {
-    return defaultValue;
-  }
+import { useEventListener } from "../index";
 
-  const saved = localStorage.getItem(key);
+export default function useOutsideClick<T extends HTMLElement = HTMLElement>(
+  ref: RefObject<T>,
+  handler: (event: MouseEvent) => void,
+  mouseEvent: "mousedown" | "mouseup" = "mousedown",
+): void {
+  useEventListener(mouseEvent, (event) => {
+    const el = ref?.current;
 
-  try {
-    if (saved) {
-      return JSON.parse(saved);
-    }
-
-    return defaultValue;
-  } catch (error) {
-    console.error(`Error parsing localStorage key “${key}”:`, error);
-
-    return defaultValue;
-  }
-}
-
-export default function useLocalStorage<T>(key: string, defaultValue: T): [T, (value: T) => void] {
-  const [value, setValue] = useState<T>(defaultValue);
-
-  useEffect(() => {
-    const initialValue = getStorageValue(key, defaultValue);
-
-    setValue(initialValue);
-  }, [key, defaultValue]);
-
-  useEffect(() => {
-    if (typeof window === "undefined") {
+    if (!el || el.contains(event.target as Node)) {
       return;
     }
-    localStorage.setItem(key, JSON.stringify(value));
-  }, [key, value]);
-
-  return [value, setValue];
+    handler(event);
+  });
 }

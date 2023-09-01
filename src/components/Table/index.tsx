@@ -32,10 +32,11 @@ export default function Table({
   identifier,
   ...rest
 }: ITable): JSX.Element {
+  const initialKey = `${identifier || "unknown"}-table`;
   const initialLimit = restrictLimit || defaultLimit || (pagination ? pageSizes[0] : maxSize);
   const [sortColumn, sortSortColumn] = useState(defaultSort || 0);
   const [sortDirection, setSortDirection] = useState(defaultDirection || "asc");
-  const [storage, setStorage] = useLocalStorage(`${identifier || "unknown"}-table`, {
+  const [storage, setStorage] = useLocalStorage(initialKey, {
     limit: initialLimit,
     offset: 0,
     page: 1,
