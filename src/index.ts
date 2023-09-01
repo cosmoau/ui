@@ -27,7 +27,6 @@ export { default as Text } from "./components/Text";
 export { default as View } from "./components/View";
 
 // Hooks: src/hooks
-export { default as useAdblockDetect } from "./hooks/useAdblockDetect";
 export { default as useBreakpoints } from "./hooks/useBreakpoints";
 export { default as useDebounce } from "./hooks/useDebounce";
 export { default as useEventListener } from "./hooks/useEventListener";
