@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { useState, useEffect } from "react";
 
 const isBrowser = typeof window !== "undefined";
@@ -19,7 +20,11 @@ export default function useLocalStorage<T>(key: string, defaultValue: T): [T, (v
   useEffect(() => {
     const listener = (e: StorageEvent): void => {
       if (e.storageArea === localStorage && e.key === key) {
-        setValue(JSON.parse(e.newValue || ""));
+        try {
+          setValue(e.newValue ? JSON.parse(e.newValue) : defaultValue);
+        } catch (error) {
+          console.error(`Error parsing JSON from local storage key “${key}”:`, error);
+        }
       }
     };
 
@@ -28,7 +33,7 @@ export default function useLocalStorage<T>(key: string, defaultValue: T): [T, (v
     return () => {
       window.removeEventListener("storage", listener);
     };
-  }, [key]);
+  }, [key, defaultValue]);
 
   useEffect(() => {
     if (isBrowser) {
