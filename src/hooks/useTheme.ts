@@ -5,20 +5,19 @@ import { useLocalStorage, useMountSSR } from "../index";
 type Theme = "system" | "dark" | "light";
 
 interface UseThemeOutput {
-  isDarkTheme: boolean;
+  isDarkTheme: boolean | undefined;
   setTheme: (theme: Theme) => void;
   theme: Theme;
 }
 
 export default function useTheme(): UseThemeOutput {
-  const mounted = useMountSSR();
+  const isBrowser = useMountSSR();
   const [systemTheme, setSystemTheme] = useState<boolean>(false);
   const [theme, setLocalStorageTheme] = useLocalStorage<Theme>("cosmo-ui-theme", "system");
-  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false);
+  const [isDarkTheme, setIsDarkTheme] = useState<boolean | undefined>();
 
   const setTheme = (newTheme: Theme): void => {
     setLocalStorageTheme(newTheme);
-    setIsDarkTheme(newTheme === "dark" || (newTheme === "system" && systemTheme));
   };
 
   useEffect(() => {
@@ -27,10 +26,8 @@ export default function useTheme(): UseThemeOutput {
     } else {
       setIsDarkTheme(theme === "dark");
     }
-  }, [systemTheme, theme]);
 
-  useEffect(() => {
-    if (mounted) {
+    if (isBrowser) {
       const themeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
       const handleThemeChange = (e: MediaQueryListEvent): void => {
@@ -39,15 +36,17 @@ export default function useTheme(): UseThemeOutput {
 
       themeMediaQuery.addEventListener("change", handleThemeChange);
 
+      // Initial setting of systemTheme
       setSystemTheme(themeMediaQuery.matches);
 
+      // Cleanup function
       return () => {
         themeMediaQuery.removeEventListener("change", handleThemeChange);
       };
     }
 
     return () => {};
-  }, [mounted]);
+  }, [isBrowser, systemTheme, theme]);
 
   return {
     isDarkTheme,

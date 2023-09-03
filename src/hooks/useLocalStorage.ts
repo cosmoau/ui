@@ -13,9 +13,7 @@ function getStorageValue<T>(key: string, defaultValue: T): T {
 }
 
 export default function useLocalStorage<T>(key: string, defaultValue: T): [T, (value: T) => void] {
-  const [value, setValue] = useState(() => {
-    return getStorageValue(key, defaultValue);
-  });
+  const [value, setValue] = useState<T>(() => getStorageValue<T>(key, defaultValue));
 
   useEffect(() => {
     const listener = (e: StorageEvent): void => {
