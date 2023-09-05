@@ -1,25 +1,26 @@
 import { useEffect } from "react";
 import toast, { useToaster } from "react-hot-toast";
 
-import packageJson from "../../../package.json";
 import { Icons } from "../../icons";
-import { useEventListener } from "../../index";
+import { Badge, useEventListener } from "../../index";
 import { darkTheme } from "../../stitches.config";
 import { IProvider, IToast } from "../../types";
 
 import { ProviderStyled, ToastContainerStyled, ToastStyled, providerReset } from "./styles";
 
+// tag followed by 2 new lines and ";)"
 const tag = ` ██████╗ ██████╗ ███████╗███╗   ███╗ ██████╗ 
 ██╔════╝██╔═══██╗██╔════╝████╗ ████║██╔═══██╗
 ██║     ██║   ██║███████╗██╔████╔██║██║   ██║
 ██║     ██║   ██║╚════██║██║╚██╔╝██║██║   ██║
 ╚██████╗╚██████╔╝███████║██║ ╚═╝ ██║╚██████╔╝
- ╚═════╝ ╚═════╝ ╚══════╝╚═╝     ╚═╝ ╚═════╝ \n Cosmo UI v${packageJson.version}, ${packageJson.homepage}
-`;
+ ╚═════╝ ╚═════╝ ╚══════╝╚═╝     ╚═╝ ╚═════╝ 
+  \n \n ;)`;
 
 function ToastController(props: IToast): JSX.Element {
   const { toasts, handlers } = useToaster();
   const { startPause, endPause } = handlers;
+  const TOAST_LIMIT = 3;
 
   useEventListener("keydown", (event: KeyboardEvent) => {
     if (event.key === "Escape" || event.key === "Enter") {
@@ -28,13 +29,30 @@ function ToastController(props: IToast): JSX.Element {
     }
   });
 
+  useEffect(() => {
+    toasts
+      .filter((t) => t.visible)
+      .filter((_, i) => i >= TOAST_LIMIT)
+      .forEach((t) => toast.dismiss(t.id));
+  }, [toasts]);
+
   return (
     <ToastContainerStyled onMouseEnter={startPause} onMouseLeave={endPause} {...props}>
       {toasts.map((t) => {
-        t.duration = 4200;
+        t.duration = 5000;
 
         return (
           <ToastStyled key={t.id} animation={t.visible} onClick={(): void => toast.dismiss(t.id)}>
+            {t.type === "success" && (
+              <Badge inline="medium" theme="green">
+                <Icons.Check />
+              </Badge>
+            )}
+            {t.type === "error" && (
+              <Badge inline="medium" theme="red">
+                <Icons.Warning />
+              </Badge>
+            )}
             {t.message?.toString() || t.message?.toString() || ""}
           </ToastStyled>
         );

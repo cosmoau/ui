@@ -7,12 +7,15 @@ export const ProviderStyled = styled("main", {
 });
 
 export const ToastStyled = styled("div", {
+  alignItems: "center",
   backgroundColor: "$background",
-  border: "0.1rem solid $border",
+  border: "0.1rem solid $borderToast",
   borderRadius: "$small",
   boxShadow: "$large",
   cursor: "pointer",
+  display: "flex",
   fontSize: "$default",
+  justifyContent: "center",
   margin: "$small auto 0 auto !important",
   maxWidth: "60%",
   padding: "$smallest $small",
@@ -122,19 +125,19 @@ export const providerReset = globalCss({
   html: {
     fontSize: "62.5%",
     [breakpoints.special.micro]: {
-      fontSize: "53%",
+      fontSize: "54.5%",
     },
     [breakpoints.phoneX]: {
-      fontSize: "57%",
+      fontSize: "58.5%",
     },
     [breakpoints.tabletX]: {
-      fontSize: "59%",
+      fontSize: "60%",
     },
     [breakpoints.special.print]: {
       fontSize: "62.5%",
     },
     [breakpoints.wide]: {
-      fontSize: "69%",
+      fontSize: "65%",
     },
   },
 
