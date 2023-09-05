@@ -29,12 +29,13 @@ export default function Select({
   trigger,
   loading,
   last,
+  filter,
 }: ISelect): JSX.Element {
   const ref = useRef(null);
 
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  const [filter, setFilter] = useState("");
+  const [search, setSearch] = useState("");
   const [focused, setFocused] = useState(selection ? selection[0] : "");
 
   function handleClose(): void {
@@ -102,8 +103,8 @@ export default function Select({
 
   const filteredOptions = options
     ? options.filter((option) => {
-        if (filter) {
-          return option.label.toLowerCase().includes(filter.toLowerCase());
+        if (search) {
+          return option.label.toLowerCase().includes(search.toLowerCase());
         } else {
           return option;
         }
@@ -136,16 +137,16 @@ export default function Select({
           horizontal={horizontal}
           vertical={vertical}>
           {label && <SelectLabelStyled>{label}</SelectLabelStyled>}
-          {options.length > 10 && (
+          {options.length > 10 && filter && (
             <SelectFilterStyled>
               <Input
                 disabled={!options}
                 icon={<Icons.MagnifyingGlass />}
                 reset
-                resetFunction={(): void => setFilter("")}
-                submitValid={(): boolean => filter.length > 0}
-                value={filter}
-                onChange={(event): void => setFilter(event.target.value)}
+                resetFunction={(): void => setSearch("")}
+                submitValid={(): boolean => search.length > 0}
+                value={search}
+                onChange={(event): void => setSearch(event.target.value)}
               />
             </SelectFilterStyled>
           )}
@@ -156,13 +157,14 @@ export default function Select({
               <SelectItemStyled
                 key={option.value + Math.random()}
                 focused={option.value === focused}
-                last={last && !filter}
+                last={last && !search}
                 selected={
                   selection && selection.find((item) => item === option.value) && focused !== option.value
                     ? true
                     : false
                 }
-                onClick={(): void => handleSelection(option.value, option.label)}>
+                onClick={(): void => handleSelection(option.value, option.label)}
+                onMouseOver={(): void => setFocused(option.value)}>
                 {option.icon && option.iconPosition !== "right" && (
                   <SelectIconStyled align="left">{option.icon}</SelectIconStyled>
                 )}

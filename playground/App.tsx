@@ -46,6 +46,46 @@ export function App(): ReactElement {
     <C.Provider>
       <C.View bottom="largest" container gradient inverted top="largest">
         <C.Stack align="center">
+          <C.Select options={[
+            {
+              label: "Home",
+              value: "/page1",
+            },
+            {
+              label: "Pricing",
+              value: "/page2",
+            },
+            {
+              label: "Enterprise",
+              value: "/page3",
+            },
+            {
+              label: "Platform",
+              value: "/page4",
+            },
+            {
+              label: "About",
+              value: "/page5",
+            },
+            {
+              label: "Blog",
+              value: "/page6",
+            },
+            {
+              label: "Contact",
+              value: "/page7",
+            },
+            ...Array.from(Array(100).keys()).map((i) => ({
+              label: `Option ${i}`,
+              value: `Option ${i}`,
+            })),
+            
+          ]} selection={["/page2"]}
+            trigger={<C.Button>Menu</C.Button>}
+            onSelection={(value, label) => toast.error(`Page selected: ${value} - ${label}`)}
+         />
+          </C.Stack>
+        <C.Stack align="center" top="large">
           <C.Menu options={[
             {
               label: "Home",
@@ -77,7 +117,7 @@ export function App(): ReactElement {
             },
           ]} selection="/page2"
           trigger={<C.Button>Menu</C.Button>}
-          onSelection={(value, label) => toast(`Page selected: ${value} - ${label}`)}
+          onSelection={(value, label) => toast.error(`Page selected: ${value} - ${label}`)}
           >
             <C.Button block theme="solid">Sign In</C.Button>
             <C.Button block css={{marginTop: '$small'}}>Sign Up</C.Button>
