@@ -91,7 +91,7 @@ export interface IDialog {
   lightbox?: boolean;
   small?: boolean;
   title: string;
-  trigger: ReactNode;
+  trigger?: ReactNode;
 }
 
 export interface ICommand {

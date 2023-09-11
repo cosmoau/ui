@@ -7,8 +7,6 @@ import { LoadingOverlayStyled } from "./styles";
 const SVGStyled = styled("svg");
 
 export default function Loading({ width = 20 }: ILoading): JSX.Element {
-  const duration = (Math.random() * (1.75 - 0.85) + 0.85).toFixed(1) + "s";
-
   return (
     <SVGStyled
       css={{
@@ -27,7 +25,7 @@ export default function Loading({ width = 20 }: ILoading): JSX.Element {
           <path d="M36 18c0-9.94-8.06-18-18-18">
             <animateTransform
               attributeName="transform"
-              dur={duration}
+              dur="1.25s"
               from="0 18 18"
               repeatCount="indefinite"
               to="360 18 18"

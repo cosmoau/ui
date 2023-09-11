@@ -75,14 +75,20 @@ export default function Dialog({ css, trigger, children, title, disabled, small,
 
   return (
     <DialogStyled>
-      <DialogTriggerStyled
-        onClickCapture={(): void => {
-          if (!disabled) {
-            handleClick();
-          }
-        }}>
-        {trigger}
-      </DialogTriggerStyled>
+      {trigger ? (
+        <DialogTriggerStyled
+          onClickCapture={(): void => {
+            if (!disabled) {
+              handleClick();
+            }
+          }}>
+          {trigger}
+        </DialogTriggerStyled>
+      ) : !lightbox ? (
+        "Missing trigger"
+      ) : (
+        children
+      )}
       {isMounted && (
         <DialogOverlayStyled animation={isOpen}>
           <DialogCoreStyled
