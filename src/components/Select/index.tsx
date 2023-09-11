@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 
 import { Icons } from "../../icons";
-import { Input, Loading, useEventListener, useOutsideClick } from "../../index";
+import { Input, Loading, useBreakpoints, useEventListener, useOutsideClick } from "../../index";
 import { ISelect } from "../../types";
 
 import {
@@ -32,6 +32,7 @@ export default function Select({
   filter,
 }: ISelect): JSX.Element {
   const ref = useRef(null);
+  const breakpoint = useBreakpoints();
 
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -71,6 +72,9 @@ export default function Select({
   useOutsideClick(ref, handleClose);
 
   useEventListener("keydown", (event: KeyboardEvent) => {
+    if (breakpoint === "phone") {
+      return;
+    }
     if (event.key === "Escape") {
       event.preventDefault();
       handleClose();
@@ -163,8 +167,12 @@ export default function Select({
                     ? true
                     : false
                 }
-                onClick={(): void => handleSelection(option.value, option.label)}
-                onMouseOver={(): void => setFocused(option.value)}>
+                onClickCapture={(): void => handleSelection(option.value, option.label)}
+                onMouseOver={(): void => {
+                  if (breakpoint !== "phone") {
+                    setFocused(option.value);
+                  }
+                }}>
                 {option.icon && option.iconPosition !== "right" && (
                   <SelectIconStyled align="left">{option.icon}</SelectIconStyled>
                 )}
