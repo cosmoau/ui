@@ -88,6 +88,7 @@ export interface IDialog {
   close?: () => void;
   css?: CSS;
   disabled?: boolean;
+  lightbox?: boolean;
   small?: boolean;
   title: string;
   trigger: ReactNode;

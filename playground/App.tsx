@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable no-alert */
 /* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
@@ -199,12 +201,12 @@ export function App(): ReactElement {
         <C.Stack direction="row">
           <C.Stack direction="column" width={33.33}>
             <C.Box 
-            imageCTA="https://google.com"
             footer={
               <C.Button>Call to action</C.Button>
-            } header={
+            }
+            header={
               <h1>test</h1>
-            }>
+            } imageCTA="https://google.com">
               <C.Text as="h5">
                 Lorem A - First heading
               </C.Text>
@@ -307,8 +309,24 @@ export function App(): ReactElement {
                   This is a paragraph
                 </C.Text>
                 <C.Stack top="small">
-                  <C.Dialog small title="Open Dialog" trigger={<C.Button>Open Dialog</C.Button>}>
-                    <C.Text as="h1">This is a heading (h1)</C.Text>
+                  <C.Dialog lightbox title="
+                  A picture of a car, but not any old car, an El Camino."
+                   trigger={<C.Button>Open Dialog</C.Button>}>
+
+                      <img src="https://cdn05.carsforsale.com/0088abd885617999338fcdf67f942ebc65/800x600/1983-chevrolet-el-camino-base-2dr-standard-cab.jpg"
+
+                        style={{
+                          borderRadius: '0.5rem',
+                          display: 'block',
+                          height: '100%',
+                          margin: '0 auto',
+                          maxHeight: '100%',
+                          maxWidth: '100%',
+                          objectFit: 'cover',
+                          objectPosition: 'center',
+                          width: '100%',
+                          }} />
+
                   </C.Dialog>
                 </C.Stack>
               </C.Box>

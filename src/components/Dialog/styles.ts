@@ -1,4 +1,5 @@
 import { fadeIn, fadeOut, styled } from "../../stitches.config";
+import { TextStyled } from "../Text/styles";
 
 export const DialogStyled = styled("div", {
   display: "inline-block",
@@ -64,6 +65,16 @@ export const DialogCoreStyled = styled("div", {
         animationFillMode: "forwards",
       },
     },
+    lightbox: {
+      true: {
+        height: "80%",
+        left: "2.5%",
+        maxHeight: "95%",
+        minHeight: "10%",
+        top: "10%",
+        width: "95%",
+      },
+    },
   },
 });
 
@@ -73,14 +84,37 @@ export const DialogHeaderStyled = styled("div", {
   borderBottom: "0.1rem solid $borderTable",
   display: "flex",
   gap: "$small",
-  h4: {
-    margin: 0,
+  [`& ${TextStyled}`]: {
+    marginBottom: "0 !important",
+    verticalAlign: "middle",
+    whiteSpace: "pre-wrap",
   },
   justifyContent: "space-between",
   padding: "$medium",
   position: "sticky",
   top: 0,
+  variants: {
+    lightbox: {
+      true: {
+        background: "$background",
+        border: "0.1rem solid $borderTable",
+        borderRadius: "$small",
+        padding: "$smaller $small",
+        phone: {
+          bottom: "$small",
+          maxWidth: "60%",
+          top: "auto",
+        },
+        position: "absolute",
+        right: "$small",
+        top: "$small",
+
+        width: "auto",
+      },
+    },
+  },
   verticalAlign: "middle",
+
   zIndex: "$special",
 });
 
@@ -88,6 +122,13 @@ export const DialogContentStyled = styled("div", {
   padding: "$large",
   phone: {
     padding: "$medium",
+  },
+  variants: {
+    lightbox: {
+      true: {
+        padding: 0,
+      },
+    },
   },
 });
 

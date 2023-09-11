@@ -13,7 +13,7 @@ import {
   DialogTriggerStyled,
 } from "./styles";
 
-export default function Dialog({ css, trigger, children, title, disabled, small }: IDialog): JSX.Element {
+export default function Dialog({ css, trigger, children, title, disabled, small, lightbox }: IDialog): JSX.Element {
   const ref = useRef<HTMLDivElement>(null);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -65,6 +65,7 @@ export default function Dialog({ css, trigger, children, title, disabled, small 
       default: innerWidth < 900 ? "80%" : innerWidth < 1800 ? "75%" : "60%",
       small: innerWidth < 900 ? "70%" : innerWidth < 1800 ? "65%" : "50%",
     },
+    minHeight: "10%",
     top: content && innerHeight > 0 ? (innerHeight - content) / 2 : "10rem",
     width: {
       default: innerWidth < 900 ? "90%" : innerWidth < 1800 ? "70%" : "50%",
@@ -88,22 +89,26 @@ export default function Dialog({ css, trigger, children, title, disabled, small 
             ref={ref}
             animation={isOpen}
             css={{
-              height: "auto",
-              left: small ? sizing.left.small : sizing.left.default,
-              maxHeight: small ? sizing.maxHeight.small : sizing.maxHeight.default,
-              minHeight: "10%",
-              top: sizing.top,
-              width: small ? sizing.width.small : sizing.width.default,
+              ...(!lightbox && {
+                height: sizing.height,
+                left: small ? sizing.left.small : sizing.left.default,
+                maxHeight: small ? sizing.maxHeight.small : sizing.maxHeight.default,
+                minHeight: sizing.minHeight,
+                top: sizing.top,
+                width: small ? sizing.width.small : sizing.width.default,
+              }),
               ...css,
-            }}>
-            <DialogHeaderStyled>
-              <Text as="h4">{title}</Text>
-
-              <Button small theme="fill" onClick={(): void => handleClose()}>
+            }}
+            lightbox={lightbox}>
+            <DialogHeaderStyled lightbox={lightbox}>
+              <Text accent={lightbox} as={lightbox ? "small" : "h4"} inline={lightbox ? "smaller" : undefined}>
+                {title}
+              </Text>
+              <Button small theme={lightbox ? "default" : "fill"} onClick={(): void => handleClose()}>
                 <Icons.X />
               </Button>
             </DialogHeaderStyled>
-            <DialogContentStyled>{children}</DialogContentStyled>
+            <DialogContentStyled lightbox={lightbox}>{children}</DialogContentStyled>
           </DialogCoreStyled>
         </DialogOverlayStyled>
       )}
