@@ -101,14 +101,13 @@ export const DialogHeaderStyled = styled("div", {
         borderRadius: "$small",
         padding: "$smaller $small",
         phone: {
-          bottom: "$small",
-          maxWidth: "60%",
-          top: "auto",
+          left: "$small",
+          maxWidth: "50%",
+          width: "auto",
         },
         position: "absolute",
         right: "$small",
         top: "$small",
-
         width: "auto",
       },
     },
