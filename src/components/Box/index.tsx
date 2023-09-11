@@ -41,6 +41,7 @@ export default function Box({
       animation={!isOpen}
       css={css}
       footer={footer ? true : false}
+      hover={imageCTA ? true : false}
       loading={loading || false}
       padding={header || footer || image ? "none" : minimal ? "none" : "default"}
       theme={theme || "default"}>

@@ -193,7 +193,9 @@ export function App(): ReactElement {
         </C.Stack>
         <C.Stack direction="row">
           <C.Stack direction="column" width={33.33}>
-            <C.Box footer={
+            <C.Box 
+            imageCTA="https://google.com"
+            footer={
               <C.Button>Call to action</C.Button>
             } header={
               <h1>test</h1>

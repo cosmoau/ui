@@ -36,6 +36,21 @@ export const BoxStyled = styled("article", {
         justifyContent: "space-between",
       },
     },
+    hover: {
+      true: {
+        "&:hover": {
+          "&:hover": {
+            img: {
+              transform: "scale(1.1)",
+              transition: "$default",
+            },
+          },
+          img: {
+            transition: "$default",
+          },
+        },
+      },
+    },
     loading: {
       true: {
         cursor: "wait",
