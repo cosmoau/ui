@@ -8,6 +8,8 @@ import * as C from "../src/index";
 
 import DateParser from "./dates";
 export function App(): ReactElement {
+  const breakpoint = C.useBreakpoints();
+
   const [balance, setBalance] = useState<boolean>(false);
   const [tempInput, setTempInput] = useState<string>("");
   const [tempField, setTempField] = useState<string>("");
@@ -44,6 +46,9 @@ export function App(): ReactElement {
 
   return (
     <C.Provider>
+      <h1>
+        {breakpoint || "No breakpoint detected"}
+      </h1>
       <C.View bottom="largest" container gradient inverted top="largest">
         <C.Stack align="center">
           <C.Select options={[
@@ -370,7 +375,8 @@ export function App(): ReactElement {
             </C.Stack>
           </C.Stack>
         </C.Stack>
-      C</C.View>
+      </C.View>
+      <C.LoadingOverlay />
     </C.Provider>
   );
 }
