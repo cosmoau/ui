@@ -33,12 +33,12 @@ export const ButtonStyled = styled("button", {
   justifyContent: "center",
   lineHeight: "$default",
   margin: 0,
-  minHeight: "3.3rem",
+  minHeight: "3.2rem",
   outline: 0,
   padding: "$smallest $small",
   phone: {
-    minHeight: "3.5rem",
-    minWidth: "5.25rem",
+    minHeight: "3.4rem",
+    minWidth: "6.8rem",
   },
   position: "relative",
   textOverflow: "ellipsis",
@@ -60,8 +60,8 @@ export const ButtonStyled = styled("button", {
         padding: "0.2rem $small",
 
         phone: {
-          minHeight: "3.25rem",
-          minWidth: "4.9rem",
+          minHeight: "3rem",
+          minWidth: "6rem",
         },
 
         svg: {
