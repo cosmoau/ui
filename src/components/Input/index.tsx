@@ -89,8 +89,9 @@ export default function Input({
       css={{
         maxWidth: width || "100%",
         width: width || "100%",
-      }}>
-      <InputCoreStyled disabled={disabled}>
+      }}
+      disabled={disabled}>
+      <InputCoreStyled>
         {icon && <InputIconStyled>{icon}</InputIconStyled>}
         <InputAreaStyled
           ref={mustRef || undefined}
@@ -107,7 +108,7 @@ export default function Input({
           <InputFunctionStyled>
             {copy && (
               <Button
-                disabled={isCopied}
+                disabled={isCopied || disabled}
                 icon={<Icons.ClipboardText />}
                 small
                 onClick={(): void => {
@@ -121,6 +122,7 @@ export default function Input({
                 css={{
                   marginLeft: "$smaller",
                 }}
+                disabled={disabled}
                 icon={!isRevealed ? <Icons.Eye /> : <Icons.EyeClosed />}
                 small
                 onClick={(): void => {
@@ -135,6 +137,7 @@ export default function Input({
                 css={{
                   marginLeft: "$smaller",
                 }}
+                disabled={disabled}
                 small
                 onClick={(): void => {
                   handleReset();
@@ -148,7 +151,7 @@ export default function Input({
                 css={{
                   marginLeft: "$smaller",
                 }}
-                disabled={!submitValid || !submitValid(inputValue) || isSubmitted}
+                disabled={!submitValid || !submitValid(inputValue) || isSubmitted || disabled}
                 inline={loading ? "small" : undefined}
                 small
                 type="submit"

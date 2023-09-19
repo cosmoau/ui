@@ -2,6 +2,14 @@ import { styled } from "../../stitches.config";
 
 export const InputStyled = styled("div", {
   position: "relative",
+
+  variants: {
+    disabled: {
+      true: {
+        cursor: "not-allowed",
+      },
+    },
+  },
 });
 export const InputCoreStyled = styled("div", {
   "&:focus-within": {
@@ -26,20 +34,18 @@ export const InputCoreStyled = styled("div", {
   },
   position: "relative",
   transition: "$default",
-  variants: {
-    disabled: {
-      true: {
-        cursor: "not-allowed",
-        opacity: 0.5,
-      },
-    },
-  },
+
   width: "100%",
 });
 
 export const InputAreaStyled = styled("input", {
   "&::placeholder": {
     color: "$accent",
+    opacity: 0.7,
+  },
+
+  "&:disabled": {
+    cursor: "not-allowed",
     opacity: 0.7,
   },
 
