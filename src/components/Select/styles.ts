@@ -76,47 +76,66 @@ export const SelectFilterStyled = styled("div", {
   },
 
   marginBottom: "$small",
-  padding: "$smaller $small",
+  padding: "$small $smallest",
   position: "sticky",
   top: 0,
 });
 
 export const SelectItemStyled = styled("div", {
+  "&:first-child": {
+    marginTop: "$smaller",
+  },
+
   "&:hover": {
     backgroundColor: "$defaultHover",
     borderBottomColor: "transparent",
   },
 
+  "&:last-child": {
+    marginBottom: "$smaller",
+  },
+
   backgroundColor: "$background",
+
   borderRadius: "$small",
+
   cursor: "pointer",
+
   display: "flex",
+
   fontSize: "$default",
+
   justifyContent: "space-between",
+  // last child add margin bottom of smallest
   marginTop: "$smallest",
   padding: "$smaller $small",
   transition: "$default",
   variants: {
     focused: {
       true: {
-        backgroundColor: "$defaultHover",
+        backgroundColor: "$defaultHover  !important",
         borderBottomColor: "transparent",
       },
     },
     last: {
       true: {
         "&:last-child": {
+          "&:hover": {
+            backgroundColor: "$defaultHover",
+          },
+          background: "$default",
           borderTop: "0.1rem solid $border",
           borderTopLeftRadius: 0,
           borderTopRightRadius: 0,
+
           marginTop: "$small",
-          paddingTop: "$small",
         },
       },
     },
     selected: {
       true: {
         backgroundColor: "$default",
+        fontWeight: "bold",
       },
     },
   },

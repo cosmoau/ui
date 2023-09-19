@@ -132,7 +132,7 @@ export default function Select({
           css={{
             maxHeight: height || "50rem",
             maxWidth: width || "50rem",
-            minWidth: width || "15rem",
+            minWidth: width || filter ? "20rem" : "12.5rem",
             phone: {
               maxWidth: deviceWidth ? deviceWidth * 0.8 : "80vw",
             },
@@ -162,11 +162,7 @@ export default function Select({
                 key={option.value + Math.random()}
                 focused={option.value === focused}
                 last={last && !search}
-                selected={
-                  selection && selection.find((item) => item === option.value) && focused !== option.value
-                    ? true
-                    : false
-                }
+                selected={selection && selection.find((item) => item === option.value) ? true : false}
                 onClickCapture={(): void => handleSelection(option.value, option.label)}
                 onMouseOver={(): void => {
                   if (breakpoint !== "phone") {

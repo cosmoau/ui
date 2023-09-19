@@ -62,6 +62,7 @@ export const MenuItemStyled = styled("div", {
     selected: {
       true: {
         backgroundColor: "$default",
+        fontWeight: "bold",
       },
     },
   },

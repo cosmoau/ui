@@ -52,12 +52,12 @@ const defaultTheme = {
   },
   fontSizes: {
     default: "1.6rem",
-    h1: "3.5rem",
-    h2: "3rem",
-    h3: "2.5rem",
+    h1: "3.6rem",
+    h2: "3.2rem",
+    h3: "2.6rem",
     h4: "2rem",
     h5: "1.7rem",
-    h6: "1.5rem",
+    h6: "1.6rem",
     small: "1.5rem",
   },
   fonts: {
@@ -65,8 +65,8 @@ const defaultTheme = {
     serif: "Tiempos Headline, $default, apple-system, sans-serif",
   },
   lineHeights: {
-    default: "1.4",
-    small: "1.2",
+    default: "1.5",
+    small: "1.25",
   },
   radii: {
     large: "1.25rem",

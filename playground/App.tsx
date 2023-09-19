@@ -3,6 +3,7 @@
 /* eslint-disable no-alert */
 /* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
+import { SmileyMeh } from "@phosphor-icons/react";
 import React, { ReactElement, useState } from "react";
 import { toast } from "react-hot-toast";
 
@@ -15,7 +16,7 @@ export function App(): ReactElement {
   const [balance, setBalance] = useState<boolean>(false);
   const [tempInput, setTempInput] = useState<string>("");
   const [tempField, setTempField] = useState<string>("");
-  const [tempText, setTempText] = useState<'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p'>("h1");
+  const [tempText, setTempText] = useState<"h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p">("h1");
 
   function handleTextCycle(): void {
     switch (tempText) {
@@ -48,244 +49,189 @@ export function App(): ReactElement {
 
   return (
     <C.Provider>
-      <h1>
-        {breakpoint || "No breakpoint detected"}
-      </h1>
+      <h1>{breakpoint || "No breakpoint detected"}</h1>
       <C.View bottom="largest" container gradient inverted top="largest">
         <C.Stack align="center">
-          <C.Select options={[
-            {
-              label: "Home",
-              value: "/page1",
-            },
-            {
-              label: "Pricing",
-              value: "/page2",
-            },
-            {
-              label: "Enterprise",
-              value: "/page3",
-            },
-            {
-              label: "Platform",
-              value: "/page4",
-            },
-            {
-              label: "About",
-              value: "/page5",
-            },
-            {
-              label: "Blog",
-              value: "/page6",
-            },
-            {
-              label: "Contact",
-              value: "/page7",
-            },
-            ...Array.from(Array(100).keys()).map((i) => ({
-              label: `Option ${i}`,
-              value: `Option ${i}`,
-            })),
-            
-          ]} selection={["/page2"]}
+          <C.Select
+            filter
+            last
+            options={[
+              {
+                icon: <SmileyMeh />,
+                label: "Home",
+                value: "/page1",
+              },
+              {
+                label: "Pricing",
+                value: "/page2",
+              },
+              {
+                label: "Enterprise",
+                value: "/page3",
+              },
+              {
+                label: "Platform",
+                value: "/page4",
+              },
+              {
+                label: "About",
+                value: "/page5",
+              },
+              {
+                label: "Blog",
+                value: "/page6",
+              },
+              {
+                label: "Contact",
+                value: "/page7",
+              },
+              ...Array.from(Array(100).keys()).map((i) => ({
+                label: `Option ${i}`,
+                value: `Option ${i}`,
+              })),
+            ]}
+            selection={["/page2"]}
             trigger={<C.Button>Menu</C.Button>}
             onSelection={(value, label) => toast.error(`Page selected: ${value} - ${label}`)}
-         />
-          </C.Stack>
+          />
+        </C.Stack>
         <C.Stack align="center" top="large">
-          <C.Menu options={[
-            {
-              label: "Home",
-              value: "/page1",
-            },
-            {
-              label: "Pricing",
-              value: "/page2",
-            },
-            {
-              label: "Enterprise",
-              value: "/page3",
-            },
-            {
-              label: "Platform",
-              value: "/page4",
-            },
-            {
-              label: "About",
-              value: "/page5",
-            },
-            {
-              label: "Blog",
-              value: "/page6",
-            },
-            {
-              label: "Contact",
-              value: "/page7",
-            },
-          ]} selection="/page2"
-          trigger={<C.Button>Menu</C.Button>}
-          onSelection={(value, label) => toast.error(`Page selected: ${value} - ${label}`)}
-          >
-            <C.Button block theme="solid">Sign In</C.Button>
-            <C.Button block css={{marginTop: '$small'}}>Sign Up</C.Button>
-            <C.Text accent as="small" top='medium'>
+          <C.Menu
+            options={[
+              {
+                label: "Home",
+                value: "/page1",
+              },
+              {
+                label: "Pricing",
+                value: "/page2",
+              },
+              {
+                label: "Enterprise",
+                value: "/page3",
+              },
+              {
+                label: "Platform",
+                value: "/page4",
+              },
+              {
+                label: "About",
+                value: "/page5",
+              },
+              {
+                label: "Blog",
+                value: "/page6",
+              },
+              {
+                label: "Contact",
+                value: "/page7",
+              },
+            ]}
+            selection="/page2"
+            trigger={<C.Button>Menu</C.Button>}
+            onSelection={(value, label) => toast.error(`Page selected: ${value} - ${label}`)}>
+            <C.Button block theme="solid">
+              Sign In
+            </C.Button>
+            <C.Button block css={{ marginTop: "$small" }}>
+              Sign Up
+            </C.Button>
+            <C.Text accent as="small" top="medium">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget
             </C.Text>
           </C.Menu>
-          </C.Stack>
+        </C.Stack>
       </C.View>
 
       <C.View bottom="largest" container gradient inverted top="largest">
         <C.Stack align="center">
-          <C.Button inline="large" onClick={(): void => handleTextCycle()}>Cycle Text</C.Button>
-      <C.Button onClick={() => setBalance(!balance)}>Toggle Balance</C.Button>
-        <C.Text as="h1" top="larger">Balance</C.Text>
-        <C.Text as={tempText} balanced={balance}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget
-          ultricies ultricies, nunc nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec
-          euismod, nisl eget ultricies ultricies, nunc nunc aliquet nunc, vitae aliquam nunc nunc
-          vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc nunc aliquet nunc, vitae
-          aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc nunc
+          <C.Button inline="large" onClick={(): void => handleTextCycle()}>
+            Cycle Text
+          </C.Button>
+          <C.Button onClick={() => setBalance(!balance)}>Toggle Balance</C.Button>
+          <C.Text as="h1" top="larger">
+            Balance
           </C.Text>
-            <C.Text as='p' balanced={balance}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget
-          ultricies ultricies, nunc nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec
-          euismod, nisl eget ultricies ultricies, nunc nunc aliquet nunc, vitae aliquam nunc nunc
-          vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc nunc aliquet nunc, vitae
-          aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc nunc
+          <C.Text as={tempText} balanced={balance}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
+            nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+            nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+            nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+            nunc
           </C.Text>
-          </C.Stack>
-      C</C.View>
+          <C.Text as="p" balanced={balance}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
+            nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+            nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+            nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+            nunc
+          </C.Text>
+        </C.Stack>
+        C
+      </C.View>
       <C.View bottom="largest" container top="largest">
         <C.Form
           listen
           submit="Submit"
           submitFunction={() => toast("submitted")}
           submitValid={tempInput.length > 0 && tempField.length > 0}>
-          <C.Input
-            placeholder="Input"
-            reset
-            submit="Save"
-            onChange={(e) => setTempInput(e.target.value)}
-          />
-          <C.Field
-            placeholder="Field"
-            reset
-            submit="Save"
-            onChange={(e) => setTempField(e.target.value)}
-          />
+          <C.Input placeholder="Input" reset submit="Save" onChange={(e) => setTempInput(e.target.value)} />
+          <C.Field placeholder="Field" reset submit="Save" onChange={(e) => setTempField(e.target.value)} />
         </C.Form>
       </C.View>
       <C.View bottom="largest" container top="largest">
-        <C.Input
-          loading
-          placeholder="Filter"
-          reset
-          submit="Save"
-          submitFunction={(value) => toast(value)}
-        />
-        <C.Field
-          loading
-          placeholder="Filter"
-          reset
-          submit="Save"
-          submitFunction={(value) => toast(value)}
-        />
+        <C.Input loading placeholder="Filter" reset submit="Save" submitFunction={(value) => toast(value)} />
+        <C.Field loading placeholder="Filter" reset submit="Save" submitFunction={(value) => toast(value)} />
       </C.View>
       <C.View bottom="largest" container top="largest">
         <C.Stack bottom="largest" direction="row">
           <C.Stack direction="column" offset={33.33} width={33.33}>
-          <DateParser />
-        </C.Stack>
+            <DateParser />
+          </C.Stack>
         </C.Stack>
         <C.Stack direction="row">
           <C.Stack direction="column" width={33.33}>
-            <C.Box 
-            footer={
-              <C.Button>Call to action</C.Button>
-            }
-            header={
-              <h1>test</h1>
-            } imageCTA="https://google.com">
-              <C.Text as="h5">
-                Lorem A - First heading
-              </C.Text>
+            <C.Box footer={<C.Button>Call to action</C.Button>} header={<h1>test</h1>} imageCTA="https://google.com">
+              <C.Text as="h5">Lorem A - First heading</C.Text>
               <C.Stack>
-                <h1>
-                  lorem ipsum
-                </h1>
+                <h1>lorem ipsum</h1>
               </C.Stack>
               <C.Stack>
-                <h1>
-                  lorem ipsum
-                </h1>
+                <h1>lorem ipsum</h1>
               </C.Stack>
               <C.Stack>
-                <h1>
-                  lorem ipsum
-                </h1>
-                <h1>
-                  lorem ipsum
-                </h1>  <h1>
-                  lorem ipsum
-                </h1>  <h1>
-                  lorem ipsum
-                </h1>  <h1>
-                  lorem ipsum
-                </h1>
-                <h1>
-                  lorem ipsum
-                </h1>
-                <h1>
-                  lorem ipsum
-                </h1>
-                <h1>
-                  lorem ipsum
-                </h1>
+                <h1>lorem ipsum</h1>
+                <h1>lorem ipsum</h1> <h1>lorem ipsum</h1> <h1>lorem ipsum</h1> <h1>lorem ipsum</h1>
+                <h1>lorem ipsum</h1>
+                <h1>lorem ipsum</h1>
+                <h1>lorem ipsum</h1>
               </C.Stack>
+              <C.Text accent>Lorem ipsum dolor sit amet.</C.Text>
+            </C.Box>
+          </C.Stack>
+          <C.Stack direction="column" width={33.33}>
+            <C.Box footer={<C.Button>Call to action</C.Button>}>
+              <C.Text as="h5">Lorem A - First heading</C.Text>
               <C.Text accent>
-                Lorem ipsum dolor sit amet.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </C.Text>
             </C.Box>
           </C.Stack>
           <C.Stack direction="column" width={33.33}>
-            <C.Box footer={
-              <C.Button>Call to action</C.Button>
-            }>
-              <C.Text as="h5">
-                Lorem A - First heading
-              </C.Text>
-              <C.Text accent>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-
-              </C.Text>
+            <C.Box footer={<C.Button>Call to action</C.Button>}>
+              <C.Text as="h5">Lorem A - First heading</C.Text>
+              <C.Text accent>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget.</C.Text>
             </C.Box>
           </C.Stack>
-          <C.Stack direction="column" width={33.33}>
-            <C.Box footer={
-              <C.Button>Call to action</C.Button>
-            }>
-              <C.Text as="h5">
-                Lorem A - First heading
-              </C.Text>
-              <C.Text accent>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget.
-              </C.Text>
-            </C.Box>
-          </C.Stack>
-         
-          </C.Stack>
+        </C.Stack>
       </C.View>
       <C.View bottom="largest" container top="largest">
         <C.Stack direction="row">
           <C.Stack direction="column">
             <C.Stack top="medium">
-              <C.Text as="h1">
-                Google Places
-              </C.Text>
+              <C.Text as="h1">Google Places</C.Text>
               <C.Places
                 apiKey={process.env.GOOGLE_API_KEY || ""}
                 handleAutocomplete={console.log}
@@ -309,24 +255,25 @@ export function App(): ReactElement {
                   This is a paragraph
                 </C.Text>
                 <C.Stack top="small">
-                  <C.Dialog lightbox title="
+                  <C.Dialog
+                    lightbox
+                    title="
                   A picture of a car, but not any old car, an El Camino."
-                   trigger={<C.Button>Open Dialog</C.Button>}>
-
-                      <img src="https://cdn05.carsforsale.com/0088abd885617999338fcdf67f942ebc65/800x600/1983-chevrolet-el-camino-base-2dr-standard-cab.jpg"
-
-                        style={{
-                          borderRadius: '0.5rem',
-                          display: 'block',
-                          height: '100%',
-                          margin: '0 auto',
-                          maxHeight: '100%',
-                          maxWidth: '100%',
-                          objectFit: 'cover',
-                          objectPosition: 'center',
-                          width: '100%',
-                          }} />
-
+                    trigger={<C.Button>Open Dialog</C.Button>}>
+                    <img
+                      src="https://cdn05.carsforsale.com/0088abd885617999338fcdf67f942ebc65/800x600/1983-chevrolet-el-camino-base-2dr-standard-cab.jpg"
+                      style={{
+                        borderRadius: "0.5rem",
+                        display: "block",
+                        height: "100%",
+                        margin: "0 auto",
+                        maxHeight: "100%",
+                        maxWidth: "100%",
+                        objectFit: "cover",
+                        objectPosition: "center",
+                        width: "100%",
+                      }}
+                    />
                   </C.Dialog>
                 </C.Stack>
               </C.Box>
