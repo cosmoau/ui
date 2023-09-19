@@ -13,7 +13,7 @@ export const ButtonStyled = styled("button", {
     outline: 0,
   },
 
-  "&:hover": {
+  "&:not(:disabled):hover": {
     backgroundColor: "$defaultHover",
     borderColor: "$border",
     boxShadow: "$large",
