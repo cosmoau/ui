@@ -256,7 +256,7 @@ export function App(): ReactElement {
                 </C.Text>
                 <C.Stack top="small">
                   <C.Dialog
-                    lightbox
+  small
                     title="
                   A picture of a car, but not any old car, an El Camino."
                     trigger={<C.Button>Open Dialog</C.Button>}>
