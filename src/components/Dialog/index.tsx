@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 
 import { Icons } from "../../icons";
-import { Button, Text, useEventListener, useOutsideClick, useScrollLock } from "../../index";
+import { Button, Text, useEventListener, useOutsideClick, useScrollLock, useWindowDimensions } from "../../index";
 import { IDialog } from "../../types";
 
 import {
@@ -13,11 +13,22 @@ import {
   DialogTriggerStyled,
 } from "./styles";
 
-export default function Dialog({ css, trigger, children, title, disabled, small, lightbox }: IDialog): JSX.Element {
+export default function Dialog({
+  css,
+  trigger,
+  children,
+  title,
+  disabled,
+  small,
+  lightbox,
+  forceHeight,
+}: IDialog): JSX.Element {
   const ref = useRef<HTMLDivElement>(null);
 
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+
+  const { width: innerWidth, height: innerHeight } = useWindowDimensions();
 
   function handleClose(): void {
     setIsOpen(false);
@@ -51,27 +62,73 @@ export default function Dialog({ css, trigger, children, title, disabled, small,
 
   useScrollLock(isMounted);
 
-  const innerWidth = typeof window !== "undefined" ? Number(window?.innerWidth || 0) : 0;
-  const innerHeight = typeof window !== "undefined" ? Number(window?.innerHeight || 0) : 0;
   const content = ref?.current?.clientHeight || 0;
 
-  const sizing = {
-    height: "auto",
-    left: {
-      default: innerWidth < 900 ? "5%" : innerWidth < 1800 ? "15%" : "25%",
-      small: innerWidth < 900 ? "5%" : innerWidth < 1800 ? "25%" : "30%",
-    },
-    maxHeight: {
-      default: innerWidth < 900 ? "80%" : innerWidth < 1800 ? "75%" : "60%",
-      small: innerWidth < 900 ? "70%" : innerWidth < 1800 ? "65%" : "50%",
-    },
-    minHeight: "10%",
-    top: content && innerHeight > 0 ? (innerHeight - content) / 2 : "10rem",
-    width: {
-      default: innerWidth < 900 ? "90%" : innerWidth < 1800 ? "70%" : "50%",
-      small: innerWidth < 900 ? "90%" : innerWidth < 1800 ? "50%" : "40%",
-    },
-  };
+  const sizing = forceHeight
+    ? {
+        height: `${forceHeight}%`,
+        left: small
+          ? innerWidth < 900
+            ? "5%"
+            : innerWidth < 1800
+            ? "25%"
+            : "30%"
+          : innerWidth < 900
+          ? "5%"
+          : innerWidth < 1800
+          ? "15%"
+          : "25%",
+        top: content && innerHeight > 0 ? (innerHeight - content) / 2 : "10rem",
+        width: small
+          ? innerWidth < 900
+            ? "90%"
+            : innerWidth < 1800
+            ? "50%"
+            : "40%"
+          : innerWidth < 900
+          ? "90%"
+          : innerWidth < 1800
+          ? "70%"
+          : "50%",
+      }
+    : {
+        height: "auto",
+        left: small
+          ? innerWidth < 900
+            ? "5%"
+            : innerWidth < 1800
+            ? "25%"
+            : "30%"
+          : innerWidth < 900
+          ? "5%"
+          : innerWidth < 1800
+          ? "15%"
+          : "25%",
+        maxHeight: small
+          ? innerWidth < 900
+            ? "70%"
+            : innerWidth < 1800
+            ? "65%"
+            : "50%"
+          : innerWidth < 900
+          ? "80%"
+          : innerWidth < 1800
+          ? "75%"
+          : "60%",
+        minHeight: "10%",
+        top: content && innerHeight > 0 ? (innerHeight - content) / 2 : "10rem",
+        width: small
+          ? innerWidth < 900
+            ? "90%"
+            : innerWidth < 1800
+            ? "50%"
+            : "40%"
+          : innerWidth < 900
+          ? "90%"
+          : innerWidth < 1800
+          ? "70%"
+          : "50%",
+      };
 
   return (
     <DialogStyled>
@@ -97,11 +154,11 @@ export default function Dialog({ css, trigger, children, title, disabled, small,
             css={{
               ...(!lightbox && {
                 height: sizing.height,
-                left: small ? sizing.left.small : sizing.left.default,
-                maxHeight: small ? sizing.maxHeight.small : sizing.maxHeight.default,
+                left: sizing.left,
+                maxHeight: sizing.maxHeight,
                 minHeight: sizing.minHeight,
                 top: sizing.top,
-                width: small ? sizing.width.small : sizing.width.default,
+                width: sizing.width,
               }),
               ...css,
             }}

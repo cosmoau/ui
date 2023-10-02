@@ -88,6 +88,7 @@ export interface IDialog {
   close?: () => void;
   css?: CSS;
   disabled?: boolean;
+  forceHeight?: number;
   lightbox?: boolean;
   small?: boolean;
   title: string;
