@@ -89,13 +89,13 @@ export default function Input({
       css={{
         maxWidth: width || "100%",
         width: width || "100%",
+        ...css,
       }}
       disabled={disabled}>
       <InputCoreStyled>
         {icon && <InputIconStyled>{icon}</InputIconStyled>}
         <InputAreaStyled
           ref={mustRef || undefined}
-          css={css}
           disabled={disabled}
           placeholder={placeholder}
           type={isRevealed ? "text" : type || "text"}
