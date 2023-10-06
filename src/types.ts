@@ -1,5 +1,4 @@
 import { CSSProperties, CSS } from "@stitches/react";
-import { ImageProps } from "next/image";
 import {
   ReactNode,
   ComponentPropsWithRef,
@@ -23,11 +22,10 @@ type InferComponentProps<T extends ElementType> = T extends ComponentType<infer 
   : Record<string, never>;
 
 export interface IAvatar {
-  alt?: string;
   colors?: boolean;
   css?: CSS;
   fallback: string;
-  src?: string;
+  image?: ReactNode;
   width?: number;
 }
 
@@ -53,13 +51,11 @@ export interface IBox {
   css?: CSS;
   footer?: ReactNode;
   header?: ReactNode;
-  image?: string;
-  imageAlt?: ImageProps["alt"];
+  image?: ReactNode;
   imageCTA?: string;
   imageFit?: CSSProperties["objectFit"];
   imageHeight?: string;
   imagePosition?: CSSProperties["objectPosition"];
-  imageSizes?: ImageProps["sizes"];
   imageTarget?: "_blank" | "_self";
   loading?: boolean;
   minimal?: boolean;
@@ -135,13 +131,15 @@ export interface IForm extends ComponentPropsWithRef<"form"> {
   submitValid?: boolean;
 }
 
-export interface IImage extends ImageProps {
+export interface IImageWrapper {
   borderRadius?: keyof typeof theme.radii;
+  children: ReactNode;
   css?: CSS;
   fill?: boolean;
   fillFit?: CSSProperties["objectFit"];
   fillHeight?: string | number;
   fillPosition?: CSSProperties["objectPosition"];
+  hover?: boolean;
 }
 
 export interface IInput extends ComponentPropsWithRef<"input"> {
@@ -327,7 +325,7 @@ export interface IView {
   top?: IThemeSpacing;
 }
 
-export interface IIcon {
+export interface IIconWrapper {
   children: ReactNode;
   css?: CSS;
   forceColor?: keyof typeof theme.colors;

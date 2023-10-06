@@ -191,10 +191,12 @@ export function App(): ReactElement {
         </C.Stack>
         <C.Stack direction="row">
           <C.Stack direction="column" width={33.33}>
-            <C.Box footer={<C.Button>Call to action</C.Button>} header={<h1>test</h1>} imageCTA="https://google.com">
+            <C.Box
+            footer={<C.Button>Call to action</C.Button>}
+            header={<h1>test</h1>} image={<img src="https://cdn05.carsforsale.com/0088abd885617999338fcdf67f942ebc65/800x600/1983-chevrolet-el-camino-base-2dr-standard-cab.jpg" />} imageCTA="https://google.com">
               <C.Text as="h5">Lorem A - First heading</C.Text>
               <C.Stack>
-                <h1>lorem ipsum</h1>
+              <C.Avatar fallback="A" image={<img src="https://cdn05.carsforsale.com/0088abd885617999338fcdf67f942ebc65/800x600/1983-chevrolet-el-camino-base-2dr-standard-cab.jpg" />} width={500} />
               </C.Stack>
               <C.Stack>
                 <h1>lorem ipsum</h1>
