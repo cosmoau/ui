@@ -1,6 +1,19 @@
 # @cosmoau/ui
+> Cosmo UI is a React component library styled with Stitches, primarily designed for Next.js but adaptable to other React applications. We use it extensively in our projects, particularly customized to suit our specific needs (e.g., our Logo component represents our company logo). 
+\
+\
+> We've open-sourced it in the hopes that it may be helpful to other startups and developers. Please keep in mind that it's not intended for general-purpose use or production outside of Cosmo projects.
 
-> Cosmo's internal component library, built with React, Next.js, and Stitches.
+
+```
+   ____ ____ ____ ____ ____ _________ ____ ____ 
+  ||C |||O |||S |||M |||O |||       |||U |||I ||
+  ||__|||__|||__|||__|||__|||_______|||__|||__||
+  |/__\|/__\|/__\|/__\|/__\|/_______\|/__\|/__\|
+```
+                                       
+
+
 
 ## Install
 
@@ -8,9 +21,11 @@
 pnpm install
 ```
 
-## Demo
+## Examples
 
-[https://ui.cosmogroup.io/](https://ui.cosmogroup.io/) (Coming soon)
+- [cosmogroup.io](https://cosmogroup.io)
+- [cosmo.homes](https://cosmo.homes)
+- [ihostme.com.au](https://ihostme.com.au)
 
 ## Usage
 
@@ -29,7 +44,7 @@ pnpm build
 
 ## Contributing
 
-Feel free to get in touch with feedback, advice or suggestions. See [Conventional Commits](https://gist.github.com/dolmios/0e33c579a500d87fc6f44df6cde97259) for new contributors.
+We welcome your feedback, advice, or suggestions. This project is created and maintained by a single individual, so it may not be flawless or as comprehensive as other alternatives. 
 
 ## Acknowledgments
 
@@ -40,4 +55,4 @@ Feel free to get in touch with feedback, advice or suggestions. See [Conventiona
 
 ## License
 
-[MIT](https://github.com/cosmoau/ui/blob/main/LICENSE.md) © Cosmo AU Pty Ltd, 2023.
+[MIT](https://github.com/cosmoau/ui/blob/main/LICENSE.md)
