@@ -1,10 +1,10 @@
-import { IIcon } from "../../types";
+import { IIconWrapper } from "../../types";
 
-import { IconStyled } from "./styles";
+import { IconWrapperStyled } from "./styles";
 
-export default function Icon({ css, inline, forceColor, forceSize, children }: IIcon): JSX.Element {
+export default function IconWrapper({ css, inline, forceColor, forceSize, children }: IIconWrapper): JSX.Element {
   return (
-    <IconStyled
+    <IconWrapperStyled
       css={{
         ...(inline && {
           display: "inline-flex",
@@ -26,6 +26,6 @@ export default function Icon({ css, inline, forceColor, forceSize, children }: I
         ...css,
       }}>
       {children}
-    </IconStyled>
+    </IconWrapperStyled>
   );
 }

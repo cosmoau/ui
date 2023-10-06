@@ -1,5 +1,5 @@
 import { styled } from "../../stitches.config";
-import { ImageStyled } from "../Image/styles";
+import { ImageWrapperStyled } from "../ImageWrapper/styles";
 
 export const AvatarStyled = styled("div", {
   alignSelf: "center",
@@ -9,7 +9,7 @@ export const AvatarStyled = styled("div", {
   display: "inline-flex",
   height: "100%",
 
-  [`& ${ImageStyled}`]: {
+  [`& ${ImageWrapperStyled}`]: {
     borderRadius: "100% !important",
     height: "100%",
     img: {

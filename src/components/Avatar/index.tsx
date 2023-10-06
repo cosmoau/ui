@@ -1,4 +1,4 @@
-import { Image, Text, theme } from "../../index";
+import { Text, theme, ImageWrapper } from "../../index";
 import { IAvatar } from "../../types";
 
 import { AvatarStyled } from "./styles";
@@ -54,14 +54,12 @@ const getLetter = (
   };
 };
 
-export default function Avatar({ src, alt, fallback, width = 24, css, colors }: IAvatar): JSX.Element {
+export default function Avatar({ image, fallback, width = 24, css, colors }: IAvatar): JSX.Element {
   const { color, backgroundColor, borderColor } = getLetter(fallback);
 
   return (
     <AvatarStyled
       css={{
-        height: width,
-        width: width,
         ...(colors && {
           backgroundColor: `rgba(${backgroundColor}, 0.475)`,
           border: `0.1rem solid ${borderColor}`,
@@ -74,8 +72,17 @@ export default function Avatar({ src, alt, fallback, width = 24, css, colors }: 
         }),
         ...css,
       }}>
-      {src ? (
-        <Image alt={alt || fallback} fillFit="cover" height={width} src={src} width={width} />
+      {image ? (
+        <ImageWrapper
+          css={{
+            height: width,
+            maxHeight: width,
+            maxWidth: width,
+            width: width,
+          }}
+          hover>
+          {image}
+        </ImageWrapper>
       ) : (
         <Text as="span">{fallback}</Text>
       )}

@@ -1,17 +1,15 @@
 import { useState } from "react";
 
 import { Icons } from "../../icons";
-import { Button, Image } from "../../index";
+import { Button, ImageWrapper } from "../../index";
 import { IBox } from "../../types";
 
 import { BoxExitStyled, BoxFlexStyled, BoxFooterStyled, BoxHeaderStyled, BoxInnerStyled, BoxStyled } from "./styles";
 
 export default function Box({
   image,
-  imageAlt,
   imageCTA,
   imageFit,
-  imageSizes,
   imageHeight,
   imagePosition,
   imageTarget,
@@ -36,12 +34,26 @@ export default function Box({
 
   if (!isMounted) return null;
 
+  const ImageBase = (
+    <ImageWrapper
+      css={{
+        borderTopLeftRadius: "$medium !important",
+        borderTopRightRadius: "$medium !important",
+      }}
+      fill
+      fillFit={imageFit}
+      fillHeight={imageHeight || "20rem"}
+      fillPosition={imagePosition}
+      hover={imageCTA ? true : false}>
+      {image}
+    </ImageWrapper>
+  );
+
   return (
     <BoxStyled
       animation={!isOpen}
       css={css}
       footer={footer ? true : false}
-      hover={imageCTA ? true : false}
       loading={loading || false}
       padding={header || footer || image ? "none" : minimal ? "none" : "default"}
       theme={theme || "default"}>
@@ -49,38 +61,10 @@ export default function Box({
         {image &&
           (imageCTA ? (
             <a href={imageCTA} rel="noopener noreferrer" target={imageTarget || "_blank"}>
-              <Image
-                alt={imageAlt || ""}
-                css={{
-                  img: {
-                    borderTopLeftRadius: "$medium !important",
-                    borderTopRightRadius: "$medium !important",
-                  },
-                }}
-                fill
-                fillFit={imageFit}
-                fillHeight={imageHeight || "20rem"}
-                fillPosition={imagePosition}
-                sizes={imageSizes || "50vw"}
-                src={image}
-              />
+              {ImageBase}
             </a>
           ) : (
-            <Image
-              alt={imageAlt || ""}
-              css={{
-                img: {
-                  borderTopLeftRadius: "$medium !important",
-                  borderTopRightRadius: "$medium !important",
-                },
-              }}
-              fill
-              fillFit={imageFit}
-              fillHeight={imageHeight || "20rem"}
-              fillPosition={imagePosition}
-              sizes={imageSizes || "50vw"}
-              src={image}
-            />
+            ImageBase
           ))}
         {header && <BoxHeaderStyled>{header}</BoxHeaderStyled>}
         {image || header || footer ? (
