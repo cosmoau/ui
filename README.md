@@ -4,17 +4,6 @@
 \
 > We've open-sourced it in the hopes that it may be helpful to other startups and developers. Please keep in mind that it's not intended for general-purpose use or production outside of Cosmo projects.
 
-
-```
-   ____ ____ ____ ____ ____ _________ ____ ____ 
-  ||C |||O |||S |||M |||O |||       |||U |||I ||
-  ||__|||__|||__|||__|||__|||_______|||__|||__||
-  |/__\|/__\|/__\|/__\|/__\|/_______\|/__\|/__\|
-```
-                                       
-
-
-
 ## Install
 
 ```sh
