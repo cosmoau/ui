@@ -108,7 +108,6 @@ export default function Places({
   return (
     <PlacesStyled css={css}>
       <Input
-        key={data?.address || undefined}
         mustRef={ref}
         name="address"
         placeholder={placeholder || "Enter your address"}
@@ -119,6 +118,7 @@ export default function Places({
         type="text"
         value={restrict ? data?.restrictedAddress : data?.address}
         {...rest}
+        key={data?.address || undefined}
       />
     </PlacesStyled>
   );
