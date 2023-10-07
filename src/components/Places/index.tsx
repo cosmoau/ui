@@ -115,7 +115,7 @@ export default function Places({
         resetFunction={(): void => {
           setData(null);
         }}
-        submitValid={(): boolean => !!data?.address}
+        submitValid={(): boolean => (data?.address !== "" && data?.address !== undefined ? true : false)}
         type="text"
         value={restrict ? data?.restrictedAddress : data?.address}
         {...rest}

@@ -52,9 +52,9 @@ const defaultTheme = {
   },
   fontSizes: {
     default: "1.6rem",
-    h1: "3.6rem",
+    h1: "3.7rem",
     h2: "3.2rem",
-    h3: "2.6rem",
+    h3: "2.5rem",
     h4: "2rem",
     h5: "1.7rem",
     h6: "1.6rem",
