@@ -33,7 +33,7 @@ export const ToastStyled = styled("div", {
         animationFillMode: "forwards",
       },
       true: {
-        animation: `${fadeIn} .15s linear`,
+        animation: `${fadeIn} .2s linear`,
         animationFillMode: "forwards",
       },
     },

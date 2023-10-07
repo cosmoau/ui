@@ -60,7 +60,7 @@ export const PopoverContentStyled = styled("div", {
       },
     },
   },
-  width: "200%",
+  width: "100%",
   zIndex: "$popover",
 });
 

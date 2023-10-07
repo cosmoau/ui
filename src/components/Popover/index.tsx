@@ -11,9 +11,9 @@ export default function Popover({
   minimal = false,
   small = false,
 }: IPopover): JSX.Element {
-  const { triggerRef, popoverRef, isOpen, isMounted, handleClick, handleClose } = usePopper();
+  const { triggerRef, contentRef, isOpen, isMounted, handleClick, handleClose } = usePopper();
 
-  useOutsideClick(popoverRef, () => handleClose());
+  useOutsideClick(contentRef, () => handleClose());
 
   useEventListener("keydown", (event: KeyboardEvent) => {
     if (event.key === "Escape") {
@@ -36,7 +36,7 @@ export default function Popover({
       </PopoverTriggerStyled>
 
       {isMounted && (
-        <PopoverContentStyled ref={popoverRef} animation={isOpen} minimal={minimal} small={small}>
+        <PopoverContentStyled ref={contentRef} animation={isOpen} minimal={minimal} small={small}>
           {children}
         </PopoverContentStyled>
       )}
