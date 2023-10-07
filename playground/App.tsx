@@ -50,8 +50,124 @@ export function App(): ReactElement {
   return (
     <C.Provider>
       <h1>{breakpoint || "No breakpoint detected"}</h1>
+      <C.View bottom="largest" container top="largest">
+        <C.Stack align="center">
+          <C.Popover trigger={<C.Button>Popover (default, large)</C.Button>}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
+            nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+            nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+            nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+            nunc
+
+          </C.Popover>
+          <C.Popover small trigger={<C.Button>Popover (small)</C.Button>}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies.
+
+          </C.Popover>
+          <C.Select
+            filter
+            last
+            options={[
+              {
+                icon: <SmileyMeh />,
+                label: "Home",
+                value: "/page1",
+              },
+              {
+                label: "Pricing",
+                value: "/page2",
+              },
+              {
+                label: "Enterprise",
+                value: "/page3",
+              },
+              {
+                label: "Platform",
+                value: "/page4",
+              },
+              {
+                label: "About",
+                value: "/page5",
+              },
+              {
+                label: "Blog",
+                value: "/page6",
+              },
+              {
+                label: "Contact",
+                value: "/page7",
+              },
+              ...Array.from(Array(100).keys()).map((i) => ({
+                label: `Option ${i}`,
+                value: `Option ${i}`,
+              })),
+            ]}
+            selection={["/page2"]}
+            trigger={<C.Button>Select</C.Button>}
+            onSelection={(value, label) => toast.error(`Page selected: ${value} - ${label}`)}
+          />
+        </C.Stack>
+        <C.Stack align="center" top="large">
+          <C.Menu
+            options={[
+              {
+                label: "Home",
+                value: "/page1",
+              },
+              {
+                label: "Pricing",
+                value: "/page2",
+              },
+              {
+                label: "Enterprise",
+                value: "/page3",
+              },
+              {
+                label: "Platform",
+                value: "/page4",
+              },
+              {
+                label: "About",
+                value: "/page5",
+              },
+              {
+                label: "Blog",
+                value: "/page6",
+              },
+              {
+                label: "Contact",
+                value: "/page7",
+              },
+            ]}
+            selection="/page2"
+            trigger={<C.Button>Menu</C.Button>}
+            onSelection={(value, label) => toast.error(`Page selected: ${value} - ${label}`)}>
+            <C.Button block theme="solid">
+              Sign In
+            </C.Button>
+            <C.Button block css={{ marginTop: "$small" }}>
+              Sign Up
+            </C.Button>
+            <C.Text accent as="small" top="medium">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget
+            </C.Text>
+          </C.Menu>
+        </C.Stack>
+      </C.View>
       <C.View bottom="largest" container gradient inverted top="largest">
         <C.Stack align="center">
+          <C.Popover trigger={<C.Button>Popover (default, large)</C.Button>}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
+            nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+            nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+            nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+            nunc
+            
+          </C.Popover>
+          <C.Popover small trigger={<C.Button>Popover (small)</C.Button>}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies.
+
+          </C.Popover>
           <C.Select
             filter
             last

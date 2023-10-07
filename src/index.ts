@@ -35,6 +35,7 @@ export { default as useLocalStorageReadOnly } from "./hooks/useLocalStorageReadO
 export { default as useMountSSR } from "./hooks/useMountSSR";
 export { default as useNaturalDate } from "./hooks/useNaturalDate";
 export { default as useOutsideClick } from "./hooks/useOutsideClick";
+export { default as usePopper } from "./hooks/usePopper";
 export { default as useScrollLock } from "./hooks/useScrollLock";
 export { default as useTheme } from "./hooks/useTheme";
 export { default as useWindowDimensions } from "./hooks/useWindowDimensions";

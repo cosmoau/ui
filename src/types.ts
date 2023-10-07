@@ -210,12 +210,9 @@ export interface IPopover {
   children: ReactNode;
   css?: CSS;
   disabled?: boolean;
-  horizontal?: "left" | "right" | "center";
   minimal?: boolean;
+  small?: boolean;
   trigger: ReactNode;
-  type?: "click" | "hover";
-  vertical?: "top" | "bottom";
-  width?: number | string;
 }
 
 export interface IProvider {

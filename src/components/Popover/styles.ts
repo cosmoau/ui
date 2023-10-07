@@ -14,13 +14,13 @@ export const PopoverTriggerStyled = styled("div", {
 });
 
 export const PopoverContentStyled = styled("div", {
-  backgroundColor: "$background",
+  backgroundColor: "$defaultTable",
   border: "0.1rem solid $border",
   borderRadius: "$small",
   boxShadow: "$large",
   lineBreak: "auto",
+  maxHeight: "50rem",
   overflowY: "auto",
-  padding: "$small",
   pointerEvents: "auto",
   position: "absolute",
   textAlign: "left !important",
@@ -28,7 +28,7 @@ export const PopoverContentStyled = styled("div", {
   variants: {
     animation: {
       false: {
-        animation: `${fadeOut} .2s linear`,
+        animation: `${fadeOut} .15s linear`,
         animationFillMode: "forwards",
       },
       true: {
@@ -36,45 +36,31 @@ export const PopoverContentStyled = styled("div", {
         animationFillMode: "forwards",
       },
     },
-    horizontal: {
-      center: {
-        left: "50%",
-        right: "auto",
-        transform: "translateX(-50%)",
-      },
-      left: {
-        left: 0,
-        right: "auto",
-      },
-      right: {
-        left: "auto",
-        right: 0,
-      },
-    },
     minimal: {
+      false: {
+        padding: "$small",
+      },
       true: {
         padding: 0,
       },
     },
-    vertical: {
-      bottom: {
-        bottom: "auto",
-        marginTop: "$small",
-        top: "100%",
+    small: {
+      false: {
+        minWidth: "50rem",
+        phone: {
+          minWidth: "85vw",
+        },
       },
-      center: {
-        bottom: "auto",
-        top: "50%",
-        transform: "translateY(-50%)",
-      },
-      top: {
-        bottom: "100%",
-        marginBottom: "$small",
-        marginTop: 0,
-        top: "auto",
+      true: {
+        minWidth: "25rem",
+
+        phone: {
+          minWidth: "65vw",
+        },
       },
     },
   },
+  width: "200%",
   zIndex: "$popover",
 });
 
