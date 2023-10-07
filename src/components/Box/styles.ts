@@ -25,7 +25,7 @@ export const BoxStyled = styled("article", {
   variants: {
     animation: {
       true: {
-        animation: `${fadeOut} .2s linear`,
+        animation: `${fadeOut} .15s linear`,
         animationFillMode: "forwards",
       },
     },

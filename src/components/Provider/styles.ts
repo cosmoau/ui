@@ -29,11 +29,11 @@ export const ToastStyled = styled("div", {
   variants: {
     animation: {
       false: {
-        animation: `${fadeOut} .2s linear`,
+        animation: `${fadeOut} .15s linear`,
         animationFillMode: "forwards",
       },
       true: {
-        animation: `${fadeIn} .2s linear`,
+        animation: `${fadeIn} .15s linear`,
         animationFillMode: "forwards",
       },
     },

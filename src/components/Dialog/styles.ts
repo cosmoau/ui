@@ -57,7 +57,7 @@ export const DialogCoreStyled = styled("div", {
   variants: {
     animation: {
       false: {
-        animation: `${fadeOut} .2s linear`,
+        animation: `${fadeOut} .15s linear`,
         animationFillMode: "forwards",
       },
       true: {
