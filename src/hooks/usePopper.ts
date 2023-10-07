@@ -2,15 +2,15 @@ import { createPopper, type StrictModifiers } from "@popperjs/core";
 import { useState, useEffect, useRef } from "react";
 
 export default function usePopper(): {
+  contentRef: { current: null | HTMLDivElement };
   handleClick: () => void;
   handleClose: () => void;
   isMounted: boolean;
   isOpen: boolean;
-  popoverRef: { current: null | HTMLDivElement };
   triggerRef: { current: null | HTMLDivElement };
 } {
   const triggerRef = useRef(null);
-  const popoverRef = useRef(null);
+  const contentRef = useRef(null);
 
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -18,9 +18,9 @@ export default function usePopper(): {
   const [popper, setPopper] = useState<ReturnType<typeof createPopper>>();
 
   useEffect(() => {
-    if (triggerRef.current && popoverRef.current) {
+    if (triggerRef.current && contentRef.current) {
       setPopper(
-        createPopper<StrictModifiers>(triggerRef.current, popoverRef.current, {
+        createPopper<StrictModifiers>(triggerRef.current, contentRef.current, {
           modifiers: [
             {
               name: "preventOverflow",
@@ -47,7 +47,7 @@ export default function usePopper(): {
         }),
       );
     }
-  }, [triggerRef, popoverRef, isOpen]);
+  }, [triggerRef, contentRef, isOpen]);
 
   function handleOpen(): void {
     setIsOpen(true);
@@ -75,11 +75,11 @@ export default function usePopper(): {
   }
 
   return {
+    contentRef,
     handleClick,
     handleClose,
     isMounted,
     isOpen,
-    popoverRef,
     triggerRef,
   };
 }
