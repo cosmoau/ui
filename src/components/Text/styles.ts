@@ -1,7 +1,7 @@
 import { styled } from "../../stitches.config";
 
 const highlight = {
-  borderRadius: "$small",
+  borderRadius: "calc($small / 2)",
   paddingLeft: "$smaller",
   paddingRight: "$smaller",
 };
