@@ -108,9 +108,9 @@ export const darkTheme = createTheme({
     border: "rgba(254, 248, 244, 0.2)",
     borderTable: "rgba(254, 248, 244, 0.1)",
     borderToast: "rgba(254, 248, 244, 0.25)",
-    default: "#1b2532",
+    default: "#202936",
     defaultHover: "#333f4f",
-    defaultTable: "#141d29",
+    defaultTable: "#17212d",
     text: "#fef7f2",
   },
   shadows: {
