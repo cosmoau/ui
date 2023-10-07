@@ -56,7 +56,7 @@ export const InputAreaStyled = styled("input", {
   fontFamily: "$default",
   fontSize: "$default",
   margin: "0 auto",
-  padding: "$smaller 0",
+  padding: "$smallest 0",
   phone: {
     fontSize: "16px !important",
     padding: "$smaller $small",

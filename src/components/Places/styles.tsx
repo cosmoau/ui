@@ -23,14 +23,13 @@ export const placesReset = {
         fontWeight: "normal",
       },
 
-      backgroundColor: "$background",
+      backgroundColor: "$defaultTable",
 
       border: 0,
       borderRadius: "$small",
       color: "$accent",
       cursor: "pointer",
-      fontSize: "$default",
-      marginTop: "$smallest",
+      fontSize: "16px",
       padding: "$smaller $small",
       transition: "$default",
     },
@@ -48,7 +47,6 @@ export const placesReset = {
     left: "0 !important",
 
     marginTop: "$small",
-    padding: "$smaller 0",
     phone: {
       margin: "0 auto",
       marginTop: "$small",

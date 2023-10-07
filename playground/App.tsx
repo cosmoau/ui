@@ -51,7 +51,7 @@ export function App(): ReactElement {
     <C.Provider>
       <h1>{breakpoint || "No breakpoint detected"}</h1>
      
-      <C.View bottom="largest" container inverted top="largest">
+      <C.View bottom="largest" container top="largest">
         <C.Stack align="center">
           <C.Popover trigger={<C.Button>Popover (default, large)</C.Button>}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
@@ -188,6 +188,9 @@ export function App(): ReactElement {
           submit="Submit"
           submitFunction={() => toast("submitted")}
           submitValid={tempInput.length > 0 && tempField.length > 0}>
+              <C.Input error errorMessage="
+          This is an error message, it can be as long as you want it to be. It can also be as short as you want it to be.
+          " placeholder="Input" onChange={(e) => setTempInput(e.target.value)} />
           <C.Input copy error errorMessage="
           This is an error message, it can be as long as you want it to be. It can also be as short as you want it to be.
           " placeholder="Input" reset submit="Save" onChange={(e) => setTempInput(e.target.value)} />
