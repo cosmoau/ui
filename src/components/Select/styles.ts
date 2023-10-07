@@ -21,6 +21,7 @@ export const SelectGroupStyled = styled("div", {
   lineBreak: "auto",
   overflowY: "auto",
   padding: "0 $smaller",
+  pointerEvents: "auto",
   position: "absolute",
   textAlign: "left !important",
   transition: "$default",
@@ -31,36 +32,8 @@ export const SelectGroupStyled = styled("div", {
         animationFillMode: "forwards",
       },
       true: {
-        animation: `${fadeIn} .15s linear`,
+        animation: `${fadeIn} .2s linear`,
         animationFillMode: "forwards",
-      },
-    },
-    horizontal: {
-      center: {
-        left: "50%",
-        right: "auto",
-        transform: "translateX(-50%)",
-      },
-      left: {
-        left: 0,
-        right: "auto",
-      },
-      right: {
-        left: "auto",
-        right: 0,
-      },
-    },
-    vertical: {
-      bottom: {
-        bottom: "auto",
-        marginTop: "$small !important",
-        top: "100%",
-      },
-      top: {
-        bottom: "100%",
-        marginBottom: "$small !important",
-        marginTop: 0,
-        top: "auto",
       },
     },
   },

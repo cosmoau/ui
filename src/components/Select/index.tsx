@@ -1,7 +1,6 @@
-import { useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
-import { Icons } from "../../icons";
-import { Input, Loading, useBreakpoints, useEventListener, useOutsideClick } from "../../index";
+import { Input, Loading, useBreakpoints, useEventListener, useOutsideClick, usePopper } from "../../index";
 import { ISelect } from "../../types";
 
 import {
@@ -24,41 +23,24 @@ export default function Select({
   selection,
   width,
   height,
-  horizontal = "left",
-  vertical = "bottom",
   trigger,
   loading,
   last,
   filter,
 }: ISelect): JSX.Element {
-  const ref = useRef(null);
+  const { triggerRef, contentRef, isOpen, isMounted, handleClick, handleClose } = usePopper();
+
   const breakpoint = useBreakpoints();
 
-  const [isOpen, setIsOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
   const [search, setSearch] = useState("");
   const [focused, setFocused] = useState(selection ? selection[0] : "");
 
-  function handleClose(): void {
-    setIsOpen(false);
-    setFocused("");
-    setTimeout(() => {
-      setIsMounted(false);
-    }, 250);
-  }
-
-  function handleOpen(): void {
-    setIsOpen(true);
-    setIsMounted(true);
-  }
-
-  function handleTriggerClick(): void {
-    if (isOpen || isMounted) {
-      handleClose();
-    } else {
-      handleOpen();
+  useEffect(() => {
+    if (!isOpen) {
+      setSearch("");
+      setFocused("");
     }
-  }
+  }, [isOpen]);
 
   function handleSelection(value: string, label: string): void {
     if (onSelection) {
@@ -69,7 +51,7 @@ export default function Select({
 
   const deviceWidth = typeof window !== "undefined" ? Number(window?.innerWidth || 0) : 0;
 
-  useOutsideClick(ref, handleClose);
+  useOutsideClick(contentRef, () => handleClose());
 
   useEventListener("keydown", (event: KeyboardEvent) => {
     if (breakpoint === "phone") {
@@ -118,17 +100,18 @@ export default function Select({
   return (
     <SelectStyled css={css}>
       <SelectTriggerStyled
+        ref={triggerRef}
         onClick={(e): void => {
           e.stopPropagation();
           if (!disabled) {
-            handleTriggerClick();
+            handleClick();
           }
         }}>
         {trigger}
       </SelectTriggerStyled>
       {isMounted && (
         <SelectGroupStyled
-          ref={ref}
+          ref={contentRef}
           animation={isOpen}
           css={{
             maxHeight: height || "50rem",
@@ -138,15 +121,12 @@ export default function Select({
               maxWidth: deviceWidth ? deviceWidth * 0.8 : "80vw",
             },
             width: width || "auto",
-          }}
-          horizontal={horizontal}
-          vertical={vertical}>
+          }}>
           {label && <SelectLabelStyled>{label}</SelectLabelStyled>}
           {options.length > 10 && filter && (
             <SelectFilterStyled>
               <Input
                 disabled={!options}
-                icon={<Icons.MagnifyingGlass />}
                 reset
                 resetFunction={(): void => setSearch("")}
                 submitValid={(): boolean => search.length > 0}
