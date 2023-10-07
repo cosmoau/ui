@@ -1,7 +1,7 @@
 {
   "name": "@cosmoau/ui",
   "description": "Cosmo's internal component library, built with React, Next.js, and Stitches.",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": {
     "production": [
@@ -95,7 +95,8 @@
   },
   "scripts": {
     "bump": "pnpm up -L && pnpm tidy && pnpm build",
-    "build": "parcel build src/index.ts --dist-dir dist",
+    "prebuild": "rm -rf dist .parcel-cache",
+    "build": "pnpm tidy && pnpm prebuild && parcel build src/index.ts --dist-dir dist",
     "dev": "echo '⚡️ Fetching device IP for development...' && ipconfig getifaddr en0 && echo '🫡' && parcel playground/index.html --dist-dir playground/dist --open --no-cache --port 420",
     "kill": "lsof -ti tcp:420 | xargs kill",
     "lint": "eslint src --ext .ts,.tsx --fix",
