@@ -74,7 +74,7 @@ export const InputFunctionStyled = styled("div", {
     gap: "$small",
     height: "100%",
     marginLeft: 0,
-    padding: "$smaller $small",
+    padding: "$small $smallest",
     width: "100%",
   },
   position: "relative",

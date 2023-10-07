@@ -145,6 +145,7 @@ export default function Input({
                 disabled={!submitValid || !submitValid(inputValue) || isSubmitted || disabled}
                 inline={loading ? "small" : undefined}
                 small
+                theme="solid"
                 type="submit"
                 onClick={(): void => {
                   if (submitFunction && submitValid && submitValid(inputValue)) {

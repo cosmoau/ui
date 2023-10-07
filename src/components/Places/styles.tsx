@@ -12,7 +12,7 @@ export const placesReset = {
   ".pac-container": {
     "*": {
       fontFamily: "$default",
-      fontSize: "14px",
+      fontSize: "$default",
     },
     ".pac-item": {
       "&:hover": {
@@ -23,25 +23,32 @@ export const placesReset = {
         fontWeight: "normal",
       },
 
+      backgroundColor: "$background",
+
       border: 0,
-
+      borderRadius: "$small",
       color: "$accent",
-      padding: "$smallest $small",
+      cursor: "pointer",
+      fontSize: "$default",
+      marginTop: "$smallest",
+      padding: "$smaller $small",
+      transition: "$default",
     },
-
     ".pac-matched": {
       verticalAlign: "baseline",
     },
-    backgroundColor: "$background",
+
+    backgroundColor: "$defaultTable",
     border: "0.1rem solid $border",
     borderRadius: "$small",
     boxShadow: "$small",
     color: "$text",
-
     display: "none",
 
     left: "0 !important",
+
     marginTop: "$small",
+    padding: "$smaller 0",
     phone: {
       margin: "0 auto",
       marginTop: "$small",

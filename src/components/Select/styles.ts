@@ -69,17 +69,11 @@ export const SelectItemStyled = styled("div", {
   },
 
   backgroundColor: "$background",
-
   borderRadius: "$small",
-
   cursor: "pointer",
-
   display: "flex",
-
   fontSize: "$default",
-
   justifyContent: "space-between",
-  // last child add margin bottom of smallest
   marginTop: "$smallest",
   padding: "$smaller $small",
   transition: "$default",
