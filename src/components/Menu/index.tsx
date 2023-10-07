@@ -51,7 +51,8 @@ export default function Menu({ css, trigger, options, selection, onSelection, ch
   return (
     <MenuStyled css={css}>
       <MenuTriggerStyled
-        onClickCapture={(): void => {
+        onClick={(e): void => {
+          e.stopPropagation();
           handleClick();
         }}>
         {trigger}

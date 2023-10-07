@@ -134,7 +134,8 @@ export default function Dialog({
     <DialogStyled>
       {trigger ? (
         <DialogTriggerStyled
-          onClickCapture={(): void => {
+          onClick={(e): void => {
+            e.stopPropagation();
             if (!disabled) {
               handleClick();
             }

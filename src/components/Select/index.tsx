@@ -118,7 +118,8 @@ export default function Select({
   return (
     <SelectStyled css={css}>
       <SelectTriggerStyled
-        onClickCapture={(): void => {
+        onClick={(e): void => {
+          e.stopPropagation();
           if (!disabled) {
             handleTriggerClick();
           }
@@ -163,7 +164,7 @@ export default function Select({
                 focused={option.value === focused}
                 last={last && !search}
                 selected={selection && selection.find((item) => item === option.value) ? true : false}
-                onClickCapture={(): void => handleSelection(option.value, option.label)}
+                onClick={(): void => handleSelection(option.value, option.label)}
                 onMouseOver={(): void => {
                   if (breakpoint !== "phone") {
                     setFocused(option.value);
