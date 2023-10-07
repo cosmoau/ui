@@ -149,7 +149,6 @@ export interface IInput extends ComponentPropsWithRef<"input"> {
   css?: CSS;
   error?: boolean;
   errorMessage?: string;
-  icon?: ReactNode;
   listen?: boolean;
   loading?: boolean;
   mustRef?: RefObject<HTMLInputElement>;
