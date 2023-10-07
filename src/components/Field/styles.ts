@@ -1,6 +1,19 @@
 import { styled } from "../../stitches.config";
 
 export const FieldStyled = styled("div", {
+  position: "relative",
+
+  variants: {
+    disabled: {
+      true: {
+        cursor: "not-allowed",
+        opacity: 0.5,
+      },
+    },
+  },
+  width: "100%",
+});
+export const FieldCoreStyled = styled("div", {
   "&:focus-within": {
     boxShadow: "$small",
   },
@@ -10,12 +23,8 @@ export const FieldStyled = styled("div", {
   "*": {
     verticalAlign: "middle",
   },
-  alignContent: "center",
-  alignSelf: "center",
   border: "0.1rem solid $border",
   borderRadius: "$small",
-  justifyContent: "center",
-  position: "relative",
   transition: "$default",
   variants: {
     disabled: {
@@ -67,7 +76,19 @@ export const FieldFunctionStyled = styled("div", {
   height: "100%",
   justifyContent: "flex-end",
   padding: "$smaller $small",
+  phone: {
+    button: {
+      marginLeft: 0,
+    },
+    justifyContent: "flex-start",
+  },
   position: "relative",
   verticalAlign: "middle",
+
   width: "100%",
+});
+
+export const FieldCallbackStyled = styled("div", {
+  display: "block",
+  paddingTop: "$small",
 });

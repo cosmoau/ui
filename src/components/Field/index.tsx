@@ -2,10 +2,10 @@ import { ChangeEvent, useState } from "react";
 import toast from "react-hot-toast";
 
 import { Icons } from "../../icons";
-import { Button, Badge, Loading } from "../../index";
+import { Button, Loading, Text } from "../../index";
 import { IField } from "../../types";
 
-import { FieldStyled, FieldAreaStyled, FieldFunctionStyled } from "./styles";
+import { FieldStyled, FieldAreaStyled, FieldFunctionStyled, FieldCallbackStyled, FieldCoreStyled } from "./styles";
 
 export default function Field({
   copy,
@@ -64,82 +64,94 @@ export default function Field({
   }
 
   return (
-    <FieldStyled
-      css={{
-        maxWidth: width || "100%",
-        width: width || "100%",
-      }}
-      disabled={disabled}>
-      <FieldAreaStyled
-        cols={cols}
-        css={css}
-        disabled={disabled}
-        placeholder={placeholder}
-        rows={rows}
-        value={inputValue}
-        onChange={(event: ChangeEvent<HTMLTextAreaElement>): void => {
-          handleChange(event);
+    <FieldStyled>
+      <FieldCoreStyled
+        css={{
+          maxWidth: width || "100%",
+          width: width || "100%",
         }}
-      />
-      {(error || success || warning || loading || submit || copy) && (
-        <FieldFunctionStyled>
+        disabled={disabled}>
+        <FieldAreaStyled
+          cols={cols}
+          css={css}
+          disabled={disabled}
+          placeholder={placeholder}
+          rows={rows}
+          value={inputValue}
+          onChange={(event: ChangeEvent<HTMLTextAreaElement>): void => {
+            handleChange(event);
+          }}
+        />
+        {(loading || submit || copy) && (
+          <FieldFunctionStyled>
+            {copy && (
+              <Button
+                disabled={isCopied}
+                icon={<Icons.ClipboardText />}
+                small
+                onClick={(): void => {
+                  handleCopy();
+                }}>
+                Copy
+              </Button>
+            )}
+
+            {reset && inputValue && (
+              <Button
+                css={{
+                  marginLeft: "$smaller",
+                }}
+                small
+                onClick={(): void => {
+                  handleReset();
+                }}>
+                <Icons.X />
+              </Button>
+            )}
+
+            {submit && (
+              <Button
+                disabled={!submitValid || !submitValid(inputValue) || isSubmitted}
+                inline={loading ? "small" : undefined}
+                small
+                type="submit"
+                onClick={(): void => {
+                  if (submitFunction && submitValid && submitValid(inputValue)) {
+                    submitFunction(inputValue);
+                    setIsSubmitted(true);
+                  }
+                }}>
+                {submit}
+              </Button>
+            )}
+            {loading && <Loading />}
+          </FieldFunctionStyled>
+        )}
+      </FieldCoreStyled>
+      {(error || success || warning) && (
+        <FieldCallbackStyled>
           {error && (
-            <Badge icon={<Icons.Warning />} small theme="red">
-              {errorMessage || "Error"}
-            </Badge>
+            <Text as="small">
+              <Text as="span" highlight="red">
+                {errorMessage || <Icons.Warning />}
+              </Text>
+            </Text>
           )}
           {success && (
-            <Badge icon={<Icons.Check />} small theme="green">
-              {successMessage || "Success"}
-            </Badge>
+            <Text as="small">
+              <Text as="span" highlight="green">
+                {successMessage || <Icons.Check />}
+              </Text>
+            </Text>
           )}
           {warning && (
-            <Badge icon={<Icons.Warning />} small theme="orange">
-              {warningMessage || "Warning"}
-            </Badge>
+            <Text as="small">
+              <Text as="span" highlight="orange">
+                {warningMessage || <Icons.Warning />}
+              </Text>
+            </Text>
           )}
-          {copy && (
-            <Button
-              disabled={isCopied}
-              icon={<Icons.ClipboardText />}
-              small
-              onClick={(): void => {
-                handleCopy();
-              }}>
-              Copy
-            </Button>
-          )}
-
-          {reset && inputValue && (
-            <Button
-              css={{
-                marginLeft: "$smaller",
-              }}
-              small
-              onClick={(): void => {
-                handleReset();
-              }}>
-              <Icons.X />
-            </Button>
-          )}
-
-          {submit && (
-            <Button
-              disabled={!submitValid || !submitValid(inputValue) || isSubmitted}
-              inline={loading ? "small" : undefined}
-              small
-              type="submit"
-              onClick={(): void => {
-                if (submitFunction && submitValid && submitValid(inputValue)) {
-                  submitFunction(inputValue);
-                  setIsSubmitted(true);
-                }
-              }}>
-              {submit}
-            </Button>
-          )}
-          {loading && <Loading />}
-        </FieldFunctionStyled>
+        </FieldCallbackStyled>
       )}
     </FieldStyled>
   );

@@ -2,21 +2,13 @@ import { ChangeEvent, useState } from "react";
 import toast from "react-hot-toast";
 
 import { Icons } from "../../icons";
-import { Button, Badge, Loading, useEventListener } from "../../index";
+import { Button, Loading, useEventListener, Text } from "../../index";
 import { IInput } from "../../types";
 
-import {
-  InputAreaStyled,
-  InputCallbackStyled,
-  InputFunctionStyled,
-  InputStyled,
-  InputCoreStyled,
-  InputIconStyled,
-} from "./styles";
+import { InputAreaStyled, InputCallbackStyled, InputFunctionStyled, InputStyled, InputCoreStyled } from "./styles";
 
 export default function Input({
   copy,
-  icon,
   mustRef,
   type,
   disabled,
@@ -93,7 +85,6 @@ export default function Input({
       }}
       disabled={disabled}>
       <InputCoreStyled>
-        {icon && <InputIconStyled>{icon}</InputIconStyled>}
         <InputAreaStyled
           ref={mustRef || undefined}
           disabled={disabled}
@@ -171,19 +162,25 @@ export default function Input({
       {(error || success || warning) && (
         <InputCallbackStyled>
           {error && (
-            <Badge icon={errorMessage ? <Icons.Warning /> : undefined} small theme="red">
-              {errorMessage || <Icons.Warning />}
-            </Badge>
+            <Text as="small">
+              <Text as="span" highlight="red">
+                {errorMessage || <Icons.Warning />}
+              </Text>
+            </Text>
           )}
           {success && (
-            <Badge icon={successMessage ? <Icons.Check /> : undefined} small theme="green">
-              {successMessage || <Icons.Check />}
-            </Badge>
+            <Text as="small">
+              <Text as="span" highlight="green">
+                {successMessage || <Icons.Check />}
+              </Text>
+            </Text>
           )}
           {warning && (
-            <Badge icon={warningMessage ? <Icons.Warning /> : undefined} small theme="orange">
-              {warningMessage || <Icons.Warning />}
-            </Badge>
+            <Text as="small">
+              <Text as="span" highlight="orange">
+                {warningMessage || <Icons.Warning />}
+              </Text>
+            </Text>
           )}
         </InputCallbackStyled>
       )}
