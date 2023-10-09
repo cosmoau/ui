@@ -203,15 +203,94 @@ export function App(): ReactElement {
         <C.Input loading placeholder="Filter" reset submit="Save" submitFunction={(value) => toast(value)} />
         <C.Field loading placeholder="Filter" reset submit="Save" submitFunction={(value) => toast(value)} />
       </C.View>
+      <C.View bottom="largest" container inverted top="largest">
+          <C.Stack align="center" bottom="large">
+            <C.Badge inline="small" theme="orange">
+              Test orange button
+            </C.Badge>
+            <C.Badge inline="small" theme="red">
+              Test red button
+            </C.Badge>
+            <C.Badge inline="small" theme="purple">
+              Test purple button
+            </C.Badge>
+            <C.Badge inline="small" theme="blue">
+              Test blue button
+            </C.Badge>
+            <C.Badge inline="small" theme="green">
+              Test green button
+            </C.Badge>
+          </C.Stack>
+          <C.Stack flexduo>
+            <C.Box theme="error">
+            <C.Text as='h4'>
+              Title
+            </C.Text>
+              Error box
+            </C.Box>
+          <C.Box theme="warning">
+            <C.Text as='h4'>
+              Title
+            </C.Text>
+            Warning box
+          </C.Box>
+          <C.Box theme="success">
+            <C.Text as='h4'>
+              Title
+            </C.Text>
+            Warning box
+          </C.Box>
+          </C.Stack>
+          </C.View>
       <C.View bottom="largest" container top="largest">
+        <C.Stack align="center" bottom="large">
+          <C.Badge inline="small" theme="orange">
+            Test orange button
+          </C.Badge>
+          <C.Badge inline="small" theme="red">
+            Test red button
+          </C.Badge>
+          <C.Badge inline="small" theme="purple">
+            Test purple button
+          </C.Badge>
+          <C.Badge inline="small" theme="blue">
+            Test blue button
+          </C.Badge>
+          <C.Badge inline="small" theme="green">
+            Test green button
+          </C.Badge>
+        </C.Stack>
+        <C.Stack flexduo>
+          <C.Box theme="error">
+            <C.Text as='h4'>
+              Title
+            </C.Text>
+            Error box
+          </C.Box>
+          <C.Box theme="warning">
+            <C.Text as='h4'>
+              Title
+            </C.Text>
+            Warning box
+          </C.Box>
+          <C.Box theme="success">
+            <C.Text as='h4'>
+              Title
+            </C.Text>
+            Warning box
+          </C.Box>
+        </C.Stack>
+      </C.View>
+      <C.View bottom="largest" container inverted top="largest">
         <C.Stack bottom="largest" direction="row">
           <C.Stack direction="column" offset={33.33} width={33.33}>
             <DateParser />
           </C.Stack>
         </C.Stack>
         <C.Stack direction="row">
+
           <C.Stack direction="column" width={33.33}>
-            <C.Box footer={<C.Button>Call to action</C.Button>} header={<h1>test</h1>} imageCTA="https://google.com">
+            <C.Box footer={<C.Button>Call to action</C.Button>} header={<h1>test</h1>} imageCTA="https://google.com" theme="warning">
               <C.Text as="h5">Lorem A - First heading</C.Text>
               <C.Stack>
                 <h1>lorem ipsum</h1>
@@ -228,7 +307,7 @@ export function App(): ReactElement {
               </C.Stack>
               <C.Text accent>Lorem ipsum dolor sit amet.</C.Text>
             </C.Box>
-          </C.Stack>
+          C.</C.Stack>
           <C.Stack direction="column" width={33.33}>
             <C.Box footer={<C.Button>Call to action</C.Button>}>
               <C.Text as="h5">Lorem A - First heading</C.Text>

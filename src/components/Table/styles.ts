@@ -77,13 +77,9 @@ export const TableCoreStyled = styled("div", {
               "&:last-child": {
                 paddingBottom: "$medium !important",
               },
-              "*": {
-                verticalAlign: "middle",
-              },
               border: "0 !important",
               display: "block",
               paddingBottom: "0 !important",
-              verticalAlign: "middle",
             },
             width: "100%",
           },
@@ -116,7 +112,6 @@ export const TableHeaderStyled = styled("div", {
   },
   justifyContent: "space-between",
   paddingBottom: "calc($medium * 1.5)",
-  verticalAlign: "middle",
   width: "100%",
 });
 

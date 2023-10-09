@@ -36,6 +36,8 @@ export default function Box({
 
   if (!isMounted) return null;
 
+  const useHeaderOrFooter = theme && theme !== "warning" && theme !== "error" && theme !== "success";
+
   return (
     <BoxStyled
       animation={!isOpen}
@@ -82,14 +84,14 @@ export default function Box({
               src={image}
             />
           ))}
-        {header && <BoxHeaderStyled>{header}</BoxHeaderStyled>}
+        {header && useHeaderOrFooter && <BoxHeaderStyled>{header}</BoxHeaderStyled>}
         {image || header || footer ? (
           <BoxInnerStyled padding={minimal ? "none" : "default"}>{children}</BoxInnerStyled>
         ) : (
           children
         )}
       </BoxFlexStyled>
-      {footer && <BoxFooterStyled>{footer}</BoxFooterStyled>}
+      {footer && useHeaderOrFooter && <BoxFooterStyled>{footer}</BoxFooterStyled>}
 
       {closable && (
         <BoxExitStyled onClick={(): void => handleClose()}>

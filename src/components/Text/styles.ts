@@ -110,7 +110,7 @@ export const TextStyled = styled("div", {
   "&:last-child": {
     marginBottom: "0 !important",
   },
-  color: "$text",
+
   variants: {
     accent: {
       true: {
