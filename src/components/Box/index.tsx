@@ -36,7 +36,7 @@ export default function Box({
 
   if (!isMounted) return null;
 
-  const useHeaderOrFooter = theme && theme !== "warning" && theme !== "error" && theme !== "success";
+  const useHeaderOrFooter = (theme && theme !== "warning" && theme !== "error" && theme !== "success") || !theme;
 
   return (
     <BoxStyled
