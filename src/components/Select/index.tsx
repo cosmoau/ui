@@ -141,7 +141,7 @@ export default function Select({
             filteredOptions.map((option) => (
               <SelectItemStyled
                 key={option.value + Math.random()}
-                focused={option.value === focused}
+                focused={option.value === focused && breakpoint !== "phone"}
                 last={last && !search}
                 selected={selection && selection.find((item) => item === option.value) ? true : false}
                 onClick={(): void => handleSelection(option.value, option.label)}

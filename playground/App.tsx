@@ -110,7 +110,7 @@ export function App(): ReactElement {
               })),
             ]}
             selection={["/page2"]}
-            trigger={<C.Button disabled>Menu</C.Button>}
+            trigger={<C.Button>Select</C.Button>}
             onSelection={(value, label) => toast.error(`Page selected: ${value} - ${label}`)}
           />
         </C.Stack>

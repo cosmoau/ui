@@ -107,7 +107,7 @@ export default function Input({
                 onClick={(): void => {
                   handleCopy();
                 }}>
-                  {breakpoint !== "phone" ? "Copy" : <Icons.ClipboardText />}
+                {breakpoint !== "phone" ? "Copy" : <Icons.ClipboardText />}
               </Button>
             )}
             {reveal && (
@@ -116,12 +116,22 @@ export default function Input({
                   marginLeft: "$smaller",
                 }}
                 disabled={disabled}
-                icon={breakpoint !== "phone" ? (!isRevealed ? <Icons.Eye /> : <Icons.EyeClosed />) : undefined}
+                icon={breakpoint !== "phone" ? !isRevealed ? <Icons.Eye /> : <Icons.EyeClosed /> : undefined}
                 small
                 onClick={(): void => {
                   handleReveal();
                 }}>
-                  {breakpoint !== "phone" ? (!isRevealed ? "Reveal" : "Hide") : (!isRevealed ? <Icons.Eye /> : <Icons.EyeClosed />)}
+                {breakpoint !== "phone" ? (
+                  !isRevealed ? (
+                    "Reveal"
+                  ) : (
+                    "Hide"
+                  )
+                ) : !isRevealed ? (
+                  <Icons.Eye />
+                ) : (
+                  <Icons.EyeClosed />
+                )}
               </Button>
             )}
 
