@@ -15,12 +15,11 @@ export const DialogTriggerStyled = styled("div", {
 });
 
 export const DialogOverlayStyled = styled("div", {
-  backdropFilter: "blur(0.4px)",
-  backgroundColor: "$border",
+  backdropFilter: "blur(0.2px)",
+  backgroundColor: "rgba(0, 0, 0, 0.3)",
   bottom: 0,
   darkModeSpec: {
-    backdropFilter: "blur(0.8px)",
-    backgroundColor: "$borderTable",
+    backgroundColor: "rgba(255, 255, 255, 0.15)",
   },
   height: "100%",
   left: 0,
