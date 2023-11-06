@@ -68,7 +68,7 @@ export function App(): ReactElement {
           <C.Button inline="large" onClick={() => toast("Cammylynn")}>
             Toast
           </C.Button>
-          <C.Dialog trigger={<C.Button>Dialog</C.Button>} title="Dialog">
+          <C.Dialog title="Dialog" trigger={<C.Button>Dialog</C.Button>}>
             Dialog
           </C.Dialog>
           <C.Select
@@ -214,7 +214,7 @@ export function App(): ReactElement {
       </C.View>
       <C.View bottom="largest" container inverted top="largest">
           <C.Stack align="center" bottom="large">
-            <C.Badge inline="small" theme="orange">
+            <C.Badge inline="small" link theme="orange">
               Test orange button
             </C.Badge>
             <C.Badge inline="small" theme="red">
