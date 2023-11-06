@@ -28,10 +28,6 @@ export const InputCoreStyled = styled("div", {
   display: "flex",
   justifyContent: "center",
   padding: "$smaller $small",
-  phone: {
-    display: "block",
-    padding: 0,
-  },
   transition: "$default",
   width: "100%",
 });
@@ -59,7 +55,6 @@ export const InputAreaStyled = styled("input", {
   padding: "$smallest 0",
   phone: {
     fontSize: "16px !important",
-    padding: "$smaller $small",
   },
   width: "100%",
 });
@@ -68,15 +63,6 @@ export const InputFunctionStyled = styled("div", {
   display: "inline-flex",
   height: "100%",
   marginLeft: "$small",
-  phone: {
-    borderTop: "0.1rem solid $border",
-    display: "flex",
-    gap: "$small",
-    height: "100%",
-    marginLeft: 0,
-    padding: "$small $smallest",
-    width: "100%",
-  },
   position: "relative",
   verticalAlign: "middle",
 });

@@ -2,7 +2,7 @@ import { ChangeEvent, useState } from "react";
 import toast from "react-hot-toast";
 
 import { Icons } from "../../icons";
-import { Button, Loading, useEventListener, Text } from "../../index";
+import { Button, Loading, useEventListener, Text, useBreakpoints } from "../../index";
 import { IInput } from "../../types";
 
 import { InputAreaStyled, InputCallbackStyled, InputFunctionStyled, InputStyled, InputCoreStyled } from "./styles";
@@ -32,6 +32,7 @@ export default function Input({
   reset,
   resetFunction,
 }: IInput): JSX.Element {
+  const breakpoint = useBreakpoints();
   const [inputValue, setInputValue] = useState((value as string) || "");
   const [isCopied, setIsCopied] = useState(false);
   const [isRevealed, setIsRevealed] = useState(false);
@@ -97,15 +98,16 @@ export default function Input({
         />
         {(loading || submit || copy || reveal || reset) && (
           <InputFunctionStyled>
+            {loading && <Loading css={{ marginRight: "$smaller" }} />}
             {copy && (
               <Button
                 disabled={isCopied || disabled}
-                icon={<Icons.ClipboardText />}
+                icon={breakpoint !== "phone" ? <Icons.ClipboardText /> : undefined}
                 small
                 onClick={(): void => {
                   handleCopy();
                 }}>
-                Copy
+                  {breakpoint !== "phone" ? "Copy" : <Icons.ClipboardText />}
               </Button>
             )}
             {reveal && (
@@ -114,12 +116,12 @@ export default function Input({
                   marginLeft: "$smaller",
                 }}
                 disabled={disabled}
-                icon={!isRevealed ? <Icons.Eye /> : <Icons.EyeClosed />}
+                icon={breakpoint !== "phone" ? (!isRevealed ? <Icons.Eye /> : <Icons.EyeClosed />) : undefined}
                 small
                 onClick={(): void => {
                   handleReveal();
                 }}>
-                {isRevealed ? "Hide" : "Show"}
+                  {breakpoint !== "phone" ? (!isRevealed ? "Reveal" : "Hide") : (!isRevealed ? <Icons.Eye /> : <Icons.EyeClosed />)}
               </Button>
             )}
 
@@ -143,7 +145,8 @@ export default function Input({
                   marginLeft: "$smaller",
                 }}
                 disabled={!submitValid || !submitValid(inputValue) || isSubmitted || disabled}
-                inline={loading ? "small" : undefined}
+                icon={breakpoint !== "phone" ? <Icons.ArrowRight /> : undefined}
+                iconPosition="right"
                 small
                 theme={submitValid && submitValid(inputValue) ? "solid" : "default"}
                 type="submit"
@@ -153,10 +156,9 @@ export default function Input({
                     setIsSubmitted(true);
                   }
                 }}>
-                {submit}
+                {breakpoint !== "phone" ? "Submit" : <Icons.ArrowRight />}
               </Button>
             )}
-            {loading && <Loading />}
           </InputFunctionStyled>
         )}
       </InputCoreStyled>
