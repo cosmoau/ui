@@ -8,7 +8,7 @@ export const ProviderStyled = styled("main", {
 
 export const ToastStyled = styled("div", {
   alignItems: "center",
-  backgroundColor: "$background",
+  backgroundColor: "$defaultTable",
   border: "0.1rem solid $borderToast",
   borderRadius: "$small",
   boxShadow: "$large",
@@ -18,7 +18,7 @@ export const ToastStyled = styled("div", {
   justifyContent: "center",
   margin: "$small auto 0 auto !important",
   maxWidth: "60%",
-  padding: "$smallest $small",
+  padding: "$smaller $small",
   phone: {
     fontSize: "$small",
     maxWidth: "80%",
