@@ -2,10 +2,28 @@ import { sort } from "fast-sort";
 import { useEffect, useState } from "react";
 
 import { Icons } from "../../icons";
-import { Badge, Button, Loading, Select, Stack, Text, fadeIn, theme, useLocalStorage } from "../../index";
+import {
+  Badge,
+  Button,
+  Loading,
+  Select,
+  Stack,
+  Text,
+  fadeIn,
+  theme,
+  useBreakpoints,
+  useLocalStorage,
+} from "../../index";
 import { ITable } from "../../types";
 
-import { TableCoreStyled, TableFiltersStyled, TableHeaderStyled, TablePaginationStyled, TableStyled } from "./styles";
+import {
+  TableCoreStyled,
+  TableFiltersStyled,
+  TableHeaderCoreStyled,
+  TableHeaderStyled,
+  TablePaginationStyled,
+  TableStyled,
+} from "./styles";
 
 const pageSizes = [10, 25, 50, 100];
 const maxSize = 500;
@@ -34,9 +52,11 @@ export default function Table({
 }: ITable): JSX.Element {
   const initialKey = `${identifier || "unknown"}-table`;
   const initialLimit = restrictLimit || defaultLimit || (pagination ? pageSizes[0] : maxSize);
+  const breakpoint = useBreakpoints();
   const [sortColumn, sortSortColumn] = useState(defaultSort || 0);
   const [sortDirection, setSortDirection] = useState(defaultDirection || "asc");
   const [storage, setStorage] = useLocalStorage(initialKey, {
+    filtering: false,
     limit: initialLimit,
     offset: 0,
     page: 1,
@@ -44,8 +64,7 @@ export default function Table({
 
   const parsedBodyChildren =
     bodyChildren && collapse && collapseDisabled && collapseDisabled.length > 0
-      ? // remove all COLUMNS by index
-        bodyChildren.map((row) => {
+      ? bodyChildren.map((row) => {
           const newRow = row.filter((_column, index) => !collapseDisabled.includes(index));
 
           return newRow;
@@ -71,6 +90,7 @@ export default function Table({
       setSortDirection("asc");
     }
     setStorage({
+      ...storage,
       limit: storage.limit,
       offset: 0,
       page: 1,
@@ -79,6 +99,7 @@ export default function Table({
 
   function handlePageSelection(value: string): void {
     setStorage({
+      ...storage,
       limit: parseInt(value),
       offset: 0,
       page: 1,
@@ -91,6 +112,7 @@ export default function Table({
     const page = direction === "next" ? storage.page + 1 : storage.page - 1;
 
     setStorage({
+      ...storage,
       limit: storage.limit,
       offset: offset,
       page: page,
@@ -99,6 +121,7 @@ export default function Table({
 
   function resetPagination(): void {
     setStorage({
+      ...storage,
       limit: storage.limit,
       offset: 0,
       page: 1,
@@ -107,6 +130,7 @@ export default function Table({
 
   function endPagination(): void {
     setStorage({
+      ...storage,
       limit: storage.limit,
       offset: sortedBodyChildren ? sortedBodyChildren.length - storage.limit : 0,
       page: Math.ceil(sortedBodyChildren ? sortedBodyChildren.length / storage.limit : 0),
@@ -154,24 +178,37 @@ export default function Table({
     <TableStyled css={css} id={identifier}>
       {header && (
         <TableHeaderStyled>
-          <Stack>
-            <Text as="h4" bottom="none" inline={header.count ? "small" : undefined}>
-              {header.title}
-            </Text>
-            {header.count && (
-              <Badge css={{ hiddenInline: "phone" }} small theme="blue">
-                {header.count}
-              </Badge>
-            )}
-          </Stack>
-          {header.options && <Stack>{header.options}</Stack>}
+          <TableHeaderCoreStyled>
+            <Stack>
+              <Text as="h4" bottom="none" inline={header.count ? "small" : undefined}>
+                {header.title}
+              </Text>
+              {header.count && (
+                <Badge css={{ hiddenInline: "phone" }} small theme="blue">
+                  {header.count}
+                </Badge>
+              )}
+            </Stack>
+            <Stack>
+              {filters && (
+                <Button
+                  icon={breakpoint !== "phone" ? <Icons.MagnifyingGlass /> : undefined}
+                  inline="small"
+                  small
+                  onClick={(): void => setStorage({ ...storage, filtering: !storage.filtering })}>
+                  {breakpoint === "phone" ? <Icons.MagnifyingGlass /> : storage.filtering ? "Close" : "Filter"}
+                </Button>
+              )}
+              {header.options && header.options}
+            </Stack>
+          </TableHeaderCoreStyled>
+          {filters && storage?.filtering && <TableFiltersStyled>{filters}</TableFiltersStyled>}
         </TableHeaderStyled>
       )}
 
-      {filters && <TableFiltersStyled>{filters}</TableFiltersStyled>}
-
       <TableCoreStyled
         collapse={collapse}
+        header={header !== undefined}
         slim={slim || (storage.limit > 10 && sortedBodyChildren && sortedBodyChildren.length > 10)}>
         <table {...rest}>
           {headChildren && (

@@ -89,6 +89,12 @@ export const TableCoreStyled = styled("div", {
         },
       },
     },
+    header: {
+      true: {
+        borderTopLeftRadius: 0,
+        borderTopRightRadius: 0,
+      },
+    },
     slim: {
       true: {
         td: {
@@ -103,15 +109,22 @@ export const TableHeaderStyled = styled("div", {
   "*": {
     verticalAlign: "middle",
   },
+  backgroundColor: "$default",
+  border: "0.1rem solid $border",
+  borderBottom: 0,
+  borderRadius: "$small $small 0 0",
+  padding: "$small $medium",
+  width: "100%",
+});
+
+export const TableHeaderCoreStyled = styled("div", {
   alignItems: "center",
-  backgroundColor: "$background",
   display: "flex",
   gap: "$small",
   h4: {
     marginBottom: 0,
   },
   justifyContent: "space-between",
-  paddingBottom: "calc($medium * 1.5)",
   width: "100%",
 });
 
@@ -120,7 +133,8 @@ export const TableFiltersStyled = styled("div", {
   input: {
     width: "100%",
   },
-  paddingBottom: "calc($medium * 1.5)",
+  paddingBottom: "$small",
+  paddingTop: "$medium",
   width: "100%",
 });
 
