@@ -6,12 +6,13 @@ import { LoadingOverlayStyled } from "./styles";
 
 const SVGStyled = styled("svg");
 
-export default function Loading({ width = 20 }: ILoading): JSX.Element {
+export default function Loading({ width = 20, css }: ILoading): JSX.Element {
   return (
     <SVGStyled
       css={{
         height: `${width}px !important`,
         width: `${width}px !important`,
+        ...css,
       }}
       height={width}
       opacity={0.8}

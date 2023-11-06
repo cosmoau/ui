@@ -166,6 +166,7 @@ export interface IInput extends ComponentPropsWithRef<"input"> {
 }
 
 export interface ILoading {
+  css?: CSS;
   horizontal?: "left" | "right";
   stroke?: string;
   vertical?: "top" | "bottom";
