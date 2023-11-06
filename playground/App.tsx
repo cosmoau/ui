@@ -65,6 +65,12 @@ export function App(): ReactElement {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies.
 
           </C.Popover>
+          <C.Button inline="large" onClick={() => toast("Cammylynn")}>
+            Toast
+          </C.Button>
+          <C.Dialog trigger={<C.Button>Dialog</C.Button>} title="Dialog">
+            Dialog
+          </C.Dialog>
           <C.Select
             filter
             last
@@ -164,6 +170,9 @@ export function App(): ReactElement {
           <C.Button onClick={() => setBalance(!balance)}>Toggle Balance</C.Button>
           <C.Text as="h1" top="larger">
             Balance
+          </C.Text>
+          <C.Text as={tempText} balanced={balance}>
+            {tempText} balancing {balance ? "on" : "off"}
           </C.Text>
           <C.Text as={tempText} balanced={balance}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
