@@ -84,6 +84,7 @@ export default function Field({
         />
         {(loading || submit || copy) && (
           <FieldFunctionStyled>
+            {loading && <Loading css={{ marginRight: "$smaller" }} />}
             {copy && (
               <Button
                 disabled={isCopied}
@@ -124,7 +125,6 @@ export default function Field({
                 {submit}
               </Button>
             )}
-            {loading && <Loading />}
           </FieldFunctionStyled>
         )}
       </FieldCoreStyled>
