@@ -29,9 +29,9 @@
     "react-wrap-balancer": "^1.1.0"
   },
   "devDependencies": {
-"@parcel/optimizer-htmlnano": "2.8.3",
-"@parcel/packager-ts": "2.8.3",
-"@parcel/transformer-typescript-types": "2.8.3",
+    "@parcel/optimizer-htmlnano": "2.8.3",
+    "@parcel/packager-ts": "2.8.3",
+    "@parcel/transformer-typescript-types": "2.8.3",
     "@types/google.maps": "^3.54.6",
     "@types/node": "^20.8.10",
     "@types/react": "^18.2.36",
@@ -84,7 +84,7 @@
   "license": "MIT",
   "module": "dist/index.js",
   "peerDependencies": {
-    "next": "^13.4.3",
+    "next": "^14.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -94,12 +94,12 @@
     "url": "git://github.com/cosmoau/ui.git"
   },
   "scripts": {
-    "bump": "pnpm up && pnpm tidy && pnpm build",
-    "prebuild": "rm -rf dist .parcel-cache",
     "build": "pnpm tidy && pnpm prebuild && parcel build src/index.ts --dist-dir dist",
+    "bump": "pnpm up && pnpm tidy && pnpm build",
     "dev": "echo '⚡️ Fetching device IP for development...' && ipconfig getifaddr en0 && echo '🫡' && parcel playground/index.html --dist-dir playground/dist --open --no-cache --port 420",
     "kill": "lsof -ti tcp:420 | xargs kill",
     "lint": "eslint src --ext .ts,.tsx --fix",
+    "prebuild": "rm -rf dist .parcel-cache",
     "prettier": "prettier --check --write src",
     "tidy": "pnpm lint && pnpm prettier",
     "typecheck": "tsc --noEmit"
