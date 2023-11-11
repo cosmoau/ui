@@ -43,13 +43,12 @@ export const SelectGroupStyled = styled("div", {
 
 export const SelectFilterStyled = styled("div", {
   backgroundColor: "$background",
-  borderBottom: "0.1rem solid $border",
   input: {
     width: "100%",
   },
 
   marginBottom: "$small",
-  padding: "$small $smallest",
+  padding: "$small $smallest $smallest $smallest",
   position: "sticky",
   top: 0,
 });
