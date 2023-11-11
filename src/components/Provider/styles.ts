@@ -16,7 +16,7 @@ export const ToastStyled = styled("div", {
   display: "flex",
   fontSize: "$default",
   justifyContent: "center",
-  margin: "$small auto 0 auto !important",
+  margin: "0 auto $small auto !important",
   maxWidth: "60%",
   padding: "$smaller $small",
   phone: {
