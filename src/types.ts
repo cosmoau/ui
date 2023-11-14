@@ -19,8 +19,8 @@ type IThemeSpacing = keyof typeof theme.space;
 type InferComponentProps<T extends ElementType> = T extends ComponentType<infer U>
   ? U
   : T extends keyof JSX.IntrinsicElements
-  ? JSX.IntrinsicElements[T]
-  : Record<string, never>;
+    ? JSX.IntrinsicElements[T]
+    : Record<string, never>;
 
 export interface IAvatar {
   alt?: string;

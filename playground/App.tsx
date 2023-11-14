@@ -51,7 +51,7 @@ export function App(): ReactElement {
     <C.Provider>
       <h1>{breakpoint || "No breakpoint detected"}</h1>
      
-      <C.View bottom="largest" container top="largest">
+      <C.View inverted bottom="largest" container top="largest">
         <C.Stack align="center">
           <C.Popover trigger={<C.Button>Popover (default, large)</C.Button>}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
@@ -188,6 +188,9 @@ export function App(): ReactElement {
             nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
             nunc
           </C.Text>
+          <C.Input error errorMessage="
+          This is an error message, it can be as long as you want it to be. It can also be as short as you want it to be.
+          " placeholder="Input" copy submit="Save" submitValid={() => true}/>
         </C.Stack>
         C
       </C.View>
