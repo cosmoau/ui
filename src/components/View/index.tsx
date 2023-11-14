@@ -25,20 +25,11 @@ export default function View({
           marginBottom: 0,
           paddingBottom: `$${bottom}`,
         }),
-        ...(noPrint && {
-          print: {
-            display: "none",
-          },
-        }),
-        ...(inverted && {
-          backgroundColor: darkTheme.colors.background,
-          color: darkTheme.colors.text,
-          ...(gradient && {
-            backgroundImage: `linear-gradient(180deg, ${darkTheme.colors.background} 0%, ${darkTheme.colors.defaultTable} 100%)`,
-          }),
-        }),
         ...css,
-      }}>
+      }}
+      gradient={inverted && gradient}
+      inverted={inverted}
+      noPrint={noPrint}>
       <ViewContainerStyled container={container}>{children}</ViewContainerStyled>
     </ViewStyled>
   );
