@@ -71,25 +71,25 @@ export default function Dialog({
           ? innerWidth < 900
             ? "5%"
             : innerWidth < 1800
-            ? "25%"
-            : "30%"
+              ? "25%"
+              : "30%"
           : innerWidth < 900
-          ? "5%"
-          : innerWidth < 1800
-          ? "15%"
-          : "25%",
+            ? "5%"
+            : innerWidth < 1800
+              ? "15%"
+              : "25%",
         top: content && innerHeight > 0 ? (innerHeight - content) / 2 : "10rem",
         width: small
           ? innerWidth < 900
             ? "90%"
             : innerWidth < 1800
-            ? "50%"
-            : "40%"
+              ? "50%"
+              : "40%"
           : innerWidth < 900
-          ? "90%"
-          : innerWidth < 1800
-          ? "70%"
-          : "50%",
+            ? "90%"
+            : innerWidth < 1800
+              ? "70%"
+              : "50%",
       }
     : {
         height: "auto",
@@ -97,37 +97,37 @@ export default function Dialog({
           ? innerWidth < 900
             ? "5%"
             : innerWidth < 1800
-            ? "25%"
-            : "30%"
+              ? "25%"
+              : "30%"
           : innerWidth < 900
-          ? "5%"
-          : innerWidth < 1800
-          ? "15%"
-          : "25%",
+            ? "5%"
+            : innerWidth < 1800
+              ? "15%"
+              : "25%",
         maxHeight: small
           ? innerWidth < 900
             ? "70%"
             : innerWidth < 1800
-            ? "65%"
-            : "50%"
+              ? "65%"
+              : "50%"
           : innerWidth < 900
-          ? "80%"
-          : innerWidth < 1800
-          ? "75%"
-          : "60%",
+            ? "80%"
+            : innerWidth < 1800
+              ? "75%"
+              : "60%",
         minHeight: "10%",
         top: content && innerHeight > 0 ? (innerHeight - content) / 2 : "10rem",
         width: small
           ? innerWidth < 900
             ? "90%"
             : innerWidth < 1800
-            ? "50%"
-            : "40%"
+              ? "50%"
+              : "40%"
           : innerWidth < 900
-          ? "90%"
-          : innerWidth < 1800
-          ? "70%"
-          : "50%",
+            ? "90%"
+            : innerWidth < 1800
+              ? "70%"
+              : "50%",
       };
 
   return (

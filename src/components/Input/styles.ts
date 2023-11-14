@@ -22,7 +22,7 @@ export const InputCoreStyled = styled("div", {
   },
   alignContent: "center",
   alignSelf: "center",
-  backgroundColor: "$background",
+  background: "$defaultInput",
   border: "0.1rem solid $border",
   borderRadius: "$small",
   display: "flex",
