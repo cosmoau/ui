@@ -59,7 +59,7 @@ const defaultTheme = {
     h4: "2.1rem",
     h5: "1.75rem",
     h6: "1.65rem",
-    small: "1.5rem",
+    small: "1.55rem",
   },
   fonts: {
     default: "Untitled Sans, apple-system, sans-serif",
@@ -113,8 +113,8 @@ export const darkTheme = createTheme({
     defaultHover: "#333f4f",
     defaultInput: "rgba(254, 248, 244, 0.01)",
     defaultTable: "#17212d",
-    gradientEnd: "rgba(49, 112, 183, 0.05)",
-    gradientStart: "rgba(49, 112, 183, 0.25)",
+    gradientEnd: "rgba(49, 112, 183, 0.04)",
+    gradientStart: "rgba(49, 112, 183, 0.2)",
     text: "#fef7f2",
   },
   shadows: {

@@ -2,8 +2,7 @@ import { styled } from "../../stitches.config";
 
 const highlight = {
   borderRadius: "calc($small / 2)",
-  paddingLeft: "$smaller",
-  paddingRight: "$smaller",
+  padding: "calc($smallest / 2) $smaller",
 };
 const link = {
   "&:hover": {
