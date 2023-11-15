@@ -72,10 +72,10 @@ export const TableCoreStyled = styled("div", {
 
             td: {
               "&:first-child": {
-                paddingTop: "$medium !important",
+                paddingTop: "$small !important",
               },
               "&:last-child": {
-                paddingBottom: "$medium !important",
+                paddingBottom: "$small !important",
               },
               border: "0 !important",
               display: "block",

@@ -190,7 +190,7 @@ export function App(): ReactElement {
           </C.Text>
           <C.Input copy error errorMessage="
           This is an error message, it can be as long as you want it to be. It can also be as short as you want it to be.
-          " placeholder="Input" submit="Save" submitValid={() => true}/>
+          " loading placeholder="Input" submit="Save" submitValid={() => true}/>
         </C.Stack>
         C
       </C.View>
@@ -397,7 +397,7 @@ export function App(): ReactElement {
             </C.Stack>
             <C.Stack top="largest">
               <C.Table
-                bodyChildren={Array.from(Array(1000).keys()).map((i) => [
+              bodyChildren={Array.from(Array(1000).keys()).map((i) => [
                   {
                     label: `Column 1 - ${i * 1}`,
                     value: i * 1,
@@ -419,6 +419,7 @@ export function App(): ReactElement {
                     value: i * 5,
                   },
                 ])}
+                collapse
               
                 filters={<C.Input placeholder="Filter" />}
                 headChildren={[
