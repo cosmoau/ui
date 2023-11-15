@@ -79,7 +79,7 @@ export const TableCoreStyled = styled("div", {
               },
               border: "0 !important",
               display: "block",
-              paddingBottom: "0 !important",
+              paddingTop: "0 !important",
             },
             width: "100%",
           },
