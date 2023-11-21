@@ -166,7 +166,7 @@ export default function Input({
                     setIsSubmitted(true);
                   }
                 }}>
-                {breakpoint !== "phone" ? "Submit" : <Icons.ArrowRight />}
+                {breakpoint !== "phone" ? submit : <Icons.ArrowRight />}
               </Button>
             )}
           </InputFunctionStyled>
