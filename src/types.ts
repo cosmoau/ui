@@ -95,15 +95,17 @@ export interface IDialog {
   trigger?: ReactNode;
 }
 
-export interface ICommand {
-  children: ReactNode;
-  css?: CSS;
-}
-
 export interface IDivider {
   bottom?: IThemeSpacing;
   css?: CSS;
   top?: IThemeSpacing;
+}
+
+export interface IExpander {
+  children: ReactNode;
+  css?: CSS;
+  disabled?: boolean;
+  height: number;
 }
 
 export interface IField extends ComponentPropsWithRef<"textarea"> {

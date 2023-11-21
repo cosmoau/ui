@@ -51,7 +51,64 @@ export function App(): ReactElement {
     <C.Provider>
       <h1>{breakpoint || "No breakpoint detected"}</h1>
      
-      <C.View bottom="largest" container inverted top="largest">
+      <C.View bottom="largest" container inverted={Math.random() > 0.5} top="largest">
+        <C.Stack bottom="largest">
+          <C.Expander disabled={breakpoint === "phone"} height={200}>
+            <C.Box theme="fill">
+              <C.Text as="h1">Expander</C.Text>
+              <C.Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc.
+              </C.Text>
+              <C.Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc.
+              </C.Text>
+              <C.Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc.
+              </C.Text>
+              <C.Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc.
+              </C.Text>
+              <C.Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc.
+              </C.Text>
+              <C.Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc.
+              </C.Text>
+              <C.Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc.
+              </C.Text>
+
+            </C.Box>
+            </C.Expander>
+        </C.Stack>
         <C.Stack align="center">
           <C.Popover trigger={<C.Button>Popover (default, large)</C.Button>}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc

@@ -1,5 +1,7 @@
 import {
   ArrowSquareOut,
+  ArrowsOutSimple,
+  ArrowsInSimple,
   ClipboardText,
   Check,
   Eye,
@@ -26,6 +28,8 @@ export const Icons = {
   ArrowRight,
   ArrowSquareOut,
   ArrowUp,
+  ArrowsInSimple,
+  ArrowsOutSimple,
   Check,
   ClipboardText,
   Database,
