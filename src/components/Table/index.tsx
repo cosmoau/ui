@@ -52,7 +52,7 @@ export default function Table({
 }: ITable): JSX.Element {
   const initialKey = `${identifier || "unknown"}-table`;
   const initialLimit = restrictLimit || defaultLimit || (pagination ? pageSizes[0] : maxSize);
-  const breakpoint = useBreakpoints();
+  const { breakpoint } = useBreakpoints();
   const [sortColumn, sortSortColumn] = useState(defaultSort || 0);
   const [sortDirection, setSortDirection] = useState(defaultDirection || "asc");
   const [storage, setStorage] = useLocalStorage(initialKey, {

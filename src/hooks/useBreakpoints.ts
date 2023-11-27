@@ -24,13 +24,28 @@ const getBreakpoint = (): Breakpoint => {
   return undefined;
 };
 
-export default function useBreakpoints(): Breakpoint {
+export default function useBreakpoints(): {
+  breakpoint: Breakpoint;
+  isDesktop: boolean;
+  isLaptop: boolean;
+  isPhone: boolean;
+  isTablet: boolean;
+  isWide: boolean;
+} {
   const [breakpoint, setBreakpoint] = useState<Breakpoint>("phone");
+
+  const isPhone = breakpoint === "phone";
+  const isTablet = breakpoint === "tabletX";
+  const isLaptop = breakpoint === "laptopX";
+  const isDesktop = breakpoint === "desktopX";
+  const isWide = breakpoint === "wide";
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       const breakpointListener = (): void => {
-        setBreakpoint(getBreakpoint());
+        const currentBreakpoint = getBreakpoint();
+
+        setBreakpoint(currentBreakpoint);
       };
 
       breakpointListener();
@@ -42,5 +57,5 @@ export default function useBreakpoints(): Breakpoint {
     return () => {};
   }, []);
 
-  return breakpoint;
+  return { breakpoint, isDesktop, isLaptop, isPhone, isTablet, isWide };
 }

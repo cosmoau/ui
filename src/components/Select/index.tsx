@@ -30,7 +30,7 @@ export default function Select({
 }: ISelect): JSX.Element {
   const { triggerRef, contentRef, isOpen, isMounted, handleClick, handleClose } = usePopper();
 
-  const breakpoint = useBreakpoints();
+  const { breakpoint } = useBreakpoints();
 
   const [search, setSearch] = useState("");
   const [focused, setFocused] = useState(selection ? selection[0] : "");
