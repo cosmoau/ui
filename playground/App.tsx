@@ -11,7 +11,8 @@ import * as C from "../src/index";
 
 import DateParser from "./dates";
 export function App(): ReactElement {
-  const breakpoint = C.useBreakpoints();
+  const {breakpoint, isPhone, isTablet, isLaptop, isDesktop, isWide} = C.useBreakpoints();
+  const isDark = C.useTheme().isDarkTheme;
 
   const [balance, setBalance] = useState<boolean>(false);
   const [tempInput, setTempInput] = useState<string>("");
@@ -48,11 +49,20 @@ export function App(): ReactElement {
   }
 
   return (
-    <C.Provider>
-      <h1>{breakpoint || "No breakpoint detected"}</h1>
-     
-      <C.View bottom="largest" container inverted={Math.random() > 0.5} top="largest">
+    <C.Provider dark={isDark}>
+      <C.View top="small" bottom="small" css={{
+        borderBottom: '0.1rem solid $border'
+      }}>
+        <C.Stack align="center">
+          <C.Text as="small">
+            breakpoint: {breakpoint} - {isPhone ? 'isPhone' : isTablet ? 'isTablet' : isLaptop ? 'isLaptop' : isDesktop ? 'isDesktop' : isWide ? 'isWide' : 'NOT KNOWN'}
+          </C.Text>
+        </C.Stack>
+      </C.View>
+
+      <C.View bottom="largest" container top="largest">
         <C.Stack bottom="largest">
+          <C.ProviderToggle />
           <C.Expander disabled={breakpoint === "phone"} height={200}>
             <C.Box theme="fill">
               <C.Text as="h1">Expander</C.Text>
@@ -219,7 +229,7 @@ export function App(): ReactElement {
         </C.Stack>
       </C.View>
 
-      <C.View bottom="largest" container gradient inverted top="largest">
+      <C.View bottom="largest" container gradient  top="largest">
         <C.Stack align="center">
           <C.Button inline="large" onClick={(): void => handleTextCycle()}>
             Cycle Text
@@ -272,7 +282,7 @@ export function App(): ReactElement {
         <C.Input loading placeholder="Filter" reset submit="Save" submitFunction={(value) => toast(value)} />
         <C.Field loading placeholder="Filter" reset submit="Save" submitFunction={(value) => toast(value)} />
       </C.View>
-      <C.View bottom="largest" container inverted top="largest">
+      <C.View bottom="largest" container  top="largest">
           <C.Stack align="center" bottom="large">
             <C.Badge inline="small" link theme="orange">
               Test orange button
@@ -350,7 +360,7 @@ export function App(): ReactElement {
           </C.Box>
         </C.Stack>
       </C.View>
-      <C.View bottom="largest" container inverted top="largest">
+      <C.View bottom="largest" container  top="largest">
         <C.Stack bottom="largest" direction="row">
           <C.Stack direction="column" offset={33.33} width={33.33}>
             <DateParser />
@@ -395,7 +405,7 @@ export function App(): ReactElement {
           </C.Stack>
         </C.Stack>
       </C.View>
-      <C.View bottom="largest" container inverted top="largest">
+      <C.View bottom="largest" container  top="largest">
         <C.Stack direction="row">
           <C.Stack direction="column">
             <C.Stack top="medium">
