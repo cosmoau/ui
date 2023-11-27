@@ -2,20 +2,13 @@ import { useEffect } from "react";
 import toast, { useToaster } from "react-hot-toast";
 
 import { Icons } from "../../icons";
-import { Badge, useEventListener } from "../../index";
+import { Badge, Button, Select, useEventListener, useMountSSR, useTheme } from "../../index";
 import { darkTheme } from "../../stitches.config";
-import { IProvider, IToast } from "../../types";
+import { IProvider, ISelect, IToast } from "../../types";
 
 import { ProviderStyled, ToastContainerStyled, ToastStyled, providerReset } from "./styles";
 
-// tag followed by 2 new lines and ";)"
-const tag = ` ██████╗ ██████╗ ███████╗███╗   ███╗ ██████╗ 
-██╔════╝██╔═══██╗██╔════╝████╗ ████║██╔═══██╗
-██║     ██║   ██║███████╗██╔████╔██║██║   ██║
-██║     ██║   ██║╚════██║██║╚██╔╝██║██║   ██║
-╚██████╗╚██████╔╝███████║██║ ╚═╝ ██║╚██████╔╝
- ╚═════╝ ╚═════╝ ╚══════╝╚═╝     ╚═╝ ╚═════╝ 
-  \n \n ;)`;
+const tag = `design + dev by @dolmios`;
 
 function ToastController(props: IToast): JSX.Element {
   const { toasts, handlers } = useToaster();
@@ -58,6 +51,44 @@ function ToastController(props: IToast): JSX.Element {
         );
       })}
     </ToastContainerStyled>
+  );
+}
+
+export function ProviderToggle(): JSX.Element {
+  const { theme, setTheme, isDarkTheme } = useTheme();
+  const mounted = useMountSSR();
+
+  const options = [
+    { icon: <Icons.Moon />, iconPosition: "right", label: "Dark", value: "dark" },
+    { icon: <Icons.Sun />, iconPosition: "right", label: "Light", value: "light" },
+    { icon: <Icons.Monitor />, iconPosition: "right", label: "System", value: "system" },
+  ] as ISelect["options"];
+
+  return (
+    <Select
+      options={options}
+      selection={[theme]}
+      trigger={
+        <Button
+          css={{
+            textTransform: "capitalize",
+          }}
+          icon={options.find((option) => option.value === theme)?.icon}
+          small>
+          {isDarkTheme ? "Dark" : "Light"}
+        </Button>
+      }
+      onSelection={(value): void => {
+        if (value === theme) {
+          return;
+        }
+        setTheme(value as "dark" | "light" | "system");
+
+        if (mounted) {
+          window.location.reload();
+        }
+      }}
+    />
   );
 }
 

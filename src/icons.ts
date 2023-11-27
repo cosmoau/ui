@@ -3,6 +3,7 @@ import {
   ArrowsOutSimple,
   ArrowsInSimple,
   ClipboardText,
+  Monitor,
   Check,
   Eye,
   EyeClosed,
@@ -19,7 +20,6 @@ import {
   Table,
   Moon,
   Database,
-  Gear,
   Sun,
 } from "@phosphor-icons/react";
 
@@ -35,10 +35,10 @@ export const Icons = {
   Database,
   Eye,
   EyeClosed,
-  Gear,
   IconContext,
   MagnifyingGlass,
   MagnifyingGlassMinus,
+  Monitor,
   Moon,
   SortAscending,
   SortDescending,

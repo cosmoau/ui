@@ -20,7 +20,7 @@ export { default as Logo, LogoIcon } from "./components/Logo";
 export { default as Menu } from "./components/Menu";
 export { default as Places } from "./components/Places";
 export { default as Popover } from "./components/Popover";
-export { default as Provider } from "./components/Provider";
+export { default as Provider, ProviderToggle } from "./components/Provider";
 export { default as Select } from "./components/Select";
 export { default as Stack } from "./components/Stack";
 export { default as Table } from "./components/Table";
