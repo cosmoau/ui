@@ -128,7 +128,7 @@ export const providerReset = globalCss({
       fontSize: "55.5%",
     },
     [breakpoints.phoneX]: {
-      fontSize: "58.5%",
+      fontSize: "57.5%",
     },
     [breakpoints.tabletX]: {
       fontSize: "61.5%",
