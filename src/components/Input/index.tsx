@@ -32,7 +32,7 @@ export default function Input({
   reset,
   resetFunction,
 }: IInput): JSX.Element {
-  const breakpoint = useBreakpoints();
+  const { isPhone } = useBreakpoints();
   const [inputValue, setInputValue] = useState((value as string) || "");
   const [isCopied, setIsCopied] = useState(false);
   const [isRevealed, setIsRevealed] = useState(false);
@@ -102,12 +102,12 @@ export default function Input({
             {copy && (
               <Button
                 disabled={isCopied || disabled}
-                icon={breakpoint !== "phone" ? <Icons.ClipboardText /> : undefined}
+                icon={!isPhone ? <Icons.ClipboardText /> : undefined}
                 small
                 onClick={(): void => {
                   handleCopy();
                 }}>
-                {breakpoint !== "phone" ? "Copy" : <Icons.ClipboardText />}
+                {!isPhone ? "Copy" : <Icons.ClipboardText />}
               </Button>
             )}
             {reveal && (
@@ -116,22 +116,12 @@ export default function Input({
                   marginLeft: "$smaller",
                 }}
                 disabled={disabled}
-                icon={breakpoint !== "phone" ? !isRevealed ? <Icons.Eye /> : <Icons.EyeClosed /> : undefined}
+                icon={!isPhone ? !isRevealed ? <Icons.Eye /> : <Icons.EyeClosed /> : undefined}
                 small
                 onClick={(): void => {
                   handleReveal();
                 }}>
-                {breakpoint !== "phone" ? (
-                  !isRevealed ? (
-                    "Reveal"
-                  ) : (
-                    "Hide"
-                  )
-                ) : !isRevealed ? (
-                  <Icons.Eye />
-                ) : (
-                  <Icons.EyeClosed />
-                )}
+                {!isPhone ? !isRevealed ? "Reveal" : "Hide" : !isRevealed ? <Icons.Eye /> : <Icons.EyeClosed />}
               </Button>
             )}
 
@@ -155,7 +145,7 @@ export default function Input({
                   marginLeft: "$smaller",
                 }}
                 disabled={!submitValid || !submitValid(inputValue) || isSubmitted || disabled}
-                icon={breakpoint !== "phone" ? <Icons.ArrowRight /> : undefined}
+                icon={!isPhone ? <Icons.ArrowRight /> : undefined}
                 iconPosition="right"
                 small
                 theme={submitValid && submitValid(inputValue) ? "solid" : "default"}
@@ -166,7 +156,7 @@ export default function Input({
                     setIsSubmitted(true);
                   }
                 }}>
-                {breakpoint !== "phone" ? submit : <Icons.ArrowRight />}
+                {!isPhone ? submit : <Icons.ArrowRight />}
               </Button>
             )}
           </InputFunctionStyled>
