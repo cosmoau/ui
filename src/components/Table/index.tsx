@@ -209,6 +209,7 @@ export default function Table({
       <TableCoreStyled
         collapse={collapse}
         header={header !== undefined}
+        pagination={pagination}
         slim={slim || (storage.limit > 10 && sortedBodyChildren && sortedBodyChildren.length > 10)}>
         <table {...rest}>
           {headChildren && (

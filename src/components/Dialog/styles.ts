@@ -79,7 +79,7 @@ export const DialogCoreStyled = styled("div", {
 
 export const DialogHeaderStyled = styled("div", {
   alignItems: "center",
-  backgroundColor: "$default",
+  backgroundColor: "$defaultTable",
   borderBottom: "0.1rem solid $borderTable",
   display: "flex",
   gap: "$small",
@@ -89,7 +89,10 @@ export const DialogHeaderStyled = styled("div", {
     whiteSpace: "pre-wrap",
   },
   justifyContent: "space-between",
-  padding: "$medium",
+  padding: "$medium calc($medium * 1.25)",
+  phone: {
+    padding: "$medium",
+  },
   position: "sticky",
   top: 0,
   variants: {
@@ -117,7 +120,7 @@ export const DialogHeaderStyled = styled("div", {
 });
 
 export const DialogContentStyled = styled("div", {
-  padding: "$large",
+  padding: "calc($medium * 1.25)",
   phone: {
     padding: "$medium",
   },

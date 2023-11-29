@@ -369,7 +369,7 @@ export function App(): ReactElement {
         <C.Stack direction="row">
 
           <C.Stack direction="column" width={33.33}>
-            <C.Box footer={<C.Button>Call to action</C.Button>} header={<h1>test</h1>} imageCTA="https://google.com" theme="warning">
+            <C.Box footer={<C.Button>Call to action</C.Button>} header={<h1>test</h1>}>
               <C.Text as="h5">Lorem A - First heading</C.Text>
               <C.Stack>
                 <h1>lorem ipsum</h1>

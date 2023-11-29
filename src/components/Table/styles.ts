@@ -95,6 +95,12 @@ export const TableCoreStyled = styled("div", {
         borderTopRightRadius: 0,
       },
     },
+    pagination: {
+      true: {
+        borderBottomLeftRadius: 0,
+        borderBottomRightRadius: 0,
+      },
+    },
     slim: {
       true: {
         td: {
@@ -109,7 +115,7 @@ export const TableHeaderStyled = styled("div", {
   "*": {
     verticalAlign: "middle",
   },
-  backgroundColor: "$default",
+  backgroundColor: "$defaultTable",
   border: "0.1rem solid $border",
   borderBottom: 0,
   borderRadius: "$small $small 0 0",
@@ -140,9 +146,13 @@ export const TableFiltersStyled = styled("div", {
 
 export const TablePaginationStyled = styled("div", {
   alignItems: "center",
+  backgroundColor: "$defaultTable",
+  border: "0.1rem solid $border",
+  borderRadius: "0 0 $small $small",
+  borderTop: 0,
   display: "flex",
   justifyContent: "space-between",
-  paddingTop: "$medium",
+  padding: "$small $medium",
   small: {
     opacity: 0.7,
   },

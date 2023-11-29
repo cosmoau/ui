@@ -86,7 +86,7 @@ export const BoxStyled = styled("article", {
 });
 
 export const BoxHeaderStyled = styled("div", {
-  backgroundColor: "$default",
+  backgroundColor: "$defaultTable",
   borderBottom: "0.1rem solid $borderTable",
   padding: "$small $medium",
 });
