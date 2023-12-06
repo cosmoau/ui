@@ -116,11 +116,6 @@ export const TextStyled = styled("div", {
         color: "$accent",
       },
     },
-    bold: {
-      true: {
-        fontWeight: "bold",
-      },
-    },
     highlight: {
       alternate: {
         ...highlight,
