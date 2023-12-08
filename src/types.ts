@@ -51,6 +51,8 @@ export interface IBox {
   children: ReactNode;
   closable?: boolean;
   css?: CSS;
+  expandable?: boolean;
+  expandableHeight?: number;
   footer?: ReactNode;
   header?: ReactNode;
   image?: string;
@@ -99,13 +101,6 @@ export interface IDivider {
   bottom?: IThemeSpacing;
   css?: CSS;
   top?: IThemeSpacing;
-}
-
-export interface IExpander {
-  children: ReactNode;
-  css?: CSS;
-  disabled?: boolean;
-  height: number;
 }
 
 export interface IField extends ComponentPropsWithRef<"textarea"> {
@@ -284,7 +279,7 @@ export interface ITable {
   filters?: ReactNode;
   headChildren?: Array<string>;
   header?: {
-    count?: string | number;
+    count?: number;
     options?: ReactNode;
     title: string;
   } | null;

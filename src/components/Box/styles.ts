@@ -29,6 +29,23 @@ export const BoxStyled = styled("article", {
         animationFillMode: "forwards",
       },
     },
+    collapsed: {
+      true: {
+        "&::after": {
+          background: "linear-gradient(to bottom, rgba(14,22,35,0) 0%,rgba(14,22,35,0.2) 100%)",
+          bottom: 0,
+          content: "",
+          darkModeSpec: {
+            background:
+              "linear-gradient(to bottom, rgba(14,22,35,0) 0%, rgba(14,22,35,0.5) 40%, rgba(14,22,35,0.8) 100%)",
+          },
+          height: "50%",
+          left: 0,
+          position: "absolute",
+          right: 0,
+        },
+      },
+    },
     footer: {
       true: {
         display: "flex",
@@ -115,4 +132,23 @@ export const BoxExitStyled = styled("div", {
   transition: "$default",
 });
 
-export default BoxStyled;
+export const BoxExpanderTrigger = styled("div", {
+  bottom: "$small",
+  display: "flex",
+  justifyContent: "center",
+  left: 0,
+  position: "absolute",
+  right: 0,
+  variants: {
+    expanded: {
+      true: {
+        bottom: "auto",
+        justifyContent: "flex-start",
+        paddingTop: "$medium",
+        position: "relative",
+      },
+    },
+  },
+
+  zIndex: 1,
+});

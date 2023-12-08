@@ -4,7 +4,15 @@ import { Icons } from "../../icons";
 import { Button, Image } from "../../index";
 import { IBox } from "../../types";
 
-import { BoxExitStyled, BoxFlexStyled, BoxFooterStyled, BoxHeaderStyled, BoxInnerStyled, BoxStyled } from "./styles";
+import {
+  BoxExitStyled,
+  BoxExpanderTrigger,
+  BoxFlexStyled,
+  BoxFooterStyled,
+  BoxHeaderStyled,
+  BoxInnerStyled,
+  BoxStyled,
+} from "./styles";
 
 export default function Box({
   image,
@@ -23,9 +31,12 @@ export default function Box({
   footer,
   minimal,
   closable,
+  expandable,
+  expandableHeight,
 }: IBox): JSX.Element | null {
   const [isOpen, setIsOpen] = useState(true);
   const [isMounted, setIsMounted] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   function handleClose(): void {
     setIsOpen(false);
@@ -41,7 +52,11 @@ export default function Box({
   return (
     <BoxStyled
       animation={!isOpen}
-      css={css}
+      collapsed={expandable && !isExpanded}
+      css={{
+        ...(expandable && expandableHeight && !isExpanded && { maxHeight: expandableHeight }),
+        ...css,
+      }}
       footer={footer ? true : false}
       hover={imageCTA ? true : false}
       loading={loading || false}
@@ -85,14 +100,25 @@ export default function Box({
             />
           ))}
         {header && useHeaderOrFooter && <BoxHeaderStyled>{header}</BoxHeaderStyled>}
+
         {image || header || footer ? (
           <BoxInnerStyled padding={minimal ? "none" : "default"}>{children}</BoxInnerStyled>
         ) : (
           children
         )}
       </BoxFlexStyled>
-      {footer && useHeaderOrFooter && <BoxFooterStyled>{footer}</BoxFooterStyled>}
 
+      {footer && useHeaderOrFooter && <BoxFooterStyled>{footer}</BoxFooterStyled>}
+      {expandable && (
+        <BoxExpanderTrigger expanded={isExpanded}>
+          <Button
+            icon={!isExpanded ? <Icons.ArrowsOutSimple /> : undefined}
+            theme={isExpanded ? "default" : "solid"}
+            onClick={() => setIsExpanded(!isExpanded)}>
+            {isExpanded ? <Icons.ArrowsInSimple /> : "Expand"}
+          </Button>
+        </BoxExpanderTrigger>
+      )}
       {closable && (
         <BoxExitStyled onClick={(): void => handleClose()}>
           <Button small theme={"minimal"}>
