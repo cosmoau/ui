@@ -214,13 +214,13 @@ export default function Table({
     };
   }, [pagination, kbd, handlePageChange, resetPagination, endPagination]);
 
-  const getWidth = (width: number | string): string => {
+  const getWidth = (width: number | string): string | undefined => {
     if (typeof width === "number") {
       return `${width}%`;
-    } else if (typeof width === "string" && (width.includes("rem") || width.includes("px"))) {
+    } else if (typeof width === "string" && (width.includes("rem") || width.includes("px") || width.includes("%"))) {
       return width;
     } else {
-      return "auto";
+      return undefined;
     }
   };
 
@@ -353,11 +353,12 @@ export default function Table({
                     <td
                       key={index}
                       style={{
-                        ...(!collapse && {
-                          maxWidth: getWidth(cell?.width || columnWidths[index]),
-                          minWidth: getWidth(cell?.width || columnWidths[index]),
-                          width: getWidth(cell?.width || columnWidths[index]),
-                        }),
+                        ...(!collapse &&
+                          getWidth(cell?.width || columnWidths[index]) && {
+                            maxWidth: getWidth(cell?.width || columnWidths[index]),
+                            minWidth: getWidth(cell?.width || columnWidths[index]),
+                            width: getWidth(cell?.width || columnWidths[index]),
+                          }),
                       }}>
                       {collapse && index >= 1 && (
                         <Stack bottom="smaller">
