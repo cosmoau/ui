@@ -59,9 +59,11 @@ export default function Badge({
       small={small}
       theme={theme || "default"}
       onClick={copy ? (): void => handleCopy() : onClick}>
-      {icon && iconPosition !== "right" && !copy && <BadgeIconStyled align="left">{icon}</BadgeIconStyled>}
+      {icon && iconPosition !== "right" && !copy && (
+        <BadgeIconStyled align={small ? "smallLeft" : "left"}>{icon}</BadgeIconStyled>
+      )}
       {copy && (
-        <BadgeIconStyled align="left">
+        <BadgeIconStyled align={small ? "smallLeft" : "left"}>
           <Icons.ClipboardText style={{ cursor: "pointer" }} />
         </BadgeIconStyled>
       )}
@@ -74,11 +76,11 @@ export default function Badge({
         children || ""
       )}
       {icon && iconPosition === "right" && !closable && !copy && (
-        <BadgeIconStyled align="right">{icon}</BadgeIconStyled>
+        <BadgeIconStyled align={small ? "smallRight" : "right"}>{icon}</BadgeIconStyled>
       )}
 
       {closable && (
-        <BadgeIconStyled align="right" onClick={(): void => handleClose()}>
+        <BadgeIconStyled align={small ? "smallRight" : "right"} onClick={(): void => handleClose()}>
           <Icons.X style={{ cursor: "pointer" }} />
         </BadgeIconStyled>
       )}

@@ -101,6 +101,12 @@ export const BadgeIconStyled = styled("span", {
       right: {
         marginLeft: "$small",
       },
+      smallLeft: {
+        marginRight: "$smaller",
+      },
+      smallRight: {
+        marginLeft: "$smaller",
+      },
     },
   },
   verticalAlign: "middle",
