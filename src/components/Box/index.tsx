@@ -112,10 +112,11 @@ export default function Box({
       {expandable && (
         <BoxExpanderTrigger expanded={isExpanded}>
           <Button
-            icon={!isExpanded ? <Icons.ArrowsOutSimple /> : undefined}
+            icon={isExpanded ? <Icons.ArrowsInSimple /> : <Icons.ArrowsOutSimple />}
+            small={isExpanded}
             theme={isExpanded ? "default" : "solid"}
             onClick={() => setIsExpanded(!isExpanded)}>
-            {isExpanded ? <Icons.ArrowsInSimple /> : "Expand"}
+            {isExpanded ? "Collapse" : "Expand"}
           </Button>
         </BoxExpanderTrigger>
       )}

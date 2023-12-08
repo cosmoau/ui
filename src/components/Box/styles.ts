@@ -144,6 +144,7 @@ export const BoxExpanderTrigger = styled("div", {
       true: {
         bottom: "auto",
         justifyContent: "flex-start",
+        paddingBottom: "$smallest",
         paddingTop: "$medium",
         position: "relative",
       },
