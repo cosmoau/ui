@@ -131,6 +131,36 @@ export const TableHeaderCoreStyled = styled("div", {
     marginBottom: 0,
   },
   justifyContent: "space-between",
+  phone: {
+    flexDirection: "column",
+  },
+  width: "100%",
+});
+
+export const TableHeaderTitleStyled = styled("div", {
+  alignItems: "center",
+  display: "flex",
+  gap: "$small",
+  justifyContent: "flex-start",
+  phone: {
+    alignItems: "flex-start",
+    justifyContent: "space-between",
+  },
+  width: "100%",
+});
+
+export const TableHeaderOptionsStyled = styled("div", {
+  alignItems: "flex-end",
+  display: "flex",
+  gap: "$small",
+  justifyContent: "flex-end",
+
+  phone: {
+    flex: "1 1 0%",
+    justifyContent: "space-between",
+    marginTop: "$smaller",
+  },
+
   width: "100%",
 });
 

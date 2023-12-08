@@ -1,5 +1,5 @@
 import { sort } from "fast-sort";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import { Icons } from "../../icons";
 import {
@@ -20,7 +20,9 @@ import {
   TableCoreStyled,
   TableFiltersStyled,
   TableHeaderCoreStyled,
+  TableHeaderOptionsStyled,
   TableHeaderStyled,
+  TableHeaderTitleStyled,
   TablePaginationStyled,
   TableStyled,
 } from "./styles";
@@ -50,11 +52,14 @@ export default function Table({
   identifier,
   ...rest
 }: ITable): JSX.Element {
+  const ref = useRef(true);
   const initialKey = `${identifier || "unknown"}-table`;
   const initialLimit = restrictLimit || defaultLimit || (pagination ? pageSizes[0] : maxSize);
   const { breakpoint } = useBreakpoints();
+
   const [sortColumn, sortSortColumn] = useState(defaultSort || 0);
   const [sortDirection, setSortDirection] = useState(defaultDirection || "asc");
+  const [columnWidths, setColumnWidths] = useState<number[]>([]);
   const [storage, setStorage] = useLocalStorage(initialKey, {
     filtering: false,
     limit: initialLimit,
@@ -108,6 +113,11 @@ export default function Table({
   }
 
   function handlePageChange(direction: "next" | "prev"): void {
+    const totalPages = Math.ceil(sortedBodyChildren ? sortedBodyChildren.length / storage.limit : 0);
+
+    if ((direction === "prev" && storage.page === 1) || (direction === "next" && storage.page === totalPages)) {
+      return;
+    }
     const offset = direction === "next" ? storage.offset + storage.limit : storage.offset - storage.limit;
     const page = direction === "next" ? storage.page + 1 : storage.page - 1;
 
@@ -118,7 +128,6 @@ export default function Table({
       page: page,
     });
   }
-
   function resetPagination(): void {
     setStorage({
       ...storage,
@@ -147,6 +156,36 @@ export default function Table({
       resetPagination();
     }
   }, [storage.offset, sortedBodyChildren, storage.limit, setStorage]);
+
+  useLayoutEffect(() => {
+    if (ref.current && sortedBodyChildren && sortedBodyChildren.length) {
+      const firstRow = document.querySelector("tbody tr");
+
+      if (firstRow) {
+        const widths: number[] = [];
+        let totalWidth = 0;
+
+        firstRow.querySelectorAll("td").forEach((cell) => {
+          if (cell instanceof HTMLElement) {
+            const cellWidth = (cell.clientWidth / firstRow.clientWidth) * 100;
+
+            widths.push(cellWidth);
+            totalWidth += cellWidth;
+          }
+        });
+
+        const normalizedWidths = widths.map((width) => (width / totalWidth) * 100);
+
+        setColumnWidths(normalizedWidths);
+      }
+
+      ref.current = false;
+    }
+  }, [sortedBodyChildren]);
+
+  useEffect(() => {
+    resetPagination();
+  }, [bodyChildren]);
 
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent): void {
@@ -179,28 +218,49 @@ export default function Table({
       {header && (
         <TableHeaderStyled>
           <TableHeaderCoreStyled>
-            <Stack>
+            <TableHeaderTitleStyled>
               <Text as="h4" bottom="none" inline={header.count ? "small" : undefined}>
                 {header.title}
               </Text>
               {header.count && (
-                <Badge css={{ hiddenInline: "phone" }} small theme="blue">
-                  {header.count}
-                </Badge>
+                <Text accent as="small">
+                  {header.count > 10000
+                    ? "10,000+"
+                    : header.count > 5000
+                      ? "5,000+"
+                      : header.count > 1000
+                        ? "1,000+"
+                        : header.count}
+                  &nbsp;{header.count === 1 ? "row" : "rows"}
+                </Text>
               )}
-            </Stack>
-            <Stack>
+            </TableHeaderTitleStyled>
+            <TableHeaderOptionsStyled>
+              {header.options && <Stack>{header.options}</Stack>}
               {filters && (
                 <Button
-                  icon={breakpoint !== "phone" ? <Icons.MagnifyingGlass /> : undefined}
-                  inline="small"
-                  small
+                  icon={
+                    breakpoint !== "phone" ? (
+                      storage.filtering ? (
+                        <Icons.ArrowsInSimple />
+                      ) : (
+                        <Icons.MagnifyingGlass />
+                      )
+                    ) : undefined
+                  }
                   onClick={(): void => setStorage({ ...storage, filtering: !storage.filtering })}>
-                  {breakpoint === "phone" ? <Icons.MagnifyingGlass /> : storage.filtering ? "Close" : "Filter"}
+                  {breakpoint === "phone" ? (
+                    storage.filtering ? (
+                      <Icons.ArrowsInSimple />
+                    ) : (
+                      <Icons.MagnifyingGlass />
+                    )
+                  ) : (
+                    "Search"
+                  )}
                 </Button>
               )}
-              {header.options && header.options}
-            </Stack>
+            </TableHeaderOptionsStyled>
           </TableHeaderCoreStyled>
           {filters && storage?.filtering && <TableFiltersStyled>{filters}</TableFiltersStyled>}
         </TableHeaderStyled>
@@ -282,12 +342,17 @@ export default function Table({
                     <td
                       key={index}
                       style={{
-                        ...(cell.width &&
-                          !collapse && {
-                            maxWidth: cell.width,
-                            minWidth: cell.width,
-                            width: cell.width,
-                          }),
+                        ...(cell.width && !collapse && !columnWidths.length
+                          ? {
+                              maxWidth: cell.width,
+                              minWidth: cell.width,
+                              width: cell.width,
+                            }
+                          : {
+                              maxWidth: columnWidths[index] || "auto",
+                              minWidth: columnWidths[index] || "auto",
+                              width: columnWidths[index] || "auto",
+                            }),
                       }}>
                       {collapse && index >= 1 && (
                         <Stack bottom="smaller">
