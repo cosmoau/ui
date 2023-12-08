@@ -3,7 +3,7 @@
 /* eslint-disable no-alert */
 /* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-import { SmileyMeh } from "@phosphor-icons/react";
+import { RadioButton, SmileyMeh } from "@phosphor-icons/react";
 import React, { ReactElement, useState } from "react";
 import { toast } from "react-hot-toast";
 
@@ -13,6 +13,9 @@ import DateParser from "./dates";
 export function App(): ReactElement {
   const {breakpoint, isPhone, isTablet, isLaptop, isDesktop, isWide} = C.useBreakpoints();
   const isDark = C.useTheme().isDarkTheme;
+
+  // random between 100px and 1200px
+  const randomHeight = `${Math.floor(Math.random() * 1100) + 100}px`;
 
   const [balance, setBalance] = useState<boolean>(false);
   const [tempInput, setTempInput] = useState<string>("");
@@ -50,9 +53,9 @@ export function App(): ReactElement {
 
   return (
     <C.Provider dark={isDark}>
-      <C.View top="small" bottom="small" css={{
+      <C.View bottom="small" css={{
         borderBottom: '0.1rem solid $border'
-      }}>
+      }} top="small">
         <C.Stack align="center">
           <C.Text as="small">
             breakpoint: {breakpoint} - {isPhone ? 'isPhone' : isTablet ? 'isTablet' : isLaptop ? 'isLaptop' : isDesktop ? 'isDesktop' : isWide ? 'isWide' : 'NOT KNOWN'}
@@ -63,9 +66,9 @@ export function App(): ReactElement {
       <C.View bottom="largest" container top="largest">
         <C.Stack bottom="largest">
           <C.ProviderToggle />
-          <C.Expander disabled={breakpoint === "phone"} height={200}>
-            <C.Box theme="fill">
-              <C.Text as="h1">Expander</C.Text>
+          <C.Box expandable expandableHeight={200}>
+              <C.Text as="h1">
+              Expander</C.Text>
               <C.Text>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
                 nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
@@ -117,7 +120,6 @@ export function App(): ReactElement {
               </C.Text>
 
             </C.Box>
-            </C.Expander>
         </C.Stack>
         <C.Stack align="center">
           <C.Popover trigger={<C.Button>Popover (default, large)</C.Button>}>
@@ -136,7 +138,18 @@ export function App(): ReactElement {
             Toast
           </C.Button>
           <C.Dialog title="Dialog" trigger={<C.Button>Dialog</C.Button>}>
-            Dialog
+            <C.Stack css={{
+              alignItems: 'center',
+              backgroundColor: '$text',
+              color: '$background',
+              display: 'flex',
+              height: randomHeight,
+              justifyContent: 'center',
+            }}>
+              <C.Text as="h3">
+                {randomHeight}
+              </C.Text>
+            </C.Stack>
           </C.Dialog>
           <C.Select
             filter
@@ -229,7 +242,7 @@ export function App(): ReactElement {
         </C.Stack>
       </C.View>
 
-      <C.View bottom="largest" container gradient  top="largest">
+      <C.View bottom="largest" container gradient top="largest">
         <C.Stack align="center">
           <C.Button inline="large" onClick={(): void => handleTextCycle()}>
             Cycle Text
@@ -282,7 +295,7 @@ export function App(): ReactElement {
         <C.Input loading placeholder="Filter" reset submit="Save" submitFunction={(value) => toast(value)} />
         <C.Field loading placeholder="Filter" reset submit="Save" submitFunction={(value) => toast(value)} />
       </C.View>
-      <C.View bottom="largest" container  top="largest">
+      <C.View bottom="largest" container top="largest">
           <C.Stack align="center" bottom="large">
             <C.Badge inline="small" link theme="orange">
               Test orange button
@@ -360,7 +373,7 @@ export function App(): ReactElement {
           </C.Box>
         </C.Stack>
       </C.View>
-      <C.View bottom="largest" container  top="largest">
+      <C.View bottom="largest" container top="largest">
         <C.Stack bottom="largest" direction="row">
           <C.Stack direction="column" offset={33.33} width={33.33}>
             <DateParser />
@@ -405,7 +418,7 @@ export function App(): ReactElement {
           </C.Stack>
         </C.Stack>
       </C.View>
-      <C.View bottom="largest" container  top="largest">
+      <C.View bottom="largest" container top="largest">
         <C.Stack direction="row">
           <C.Stack direction="column">
             <C.Stack top="medium">
@@ -434,9 +447,9 @@ export function App(): ReactElement {
                 </C.Text>
                 <C.Stack top="small">
                   <C.Dialog
-  small
-                    title="
-                  A picture of a car, but not any old car, an El Camino."
+                  lightbox
+
+                    title="El Camino"
                     trigger={<C.Button>Open Dialog</C.Button>}>
                     <img
                       src="https://cdn05.carsforsale.com/0088abd885617999338fcdf67f942ebc65/800x600/1983-chevrolet-el-camino-base-2dr-standard-cab.jpg"
@@ -464,51 +477,42 @@ export function App(): ReactElement {
             </C.Stack>
             <C.Stack top="largest">
               <C.Table
-              bodyChildren={Array.from(Array(1000).keys()).map((i) => [
+              bodyChildren={// create 25 of these
+                Array.from(Array(25).keys()).map((i) => [
                   {
-                    label: `Column 1 - ${i * 1}`,
-                    value: i * 1,
+                    label: 'a',
+                    value: 'a'
                   },
-                  {
-                    label: `Column 2 - ${i * 2}`,
-                    value: i * 2,
-                  },
-                  {
-                    label: `Column 3 - ${i * 3}`,
-                    value: i * 3,
-                  },
-                  {
-                    label: `Column 4 - ${i * 4}`,
-                    value: i * 4,
-                  },
-                  {
-                    label: `Column 5 - ${i * 5}`,
-                    value: i * 5,
-                  },
-                ])}
-                collapse
+                {
+                  label: 'b',
+                  value: 'b',
+                  width: Math.floor(Math.random() * 1000) + 100,
+
+                },
+                {
+                  label: 'c',
+                  value: 'c',
+                  width: Math.floor(Math.random() * 1000) + 100,
+                },
+
+                ])
+              }
               
                 filters={<C.Input placeholder="Filter" />}
                 headChildren={[
                   "Column A",
                   "Column B",
                   "Column C",
-                  "Column D",
-                  "Column E",
-                  "Column F",
-                  "Column G",
-                  "Column H",
-                  "Column I",
-                  "Column J",
-                  "Column K",
-                  "Column L",
-                  "Column M",
-                  "Column N",
-                  "Column O",
                 ]}
                 header={{
-                  count: "1000",
-                  options: <C.Button>Options</C.Button>,
+                  count: 10004,
+                  options: (
+                    <>
+                      <C.Button inline="small"><RadioButton /></C.Button>
+                      <C.Button inline="small"><RadioButton /></C.Button>
+                      <C.Button><RadioButton /></C.Button>
+                    </>
+                  ),
                   title: "Table",
                 }}
                 identifier="table"
