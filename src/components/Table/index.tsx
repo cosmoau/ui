@@ -159,30 +159,28 @@ export default function Table({
   }, [storage.offset, sortedBodyChildren, storage.limit, setStorage]);
 
   useEffect(() => {
-    if (ref.current && sortedBodyChildren && sortedBodyChildren.length) {
-      const firstRow = document.querySelector("tbody tr");
+    if (ref.current) {
+      ref.current = false;
+
+      return;
+    }
+
+    if (columnWidths.length === 0) {
+      const firstRow = document.querySelector("tbody tr") as HTMLElement;
 
       if (firstRow) {
         const widths: number[] = [];
-        let totalWidth = 0;
 
         firstRow.querySelectorAll("td").forEach((cell) => {
           if (cell instanceof HTMLElement) {
-            const cellWidth = cell.clientWidth;
+            const cellWidth = Math.round((cell.offsetWidth / firstRow.offsetWidth) * 100);
 
-            if (cell.style.width) {
-              widths.push(cellWidth);
-              totalWidth += cellWidth;
-            }
+            widths.push(cellWidth);
           }
         });
 
-        const normalizedWidths = widths.map((width) => (width / totalWidth) * 100);
-
-        setColumnWidths(normalizedWidths);
+        setColumnWidths(widths);
       }
-
-      ref.current = false;
     }
   }, [sortedBodyChildren]);
 
@@ -215,16 +213,6 @@ export default function Table({
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, [pagination, kbd, handlePageChange, resetPagination, endPagination]);
-
-  const getWidth = (width: number | string): string | undefined => {
-    if (typeof width === "number") {
-      return `${width}%`;
-    } else if (typeof width === "string" && (width.includes("rem") || width.includes("px") || width.includes("%"))) {
-      return width;
-    } else {
-      return undefined;
-    }
-  };
 
   return (
     <TableStyled css={css} id={identifier}>
@@ -355,12 +343,15 @@ export default function Table({
                     <td
                       key={index}
                       style={{
-                        ...(!collapse &&
-                          getWidth(cell?.width || columnWidths[index]) && {
-                            maxWidth: getWidth(cell?.width || columnWidths[index]),
-                            minWidth: getWidth(cell?.width || columnWidths[index]),
-                            width: getWidth(cell?.width || columnWidths[index]),
-                          }),
+                        ...(!collapse && columnWidths.length > 0
+                          ? {
+                              maxWidth: `${columnWidths[index]}%`,
+                              minWidth: `${columnWidths[index]}%`,
+                              width: `${columnWidths[index]}%`,
+                            }
+                          : {
+                              width: cell?.width || "auto",
+                            }),
                       }}>
                       {collapse && index >= 1 && (
                         <Stack bottom="smaller">

@@ -477,24 +477,26 @@ export function App(): ReactElement {
             </C.Stack>
             <C.Stack top="largest">
               <C.Table
-              bodyChildren={// create 25 of these
-                Array.from(Array(25).keys()).map((i) => [
+              bodyChildren={
+                Array.from(Array(30).keys()).map((i) => [
                   {
-                    label: 'a',
-                    value: 'a'
+                    label: i <= 10 ? '25%' : '50%',
+                    value: 'a',
                   },
                 {
-                  label: 'b',
+                  label: i === 10 ? '50%' : 'AUTO',
                   value: 'b',
-                  width: Math.floor(Math.random() * 1000) + 100,
-
                 },
                 {
-                  label: 'c',
+                  label: i <= 10 ? '10%' : '30%',
                   value: 'c',
-                  width: Math.floor(Math.random() * 1000) + 100,
-                },
 
+                },
+                  {
+                    label: i <= 10 ? '10%' : '30%',
+                    value: 'c',
+
+                  },
                 ])
               }
               collapse={isPhone}
@@ -504,6 +506,7 @@ export function App(): ReactElement {
                   "Column A",
                   "Column B",
                   "Column C",
+                  "Column D",
                 ]}
                 header={{
                   count: 10004,
