@@ -1,6 +1,6 @@
 // todo, rewrite this to not be such a jumbled mess... i'll get there
 import { sort } from "fast-sort";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { Icons } from "../../icons";
 import {
@@ -158,7 +158,7 @@ export default function Table({
     }
   }, [storage.offset, sortedBodyChildren, storage.limit, setStorage]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (ref.current && sortedBodyChildren && sortedBodyChildren.length) {
       const firstRow = document.querySelector("tbody tr");
 
@@ -168,10 +168,12 @@ export default function Table({
 
         firstRow.querySelectorAll("td").forEach((cell) => {
           if (cell instanceof HTMLElement) {
-            const cellWidth = (cell.clientWidth / firstRow.clientWidth) * 100;
+            const cellWidth = cell.clientWidth;
 
-            widths.push(cellWidth);
-            totalWidth += cellWidth;
+            if (cell.style.width) {
+              widths.push(cellWidth);
+              totalWidth += cellWidth;
+            }
           }
         });
 
