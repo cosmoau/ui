@@ -9,7 +9,6 @@ export { default as Button } from "./components/Button";
 export { default as Code } from "./components/Code";
 export { default as Dialog } from "./components/Dialog";
 export { default as Divider } from "./components/Divider";
-export { default as Expander } from "./components/Expander";
 export { default as Field } from "./components/Field";
 export { default as Form } from "./components/Form";
 export { default as Icon } from "./components/Icon";
