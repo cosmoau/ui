@@ -47,10 +47,15 @@ export const DialogCoreStyled = styled("div", {
   backgroundColor: "$background",
   borderRadius: "$small",
   boxShadow: "$large",
+  height: "auto",
+  left: "50%",
+  minHeight: "30vh",
   overflowX: "hidden",
   overflowY: "auto",
   position: "relative",
   textAlign: "left",
+  top: "50%",
+  transform: "translate(-50%, -50%)",
   transition: "$default",
 
   variants: {
@@ -64,14 +69,12 @@ export const DialogCoreStyled = styled("div", {
         animationFillMode: "forwards",
       },
     },
-    lightbox: {
+    small: {
+      false: {
+        maxHeight: "85vh",
+      },
       true: {
-        height: "80%",
-        left: "2.5%",
-        maxHeight: "95%",
-        minHeight: "10%",
-        top: "10%",
-        width: "95%",
+        maxHeight: "75vh",
       },
     },
   },

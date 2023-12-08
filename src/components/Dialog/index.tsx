@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 
 import { Icons } from "../../icons";
 import { Button, Text, useEventListener, useOutsideClick, useScrollLock, useWindowDimensions } from "../../index";
@@ -13,22 +13,21 @@ import {
   DialogTriggerStyled,
 } from "./styles";
 
-export default function Dialog({
-  css,
-  trigger,
-  children,
-  title,
-  disabled,
-  small,
-  lightbox,
-  forceHeight,
-}: IDialog): JSX.Element {
-  const ref = useRef<HTMLDivElement>(null);
-
+export default function Dialog({ css, trigger, children, title, disabled, small, lightbox }: IDialog): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const ref = useRef<HTMLDivElement | null>(null);
+  const { width: windowWidth } = useWindowDimensions();
 
-  const { width: innerWidth, height: innerHeight } = useWindowDimensions();
+  const width = useMemo(() => {
+    if (windowWidth < 900) {
+      return "90%";
+    } else if (windowWidth < 1800) {
+      return small ? "50%" : "70%";
+    } else {
+      return small ? "40%" : "50%";
+    }
+  }, [windowWidth, small]);
 
   function handleClose(): void {
     setIsOpen(false);
@@ -51,8 +50,6 @@ export default function Dialog({
     }
   }
 
-  useOutsideClick(ref, () => handleClose());
-
   useEventListener("keydown", (event: KeyboardEvent) => {
     if (event.key === "Escape") {
       event.preventDefault();
@@ -62,73 +59,11 @@ export default function Dialog({
 
   useScrollLock(isMounted);
 
-  const content = ref?.current?.clientHeight || 0;
-
-  const sizing = forceHeight
-    ? {
-        height: `${forceHeight}%`,
-        left: small
-          ? innerWidth < 900
-            ? "5%"
-            : innerWidth < 1800
-              ? "25%"
-              : "30%"
-          : innerWidth < 900
-            ? "5%"
-            : innerWidth < 1800
-              ? "15%"
-              : "25%",
-        top: content && innerHeight > 0 ? (innerHeight - content) / 2 : "10rem",
-        width: small
-          ? innerWidth < 900
-            ? "90%"
-            : innerWidth < 1800
-              ? "50%"
-              : "40%"
-          : innerWidth < 900
-            ? "90%"
-            : innerWidth < 1800
-              ? "70%"
-              : "50%",
-      }
-    : {
-        height: "auto",
-        left: small
-          ? innerWidth < 900
-            ? "5%"
-            : innerWidth < 1800
-              ? "25%"
-              : "30%"
-          : innerWidth < 900
-            ? "5%"
-            : innerWidth < 1800
-              ? "15%"
-              : "25%",
-        maxHeight: small
-          ? innerWidth < 900
-            ? "70%"
-            : innerWidth < 1800
-              ? "65%"
-              : "50%"
-          : innerWidth < 900
-            ? "80%"
-            : innerWidth < 1800
-              ? "75%"
-              : "60%",
-        minHeight: "10%",
-        top: content && innerHeight > 0 ? (innerHeight - content) / 2 : "10rem",
-        width: small
-          ? innerWidth < 900
-            ? "90%"
-            : innerWidth < 1800
-              ? "50%"
-              : "40%"
-          : innerWidth < 900
-            ? "90%"
-            : innerWidth < 1800
-              ? "70%"
-              : "50%",
-      };
+  useOutsideClick(ref, () => {
+    if (isOpen) {
+      handleClose();
+    }
+  });
 
   return (
     <DialogStyled>
@@ -153,17 +88,9 @@ export default function Dialog({
             ref={ref}
             animation={isOpen}
             css={{
-              ...(!lightbox && {
-                height: sizing.height,
-                left: sizing.left,
-                maxHeight: sizing.maxHeight,
-                minHeight: sizing.minHeight,
-                top: sizing.top,
-                width: sizing.width,
-              }),
+              width,
               ...css,
-            }}
-            lightbox={lightbox}>
+            }}>
             <DialogHeaderStyled lightbox={lightbox}>
               <Text accent={lightbox} as={lightbox ? "small" : "h4"} inline={lightbox ? "smaller" : undefined}>
                 {title}
