@@ -497,6 +497,7 @@ export function App(): ReactElement {
 
                 ])
               }
+              collapse={isPhone}
               
                 filters={<C.Input placeholder="Filter" />}
                 headChildren={[

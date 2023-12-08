@@ -1,3 +1,4 @@
+// todo, rewrite this to not be such a jumbled mess... i'll get there
 import { sort } from "fast-sort";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
@@ -213,6 +214,16 @@ export default function Table({
     };
   }, [pagination, kbd, handlePageChange, resetPagination, endPagination]);
 
+  const getWidth = (width: number | string): string => {
+    if (typeof width === "number") {
+      return `${width}%`;
+    } else if (typeof width === "string" && (width.includes("rem") || width.includes("px"))) {
+      return width;
+    } else {
+      return "auto";
+    }
+  };
+
   return (
     <TableStyled css={css} id={identifier}>
       {header && (
@@ -342,17 +353,11 @@ export default function Table({
                     <td
                       key={index}
                       style={{
-                        ...(cell.width && !collapse && !columnWidths.length
-                          ? {
-                              maxWidth: cell.width,
-                              minWidth: cell.width,
-                              width: cell.width,
-                            }
-                          : {
-                              maxWidth: columnWidths[index] || "auto",
-                              minWidth: columnWidths[index] || "auto",
-                              width: columnWidths[index] || "auto",
-                            }),
+                        ...(!collapse && {
+                          maxWidth: getWidth(cell?.width || columnWidths[index]),
+                          minWidth: getWidth(cell?.width || columnWidths[index]),
+                          width: getWidth(cell?.width || columnWidths[index]),
+                        }),
                       }}>
                       {collapse && index >= 1 && (
                         <Stack bottom="smaller">
