@@ -1,6 +1,4 @@
-// todo, rewrite this to not be such a jumbled mess... i'll get there
-import { sort } from "fast-sort";
-import { useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
 
 import { Icons } from "../../icons";
 import {
@@ -18,6 +16,17 @@ import {
 import { ITable } from "../../types";
 
 import {
+  IStorage,
+  MAX_PAGES,
+  TABLE_PAGES,
+  checkTableIdentifier,
+  prepareTable,
+  useTableColumns,
+  useTableKeyboard,
+  useTablePagination,
+  useTableSort,
+} from "./hooks";
+import {
   TableCoreStyled,
   TableFiltersStyled,
   TableHeaderCoreStyled,
@@ -28,14 +37,11 @@ import {
   TableStyled,
 } from "./styles";
 
-const pageSizes = [10, 25, 50, 100];
-const maxSize = 500;
-
-export default function Table({
+export default function NewTable({
   header,
   filters,
-  headChildren,
-  bodyChildren,
+  rows,
+  columns,
   css,
   collapse,
   collapseDisabled,
@@ -53,166 +59,41 @@ export default function Table({
   identifier,
   ...rest
 }: ITable): JSX.Element {
-  const ref = useRef(true);
-  const initialKey = `${identifier || "unknown"}-table`;
-  const initialLimit = restrictLimit || defaultLimit || (pagination ? pageSizes[0] : maxSize);
   const { breakpoint } = useBreakpoints();
 
-  const [sortColumn, sortSortColumn] = useState(defaultSort || 0);
-  const [sortDirection, setSortDirection] = useState(defaultDirection || "asc");
-  const [columnWidths, setColumnWidths] = useState<number[]>([]);
-  const [storage, setStorage] = useLocalStorage(initialKey, {
+  const initialKey = `${identifier}-table`;
+  const initialLimit = restrictLimit || defaultLimit || (pagination ? TABLE_PAGES[0] : MAX_PAGES);
+
+  const [storage, setStorage] = useLocalStorage<IStorage>(initialKey, {
     filtering: false,
     limit: initialLimit,
     offset: 0,
     page: 1,
   });
 
-  const parsedBodyChildren =
-    bodyChildren && collapse && collapseDisabled && collapseDisabled.length > 0
-      ? bodyChildren.map((row) => {
-          const newRow = row.filter((_column, index) => !collapseDisabled.includes(index));
+  const columnWidths = useTableColumns(identifier, columns);
 
-          return newRow;
-        })
-      : bodyChildren;
+  const { endPagination, scrollToTop, handlePageChange, handlePageSelection, resetPagination } = useTablePagination(
+    columns,
+    storage,
+    setStorage,
+  );
 
-  const sortedBodyChildren =
-    parsedBodyChildren && sortable
-      ? sortDirection === "asc"
-        ? sort(parsedBodyChildren).asc((row) => row[sortColumn].value)
-        : sort(parsedBodyChildren).desc((row) => row[sortColumn].value)
-      : parsedBodyChildren;
+  useTableKeyboard(pagination, kbd, handlePageChange, resetPagination, endPagination);
 
-  function scrollToTop(): void {
-    window.scrollTo({ behavior: "smooth", top: 0 });
-  }
+  const { handleSortMapping, sortColumn, sortDirection, sortedcolumns } = useTableSort({
+    columns,
+    defaultDirection,
+    defaultSort,
+    setStorage,
+    storage,
+  });
 
-  function handleSortMapping(index: number): void {
-    if (sortColumn === index) {
-      setSortDirection(sortDirection === "asc" ? "desc" : "asc");
-    } else {
-      sortSortColumn(index);
-      setSortDirection("asc");
-    }
-    setStorage({
-      ...storage,
-      limit: storage.limit,
-      offset: 0,
-      page: 1,
-    });
-  }
-
-  function handlePageSelection(value: string): void {
-    setStorage({
-      ...storage,
-      limit: parseInt(value),
-      offset: 0,
-      page: 1,
-    });
-    scrollToTop();
-  }
-
-  function handlePageChange(direction: "next" | "prev"): void {
-    const totalPages = Math.ceil(sortedBodyChildren ? sortedBodyChildren.length / storage.limit : 0);
-
-    if ((direction === "prev" && storage.page === 1) || (direction === "next" && storage.page === totalPages)) {
-      return;
-    }
-    const offset = direction === "next" ? storage.offset + storage.limit : storage.offset - storage.limit;
-    const page = direction === "next" ? storage.page + 1 : storage.page - 1;
-
-    setStorage({
-      ...storage,
-      limit: storage.limit,
-      offset: offset,
-      page: page,
-    });
-  }
-  function resetPagination(): void {
-    setStorage({
-      ...storage,
-      limit: storage.limit,
-      offset: 0,
-      page: 1,
-    });
-  }
-
-  function endPagination(): void {
-    setStorage({
-      ...storage,
-      limit: storage.limit,
-      offset: sortedBodyChildren ? sortedBodyChildren.length - storage.limit : 0,
-      page: Math.ceil(sortedBodyChildren ? sortedBodyChildren.length / storage.limit : 0),
-    });
-  }
+  const { data } = prepareTable(sortable ? sortedcolumns : columns, collapse, collapseDisabled);
 
   useEffect(() => {
-    if (
-      sortedBodyChildren &&
-      sortedBodyChildren.length &&
-      storage.offset >= sortedBodyChildren.length &&
-      storage.page > 1
-    ) {
-      resetPagination();
-    }
-  }, [storage.offset, sortedBodyChildren, storage.limit, setStorage]);
-
-  useEffect(() => {
-    if (ref.current) {
-      ref.current = false;
-
-      return;
-    }
-
-    if (columnWidths.length === 0) {
-      const firstRow = document.querySelector("tbody tr") as HTMLElement;
-
-      if (firstRow) {
-        const widths: number[] = [];
-
-        firstRow.querySelectorAll("td").forEach((cell) => {
-          if (cell instanceof HTMLElement) {
-            const cellWidth = Math.round((cell.offsetWidth / firstRow.offsetWidth) * 100);
-
-            widths.push(cellWidth);
-          }
-        });
-
-        setColumnWidths(widths);
-      }
-    }
-  }, [sortedBodyChildren]);
-
-  useEffect(() => {
-    resetPagination();
-  }, [bodyChildren]);
-
-  useEffect(() => {
-    function handleKeyDown(event: KeyboardEvent): void {
-      if (pagination && kbd) {
-        if ((event.ctrlKey || event.metaKey) && event.key === "ArrowLeft") {
-          event.preventDefault();
-          handlePageChange("prev");
-        } else if ((event.ctrlKey || event.metaKey) && event.key === "ArrowRight") {
-          event.preventDefault();
-          handlePageChange("next");
-        } else if ((event.ctrlKey || event.metaKey) && event.key === "ArrowUp") {
-          event.preventDefault();
-          resetPagination();
-        } else if ((event.ctrlKey || event.metaKey) && event.key === "ArrowDown") {
-          event.preventDefault();
-          endPagination();
-        }
-      }
-    }
-
-    document.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [pagination, kbd, handlePageChange, resetPagination, endPagination]);
+    checkTableIdentifier(identifier);
+  }, [identifier]);
 
   return (
     <TableStyled css={css} id={identifier}>
@@ -271,23 +152,14 @@ export default function Table({
         collapse={collapse}
         header={header !== undefined}
         pagination={pagination}
-        slim={slim || (storage.limit > 10 && sortedBodyChildren && sortedBodyChildren.length > 10)}>
-        <table {...rest}>
-          {headChildren && (
-            <thead>
+        slim={slim || (storage.limit > 10 && data && data.length > 10)}>
+        <table {...rest} id={`${identifier}-table`}>
+          {rows && (
+            <thead id={`${identifier}-head`}>
               <tr>
-                {rowNumbers && (
-                  <th
-                    style={{
-                      minWidth: "0",
-                      opacity: 0.7,
-                      width: "1%",
-                    }}>
-                    &nbsp;
-                  </th>
-                )}
+                {rowNumbers && <th>&nbsp;</th>}
 
-                {headChildren.map((child, index) =>
+                {rows.map((child, index) =>
                   !sortable || sortDisabled?.includes(index) ? (
                     <th key={index}>
                       <Text as="span">{child}</Text>
@@ -325,16 +197,15 @@ export default function Table({
             </thead>
           )}
 
-          <tbody>
-            {!loading && sortedBodyChildren && sortedBodyChildren.length > 0 ? (
-              sortedBodyChildren.slice(storage.offset, storage.offset + storage.limit).map((row, index) => (
-                <tr key={index}>
+          <tbody id={`${identifier}-body`}>
+            {!loading && data && data.length > 0 ? (
+              data.slice(storage.offset, storage.offset + storage.limit).map((row, index) => (
+                <tr key={index} id={`${identifier}-row-${index + 1}`}>
                   {rowNumbers && !collapse && (
                     <td
+                      id={`${identifier}-cell-0`}
                       style={{
-                        minWidth: "0",
-                        opacity: 0.7,
-                        width: "1%",
+                        maxWidth: "1%",
                       }}>
                       {storage.offset + index + 1}
                     </td>
@@ -343,19 +214,14 @@ export default function Table({
                     <td
                       key={index}
                       style={{
-                        ...(!collapse && columnWidths.length > 0
-                          ? {
-                              maxWidth: `${columnWidths[index]}%`,
-                              minWidth: `${columnWidths[index]}%`,
-                              width: `${columnWidths[index]}%`,
-                            }
-                          : {
-                              width: cell?.width || "auto",
-                            }),
+                        ...((cell.width || columnWidths[index]) &&
+                          !collapse && {
+                            width: columnWidths[index] || cell?.width || "auto",
+                          }),
                       }}>
                       {collapse && index >= 1 && (
                         <Stack bottom="smaller">
-                          <Text as="label">{headChildren && headChildren[index]}</Text>
+                          <Text as="label">{rows && rows[index]}</Text>
                         </Stack>
                       )}
                       {cell?.label || cell?.value}
@@ -367,7 +233,7 @@ export default function Table({
               <tr>
                 {rowNumbers && <td style={{ opacity: 0.5 }}>&nbsp;</td>}
                 <td
-                  colSpan={headChildren ? headChildren.length : 1}
+                  colSpan={rows ? rows.length : 1}
                   style={{
                     color: theme.colors.accent.toString(),
                   }}>
@@ -378,24 +244,21 @@ export default function Table({
           </tbody>
         </table>
       </TableCoreStyled>
-      {pagination && sortedBodyChildren && (
+      {pagination && data && (
         <TablePaginationStyled>
+          <code>{JSON.stringify(columnWidths, null, 2)}</code>
           <Stack>
             {!restrictLimit && (
               <Select
-                disabled={sortedBodyChildren && sortedBodyChildren.length < 10}
+                disabled={data && data.length < 10}
                 label="Page Size"
-                options={pageSizes.map((size) => ({
+                options={TABLE_PAGES.map((size) => ({
                   label: size.toString(),
                   value: size.toString(),
                 }))}
-                selection={[storage?.limit?.toString() || pageSizes[0].toString()]}
+                selection={[storage?.limit?.toString() || TABLE_PAGES[0].toString()]}
                 trigger={
-                  <Button
-                    disabled={sortedBodyChildren && sortedBodyChildren?.length < 10}
-                    icon={<Icons.TableRows />}
-                    inline="small"
-                    small>
+                  <Button disabled={data && data?.length < 10} icon={<Icons.TableRows />} inline="small" small>
                     {storage.limit}
                     <Text as="span" css={{ hiddenInline: "tablet" }}>
                       &nbsp;rows
@@ -430,13 +293,11 @@ export default function Table({
               <Icons.ArrowUp style={{ animation: `${fadeIn} 0.3s ease-in-out`, marginRight: "0.5rem" }} />
               <Text as="span" css={{ hiddenInline: "tablet" }}>
                 {storage.offset + 1} -{" "}
-                {storage.offset + storage.limit > sortedBodyChildren.length
-                  ? sortedBodyChildren.length
-                  : storage.offset + storage.limit}{" "}
-                of {sortedBodyChildren.length}
+                {storage.offset + storage.limit > data.length ? data.length : storage.offset + storage.limit} of{" "}
+                {data.length}
               </Text>
               <Text as="span" css={{ visibleInline: "tablet" }}>
-                {`${storage.page} / ${Math.ceil(sortedBodyChildren.length / storage.limit)}`}
+                {`${storage.page} / ${Math.ceil(data.length / storage.limit)}`}
               </Text>
             </Text>
           </Stack>
@@ -451,7 +312,7 @@ export default function Table({
               <Icons.ArrowLeft />
             </Button>
             <Button
-              disabled={storage.offset + storage.limit >= sortedBodyChildren.length}
+              disabled={storage.offset + storage.limit >= data.length}
               small
               onClick={(): void => {
                 handlePageChange("next");

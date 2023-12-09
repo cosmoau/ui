@@ -477,10 +477,11 @@ export function App(): ReactElement {
             </C.Stack>
             <C.Stack top="largest">
               <C.Table
-              bodyChildren={
+              collapse={isPhone}
+              columns={
                 Array.from(Array(30).keys()).map((i) => [
                   {
-                    label: i <= 10 ? '25%' : '50%',
+                    label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget',
                     value: 'a',
                   },
                 {
@@ -499,15 +500,8 @@ export function App(): ReactElement {
                   },
                 ])
               }
-              collapse={isPhone}
               
                 filters={<C.Input placeholder="Filter" />}
-                headChildren={[
-                  "Column A",
-                  "Column B",
-                  "Column C",
-                  "Column D",
-                ]}
                 header={{
                   count: 10004,
                   options: (
@@ -519,9 +513,59 @@ export function App(): ReactElement {
                   ),
                   title: "Table",
                 }}
-                identifier="table"
+                identifier="table-a"
                 kbd
                 pagination
+                rows={[
+                  "Column A",
+                  "Column B",
+                  "Column C",
+                  "Column D",
+                ]}
+                sortable
+              />
+            </C.Stack>
+            <C.Stack top="largest">
+              <C.Table
+                collapse={isPhone}
+                columns={
+                  Array.from(Array(30).keys()).map((i) => [
+                    {
+                      label: `${i} Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget`,
+                      value: 'a',
+                    },
+                    {
+                      label: i + 1,
+                      value: i + 1,
+                    },
+                    {
+                      label: `${i} Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget`,
+                      value: 'c',
+
+                    },
+                  ])
+                }
+
+                filters={<C.Input placeholder="Filter" />}
+                header={{
+                  count: 10004,
+                  options: (
+                    <>
+                      <C.Button inline="small"><RadioButton /></C.Button>
+                      <C.Button inline="small"><RadioButton /></C.Button>
+                      <C.Button><RadioButton /></C.Button>
+                    </>
+                  ),
+                  title: "Table",
+                }}
+                identifier="table-b"
+                kbd
+                pagination
+                rows={[
+                  "Column A",
+                  "Column B",
+                  "Column C",
+                ]}
                 sortable
               />
             </C.Stack>
