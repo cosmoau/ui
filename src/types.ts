@@ -269,26 +269,26 @@ export interface IStack {
 }
 
 export interface ITable {
-  bodyChildren?: Array<Array<{ label?: ReactNode; value: string | number; width?: string | number }>>;
   collapse?: boolean;
   collapseDisabled?: number[];
+  columns?: Array<Array<{ label?: ReactNode; value: string | number; width?: string | number }>>;
   css?: CSS;
   defaultDirection?: "asc" | "desc";
   defaultLimit?: 10 | 25 | 50 | 100 | 200;
   defaultSort?: number;
   filters?: ReactNode;
-  headChildren?: Array<string>;
   header?: {
     count?: number;
     options?: ReactNode;
     title: string;
   } | null;
-  identifier?: string;
+  identifier: string;
   kbd?: boolean;
   loading?: boolean;
   pagination?: boolean;
   restrictLimit?: number;
   rowNumbers?: boolean;
+  rows?: Array<string>;
   slim?: boolean;
   sortDisabled?: number[];
   sortable?: boolean;
