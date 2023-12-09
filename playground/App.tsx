@@ -15,7 +15,7 @@ export function App(): ReactElement {
   const isDark = C.useTheme().isDarkTheme;
 
   // random between 100px and 1200px
-  const randomHeight = `${Math.floor(Math.random() * 1100) + 100}px`;
+  const randomHeight = Math.floor(Math.random() * 1100) + 100
 
   const [balance, setBalance] = useState<boolean>(false);
   const [tempInput, setTempInput] = useState<string>("");
@@ -137,19 +137,31 @@ export function App(): ReactElement {
           <C.Button inline="large" onClick={() => toast("C notess")}>
             Toast
           </C.Button>
-          <C.Dialog title="Dialog" trigger={<C.Button>Dialog</C.Button>}>
+          <C.Dialog
+          small={randomHeight > 500}
+          title="Dialog" trigger={<C.Button>Dialog</C.Button>}>
             <C.Stack css={{
               alignItems: 'center',
               backgroundColor: '$text',
               color: '$background',
               display: 'flex',
-              height: randomHeight,
+              height: randomHeight + 'px',
               justifyContent: 'center',
             }}>
               <C.Text as="h3">
                 {randomHeight}
               </C.Text>
+              
             </C.Stack>
+            {
+              // random number between 100 and 1000
+              // print <h1>Heading {i}</h1>
+              Array.from(Array(Math.floor(Math.random() * 900) + 100).keys()).map((i) => (
+                <C.Text as="h1" key={i}>
+                  Heading {i}
+                </C.Text>
+              ))
+            }
           </C.Dialog>
           <C.Select
             filter
@@ -539,7 +551,7 @@ export function App(): ReactElement {
                       value: i + 1,
                     },
                     {
-                      label: `${i} Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget`,
+                      label: i <= 10 ? i * i * i * i * i : `${i} Lorem ipsum dolor sit amet, consectetur`,
                       value: 'c',
 
                     },

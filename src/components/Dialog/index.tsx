@@ -90,7 +90,8 @@ export default function Dialog({ css, trigger, children, title, disabled, small,
             css={{
               width,
               ...css,
-            }}>
+            }}
+            small={small || false}>
             <DialogHeaderStyled lightbox={lightbox}>
               <Text accent={lightbox} as={lightbox ? "small" : "h4"} inline={lightbox ? "smaller" : undefined}>
                 {title}
