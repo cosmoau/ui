@@ -185,7 +185,7 @@ export function useTableSort({
   resetSort: () => void;
   sortColumn: number;
   sortDirection: "asc" | "desc";
-  sortedcolumns: ITable["columns"];
+  sortedColumns: ITable["columns"];
 } {
   const [sortColumn, setSortColumn] = useState(defaultSort);
   const [sortDirection, setSortDirection] = useState(defaultDirection);
@@ -210,7 +210,7 @@ export function useTableSort({
     });
   }
 
-  const sortedcolumns = columns
+  const sortedColumns = columns
     ? sortDirection === "asc"
       ? sort(columns).asc((row) => row[sortColumn].value)
       : sort(columns).desc((row) => row[sortColumn].value)
@@ -221,7 +221,7 @@ export function useTableSort({
     resetSort,
     sortColumn,
     sortDirection,
-    sortedcolumns,
+    sortedColumns,
   };
 }
 

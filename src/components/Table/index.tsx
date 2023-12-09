@@ -81,7 +81,7 @@ export default function NewTable({
 
   useTableKeyboard(pagination, kbd, handlePageChange, resetPagination, endPagination);
 
-  const { handleSortMapping, sortColumn, sortDirection, sortedcolumns } = useTableSort({
+  const { handleSortMapping, sortColumn, sortDirection, sortedColumns } = useTableSort({
     columns,
     defaultDirection,
     defaultSort,
@@ -89,7 +89,7 @@ export default function NewTable({
     storage,
   });
 
-  const { data } = prepareTable(sortable ? sortedcolumns : columns, collapse, collapseDisabled);
+  const { data } = prepareTable(sortable ? sortedColumns : columns, collapse, collapseDisabled);
 
   useEffect(() => {
     checkTableIdentifier(identifier);
@@ -214,10 +214,17 @@ export default function NewTable({
                     <td
                       key={index}
                       style={{
-                        ...((cell.width || columnWidths[index]) &&
-                          !collapse && {
-                            width: columnWidths[index] || cell?.width || "auto",
-                          }),
+                        ...(!collapse && {
+                          ...(columnWidths && columnWidths[index]
+                            ? {
+                                maxWidth: columnWidths[index],
+                                minWidth: columnWidths[index],
+                                width: columnWidths[index],
+                              }
+                            : {
+                                width: cell?.width || "auto",
+                              }),
+                        }),
                       }}>
                       {collapse && index >= 1 && (
                         <Stack bottom="smaller">
@@ -246,7 +253,6 @@ export default function NewTable({
       </TableCoreStyled>
       {pagination && data && (
         <TablePaginationStyled>
-          <code>{JSON.stringify(columnWidths, null, 2)}</code>
           <Stack>
             {!restrictLimit && (
               <Select
