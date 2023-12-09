@@ -3,7 +3,7 @@ import { useRef, useState, useEffect } from "react";
 
 import { ITable } from "../../types";
 
-export const TABLE_PAGES = [10, 25, 50, 100];
+export const TABLE_PAGES = [5, 10, 25, 50, 100];
 export const MAX_PAGES = 500;
 
 export interface IStorage {
@@ -35,17 +35,28 @@ export function useTableColumns(identifier: string, columns: ITable["columns"]):
 
           firstRow.querySelectorAll("td").forEach((cell) => {
             if (cell instanceof HTMLElement) {
-              const cellWidth = Math.round((cell.offsetWidth / firstRow.offsetWidth) * 100);
+              const cellWidth = Number((cell.offsetWidth / firstRow.offsetWidth) * 100).toFixed(2);
 
-              widths.push(cellWidth);
+              widths.push(Number(cellWidth));
             }
           });
+
+          const totalWidth = widths.reduce((a, b) => a + b, 0);
+
+          if (totalWidth !== 100) {
+            const lastWidth = widths.pop() || 0;
+            const newLastWidth = Number(lastWidth - (totalWidth - 100)).toFixed(3);
+
+            widths.push(Number(newLastWidth));
+          }
 
           setColumnWidths(widths);
         }
       });
     }
   }, [columns]);
+
+  //
 
   return columnWidths.map((width) => `${width}%`);
 }
