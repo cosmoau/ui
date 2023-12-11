@@ -39,14 +39,14 @@ export default function Menu({ css, trigger, options, selection, onSelection, ch
     handleClose();
   }
 
-  useOutsideClick(ref, () => handleClose());
-
   useEventListener("keydown", (event: KeyboardEvent) => {
     if (event.key === "Escape") {
       event.preventDefault();
       handleClose();
     }
   });
+
+  useOutsideClick(ref, () => handleClose());
 
   return (
     <MenuStyled css={css}>

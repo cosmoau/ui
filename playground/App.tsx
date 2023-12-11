@@ -154,8 +154,6 @@ export function App(): ReactElement {
               
             </C.Stack>
             {
-              // random number between 100 and 1000
-              // print <h1>Heading {i}</h1>
               Array.from(Array(Math.floor(Math.random() * 900) + 100).keys()).map((i) => (
                 <C.Text as="h1" key={i}>
                   Heading {i}

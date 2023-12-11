@@ -18,10 +18,10 @@ export const MenuGroupStyled = styled("div", {
   border: "0.1rem solid $border",
   borderRadius: "$small",
   boxShadow: "$large",
-
   left: "2rem",
   lineBreak: "auto",
   marginTop: "$larger !important",
+  overflowY: "auto",
   padding: "$small",
   pointerEvents: "auto",
   position: "absolute",
