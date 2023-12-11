@@ -105,7 +105,7 @@ export default function NewTable({
                 {header.title}
               </Text>
               {header.count && (
-                <Text accent as="small">
+                <Text accent as="small" bottom="none">
                   {header.count > 10000
                     ? "10,000+"
                     : header.count > 5000
@@ -113,10 +113,10 @@ export default function NewTable({
                       : header.count > 1000
                         ? "1,000+"
                         : header.count}
-                  &nbsp;{header.count === 1 ? "row" : "rows"}
                 </Text>
               )}
             </TableHeaderTitleStyled>
+            {(header.options || filters) && (
             <TableHeaderOptionsStyled>
               {header.options && <Stack>{header.options}</Stack>}
               {filters && (
@@ -143,6 +143,7 @@ export default function NewTable({
                 </Button>
               )}
             </TableHeaderOptionsStyled>
+            )}
           </TableHeaderCoreStyled>
           {filters && storage?.filtering && <TableFiltersStyled>{filters}</TableFiltersStyled>}
         </TableHeaderStyled>

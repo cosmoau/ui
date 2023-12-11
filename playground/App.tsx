@@ -308,7 +308,7 @@ export function App(): ReactElement {
       </C.View>
       <C.View bottom="largest" container top="largest">
           <C.Stack align="center" bottom="large">
-            <C.Badge inline="small" link theme="orange">
+            <C.Badge inline="small" small link theme="orange">
               Test orange button
             </C.Badge>
             <C.Badge inline="small" theme="red">
@@ -512,16 +512,16 @@ export function App(): ReactElement {
                 ])
               }
               
-                filters={<C.Input placeholder="Filter" />}
+                filters={!isPhone ? <C.Input placeholder="Filter" /> : undefined}
                 header={{
                   count: 10004,
-                  options: (
+                  options: !isPhone ? (
                     <>
                       <C.Button inline="small"><RadioButton /></C.Button>
                       <C.Button inline="small"><RadioButton /></C.Button>
                       <C.Button><RadioButton /></C.Button>
                     </>
-                  ),
+                  ) : undefined,
                   title: "Table",
                 }}
                 identifier="table-a"

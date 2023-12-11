@@ -159,6 +159,7 @@ export const TableHeaderOptionsStyled = styled("div", {
     flex: "1 1 0%",
     justifyContent: "space-between",
     marginTop: "$smaller",
+    width: "100%",
   },
 
   width: "100%",
