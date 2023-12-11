@@ -155,7 +155,7 @@ export function App(): ReactElement {
             </C.Stack>
             {
               Array.from(Array(Math.floor(Math.random() * 900) + 100).keys()).map((i) => (
-                <C.Text as="h1" key={i}>
+                <C.Text key={i} as="h1">
                   Heading {i}
                 </C.Text>
               ))
@@ -163,6 +163,7 @@ export function App(): ReactElement {
           </C.Dialog>
           <C.Select
             filter
+            height={1500}
             last
             options={[
               {

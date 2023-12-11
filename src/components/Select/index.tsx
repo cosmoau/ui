@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { Input, Loading, useBreakpoints, useEventListener, useOutsideClick, usePopper } from "../../index";
+import { Input, Loading, useBreakpoints, useEventListener, useOutsideClick, usePopper, useWindowDimensions } from "../../index";
 import { ISelect } from "../../types";
 
 import {
@@ -31,6 +31,7 @@ export default function Select({
   const { triggerRef, contentRef, isOpen, isMounted, handleClick, handleClose } = usePopper();
 
   const { breakpoint } = useBreakpoints();
+  const { height: windowHeight } = useWindowDimensions();
 
   const [search, setSearch] = useState("");
   const [focused, setFocused] = useState(selection ? selection[0] : "");
@@ -114,7 +115,8 @@ export default function Select({
           ref={contentRef}
           animation={isOpen}
           css={{
-            maxHeight: height || "50rem",
+            height: height || "auto",
+            maxHeight: windowHeight < 700 ? "50vh" : "70vh",
             maxWidth: width || "50rem",
             minWidth: width || filter ? "20rem" : "12.5rem",
             phone: {
