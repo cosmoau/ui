@@ -45,7 +45,6 @@ export const BadgeStyled = styled("div", {
     small: {
       true: {
         fontSize: "$small",
-        lineHeight: "$small",
       },
     },
 
