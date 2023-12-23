@@ -184,6 +184,11 @@ export const TextStyled = styled("div", {
       },
     },
     size: TextSizes,
+    subtle: {
+      true: {
+        color: "$subtle",
+      },
+    },
   },
 });
 

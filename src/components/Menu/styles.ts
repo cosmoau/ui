@@ -16,7 +16,7 @@ export const MenuTriggerStyled = styled("div", {
 export const MenuGroupStyled = styled("div", {
   backgroundColor: "$defaultTable",
   border: "0.1rem solid $border",
-  borderRadius: "$small",
+  borderRadius: "$large",
   boxShadow: "$large",
   left: "2rem",
   lineBreak: "auto",

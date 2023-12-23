@@ -16,7 +16,7 @@ export const PopoverTriggerStyled = styled("div", {
 export const PopoverContentStyled = styled("div", {
   backgroundColor: "$defaultTable",
   border: "0.1rem solid $border",
-  borderRadius: "$small",
+  borderRadius: "$large",
   boxShadow: "$large",
   lineBreak: "auto",
   maxHeight: "50rem",

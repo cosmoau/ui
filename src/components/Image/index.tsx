@@ -19,6 +19,9 @@ export default function Image({
       css={{
         ...(borderRadius && {
           borderRadius: `$${borderRadius}`,
+          img: {
+            borderRadius: `$${borderRadius}`,
+          },
         }),
         height: fillHeight,
         overflow: "hidden",
@@ -29,9 +32,6 @@ export default function Image({
         fill={fill}
         quality={quality}
         style={{
-          ...(borderRadius && {
-            borderRadius: `$${borderRadius}`,
-          }),
           objectFit: fill ? fillFit || "cover" : "contain",
           objectPosition: fillPosition,
         }}

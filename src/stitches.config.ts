@@ -49,6 +49,7 @@ const defaultTheme = {
     redData: "#d80000",
     redDataAlt: "#f76f74",
     redText: "#550805",
+    subtle: "#253256",
     text: "#0a2540",
   },
   fontSizes: {
@@ -67,11 +68,11 @@ const defaultTheme = {
   },
   lineHeights: {
     default: "1.45",
-    small: "1.25",
+    small: "1.3",
   },
   radii: {
-    large: "1.4rem",
-    small: "0.7rem",
+    large: "1rem",
+    small: "0.5rem",
   },
   shadows: {
     large: "0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2)",
@@ -104,7 +105,7 @@ const defaultTheme = {
 
 export const darkTheme = createTheme({
   colors: {
-    accent: "#c8d7e7",
+    accent: "#bccee1",
     background: "#0e1623",
     border: "rgba(254, 248, 244, 0.25)",
     borderTable: "rgba(254, 248, 244, 0.1)",
@@ -115,6 +116,7 @@ export const darkTheme = createTheme({
     defaultTable: "#17212d",
     gradientEnd: "rgba(49, 112, 183, 0.02)",
     gradientStart: "rgba(49, 112, 183, 0.1)",
+    subtle: "#e2eaf3",
     text: "#fef7f2",
   },
   shadows: {

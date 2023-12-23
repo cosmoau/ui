@@ -13,7 +13,7 @@ export const paddingVariants = {
 
 export const BoxStyled = styled("article", {
   border: "0.1rem solid transparent",
-  borderRadius: "$small",
+  borderRadius: "$large",
   display: "block",
   height: "100%",
   margin: 0,

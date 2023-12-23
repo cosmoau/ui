@@ -16,7 +16,7 @@ export const SelectTriggerStyled = styled("div", {
 export const SelectGroupStyled = styled("div", {
   backgroundColor: "$background",
   border: "0.1rem solid $border",
-  borderRadius: "$small",
+  borderRadius: "$large",
   boxShadow: "$large",
   lineBreak: "auto",
   overflowY: "auto",

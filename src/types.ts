@@ -276,9 +276,10 @@ export interface ITable {
   defaultDirection?: "asc" | "desc";
   defaultLimit?: 10 | 25 | 50 | 100 | 200;
   defaultSort?: number;
+  error?: string;
   filters?: ReactNode;
   header?: {
-    count?: number;
+    count?: boolean;
     options?: ReactNode;
     title: string;
   } | null;
@@ -305,6 +306,7 @@ export interface IText extends ComponentPropsWithoutRef<"div"> {
   inline?: IThemeSpacing | "auto";
   link?: "minimal" | "default" | "alternate";
   override?: keyof typeof TextSizes;
+  subtle?: boolean;
   top?: IThemeSpacing;
 }
 

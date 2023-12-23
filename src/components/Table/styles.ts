@@ -1,4 +1,4 @@
-import { styled } from "../../stitches.config";
+import { fadeIn, styled } from "../../stitches.config";
 
 export const TableStyled = styled("div", {
   position: "relative",
@@ -26,6 +26,7 @@ export const TableCoreStyled = styled("div", {
         "&:hover": {
           backgroundColor: "$defaultTable",
         },
+        animation: `${fadeIn} 0.3s ease-in-out`,
         td: {
           borderTop: "0.1rem solid $borderTable",
           fontSize: "$default",
@@ -151,10 +152,11 @@ export const TableHeaderTitleStyled = styled("div", {
 
 export const TableHeaderOptionsStyled = styled("div", {
   alignItems: "flex-end",
+  animation: `${fadeIn} 0.3s ease-in-out`,
   display: "flex",
   gap: "$small",
-  justifyContent: "flex-end",
 
+  justifyContent: "flex-end",
   phone: {
     flex: "1 1 0%",
     justifyContent: "space-between",
@@ -166,6 +168,7 @@ export const TableHeaderOptionsStyled = styled("div", {
 });
 
 export const TableFiltersStyled = styled("div", {
+  animation: `${fadeIn} 0.5s ease-in-out`,
   display: "block",
   input: {
     width: "100%",

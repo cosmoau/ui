@@ -3,7 +3,7 @@ import { styled } from "../../stitches.config";
 export const CodeStyled = styled("div", {
   alignContent: "center",
   border: "0.1rem solid $border !important",
-  borderRadius: "$small",
+  borderRadius: "$large",
   display: "flex",
   justifyContent: "space-between",
   padding: "$small $medium",

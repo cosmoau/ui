@@ -1,18 +1,7 @@
 import { useEffect } from "react";
 
 import { Icons } from "../../icons";
-import {
-  Badge,
-  Button,
-  Loading,
-  Select,
-  Stack,
-  Text,
-  fadeIn,
-  theme,
-  useBreakpoints,
-  useLocalStorage,
-} from "../../index";
+import { Button, Loading, Select, Stack, Text, fadeIn, theme, useBreakpoints, useLocalStorage } from "../../index";
 import { ITable } from "../../types";
 
 import {
@@ -52,6 +41,7 @@ export default function NewTable({
   rowNumbers,
   slim,
   loading,
+  error,
   pagination,
   restrictLimit,
   kbd,
@@ -106,43 +96,37 @@ export default function NewTable({
               </Text>
               {header.count && (
                 <Text accent as="small" bottom="none">
-                  {header.count > 10000
-                    ? "10,000+"
-                    : header.count > 5000
-                      ? "5,000+"
-                      : header.count > 1000
-                        ? "1,000+"
-                        : header.count}
+                  {data?.length}
                 </Text>
               )}
             </TableHeaderTitleStyled>
             {(header.options || filters) && (
-            <TableHeaderOptionsStyled>
-              {header.options && <Stack>{header.options}</Stack>}
-              {filters && (
-                <Button
-                  icon={
-                    breakpoint !== "phone" ? (
+              <TableHeaderOptionsStyled>
+                {header.options && <Stack>{header.options}</Stack>}
+                {filters && (
+                  <Button
+                    icon={
+                      breakpoint !== "phone" ? (
+                        storage.filtering ? (
+                          <Icons.ArrowsInSimple />
+                        ) : (
+                          <Icons.MagnifyingGlass />
+                        )
+                      ) : undefined
+                    }
+                    onClick={(): void => setStorage({ ...storage, filtering: !storage.filtering })}>
+                    {breakpoint === "phone" ? (
                       storage.filtering ? (
                         <Icons.ArrowsInSimple />
                       ) : (
                         <Icons.MagnifyingGlass />
                       )
-                    ) : undefined
-                  }
-                  onClick={(): void => setStorage({ ...storage, filtering: !storage.filtering })}>
-                  {breakpoint === "phone" ? (
-                    storage.filtering ? (
-                      <Icons.ArrowsInSimple />
                     ) : (
-                      <Icons.MagnifyingGlass />
-                    )
-                  ) : (
-                    "Search"
-                  )}
-                </Button>
-              )}
-            </TableHeaderOptionsStyled>
+                      "Search"
+                    )}
+                  </Button>
+                )}
+              </TableHeaderOptionsStyled>
             )}
           </TableHeaderCoreStyled>
           {filters && storage?.filtering && <TableFiltersStyled>{filters}</TableFiltersStyled>}
@@ -199,7 +183,7 @@ export default function NewTable({
           )}
 
           <tbody id={`${identifier}-body`}>
-            {!loading && data && data.length > 0 ? (
+            {!error && !loading && data && data.length > 0 ? (
               data.slice(storage.offset, storage.offset + storage.limit).map((row, index) => (
                 <tr key={index} id={`${identifier}-row-${index + 1}`}>
                   {rowNumbers && !collapse && (
@@ -245,7 +229,21 @@ export default function NewTable({
                   style={{
                     color: theme.colors.accent.toString(),
                   }}>
-                  {loading ? <Loading /> : <Badge icon={<Icons.MagnifyingGlassMinus />}>No results found</Badge>}
+                  {loading ? (
+                    <Loading />
+                  ) : error ? (
+                    <Text>
+                      <Text as="span" highlight="red">
+                        {error || <Icons.Warning />}
+                      </Text>
+                    </Text>
+                  ) : (
+                    <Text>
+                      <Text as="span" highlight="orange">
+                        No results found
+                      </Text>
+                    </Text>
+                  )}
                 </td>
               </tr>
             )}

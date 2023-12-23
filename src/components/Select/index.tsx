@@ -1,6 +1,14 @@
 import { useEffect, useState } from "react";
 
-import { Input, Loading, useBreakpoints, useEventListener, useOutsideClick, usePopper, useWindowDimensions } from "../../index";
+import {
+  Input,
+  Loading,
+  useBreakpoints,
+  useEventListener,
+  useOutsideClick,
+  usePopper,
+  useWindowDimensions,
+} from "../../index";
 import { ISelect } from "../../types";
 
 import {

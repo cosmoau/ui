@@ -69,56 +69,27 @@ export function App(): ReactElement {
           <C.Box expandable expandableHeight={200}>
               <C.Text as="h1">
               Expander</C.Text>
-              <C.Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
+              <C.Text accent>
+                <b>ACCENT</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
+                nunc.
+              </C.Text>
+              <C.Text subtle>
+               <b>SUBTLE</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
                 nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
                 nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
                 nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
                 nunc.
               </C.Text>
               <C.Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
+               <b>NORMAL</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
                 nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
                 nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
                 nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
                 nunc.
               </C.Text>
-              <C.Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
-                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
-                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
-                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
-                nunc.
-              </C.Text>
-              <C.Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
-                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
-                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
-                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
-                nunc.
-              </C.Text>
-              <C.Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
-                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
-                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
-                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
-                nunc.
-              </C.Text>
-              <C.Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
-                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
-                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
-                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
-                nunc.
-              </C.Text>
-              <C.Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies, nunc
-                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
-                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
-                nunc aliquet nunc, vitae aliquam nunc nunc vitae nunc. Donec euismod, nisl eget ultricies ultricies, nunc
-                nunc.
-              </C.Text>
-
             </C.Box>
         </C.Stack>
         <C.Stack align="center">
@@ -308,7 +279,7 @@ export function App(): ReactElement {
       </C.View>
       <C.View bottom="largest" container top="largest">
           <C.Stack align="center" bottom="large">
-            <C.Badge inline="small" small link theme="orange">
+            <C.Badge inline="small" link small theme="orange">
               Test orange button
             </C.Badge>
             <C.Badge inline="small" theme="red">
@@ -511,10 +482,11 @@ export function App(): ReactElement {
                   },
                 ])
               }
+              error="This is an error message"
               
                 filters={!isPhone ? <C.Input placeholder="Filter" /> : undefined}
                 header={{
-                  count: 10004,
+                  count: true,
                   options: !isPhone ? (
                     <>
                       <C.Button inline="small"><RadioButton /></C.Button>
@@ -559,7 +531,7 @@ export function App(): ReactElement {
 
                 filters={<C.Input placeholder="Filter" />}
                 header={{
-                  count: 10004,
+                  count: true,
                   options: (
                     <>
                       <C.Button inline="small"><RadioButton /></C.Button>
