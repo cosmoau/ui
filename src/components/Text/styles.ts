@@ -50,6 +50,7 @@ export const TextSizes = {
     marginBottom: "$medium",
   },
   h5: {
+    fontFamily: "$serif",
     fontSize: "$h5",
     lineHeight: "$default",
     marginBottom: "$small",

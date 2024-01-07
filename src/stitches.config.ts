@@ -57,8 +57,8 @@ const defaultTheme = {
     h2: "3.1rem",
     h3: "2.7rem",
     h4: "2.3rem",
-    h5: "1.9rem",
-    h6: "1.7rem",
+    h5: "2rem",
+    h6: "1.8rem",
     small: "1.6rem",
   },
   fonts: {
