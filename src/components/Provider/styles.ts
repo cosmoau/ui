@@ -9,20 +9,15 @@ export const ProviderStyled = styled("main", {
 export const ToastStyled = styled("div", {
   alignItems: "center",
   backgroundColor: "$defaultTable",
-  border: "0.1rem solid $borderToast",
+  border: "0.1rem solid $border",
   borderRadius: "$small",
   boxShadow: "$large",
   cursor: "pointer",
   display: "flex",
-  fontSize: "$default",
   justifyContent: "center",
-  margin: "0 auto $small auto !important",
-  maxWidth: "60%",
+  marginTop: "$small",
+  maxWidth: "50%",
   padding: "$smaller $small",
-  phone: {
-    fontSize: "$small",
-    maxWidth: "80%",
-  },
   pointerEvents: "all",
   transition: "$default",
 
@@ -43,15 +38,9 @@ export const ToastStyled = styled("div", {
 
 export const ToastContainerStyled = styled("div", {
   bottom: "$medium",
-  left: 0,
-  phone: {
-    bottom: "auto",
-    top: "$medium",
-  },
+  left: "$medium",
   pointerEvents: "none",
   position: "fixed",
-  right: 0,
-  textAlign: "center",
   userSelect: "none",
 
   zIndex: "$toast",
@@ -125,7 +114,7 @@ export const providerReset = globalCss({
   html: {
     fontSize: "62.5%",
     [breakpoints.special.micro]: {
-      fontSize: "58.5%",
+      fontSize: "57.5%",
     },
     [breakpoints.phoneX]: {
       fontSize: "60.5%",

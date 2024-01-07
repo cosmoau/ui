@@ -33,7 +33,7 @@ export const ButtonStyled = styled("button", {
   justifyContent: "center",
   lineHeight: "$default",
   margin: 0,
-  minHeight: "3.2rem",
+  minHeight: "3.4rem",
   outline: 0,
   padding: "$smallest $small",
   phone: {

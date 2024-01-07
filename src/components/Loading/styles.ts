@@ -2,43 +2,21 @@ import { styled } from "../../stitches.config";
 
 export const LoadingOverlayStyled = styled("div", {
   alignItems: "center",
-  backgroundColor: "$background",
+  backgroundColor: "$defaultTable",
   border: "0.1rem solid $border",
   borderRadius: "$small",
-  bottom: 0,
+  bottom: "$medium",
   boxShadow: "$large",
   display: "flex",
   justifyContent: "center",
-  left: 0,
-  padding: "$smaller",
+  padding: "$smaller $small",
   pointerEvents: "none",
   position: "fixed",
-  right: 0,
-  top: 0,
+  right: "$medium",
   userSelect: "none",
-
-  variants: {
-    horizontal: {
-      left: {
-        left: "$medium",
-        right: "auto",
-      },
-      right: {
-        left: "auto",
-        right: "$medium",
-      },
-    },
-    vertical: {
-      bottom: {
-        bottom: "$medium",
-        top: "auto",
-      },
-      top: {
-        bottom: "auto",
-        top: "$medium",
-      },
-    },
-  },
-
   zIndex: 1000,
+});
+
+export const LoadingOverlayTitledStyled = styled("div", {
+  marginLeft: "$small",
 });

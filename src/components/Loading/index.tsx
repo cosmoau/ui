@@ -1,8 +1,8 @@
 import { styled } from "@stitches/react";
 
-import { ILoading } from "../../types";
+import { ILoading, ILoadingOverlay } from "../../types";
 
-import { LoadingOverlayStyled } from "./styles";
+import { LoadingOverlayStyled, LoadingOverlayTitledStyled } from "./styles";
 
 const SVGStyled = styled("svg");
 
@@ -39,10 +39,11 @@ export default function Loading({ width = 20, css }: ILoading): JSX.Element {
   );
 }
 
-export function LoadingOverlay({ vertical = "bottom", horizontal = "right", width }: ILoading): JSX.Element {
+export function LoadingOverlay({ width, title }: ILoadingOverlay): JSX.Element {
   return (
-    <LoadingOverlayStyled horizontal={horizontal} vertical={vertical}>
+    <LoadingOverlayStyled>
       <Loading width={width} />
+      <LoadingOverlayTitledStyled>{title}</LoadingOverlayTitledStyled>
     </LoadingOverlayStyled>
   );
 }

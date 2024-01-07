@@ -164,10 +164,12 @@ export interface IInput extends ComponentPropsWithRef<"input"> {
 
 export interface ILoading {
   css?: CSS;
-  horizontal?: "left" | "right";
   stroke?: string;
-  vertical?: "top" | "bottom";
   width?: number | string;
+}
+
+export interface ILoadingOverlay extends ILoading {
+  title: string;
 }
 
 export interface ILogo {
