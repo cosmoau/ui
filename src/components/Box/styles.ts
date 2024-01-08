@@ -71,7 +71,7 @@ export const BoxStyled = styled("article", {
     link: {
       true: {
         "&:hover": {
-          opacity: 0.7,
+          opacity: 0.5,
         },
       },
     },

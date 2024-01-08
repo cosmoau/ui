@@ -61,7 +61,7 @@ export default function Box({
         ...css,
       }}
       footer={footer ? true : false}
-      hover={imageCTA ? true : false}
+      hover={imageCTA || link ? true : false}
       link={link}
       loading={loading || false}
       padding={header || footer || image || minimal ? "none" : small ? "small" : "default"}
