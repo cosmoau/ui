@@ -65,6 +65,7 @@ export interface IBox {
   imageTarget?: "_blank" | "_self";
   loading?: boolean;
   minimal?: boolean;
+  small?: boolean;
   theme?: "default" | "success" | "warning" | "error" | "transparent" | "fill";
 }
 

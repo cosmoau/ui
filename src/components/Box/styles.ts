@@ -8,6 +8,9 @@ export const paddingVariants = {
     none: {
       padding: 0,
     },
+    small: {
+      padding: "$small",
+    },
   },
 };
 
@@ -32,12 +35,11 @@ export const BoxStyled = styled("article", {
     collapsed: {
       true: {
         "&::after": {
-          background: "linear-gradient(to bottom, rgba(14,22,35,0) 0%,rgba(14,22,35,0.2) 100%)",
+          background: "linear-gradient(to bottom, rgba(14,22,35,0) 0%,rgba(14,22,35,0.1) 100%)",
           bottom: 0,
           content: "",
           darkModeSpec: {
-            background:
-              "linear-gradient(to bottom, rgba(14,22,35,0) 0%, rgba(14,22,35,0.5) 40%, rgba(14,22,35,0.8) 100%)",
+            background: "linear-gradient(to bottom, rgba(14,22,35,0) 0%,rgba(14,22,35,1) 100%)",
           },
           height: "50%",
           left: 0,
@@ -69,6 +71,7 @@ export const BoxStyled = styled("article", {
     loading: {
       true: {
         cursor: "wait",
+        opacity: 0.5,
       },
     },
 
@@ -106,10 +109,36 @@ export const BoxHeaderStyled = styled("div", {
   backgroundColor: "$defaultTable",
   borderBottom: "0.1rem solid $borderTable",
   padding: "$small $medium",
+  variants: {
+    padding: {
+      default: {
+        padding: "$small $medium",
+      },
+      none: {
+        padding: 0,
+      },
+      small: {
+        padding: "$small $small",
+      },
+    },
+  },
 });
 
 export const BoxFooterStyled = styled("div", {
   padding: "0 $medium $medium $medium",
+  variants: {
+    padding: {
+      default: {
+        padding: "0 $medium $medium $medium",
+      },
+      none: {
+        padding: 0,
+      },
+      small: {
+        padding: "0 $small $small $small",
+      },
+    },
+  },
 });
 
 export const BoxInnerStyled = styled("div", {
@@ -130,6 +159,19 @@ export const BoxExitStyled = styled("div", {
   right: 0,
   top: 0,
   transition: "$default",
+});
+
+export const BoxLoadingStyled = styled("div", {
+  alignItems: "center",
+  backgroundColor: "$border",
+  bottom: 0,
+  display: "flex",
+  justifyContent: "center",
+  left: 0,
+  position: "absolute",
+  right: 0,
+  top: 0,
+  zIndex: 1,
 });
 
 export const BoxExpanderTrigger = styled("div", {

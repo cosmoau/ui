@@ -16,11 +16,8 @@ export const DialogTriggerStyled = styled("div", {
 
 export const DialogOverlayStyled = styled("div", {
   backdropFilter: "blur(0.2px)",
-  backgroundColor: "rgba(0, 0, 0, 0.3)",
+  backgroundColor: "$dialog",
   bottom: 0,
-  darkModeSpec: {
-    backgroundColor: "rgba(255, 255, 255, 0.15)",
-  },
   height: "100%",
   left: 0,
   position: "fixed",

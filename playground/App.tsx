@@ -66,7 +66,7 @@ export function App(): ReactElement {
       <C.View bottom="largest" container top="largest">
         <C.Stack bottom="largest">
           <C.ProviderToggle />
-          <C.Box expandable expandableHeight={200}>
+          <C.Box expandable expandableHeight={200} small>
               <C.Text as="h1">
               Expander</C.Text>
               <C.Text accent>
@@ -296,13 +296,25 @@ export function App(): ReactElement {
             </C.Badge>
           </C.Stack>
           <C.Stack flexduo>
-            <C.Box theme="error">
+            <C.Box loading theme="error">
             <C.Text as='h4'>
               Title
             </C.Text>
               Error box
             </C.Box>
-          <C.Box theme="warning">
+          <C.Box footer={
+            <C.Text as="h6">
+              Test
+            </C.Text>
+          }
+          header={
+            <C.Text as="h5">
+              Test
+            </C.Text>
+          }
+          loading
+          small
+          >
             <C.Text as='h4'>
               Title
             </C.Text>

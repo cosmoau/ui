@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { Icons } from "../../icons";
-import { Button, Image } from "../../index";
+import { Button, Image, Loading } from "../../index";
 import { IBox } from "../../types";
 
 import {
@@ -11,6 +11,7 @@ import {
   BoxFooterStyled,
   BoxHeaderStyled,
   BoxInnerStyled,
+  BoxLoadingStyled,
   BoxStyled,
 } from "./styles";
 
@@ -24,6 +25,7 @@ export default function Box({
   imagePosition,
   imageTarget,
   css,
+  small,
   header,
   loading,
   theme,
@@ -60,8 +62,13 @@ export default function Box({
       footer={footer ? true : false}
       hover={imageCTA ? true : false}
       loading={loading || false}
-      padding={header || footer || image ? "none" : minimal ? "none" : "default"}
+      padding={header || footer || image || minimal ? "none" : small ? "small" : "default"}
       theme={theme || "default"}>
+      {loading && (
+        <BoxLoadingStyled>
+          <Loading />
+        </BoxLoadingStyled>
+      )}
       <BoxFlexStyled>
         {image &&
           (imageCTA ? (
@@ -99,21 +106,25 @@ export default function Box({
               src={image}
             />
           ))}
-        {header && useHeaderOrFooter && <BoxHeaderStyled>{header}</BoxHeaderStyled>}
+        {header && useHeaderOrFooter && (
+          <BoxHeaderStyled padding={minimal ? "none" : small ? "small" : "default"}>{header}</BoxHeaderStyled>
+        )}
 
         {image || header || footer ? (
-          <BoxInnerStyled padding={minimal ? "none" : "default"}>{children}</BoxInnerStyled>
+          <BoxInnerStyled padding={minimal ? "none" : small ? "small" : "default"}>{children}</BoxInnerStyled>
         ) : (
           children
         )}
       </BoxFlexStyled>
 
-      {footer && useHeaderOrFooter && <BoxFooterStyled>{footer}</BoxFooterStyled>}
+      {footer && useHeaderOrFooter && (
+        <BoxFooterStyled padding={minimal ? "none" : small ? "small" : "default"}>{footer}</BoxFooterStyled>
+      )}
       {expandable && (
         <BoxExpanderTrigger expanded={isExpanded}>
           <Button
             icon={isExpanded ? <Icons.ArrowsInSimple /> : <Icons.ArrowsOutSimple />}
-            small={isExpanded}
+            small
             theme={isExpanded ? "default" : "solid"}
             onClick={() => setIsExpanded(!isExpanded)}>
             {isExpanded ? "Collapse" : "Expand"}
