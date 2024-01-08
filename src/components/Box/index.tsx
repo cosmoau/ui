@@ -32,6 +32,7 @@ export default function Box({
   children,
   footer,
   minimal,
+  link,
   closable,
   expandable,
   expandableHeight,
@@ -61,6 +62,7 @@ export default function Box({
       }}
       footer={footer ? true : false}
       hover={imageCTA ? true : false}
+      link={link}
       loading={loading || false}
       padding={header || footer || image || minimal ? "none" : small ? "small" : "default"}
       theme={theme || "default"}>

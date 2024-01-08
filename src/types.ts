@@ -63,6 +63,7 @@ export interface IBox {
   imagePosition?: CSSProperties["objectPosition"];
   imageSizes?: ImageProps["sizes"];
   imageTarget?: "_blank" | "_self";
+  link?: boolean;
   loading?: boolean;
   minimal?: boolean;
   small?: boolean;
