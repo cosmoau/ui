@@ -46,16 +46,15 @@ export const PopoverContentStyled = styled("div", {
     },
     small: {
       false: {
-        minWidth: "50rem",
+        minWidth: "40rem",
         phone: {
-          minWidth: "85vw",
+          minWidth: "80vw",
         },
       },
       true: {
-        minWidth: "25rem",
-
+        minWidth: "20rem",
         phone: {
-          minWidth: "65vw",
+          minWidth: "60vw",
         },
       },
     },
