@@ -7,18 +7,20 @@ export const ProviderStyled = styled("main", {
 });
 
 export const ToastStyled = styled("div", {
-  alignItems: "center",
   backgroundColor: "$defaultTable",
   border: "0.1rem solid $border",
   borderRadius: "$small",
   boxShadow: "$large",
   cursor: "pointer",
-  display: "flex",
-  justifyContent: "center",
   marginTop: "$small",
-  maxWidth: "50%",
+  maxWidth: "60rem",
   padding: "$smaller $small",
+  phone: {
+    maxWidth: "95%",
+    textAlign: "center",
+  },
   pointerEvents: "all",
+
   transition: "$default",
 
   variants: {
@@ -39,10 +41,16 @@ export const ToastStyled = styled("div", {
 export const ToastContainerStyled = styled("div", {
   bottom: "$medium",
   left: "$medium",
+  phone: {
+    bottom: "auto",
+    left: "50%",
+    top: "$medium",
+    transform: "translateX(-50%)",
+  },
   pointerEvents: "none",
   position: "fixed",
-  userSelect: "none",
 
+  userSelect: "none",
   zIndex: "$toast",
 });
 
@@ -76,13 +84,19 @@ export const providerReset = globalCss({
       fontWeight: "bold",
       src: `url(${baseFontURL}/untitled-sans-web-medium.woff2)`,
     },
-
     {
       fontDisplay: "swap",
       fontFamily: "Tiempos Headline",
       fontStyle: "normal",
       fontWeight: "bold",
       src: `url(${baseFontURL}/tiempos-headline-regular.woff2)`,
+    },
+    {
+      fontDisplay: "swap",
+      fontFamily: "Tiempos Text",
+      fontStyle: "normal",
+      fontWeight: "normal",
+      src: `url(${baseFontURL}/tiempos-text-regular.woff2)`,
     },
   ],
 

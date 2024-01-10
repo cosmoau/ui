@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import toast, { useToaster } from "react-hot-toast";
 
 import { Icons } from "../../icons";
-import { Badge, Button, Select, useEventListener, useMountSSR, useTheme } from "../../index";
+import { Button, Select, Text, useEventListener, useMountSSR, useTheme } from "../../index";
 import { darkTheme } from "../../stitches.config";
 import { IProvider, ISelect, IToast } from "../../types";
 
@@ -13,7 +13,7 @@ const tag = `design + dev by @dolmios`;
 function ToastController(props: IToast): JSX.Element {
   const { toasts, handlers } = useToaster();
   const { startPause, endPause } = handlers;
-  const TOAST_LIMIT = 3;
+  const TOAST_LIMIT = 4;
 
   useEventListener("keydown", (event: KeyboardEvent) => {
     if (event.key === "Escape" || event.key === "Enter") {
@@ -36,16 +36,13 @@ function ToastController(props: IToast): JSX.Element {
 
         return (
           <ToastStyled key={t.id} animation={t.visible} onClick={(): void => toast.dismiss(t.id)}>
-            {t.type === "success" && (
-              <Badge inline="medium" theme="green">
-                <Icons.Check />
-              </Badge>
-            )}
-            {t.type === "error" && (
-              <Badge inline="medium" theme="red">
-                <Icons.Warning />
-              </Badge>
-            )}
+            <Text
+              as="span"
+              highlight={t.type === "success" ? "green" : t.type === "error" ? "red" : "default"}
+              inline="small">
+              {t.type === "success" ? <Icons.Check /> : t.type === "error" ? <Icons.Warning /> : <Icons.Info />}&nbsp;
+              {t.type === "success" ? "Success" : t.type === "error" ? "Error" : "Info"}
+            </Text>
             {t.message?.toString() || t.message?.toString() || ""}
           </ToastStyled>
         );

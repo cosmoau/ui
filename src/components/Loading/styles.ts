@@ -9,11 +9,20 @@ export const LoadingOverlayStyled = styled("div", {
   boxShadow: "$large",
   display: "flex",
   justifyContent: "center",
+  maxWidth: "60rem",
   padding: "$smaller $small",
+  phone: {
+    left: "50%",
+    maxWidth: "95%",
+    textAlign: "center",
+    transform: "translateX(-50%)",
+    width: "fit-content",
+  },
   pointerEvents: "none",
   position: "fixed",
   right: "$medium",
   userSelect: "none",
+
   zIndex: 1000,
 });
 
