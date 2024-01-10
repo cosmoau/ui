@@ -1,20 +1,20 @@
 import { createStitches, createTheme } from "@stitches/react";
 
 export const breakpoints = {
-  desktop: "@media only screen and (max-width: 2000px)",
-  desktopX: "@media only screen and (min-width: 1601px) and (max-width: 2000px)",
-  laptop: "@media only screen and (max-width: 1600px)",
-  laptopX: "@media only screen and (min-width: 1001px) and (max-width: 1600px)",
+  desktop: "@media only screen and (max-width: 2200px)",
+  desktopX: "@media only screen and (min-width: 1401px) and (max-width: 2200px)",
+  laptop: "@media only screen and (max-width: 1400px)",
+  laptopX: "@media only screen and (min-width: 1101px) and (max-width: 1400px)",
   phone: "@media only screen and (max-width: 800px)",
-  phoneX: "@media only screen and (min-width: 351px) and (max-width: 800px)",
+  phoneX: "@media only screen and (min-width: 401px) and (max-width: 800px)",
   special: {
-    micro: "@media only screen and (max-width: 350px)",
+    micro: "@media only screen and (max-width: 400px)",
     print: "@media print",
     retina: "@media only screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx)",
   },
-  tablet: "@media only screen and (max-width: 1000px)",
-  tabletX: "@media only screen and (min-width: 801px) and (max-width: 1000px)",
-  wide: "@media only screen and (min-width: 2001px)",
+  tablet: "@media only screen and (max-width: 1100px)",
+  tabletX: "@media only screen and (min-width: 801px) and (max-width: 1100px)",
+  wide: "@media only screen and (min-width: 2201px)",
 };
 
 const defaultTheme = {
@@ -58,8 +58,8 @@ const defaultTheme = {
     h2: "3.1rem",
     h3: "2.7rem",
     h4: "2.3rem",
-    h5: "2rem",
-    h6: "1.8rem",
+    h5: "1.9rem",
+    h6: "1.7rem",
     small: "1.6rem",
   },
   fonts: {
