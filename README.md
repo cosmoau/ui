@@ -31,10 +31,6 @@ pnpm tidy
 pnpm build
 ```
 
-## Contributing
-
-We welcome your feedback, advice, or suggestions. This project is created and maintained by a single individual, so it may not be flawless or as comprehensive as other alternatives. 
-
 ## Acknowledgments
 
 - [@stitches/react](https://github.com/stitchesjs/stitches)
