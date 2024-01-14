@@ -30,7 +30,6 @@ export const TableCoreStyled = styled("div", {
         td: {
           borderTop: "0.1rem solid $borderTable",
           fontSize: "$default",
-          padding: "$medium",
         },
         transition: "$default",
       },
@@ -43,7 +42,7 @@ export const TableCoreStyled = styled("div", {
         color: "$accent",
         fontSize: "$small",
         fontWeight: "normal",
-        padding: "$smaller $medium",
+
         textAlign: "left !important",
         whiteSpace: "nowrap",
         zIndex: "$table",
@@ -103,9 +102,20 @@ export const TableCoreStyled = styled("div", {
       },
     },
     slim: {
+      false: {
+        td: {
+          padding: "calc($medium * 1.25) $medium",
+        },
+        th: {
+          padding: "$small $medium",
+        },
+      },
       true: {
         td: {
-          padding: "$small $medium !important",
+          padding: "$small $small !important",
+        },
+        th: {
+          padding: "$smaller $small !important",
         },
       },
     },

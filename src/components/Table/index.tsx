@@ -57,7 +57,7 @@ export default function NewTable({
   restrictLimit,
   kbd,
   defaultLimit,
-  identifier,
+  identifier = "new",
   ...rest
 }: ITable): JSX.Element {
   const { breakpoint } = useBreakpoints();
@@ -78,6 +78,7 @@ export default function NewTable({
     columns,
     storage,
     setStorage,
+    initialKey,
   );
 
   useTableKeyboard(pagination, kbd, handlePageChange, resetPagination, endPagination);
@@ -97,7 +98,7 @@ export default function NewTable({
   }, [identifier]);
 
   return (
-    <TableStyled css={css} id={identifier}>
+    <TableStyled css={css} id={initialKey}>
       {header && (
         <TableHeaderStyled>
           <TableHeaderCoreStyled>
@@ -149,7 +150,7 @@ export default function NewTable({
         header={header !== undefined}
         pagination={pagination}
         slim={slim || (storage.limit > 10 && data && data.length > 10)}>
-        <table {...rest} id={`${identifier}-table`}>
+        <table {...rest}>
           {rows && (
             <thead id={`${identifier}-head`}>
               <tr>

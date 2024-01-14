@@ -99,6 +99,7 @@ export function useTablePagination(
   columns: ITable["columns"],
   storage: IStorage,
   setStorage: ISetStorage,
+  identifier: string,
 ): {
   endPagination: () => void;
   handlePageChange: (direction: "next" | "prev") => void;
@@ -107,10 +108,14 @@ export function useTablePagination(
   scrollToTop: () => void;
 } {
   function scrollToTop(): void {
-    const element = document.getElementById("table");
+    const element = document.getElementById(`${identifier}`);
 
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
     }
   }
 
@@ -121,7 +126,6 @@ export function useTablePagination(
       offset: 0,
       page: 1,
     });
-    scrollToTop();
   }
 
   function handlePageChange(direction: "next" | "prev"): void {
@@ -139,6 +143,8 @@ export function useTablePagination(
       offset: offset,
       page: page,
     });
+
+    scrollToTop();
   }
 
   const resetPagination = (): void => {
