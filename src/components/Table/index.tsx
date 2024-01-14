@@ -1,7 +1,18 @@
 import { useEffect } from "react";
 
 import { Icons } from "../../icons";
-import { Badge, Button, Loading, Select, Stack, Text, fadeIn, theme, useBreakpoints, useLocalStorage } from "../../index";
+import {
+  Badge,
+  Button,
+  Loading,
+  Select,
+  Stack,
+  Text,
+  fadeIn,
+  theme,
+  useBreakpoints,
+  useLocalStorage,
+} from "../../index";
 import { ITable } from "../../types";
 
 import {
@@ -233,18 +244,14 @@ export default function NewTable({
                     <Loading />
                   ) : error ? (
                     <Text>
-                          <Text
-                            as="span"
-                            highlight="red"
-                            inline="small">
-                            <Icons.Warning />&nbsp;Error
-                              </Text>
-                        {error || "Something went wrong"}
+                      <Text as="span" highlight="red" inline="small">
+                        <Icons.Warning />
+                        &nbsp;Error
                       </Text>
+                      {error || "Something went wrong"}
+                    </Text>
                   ) : (
-                   <Badge>
-                    No results were found, check back soon for updates.
-                    </Badge>
+                    <Badge>No results were found, check back soon for updates.</Badge>
                   )}
                 </td>
               </tr>

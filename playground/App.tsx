@@ -283,7 +283,7 @@ export function App(): ReactElement {
             <C.Badge inline="small" link small theme="orange">
               Test orange button small
             </C.Badge>
-          <C.Badge inline="small" link  theme="orange">
+          <C.Badge inline="small" link theme="orange">
             Test orange button normal
           </C.Badge>
             <C.Badge inline="small" theme="red">
@@ -300,7 +300,21 @@ export function App(): ReactElement {
             </C.Badge>
           </C.Stack>
           <C.Stack flexduo>
-            <C.Box loading theme="error">
+            <C.Box theme="error">
+            <img
+              src="https://cdn05.carsforsale.com/0088abd885617999338fcdf67f942ebc65/800x600/1983-chevrolet-el-camino-base-2dr-standard-cab.jpg"
+              style={{
+                borderRadius: "0.5rem",
+                display: "block",
+                height: "100%",
+                margin: "0 auto",
+                maxHeight: "100%",
+                maxWidth: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+                width: "100%",
+              }}
+            />
             <C.Text as='h4'>
               Title
             </C.Text>

@@ -16,11 +16,12 @@ import { theme } from "./stitches.config";
 
 type IThemeSpacing = keyof typeof theme.space;
 
-type InferComponentProps<T extends ElementType> = T extends ComponentType<infer U>
-  ? U
-  : T extends keyof JSX.IntrinsicElements
-    ? JSX.IntrinsicElements[T]
-    : Record<string, never>;
+type InferComponentProps<T extends ElementType> =
+  T extends ComponentType<infer U>
+    ? U
+    : T extends keyof JSX.IntrinsicElements
+      ? JSX.IntrinsicElements[T]
+      : Record<string, never>;
 
 export interface IAvatar {
   alt?: string;
@@ -141,6 +142,7 @@ export interface IImage extends ImageProps {
   fillFit?: CSSProperties["objectFit"];
   fillHeight?: string | number;
   fillPosition?: CSSProperties["objectPosition"];
+  sizes: ImageProps["sizes"];
 }
 
 export interface IInput extends ComponentPropsWithRef<"input"> {

@@ -132,20 +132,18 @@ export default function Field({
         <FieldCallbackStyled>
           {error && (
             <Badge small theme="red">
-                {errorMessage || <Icons.Warning />}
-              </Badge>
+              {errorMessage || <Icons.Warning />}
+            </Badge>
           )}
           {success && (
             <Badge small theme="green">
-
-                {successMessage || <Icons.Check />}
-              </Badge>
+              {successMessage || <Icons.Check />}
+            </Badge>
           )}
           {warning && (
             <Badge small theme="orange">
-
-                {warningMessage || <Icons.Warning />}
-              </Badge>
+              {warningMessage || <Icons.Warning />}
+            </Badge>
           )}
         </FieldCallbackStyled>
       )}
