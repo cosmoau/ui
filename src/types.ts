@@ -142,7 +142,6 @@ export interface IImage extends ImageProps {
   fillFit?: CSSProperties["objectFit"];
   fillHeight?: string | number;
   fillPosition?: CSSProperties["objectPosition"];
-  sizes: ImageProps["sizes"];
 }
 
 export interface IInput extends ComponentPropsWithRef<"input"> {

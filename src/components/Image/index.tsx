@@ -12,7 +12,6 @@ export default function Image({
   fillPosition = "center",
   fillHeight = "100%",
   quality = 60,
-  sizes = "100vw",
   ...rest
 }: IImage): JSX.Element {
   return (
@@ -32,7 +31,6 @@ export default function Image({
         {...rest}
         fill={fill}
         quality={quality}
-        sizes={sizes}
         style={{
           objectFit: fill ? fillFit || "cover" : "contain",
           objectPosition: fillPosition,
