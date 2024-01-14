@@ -58,7 +58,7 @@ const defaultTheme = {
     h2: "3.1rem",
     h3: "2.7rem",
     h4: "2.3rem",
-    h5: "1.9rem",
+    h5: "1.8rem",
     h6: "1.7rem",
     small: "1.6rem",
   },
@@ -75,7 +75,7 @@ const defaultTheme = {
     small: "0.5rem",
   },
   shadows: {
-    large: "0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2)",
+    large: "0 0.6rem 1.2rem 0 rgba(0, 0, 0, 0.15)",
     small: "0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.15)",
   },
   space: {

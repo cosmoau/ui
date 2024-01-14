@@ -103,7 +103,7 @@ export default function Provider({ children, css, dark }: IProvider): JSX.Elemen
       css={{
         ...css,
       }}>
-      <Icons.IconContext.Provider value={{ weight: "regular" }}>
+      <Icons.IconContext.Provider value={{ weight: "duotone" }}>
         <ToastController />
         {children}
       </Icons.IconContext.Provider>

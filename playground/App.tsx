@@ -443,7 +443,7 @@ export function App(): ReactElement {
             </C.Stack>
 
             <C.Stack top="medium">
-              <C.Box theme="fill">
+              <C.Box link>
                 <C.Badge theme="alternate">Test</C.Badge>
                 <C.Text as="h1">This is a heading (h1)</C.Text>
                 <C.Text as="h2">This is a heading (h2)</C.Text>
