@@ -61,6 +61,10 @@ export default function Avatar({ src, alt, fallback, width = 24, css, colors }: 
     <AvatarStyled
       css={{
         height: width,
+        maxHeight: width,
+        maxWidth: width,
+        minHeight: width,
+        minWidth: width,
         width: width,
         ...(colors && {
           backgroundColor: `rgba(${backgroundColor}, 0.475)`,
@@ -75,7 +79,7 @@ export default function Avatar({ src, alt, fallback, width = 24, css, colors }: 
         ...css,
       }}>
       {src ? (
-        <Image alt={alt || fallback} fillFit="cover" height={width} src={src} width={width} />
+        <Image alt={alt || fallback} fill fillFit="cover" sizes={`${width}px`} src={src} />
       ) : (
         <Text as="span">{fallback}</Text>
       )}
