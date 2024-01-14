@@ -2,7 +2,7 @@ import { ChangeEvent, useState } from "react";
 import toast from "react-hot-toast";
 
 import { Icons } from "../../icons";
-import { Button, Loading, useEventListener, Text, useBreakpoints } from "../../index";
+import { Button, Loading, useEventListener, useBreakpoints, Badge } from "../../index";
 import { IInput } from "../../types";
 
 import { InputAreaStyled, InputCallbackStyled, InputFunctionStyled, InputStyled, InputCoreStyled } from "./styles";
@@ -165,25 +165,21 @@ export default function Input({
       {(error || success || warning) && (
         <InputCallbackStyled>
           {error && (
-            <Text as="small">
-              <Text as="span" highlight="red">
-                {errorMessage || <Icons.Warning />}
-              </Text>
-            </Text>
+            <Badge small theme="red">
+              {errorMessage || <Icons.Warning />}
+            </Badge>
           )}
           {success && (
-            <Text as="small">
-              <Text as="span" highlight="green">
-                {successMessage || <Icons.Check />}
-              </Text>
-            </Text>
+            <Badge small theme="green">
+
+              {successMessage || <Icons.Check />}
+            </Badge>
           )}
           {warning && (
-            <Text as="small">
-              <Text as="span" highlight="orange">
-                {warningMessage || <Icons.Warning />}
-              </Text>
-            </Text>
+            <Badge small theme="orange">
+
+              {warningMessage || <Icons.Warning />}
+            </Badge>
           )}
         </InputCallbackStyled>
       )}

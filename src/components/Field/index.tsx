@@ -2,7 +2,7 @@ import { ChangeEvent, useState } from "react";
 import toast from "react-hot-toast";
 
 import { Icons } from "../../icons";
-import { Button, Loading, Text } from "../../index";
+import { Badge, Button, Loading } from "../../index";
 import { IField } from "../../types";
 
 import { FieldStyled, FieldAreaStyled, FieldFunctionStyled, FieldCallbackStyled, FieldCoreStyled } from "./styles";
@@ -131,25 +131,21 @@ export default function Field({
       {(error || success || warning) && (
         <FieldCallbackStyled>
           {error && (
-            <Text as="small">
-              <Text as="span" highlight="red">
+            <Badge small theme="red">
                 {errorMessage || <Icons.Warning />}
-              </Text>
-            </Text>
+              </Badge>
           )}
           {success && (
-            <Text as="small">
-              <Text as="span" highlight="green">
+            <Badge small theme="green">
+
                 {successMessage || <Icons.Check />}
-              </Text>
-            </Text>
+              </Badge>
           )}
           {warning && (
-            <Text as="small">
-              <Text as="span" highlight="orange">
+            <Badge small theme="orange">
+
                 {warningMessage || <Icons.Warning />}
-              </Text>
-            </Text>
+              </Badge>
           )}
         </FieldCallbackStyled>
       )}

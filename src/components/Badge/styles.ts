@@ -10,11 +10,7 @@ export const BadgeStyled = styled("div", {
   justifyContent: "center",
   lineHeight: "$default",
   marginBottom: "0 !important",
-  padding: "$smallest $small",
-
-  phone: {
-    minHeight: "3.1rem",
-  },
+  padding: "calc($smallest * 0.5) calc($small * 0.6)",
 
   variants: {
     animation: {

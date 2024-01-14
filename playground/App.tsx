@@ -106,7 +106,7 @@ export function App(): ReactElement {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultricies.
 
           </C.Popover>
-          <C.Button inline="large" onClick={() => toast("C notess C notess C notess C notess C notess C notess C notess C notess C notess C notess C notess C notess C notess C notess C notess")}>
+          <C.Button inline="large" onClick={() => toast.success("C notess C notess C notess C notess C notess C notess C notess C notess C notess C notess C notess C notess C notess C notess C notess")}>
             Toast
           </C.Button>
           <C.Dialog
@@ -281,8 +281,11 @@ export function App(): ReactElement {
       <C.View bottom="largest" container top="largest">
           <C.Stack align="center" bottom="large">
             <C.Badge inline="small" link small theme="orange">
-              Test orange button
+              Test orange button small
             </C.Badge>
+          <C.Badge inline="small" link  theme="orange">
+            Test orange button normal
+          </C.Badge>
             <C.Badge inline="small" theme="red">
               Test red button
             </C.Badge>
