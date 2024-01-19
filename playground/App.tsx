@@ -136,6 +136,7 @@ export function App(): ReactElement {
           <C.Select
             filter
             height={1500}
+            initial="/page2"
             last
             options={[
               {
@@ -172,13 +173,65 @@ export function App(): ReactElement {
                 value: `Option ${i}`,
               })),
             ]}
-            selection={["/page2"]}
             trigger={<C.Button>Select</C.Button>}
             onSelection={(value, label) => toast.error(`Page selected: ${value} - ${label}`)}
           />
+          <C.SelectMulti
+            filter
+            initial={[
+              {
+                label: "Home",
+                value: "/page1",
+              },
+              {
+                label: "Pricing",
+                value: "/page2",
+              },
+            ]}
+            limit={5}
+            options={[
+              {
+                icon: <SmileyMeh />,
+                label: "Home",
+                value: "/page1",
+              },
+              {
+                label: "Pricing",
+                value: "/page2",
+              },
+              {
+                label: "Enterprise",
+                value: "/page3",
+              },
+              {
+                label: "Platform",
+                value: "/page4",
+              },
+              {
+                label: "About",
+                value: "/page5",
+              },
+              {
+                label: "Blog",
+                value: "/page6",
+              },
+              {
+                label: "Contact",
+                value: "/page7",
+              },
+              ...Array.from(Array(100).keys()).map((i) => ({
+                label: `Option ${i}`,
+                value: `Option ${i}`,
+              })),
+            ]}
+            trigger={<C.Button>SelectMulti</C.Button>}
+            onSelection={(value) => toast.error(`Page selected: ${value.map((item) => item.label).join(", ")}`)}
+          />
+
         </C.Stack>
         <C.Stack align="center" top="large">
           <C.Menu
+            initial="/page2"
             options={[
               {
                 label: "Home",
@@ -209,7 +262,6 @@ export function App(): ReactElement {
                 value: "/page7",
               },
             ]}
-            selection="/page2"
             trigger={<C.Button>Menu</C.Button>}
             onSelection={(value, label) => toast.error(`Page selected: ${value} - ${label}`)}>
             <C.Button block theme="solid">
@@ -599,6 +651,7 @@ export function App(): ReactElement {
           </C.Popover>
           <C.Select
             filter
+            initial={"/page2"}
             last
             options={[
               {
@@ -635,13 +688,13 @@ export function App(): ReactElement {
                 value: `Option ${i}`,
               })),
             ]}
-            selection={["/page2"]}
             trigger={<C.Button>Select</C.Button>}
             onSelection={(value, label) => toast.error(`Page selected: ${value} - ${label}`)}
           />
         </C.Stack>
         <C.Stack align="center" top="large">
           <C.Menu
+            initial="/page2"
             options={[
               {
                 label: "Home",
@@ -672,7 +725,6 @@ export function App(): ReactElement {
                 value: "/page7",
               },
             ]}
-            selection="/page2"
             trigger={<C.Button>Menu</C.Button>}
             onSelection={(value, label) => toast.error(`Page selected: ${value} - ${label}`)}>
             <C.Button block theme="solid">

@@ -44,6 +44,7 @@ export const SelectGroupStyled = styled("div", {
 export const SelectFilterStyled = styled("div", {
   backgroundColor: "$background",
   input: {
+    fontSize: "$small",
     width: "100%",
   },
 

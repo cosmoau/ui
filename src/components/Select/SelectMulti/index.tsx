@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
+import { Icons } from "../../../icons";
 import {
   Input,
   Loading,
@@ -8,9 +10,8 @@ import {
   useOutsideClick,
   usePopper,
   useWindowDimensions,
-} from "../../index";
-import { ISelect } from "../../types";
-
+} from "../../../index";
+import { ISelectMulti } from "../../../types";
 import {
   SelectStyled,
   SelectTriggerStyled,
@@ -20,9 +21,9 @@ import {
   SelectEmptyStyled,
   SelectLabelStyled,
   SelectIconStyled,
-} from "./styles";
+} from "../styles";
 
-export default function Select({
+export default function SelectMulti({
   options,
   css,
   onSelection,
@@ -31,11 +32,12 @@ export default function Select({
   initial,
   width,
   height,
+  limit,
   trigger,
   loading,
-  last,
+  reset = true,
   filter,
-}: ISelect): JSX.Element {
+}: ISelectMulti): JSX.Element {
   const { triggerRef, contentRef, isOpen, isMounted, handleClick, handleClose } = usePopper();
 
   const { breakpoint } = useBreakpoints();
@@ -43,7 +45,7 @@ export default function Select({
 
   const [search, setSearch] = useState("");
   const [focused, setFocused] = useState("");
-  const [selected, setSelected] = useState<string>(initial || "");
+  const [selected, setSelected] = useState<Array<{ label: string; value: string }>>(initial || []);
 
   useEffect(() => {
     if (!isOpen) {
@@ -52,12 +54,34 @@ export default function Select({
     }
   }, [isOpen]);
 
-  function handleSelection(value: string, label: string): void {
-    setSelected(value);
-    if (onSelection) {
-      onSelection(value, label);
+  function handleSelection(option: { label: string; value: string }): void {
+    const selectionIndex = selected.findIndex((item) => item.value === option.value);
+    let newSelectedItems;
+
+    if (selectionIndex === -1) {
+      if (!limit || selected.length < limit) {
+        newSelectedItems = [...selected, option];
+        setSelected(newSelectedItems);
+        if (onSelection) {
+          onSelection(newSelectedItems);
+        }
+      } else {
+        toast(`Maximum selections reached (${limit}).`);
+      }
+    } else {
+      newSelectedItems = [...selected.slice(0, selectionIndex), ...selected.slice(selectionIndex + 1)];
+      setSelected(newSelectedItems);
+      if (onSelection) {
+        onSelection(newSelectedItems);
+      }
     }
-    handleClose();
+  }
+
+  function handleReset(): void {
+    setSelected([]);
+    if (onSelection) {
+      onSelection([]);
+    }
   }
 
   const deviceWidth = typeof window !== "undefined" ? Number(window?.innerWidth || 0) : 0;
@@ -93,7 +117,7 @@ export default function Select({
       const index = options.findIndex((option) => option.value === focused);
 
       if (index >= 0) {
-        handleSelection(options[index].value, options[index].label);
+        handleSelection(options[index]);
       }
     }
   });
@@ -155,9 +179,8 @@ export default function Select({
               <SelectItemStyled
                 key={option.value}
                 focused={option.value === focused && breakpoint !== "phone"}
-                last={last && !search}
-                selected={option.value === selected}
-                onClick={(): void => handleSelection(option.value, option.label)}
+                selected={selected.findIndex((item) => item.value === option.value) !== -1}
+                onClick={(): void => handleSelection(option)}
                 onMouseOver={(): void => {
                   if (breakpoint !== "phone" && focused !== "") {
                     setFocused(option.value);
@@ -174,6 +197,22 @@ export default function Select({
             ))
           ) : (
             <SelectEmptyStyled>No results found.</SelectEmptyStyled>
+          )}
+          {reset && selected.length > 0 && (
+            <SelectItemStyled
+              key="reset"
+              last
+              onClick={(): void => handleReset()}
+              onMouseOver={(): void => {
+                if (breakpoint !== "phone" && focused !== "") {
+                  setFocused("");
+                }
+              }}>
+              Reset
+              <SelectIconStyled align="right">
+                <Icons.XCircle />
+              </SelectIconStyled>
+            </SelectItemStyled>
           )}
         </SelectGroupStyled>
       )}

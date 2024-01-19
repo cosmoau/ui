@@ -106,7 +106,7 @@ export default function Field({
                 onClick={(): void => {
                   handleReset();
                 }}>
-                <Icons.X />
+                <Icons.XCircle />
               </Button>
             )}
 

@@ -97,7 +97,7 @@ export default function Dialog({ css, trigger, children, title, disabled, small,
                 {title}
               </Text>
               <Button small theme={lightbox ? "default" : "fill"} onClick={(): void => handleClose()}>
-                <Icons.X />
+                <Icons.XCircle />
               </Button>
             </DialogHeaderStyled>
             <DialogContentStyled lightbox={lightbox}>{children}</DialogContentStyled>

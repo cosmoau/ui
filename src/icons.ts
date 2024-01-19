@@ -10,7 +10,7 @@ import {
   IconContext,
   MagnifyingGlass,
   Warning,
-  X,
+  XCircle,
   Info,
   ArrowLeft,
   ArrowRight,
@@ -49,5 +49,5 @@ export const Icons = {
   Sun,
   TableRows: Table,
   Warning,
-  X,
+  XCircle,
 };

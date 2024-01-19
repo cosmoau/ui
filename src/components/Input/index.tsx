@@ -135,7 +135,7 @@ export default function Input({
                 onClick={(): void => {
                   handleReset();
                 }}>
-                <Icons.X />
+                <Icons.XCircle />
               </Button>
             )}
 

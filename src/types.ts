@@ -185,12 +185,12 @@ export interface ILogo {
 export interface IMenu {
   children?: ReactNode;
   css?: CSS;
+  initial?: string;
   onSelection?: (value: string, label: string) => void;
   options: Array<{
     label: string;
     value: string;
   }>;
-  selection?: string;
   trigger: ReactNode;
 }
 
@@ -229,6 +229,7 @@ export interface ISelect {
   filter?: boolean;
   height?: number | string;
   horizontal?: "left" | "right" | "center";
+  initial?: string;
   label?: string;
   last?: boolean;
   loading?: boolean;
@@ -239,10 +240,16 @@ export interface ISelect {
     label: string;
     value: string;
   }>;
-  selection?: string[];
   trigger: ReactNode;
   vertical?: "top" | "bottom";
   width?: number | string;
+}
+
+export interface ISelectMulti extends Omit<ISelect, "onSelection" | "initial" | "last"> {
+  initial?: Array<{ label: string; value: string }>;
+  limit?: number;
+  onSelection?: (value: Array<{ label: string; value: string }>) => void;
+  reset?: boolean;
 }
 
 export interface IStack {

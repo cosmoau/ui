@@ -271,7 +271,7 @@ export default function NewTable({
                   label: size.toString(),
                   value: size.toString(),
                 }))}
-                selection={[storage?.limit?.toString() || TABLE_PAGES[0].toString()]}
+                selection={storage?.limit?.toString() || TABLE_PAGES[0].toString()}
                 trigger={
                   <Button disabled={data && data?.length < 10} icon={<Icons.TableRows />} inline="small" small>
                     {storage.limit}
