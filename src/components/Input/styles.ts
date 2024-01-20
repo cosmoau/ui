@@ -22,12 +22,12 @@ export const InputCoreStyled = styled("div", {
   },
   alignContent: "center",
   alignSelf: "center",
-  background: "$defaultInput",
+
   border: "0.1rem solid $border",
   borderRadius: "$small",
   display: "flex",
   justifyContent: "center",
-  padding: "$smaller $small",
+
   transition: "$default",
   width: "100%",
 });
@@ -52,7 +52,7 @@ export const InputAreaStyled = styled("input", {
   fontFamily: "$default",
   fontSize: "$default",
   margin: "0 auto",
-  padding: "$smallest 0",
+  padding: "$smaller $small",
   phone: {
     fontSize: "16px !important",
   },
@@ -60,9 +60,12 @@ export const InputAreaStyled = styled("input", {
 });
 
 export const InputFunctionStyled = styled("div", {
+  backgroundColor: "$defaultTable",
+  borderLeft: "0.1rem solid $border",
   display: "inline-flex",
   height: "100%",
   marginLeft: "$small",
+  padding: "$smaller $small",
   position: "relative",
   verticalAlign: "middle",
 });

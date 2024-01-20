@@ -171,7 +171,7 @@ export default function Input({
           )}
           {success && (
             <Badge small theme="green">
-              {successMessage || <Icons.Check />}
+              {successMessage || <Icons.CheckCircle />}
             </Badge>
           )}
           {warning && (
