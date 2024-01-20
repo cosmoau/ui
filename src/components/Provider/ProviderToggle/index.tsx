@@ -14,8 +14,8 @@ export default function ProviderToggle(): JSX.Element {
 
   return (
     <Select
+      initial={theme}
       options={options}
-      selection={theme}
       trigger={
         <Button
           css={{

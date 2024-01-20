@@ -266,12 +266,12 @@ export default function NewTable({
             {!restrictLimit && (
               <Select
                 disabled={data && data.length < 10}
+                initial={storage?.limit?.toString() || TABLE_PAGES[0].toString()}
                 label="Page Size"
                 options={TABLE_PAGES.map((size) => ({
                   label: size.toString(),
                   value: size.toString(),
                 }))}
-                selection={storage?.limit?.toString() || TABLE_PAGES[0].toString()}
                 trigger={
                   <Button disabled={data && data?.length < 10} icon={<Icons.TableRows />} inline="small" small>
                     {storage.limit}

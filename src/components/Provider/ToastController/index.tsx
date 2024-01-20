@@ -36,7 +36,8 @@ export function ToastController(props: IToast): JSX.Element {
               as="span"
               highlight={t.type === "success" ? "green" : t.type === "error" ? "red" : "default"}
               inline="small">
-              {t.type === "success" ? <Icons.Check /> : t.type === "error" ? <Icons.Warning /> : <Icons.Info />}&nbsp;
+              {t.type === "success" ? <Icons.CheckCircle /> : t.type === "error" ? <Icons.Warning /> : <Icons.Info />}
+              &nbsp;
               {t.type === "success" ? "Success" : t.type === "error" ? "Error" : "Info"}
             </Text>
             {t.message?.toString() || t.message?.toString() || ""}
