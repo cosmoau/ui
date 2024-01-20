@@ -23,7 +23,7 @@
     "@popperjs/core": "^2.11.8",
     "@stitches/react": "^1.2.8",
     "@swc/helpers": "^0.5.3",
-    "chrono-node": "^2.7.4",
+    "chrono-node": "^2.7.5",
     "fast-sort": "^3.4.0",
     "react-hot-toast": "^2.4.1",
     "react-wrap-balancer": "^1.1.0"

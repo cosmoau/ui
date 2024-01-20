@@ -322,6 +322,19 @@ export interface IText extends ComponentPropsWithoutRef<"div"> {
   top?: IThemeSpacing;
 }
 
+export interface IUpload {
+  accept?: string;
+  error?: boolean;
+  errorMessage?: string;
+  loading?: boolean;
+  maxSize?: number;
+  multiple?: boolean;
+  onUpload: (file: File) => void;
+  onUploadMultiple?: (files: File[]) => void;
+  success?: boolean;
+  successMessage?: string;
+}
+
 export type IToast = InferComponentProps<typeof Toaster>;
 
 export interface IView {

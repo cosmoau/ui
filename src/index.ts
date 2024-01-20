@@ -28,6 +28,7 @@ export { default as SelectMulti } from "./components/Select/SelectMulti";
 export { default as Stack } from "./components/Stack";
 export { default as Table } from "./components/Table";
 export { default as Text } from "./components/Text";
+export { default as Upload } from "./components/Upload";
 export { default as View } from "./components/View";
 
 // Hooks: src/hooks
