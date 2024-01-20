@@ -5,7 +5,7 @@ import { IMenu } from "../../types";
 
 import { MenuGroupStyled, MenuItemStyled, MenuStyled, MenuTriggerStyled, MenuContentStyled } from "./styles";
 
-export default function Menu({ css, trigger, options, selection, onSelection, children }: IMenu): JSX.Element {
+export default function Menu({ css, trigger, options, initial, onSelection, children }: IMenu): JSX.Element {
   const ref = useRef<HTMLDivElement>(null);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -63,7 +63,7 @@ export default function Menu({ css, trigger, options, selection, onSelection, ch
           {options.map((option) => (
             <MenuItemStyled
               key={option.value}
-              selected={selection === option.value ? true : false}
+              selected={initial === option.value ? true : false}
               onClick={(): void => {
                 handleSelection(option.value, option.label);
               }}>
