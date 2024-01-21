@@ -35,11 +35,15 @@ export default function Text({
           paddingBottom: `$${bottom}`,
         }),
         ...(inline && {
-          alignSelf: "center",
-          display: "inline-flex",
-          marginBottom: "0 !important",
+          // as is not strong or span
+          ...(as !== "strong" &&
+            as !== "span" && {
+              alignSelf: "center",
+              display: "inline-flex",
+              marginBottom: "0 !important",
+              verticalAlign: "middle",
+            }),
           marginRight: inline === "auto" ? "auto" : `$${inline}`,
-          verticalAlign: "middle",
         }),
 
         ...css,
