@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import React, { ReactElement, useState } from "react";
+import toast from "react-hot-toast";
 
 import * as C from "../src/index";
 
@@ -9,6 +10,16 @@ export function App(): ReactElement {
 
     return (
     <C.Provider>
+            <C.View bottom="larger" container top="larger">
+                <C.Popover trigger={<C.Button>Calendar Range</C.Button>}>
+                <C.Calendar onSelection={(dates) => toast.success(`Selected dates: ${JSON.stringify(dates)}`)} />
+                </C.Popover>
+                </C.View>
+            <C.View bottom="larger" container top="larger">
+                <C.Popover trigger={<C.Button>Calendar Single</C.Button>}>
+                <C.Calendar mode="single" onSelection={(dates) => toast.success(`Selected dates: ${JSON.stringify(dates)}`)} />
+                </C.Popover>
+            </C.View>
         <C.View bottom="larger" container top="larger">
             <C.Stack direction="row">
                 <C.Stack direction="column" offset={30} width={40}>
@@ -32,7 +43,7 @@ success
                 />
                 </C.Stack>
             </C.Stack>
-            </C.View>
+            C</C.View>
             </C.Provider>
     )
 }

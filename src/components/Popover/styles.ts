@@ -20,6 +20,7 @@ export const PopoverContentStyled = styled("div", {
   boxShadow: "$large",
   lineBreak: "auto",
   maxHeight: "50rem",
+  maxWidth: "100%",
   overflowY: "auto",
   pointerEvents: "auto",
   position: "absolute",
@@ -48,7 +49,7 @@ export const PopoverContentStyled = styled("div", {
       false: {
         minWidth: "40rem",
         phone: {
-          minWidth: "80vw",
+          minWidth: "85vw",
         },
       },
       true: {

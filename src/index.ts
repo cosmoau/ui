@@ -6,6 +6,7 @@ export { default as Avatar } from "./components/Avatar";
 export { default as Badge } from "./components/Badge";
 export { default as Box } from "./components/Box";
 export { default as Button } from "./components/Button";
+export { default as Calendar } from "./components/Calendar";
 export { default as Code } from "./components/Code";
 export { default as Dialog } from "./components/Dialog";
 export { default as Divider } from "./components/Divider";

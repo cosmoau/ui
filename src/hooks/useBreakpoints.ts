@@ -2,15 +2,17 @@ import { useEffect, useState } from "react";
 
 import { breakpoints } from "../stitches.config";
 
-type Breakpoint = "phone" | "tabletX" | "laptopX" | "desktopX" | "wide" | undefined;
+type Breakpoint = "micro" | "phoneX" | "tabletX" | "laptopX" | "desktopX" | "wide" | undefined;
 
 const extractMediaQuery = (cssRule: string): string => {
   return cssRule.replace("@media only screen and ", "");
 };
 
 const getBreakpoint = (): Breakpoint => {
-  if (window.matchMedia(extractMediaQuery(breakpoints.phone)).matches) {
-    return "phone";
+  if (window.matchMedia(extractMediaQuery(breakpoints.special.micro)).matches) {
+    return "micro";
+  } else if (window.matchMedia(extractMediaQuery(breakpoints.phoneX)).matches) {
+    return "phoneX";
   } else if (window.matchMedia(extractMediaQuery(breakpoints.tabletX)).matches) {
     return "tabletX";
   } else if (window.matchMedia(extractMediaQuery(breakpoints.laptopX)).matches) {
@@ -28,13 +30,15 @@ export default function useBreakpoints(): {
   breakpoint: Breakpoint;
   isDesktop: boolean;
   isLaptop: boolean;
+  isMicro: boolean;
   isPhone: boolean;
   isTablet: boolean;
   isWide: boolean;
 } {
-  const [breakpoint, setBreakpoint] = useState<Breakpoint>("phone");
+  const [breakpoint, setBreakpoint] = useState<Breakpoint>("phoneX");
 
-  const isPhone = breakpoint === "phone";
+  const isMicro = breakpoint === "micro";
+  const isPhone = breakpoint === "phoneX";
   const isTablet = breakpoint === "tabletX";
   const isLaptop = breakpoint === "laptopX";
   const isDesktop = breakpoint === "desktopX";
@@ -57,5 +61,5 @@ export default function useBreakpoints(): {
     return () => {};
   }, []);
 
-  return { breakpoint, isDesktop, isLaptop, isPhone, isTablet, isWide };
+  return { breakpoint,isDesktop, isLaptop, isMicro, isPhone, isTablet, isWide };
 }

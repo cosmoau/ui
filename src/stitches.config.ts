@@ -6,9 +6,9 @@ export const breakpoints = {
   laptop: "@media only screen and (max-width: 1400px)",
   laptopX: "@media only screen and (min-width: 1101px) and (max-width: 1400px)",
   phone: "@media only screen and (max-width: 800px)",
-  phoneX: "@media only screen and (min-width: 401px) and (max-width: 800px)",
+  phoneX: "@media only screen and (min-width: 376px) and (max-width: 800px)",
   special: {
-    micro: "@media only screen and (max-width: 400px)",
+    micro: "@media only screen and (max-width: 375px)",
     print: "@media print",
     retina: "@media only screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx)",
   },
