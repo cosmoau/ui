@@ -61,5 +61,5 @@ export default function useBreakpoints(): {
     return () => {};
   }, []);
 
-  return { breakpoint,isDesktop, isLaptop, isMicro, isPhone, isTablet, isWide };
+  return { breakpoint, isDesktop, isLaptop, isMicro, isPhone, isTablet, isWide };
 }
