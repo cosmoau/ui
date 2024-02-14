@@ -118,7 +118,7 @@ export default function NewTable({
                 {filters && (
                   <Button
                     icon={
-                      breakpoint !== "phoneX" ? (
+                      breakpoint !== "phone" ? (
                         storage.filtering ? (
                           <Icons.ArrowsInSimple />
                         ) : (
@@ -127,7 +127,7 @@ export default function NewTable({
                       ) : undefined
                     }
                     onClick={(): void => setStorage({ ...storage, filtering: !storage.filtering })}>
-                    {breakpoint === "phoneX" ? (
+                    {breakpoint === "phone" ? (
                       storage.filtering ? (
                         <Icons.ArrowsInSimple />
                       ) : (

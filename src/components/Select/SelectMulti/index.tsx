@@ -90,7 +90,7 @@ export default function SelectMulti({
   useOutsideClick(contentRef, () => handleClose());
 
   useEventListener("keydown", (event: KeyboardEvent) => {
-    if (breakpoint === "phoneX") {
+    if (breakpoint === "phone") {
       return;
     }
     if (event.key === "Escape") {
@@ -185,11 +185,11 @@ export default function SelectMulti({
             filteredOptions.map((option) => (
               <SelectItemStyled
                 key={option.value}
-                focused={option.value === focused && breakpoint !== "phoneX"}
+                focused={option.value === focused && breakpoint !== "phone"}
                 selected={selected.findIndex((item) => item.value === option.value) !== -1}
                 onClick={(): void => handleSelection(option)}
                 onMouseOver={(): void => {
-                  if (breakpoint !== "phoneX" && focused !== "") {
+                  if (breakpoint !== "phone" && focused !== "") {
                     setFocused(option.value);
                   }
                 }}>
@@ -211,7 +211,7 @@ export default function SelectMulti({
               last
               onClick={(): void => handleReset()}
               onMouseOver={(): void => {
-                if (breakpoint !== "phoneX" && focused !== "") {
+                if (breakpoint !== "phone" && focused !== "") {
                   setFocused("");
                 }
               }}>

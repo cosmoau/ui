@@ -66,7 +66,7 @@ export default function Select({
   useOutsideClick(contentRef, () => handleClose());
 
   useEventListener("keydown", (event: KeyboardEvent) => {
-    if (breakpoint === "phoneX") {
+    if (breakpoint === "phone") {
       return;
     }
     if (event.key === "Escape") {
@@ -161,12 +161,12 @@ export default function Select({
             filteredOptions.map((option) => (
               <SelectItemStyled
                 key={option.value}
-                focused={option.value === focused && breakpoint !== "phoneX"}
+                focused={option.value === focused && breakpoint !== "phone"}
                 last={last && !search}
                 selected={option.value === selected}
                 onClick={(): void => handleSelection(option.value, option.label)}
                 onMouseOver={(): void => {
-                  if (breakpoint !== "phoneX" && focused !== "") {
+                  if (breakpoint !== "phone" && focused !== "") {
                     setFocused(option.value);
                   }
                 }}>
