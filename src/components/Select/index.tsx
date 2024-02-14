@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import {
   Input,
   Loading,
+  Text,
   useBreakpoints,
   useEventListener,
   useOutsideClick,
@@ -65,7 +66,7 @@ export default function Select({
   useOutsideClick(contentRef, () => handleClose());
 
   useEventListener("keydown", (event: KeyboardEvent) => {
-    if (breakpoint === "phone") {
+    if (breakpoint === "phoneX") {
       return;
     }
     if (event.key === "Escape") {
@@ -134,7 +135,13 @@ export default function Select({
             },
             width: width || "auto",
           }}>
-          {label && <SelectLabelStyled>{label}</SelectLabelStyled>}
+          {label && (
+            <SelectLabelStyled>
+              <Text as="h5" bottom="none">
+                {label}
+              </Text>
+            </SelectLabelStyled>
+          )}
           {options.length > 10 && filter && (
             <SelectFilterStyled>
               <Input
@@ -154,12 +161,12 @@ export default function Select({
             filteredOptions.map((option) => (
               <SelectItemStyled
                 key={option.value}
-                focused={option.value === focused && breakpoint !== "phone"}
+                focused={option.value === focused && breakpoint !== "phoneX"}
                 last={last && !search}
                 selected={option.value === selected}
                 onClick={(): void => handleSelection(option.value, option.label)}
                 onMouseOver={(): void => {
-                  if (breakpoint !== "phone" && focused !== "") {
+                  if (breakpoint !== "phoneX" && focused !== "") {
                     setFocused(option.value);
                   }
                 }}>

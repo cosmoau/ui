@@ -5,6 +5,7 @@ import { Icons } from "../../../icons";
 import {
   Input,
   Loading,
+  Text,
   useBreakpoints,
   useEventListener,
   useOutsideClick,
@@ -89,7 +90,7 @@ export default function SelectMulti({
   useOutsideClick(contentRef, () => handleClose());
 
   useEventListener("keydown", (event: KeyboardEvent) => {
-    if (breakpoint === "phone") {
+    if (breakpoint === "phoneX") {
       return;
     }
     if (event.key === "Escape") {
@@ -158,7 +159,13 @@ export default function SelectMulti({
             },
             width: width || "auto",
           }}>
-          {label && <SelectLabelStyled>{label}</SelectLabelStyled>}
+          {label && (
+            <SelectLabelStyled>
+              <Text as="h5" bottom="none">
+                {label}
+              </Text>
+            </SelectLabelStyled>
+          )}
           {options.length > 10 && filter && (
             <SelectFilterStyled>
               <Input
@@ -178,11 +185,11 @@ export default function SelectMulti({
             filteredOptions.map((option) => (
               <SelectItemStyled
                 key={option.value}
-                focused={option.value === focused && breakpoint !== "phone"}
+                focused={option.value === focused && breakpoint !== "phoneX"}
                 selected={selected.findIndex((item) => item.value === option.value) !== -1}
                 onClick={(): void => handleSelection(option)}
                 onMouseOver={(): void => {
-                  if (breakpoint !== "phone" && focused !== "") {
+                  if (breakpoint !== "phoneX" && focused !== "") {
                     setFocused(option.value);
                   }
                 }}>
@@ -204,7 +211,7 @@ export default function SelectMulti({
               last
               onClick={(): void => handleReset()}
               onMouseOver={(): void => {
-                if (breakpoint !== "phone" && focused !== "") {
+                if (breakpoint !== "phoneX" && focused !== "") {
                   setFocused("");
                 }
               }}>
