@@ -15,7 +15,7 @@ export interface IStorage {
 
 export type ISetStorage = (value: IStorage) => void;
 
-export function useTableColumns(identifier: string, columns: ITable["columns"]): string[] {
+export function useTableColumns(identifier: string, tbody: ITable["tbody"]): string[] {
   const ref = useRef(true);
   const [columnWidths, setColumnWidths] = useState<number[]>([]);
 
@@ -54,7 +54,7 @@ export function useTableColumns(identifier: string, columns: ITable["columns"]):
         }
       });
     }
-  }, [columns]);
+  }, [tbody]);
 
   //
 
@@ -96,7 +96,7 @@ export function useTableKeyboard(
 }
 
 export function useTablePagination(
-  columns: ITable["columns"],
+  tbody: ITable["tbody"],
   storage: IStorage,
   setStorage: ISetStorage,
   identifier: string,
@@ -129,7 +129,7 @@ export function useTablePagination(
   }
 
   function handlePageChange(direction: "next" | "prev"): void {
-    const totalPages = Math.ceil(columns ? columns.length / storage.limit : 0);
+    const totalPages = Math.ceil(tbody ? tbody.length / storage.limit : 0);
 
     if ((direction === "prev" && storage.page === 1) || (direction === "next" && storage.page === totalPages)) {
       return;
@@ -160,20 +160,20 @@ export function useTablePagination(
     setStorage({
       ...storage,
       limit: storage.limit,
-      offset: columns ? columns.length - storage.limit : 0,
-      page: Math.ceil(columns ? columns.length / storage.limit : 0),
+      offset: tbody ? tbody.length - storage.limit : 0,
+      page: Math.ceil(tbody ? tbody.length / storage.limit : 0),
     });
   };
 
   useEffect(() => {
     resetPagination();
-  }, [columns]);
+  }, [tbody]);
 
   useEffect(() => {
-    if (columns && columns.length && storage.offset >= columns.length && storage.page > 1) {
+    if (tbody && tbody.length && storage.offset >= tbody.length && storage.page > 1) {
       resetPagination();
     }
-  }, [storage.offset, columns, storage.limit, setStorage]);
+  }, [storage.offset, tbody, storage.limit, setStorage]);
 
   return {
     endPagination,
@@ -189,20 +189,20 @@ export function useTableSort({
   defaultDirection = "asc",
   storage,
   setStorage,
-  columns,
+  tbody,
 }: {
-  columns: ITable["columns"];
   defaultDirection?: "asc" | "desc";
   defaultSort?: number;
   setStorage: ISetStorage;
   sortDisabled?: number[];
   storage: IStorage;
+  tbody: ITable["tbody"];
 }): {
   handleSortMapping: (index: number) => void;
   resetSort: () => void;
   sortColumn: number;
   sortDirection: "asc" | "desc";
-  sortedColumns: ITable["columns"];
+  sortedTBody: ITable["tbody"];
 } {
   const [sortColumn, setSortColumn] = useState(defaultSort);
   const [sortDirection, setSortDirection] = useState(defaultDirection);
@@ -227,18 +227,18 @@ export function useTableSort({
     });
   }
 
-  const sortedColumns = columns
+  const sortedTBody = tbody
     ? sortDirection === "asc"
-      ? sort(columns).asc((row) => row[sortColumn].value)
-      : sort(columns).desc((row) => row[sortColumn].value)
-    : columns;
+      ? sort(tbody).asc((row) => row[sortColumn].value)
+      : sort(tbody).desc((row) => row[sortColumn].value)
+    : tbody;
 
   return {
     handleSortMapping,
     resetSort,
     sortColumn,
     sortDirection,
-    sortedColumns,
+    sortedTBody,
   };
 }
 
@@ -256,13 +256,13 @@ export function checkTableIdentifier(identifier: string): void {
 }
 
 export function prepareTable(
-  columns: ITable["columns"],
+  tbody: ITable["tbody"],
   collapse?: boolean,
   collapseDisabled?: number[],
 ): {
-  data: ITable["columns"];
+  data: ITable["tbody"];
 } {
-  if (!columns) {
+  if (!tbody) {
     return {
       data: [],
     };
@@ -270,11 +270,11 @@ export function prepareTable(
 
   if (!collapse || !collapseDisabled || collapseDisabled.length === 0) {
     return {
-      data: columns,
+      data: tbody,
     };
   }
 
-  const data = columns.map((row) => {
+  const data = tbody.map((row) => {
     const newRow = row.filter((_column, index) => !collapseDisabled.includes(index));
 
     return newRow;

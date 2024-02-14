@@ -40,8 +40,8 @@ import {
 export default function NewTable({
   header,
   filters,
-  rows,
-  columns,
+  thead,
+  tbody,
   css,
   collapse,
   collapseDisabled,
@@ -72,10 +72,10 @@ export default function NewTable({
     page: 1,
   });
 
-  const columnWidths = useTableColumns(identifier, columns);
+  const columnWidths = useTableColumns(identifier, tbody);
 
   const { endPagination, scrollToTop, handlePageChange, handlePageSelection, resetPagination } = useTablePagination(
-    columns,
+    tbody,
     storage,
     setStorage,
     initialKey,
@@ -83,15 +83,15 @@ export default function NewTable({
 
   useTableKeyboard(pagination, kbd, handlePageChange, resetPagination, endPagination);
 
-  const { handleSortMapping, sortColumn, sortDirection, sortedColumns } = useTableSort({
-    columns,
+  const { handleSortMapping, sortColumn, sortDirection, sortedTBody } = useTableSort({
     defaultDirection,
     defaultSort,
     setStorage,
     storage,
+    tbody,
   });
 
-  const { data } = prepareTable(sortable ? sortedColumns : columns, collapse, collapseDisabled);
+  const { data } = prepareTable(sortable ? sortedTBody : tbody, collapse, collapseDisabled);
 
   useEffect(() => {
     checkTableIdentifier(identifier);
@@ -118,7 +118,7 @@ export default function NewTable({
                 {filters && (
                   <Button
                     icon={
-                      breakpoint !== "phone" ? (
+                      breakpoint !== "phoneX" ? (
                         storage.filtering ? (
                           <Icons.ArrowsInSimple />
                         ) : (
@@ -127,7 +127,7 @@ export default function NewTable({
                       ) : undefined
                     }
                     onClick={(): void => setStorage({ ...storage, filtering: !storage.filtering })}>
-                    {breakpoint === "phone" ? (
+                    {breakpoint === "phoneX" ? (
                       storage.filtering ? (
                         <Icons.ArrowsInSimple />
                       ) : (
@@ -151,12 +151,12 @@ export default function NewTable({
         pagination={pagination}
         slim={slim || (storage.limit > 10 && data && data.length > 10)}>
         <table {...rest}>
-          {rows && (
+          {thead && (
             <thead id={`${identifier}-head`}>
               <tr>
                 {rowNumbers && <th>&nbsp;</th>}
 
-                {rows.map((child, index) =>
+                {thead.map((child, index) =>
                   !sortable || sortDisabled?.includes(index) ? (
                     <th key={index}>
                       <Text as="span">{child}</Text>
@@ -225,7 +225,7 @@ export default function NewTable({
                       }}>
                       {collapse && index >= 1 && (
                         <Stack bottom="smaller">
-                          <Text as="label">{rows && rows[index]}</Text>
+                          <Text as="label">{thead && thead[index]}</Text>
                         </Stack>
                       )}
                       {cell?.label || cell?.value}
@@ -237,7 +237,7 @@ export default function NewTable({
               <tr>
                 {rowNumbers && <td style={{ opacity: 0.5 }}>&nbsp;</td>}
                 <td
-                  colSpan={rows ? rows.length : 1}
+                  colSpan={thead ? thead.length : 1}
                   style={{
                     color: theme.colors.accent.toString(),
                   }}>

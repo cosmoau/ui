@@ -83,6 +83,15 @@ export interface IButton extends ComponentPropsWithoutRef<"button"> {
   theme?: "default" | "fill" | "minimal" | "solid";
 }
 
+export interface ICalendar {
+  defaultDate?: string;
+  maxDate?: string;
+  minDate?: string;
+  minLength?: number;
+  mode?: "range" | "single";
+  onSelection: (dates: { endDate: string; startDate: string }) => void;
+}
+
 export interface ICode {
   children: ReactNode;
   css?: CSS;
@@ -283,7 +292,6 @@ export interface IStack {
 export interface ITable {
   collapse?: boolean;
   collapseDisabled?: number[];
-  columns?: Array<Array<{ label?: ReactNode; value: string | number; width?: string | number }>>;
   css?: CSS;
   defaultDirection?: "asc" | "desc";
   defaultLimit?: 10 | 25 | 50 | 100 | 200;
@@ -301,10 +309,11 @@ export interface ITable {
   pagination?: boolean;
   restrictLimit?: number;
   rowNumbers?: boolean;
-  rows?: Array<string>;
   slim?: boolean;
   sortDisabled?: number[];
   sortable?: boolean;
+  tbody?: Array<Array<{ label?: ReactNode; value: string | number; width?: string | number }>>;
+  thead?: Array<string>;
 }
 
 export interface IText extends ComponentPropsWithoutRef<"div"> {
