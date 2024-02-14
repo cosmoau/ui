@@ -1,129 +1,114 @@
-import { CaretDoubleLeft, CaretLeft, CaretDoubleRight, CaretRight, Circle } from "@phosphor-icons/react";
 import dayjs from "dayjs";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
-import { Stack, Text, Button, Divider, useBreakpoints } from "../../index";
+import { Icons } from "../../icons";
+import { Stack, Text, Button } from "../../index";
+import { ICalendar } from "../../types";
 
-export interface ICalendarDates {
-  endDate: string;
-  startDate: string;
-}
+import { CalendarGridStyled, CalendarHeaderStyled, CalendarStyled } from "./styles";
 
 export default function Calendar({
   onSelection,
-  minLength = 2, // Default minLength to 2 if not provided
+  minLength = 2,
   mode = "range",
-  minDate: providedMinDate, // Rename for clarity within the component
+  minDate: providedMinDate,
   maxDate: providedMaxDate,
-  defaultDate, // New prop for setting the initial month
-}: {
-  defaultDate?: string;
-  maxDate?: string;
-  minDate?: string;
-  minLength?: number;
-  mode?: "range" | "single";
-  onSelection: (dates: ICalendarDates) => void; // Optional prop for default month
-}): JSX.Element {
-  const { isMicro } = useBreakpoints();
-
+  defaultDate,
+}: ICalendar): JSX.Element {
   const [dates, setDates] = useState({ endDate: "", startDate: "" });
-  const [calendarDates, setCalendarDates] = useState({
+  const [values, setValues] = useState({
     maxDate: providedMaxDate || dayjs().add(2, "year").format("YYYY-MM-DD"),
     minDate: providedMinDate || dayjs().subtract(2, "year").format("YYYY-MM-DD"),
-    selectedDate: defaultDate || dayjs().format("YYYY-MM-DD"), // Use defaultDate if provided
+    selectedDate: defaultDate || dayjs().format("YYYY-MM-DD"),
   });
 
-    const handleDaySelection = (date: string): void => {
-        if (dayjs(date).isBefore(calendarDates.minDate, "day") || dayjs(date).isAfter(calendarDates.maxDate, "day")) {
-            toast.error("Selected date is out of range.");
+  const handleDaySelection = (date: string): void => {
+    if (dayjs(date).isBefore(values.minDate, "day") || dayjs(date).isAfter(values.maxDate, "day")) {
+      toast.error("Selected date is out of range.");
 
-            return;
+      return;
+    }
+
+    let newSelectedDate = values.selectedDate;
+
+    if (mode === "single") {
+      setDates({ endDate: date, startDate: date });
+      onSelection({ endDate: date, startDate: date });
+    } else {
+      if (!dates.startDate || dates.endDate) {
+        if (dayjs(date).format("YYYY-MM") !== dayjs(values.selectedDate).format("YYYY-MM")) {
+          newSelectedDate = dayjs(date).startOf("month").format("YYYY-MM-DD");
         }
-
-        let newSelectedDate = calendarDates.selectedDate;
-
-        if (mode === "single") {
-            setDates({ endDate: date, startDate: date });
-            onSelection({ endDate: date, startDate: date });
-        } else {
-            if (!dates.startDate || dates.endDate) {
-                // If it's the start date and out of range, set selectedDate to the start of the month
-                if (dayjs(date).format("YYYY-MM") !== dayjs(calendarDates.selectedDate).format("YYYY-MM")) {
-                    newSelectedDate = dayjs(date).startOf("month").format("YYYY-MM-DD");
-                }
-                setDates({ endDate: "", startDate: date });
-            } else if (dayjs(date).isBefore(dayjs(dates.startDate), "day")) {
-                toast.error("End date cannot be before start date.");
-            } else if (dayjs(date).isSame(dayjs(dates.startDate), "day")) {
-                setDates({ endDate: "", startDate: "" });
-            } else if (dayjs(date).diff(dayjs(dates.startDate), "day") < minLength) {
-                toast.error(`Minimum length is ${minLength} days.`);
-            } else {
-                // If it's the end date and out of range, adjust selectedDate to make end date visible
-                if (dayjs(date).format("YYYY-MM") !== dayjs(calendarDates.selectedDate).format("YYYY-MM")) {
-                    newSelectedDate = dayjs(date).endOf("month").format("YYYY-MM-DD");
-                }
-                setDates({ endDate: date, startDate: dates.startDate });
-            }
-            onSelection(dates);
+        setDates({ endDate: "", startDate: date });
+      } else if (dayjs(date).isBefore(dayjs(dates.startDate), "day")) {
+        toast.error("End date cannot be before start date.");
+      } else if (dayjs(date).isSame(dayjs(dates.startDate), "day")) {
+        setDates({ endDate: "", startDate: "" });
+      } else if (dayjs(date).diff(dayjs(dates.startDate), "day") < minLength) {
+        toast.error(`Minimum length is ${minLength} days.`);
+      } else {
+        if (dayjs(date).format("YYYY-MM") !== dayjs(values.selectedDate).format("YYYY-MM")) {
+          newSelectedDate = dayjs(date).endOf("month").format("YYYY-MM-DD");
         }
+        setDates({ endDate: date, startDate: dates.startDate });
+      }
+      onSelection(dates);
+    }
 
-        // Update the selectedDate state if it has changed
-        if (newSelectedDate !== calendarDates.selectedDate) {
-            setCalendarDates({ ...calendarDates, selectedDate: newSelectedDate });
-        }
-    };
+    if (newSelectedDate !== values.selectedDate) {
+      setValues({ ...values, selectedDate: newSelectedDate });
+    }
+  };
 
-  const daysInMonth = Array.from({ length: dayjs(calendarDates.selectedDate).daysInMonth() }, (_, i) =>
-    dayjs(calendarDates.selectedDate).startOf("month").add(i, "day").format("YYYY-MM-DD"),
+  const daysInMonth = Array.from({ length: dayjs(values.selectedDate).daysInMonth() }, (_, i) =>
+    dayjs(values.selectedDate).startOf("month").add(i, "day").format("YYYY-MM-DD"),
   );
 
   const isDisabled = {
-    nextMonth: dayjs(calendarDates.selectedDate)
+    nextMonth: dayjs(values.selectedDate)
       .add(1, "month")
-      .isAfter(dayjs(providedMaxDate || calendarDates.maxDate), "month"),
-    nextYear: dayjs(calendarDates.selectedDate)
+      .isAfter(dayjs(providedMaxDate || values.maxDate), "month"),
+    nextYear: dayjs(values.selectedDate)
       .add(1, "year")
-      .isAfter(dayjs(providedMaxDate || calendarDates.maxDate), "year"),
-    prevMonth: dayjs(calendarDates.selectedDate)
+      .isAfter(dayjs(providedMaxDate || values.maxDate), "year"),
+    prevMonth: dayjs(values.selectedDate)
       .subtract(1, "month")
-      .isBefore(dayjs(providedMinDate || calendarDates.minDate), "month"),
-    prevYear: dayjs(calendarDates.selectedDate)
+      .isBefore(dayjs(providedMinDate || values.minDate), "month"),
+    prevYear: dayjs(values.selectedDate)
       .subtract(1, "year")
-      .isBefore(dayjs(providedMinDate || calendarDates.minDate), "year"),
+      .isBefore(dayjs(providedMinDate || values.minDate), "year"),
   };
 
   const handleDateChange = (type: "month" | "year", direction: "next" | "prev"): void => {
     const amount = direction === "next" ? 1 : -1;
     const unit = type === "month" ? "month" : "year";
-    const newDate = dayjs(calendarDates.selectedDate).add(amount, unit);
+    const newDate = dayjs(values.selectedDate).add(amount, unit);
 
     if (
-      newDate.isBefore(dayjs(providedMinDate || calendarDates.minDate), unit) ||
-      newDate.isAfter(dayjs(providedMaxDate || calendarDates.maxDate), unit)
+      newDate.isBefore(dayjs(providedMinDate || values.minDate), unit) ||
+      newDate.isAfter(dayjs(providedMaxDate || values.maxDate), unit)
     ) {
       return;
     }
 
-    setCalendarDates({ ...calendarDates, selectedDate: newDate.format("YYYY-MM-DD") });
+    setValues({ ...values, selectedDate: newDate.format("YYYY-MM-DD") });
   };
 
   const handleReset = (): void => {
-    setCalendarDates({
-      ...calendarDates,
+    setValues({
+      ...values,
       selectedDate: defaultDate || dayjs().format("YYYY-MM-DD"),
     });
     setDates({ endDate: "", startDate: "" });
   };
 
   return (
-    <Stack
-      css={{
-        maxWidth: "50rem",
-      }}>
-      <Stack flexduo={!isMicro}>
-        <Text as="h5">{dayjs(calendarDates.selectedDate).format("MMMM, YYYY")}</Text>
+    <CalendarStyled>
+      <CalendarHeaderStyled>
+        <Text as="h5" bottom="none">
+          {dayjs(values.selectedDate).format("MMMM, YYYY")}
+        </Text>
         <Stack>
           <Button
             css={{
@@ -133,7 +118,7 @@ export default function Calendar({
             small
             theme="minimal"
             onClick={() => handleDateChange("year", "prev")}>
-            <CaretDoubleLeft />
+            <Icons.CaretDoubleLeft />
           </Button>
           <Button
             css={{
@@ -143,7 +128,7 @@ export default function Calendar({
             small
             theme="minimal"
             onClick={() => handleDateChange("month", "prev")}>
-            <CaretLeft />
+            <Icons.CaretLeft />
           </Button>
           <Button
             css={{
@@ -152,7 +137,7 @@ export default function Calendar({
             small
             theme="minimal"
             onClick={handleReset}>
-            <Circle />
+            <Icons.Circle />
           </Button>
           <Button
             css={{
@@ -162,7 +147,7 @@ export default function Calendar({
             small
             theme="minimal"
             onClick={() => handleDateChange("month", "next")}>
-            <CaretRight />
+            <Icons.CaretRight />
           </Button>
           <Button
             css={{
@@ -172,24 +157,11 @@ export default function Calendar({
             small
             theme="minimal"
             onClick={() => handleDateChange("year", "next")}>
-            <CaretDoubleRight />
+            <Icons.CaretDoubleRight />
           </Button>
         </Stack>
-      </Stack>
-      <Divider bottom="small" top="small" />
-
-      <Stack
-        css={{
-          display: "grid",
-          // 7 days in a week
-          gap: "$small",
-            gridTemplateColumns: "repeat(6, 1fr)",
-          micro: {
-              gap: "$smaller",
-          },
-
-          textAlign: "center",
-        }}>
+      </CalendarHeaderStyled>
+      <CalendarGridStyled>
         {daysInMonth.map((date) => {
           const isSelected = date === dates.startDate || date === dates.endDate;
           const isBetween =
@@ -197,8 +169,7 @@ export default function Calendar({
             dates.endDate &&
             dayjs(date).isAfter(dates.startDate) &&
             dayjs(date).isBefore(dates.endDate);
-          const isDisabled =
-            isBetween || dayjs(date).isBefore(calendarDates.minDate) || dayjs(date).isAfter(calendarDates.maxDate);
+          const isDisabled = isBetween || dayjs(date).isBefore(values.minDate) || dayjs(date).isAfter(values.maxDate);
 
           return (
             <Button
@@ -218,7 +189,7 @@ export default function Calendar({
             </Button>
           );
         })}
-      </Stack>
-    </Stack>
+      </CalendarGridStyled>
+    </CalendarStyled>
   );
 }
