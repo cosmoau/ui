@@ -84,12 +84,13 @@ export interface IButton extends ComponentPropsWithoutRef<"button"> {
 }
 
 export interface ICalendar {
-  defaultDate?: string;
+  endDate?: string;
   maxDate?: string;
   minDate?: string;
   minLength?: number;
   mode?: "range" | "single";
   onSelection: (dates: { endDate: string; startDate: string }) => void;
+  startDate?: string;
 }
 
 export interface ICode {
