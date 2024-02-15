@@ -9,7 +9,7 @@ const extractMediaQuery = (cssRule: string): string => {
 };
 
 const getBreakpoint = (): Breakpoint => {
- if (window.matchMedia(extractMediaQuery(breakpoints.phone)).matches) {
+  if (window.matchMedia(extractMediaQuery(breakpoints.phone)).matches) {
     return "phone";
   } else if (window.matchMedia(extractMediaQuery(breakpoints.tabletX)).matches) {
     return "tabletX";
