@@ -70,7 +70,7 @@ export const ButtonStyled = styled("button", {
     },
     theme: {
       default: {
-        backgroundColor: "$background",
+        backgroundColor: "transparent",
         borderColor: "$border",
       },
       fill: {
