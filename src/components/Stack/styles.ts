@@ -14,8 +14,11 @@ export const StackStyled = styled("div", {
         },
         alignItems: "center",
         display: "flex",
-        gap: "$small",
+        gap: "$medium",
         justifyContent: "space-between",
+        phone: {
+          gap: "$small",
+        },
         verticalAlign: "middle",
       },
     },
