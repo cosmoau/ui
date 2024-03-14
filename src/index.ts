@@ -2,6 +2,7 @@
 export * from "./stitches.config";
 
 // Components: src/components
+export { default as Accordion } from "./components/Accordion";
 export { default as Avatar } from "./components/Avatar";
 export { default as Badge } from "./components/Badge";
 export { default as Box } from "./components/Box";

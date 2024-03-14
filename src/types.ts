@@ -23,6 +23,20 @@ type InferComponentProps<T extends ElementType> =
       ? JSX.IntrinsicElements[T]
       : Record<string, never>;
 
+export interface IAccordion {
+  defaultOpen?: number[];
+  options: Array<{
+    as?: "h3" | "h4" | "h5" | "h6";
+    cta?: Array<{
+      external?: boolean;
+      label: string;
+      url: string;
+    }>;
+    description: string;
+    title: string;
+  }>;
+}
+
 export interface IAvatar {
   alt?: string;
   colors?: boolean;

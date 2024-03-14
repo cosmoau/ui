@@ -13,10 +13,12 @@ import {
   XCircle,
   File,
   Info,
+  CaretDown,
   ArrowLeft,
   Circle,
   ArrowRight,
   ArrowUp,
+  ArrowDown,
   MagnifyingGlassMinus,
   SortAscending,
   SortDescending,
@@ -34,6 +36,7 @@ import {
 } from "@phosphor-icons/react";
 
 export const Icons = {
+  ArrowDown,
   ArrowLeft,
   ArrowRight,
   ArrowSquareOut,
@@ -42,6 +45,7 @@ export const Icons = {
   ArrowsOutSimple,
   CaretDoubleLeft,
   CaretDoubleRight,
+  CaretDown,
   CaretLeft,
   CaretRight,
   CheckCircle,

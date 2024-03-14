@@ -13,6 +13,26 @@ export function App(): ReactElement {
 
     return (
     <C.Provider>
+        <C.View bottom="larger" container top="larger">
+            <C.Stack align="center" bottom="large">
+                <C.Box>
+                    <C.Accordion
+                    defaultOpen={[0,2]}
+                        options={[
+                            { description: "Description for item 1", title: "Item 1" },
+                            { description: "Description for item 2", title: "Item 2" },
+                            {
+                                cta: [
+                                    { label: "CTA 1", url: "https://example.com/cta1" },
+                                    { label: "CTA 2", url: "https://example.com/cta2" },
+                                ], description: "Description for item 3", title: "Item 3", },
+                            { description: "Description for item 4", title: "Item 4"}
+                        ]}
+                    />
+                </C.Box>
+            </C.Stack>
+        </C.View>
+                <C.Text as="h2">Single date: {singleDate}</C.Text>
             <C.View bottom="larger" container top="larger">
                 <C.Stack align="center" bottom="large">
                     <C.Text as="h2">
