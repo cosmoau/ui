@@ -65,6 +65,7 @@ export const AccordionContentStyled = styled("div", {
       },
     },
   },
+  whiteSpace: "pre-wrap",
 });
 
 export const AccordionCTAStyled = styled("div", {
