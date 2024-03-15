@@ -17,10 +17,12 @@ export function App(): ReactElement {
             <C.Stack align="center" bottom="large">
                 <C.Box>
                     <C.Accordion
-                    defaultOpen={[0,2]}
+                    defaultOpen={0}
                         options={[
-                            { description: "Description for item 1", title: "Item 1" },
-                            { description: "Description for item 2", title: "Item 2" },
+                            { content: (<C.Text as="h3">Custom Content</C.Text>),
+                            description: "",
+                            title: "Item 1" },
+                            { description: "Description for item 2\n\nTest new line", title: "Item 2" },
                             {
                                 cta: [
                                     { label: "CTA 1", url: "https://example.com/cta1" },

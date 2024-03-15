@@ -34,7 +34,7 @@
     "@parcel/packager-ts": "2.8.3",
     "@parcel/transformer-typescript-types": "2.8.3",
     "@types/google.maps": "^3.55.4",
-    "@types/node": "^20.11.27",
+    "@types/node": "^20.11.28",
     "@types/react": "^18.2.66",
     "eslint": "^8.57.0",
     "eslint-config-dolmios": "^1.9.0",

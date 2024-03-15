@@ -24,9 +24,10 @@ type InferComponentProps<T extends ElementType> =
       : Record<string, never>;
 
 export interface IAccordion {
-  defaultOpen?: number[];
+  defaultOpen?: number | null;
   options: Array<{
     as?: "h3" | "h4" | "h5" | "h6";
+    content?: ReactNode;
     cta?: Array<{
       external?: boolean;
       label: string;

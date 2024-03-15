@@ -14,15 +14,11 @@ import {
   AccordionTitleStyled,
 } from "./styles";
 
-export default function Accordion({ defaultOpen = [], options }: IAccordion): JSX.Element {
-  const [selected, setSelected] = useState<number[]>(defaultOpen);
+export default function Accordion({ defaultOpen = null, options }: IAccordion): JSX.Element {
+  const [selected, setSelected] = useState<number | null>(defaultOpen);
 
   const handleToggle = (index: number): void => {
-    if (selected.includes(index)) {
-      setSelected(selected.filter((i) => i !== index));
-    } else {
-      setSelected([...selected, index]);
-    }
+    setSelected(selected === index ? null : index);
   };
 
   return (
@@ -33,12 +29,12 @@ export default function Accordion({ defaultOpen = [], options }: IAccordion): JS
             <AccordionTitleStyled>
               <Text as={option.as || "h4"}>{option.title}</Text>
             </AccordionTitleStyled>
-            <AccordionIconStyled open={selected.includes(index)}>
+            <AccordionIconStyled open={selected === index}>
               <Icons.CaretDown />
             </AccordionIconStyled>
           </AccordionHeaderStyled>
-          <AccordionContentStyled open={selected.includes(index)}>
-            <Text>{option.description}</Text>
+          <AccordionContentStyled open={selected === index}>
+            {option.content || <Text>{option.description}</Text>}
             {option.cta && (
               <AccordionCTAStyled>
                 {option.cta.map((cta, ctaIndex) => (
