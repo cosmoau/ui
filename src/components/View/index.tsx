@@ -11,6 +11,8 @@ export default function View({
   bottom,
   css,
   children,
+  app,
+  id,
   noPrint,
 }: IView): JSX.Element {
   return (
@@ -28,9 +30,12 @@ export default function View({
         ...css,
       }}
       gradient={inverted && gradient}
+      id={id}
       inverted={inverted}
       noPrint={noPrint}>
-      <ViewContainerStyled container={container}>{children}</ViewContainerStyled>
+      <ViewContainerStyled app={app} container={container}>
+        {children}
+      </ViewContainerStyled>
     </ViewStyled>
   );
 }

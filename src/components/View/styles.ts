@@ -32,6 +32,24 @@ export const ViewStyled = styled("section", {
 
 export const ViewContainerStyled = styled("div", {
   variants: {
+    app: {
+      false: {
+        width: "100%",
+      },
+      true: {
+        desktopX: {
+          maxWidth: "2000px",
+        },
+        margin: "auto",
+        phone: {
+          width: "96%",
+        },
+        wide: {
+          maxWidth: "2400px",
+        },
+        width: "98%",
+      },
+    },
     container: {
       false: {
         width: "100%",
@@ -41,10 +59,13 @@ export const ViewContainerStyled = styled("div", {
           maxWidth: "1800px",
         },
         margin: "auto",
+        phone: {
+          width: "96%",
+        },
         wide: {
           maxWidth: "2200px",
         },
-        width: "95%",
+        width: "94%",
       },
     },
   },

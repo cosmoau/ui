@@ -316,6 +316,7 @@ export interface ITable {
   filters?: ReactNode;
   header?: {
     count?: boolean;
+    full?: boolean;
     options?: ReactNode;
     title: string;
   } | null;
@@ -363,11 +364,13 @@ export interface IUpload {
 export type IToast = InferComponentProps<typeof Toaster>;
 
 export interface IView {
+  app?: boolean;
   bottom?: IThemeSpacing;
   children: ReactNode;
   container?: boolean;
   css?: CSS;
   gradient?: boolean;
+  id?: string;
   inverted?: boolean;
   noPrint?: boolean;
   top?: IThemeSpacing;
