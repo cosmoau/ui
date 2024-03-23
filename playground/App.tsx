@@ -20,6 +20,10 @@ export function App(): ReactElement {
             inverted
             top="larger"
         >
+                <C.Places
+                    apiKey={process.env.GOOGLE_API_KEY || ""}
+                    submit="DJKASDJFHSDJFSJDFJKSD"
+                />
             <C.Stack direction="row">
                 <C.Stack direction="column" offset={30} width={40}>
                     <C.Box header={<C.Text as="h4">Test</C.Text>}>

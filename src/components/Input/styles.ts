@@ -1,8 +1,6 @@
 import { styled } from "../../stitches.config";
 
 export const InputStyled = styled("div", {
-  overflow: "hidden",
-
   position: "relative",
   variants: {
     disabled: {
@@ -26,10 +24,8 @@ export const InputCoreStyled = styled("div", {
   alignSelf: "center",
   border: "0.1rem solid $border",
   borderRadius: "$small",
-
   display: "flex",
   justifyContent: "center",
-
   transition: "$default",
   width: "100%",
 });
