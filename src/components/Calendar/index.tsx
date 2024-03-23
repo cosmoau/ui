@@ -2,7 +2,7 @@ import dayjs from "dayjs";
 import { useEffect } from "react";
 
 import { Icons } from "../../icons";
-import { Stack, Text, Button } from "../../index";
+import { Stack, Text, Button, useBreakpoints } from "../../index";
 import { ICalendar } from "../../types";
 
 import {
@@ -25,6 +25,7 @@ export default function Calendar({
   startDate,
   endDate,
 }: ICalendar): JSX.Element {
+  const { isPhone } = useBreakpoints();
   // State management and initialization
   const { dates, setDates, values, setValues } = useCalendarState({
     endDate,
@@ -91,27 +92,31 @@ export default function Calendar({
         <Stack>
           <Button
             disabled={prevYearDisabled}
+            small={isPhone}
             theme="minimal"
             onClick={() => handleDateChange("year", "prev")}>
             <Icons.CaretDoubleLeft />
           </Button>
           <Button
             disabled={prevMonthDisabled}
+            small={isPhone}
             theme="minimal"
             onClick={() => handleDateChange("month", "prev")}>
             <Icons.CaretLeft />
           </Button>
-          <Button theme="minimal" onClick={resetCalendar}>
+          <Button small={isPhone} theme="minimal" onClick={resetCalendar}>
             <Icons.Circle />
           </Button>
           <Button
             disabled={nextMonthDisabled}
+            small={isPhone}
             theme="minimal"
             onClick={() => handleDateChange("month", "next")}>
             <Icons.CaretRight />
           </Button>
           <Button
             disabled={nextYearDisabled}
+            small={isPhone}
             theme="minimal"
             onClick={() => handleDateChange("year", "next")}>
             <Icons.CaretDoubleRight />
@@ -136,6 +141,7 @@ export default function Calendar({
             <Button
               key={date}
               disabled={isDisabled}
+              small
               theme={isSelected || isBetween ? "solid" : "default"}
               onClick={() => handleDaySelection(date)}>
               {dayjs(date).format("D")}

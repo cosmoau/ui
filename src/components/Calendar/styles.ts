@@ -1,7 +1,8 @@
 import { styled } from "../../stitches.config";
 
 export const CalendarStyled = styled("div", {
-  maxWidth: "50rem",
+  minHeight: "100%",
+  width: "100%",
 });
 
 export const CalendarHeaderStyled = styled("div", {
@@ -10,10 +11,11 @@ export const CalendarHeaderStyled = styled("div", {
   display: "flex",
   justifyContent: "space-between",
   marginBottom: "$small",
-  micro: {
-    flexDirection: "column",
-  },
   paddingBottom: "$small",
+  phone: {
+    flexDirection: "column",
+    gap: "$small",
+  },
 });
 
 export const CalendarGridStyled = styled("div", {
@@ -22,6 +24,10 @@ export const CalendarGridStyled = styled("div", {
   gridTemplateColumns: "repeat(6, 1fr)",
   micro: {
     gap: "$smaller",
+    gridTemplateColumns: "repeat(4, 1fr)",
+  },
+  phone: {
+    gridTemplateColumns: "repeat(5, 1fr)",
   },
   textAlign: "center",
 });
