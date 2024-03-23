@@ -1,8 +1,9 @@
 import { styled } from "../../stitches.config";
 
 export const InputStyled = styled("div", {
-  position: "relative",
+  overflow: "hidden",
 
+  position: "relative",
   variants: {
     disabled: {
       true: {
@@ -11,6 +12,7 @@ export const InputStyled = styled("div", {
       },
     },
   },
+
   width: "100%",
 });
 export const InputCoreStyled = styled("div", {
@@ -22,9 +24,9 @@ export const InputCoreStyled = styled("div", {
   },
   alignContent: "center",
   alignSelf: "center",
-
   border: "0.1rem solid $border",
   borderRadius: "$small",
+
   display: "flex",
   justifyContent: "center",
 
@@ -62,17 +64,26 @@ export const InputAreaStyled = styled("input", {
 export const InputFunctionStyled = styled("div", {
   backgroundColor: "$defaultTable",
   borderLeft: "0.1rem solid $border",
-  display: "inline-flex",
+  display: "flex",
+  gap: "$smaller",
+
   height: "100%",
+
+  // gap between items
+  justifyContent: "center",
+
   marginLeft: "$small",
-  padding: "$smaller $small",
+
+  padding: "$smallest $smaller",
+
   position: "relative",
   verticalAlign: "middle",
 });
 
 export const InputCallbackStyled = styled("div", {
   display: "block",
-  paddingTop: "$small",
+  paddingTop: "$smaller",
+  textAlign: "left",
 });
 
 export default InputStyled;

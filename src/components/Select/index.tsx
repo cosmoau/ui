@@ -147,8 +147,6 @@ export default function Select({
               <Input
                 disabled={!options}
                 placeholder="Search..."
-                reset
-                resetFunction={(): void => setSearch("")}
                 submitValid={(): boolean => search.length > 0}
                 value={search}
                 onChange={(event): void => setSearch(event.target.value)}

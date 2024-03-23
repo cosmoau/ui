@@ -124,9 +124,6 @@ export default function Input({
             )}
             {reveal && (
               <Button
-                css={{
-                  marginLeft: "$smaller",
-                }}
                 disabled={disabled}
                 icon={!isPhone ? !isRevealed ? <Icons.Eye /> : <Icons.EyeClosed /> : undefined}
                 small
@@ -149,9 +146,6 @@ export default function Input({
 
             {reset && inputValue && (
               <Button
-                css={{
-                  marginLeft: "$smaller",
-                }}
                 disabled={disabled}
                 small
                 onClick={(): void => {
@@ -163,9 +157,6 @@ export default function Input({
 
             {submit && (
               <Button
-                css={{
-                  marginLeft: "$smaller",
-                }}
                 disabled={!submitValid || !submitValid(inputValue) || isSubmitted || disabled}
                 icon={!isPhone ? <Icons.ArrowRight /> : undefined}
                 iconPosition="right"
