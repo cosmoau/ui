@@ -1,10 +1,16 @@
 import { useEffect } from "react";
-import toast, { useToaster } from "react-hot-toast";
+import toast, { Toast, useToaster } from "react-hot-toast";
 
 import { Icons } from "../../../icons";
 import { Text, useEventListener } from "../../../index";
 import { IToast } from "../../../types";
 import { ToastContainerStyled, ToastStyled } from "../styles";
+
+function prepareMessage(message: Toast["message"]): string {
+  if (!message) return "No information provided.";
+
+  return message.toString().replace(/\.$/, "");
+}
 
 export function ToastController(props: IToast): JSX.Element {
   const { toasts, handlers } = useToaster();
@@ -46,7 +52,9 @@ export function ToastController(props: IToast): JSX.Element {
               &nbsp;
               {t.type === "success" ? "Success" : t.type === "error" ? "Error" : "Info"}
             </Text>
-            {t.message?.toString() || t.message?.toString() || ""}
+            <Text as="span" inline="small">
+              {prepareMessage(t.message)}
+            </Text>
           </ToastStyled>
         );
       })}

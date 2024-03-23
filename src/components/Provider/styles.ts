@@ -24,7 +24,8 @@ export const ToastStyled = styled("div", {
   maxWidth: "60rem",
   padding: "$smaller $small",
   phone: {
-    maxWidth: "95%",
+    margin: "0 auto",
+    maxWidth: "90%",
     textAlign: "center",
   },
   pointerEvents: "all",
@@ -57,8 +58,9 @@ export const ToastContainerStyled = styled("div", {
   },
   pointerEvents: "none",
   position: "fixed",
-
   userSelect: "none",
+
+  width: "100%",
   zIndex: "$toast",
 });
 
