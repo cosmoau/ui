@@ -30,6 +30,7 @@ export const TableCoreStyled = styled("div", {
         td: {
           borderTop: "0.1rem solid $borderTable",
           fontSize: "$default",
+          padding: "$small $medium",
         },
         transition: "$default",
       },
@@ -42,6 +43,7 @@ export const TableCoreStyled = styled("div", {
         color: "$accent",
         fontSize: "$small",
         fontWeight: "normal",
+        padding: "$smaller $medium",
 
         textAlign: "left !important",
         whiteSpace: "nowrap",
@@ -56,6 +58,7 @@ export const TableCoreStyled = styled("div", {
         table: {
           borderCollapse: "collapse",
         },
+
         tbody: {
           tr: {
             "&:first-child": {
@@ -69,7 +72,6 @@ export const TableCoreStyled = styled("div", {
               },
             },
             borderTop: "0.1rem solid $border !important",
-
             td: {
               "&:first-child": {
                 paddingTop: "$small !important",
@@ -77,6 +79,7 @@ export const TableCoreStyled = styled("div", {
               "&:last-child": {
                 paddingBottom: "$small !important",
               },
+
               border: "0 !important",
               display: "block",
               paddingTop: "0 !important",
@@ -90,6 +93,15 @@ export const TableCoreStyled = styled("div", {
       },
     },
     header: {
+      false: {
+        thead: {
+          backgroundColor: "$defaultTable",
+
+          th: {
+            backgroundColor: "$defaultTable !important",
+          },
+        },
+      },
       true: {
         borderTopLeftRadius: 0,
         borderTopRightRadius: 0,
@@ -99,24 +111,6 @@ export const TableCoreStyled = styled("div", {
       true: {
         borderBottomLeftRadius: 0,
         borderBottomRightRadius: 0,
-      },
-    },
-    slim: {
-      false: {
-        td: {
-          padding: "calc($medium * 1.25) $medium",
-        },
-        th: {
-          padding: "$small $medium",
-        },
-      },
-      true: {
-        td: {
-          padding: "$small $small !important",
-        },
-        th: {
-          padding: "$smaller $small !important",
-        },
       },
     },
   },
@@ -131,6 +125,17 @@ export const TableHeaderStyled = styled("div", {
   borderBottom: 0,
   borderRadius: "$small $small 0 0",
   padding: "$small $medium",
+  variants: {
+    full: {
+      true: {
+        backgroundColor: "transparent",
+        border: 0,
+        padding: 0,
+        paddingBottom: "$large",
+      },
+    },
+  },
+
   width: "100%",
 });
 

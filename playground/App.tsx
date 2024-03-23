@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
+import { RadioButton } from "@phosphor-icons/react";
 import React, { ReactElement, useState } from "react";
 import toast from "react-hot-toast";
 
@@ -13,6 +14,177 @@ export function App(): ReactElement {
 
     return (
     <C.Provider>
+        <C.View
+            app
+            bottom="larger"
+            inverted
+            top="larger"
+        >
+            <C.Stack direction="row">
+                <C.Stack direction="column" offset={30} width={40}>
+                    <C.Box header={<C.Text as="h4">Test</C.Text>}>
+                        <C.Text>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget
+                        </C.Text>
+                    </C.Box>
+                    </C.Stack>
+                    <C.Stack bottom="larger" direction="column">
+
+                        <C.Table
+
+                            filters={<C.Input placeholder="Filter" />}
+
+                            header={{
+                                count: true,
+                                full: true,
+                                options: (
+                                    <>
+                                        <C.Button inline="small"><RadioButton /></C.Button>
+                                        <C.Button inline="small"><RadioButton /></C.Button>
+                                        <C.Button><RadioButton /></C.Button>
+                                    </>
+                                ),
+                                title: "Table",
+                            }}
+                            identifier="table-a"
+                            kbd
+                            pagination
+                            slim
+                            sortable
+                            tbody={
+                                Array.from(Array(30).keys()).map((i) => [
+                                    {
+                                        label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget',
+                                        value: 'a',
+                                    },
+                                    {
+                                        label: i === 10 ? '50%' : 'AUTO',
+                                        value: 'b',
+                                    },
+                                    {
+                                        label: i <= 10 ? '10%' : '30%',
+                                        value: 'c',
+
+                                    },
+                                    {
+                                        label: i <= 10 ? '10%' : '30%',
+                                        value: 'c',
+
+                                    },
+                                ])
+                            }
+                            thead={[
+                                "Column A",
+                                "Column B",
+                                "Column C",
+                                "Column D",
+                            ]}
+                        />
+                    CC.</C.Stack>
+                    <C.Stack bottom="larger" direction="column">
+                        <C.Table
+    collapse
+                            filters={<C.Input placeholder="Filter" />}
+
+                            header={{
+                                count: true,
+                                options: (
+                                    <>
+                                        <C.Button inline="small"><RadioButton /></C.Button>
+                                        <C.Button inline="small"><RadioButton /></C.Button>
+                                        <C.Button><RadioButton /></C.Button>
+                                    </>
+                                ),
+                                title: "Table",
+                            }}
+                            identifier="table-a"
+                            kbd
+                            pagination
+                            slim
+                            sortable
+                            tbody={
+                                Array.from(Array(30).keys()).map((i) => [
+                                    {
+                                        label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget',
+                                        value: 'a',
+                                    },
+                                    {
+                                        label: i === 10 ? '50%' : 'AUTO',
+                                        value: 'b',
+                                    },
+                                    {
+                                        label: i <= 10 ? '10%' : '30%',
+                                        value: 'c',
+
+                                    },
+                                    {
+                                        label: i <= 10 ? '10%' : '30%',
+                                        value: 'c',
+
+                                    },
+                                ])
+                            }
+                            thead={[
+                                "Column A",
+                                "Column B",
+                                "Column C",
+                                "Column D",
+                            ]}
+                        />
+                    </C.Stack>
+                <C.Stack direction="column">
+                <C.Table
+
+                    filters={<C.Input placeholder="Filter" />}
+
+                    header={{
+                        count: true,
+                        options:  (
+                            <>
+                                <C.Button inline="small"><RadioButton /></C.Button>
+                                <C.Button inline="small"><RadioButton /></C.Button>
+                                <C.Button><RadioButton /></C.Button>
+                            </>
+                        ),
+                        title: "Table",
+                    }}
+                    identifier="table-a"
+                    kbd
+                    pagination
+                    slim
+                    sortable
+                    tbody={
+                        Array.from(Array(30).keys()).map((i) => [
+                            {
+                                label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget',
+                                value: 'a',
+                            },
+                            {
+                                label: i === 10 ? '50%' : 'AUTO',
+                                value: 'b',
+                            },
+                            {
+                                label: i <= 10 ? '10%' : '30%',
+                                value: 'c',
+
+                            },
+                            {
+                                label: i <= 10 ? '10%' : '30%',
+                                value: 'c',
+
+                            },
+                        ])
+                    }
+                    thead={[
+                        "Column A",
+                        "Column B",
+                        "Column C",
+                        "Column D",
+                    ]}
+                />
+                </C.Stack>
+                    </C.Stack>
+            </C.View>
             <C.View bottom="larger" container top="larger">
                 <C.Stack align="center" bottom="large">
                     <C.Select

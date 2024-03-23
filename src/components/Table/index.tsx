@@ -50,7 +50,6 @@ export default function NewTable({
   defaultSort,
   defaultDirection,
   rowNumbers,
-  slim,
   loading,
   error,
   pagination,
@@ -96,10 +95,13 @@ export default function NewTable({
   return (
     <TableStyled css={css} id={initialKey}>
       {header && (
-        <TableHeaderStyled>
+        <TableHeaderStyled full={header?.full}>
           <TableHeaderCoreStyled>
             <TableHeaderTitleStyled>
-              <Text as="h4" bottom="none" inline={header.count ? "small" : undefined}>
+              <Text
+                as={header?.full ? "h3" : "h4"}
+                bottom="none"
+                inline={header.count ? "small" : undefined}>
                 {header.title}
               </Text>
               {header.count && (
@@ -143,9 +145,8 @@ export default function NewTable({
 
       <TableCoreStyled
         collapse={collapse}
-        header={header !== undefined}
-        pagination={pagination}
-        slim={slim || (storage.limit > 10 && data && data.length > 10)}>
+        header={header && !header.full ? true : false}
+        pagination={pagination}>
         <table {...rest}>
           {thead && (
             <thead id={`${identifier}-head`}>
@@ -168,7 +169,7 @@ export default function NewTable({
                           "&:hover": {
                             opacity: 1,
                           },
-                          opacity: sortColumn === index ? 0.8 : 0.3,
+                          opacity: sortColumn === index ? 0.8 : 0.2,
                         }}
                         small
                         theme={sortColumn !== index ? "minimal" : undefined}
@@ -180,7 +181,7 @@ export default function NewTable({
                             <Icons.SortDescending />
                           )
                         ) : (
-                          <Icons.Database />
+                          <Icons.CircleDashed />
                         )}
                       </Button>
                     </th>
