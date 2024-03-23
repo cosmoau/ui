@@ -5,7 +5,13 @@ import { Icons } from "../../icons";
 import { Badge, Button, Loading } from "../../index";
 import { IField } from "../../types";
 
-import { FieldStyled, FieldAreaStyled, FieldFunctionStyled, FieldCallbackStyled, FieldCoreStyled } from "./styles";
+import {
+  FieldStyled,
+  FieldAreaStyled,
+  FieldFunctionStyled,
+  FieldCallbackStyled,
+  FieldCoreStyled,
+} from "./styles";
 
 export default function Field({
   copy,

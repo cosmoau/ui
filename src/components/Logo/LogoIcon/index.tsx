@@ -2,7 +2,13 @@ import { colors } from "..";
 import { ILogo } from "../../../types";
 import { LogoStyled } from "../styles";
 
-export default function LogoIcon({ height = 50, width = 50, inline, css, ...rest }: ILogo): JSX.Element {
+export default function LogoIcon({
+  height = 50,
+  width = 50,
+  inline,
+  css,
+  ...rest
+}: ILogo): JSX.Element {
   return (
     <LogoStyled
       css={{

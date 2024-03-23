@@ -26,20 +26,31 @@ export default function Calendar({
   endDate,
 }: ICalendar): JSX.Element {
   // State management and initialization
-  const { dates, setDates, values, setValues } = useCalendarState({ endDate, maxDate, minDate, startDate });
+  const { dates, setDates, values, setValues } = useCalendarState({
+    endDate,
+    maxDate,
+    minDate,
+    startDate,
+  });
 
   // Validation hooks
   const validateSingleDate = useCalendarSingleValidation(minDate || "", maxDate || "", onSelection);
-  const { validateRange } = useCalendarRangeValidation(minDate || "", maxDate || "", minLength, onSelection);
+  const { validateRange } = useCalendarRangeValidation(
+    minDate || "",
+    maxDate || "",
+    minLength,
+    onSelection,
+  );
 
   // Navigation state and functionality
-  const { nextMonthDisabled, nextYearDisabled, prevMonthDisabled, prevYearDisabled } = useNavigationDisabledState({
-    // Use the state-managed minDate which includes the default
-    maxDate: values.maxDate,
+  const { nextMonthDisabled, nextYearDisabled, prevMonthDisabled, prevYearDisabled } =
+    useNavigationDisabledState({
+      // Use the state-managed minDate which includes the default
+      maxDate: values.maxDate,
 
-    minDate: values.minDate,
-    viewDate: values.viewDate, // Use the state-managed maxDate which includes the default
-  });
+      minDate: values.minDate,
+      viewDate: values.viewDate, // Use the state-managed maxDate which includes the default
+    });
   const { handleDateChange } = useCalendarViewChange(setValues);
 
   // Days generation for the current month view
@@ -78,19 +89,31 @@ export default function Calendar({
           {dayjs(values.viewDate).format("MMMM YYYY")}
         </Text>
         <Stack>
-          <Button disabled={prevYearDisabled} theme="minimal" onClick={() => handleDateChange("year", "prev")}>
+          <Button
+            disabled={prevYearDisabled}
+            theme="minimal"
+            onClick={() => handleDateChange("year", "prev")}>
             <Icons.CaretDoubleLeft />
           </Button>
-          <Button disabled={prevMonthDisabled} theme="minimal" onClick={() => handleDateChange("month", "prev")}>
+          <Button
+            disabled={prevMonthDisabled}
+            theme="minimal"
+            onClick={() => handleDateChange("month", "prev")}>
             <Icons.CaretLeft />
           </Button>
           <Button theme="minimal" onClick={resetCalendar}>
             <Icons.Circle />
           </Button>
-          <Button disabled={nextMonthDisabled} theme="minimal" onClick={() => handleDateChange("month", "next")}>
+          <Button
+            disabled={nextMonthDisabled}
+            theme="minimal"
+            onClick={() => handleDateChange("month", "next")}>
             <Icons.CaretRight />
           </Button>
-          <Button disabled={nextYearDisabled} theme="minimal" onClick={() => handleDateChange("year", "next")}>
+          <Button
+            disabled={nextYearDisabled}
+            theme="minimal"
+            onClick={() => handleDateChange("year", "next")}>
             <Icons.CaretDoubleRight />
           </Button>
         </Stack>

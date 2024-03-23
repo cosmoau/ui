@@ -37,7 +37,7 @@
     "@types/node": "^20.11.30",
     "@types/react": "^18.2.69",
     "eslint": "^8.57.0",
-    "eslint-config-dolmios": "^1.9.0",
+    "eslint-config-dolmios": "^1.10.1",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
     "next": "^14.1.4",
     "parcel": "2.8.3",

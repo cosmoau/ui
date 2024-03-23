@@ -70,7 +70,10 @@ export default function SelectMulti({
         toast(`Maximum selections reached (${limit}).`);
       }
     } else {
-      newSelectedItems = [...selected.slice(0, selectionIndex), ...selected.slice(selectionIndex + 1)];
+      newSelectedItems = [
+        ...selected.slice(0, selectionIndex),
+        ...selected.slice(selectionIndex + 1),
+      ];
       setSelected(newSelectedItems);
       if (onSelection) {
         onSelection(newSelectedItems);

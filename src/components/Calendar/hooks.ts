@@ -106,10 +106,18 @@ export const useNavigationDisabledState = ({
   prevMonthDisabled: boolean;
   prevYearDisabled: boolean;
 } => {
-  const nextMonthDisabled = maxDate ? dayjs(viewDate).add(1, "month").isAfter(dayjs(maxDate), "month") : false;
-  const nextYearDisabled = maxDate ? dayjs(viewDate).add(1, "year").isAfter(dayjs(maxDate), "year") : false;
-  const prevMonthDisabled = minDate ? dayjs(viewDate).subtract(1, "month").isBefore(dayjs(minDate), "month") : false;
-  const prevYearDisabled = minDate ? dayjs(viewDate).subtract(1, "year").isBefore(dayjs(minDate), "year") : false;
+  const nextMonthDisabled = maxDate
+    ? dayjs(viewDate).add(1, "month").isAfter(dayjs(maxDate), "month")
+    : false;
+  const nextYearDisabled = maxDate
+    ? dayjs(viewDate).add(1, "year").isAfter(dayjs(maxDate), "year")
+    : false;
+  const prevMonthDisabled = minDate
+    ? dayjs(viewDate).subtract(1, "month").isBefore(dayjs(minDate), "month")
+    : false;
+  const prevYearDisabled = minDate
+    ? dayjs(viewDate).subtract(1, "year").isBefore(dayjs(minDate), "year")
+    : false;
 
   return { nextMonthDisabled, nextYearDisabled, prevMonthDisabled, prevYearDisabled };
 };

@@ -54,7 +54,14 @@ const getLetter = (
   };
 };
 
-export default function Avatar({ src, alt, fallback, width = 24, css, colors }: IAvatar): JSX.Element {
+export default function Avatar({
+  src,
+  alt,
+  fallback,
+  width = 24,
+  css,
+  colors,
+}: IAvatar): JSX.Element {
   const { color, backgroundColor, borderColor } = getLetter(fallback);
 
   return (

@@ -74,12 +74,8 @@ export default function NewTable({
 
   const columnWidths = useTableColumns(identifier, tbody);
 
-  const { endPagination, scrollToTop, handlePageChange, handlePageSelection, resetPagination } = useTablePagination(
-    tbody,
-    storage,
-    setStorage,
-    initialKey,
-  );
+  const { endPagination, scrollToTop, handlePageChange, handlePageSelection, resetPagination } =
+    useTablePagination(tbody, storage, setStorage, initialKey);
 
   useTableKeyboard(pagination, kbd, handlePageChange, resetPagination, endPagination);
 
@@ -273,7 +269,11 @@ export default function NewTable({
                   value: size.toString(),
                 }))}
                 trigger={
-                  <Button disabled={data && data?.length < 10} icon={<Icons.TableRows />} inline="small" small>
+                  <Button
+                    disabled={data && data?.length < 10}
+                    icon={<Icons.TableRows />}
+                    inline="small"
+                    small>
                     {storage.limit}
                     <Text as="span" css={{ hiddenInline: "tablet" }}>
                       &nbsp;rows
@@ -305,11 +305,15 @@ export default function NewTable({
               onClick={(): void => {
                 scrollToTop();
               }}>
-              <Icons.ArrowUp style={{ animation: `${fadeIn} 0.3s ease-in-out`, marginRight: "0.5rem" }} />
+              <Icons.ArrowUp
+                style={{ animation: `${fadeIn} 0.3s ease-in-out`, marginRight: "0.5rem" }}
+              />
               <Text as="span" css={{ hiddenInline: "tablet" }}>
                 {storage.offset + 1} -{" "}
-                {storage.offset + storage.limit > data.length ? data.length : storage.offset + storage.limit} of{" "}
-                {data.length}
+                {storage.offset + storage.limit > data.length
+                  ? data.length
+                  : storage.offset + storage.limit}{" "}
+                of {data.length}
               </Text>
               <Text as="span" css={{ visibleInline: "tablet" }}>
                 {`${storage.page} / ${Math.ceil(data.length / storage.limit)}`}

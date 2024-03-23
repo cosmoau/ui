@@ -50,7 +50,8 @@ export default function Box({
 
   if (!isMounted) return null;
 
-  const useHeaderOrFooter = (theme && theme !== "warning" && theme !== "error" && theme !== "success") || !theme;
+  const useHeaderOrFooter =
+    (theme && theme !== "warning" && theme !== "error" && theme !== "success") || !theme;
 
   return (
     <BoxStyled
@@ -109,18 +110,24 @@ export default function Box({
             />
           ))}
         {header && useHeaderOrFooter && (
-          <BoxHeaderStyled padding={minimal ? "none" : small ? "small" : "default"}>{header}</BoxHeaderStyled>
+          <BoxHeaderStyled padding={minimal ? "none" : small ? "small" : "default"}>
+            {header}
+          </BoxHeaderStyled>
         )}
 
         {image || header || footer ? (
-          <BoxInnerStyled padding={minimal ? "none" : small ? "small" : "default"}>{children}</BoxInnerStyled>
+          <BoxInnerStyled padding={minimal ? "none" : small ? "small" : "default"}>
+            {children}
+          </BoxInnerStyled>
         ) : (
           children
         )}
       </BoxFlexStyled>
 
       {footer && useHeaderOrFooter && (
-        <BoxFooterStyled padding={minimal ? "none" : small ? "small" : "default"}>{footer}</BoxFooterStyled>
+        <BoxFooterStyled padding={minimal ? "none" : small ? "small" : "default"}>
+          {footer}
+        </BoxFooterStyled>
       )}
       {expandable && (
         <BoxExpanderTrigger expanded={isExpanded}>

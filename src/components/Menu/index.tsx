@@ -3,9 +3,22 @@ import { useRef, useState } from "react";
 import { useEventListener, useOutsideClick } from "../../index";
 import { IMenu } from "../../types";
 
-import { MenuGroupStyled, MenuItemStyled, MenuStyled, MenuTriggerStyled, MenuContentStyled } from "./styles";
+import {
+  MenuGroupStyled,
+  MenuItemStyled,
+  MenuStyled,
+  MenuTriggerStyled,
+  MenuContentStyled,
+} from "./styles";
 
-export default function Menu({ css, trigger, options, initial, onSelection, children }: IMenu): JSX.Element {
+export default function Menu({
+  css,
+  trigger,
+  options,
+  initial,
+  onSelection,
+  children,
+}: IMenu): JSX.Element {
   const ref = useRef<HTMLDivElement>(null);
 
   const [isOpen, setIsOpen] = useState(false);

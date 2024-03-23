@@ -66,7 +66,8 @@ export default function Upload({
 
         onUploadMultiple(validFiles);
       } else if (!multiple && onUpload) {
-        const file = files[0];
+        // Use array destructuring to get the first file
+        const [file] = files;
 
         if (!checkFileSize(file.size)) {
           return;
@@ -84,7 +85,9 @@ export default function Upload({
       <UploadCoreStyled>
         <Button
           block
-          icon={success ? <Icons.CheckCircle /> : multiple ? <Icons.Upload /> : <Icons.UploadSimple />}
+          icon={
+            success ? <Icons.CheckCircle /> : multiple ? <Icons.Upload /> : <Icons.UploadSimple />
+          }
           onClick={() => {
             if (ref && ref.current) {
               ref.current.click();
@@ -102,7 +105,10 @@ export default function Upload({
       </UploadCoreStyled>
       <UploadFooterStyled>
         <Text accent as="small" bottom="none">
-          <a href={`https://google.com/search?q=${accept}%20file%20format`} rel="noopener noreferrer" target="_blank">
+          <a
+            href={`https://google.com/search?q=${accept}%20file%20format`}
+            rel="noopener noreferrer"
+            target="_blank">
             {formatAccept(accept)} (Max {maxSize / 1000000}MB)
           </a>
         </Text>

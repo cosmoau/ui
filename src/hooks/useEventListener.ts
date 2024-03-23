@@ -9,7 +9,8 @@ export default function useEventListener<K extends keyof WindowEventMap>(
   const savedHandler = useRef(handler);
 
   useEffect(() => {
-    const eventListener = ((event: WindowEventMap[K]) => savedHandler.current(event)) as EventListener;
+    const eventListener = ((event: WindowEventMap[K]) =>
+      savedHandler.current(event)) as EventListener;
 
     const targetElement: Window | HTMLElement | null = element?.current || window;
 

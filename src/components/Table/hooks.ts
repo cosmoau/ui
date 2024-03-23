@@ -131,10 +131,14 @@ export function useTablePagination(
   function handlePageChange(direction: "next" | "prev"): void {
     const totalPages = Math.ceil(tbody ? tbody.length / storage.limit : 0);
 
-    if ((direction === "prev" && storage.page === 1) || (direction === "next" && storage.page === totalPages)) {
+    if (
+      (direction === "prev" && storage.page === 1) ||
+      (direction === "next" && storage.page === totalPages)
+    ) {
       return;
     }
-    const offset = direction === "next" ? storage.offset + storage.limit : storage.offset - storage.limit;
+    const offset =
+      direction === "next" ? storage.offset + storage.limit : storage.offset - storage.limit;
     const page = direction === "next" ? storage.page + 1 : storage.page - 1;
 
     setStorage({
@@ -251,7 +255,9 @@ export function checkTableIdentifier(identifier: string): void {
 
   if (duplicates.length > 1) {
     // eslint-disable-next-line no-console
-    console.error(`Table identifier "${identifier}" already exists, ${duplicates.length} duplicates found.`);
+    console.error(
+      `Table identifier "${identifier}" already exists, ${duplicates.length} duplicates found.`,
+    );
   }
 }
 

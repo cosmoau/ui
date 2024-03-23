@@ -5,7 +5,13 @@ import { Icons } from "../../icons";
 import { Button, Loading, useEventListener, useBreakpoints, Badge } from "../../index";
 import { IInput } from "../../types";
 
-import { InputAreaStyled, InputCallbackStyled, InputFunctionStyled, InputStyled, InputCoreStyled } from "./styles";
+import {
+  InputAreaStyled,
+  InputCallbackStyled,
+  InputFunctionStyled,
+  InputStyled,
+  InputCoreStyled,
+} from "./styles";
 
 export default function Input({
   copy,
@@ -72,7 +78,13 @@ export default function Input({
   }
 
   useEventListener("keydown", (event: KeyboardEvent) => {
-    if (listen && event.key === "Enter" && submitFunction && submitValid && submitValid(inputValue)) {
+    if (
+      listen &&
+      event.key === "Enter" &&
+      submitFunction &&
+      submitValid &&
+      submitValid(inputValue)
+    ) {
       submitFunction(inputValue || "");
     }
   });
@@ -121,7 +133,17 @@ export default function Input({
                 onClick={(): void => {
                   handleReveal();
                 }}>
-                {!isPhone ? !isRevealed ? "Reveal" : "Hide" : !isRevealed ? <Icons.Eye /> : <Icons.EyeClosed />}
+                {!isPhone ? (
+                  !isRevealed ? (
+                    "Reveal"
+                  ) : (
+                    "Hide"
+                  )
+                ) : !isRevealed ? (
+                  <Icons.Eye />
+                ) : (
+                  <Icons.EyeClosed />
+                )}
               </Button>
             )}
 

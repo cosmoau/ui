@@ -1,7 +1,14 @@
 import { useMemo, useRef, useState } from "react";
 
 import { Icons } from "../../icons";
-import { Button, Text, useEventListener, useOutsideClick, useScrollLock, useWindowDimensions } from "../../index";
+import {
+  Button,
+  Text,
+  useEventListener,
+  useOutsideClick,
+  useScrollLock,
+  useWindowDimensions,
+} from "../../index";
 import { IDialog } from "../../types";
 
 import {
@@ -13,7 +20,15 @@ import {
   DialogTriggerStyled,
 } from "./styles";
 
-export default function Dialog({ css, trigger, children, title, disabled, small, lightbox }: IDialog): JSX.Element {
+export default function Dialog({
+  css,
+  trigger,
+  children,
+  title,
+  disabled,
+  small,
+  lightbox,
+}: IDialog): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
@@ -93,10 +108,16 @@ export default function Dialog({ css, trigger, children, title, disabled, small,
             }}
             small={small || false}>
             <DialogHeaderStyled lightbox={lightbox}>
-              <Text accent={lightbox} as={lightbox ? "small" : "h4"} inline={lightbox ? "smaller" : undefined}>
+              <Text
+                accent={lightbox}
+                as={lightbox ? "small" : "h4"}
+                inline={lightbox ? "smaller" : undefined}>
                 {title}
               </Text>
-              <Button small theme={lightbox ? "default" : "fill"} onClick={(): void => handleClose()}>
+              <Button
+                small
+                theme={lightbox ? "default" : "fill"}
+                onClick={(): void => handleClose()}>
                 <Icons.XCircle />
               </Button>
             </DialogHeaderStyled>
