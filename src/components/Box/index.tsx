@@ -143,7 +143,7 @@ export default function Box({
       {closable && (
         <BoxExitStyled onClick={(): void => handleClose()}>
           <Button small theme={"minimal"}>
-            <Icons.XCircle />
+            <Icons.X />
           </Button>
         </BoxExitStyled>
       )}

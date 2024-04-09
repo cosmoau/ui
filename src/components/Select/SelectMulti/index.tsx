@@ -173,6 +173,7 @@ export default function SelectMulti({
             <SelectFilterStyled>
               <Input
                 disabled={!options}
+                name="select-multi-filter"
                 placeholder="Search..."
                 submitValid={(): boolean => search.length > 0}
                 value={search}
@@ -204,7 +205,7 @@ export default function SelectMulti({
               </SelectItemStyled>
             ))
           ) : (
-            <SelectEmptyStyled>No results found.</SelectEmptyStyled>
+            <SelectEmptyStyled>No results</SelectEmptyStyled>
           )}
           {reset && selected.length > 0 && (
             <SelectItemStyled
@@ -218,7 +219,7 @@ export default function SelectMulti({
               }}>
               Reset
               <SelectIconStyled align="right">
-                <Icons.XCircle />
+                <Icons.X />
               </SelectIconStyled>
             </SelectItemStyled>
           )}

@@ -78,7 +78,6 @@ export const DialogOverlayStyled = styled("div", {
 
 export const DialogCoreStyled = styled("div", {
   backgroundColor: "$background",
-  bottom: 0,
   boxShadow: "$large",
   overflowX: "hidden",
   overflowY: "auto",
@@ -107,24 +106,38 @@ export const DialogCoreStyled = styled("div", {
     },
     small: {
       false: {
+        height: "100%",
         phone: {
+          bottom: 0,
+          height: "auto",
           left: 0,
           maxHeight: "85%",
           minHeight: "40%",
+          right: 0,
           top: "auto",
           width: "100%",
         },
-        width: "60%",
+        tabletX: {
+          width: "75%",
+        },
+        width: "55%",
       },
       true: {
+        height: "100%",
         phone: {
+          bottom: 0,
+          height: "auto",
           left: 0,
           maxHeight: "50%",
           minHeight: "30%",
+          right: 0,
           top: "auto",
           width: "100%",
         },
-        width: "40%",
+        tabletX: {
+          width: "50%",
+        },
+        width: "35%",
       },
     },
   },
@@ -148,27 +161,7 @@ export const DialogHeaderStyled = styled("div", {
   },
   position: "sticky",
   top: 0,
-  variants: {
-    lightbox: {
-      true: {
-        background: "$background",
-        border: "0.1rem solid $borderTable",
-        borderRadius: "$small",
-        padding: "$smaller $small",
-        phone: {
-          left: "$small",
-          maxWidth: "50%",
-          width: "auto",
-        },
-        position: "absolute",
-        right: "$small",
-        top: "$small",
-        width: "auto",
-      },
-    },
-  },
   verticalAlign: "middle",
-
   zIndex: "$special",
 });
 
@@ -176,13 +169,6 @@ export const DialogContentStyled = styled("div", {
   padding: "calc($medium * 1.25)",
   phone: {
     padding: "$medium",
-  },
-  variants: {
-    lightbox: {
-      true: {
-        padding: 0,
-      },
-    },
   },
 });
 

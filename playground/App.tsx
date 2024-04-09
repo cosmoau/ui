@@ -14,7 +14,7 @@ export function App(): ReactElement {
 
     return (
     <C.Provider>
-        <C.View bottom="larger" container inverted top="larger">
+        <C.View bottom="larger" container  top="larger">
              <C.Stack direction="row">
                 <C.Stack align="center" direction="column" width={50}>
                     <C.Text as="h1">Small Dialog</C.Text>
@@ -49,7 +49,9 @@ export function App(): ReactElement {
             inverted
             top="larger"
         >
-                <C.Places
+                <C.Places   
+                id="places"
+                name="places"
                     apiKey={process.env.GOOGLE_API_KEY || ""}
                     submit="DJKASDJFHSDJFSJDFJKSD"
                 />
@@ -65,7 +67,7 @@ export function App(): ReactElement {
 
                         <C.Table
 
-                            filters={<C.Input placeholder="Filter" />}
+                            filters={<C.Input id="table-search" name="table-search" placeholder="Filter" />}
 
                             header={{
                                 count: true,
@@ -82,7 +84,6 @@ export function App(): ReactElement {
                             identifier="table-a"
                             kbd
                             pagination
-                            slim
                             sortable
                             tbody={
                                 Array.from(Array(30).keys()).map((i) => [
@@ -117,7 +118,7 @@ export function App(): ReactElement {
                     <C.Stack bottom="larger" direction="column">
                         <C.Table
     collapse
-                            filters={<C.Input placeholder="Filter" />}
+                            filters={<C.Input id="table-search-2" name="table-search-2" placeholder="Filter" />}
 
                             header={{
                                 count: true,
@@ -133,7 +134,6 @@ export function App(): ReactElement {
                             identifier="table-a"
                             kbd
                             pagination
-                            slim
                             sortable
                             tbody={
                                 Array.from(Array(30).keys()).map((i) => [
@@ -168,7 +168,10 @@ export function App(): ReactElement {
                 <C.Stack direction="column">
                 <C.Table
 
-                    filters={<C.Input placeholder="Filter" />}
+                    filters={<C.Input
+                        id="table-search-3"
+                        name="table-search-3"
+                         placeholder="Filter" />}
 
                     header={{
                         count: true,
@@ -184,7 +187,6 @@ export function App(): ReactElement {
                     identifier="table-a"
                     kbd
                     pagination
-                    slim
                     sortable
                     tbody={
                         Array.from(Array(30).keys()).map((i) => [
@@ -245,11 +247,11 @@ export function App(): ReactElement {
                     { label: "Option 19", value: "option19" },
                     { label: "Option 20", value: "option20" },
 
-]} trigger={<C.Input loading={false} type="numeric" />} />
-                    <C.Input error errorMessage="errrrror bro!" />
-                    <C.Input submit="yes" />
-                    <C.Input copy reset submit="Submit" />
-                    <C.Input loading />
+]} trigger={<C.Input id="test-1" name="test-1" loading={false} type="numeric" />} />
+                    <C.Input id="test-2" name="test-2" error errorMessage="errrrror bro!" />
+                    <C.Input id="test-3" name="test-3" submit="yes" />
+                    <C.Input id="test-4" name="test-4" copy reset submit="Submit" />
+                    <C.Input id="test-5" name="test-5" loading />
                     </C.Stack>
         </C.View>
         <C.View bottom="larger" container top="larger">
@@ -312,10 +314,10 @@ export function App(): ReactElement {
             <C.Stack direction="row">
                 <C.Stack direction="column" offset={30} width={40}>
                         <C.Stack bottom="medium">
-                            <C.Field copy />
+                            <C.Field name="field-1" copy />
                         </C.Stack>
                     <C.Stack bottom="medium">
-                        <C.Input copy />
+                        <C.Input name="input-100" copy />
                     </C.Stack>
 
                     <img src={file ? URL.createObjectURL(file) : ""} />

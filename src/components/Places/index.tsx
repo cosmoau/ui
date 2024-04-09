@@ -14,6 +14,7 @@ export default function Places({
   apiKey,
   handleAutocomplete,
   css,
+  name,
   ...rest
 }: IPlaces): JSX.Element {
   const ref = useRef<HTMLInputElement | null>(null);
@@ -114,7 +115,7 @@ export default function Places({
       <Input
         key={data?.address || undefined}
         mustRef={ref}
-        name="address"
+        name="places-address"
         placeholder={placeholder || "Enter your address"}
         resetFunction={(): void => {
           setData(null);

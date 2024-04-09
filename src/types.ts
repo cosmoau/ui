@@ -119,7 +119,6 @@ export interface IDialog {
   css?: CSS;
   disabled?: boolean;
   forceHeight?: number;
-  lightbox?: boolean;
   small?: boolean;
   title: string;
   trigger?: ReactNode;
@@ -136,7 +135,9 @@ export interface IField extends ComponentPropsWithRef<"textarea"> {
   css?: CSS;
   error?: boolean;
   errorMessage?: string;
+  id?: string;
   loading?: boolean;
+  name: string;
   reset?: boolean;
   resetFunction?: () => void;
   submit?: string;
@@ -153,8 +154,10 @@ export interface IForm extends ComponentPropsWithRef<"form"> {
   children: ReactNode;
   css?: CSS;
   disabled?: boolean;
+  id?: string;
   listen?: boolean;
   loading?: boolean;
+  name: string;
   submit?: string;
   submitFunction: () => void | Promise<void> | unknown;
   submitValid?: boolean;
@@ -174,9 +177,11 @@ export interface IInput extends ComponentPropsWithRef<"input"> {
   css?: CSS;
   error?: boolean;
   errorMessage?: string;
+  id?: string;
   listen?: boolean;
   loading?: boolean;
   mustRef?: RefObject<HTMLInputElement>;
+  name: string;
   reset?: boolean;
   resetFunction?: () => void;
   reveal?: boolean;
@@ -326,7 +331,6 @@ export interface ITable {
   pagination?: boolean;
   restrictLimit?: number;
   rowNumbers?: boolean;
-  slim?: boolean;
   sortDisabled?: number[];
   sortable?: boolean;
   tbody?: Array<Array<{ label?: ReactNode; value: string | number; width?: string | number }>>;

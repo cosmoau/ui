@@ -2,7 +2,6 @@ import { useEffect } from "react";
 
 import { Icons } from "../../icons";
 import {
-  Badge,
   Button,
   Loading,
   Select,
@@ -249,7 +248,7 @@ export default function NewTable({
                       {error || "Something went wrong"}
                     </Text>
                   ) : (
-                    <Badge>No results were found, check back soon for updates.</Badge>
+                    <Text accent>No results</Text>
                   )}
                 </td>
               </tr>

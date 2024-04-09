@@ -37,6 +37,8 @@ export default function Input({
   listen,
   reset,
   resetFunction,
+  id,
+  name,
 }: IInput): JSX.Element {
   const { isPhone } = useBreakpoints();
   const [inputValue, setInputValue] = useState((value as string) || "");
@@ -101,6 +103,8 @@ export default function Input({
         <InputAreaStyled
           ref={mustRef || undefined}
           disabled={disabled}
+          id={id || name}
+          name={name}
           placeholder={placeholder}
           type={isRevealed ? "text" : type || "text"}
           value={inputValue}
@@ -151,7 +155,7 @@ export default function Input({
                 onClick={(): void => {
                   handleReset();
                 }}>
-                <Icons.XCircle />
+                <Icons.X />
               </Button>
             )}
 

@@ -146,6 +146,7 @@ export default function Select({
             <SelectFilterStyled>
               <Input
                 disabled={!options}
+                name="select-filter"
                 placeholder="Search..."
                 submitValid={(): boolean => search.length > 0}
                 value={search}
@@ -178,7 +179,7 @@ export default function Select({
               </SelectItemStyled>
             ))
           ) : (
-            <SelectEmptyStyled>No results found.</SelectEmptyStyled>
+            <SelectEmptyStyled>No results</SelectEmptyStyled>
           )}
         </SelectGroupStyled>
       )}

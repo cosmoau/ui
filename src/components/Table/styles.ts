@@ -131,7 +131,7 @@ export const TableHeaderStyled = styled("div", {
         backgroundColor: "transparent",
         border: 0,
         padding: 0,
-        paddingBottom: "$large",
+        paddingBottom: "$medium",
       },
     },
   },
@@ -186,9 +186,9 @@ export const TableFiltersStyled = styled("div", {
   animation: `${fadeIn} 0.5s ease-in-out`,
   display: "block",
   input: {
+    backgroundColor: "$background",
     width: "100%",
   },
-  paddingBottom: "$small",
   paddingTop: "$medium",
   width: "100%",
 });

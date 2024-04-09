@@ -20,7 +20,6 @@ export default function Dialog({
   title,
   disabled,
   small,
-  lightbox,
 }: IDialog): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -74,29 +73,19 @@ export default function Dialog({
           }}>
           {trigger}
         </DialogTriggerStyled>
-      ) : !lightbox ? (
-        "Missing trigger"
       ) : (
-        children
+        "Missing trigger"
       )}
       {isMounted && (
         <DialogOverlayStyled animation={isOpen}>
           <DialogCoreStyled ref={ref} animation={isOpen} css={css} small={small || false}>
-            <DialogHeaderStyled lightbox={lightbox}>
-              <Text
-                accent={lightbox}
-                as={lightbox ? "small" : "h4"}
-                inline={lightbox ? "smaller" : undefined}>
-                {title}
-              </Text>
-              <Button
-                small
-                theme={lightbox ? "default" : "fill"}
-                onClick={(): void => handleClose()}>
-                <Icons.XCircle />
+            <DialogHeaderStyled>
+              <Text as="h4">{title}</Text>
+              <Button small theme="fill" onClick={(): void => handleClose()}>
+                <Icons.ArrowsInSimple />
               </Button>
             </DialogHeaderStyled>
-            <DialogContentStyled lightbox={lightbox}>{children}</DialogContentStyled>
+            <DialogContentStyled>{children}</DialogContentStyled>
           </DialogCoreStyled>
         </DialogOverlayStyled>
       )}

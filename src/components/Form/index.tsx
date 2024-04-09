@@ -14,6 +14,8 @@ export default function Form({
   submit,
   submitFunction,
   submitValid,
+  id,
+  name,
   ...rest
 }: IForm): JSX.Element {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -28,6 +30,8 @@ export default function Form({
     <FormStyled
       css={css}
       disabled={disabled}
+      id={id || name}
+      name={name}
       onChange={(): void => setIsSubmitted(false)}
       {...rest}>
       {children}

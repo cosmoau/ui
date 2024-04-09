@@ -35,6 +35,8 @@ export default function Field({
   submitValid,
   rows,
   cols,
+  id,
+  name,
 }: IField): JSX.Element {
   const [inputValue, setInputValue] = useState(value || "") as [string, (value: string) => void];
   const [isCopied, setIsCopied] = useState(false);
@@ -81,6 +83,8 @@ export default function Field({
           cols={cols}
           css={css}
           disabled={disabled}
+          id={id || name}
+          name={name}
           placeholder={placeholder}
           rows={rows}
           value={inputValue}
@@ -112,7 +116,7 @@ export default function Field({
                 onClick={(): void => {
                   handleReset();
                 }}>
-                <Icons.XCircle />
+                <Icons.X />
               </Button>
             )}
 

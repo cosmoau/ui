@@ -81,7 +81,7 @@ export default function Badge({
 
       {closable && (
         <BadgeIconStyled align={small ? "smallRight" : "right"} onClick={(): void => handleClose()}>
-          <Icons.XCircle style={{ cursor: "pointer" }} />
+          <Icons.X style={{ cursor: "pointer" }} />
         </BadgeIconStyled>
       )}
     </BadgeStyled>

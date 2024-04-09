@@ -509,7 +509,6 @@ export function App(): ReactElement {
                 </C.Text>
                 <C.Stack top="small">
                   <C.Dialog
-                  lightbox
 
                     title="El Camino"
                     trigger={<C.Button>Open Dialog</C.Button>}>

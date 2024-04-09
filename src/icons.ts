@@ -10,7 +10,7 @@ import {
   IconContext,
   MagnifyingGlass,
   Warning,
-  XCircle,
+  X,
   File,
   Info,
   CaretDown,
@@ -75,5 +75,5 @@ export const Icons = {
   Upload,
   UploadSimple,
   Warning,
-  XCircle,
+  X,
 };

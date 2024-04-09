@@ -111,7 +111,7 @@ export const providerReset = globalCss({
   ],
 
   "a, a:visited, a:active, a:hover": {
-    WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
+    WebkitTapHighlightColor: "rgba(10, 37, 64, 0)",
     color: "inherit",
     textDecoration: "none",
   },
@@ -161,9 +161,7 @@ export const providerReset = globalCss({
 
   svg: {
     alignSelf: "center",
-    height: "20px",
     verticalAlign: "middle",
-    width: "20px",
   },
 });
 
