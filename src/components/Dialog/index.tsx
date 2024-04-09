@@ -1,14 +1,7 @@
-import { useMemo, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 import { Icons } from "../../icons";
-import {
-  Button,
-  Text,
-  useEventListener,
-  useOutsideClick,
-  useScrollLock,
-  useWindowDimensions,
-} from "../../index";
+import { Button, Text, useEventListener, useOutsideClick, useScrollLock } from "../../index";
 import { IDialog } from "../../types";
 
 import {
@@ -32,17 +25,6 @@ export default function Dialog({
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
-  const { width: windowWidth } = useWindowDimensions();
-
-  const width = useMemo(() => {
-    if (windowWidth < 900) {
-      return "90%";
-    } else if (windowWidth < 1800) {
-      return small ? "50%" : "70%";
-    } else {
-      return small ? "40%" : "50%";
-    }
-  }, [windowWidth, small]);
 
   function handleClose(): void {
     setIsOpen(false);
@@ -99,14 +81,7 @@ export default function Dialog({
       )}
       {isMounted && (
         <DialogOverlayStyled animation={isOpen}>
-          <DialogCoreStyled
-            ref={ref}
-            animation={isOpen}
-            css={{
-              width,
-              ...css,
-            }}
-            small={small || false}>
+          <DialogCoreStyled ref={ref} animation={isOpen} css={css} small={small || false}>
             <DialogHeaderStyled lightbox={lightbox}>
               <Text
                 accent={lightbox}

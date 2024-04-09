@@ -14,6 +14,35 @@ export function App(): ReactElement {
 
     return (
     <C.Provider>
+        <C.View bottom="larger" container inverted top="larger">
+             <C.Stack direction="row">
+                <C.Stack align="center" direction="column" width={50}>
+                    <C.Text as="h1">Small Dialog</C.Text>
+                    <C.Dialog
+    small
+    title="Dialog Title"
+                        trigger={<C.Button>Open Dialog</C.Button>}
+                        >
+                        <C.Text>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget
+                        </C.Text>   
+
+                        </C.Dialog>
+                </C.Stack>
+                    <C.Stack align="center" direction="column" width={50}>
+                        <C.Text as="h1">Normal Dialog</C.Text>
+                        <C.Dialog
+                            title="Dialog Title"
+                            trigger={<C.Button>Open Dialog</C.Button>}
+                        >
+                            <C.Text>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget
+                            </C.Text>
+
+                        </C.Dialog>
+                    </C.Stack>
+             </C.Stack>
+        </C.View>
         <C.View
             app
             bottom="larger"

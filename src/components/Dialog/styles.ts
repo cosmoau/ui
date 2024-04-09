@@ -1,5 +1,41 @@
-import { fadeIn, fadeOut, styled } from "../../stitches.config";
+import { fadeIn, fadeOut, keyframes, styled } from "../../stitches.config";
 import { TextStyled } from "../Text/styles";
+
+const slideInRight = keyframes({
+  from: {
+    transform: "translateX(100%)",
+  },
+  to: {
+    transform: "translateX(0)",
+  },
+});
+
+const slideOutRight = keyframes({
+  from: {
+    transform: "translateX(0)",
+  },
+  to: {
+    transform: "translateX(100%)",
+  },
+});
+
+const slideInBottom = keyframes({
+  from: {
+    transform: "translateY(100%)",
+  },
+  to: {
+    transform: "translateY(0)",
+  },
+});
+
+const slideOutBottom = keyframes({
+  from: {
+    transform: "translateY(0)",
+  },
+  to: {
+    transform: "translateY(100%)",
+  },
+});
 
 export const DialogStyled = styled("div", {
   display: "inline-block",
@@ -42,36 +78,53 @@ export const DialogOverlayStyled = styled("div", {
 
 export const DialogCoreStyled = styled("div", {
   backgroundColor: "$background",
-  borderRadius: "$large",
+  bottom: 0,
   boxShadow: "$large",
-  height: "auto",
-  left: "50%",
-  minHeight: "30vh",
   overflowX: "hidden",
   overflowY: "auto",
-  position: "relative",
+  position: "fixed",
+  right: 0,
   textAlign: "left",
-  top: "50%",
-  transform: "translate(-50%, -50%)",
+  top: 0,
   transition: "$default",
 
   variants: {
     animation: {
       false: {
-        animation: `${fadeOut} .15s linear`,
+        animation: `${slideOutRight} .3s ease-out`,
         animationFillMode: "forwards",
+        phone: {
+          animation: `${slideOutBottom} .3s ease-out`,
+        },
       },
       true: {
-        animation: `${fadeIn} .2s linear`,
+        animation: `${slideInRight} .15s ease-in`,
         animationFillMode: "forwards",
+        phone: {
+          animation: `${slideInBottom} .15s ease-in`,
+        },
       },
     },
     small: {
       false: {
-        maxHeight: "85vh",
+        phone: {
+          left: 0,
+          maxHeight: "85%",
+          minHeight: "40%",
+          top: "auto",
+          width: "100%",
+        },
+        width: "60%",
       },
       true: {
-        maxHeight: "75vh",
+        phone: {
+          left: 0,
+          maxHeight: "50%",
+          minHeight: "30%",
+          top: "auto",
+          width: "100%",
+        },
+        width: "40%",
       },
     },
   },
