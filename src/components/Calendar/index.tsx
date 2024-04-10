@@ -158,7 +158,12 @@ export default function Calendar({
         })}
       </CalendarGridStyled>
       <CalendarFooterStyled>
-        <Button small onClick={resetCalendar}>
+        <Button
+          small
+          onClick={() => {
+            onSelection({ endDate: "", startDate: "" });
+            resetCalendar();
+          }}>
           Clear
         </Button>
         <Stack>
