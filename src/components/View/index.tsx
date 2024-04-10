@@ -30,7 +30,7 @@ export default function View({
         ...css,
       }}
       gradient={inverted && gradient}
-      id={id}
+      id={`view-${id}`}
       inverted={inverted}
       noPrint={noPrint}>
       <ViewContainerStyled app={app} container={container}>

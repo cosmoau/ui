@@ -168,7 +168,7 @@ export default function NewTable({
                           "&:hover": {
                             opacity: 1,
                           },
-                          opacity: sortColumn === index ? 0.8 : 0.2,
+                          opacity: sortColumn === index ? 0.7 : 0.35,
                         }}
                         small
                         theme={sortColumn !== index ? "minimal" : undefined}
@@ -180,7 +180,7 @@ export default function NewTable({
                             <Icons.SortDescending />
                           )
                         ) : (
-                          <Icons.CircleDashed />
+                          <Icons.Circle />
                         )}
                       </Button>
                     </th>

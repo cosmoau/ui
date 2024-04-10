@@ -122,12 +122,17 @@ export const useNavigationDisabledState = ({
   return { nextMonthDisabled, nextYearDisabled, prevMonthDisabled, prevYearDisabled };
 };
 
-export const useDaysInMonth = (viewDate: string): string[] => {
-  const daysInMonth = Array.from({ length: dayjs(viewDate).daysInMonth() }, (_, i) =>
-    formatDate(dayjs(viewDate).startOf("month").add(i, "day")),
+export const useDaysInMonth = (viewDate: string): { days: string[]; offset: number } => {
+  const daysInMonth = dayjs(viewDate).daysInMonth();
+  const year = dayjs(viewDate).year();
+  const month = dayjs(viewDate).month();
+  const firstDayOfMonth = dayjs(`${year}-${month + 1}-01`).day();
+
+  const days = Array.from({ length: daysInMonth }, (_, i) =>
+    formatDate(dayjs(`${year}-${month + 1}-${i + 1}`)),
   );
 
-  return daysInMonth;
+  return { days, offset: firstDayOfMonth };
 };
 
 export const useResetCalendar = ({

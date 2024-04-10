@@ -119,6 +119,7 @@ export interface IDialog {
   css?: CSS;
   disabled?: boolean;
   forceHeight?: number;
+  portal?: boolean;
   small?: boolean;
   title: string;
   trigger?: ReactNode;
@@ -374,10 +375,15 @@ export interface IView {
   container?: boolean;
   css?: CSS;
   gradient?: boolean;
-  id?: string;
+  id: string;
   inverted?: boolean;
   noPrint?: boolean;
   top?: IThemeSpacing;
+}
+
+export interface IPortal {
+  children?: ReactNode;
+  disabled?: boolean;
 }
 
 export interface IIcon {

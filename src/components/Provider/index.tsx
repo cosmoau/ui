@@ -5,6 +5,7 @@ import { Icons } from "../../icons";
 import { darkTheme } from "../../stitches.config";
 import { IProvider } from "../../types";
 
+import Portal from "./ProviderPortal";
 import { ProviderStyled, providerReset } from "./styles";
 import { ToastController } from "./ToastController";
 
@@ -27,6 +28,7 @@ export default function Provider({ children, css, dark }: IProvider): JSX.Elemen
       <Icons.IconContext.Provider value={{ alignmentBaseline: "middle", height: 20, width: 20 }}>
         <ToastController />
         {children}
+        <Portal />
       </Icons.IconContext.Provider>
     </ProviderStyled>
   );

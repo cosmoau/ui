@@ -1,4 +1,5 @@
-import { createPopper, type StrictModifiers } from "@popperjs/core";
+import { createPopper } from "@popperjs/core";
+import { type StrictModifiers } from "@popperjs/core/lib/types";
 import { useState, useEffect, useRef } from "react";
 
 export default function usePopper(): {
@@ -40,10 +41,10 @@ export default function usePopper(): {
                 offset: [0, 10],
               },
             },
-            {
-              name: "computeStyles",
-            },
           ],
+          placement: "bottom",
+
+          strategy: "fixed",
         }),
       );
     }

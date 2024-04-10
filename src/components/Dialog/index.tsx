@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { Icons } from "../../icons";
 import { Button, Text, useEventListener, useOutsideClick, useScrollLock } from "../../index";
 import { IDialog } from "../../types";
+import Portal from "../Provider/ProviderPortal";
 
 import {
   DialogContentStyled,
@@ -20,6 +21,7 @@ export default function Dialog({
   title,
   disabled,
   small,
+  portal = true,
 }: IDialog): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -77,17 +79,19 @@ export default function Dialog({
         "Missing trigger"
       )}
       {isMounted && (
-        <DialogOverlayStyled animation={isOpen}>
-          <DialogCoreStyled ref={ref} animation={isOpen} css={css} small={small || false}>
-            <DialogHeaderStyled>
-              <Text as="h4">{title}</Text>
-              <Button small theme="fill" onClick={(): void => handleClose()}>
-                <Icons.ArrowsInSimple />
-              </Button>
-            </DialogHeaderStyled>
-            <DialogContentStyled>{children}</DialogContentStyled>
-          </DialogCoreStyled>
-        </DialogOverlayStyled>
+        <Portal disabled={!portal}>
+          <DialogOverlayStyled animation={isOpen}>
+            <DialogCoreStyled ref={ref} animation={isOpen} css={css} small={small || false}>
+              <DialogHeaderStyled>
+                <Text as="h4">{title}</Text>
+                <Button small theme="fill" onClick={(): void => handleClose()}>
+                  <Icons.ArrowsInSimple />
+                </Button>
+              </DialogHeaderStyled>
+              <DialogContentStyled>{children}</DialogContentStyled>
+            </DialogCoreStyled>
+          </DialogOverlayStyled>
+        </Portal>
       )}
     </DialogStyled>
   );

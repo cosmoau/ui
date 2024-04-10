@@ -79,6 +79,7 @@ export const DialogOverlayStyled = styled("div", {
 export const DialogCoreStyled = styled("div", {
   backgroundColor: "$background",
   boxShadow: "$large",
+  height: "100%",
   overflowX: "hidden",
   overflowY: "auto",
   position: "fixed",
@@ -106,7 +107,6 @@ export const DialogCoreStyled = styled("div", {
     },
     small: {
       false: {
-        height: "100%",
         phone: {
           bottom: 0,
           height: "auto",
@@ -115,27 +115,26 @@ export const DialogCoreStyled = styled("div", {
           minHeight: "40%",
           right: 0,
           top: "auto",
-          width: "100%",
+          width: "100% !important",
         },
         tabletX: {
-          width: "75%",
+          width: "75% !important",
         },
         width: "55%",
       },
       true: {
-        height: "100%",
         phone: {
           bottom: 0,
           height: "auto",
           left: 0,
-          maxHeight: "50%",
+          maxHeight: "70%",
           minHeight: "30%",
           right: 0,
           top: "auto",
-          width: "100%",
+          width: "100% !important",
         },
         tabletX: {
-          width: "50%",
+          width: "50% !important",
         },
         width: "35%",
       },

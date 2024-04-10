@@ -1,7 +1,9 @@
 import { styled } from "../../stitches.config";
+import { ButtonStyled } from "../Button/styles";
 
 export const CalendarStyled = styled("div", {
   minHeight: "100%",
+  overflow: "visible",
   width: "100%",
 });
 
@@ -12,22 +14,34 @@ export const CalendarHeaderStyled = styled("div", {
   justifyContent: "space-between",
   marginBottom: "$small",
   paddingBottom: "$small",
-  phone: {
-    flexDirection: "column",
-    gap: "$small",
-  },
 });
 
 export const CalendarGridStyled = styled("div", {
   display: "grid",
   gap: "$small",
-  gridTemplateColumns: "repeat(6, 1fr)",
+  gridArea: "calendar",
+  gridTemplateColumns: "repeat(7, 1fr)",
+  maxWidth: "100%",
   micro: {
-    gap: "$smaller",
-    gridTemplateColumns: "repeat(4, 1fr)",
+    gap: "$small $smaller",
   },
+
   phone: {
-    gridTemplateColumns: "repeat(5, 1fr)",
+    [`& ${ButtonStyled}`]: {
+      padding: "$smallest $smaller",
+    },
+    gap: "$small $small",
   },
   textAlign: "center",
+});
+
+export const CalendarFooterStyled = styled("div", {
+  "&:hover": {
+    opacity: 1,
+  },
+  display: "flex",
+  justifyContent: "space-between",
+  marginTop: "calc($medium / 1.25)",
+  opacity: 0.5,
+  transition: "$default",
 });

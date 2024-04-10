@@ -36,6 +36,9 @@ import {
   CaretDoubleRight,
   CaretRight,
   UploadSimple,
+  ClockClockwise,
+  ClockCountdown,
+  ClockCounterClockwise,
 } from "@phosphor-icons/react";
 
 export const Icons = {
@@ -55,6 +58,9 @@ export const Icons = {
   Circle,
   CircleDashed,
   ClipboardText,
+  ClockClockwise,
+  ClockCountdown,
+  ClockCounterClockwise,
   Database,
   Dot,
   Eye,

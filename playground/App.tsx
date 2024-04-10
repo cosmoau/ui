@@ -14,7 +14,7 @@ export function App(): ReactElement {
 
     return (
     <C.Provider>
-        <C.View bottom="larger" container  top="larger">
+        <C.View id="view-1" inverted bottom="larger" container  top="larger">
              <C.Stack direction="row">
                 <C.Stack align="center" direction="column" width={50}>
                     <C.Text as="h1">Small Dialog</C.Text>
@@ -44,6 +44,7 @@ export function App(): ReactElement {
              </C.Stack>
         </C.View>
         <C.View
+            id="view-2"
             app
             bottom="larger"
             inverted
@@ -220,7 +221,9 @@ export function App(): ReactElement {
                 </C.Stack>
                     </C.Stack>
             </C.View>
-            <C.View bottom="larger" container top="larger">
+            <C.View
+            id="view-3"
+            bottom="larger" container top="larger">
                 <C.Stack align="center" bottom="large">
                     <C.Select
                     filter
@@ -254,7 +257,9 @@ export function App(): ReactElement {
                     <C.Input id="test-5" name="test-5" loading />
                     </C.Stack>
         </C.View>
-        <C.View bottom="larger" container top="larger">
+        <C.View
+            id="view-4"
+        bottom="larger" container top="larger">
             <C.Stack align="center" bottom="large">
                 <C.Box>
                     <C.Accordion
@@ -276,7 +281,9 @@ export function App(): ReactElement {
             </C.Stack>
         </C.View>
                 <C.Text as="h2">Single date: {singleDate}</C.Text>
-            <C.View bottom="larger" container top="larger">
+            <C.View
+            id="view-5"
+            bottom="larger" container top="larger">
                 <C.Stack align="center" bottom="large">
                     <C.Text as="h2">
                         Range dates: {startDate} - {endDate}
@@ -285,6 +292,52 @@ export function App(): ReactElement {
 
                 </C.Stack>
                 <C.Stack align="center" bottom="medium">
+                    <C.Dialog small title="Calendar" trigger={<C.Button>Calendar Range</C.Button>}>
+                        <C.Calendar
+                            endDate={endDate}
+                            minLength={10}
+                            mode="range"
+                            startDate={startDate}
+                            onSelection={(dates) => {
+                                setStartDate(dates.startDate);
+                                setEndDate(dates.endDate);
+                                toast.success(`Selected dates: ${JSON.stringify(dates)}`);
+                            }}
+                        />
+                    </C.Dialog>
+                    <C.Popover small trigger={<C.Button>Test Long Small</C.Button>}>
+                        <C.Text>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam quas facere odio obcaecati, cupiditate quibusdam eum explicabo sunt quasi repudiandae earum molestiae enim voluptatibus beatae praesentium. Sit magnam molestias unde!
+                        </C.Text>
+                        <C.Text>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam quas facere odio obcaecati, cupiditate quibusdam eum explicabo sunt quasi repudiandae earum molestiae enim voluptatibus beatae praesentium. Sit magnam molestias unde!
+                        </C.Text>
+                        <C.Text>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam quas facere odio obcaecati, cupiditate quibusdam eum explicabo sunt quasi repudiandae earum molestiae enim voluptatibus beatae praesentium. Sit magnam molestias unde!
+                        </C.Text>
+                    </C.Popover>
+                    <C.Popover trigger={<C.Button>Test Long</C.Button>}>
+                        <C.Text>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam quas facere odio obcaecati, cupiditate quibusdam eum explicabo sunt quasi repudiandae earum molestiae enim voluptatibus beatae praesentium. Sit magnam molestias unde!
+                        </C.Text>
+                        <C.Text>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam quas facere odio obcaecati, cupiditate quibusdam eum explicabo sunt quasi repudiandae earum molestiae enim voluptatibus beatae praesentium. Sit magnam molestias unde!
+                        </C.Text>
+                        <C.Text>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam quas facere odio obcaecati, cupiditate quibusdam eum explicabo sunt quasi repudiandae earum molestiae enim voluptatibus beatae praesentium. Sit magnam molestias unde!
+                        </C.Text>
+                        </C.Popover>
+                    <C.Popover small trigger={<C.Button>Test Short Small</C.Button>}>
+                        <C.Text>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        </C.Text>
+                    </C.Popover>
+                    <C.Popover trigger={<C.Button>Test Short</C.Button>}>
+                        <C.Text>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            </C.Text>
+                    </C.Popover>
+
                 <C.Popover trigger={<C.Button>Calendar Range</C.Button>}>
                 <C.Calendar
     endDate={endDate}
@@ -310,7 +363,9 @@ export function App(): ReactElement {
                     </C.Popover>
                 </C.Stack>
                 </C.View>
-        <C.View bottom="larger" container top="larger">
+        <C.View
+        id="view-6"
+        bottom="larger" container top="larger">
             <C.Stack direction="row">
                 <C.Stack direction="column" offset={30} width={40}>
                         <C.Stack bottom="medium">

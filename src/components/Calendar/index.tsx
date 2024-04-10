@@ -14,7 +14,14 @@ import {
   useResetCalendar,
   useCalendarViewChange,
 } from "./hooks"; // Adjust the import path as needed
-import { CalendarGridStyled, CalendarHeaderStyled, CalendarStyled } from "./styles";
+import {
+  CalendarFooterStyled,
+  CalendarGridStyled,
+  CalendarHeaderStyled,
+  CalendarStyled,
+} from "./styles";
+
+const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 export default function Calendar({
   onSelection,
@@ -55,7 +62,7 @@ export default function Calendar({
   const { handleDateChange } = useCalendarViewChange(setValues);
 
   // Days generation for the current month view
-  const daysInMonth = useDaysInMonth(values.viewDate);
+  const { days, offset } = useDaysInMonth(values.viewDate);
 
   // Reset functionality
   const resetCalendar = useResetCalendar({ maxDate, minDate, setDates, setValues, startDate });
@@ -91,21 +98,11 @@ export default function Calendar({
         </Text>
         <Stack>
           <Button
-            disabled={prevYearDisabled}
-            small={isPhone}
-            theme="minimal"
-            onClick={() => handleDateChange("year", "prev")}>
-            <Icons.CaretDoubleLeft />
-          </Button>
-          <Button
             disabled={prevMonthDisabled}
             small={isPhone}
             theme="minimal"
             onClick={() => handleDateChange("month", "prev")}>
             <Icons.CaretLeft />
-          </Button>
-          <Button small={isPhone} theme="minimal" onClick={resetCalendar}>
-            <Icons.Circle />
           </Button>
           <Button
             disabled={nextMonthDisabled}
@@ -114,17 +111,19 @@ export default function Calendar({
             onClick={() => handleDateChange("month", "next")}>
             <Icons.CaretRight />
           </Button>
-          <Button
-            disabled={nextYearDisabled}
-            small={isPhone}
-            theme="minimal"
-            onClick={() => handleDateChange("year", "next")}>
-            <Icons.CaretDoubleRight />
-          </Button>
         </Stack>
       </CalendarHeaderStyled>
+
       <CalendarGridStyled>
-        {daysInMonth.map((date) => {
+        {daysOfWeek.map((day) => (
+          <Text key={day} accent as="span">
+            {day}
+          </Text>
+        ))}
+        {Array.from({ length: offset }).map((_, i) => (
+          <div key={i} />
+        ))}
+        {days.map((date) => {
           const isSelected = date === dates.startDate || date === dates.endDate;
           const isBetween =
             dates.startDate &&
@@ -140,15 +139,45 @@ export default function Calendar({
           return (
             <Button
               key={date}
+              css={{
+                ...(isSelected && {
+                  "&:hover": {
+                    backgroundColor: "$text !important",
+                    color: "$background !important",
+                    opacity: 0.7,
+                  },
+                }),
+              }}
               disabled={isDisabled}
               small
-              theme={isSelected || isBetween ? "solid" : "default"}
+              theme={isSelected ? "solid" : isBetween ? "fill" : "minimal"}
               onClick={() => handleDaySelection(date)}>
               {dayjs(date).format("D")}
             </Button>
           );
         })}
       </CalendarGridStyled>
+      <CalendarFooterStyled>
+        <Button small onClick={resetCalendar}>
+          Clear
+        </Button>
+        <Stack>
+          <Button
+            disabled={prevYearDisabled}
+            small
+            theme="minimal"
+            onClick={() => handleDateChange("year", "prev")}>
+            <Icons.ClockCounterClockwise />
+          </Button>
+          <Button
+            disabled={nextYearDisabled}
+            small
+            theme="minimal"
+            onClick={() => handleDateChange("year", "next")}>
+            <Icons.ClockClockwise />
+          </Button>
+        </Stack>
+      </CalendarFooterStyled>
     </CalendarStyled>
   );
 }
