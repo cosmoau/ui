@@ -22,9 +22,7 @@ export const SelectGroupStyled = styled("div", {
   overflowY: "auto",
   padding: "0 $smaller",
   pointerEvents: "auto",
-  position: "absolute",
   textAlign: "left !important",
-  transition: "$default",
   variants: {
     animation: {
       false: {

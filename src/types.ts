@@ -375,7 +375,7 @@ export interface IView {
   container?: boolean;
   css?: CSS;
   gradient?: boolean;
-  id: string;
+  id?: string;
   inverted?: boolean;
   noPrint?: boolean;
   top?: IThemeSpacing;

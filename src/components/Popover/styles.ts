@@ -22,7 +22,6 @@ export const PopoverContentStyled = styled("div", {
   overflowY: "auto",
   pointerEvents: "auto",
   textAlign: "left !important",
-  transition: "$default",
   variants: {
     animation: {
       false: {

@@ -1,7 +1,7 @@
 {
   "name": "@cosmoau/ui",
   "description": "Cosmo's internal component library, built with React, Next.js, and Stitches.",
-  "version": "1.9.10",
+  "version": "1.9.11",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": {
     "production": [
@@ -102,7 +102,7 @@
     "kill": "lsof -ti tcp:420 | xargs kill",
     "lint": "eslint src --ext .ts,.tsx --fix",
     "prebuild": "rm -rf dist .parcel-cache",
-    "prettier": "prettier --check --write src",
+    "prettier": "prettier --check --write src playground/App.tsx",
     "tidy": "pnpm lint && pnpm prettier",
     "typecheck": "tsc --noEmit"
   },

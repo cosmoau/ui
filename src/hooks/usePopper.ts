@@ -43,7 +43,6 @@ export default function usePopper(): {
             },
           ],
           placement: "bottom",
-
           strategy: "fixed",
         }),
       );
