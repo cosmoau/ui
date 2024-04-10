@@ -13,7 +13,7 @@ export function App(): ReactElement {
   const [singleDate, setSingleDate] = useState<string>("");
 
   return (
-    <C.Provider>
+    <C.Provider dark>
       <C.View bottom="larger" container id="view-1" inverted top="larger">
         <C.Stack direction="row">
           <C.Stack align="center" direction="column" width={50}>

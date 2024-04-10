@@ -27,6 +27,7 @@ export default function Provider({ children, css, dark }: IProvider): JSX.Elemen
       }}>
       <Icons.IconContext.Provider value={{ alignmentBaseline: "middle", height: 20, width: 20 }}>
         <ToastController />
+
         {children}
         <Portal />
       </Icons.IconContext.Provider>

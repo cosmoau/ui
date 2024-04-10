@@ -111,7 +111,7 @@ export const providerReset = globalCss({
   ],
 
   "a, a:visited, a:active, a:hover": {
-    WebkitTapHighlightColor: "rgba(10, 37, 64, 0)",
+    WebkitTapHighlightColor: "rgba(15, 23, 36, 0)",
     color: "inherit",
     textDecoration: "none",
   },
