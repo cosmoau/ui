@@ -66,7 +66,6 @@ export const SelectItemStyled = styled("div", {
     marginBottom: "$smaller",
   },
 
-  backgroundColor: "$background",
   borderRadius: "$small",
   cursor: "pointer",
   display: "flex",
@@ -78,7 +77,7 @@ export const SelectItemStyled = styled("div", {
   variants: {
     focused: {
       true: {
-        backgroundColor: "$defaultHover  !important",
+        backgroundColor: "$default  !important",
         borderBottomColor: "transparent",
       },
     },
@@ -98,6 +97,9 @@ export const SelectItemStyled = styled("div", {
       },
     },
     selected: {
+      false: {
+        backgroundColor: "transparent",
+      },
       true: {
         backgroundColor: "$default",
         fontWeight: "bold",

@@ -9,7 +9,7 @@ export const ViewStyled = styled("section", {
   variants: {
     gradient: {
       true: {
-        backgroundImage: `linear-gradient(180deg, $background 0%, $gradientStart 70%, $gradientEnd 100%)`,
+        backgroundImage: `linear-gradient(180deg, $background 0%, $background 50%, $defaultSubtle 100%)`,
       },
     },
     inverted: {

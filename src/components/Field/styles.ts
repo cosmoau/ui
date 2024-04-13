@@ -68,8 +68,8 @@ export const FieldAreaStyled = styled("textarea", {
 
 export const FieldFunctionStyled = styled("div", {
   alignItems: "center",
-  backgroundColor: "$defaultTable",
-  borderTop: "0.1rem solid $borderTable",
+  backgroundColor: "$defaultSubtle",
+  borderTop: "0.1rem solid $borderSubtle",
   button: {
     marginLeft: "$small",
   },

@@ -2,7 +2,7 @@ import { styled } from "../../stitches.config";
 
 export const LoadingOverlayStyled = styled("div", {
   alignItems: "center",
-  backgroundColor: "$defaultTable",
+  backgroundColor: "$defaultSubtle",
   border: "0.1rem solid $border",
   borderRadius: "$small",
   bottom: "$medium",

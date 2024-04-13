@@ -16,7 +16,7 @@ export const UploadInputStyled = styled("input", {
 
 export const UploadFooterStyled = styled("div", {
   alignItems: "center",
-  backgroundColor: "$defaultTable",
+  backgroundColor: "$defaultSubtle",
   borderTop: "0.1rem solid $border",
   display: "flex",
   justifyContent: "space-between",

@@ -220,6 +220,7 @@ export interface IMenu {
   onSelection?: (value: string, label: string) => void;
   options: Array<{
     label: string;
+    sub?: Array<{ label: string; value: string }>;
     value: string;
   }>;
   trigger: ReactNode;

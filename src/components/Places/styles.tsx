@@ -23,7 +23,7 @@ export const placesReset = {
         fontWeight: "normal",
       },
 
-      backgroundColor: "$defaultTable",
+      backgroundColor: "$defaultSubtle",
 
       border: 0,
       borderRadius: "$small",
@@ -37,7 +37,7 @@ export const placesReset = {
       verticalAlign: "baseline",
     },
 
-    backgroundColor: "$defaultTable",
+    backgroundColor: "$defaultSubtle",
     border: "0.1rem solid $border",
     borderRadius: "$small",
     boxShadow: "$small",

@@ -14,6 +14,90 @@ export function App(): ReactElement {
 
   return (
     <C.Provider dark>
+      <C.View bottom="larger" container id="view-3" top="larger">
+        <C.Stack align="center" bottom="large">
+          <C.Menu
+            options={[
+              { label: "Option 1", value: "option1" },
+              { label: "Option 2", value: "option2" },
+
+              { label: "Option 3", value: "option3" },
+              { label: "Option 4", value: "option4" },
+              { label: "Option 5", value: "option5" },
+              {
+                label: "Option 6",
+                sub: [
+                  { label: "Sub Option 1", value: "sub-option1" },
+                  { label: "Sub Option 2", value: "sub-option2" },
+                  { label: "Sub Option 3", value: "sub-option3" },
+                  { label: "Sub Option 4", value: "sub-option4" },
+                ],
+                value: "option6",
+              },
+            ]}
+            trigger={<C.Button>Select</C.Button>}
+          />
+          <C.Select
+            filter
+            options={[
+              { label: "Option 1", value: "option1" },
+              { label: "Option 2", value: "option2" },
+
+              { label: "Option 3", value: "option3" },
+              { label: "Option 4", value: "option4" },
+              { label: "Option 5", value: "option5" },
+              { label: "Option 6", value: "option6" },
+              { label: "Option 7", value: "option7" },
+              { label: "Option 8", value: "option8" },
+              { label: "Option 9", value: "option9" },
+              { label: "Option 10", value: "option10" },
+              { label: "Option 11", value: "option11" },
+              { label: "Option 12", value: "option12" },
+              { label: "Option 13", value: "option13" },
+              { label: "Option 14", value: "option14" },
+              { label: "Option 15", value: "option15" },
+              { label: "Option 16", value: "option16" },
+              { label: "Option 17", value: "option17" },
+              { label: "Option 18", value: "option18" },
+              { label: "Option 19", value: "option19" },
+              { label: "Option 20", value: "option20" },
+            ]}
+            trigger={<C.Button>Select</C.Button>}
+          />
+          <C.Select
+            filter
+            options={[
+              { label: "Option 1", value: "option1" },
+              { label: "Option 2", value: "option2" },
+
+              { label: "Option 3", value: "option3" },
+              { label: "Option 4", value: "option4" },
+              { label: "Option 5", value: "option5" },
+              { label: "Option 6", value: "option6" },
+              { label: "Option 7", value: "option7" },
+              { label: "Option 8", value: "option8" },
+              { label: "Option 9", value: "option9" },
+              { label: "Option 10", value: "option10" },
+              { label: "Option 11", value: "option11" },
+              { label: "Option 12", value: "option12" },
+              { label: "Option 13", value: "option13" },
+              { label: "Option 14", value: "option14" },
+              { label: "Option 15", value: "option15" },
+              { label: "Option 16", value: "option16" },
+              { label: "Option 17", value: "option17" },
+              { label: "Option 18", value: "option18" },
+              { label: "Option 19", value: "option19" },
+              { label: "Option 20", value: "option20" },
+            ]}
+            trigger={<C.Input id="test-1" loading={false} name="test-1" type="numeric" />}
+          />
+          <C.Input error errorMessage="errrrror bro!" id="test-2" name="test-2" />
+          <C.Input id="test-3" name="test-3" submit="yes" />
+          <C.Input copy id="test-4" name="test-4" reset submit="Submit" />
+          <C.Input id="test-5" loading name="test-5" />
+          <C.Field copy id="test-4" name="test-4" reset submit="Submit" />
+        </C.Stack>
+      </C.View>
       <C.View bottom="larger" container id="view-1" inverted top="larger">
         <C.Stack direction="row">
           <C.Stack align="center" direction="column" width={50}>
@@ -34,165 +118,364 @@ export function App(): ReactElement {
           </C.Stack>
         </C.Stack>
       </C.View>
-      <C.View app bottom="larger" id="view-2" inverted top="larger">
-        <C.Places
-          apiKey={process.env.GOOGLE_API_KEY || ""}
-          id="places"
-          name="places"
-          submit="DJKASDJFHSDJFSJDFJKSD"
-        />
+      <C.View app bottom="larger" id="view-2-1" inverted top="larger">
         <C.Stack direction="row">
-          <C.Stack direction="column" offset={30} width={40}>
-            <C.Box header={<C.Text as="h4">Test</C.Text>}>
+          <C.Stack align="center" direction="column">
+            <C.Badge inline="medium" theme="red">
+              Red
+            </C.Badge>
+            <C.Badge inline="medium" theme="blue">
+              Blue
+            </C.Badge>
+            <C.Badge inline="medium" theme="green">
+              Green
+            </C.Badge>
+            <C.Badge inline="medium" theme="purple">
+              Purple
+            </C.Badge>
+            <C.Badge inline="medium" theme="orange">
+              Orange
+            </C.Badge>
+          </C.Stack>
+        </C.Stack>
+      </C.View>
+      <C.View app bottom="larger" id="view-2-1" top="larger">
+        <C.Stack direction="row">
+          <C.Stack align="center" direction="column">
+            <C.Badge inline="medium" theme="red">
+              Red
+            </C.Badge>
+            <C.Badge inline="medium" theme="blue">
+              Blue
+            </C.Badge>
+            <C.Badge inline="medium" theme="green">
+              Green
+            </C.Badge>
+            <C.Badge inline="medium" theme="purple">
+              Purple
+            </C.Badge>
+            <C.Badge inline="medium" theme="orange">
+              Orange
+            </C.Badge>
+            <C.Badge
+              css={{
+                backgroundColor: "$redData",
+              }}
+              inline="medium"
+              theme="orange">
+              Red Data
+            </C.Badge>
+            <C.Badge
+              css={{
+                backgroundColor: "$redDataAlt",
+              }}
+              inline="medium"
+              theme="orange">
+              Red Data Alt
+            </C.Badge>
+            <C.Badge
+              css={{
+                backgroundColor: "$blueData",
+              }}
+              inline="medium"
+              theme="orange">
+              Blue Data
+            </C.Badge>
+            <C.Badge
+              css={{
+                backgroundColor: "$blueDataAlt",
+              }}
+              inline="medium"
+              theme="orange">
+              Blue Data Alt
+            </C.Badge>
+            <C.Badge
+              css={{
+                backgroundColor: "$greenData",
+              }}
+              inline="medium"
+              theme="orange">
+              Green Data
+            </C.Badge>
+            <C.Badge
+              css={{
+                backgroundColor: "$greenDataAlt",
+              }}
+              inline="medium"
+              theme="orange">
+              Green Data Alt
+            </C.Badge>
+            <C.Badge
+              css={{
+                backgroundColor: "$purpleData",
+              }}
+              inline="medium"
+              theme="orange">
+              Purple Data
+            </C.Badge>
+            <C.Badge
+              css={{
+                backgroundColor: "$purpleDataAlt",
+              }}
+              inline="medium"
+              theme="orange">
+              Purple Data Alt
+            </C.Badge>
+            <C.Badge
+              css={{
+                backgroundColor: "$orangeData",
+              }}
+              inline="medium"
+              theme="orange">
+              Orange Data
+            </C.Badge>
+            <C.Badge
+              css={{
+                backgroundColor: "$orangeDataAlt",
+              }}
+              inline="medium"
+              theme="orange">
+              Orange Data Alt
+            </C.Badge>
+          </C.Stack>
+        </C.Stack>
+      </C.View>
+
+      <C.View app bottom="larger" id="view-2" top="larger">
+        <C.Stack direction="row">
+          <C.Stack direction="column" width={33}>
+            <C.Box
+              css={{ background: "$defaultSubtle !important", overflow: "visible" }}
+              footer={<C.Text>defaultSubtle </C.Text>}
+              header={<C.Text as="h3">defaultSubtle</C.Text>}
+              theme="fill">
+              <C.Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget
+              </C.Text>
+              <C.Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget
+              </C.Text>
+              <C.Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget
+              </C.Text>
               <C.Text>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget
               </C.Text>
             </C.Box>
           </C.Stack>
-          <C.Stack bottom="larger" direction="column">
-            <C.Table
-              filters={<C.Input id="table-search" name="table-search" placeholder="Filter" />}
-              header={{
-                count: true,
-                full: true,
-                options: (
-                  <>
-                    <C.Button inline="small">
-                      <RadioButton />
-                    </C.Button>
-                    <C.Button inline="small">
-                      <RadioButton />
-                    </C.Button>
-                    <C.Button>
-                      <RadioButton />
-                    </C.Button>
-                  </>
-                ),
-                title: "Table",
-              }}
-              identifier="table-a"
-              kbd
-              pagination
-              sortable
-              tbody={Array.from(Array(30).keys()).map((i) => [
-                {
-                  label:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget",
-                  value: "a",
-                },
-                {
-                  label: i === 10 ? "50%" : "AUTO",
-                  value: "b",
-                },
-                {
-                  label: i <= 10 ? "10%" : "30%",
-                  value: "c",
-                },
-                {
-                  label: i <= 10 ? "10%" : "30%",
-                  value: "c",
-                },
-              ])}
-              thead={["Column A", "Column B", "Column C", "Column D"]}
-            />
-            CC.
+          <C.Stack direction="column" width={33}>
+            <C.Box
+              css={{ overflow: "visible" }}
+              footer={
+                <C.Places apiKey={process.env.GOOGLE_API_KEY || ""} id="places" name="places" />
+              }
+              theme="fill">
+              <C.Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget
+              </C.Text>
+            </C.Box>
           </C.Stack>
-          <C.Stack bottom="larger" direction="column">
-            <C.Table
-              collapse
-              filters={<C.Input id="table-search-2" name="table-search-2" placeholder="Filter" />}
-              header={{
-                count: true,
-                options: (
-                  <>
-                    <C.Button inline="small">
-                      <RadioButton />
-                    </C.Button>
-                    <C.Button inline="small">
-                      <RadioButton />
-                    </C.Button>
-                    <C.Button>
-                      <RadioButton />
-                    </C.Button>
-                  </>
-                ),
-                title: "Table",
-              }}
-              identifier="table-a"
-              kbd
-              pagination
-              sortable
-              tbody={Array.from(Array(30).keys()).map((i) => [
-                {
-                  label:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget",
-                  value: "a",
-                },
-                {
-                  label: i === 10 ? "50%" : "AUTO",
-                  value: "b",
-                },
-                {
-                  label: i <= 10 ? "10%" : "30%",
-                  value: "c",
-                },
-                {
-                  label: i <= 10 ? "10%" : "30%",
-                  value: "c",
-                },
-              ])}
-              thead={["Column A", "Column B", "Column C", "Column D"]}
-            />
-          </C.Stack>
-          <C.Stack direction="column">
-            <C.Table
-              filters={<C.Input id="table-search-3" name="table-search-3" placeholder="Filter" />}
-              header={{
-                count: true,
-                options: (
-                  <>
-                    <C.Button inline="small">
-                      <RadioButton />
-                    </C.Button>
-                    <C.Button inline="small">
-                      <RadioButton />
-                    </C.Button>
-                    <C.Button>
-                      <RadioButton />
-                    </C.Button>
-                  </>
-                ),
-                title: "Table",
-              }}
-              identifier="table-a"
-              kbd
-              pagination
-              sortable
-              tbody={Array.from(Array(30).keys()).map((i) => [
-                {
-                  label:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget",
-                  value: "a",
-                },
-                {
-                  label: i === 10 ? "50%" : "AUTO",
-                  value: "b",
-                },
-                {
-                  label: i <= 10 ? "10%" : "30%",
-                  value: "c",
-                },
-                {
-                  label: i <= 10 ? "10%" : "30%",
-                  value: "c",
-                },
-              ])}
-              thead={["Column A", "Column B", "Column C", "Column D"]}
-            />
+
+          <C.Stack direction="column" width={33}>
+            <C.Box
+              css={{ background: "$defaultHover !important", overflow: "visible" }}
+              footer={<C.Text>defaultHover </C.Text>}
+              theme="fill">
+              <C.Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget
+              </C.Text>
+            </C.Box>
           </C.Stack>
         </C.Stack>
       </C.View>
-      <C.View bottom="larger" container id="view-3" top="larger">
+      <C.View
+        app
+        bottom="larger"
+        css={{
+          backgroundColor: "$defaultSubtle !important",
+        }}
+        id="view-2"
+        top="larger">
+        <C.Stack direction="row">
+          <C.Stack direction="column" width={33}>
+            <C.Box
+              css={{ background: "$defaultSubtle !important", overflow: "visible" }}
+              footer={<C.Text>defaultSubtle </C.Text>}
+              theme="fill">
+              <C.Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget
+              </C.Text>
+            </C.Box>
+          </C.Stack>
+          <C.Stack direction="column" width={33}>
+            <C.Box
+              css={{ overflow: "visible" }}
+              footer={
+                <C.Places apiKey={process.env.GOOGLE_API_KEY || ""} id="places" name="places" />
+              }
+              theme="fill">
+              <C.Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget
+              </C.Text>
+            </C.Box>
+          </C.Stack>
+
+          <C.Stack direction="column" width={33}>
+            <C.Box
+              css={{ background: "$defaultHover !important", overflow: "visible" }}
+              footer={<C.Text>defaultHover </C.Text>}
+              theme="fill">
+              <C.Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget
+              </C.Text>
+            </C.Box>
+          </C.Stack>
+        </C.Stack>
+      </C.View>
+      <C.View>
+        <C.Stack bottom="larger" direction="column">
+          <C.Table
+            filters={<C.Input id="table-search" name="table-search" placeholder="Filter" />}
+            header={{
+              count: true,
+              full: true,
+              options: (
+                <>
+                  <C.Button inline="small">
+                    <RadioButton />
+                  </C.Button>
+                  <C.Button inline="small">
+                    <RadioButton />
+                  </C.Button>
+                  <C.Button>
+                    <RadioButton />
+                  </C.Button>
+                </>
+              ),
+              title: "Table",
+            }}
+            identifier="table-a"
+            kbd
+            pagination
+            sortable
+            tbody={Array.from(Array(30).keys()).map((i) => [
+              {
+                label:
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget",
+                value: "a",
+              },
+              {
+                label: i === 10 ? "50%" : "AUTO",
+                value: "b",
+              },
+              {
+                label: i <= 10 ? "10%" : "30%",
+                value: "c",
+              },
+              {
+                label: i <= 10 ? "10%" : "30%",
+                value: "c",
+              },
+            ])}
+            thead={["Column A", "Column B", "Column C", "Column D"]}
+          />
+          CC.
+        </C.Stack>
+        <C.Stack bottom="larger" direction="column">
+          <C.Table
+            collapse
+            filters={<C.Input id="table-search-2" name="table-search-2" placeholder="Filter" />}
+            header={{
+              count: true,
+              options: (
+                <>
+                  <C.Button inline="small">
+                    <RadioButton />
+                  </C.Button>
+                  <C.Button inline="small">
+                    <RadioButton />
+                  </C.Button>
+                  <C.Button>
+                    <RadioButton />
+                  </C.Button>
+                </>
+              ),
+              title: "Table",
+            }}
+            identifier="table-a"
+            kbd
+            pagination
+            sortable
+            tbody={Array.from(Array(30).keys()).map((i) => [
+              {
+                label:
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget",
+                value: "a",
+              },
+              {
+                label: i === 10 ? "50%" : "AUTO",
+                value: "b",
+              },
+              {
+                label: i <= 10 ? "10%" : "30%",
+                value: "c",
+              },
+              {
+                label: i <= 10 ? "10%" : "30%",
+                value: "c",
+              },
+            ])}
+            thead={["Column A", "Column B", "Column C", "Column D"]}
+          />
+        </C.Stack>
+        <C.Stack direction="column">
+          <C.Table
+            filters={<C.Input id="table-search-3" name="table-search-3" placeholder="Filter" />}
+            header={{
+              count: true,
+              options: (
+                <>
+                  <C.Button inline="small">
+                    <RadioButton />
+                  </C.Button>
+                  <C.Button inline="small">
+                    <RadioButton />
+                  </C.Button>
+                  <C.Button>
+                    <RadioButton />
+                  </C.Button>
+                </>
+              ),
+              title: "Table",
+            }}
+            identifier="table-a"
+            kbd
+            pagination
+            sortable
+            tbody={Array.from(Array(30).keys()).map((i) => [
+              {
+                label:
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget",
+                value: "a",
+              },
+              {
+                label: i === 10 ? "50%" : "AUTO",
+                value: "b",
+              },
+              {
+                label: i <= 10 ? "10%" : "30%",
+                value: "c",
+              },
+              {
+                label: i <= 10 ? "10%" : "30%",
+                value: "c",
+              },
+            ])}
+            thead={["Column A", "Column B", "Column C", "Column D"]}
+          />
+        </C.Stack>
+      </C.View>
+      <C.View bottom="larger" container gradient id="view-3" inverted top="larger">
         <C.Stack align="center" bottom="large">
           <C.Select
             filter

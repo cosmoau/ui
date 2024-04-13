@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 
+import { Icons } from "../../icons";
 import { useEventListener, useOutsideClick } from "../../index";
 import { IMenu } from "../../types";
 
@@ -9,6 +10,9 @@ import {
   MenuStyled,
   MenuTriggerStyled,
   MenuContentStyled,
+  MenuIconStyled,
+  MenuSubItemStyled,
+  MenuSubGroupStyled,
 } from "./styles";
 
 export default function Menu({
@@ -23,6 +27,8 @@ export default function Menu({
 
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+
+  const [subMenu, setSubMenu] = useState<string | null>(null);
 
   function handleClose(): void {
     setIsOpen(false);
@@ -74,14 +80,40 @@ export default function Menu({
       {isMounted && (
         <MenuGroupStyled ref={ref} animation={isOpen}>
           {options.map((option) => (
-            <MenuItemStyled
-              key={option.value}
-              selected={initial === option.value ? true : false}
-              onClick={(): void => {
-                handleSelection(option.value, option.label);
-              }}>
-              {option.label}
-            </MenuItemStyled>
+            <>
+              <MenuItemStyled
+                key={option.value}
+                selected={initial === option.value || subMenu === option.value}
+                onClick={(): void => {
+                  if (option.sub) {
+                    setSubMenu(subMenu === option.value ? null : option.value);
+                  } else {
+                    setSubMenu(null);
+                    handleSelection(option.value, option.label);
+                  }
+                }}>
+                {option.label}{" "}
+                {option.sub && (
+                  <MenuIconStyled open={subMenu === option.value}>
+                    <Icons.CaretDown />
+                  </MenuIconStyled>
+                )}
+              </MenuItemStyled>
+              {option.sub && subMenu === option.value && (
+                <MenuSubGroupStyled>
+                  {option.sub.map((subOption) => (
+                    <MenuSubItemStyled
+                      key={subOption.value}
+                      selected={initial === subOption.value ? true : false}
+                      onClick={(): void => {
+                        handleSelection(subOption.value, subOption.label);
+                      }}>
+                      {subOption.label}
+                    </MenuSubItemStyled>
+                  ))}
+                </MenuSubGroupStyled>
+              )}
+            </>
           ))}
 
           {children && <MenuContentStyled>{children}</MenuContentStyled>}

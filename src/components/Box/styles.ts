@@ -113,8 +113,8 @@ export const BoxStyled = styled("article", {
 });
 
 export const BoxHeaderStyled = styled("div", {
-  backgroundColor: "$defaultTable",
-  borderBottom: "0.1rem solid $borderTable",
+  backgroundColor: "$defaultSubtle",
+  borderBottom: "0.1rem solid $borderSubtle",
   padding: "$small $medium",
   variants: {
     padding: {

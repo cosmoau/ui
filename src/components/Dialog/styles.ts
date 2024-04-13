@@ -144,8 +144,8 @@ export const DialogCoreStyled = styled("div", {
 
 export const DialogHeaderStyled = styled("div", {
   alignItems: "center",
-  backgroundColor: "$defaultTable",
-  borderBottom: "0.1rem solid $borderTable",
+  backgroundColor: "$defaultSubtle",
+  borderBottom: "0.1rem solid $borderSubtle",
   display: "flex",
   gap: "$small",
   [`& ${TextStyled}`]: {

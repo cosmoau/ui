@@ -24,11 +24,11 @@ export const TableCoreStyled = styled("div", {
     tbody: {
       tr: {
         "&:hover": {
-          backgroundColor: "$defaultTable",
+          backgroundColor: "$defaultSubtle",
         },
         animation: `${fadeIn} 0.3s ease-in-out`,
         td: {
-          borderTop: "0.1rem solid $borderTable",
+          borderTop: "0.1rem solid $borderSubtle",
           fontSize: "$default",
           padding: "$small $medium",
         },
@@ -95,10 +95,10 @@ export const TableCoreStyled = styled("div", {
     header: {
       false: {
         thead: {
-          backgroundColor: "$defaultTable",
+          backgroundColor: "$defaultSubtle",
 
           th: {
-            backgroundColor: "$defaultTable !important",
+            backgroundColor: "$defaultSubtle !important",
           },
         },
       },
@@ -120,7 +120,7 @@ export const TableHeaderStyled = styled("div", {
   "*": {
     verticalAlign: "middle",
   },
-  backgroundColor: "$defaultTable",
+  backgroundColor: "$defaultSubtle",
   border: "0.1rem solid $border",
   borderBottom: 0,
   borderRadius: "$small $small 0 0",
@@ -195,7 +195,7 @@ export const TableFiltersStyled = styled("div", {
 
 export const TablePaginationStyled = styled("div", {
   alignItems: "center",
-  backgroundColor: "$defaultTable",
+  backgroundColor: "$defaultSubtle",
   border: "0.1rem solid $border",
   borderRadius: "0 0 $small $small",
   borderTop: 0,

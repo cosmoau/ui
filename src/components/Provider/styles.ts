@@ -15,7 +15,7 @@ export const ProviderStyled = styled("main", {
 });
 
 export const ToastStyled = styled("div", {
-  backgroundColor: "$defaultTable",
+  backgroundColor: "$background",
   border: "0.1rem solid $border",
   borderRadius: "$small",
   boxShadow: "$large",
@@ -25,6 +25,7 @@ export const ToastStyled = styled("div", {
   padding: "$smaller $small",
   phone: {
     margin: "0 auto",
+    marginBottom: "$small",
     maxWidth: "90%",
     textAlign: "center",
   },

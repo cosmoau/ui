@@ -1,7 +1,7 @@
 {
   "name": "@cosmoau/ui",
   "description": "Cosmo's internal component library, built with React, Next.js, and Stitches.",
-  "version": "1.9.12",
+  "version": "1.9.13",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": {
     "production": [
@@ -22,7 +22,7 @@
     "@phosphor-icons/react": "2.0.15",
     "@popperjs/core": "^2.11.8",
     "@stitches/react": "^1.2.8",
-    "@swc/helpers": "^0.5.8",
+    "@swc/helpers": "^0.5.9",
     "chrono-node": "^2.7.5",
     "dayjs": "^1.11.10",
     "fast-sort": "^3.4.0",
@@ -35,12 +35,12 @@
     "@parcel/transformer-typescript-types": "2.12.0",
     "@types/google.maps": "^3.55.7",
     "@types/node": "^20.12.7",
-    "@types/react": "^18.2.75",
-    "@types/react-dom": "^18.2.24",
+    "@types/react": "^18.2.78",
+    "@types/react-dom": "^18.2.25",
     "eslint": "^8.57.0",
     "eslint-config-dolmios": "^1.10.1",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
-    "next": "^14.1.4",
+    "next": "^14.2.1",
     "parcel": "2.12.0",
     "path-browserify": "^1.0.1",
     "prettier": "^3.2.5",
@@ -48,7 +48,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tslib": "^2.6.2",
-    "typescript": "^5.4.4",
+    "typescript": "^5.4.5",
     "util": "^0.12.5"
   },
   "eslintConfig": {
