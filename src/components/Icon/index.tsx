@@ -2,7 +2,13 @@ import { IIcon } from "../../types";
 
 import { IconStyled } from "./styles";
 
-export default function Icon({ css, inline, forceColor, forceSize, children }: IIcon): JSX.Element {
+export default function Icon({
+  css,
+  inline,
+  forceColor,
+  forceSize = 20,
+  children,
+}: IIcon): JSX.Element {
   return (
     <IconStyled
       css={{
@@ -16,12 +22,10 @@ export default function Icon({ css, inline, forceColor, forceSize, children }: I
             color: `$${forceColor} !important`,
           },
         }),
-        ...(forceSize && {
-          svg: {
-            height: `${forceSize}px !important`,
-            width: `${forceSize}px !important`,
-          },
-        }),
+        svg: {
+          height: `${forceSize}px `,
+          width: `${forceSize}px`,
+        },
 
         ...css,
       }}>

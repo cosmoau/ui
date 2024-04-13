@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import { RadioButton } from "@phosphor-icons/react";
+import { FacebookLogo, RadioButton } from "@phosphor-icons/react";
 import React, { ReactElement, useState } from "react";
 import toast from "react-hot-toast";
 
@@ -13,7 +13,10 @@ export function App(): ReactElement {
   const [singleDate, setSingleDate] = useState<string>("");
 
   return (
-    <C.Provider dark>
+    <C.Provider>
+      <C.Icon>
+        <FacebookLogo />
+      </C.Icon>
       <C.View bottom="larger" container id="view-3" top="larger">
         <C.Stack align="center" bottom="large">
           <C.Menu
