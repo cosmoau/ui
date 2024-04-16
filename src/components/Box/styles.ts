@@ -58,6 +58,7 @@ export const BoxStyled = styled("article", {
     hover: {
       true: {
         "&:hover": {
+          boxShadow: "$large",
           img: {
             transform: "scale(1.1)",
             transition: "$default",
@@ -65,13 +66,6 @@ export const BoxStyled = styled("article", {
         },
         img: {
           transition: "$default",
-        },
-      },
-    },
-    link: {
-      true: {
-        "&:hover": {
-          boxShadow: "$large",
         },
       },
     },

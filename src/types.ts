@@ -67,6 +67,7 @@ export interface IBox {
   children: ReactNode;
   closable?: boolean;
   css?: CSS;
+  cta?: string;
   expandable?: boolean;
   expandableHeight?: number;
   footer?: ReactNode;
@@ -79,7 +80,6 @@ export interface IBox {
   imagePosition?: CSSProperties["objectPosition"];
   imageSizes?: ImageProps["sizes"];
   imageTarget?: "_blank" | "_self";
-  link?: boolean;
   loading?: boolean;
   minimal?: boolean;
   small?: boolean;

@@ -248,7 +248,9 @@ export function App(): ReactElement {
         <C.Stack direction="row">
           <C.Stack direction="column" width={33}>
             <C.Box
+              closable
               css={{ background: "$defaultSubtle !important", overflow: "visible" }}
+              cta="google.com"
               footer={<C.Text>defaultSubtle </C.Text>}
               header={<C.Text as="h3">defaultSubtle</C.Text>}
               theme="fill">

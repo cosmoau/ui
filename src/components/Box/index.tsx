@@ -25,6 +25,7 @@ export default function Box({
   imagePosition,
   imageTarget,
   css,
+  cta,
   small,
   header,
   loading,
@@ -32,7 +33,6 @@ export default function Box({
   children,
   footer,
   minimal,
-  link,
   closable,
   expandable,
   expandableHeight,
@@ -56,16 +56,18 @@ export default function Box({
   return (
     <BoxStyled
       animation={!isOpen}
+      as={cta ? "a" : "div"}
       collapsed={expandable && !isExpanded}
       css={{
         ...(expandable && expandableHeight && !isExpanded && { maxHeight: expandableHeight }),
         ...css,
       }}
       footer={footer ? true : false}
-      hover={imageCTA || link ? true : false}
-      link={link}
+      hover={cta || imageCTA ? true : false}
+      href={cta}
       loading={loading || false}
       padding={header || footer || image || minimal ? "none" : small ? "small" : "default"}
+      target={cta ? "_blank" : undefined}
       theme={theme || "default"}>
       {loading && (
         <BoxLoadingStyled>
@@ -74,7 +76,7 @@ export default function Box({
       )}
       <BoxFlexStyled>
         {image &&
-          (imageCTA ? (
+          (imageCTA && !cta ? (
             <a href={imageCTA} rel="noopener noreferrer" target={imageTarget || "_blank"}>
               <Image
                 alt={imageAlt || ""}
@@ -129,7 +131,7 @@ export default function Box({
           {footer}
         </BoxFooterStyled>
       )}
-      {expandable && (
+      {expandable && !cta && (
         <BoxExpanderTrigger expanded={isExpanded}>
           <Button
             icon={isExpanded ? <Icons.ArrowsInSimple /> : <Icons.ArrowsOutSimple />}
@@ -140,7 +142,7 @@ export default function Box({
           </Button>
         </BoxExpanderTrigger>
       )}
-      {closable && (
+      {closable && !cta && (
         <BoxExitStyled onClick={(): void => handleClose()}>
           <Button small theme={"minimal"}>
             <Icons.X />
