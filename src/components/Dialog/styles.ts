@@ -127,7 +127,7 @@ export const DialogCoreStyled = styled("div", {
           bottom: 0,
           height: "auto",
           left: 0,
-          maxHeight: "70%",
+          maxHeight: "75%",
           minHeight: "30%",
           right: 0,
           top: "auto",
