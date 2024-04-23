@@ -136,36 +136,24 @@ export const TextStyled = styled("div", {
         ...highlight,
         backgroundColor: "$default",
         darkModeSpec: {
-          backgroundColor: "$border",
+          backgroundColor: "$defaultHover",
         },
       },
       green: {
         ...highlight,
         backgroundColor: "$greenBackground",
-        darkModeSpec: {
-          backgroundColor: "$greenText",
-        },
       },
       orange: {
         ...highlight,
         backgroundColor: "$orangeBackground",
-        darkModeSpec: {
-          backgroundColor: "$orangeText",
-        },
       },
       purple: {
         ...highlight,
         backgroundColor: "$purpleBackground",
-        darkModeSpec: {
-          backgroundColor: "$purpleText",
-        },
       },
       red: {
         ...highlight,
         backgroundColor: "$redBackground",
-        darkModeSpec: {
-          backgroundColor: "$redText",
-        },
       },
     },
     link: {

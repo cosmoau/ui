@@ -40,12 +40,12 @@ export default function useTheme(): UseThemeOutput {
       setSystemTheme(themeMediaQuery.matches);
 
       // Cleanup function
-      return () => {
+      return (): void => {
         themeMediaQuery.removeEventListener("change", handleThemeChange);
       };
     }
 
-    return () => {};
+    return (): void => {};
   }, [isBrowser, systemTheme, theme]);
 
   return {

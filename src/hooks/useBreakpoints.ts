@@ -51,10 +51,10 @@ export default function useBreakpoints(): {
       breakpointListener();
       window.addEventListener("resize", breakpointListener);
 
-      return () => window.removeEventListener("resize", breakpointListener);
+      return (): void => window.removeEventListener("resize", breakpointListener);
     }
 
-    return () => {};
+    return (): void => {};
   }, []);
 
   return { breakpoint, isDesktop, isLaptop, isPhone, isTablet, isWide };

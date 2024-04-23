@@ -13,12 +13,17 @@ export function App(): ReactElement {
   const [singleDate, setSingleDate] = useState<string>("");
 
   return (
-    <C.Provider>
+    <C.Provider dark>
       <C.Icon>
         <FacebookLogo />
       </C.Icon>
       <C.View bottom="larger" container id="view-3" top="larger">
         <C.Stack align="center" bottom="large">
+          <C.Text as="h1" bottom="large">
+            <C.Text as="span" highlight="red">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget.
+            </C.Text>
+          </C.Text>
           <C.Menu
             options={[
               { label: "Option 1", value: "option1" },

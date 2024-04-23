@@ -103,7 +103,7 @@ export default function Places({
 
     loadGoogleMaps();
 
-    return () => {
+    return (): void => {
       if (ref.current) {
         ref.current.removeEventListener("focus", movePacContainer);
       }

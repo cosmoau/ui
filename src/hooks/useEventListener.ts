@@ -19,7 +19,7 @@ export default function useEventListener<K extends keyof WindowEventMap>(
     savedHandler.current = handler;
     targetElement.addEventListener(eventName, eventListener, options);
 
-    return () => {
+    return (): void => {
       targetElement.removeEventListener(eventName, eventListener, options);
     };
   }, [eventName, element, handler]);

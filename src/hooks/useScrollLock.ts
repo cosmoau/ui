@@ -22,7 +22,7 @@ export default function useScrollLock(initialLocked = false, rootId = "root"): U
       document.body.style.paddingRight = `${scrollBarWidth}px`;
     }
 
-    return () => {
+    return (): void => {
       document.body.style.overflow = originalOverflow;
       if (scrollBarWidth) {
         document.body.style.paddingRight = originalPaddingRight;

@@ -22,7 +22,7 @@ export default function Portal({ children, disabled }: IPortal): JSX.Element {
 
     portalRef.current = portalElement;
 
-    return () => {
+    return (): void => {
       portalElement.remove();
     };
   }, []);

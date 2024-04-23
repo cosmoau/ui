@@ -89,7 +89,7 @@ export function useTableKeyboard(
 
     document.addEventListener("keydown", handleKeyDown);
 
-    return () => {
+    return (): void => {
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, [pagination, kbd, handlePageChange, resetPagination, endPagination]);

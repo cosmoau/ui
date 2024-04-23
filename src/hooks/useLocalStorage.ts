@@ -28,7 +28,7 @@ export default function useLocalStorage<T>(key: string, defaultValue: T): [T, (v
 
     window.addEventListener("storage", listener);
 
-    return () => {
+    return (): void => {
       window.removeEventListener("storage", listener);
     };
   }, [key, defaultValue]);

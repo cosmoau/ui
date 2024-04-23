@@ -13,7 +13,7 @@ export default function useMountSSR(): boolean {
       setIsMounted(true);
     }
 
-    return () => {
+    return (): void => {
       isMountedRef.current = false;
     };
   }, []);
