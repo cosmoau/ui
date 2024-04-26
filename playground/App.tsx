@@ -13,7 +13,7 @@ export function App(): ReactElement {
   const [singleDate, setSingleDate] = useState<string>("");
 
   return (
-    <C.Provider dark>
+    <C.Provider>
       <C.Icon>
         <FacebookLogo />
       </C.Icon>
@@ -344,10 +344,10 @@ export function App(): ReactElement {
       </C.View>
       <C.View>
         <C.Stack bottom="larger" direction="column">
+          <C.Input id="table-search" name="table-search" placeholder="Filter" />
           <C.Table
             filters={<C.Input id="table-search" name="table-search" placeholder="Filter" />}
             header={{
-              count: true,
               full: true,
               options: (
                 <>
@@ -391,12 +391,13 @@ export function App(): ReactElement {
           />
           CC.
         </C.Stack>
+      </C.View>
+      <C.View>
         <C.Stack bottom="larger" direction="column">
           <C.Table
             collapse
             filters={<C.Input id="table-search-2" name="table-search-2" placeholder="Filter" />}
             header={{
-              count: true,
               options: (
                 <>
                   <C.Button inline="small">
@@ -442,7 +443,6 @@ export function App(): ReactElement {
           <C.Table
             filters={<C.Input id="table-search-3" name="table-search-3" placeholder="Filter" />}
             header={{
-              count: true,
               options: (
                 <>
                   <C.Button inline="small">

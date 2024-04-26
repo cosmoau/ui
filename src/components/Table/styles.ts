@@ -131,7 +131,7 @@ export const TableHeaderStyled = styled("div", {
         backgroundColor: "transparent",
         border: 0,
         padding: 0,
-        paddingBottom: "$medium",
+        paddingBottom: "$large",
       },
     },
   },
@@ -149,18 +149,6 @@ export const TableHeaderCoreStyled = styled("div", {
   justifyContent: "space-between",
   phone: {
     flexDirection: "column",
-  },
-  width: "100%",
-});
-
-export const TableHeaderTitleStyled = styled("div", {
-  alignItems: "center",
-  display: "flex",
-  gap: "$small",
-  justifyContent: "flex-start",
-  phone: {
-    alignItems: "flex-start",
-    justifyContent: "space-between",
   },
   width: "100%",
 });

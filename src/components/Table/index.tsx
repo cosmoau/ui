@@ -31,7 +31,6 @@ import {
   TableHeaderCoreStyled,
   TableHeaderOptionsStyled,
   TableHeaderStyled,
-  TableHeaderTitleStyled,
   TablePaginationStyled,
   TableStyled,
 } from "./styles";
@@ -96,19 +95,10 @@ export default function NewTable({
       {header && (
         <TableHeaderStyled full={header?.full}>
           <TableHeaderCoreStyled>
-            <TableHeaderTitleStyled>
-              <Text
-                as={header?.full ? "h3" : "h4"}
-                bottom="none"
-                inline={header.count ? "small" : undefined}>
-                {header.title}
-              </Text>
-              {header.count && (
-                <Text accent as="small" bottom="none">
-                  {data?.length}
-                </Text>
-              )}
-            </TableHeaderTitleStyled>
+            <Text as={header?.full ? "h3" : "h4"} bottom="none">
+              {header.title}
+            </Text>
+
             {(header.options || filters) && (
               <TableHeaderOptionsStyled>
                 {header.options && <Stack>{header.options}</Stack>}

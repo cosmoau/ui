@@ -322,7 +322,6 @@ export interface ITable {
   error?: string;
   filters?: ReactNode;
   header?: {
-    count?: boolean;
     full?: boolean;
     options?: ReactNode;
     title: string;
