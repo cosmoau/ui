@@ -143,6 +143,7 @@ export const TableHeaderCoreStyled = styled("div", {
   alignItems: "center",
   display: "flex",
   gap: "$small",
+
   h4: {
     marginBottom: 0,
   },
@@ -166,8 +167,6 @@ export const TableHeaderOptionsStyled = styled("div", {
     marginTop: "$smaller",
     width: "100%",
   },
-
-  width: "100%",
 });
 
 export const TableFiltersStyled = styled("div", {

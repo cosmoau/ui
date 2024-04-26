@@ -362,7 +362,7 @@ export function App(): ReactElement {
                   </C.Button>
                 </>
               ),
-              title: "Table",
+              title: "Table Table Table Table",
             }}
             identifier="table-a"
             kbd
