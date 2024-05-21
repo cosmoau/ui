@@ -17,6 +17,20 @@ export function App(): ReactElement {
       <C.Icon>
         <FacebookLogo />
       </C.Icon>
+      <C.CalendarInline
+        endDate={endDate}
+        minLength={10}
+        mode="range"
+        startDate={startDate}
+        title="Test"
+        trigger={<C.Button>Calendar Inline</C.Button>}
+        onSelection={(dates) => {
+          setStartDate(dates.startDate);
+          setEndDate(dates.endDate);
+          toast.success(`Selected dates: ${JSON.stringify(dates)}`);
+        }}
+      />
+
       <C.View bottom="larger" container id="view-3" top="larger">
         <C.Stack align="center" bottom="large">
           <C.Text as="h1" bottom="large">
@@ -110,7 +124,11 @@ export function App(): ReactElement {
         <C.Stack direction="row">
           <C.Stack align="center" direction="column" width={50}>
             <C.Text as="h1">Small Dialog</C.Text>
-            <C.Dialog small title="Dialog Title" trigger={<C.Button>Open Dialog</C.Button>}>
+            <C.Dialog
+              forceHeight={70}
+              small
+              title="Dialog Title"
+              trigger={<C.Button>Open Dialog</C.Button>}>
               <C.Text>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget
               </C.Text>
@@ -650,9 +668,12 @@ export function App(): ReactElement {
             <C.Upload
               accept="image/*"
               error
+              maxFiles={3}
+              multiple
               success
-              onUpload={(file) => {
-                setFile(file);
+              onUpload={(files) => {
+                setFile(files[0]);
+                toast.success(`Uploaded: ${files[0].name}, total: ${files.length}`);
               }}
             />
           </C.Stack>

@@ -9,7 +9,7 @@ export default function useNaturalDate(dateString: string): string | null {
 
     if (parsedDate) {
       const year = parsedDate.getFullYear();
-      const month = String(parsedDate.getMonth() + 1).padStart(2, "0"); // Months are 0-indexed in JavaScript
+      const month = String(parsedDate.getMonth() + 1).padStart(2, "0");
       const day = String(parsedDate.getDate()).padStart(2, "0");
 
       setDate(`${year}-${month}-${day}`);

@@ -56,8 +56,6 @@ export function useTableColumns(identifier: string, tbody: ITable["tbody"]): str
     }
   }, [tbody]);
 
-  //
-
   return columnWidths.map((width) => `${width}%`);
 }
 

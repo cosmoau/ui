@@ -14,7 +14,6 @@ export function App(): ReactElement {
   const {breakpoint, isPhone, isTablet, isLaptop, isDesktop, isWide} = C.useBreakpoints();
   const isDark = C.useTheme().isDarkTheme;
 
-  // random between 100px and 1200px
   const randomHeight = Math.floor(Math.random() * 1100) + 100
 
   const [balance, setBalance] = useState<boolean>(false);

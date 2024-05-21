@@ -35,7 +35,6 @@ export default function Text({
           paddingBottom: `$${bottom}`,
         }),
         ...(inline && {
-          // as is not strong or span
           ...(as !== "strong" &&
             as !== "span" && {
               alignSelf: "center",

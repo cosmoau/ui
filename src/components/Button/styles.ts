@@ -61,12 +61,6 @@ export const ButtonStyled = styled("button", {
         phone: {
           minHeight: "3.1rem",
         },
-
-        /*
-        svg: {
-          height: "18px",
-          width: "18px",
-        },*/
       },
     },
     theme: {

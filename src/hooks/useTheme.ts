@@ -36,10 +36,8 @@ export default function useTheme(): UseThemeOutput {
 
       themeMediaQuery.addEventListener("change", handleThemeChange);
 
-      // Initial setting of systemTheme
       setSystemTheme(themeMediaQuery.matches);
 
-      // Cleanup function
       return (): void => {
         themeMediaQuery.removeEventListener("change", handleThemeChange);
       };

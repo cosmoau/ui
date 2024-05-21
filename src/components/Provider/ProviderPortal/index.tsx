@@ -9,14 +9,11 @@ export default function Portal({ children, disabled }: IPortal): JSX.Element {
   useEffect(() => {
     const portalElement = document.createElement("div");
 
-    // Check the number of <main> instances
     const mainElements = document.querySelectorAll("main");
 
     if (mainElements.length === 1) {
-      // If only one <main> instance, append to the end of <main>
       mainElements[0].appendChild(portalElement);
     } else {
-      // If more than one <main> or no <main>, append to <body> as a fallback
       document.body.appendChild(portalElement);
     }
 
