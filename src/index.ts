@@ -1,13 +1,12 @@
-// Stitches: https://stitches.dev/docs/installation
 export * from "./stitches.config";
 
-// Components: src/components
 export { default as Accordion } from "./components/Accordion";
 export { default as Avatar } from "./components/Avatar";
 export { default as Badge } from "./components/Badge";
 export { default as Box } from "./components/Box";
 export { default as Button } from "./components/Button";
 export { default as Calendar } from "./components/Calendar";
+export { default as CalendarInline } from "./components/Calendar/CalendarInline";
 export { default as Code } from "./components/Code";
 export { default as Dialog } from "./components/Dialog";
 export { default as Divider } from "./components/Divider";
@@ -33,7 +32,6 @@ export { default as Text } from "./components/Text";
 export { default as Upload } from "./components/Upload";
 export { default as View } from "./components/View";
 
-// Hooks: src/hooks
 export { default as useBreakpoints } from "./hooks/useBreakpoints";
 export { default as useDebounce } from "./hooks/useDebounce";
 export { default as useEventListener } from "./hooks/useEventListener";

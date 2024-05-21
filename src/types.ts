@@ -108,6 +108,11 @@ export interface ICalendar {
   startDate?: string;
 }
 
+export interface ICalendarInline extends ICalendar {
+  title: string;
+  trigger: ReactNode;
+}
+
 export interface ICode {
   children: ReactNode;
   css?: CSS;
@@ -353,15 +358,15 @@ export interface IText extends ComponentPropsWithoutRef<"div"> {
   top?: IThemeSpacing;
 }
 
-export interface IUpload {
+export interface IUpload<T extends boolean> {
   accept?: string;
   error?: boolean;
   errorMessage?: string;
   loading?: boolean;
+  maxFiles?: number;
   maxSize?: number;
-  multiple?: boolean;
-  onUpload: (file: File) => void;
-  onUploadMultiple?: (files: File[]) => void;
+  multiple?: T;
+  onUpload: T extends true ? (files: FileList) => void : (file: File) => void;
   success?: boolean;
   successMessage?: string;
 }

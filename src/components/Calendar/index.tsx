@@ -13,7 +13,7 @@ import {
   useDaysInMonth,
   useResetCalendar,
   useCalendarViewChange,
-} from "./hooks"; // Adjust the import path as needed
+} from "./hooks";
 import {
   CalendarFooterStyled,
   CalendarGridStyled,
@@ -33,7 +33,6 @@ export default function Calendar({
   endDate,
 }: ICalendar): JSX.Element {
   const { isPhone } = useBreakpoints();
-  // State management and initialization
   const { dates, setDates, values, setValues } = useCalendarState({
     endDate,
     maxDate,
@@ -41,7 +40,6 @@ export default function Calendar({
     startDate,
   });
 
-  // Validation hooks
   const validateSingleDate = useCalendarSingleValidation(minDate || "", maxDate || "", onSelection);
   const { validateRange } = useCalendarRangeValidation(
     minDate || "",
@@ -50,24 +48,19 @@ export default function Calendar({
     onSelection,
   );
 
-  // Navigation state and functionality
   const { nextMonthDisabled, nextYearDisabled, prevMonthDisabled, prevYearDisabled } =
     useNavigationDisabledState({
-      // Use the state-managed minDate which includes the default
       maxDate: values.maxDate,
 
       minDate: values.minDate,
-      viewDate: values.viewDate, // Use the state-managed maxDate which includes the default
+      viewDate: values.viewDate,
     });
   const { handleDateChange } = useCalendarViewChange(setValues);
 
-  // Days generation for the current month view
   const { days, offset } = useDaysInMonth(values.viewDate);
 
-  // Reset functionality
   const resetCalendar = useResetCalendar({ maxDate, minDate, setDates, setValues, startDate });
 
-  // Date selection handling
   const handleDaySelection = (date: string): void => {
     if (mode === "single") {
       if (validateSingleDate(date)) {
@@ -83,12 +76,10 @@ export default function Calendar({
   };
 
   useEffect(() => {
-    // Set viewDate to startDate on initial render, or default to current month
     const initialViewDate = startDate || dayjs().format("YYYY-MM-DD");
 
     setValues((currentValues) => ({ ...currentValues, viewDate: initialViewDate }));
-    // Removing dependencies ensures this effect only runs once on mount
-  }, []); // Empty dependency array
+  }, []);
 
   return (
     <CalendarStyled>
@@ -130,7 +121,6 @@ export default function Calendar({
             dates.endDate &&
             dayjs(date).isAfter(dates.startDate) &&
             dayjs(date).isBefore(dates.endDate);
-          // Adjusted logic to handle undefined minDate and maxDate
           const isDisabled = Boolean(
             (values.minDate && dayjs(date).isBefore(values.minDate, "day")) ||
               (values.maxDate && dayjs(date).isAfter(values.maxDate, "day")),

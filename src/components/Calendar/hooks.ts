@@ -30,7 +30,7 @@ export const useCalendarState = ({
   const [values, setValues] = useState<{ maxDate?: string; minDate?: string; viewDate: string }>({
     maxDate: maxDate,
     minDate: minDate,
-    viewDate: dayjs().format("YYYY-MM-DD"), // Default to today's date
+    viewDate: dayjs().format("YYYY-MM-DD"),
   });
 
   return { dates, setDates, setValues, values };
@@ -45,12 +45,12 @@ export const useCalendarSingleValidation = (
     if (isDateOutOfRange(date, minDate, maxDate)) {
       toast.error("Selected date is out of range");
 
-      return false; // Indicate validation failed
+      return false;
     }
-    // Call onSelection as validation passed
+
     onSelection({ endDate: date, startDate: date });
 
-    return true; // Indicate validation passed
+    return true;
   };
 
   return validateSingleDate;
@@ -83,7 +83,6 @@ export const useCalendarRangeValidation = (
 
       return false;
     }
-    // Call onSelection as validation passed
     onSelection({ endDate, startDate });
 
     return true;
@@ -144,8 +143,8 @@ export const useResetCalendar = ({
   setDates: Dispatch<SetStateAction<{ endDate?: string; startDate?: string }>>;
   setValues: Dispatch<
     SetStateAction<{
-      maxDate?: string; // Optional
-      minDate?: string; // Optional
+      maxDate?: string;
+      minDate?: string;
       viewDate: string;
     }>
   >;
@@ -155,7 +154,7 @@ export const useResetCalendar = ({
     setDates({ endDate: "", startDate: "" });
     setValues((currentValues) => ({
       ...currentValues,
-      viewDate: dayjs().format("YYYY-MM-DD"), // Reset viewDate to today
+      viewDate: dayjs().format("YYYY-MM-DD"),
     }));
   };
 };
