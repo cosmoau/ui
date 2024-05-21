@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ChangeEvent, useRef, useState } from "react";
 import toast from "react-hot-toast";
 
@@ -10,16 +11,16 @@ import Text from "../Text";
 
 import { UploadCoreStyled, UploadFooterStyled, UploadInputStyled, UploadStyled } from "./styles";
 
-export default function Upload({
+export default function Upload<T extends boolean>({
   onUpload,
-  onUploadMultiple,
   accept,
   multiple,
   error,
   success,
   loading,
   maxSize = 5000000,
-}: IUpload): JSX.Element {
+  maxFiles = 25,
+}: IUpload<T>): JSX.Element {
   const ref = useRef<HTMLInputElement>(null);
   const [forceError, setForceError] = useState(error);
 
@@ -55,25 +56,24 @@ export default function Upload({
 
     if (files && files.length > 0) {
       setForceError(false);
-      if (multiple && onUploadMultiple) {
-        const filesArray = Array.from(files);
+      const filesArray = Array.from(files);
 
-        const validFiles = filesArray.filter(({ size }) => checkFileSize(size));
+      const validFiles = filesArray.filter(({ size }) => checkFileSize(size));
 
-        if (validFiles.length === 0) {
-          return;
-        }
+      if (validFiles.length === 0) {
+        return;
+      }
 
-        onUploadMultiple(validFiles);
-      } else if (!multiple && onUpload) {
-        // Use array destructuring to get the first file
-        const [file] = files;
+      if (multiple && validFiles.length > maxFiles) {
+        toast.error(`You can only upload up to ${maxFiles} files at once.`);
 
-        if (!checkFileSize(file.size)) {
-          return;
-        }
+        return;
+      }
 
-        onUpload(file);
+      if (multiple) {
+        onUpload(files as any);
+      } else {
+        onUpload(validFiles[0] as any);
       }
     }
 
