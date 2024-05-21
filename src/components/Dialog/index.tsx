@@ -20,6 +20,7 @@ export default function Dialog({
   children,
   title,
   disabled,
+  forceHeight,
   small,
   portal = true,
 }: IDialog): JSX.Element {
@@ -81,7 +82,20 @@ export default function Dialog({
       {isMounted && (
         <Portal disabled={!portal}>
           <DialogOverlayStyled animation={isOpen}>
-            <DialogCoreStyled ref={ref} animation={isOpen} css={css} small={small || false}>
+            <DialogCoreStyled
+              ref={ref}
+              animation={isOpen}
+              css={{
+                ...css,
+                ...(forceHeight && {
+                  phone: {
+                    height: `${forceHeight}%`,
+                    maxHeight: `${forceHeight}%`,
+                    minHeight: `${forceHeight}%`,
+                  },
+                }),
+              }}
+              small={small || false}>
               <DialogHeaderStyled>
                 <Text as="h4">{title}</Text>
                 <Button small theme="fill" onClick={(): void => handleClose()}>
