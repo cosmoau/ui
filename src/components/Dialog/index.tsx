@@ -22,6 +22,7 @@ export default function Dialog({
   disabled,
   forceHeight,
   small,
+  triggerCSS,
   portal = true,
 }: IDialog): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
@@ -68,6 +69,7 @@ export default function Dialog({
     <DialogStyled>
       {trigger ? (
         <DialogTriggerStyled
+          css={triggerCSS}
           onClick={(e): void => {
             e.stopPropagation();
             if (!disabled) {

@@ -128,6 +128,7 @@ export interface IDialog {
   small?: boolean;
   title: string;
   trigger?: ReactNode;
+  triggerCSS?: CSS;
 }
 
 export interface IDivider {
