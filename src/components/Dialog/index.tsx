@@ -16,6 +16,7 @@ import {
 
 export default function Dialog({
   css,
+  wrapperCSS,
   trigger,
   children,
   title,
@@ -66,7 +67,7 @@ export default function Dialog({
   });
 
   return (
-    <DialogStyled>
+    <DialogStyled css={wrapperCSS}>
       {trigger ? (
         <DialogTriggerStyled
           css={triggerCSS}

@@ -129,6 +129,7 @@ export interface IDialog {
   title: string;
   trigger?: ReactNode;
   triggerCSS?: CSS;
+  wrapperCSS?: CSS;
 }
 
 export interface IDivider {
