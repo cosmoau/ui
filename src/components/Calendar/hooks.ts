@@ -134,31 +134,6 @@ export const useDaysInMonth = (viewDate: string): { days: string[]; offset: numb
   return { days, offset: firstDayOfMonth };
 };
 
-export const useResetCalendar = ({
-  setDates,
-  setValues,
-}: {
-  maxDate?: string;
-  minDate?: string;
-  setDates: Dispatch<SetStateAction<{ endDate?: string; startDate?: string }>>;
-  setValues: Dispatch<
-    SetStateAction<{
-      maxDate?: string;
-      minDate?: string;
-      viewDate: string;
-    }>
-  >;
-  startDate?: string;
-}): (() => void) => {
-  return () => {
-    setDates({ endDate: "", startDate: "" });
-    setValues((currentValues) => ({
-      ...currentValues,
-      viewDate: dayjs().format("YYYY-MM-DD"),
-    }));
-  };
-};
-
 export const useCalendarViewChange = (
   setValues: Dispatch<SetStateAction<{ maxDate?: string; minDate?: string; viewDate: string }>>,
 ): { handleDateChange: (type: "month" | "year", direction: "next" | "prev") => void } => {

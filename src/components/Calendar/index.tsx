@@ -11,7 +11,6 @@ import {
   useCalendarRangeValidation,
   useNavigationDisabledState,
   useDaysInMonth,
-  useResetCalendar,
   useCalendarViewChange,
 } from "./hooks";
 import {
@@ -58,8 +57,6 @@ export default function Calendar({
   const { handleDateChange } = useCalendarViewChange(setValues);
 
   const { days, offset } = useDaysInMonth(values.viewDate);
-
-  const resetCalendar = useResetCalendar({ maxDate, minDate, setDates, setValues, startDate });
 
   const handleDaySelection = (date: string): void => {
     if (mode === "single") {
@@ -148,30 +145,25 @@ export default function Calendar({
         })}
       </CalendarGridStyled>
       <CalendarFooterStyled>
-        <Button
-          small
-          onClick={() => {
-            onSelection({ endDate: "", startDate: "" });
-            resetCalendar();
-          }}>
-          Clear
-        </Button>
-        <Stack>
+        {!prevYearDisabled && (
           <Button
             disabled={prevYearDisabled}
+            icon={<Icons.ClockCounterClockwise />}
             small
-            theme="minimal"
             onClick={() => handleDateChange("year", "prev")}>
-            <Icons.ClockCounterClockwise />
+            {dayjs(values.viewDate).subtract(1, "year").format("YYYY")}
           </Button>
+        )}
+        {!nextYearDisabled && (
           <Button
             disabled={nextYearDisabled}
+            icon={<Icons.ClockClockwise />}
+            iconPosition="right"
             small
-            theme="minimal"
             onClick={() => handleDateChange("year", "next")}>
-            <Icons.ClockClockwise />
+            {dayjs(values.viewDate).add(1, "year").format("YYYY")}
           </Button>
-        </Stack>
+        )}
       </CalendarFooterStyled>
     </CalendarStyled>
   );

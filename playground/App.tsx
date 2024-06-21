@@ -576,6 +576,8 @@ export function App(): ReactElement {
           <C.Dialog small title="Calendar" trigger={<C.Button>Calendar Range</C.Button>}>
             <C.Calendar
               endDate={endDate}
+              maxDate="2025-01-01"
+              minDate="2023-01-01"
               minLength={10}
               mode="range"
               startDate={startDate}

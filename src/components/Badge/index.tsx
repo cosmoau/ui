@@ -34,7 +34,10 @@ export default function Badge({
 
   function handleCopy(): void {
     if (copy) {
-      navigator.clipboard.writeText(copy.toString());
+      navigator.clipboard.writeText(
+        copy?.toString() ||
+          "There was an error copying that value. Try again, or manually copy it.",
+      );
       toast("Copied to clipboard");
     } else {
       toast("Nothing to copy");

@@ -22,26 +22,29 @@ export const CalendarGridStyled = styled("div", {
   gridArea: "calendar",
   gridTemplateColumns: "repeat(7, 1fr)",
   maxWidth: "100%",
+
+  [`& ${ButtonStyled}`]: {
+    padding: "$smaller",
+  },
+
   micro: {
-    gap: "$small $smaller",
+    gap: "$smaller",
+    [`& ${ButtonStyled}`]: {
+      padding: "0",
+    },
   },
 
   phone: {
     [`& ${ButtonStyled}`]: {
-      padding: "$smallest $smaller",
+      padding: "$smallest",
     },
-    gap: "$small $small",
   },
   textAlign: "center",
 });
 
 export const CalendarFooterStyled = styled("div", {
-  "&:hover": {
-    opacity: 1,
-  },
   display: "flex",
   justifyContent: "space-between",
-  marginTop: "calc($medium / 1.25)",
-  opacity: 0.5,
+  marginTop: "$small",
   transition: "$default",
 });
