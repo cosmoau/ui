@@ -255,6 +255,8 @@ export interface IPopover {
   minimal?: boolean;
   small?: boolean;
   trigger: ReactNode;
+  triggerCSS?: CSS;
+  wrapperCSS?: CSS;
 }
 
 export interface IProvider {
@@ -281,8 +283,10 @@ export interface ISelect {
     value: string;
   }>;
   trigger: ReactNode;
+  triggerCSS?: CSS;
   vertical?: "top" | "bottom";
   width?: number | string;
+  wrapperCSS?: CSS;
 }
 
 export interface ISelectMulti extends Omit<ISelect, "onSelection" | "initial" | "last"> {
@@ -323,6 +327,7 @@ export interface IStack {
 export interface ITable {
   collapse?: boolean;
   collapseDisabled?: number[];
+  collapseSortable?: boolean;
   css?: CSS;
   defaultDirection?: "asc" | "desc";
   defaultLimit?: 10 | 25 | 50 | 100 | 200;

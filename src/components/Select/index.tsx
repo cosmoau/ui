@@ -34,6 +34,8 @@ export default function Select({
   height,
   trigger,
   loading,
+  triggerCSS,
+  wrapperCSS,
   last,
   filter,
 }: ISelect): JSX.Element {
@@ -110,9 +112,10 @@ export default function Select({
     : [];
 
   return (
-    <SelectStyled css={css}>
+    <SelectStyled css={wrapperCSS}>
       <SelectTriggerStyled
         ref={triggerRef}
+        css={triggerCSS}
         onClick={(e): void => {
           e.stopPropagation();
           if (!disabled) {
@@ -134,6 +137,7 @@ export default function Select({
               maxWidth: deviceWidth ? deviceWidth * 0.8 : "80vw",
             },
             width: width || "auto",
+            ...css,
           }}>
           {label && (
             <SelectLabelStyled>

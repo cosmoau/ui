@@ -33,6 +33,8 @@ export default function SelectMulti({
   initial,
   width,
   height,
+  triggerCSS,
+  wrapperCSS,
   limit,
   trigger,
   loading,
@@ -137,9 +139,10 @@ export default function SelectMulti({
     : [];
 
   return (
-    <SelectStyled css={css}>
+    <SelectStyled css={wrapperCSS}>
       <SelectTriggerStyled
         ref={triggerRef}
+        css={triggerCSS}
         onClick={(e): void => {
           e.stopPropagation();
           if (!disabled) {
@@ -161,6 +164,7 @@ export default function SelectMulti({
               maxWidth: deviceWidth ? deviceWidth * 0.8 : "80vw",
             },
             width: width || "auto",
+            ...css,
           }}>
           {label && (
             <SelectLabelStyled>

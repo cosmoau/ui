@@ -9,6 +9,8 @@ export default function Popover({
   children,
   disabled,
   minimal = false,
+  triggerCSS,
+  wrapperCSS,
   small = false,
 }: IPopover): JSX.Element {
   const { triggerRef, contentRef, isOpen, isMounted, handleClick, handleClose } = usePopper();
@@ -23,9 +25,10 @@ export default function Popover({
   });
 
   return (
-    <PopoverStyled css={css}>
+    <PopoverStyled css={wrapperCSS}>
       <PopoverTriggerStyled
         ref={triggerRef}
+        css={triggerCSS}
         onClick={(e): void => {
           e.stopPropagation();
           if (!disabled) {
@@ -36,7 +39,12 @@ export default function Popover({
       </PopoverTriggerStyled>
 
       {isMounted && (
-        <PopoverContentStyled ref={contentRef} animation={isOpen} minimal={minimal} small={small}>
+        <PopoverContentStyled
+          ref={contentRef}
+          animation={isOpen}
+          css={css}
+          minimal={minimal}
+          small={small}>
           {children}
         </PopoverContentStyled>
       )}
