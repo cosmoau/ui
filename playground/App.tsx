@@ -364,6 +364,9 @@ export function App(): ReactElement {
         <C.Stack bottom="larger" direction="column">
           <C.Input id="table-search" name="table-search" placeholder="Filter" />
           <C.Table
+            collapse
+            collapseDisabled={[2]}
+            collapseSortable
             filters={<C.Input id="table-search" name="table-search" placeholder="Filter" />}
             header={{
               full: true,
@@ -388,24 +391,23 @@ export function App(): ReactElement {
             sortable
             tbody={Array.from(Array(30).keys()).map((i) => [
               {
-                label:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget",
-                value: "a",
+                label: i + 1 + Math.random() + "a",
+                value: i + 1 + Math.random() + "a",
               },
               {
-                label: i === 10 ? "50%" : "AUTO",
-                value: "b",
+                label: i + "b",
+                value: i * 2 + "b",
               },
               {
-                label: i <= 10 ? "10%" : "30%",
-                value: "c",
+                label: i + "c",
+                value: i * 3 + "c",
               },
               {
-                label: i <= 10 ? "10%" : "30%",
-                value: "c",
+                label: i + "d",
+                value: i * 4 + "d",
               },
             ])}
-            thead={["Column A", "Column B", "Column C", "Column D"]}
+            thead={["Column A", "Column B", "Column C"]}
           />
           CC.
         </C.Stack>
@@ -414,23 +416,8 @@ export function App(): ReactElement {
         <C.Stack bottom="larger" direction="column">
           <C.Table
             collapse
+            collapseSortable
             filters={<C.Input id="table-search-2" name="table-search-2" placeholder="Filter" />}
-            header={{
-              options: (
-                <>
-                  <C.Button inline="small">
-                    <RadioButton />
-                  </C.Button>
-                  <C.Button inline="small">
-                    <RadioButton />
-                  </C.Button>
-                  <C.Button>
-                    <RadioButton />
-                  </C.Button>
-                </>
-              ),
-              title: "Table",
-            }}
             identifier="table-a"
             kbd
             pagination

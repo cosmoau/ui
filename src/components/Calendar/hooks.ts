@@ -90,7 +90,7 @@ export const useCalendarRangeValidation = (
 
       return false;
     }
-    
+
     onSelection({ endDate, startDate });
 
     return true;

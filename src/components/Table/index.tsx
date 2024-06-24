@@ -1,3 +1,4 @@
+import { SortAscending } from "@phosphor-icons/react";
 import { useEffect } from "react";
 
 import { Icons } from "../../icons";
@@ -43,6 +44,7 @@ export default function NewTable({
   css,
   collapse,
   collapseDisabled,
+  collapseSortable,
   sortable,
   sortDisabled,
   defaultSort,
@@ -101,6 +103,36 @@ export default function NewTable({
 
             {(header.options || filters) && (
               <TableHeaderOptionsStyled>
+                {collapseSortable && collapse && thead && (
+                  <Select
+                    initial={sortColumn?.toString() || "0"}
+                    options={thead
+                      .filter((_, index) => !collapseDisabled?.includes(index))
+                      .map((label, index) => ({
+                        icon:
+                          sortColumn === index ? (
+                            sortDirection === "asc" ? (
+                              <Icons.SortAscending />
+                            ) : (
+                              <Icons.SortDescending />
+                            )
+                          ) : (
+                            <Icons.Circle />
+                          ),
+                        iconPosition: "right",
+                        label,
+                        value: index.toString(),
+                      }))}
+                    trigger={
+                      <Button>
+                        <SortAscending />
+                      </Button>
+                    }
+                    onSelection={(value: string): void => {
+                      handleSortMapping(parseInt(value));
+                    }}
+                  />
+                )}
                 {header.options && <Stack>{header.options}</Stack>}
                 {filters && (
                   <Button
@@ -130,6 +162,41 @@ export default function NewTable({
           </TableHeaderCoreStyled>
           {filters && storage?.filtering && <TableFiltersStyled>{filters}</TableFiltersStyled>}
         </TableHeaderStyled>
+      )}
+
+      {collapseSortable && collapse && thead && !header && (
+        <Stack bottom="medium">
+          <Select
+            initial={sortColumn?.toString() || "0"}
+            options={thead
+              .filter((_, index) => !collapseDisabled?.includes(index))
+              .map((label, index) => ({
+                icon:
+                  sortColumn === index ? (
+                    sortDirection === "asc" ? (
+                      <Icons.SortAscending />
+                    ) : (
+                      <Icons.SortDescending />
+                    )
+                  ) : (
+                    <Icons.Circle />
+                  ),
+                iconPosition: "right",
+                label,
+                value: index.toString(),
+              }))}
+            trigger={
+              <Button block icon={<SortAscending />} theme="fill">
+                Sort
+              </Button>
+            }
+            triggerCSS={{ width: "100%" }}
+            wrapperCSS={{ width: "100%" }}
+            onSelection={(value: string): void => {
+              handleSortMapping(parseInt(value));
+            }}
+          />
+        </Stack>
       )}
 
       <TableCoreStyled
