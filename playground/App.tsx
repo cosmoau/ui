@@ -573,12 +573,13 @@ export function App(): ReactElement {
           <C.Text as="h2">Single date: {singleDate}</C.Text>
         </C.Stack>
         <C.Stack align="center" bottom="medium">
-          <C.Dialog small title="Calendar" trigger={<C.Button>Calendar Range</C.Button>}>
+          <C.Dialog small title="Calendar" trigger={<C.Button>Calendar Range RESTRICTED</C.Button>}>
             <C.Calendar
               endDate={endDate}
               maxDate="2025-01-01"
+              maxLength={10}
               minDate="2023-01-01"
-              minLength={10}
+              minLength={5}
               mode="range"
               startDate={startDate}
               onSelection={(dates) => {

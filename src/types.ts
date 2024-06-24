@@ -101,6 +101,7 @@ export interface IButton extends ComponentPropsWithoutRef<"button"> {
 export interface ICalendar {
   endDate?: string;
   maxDate?: string;
+  maxLength?: number;
   minDate?: string;
   minLength?: number;
   mode?: "range" | "single";

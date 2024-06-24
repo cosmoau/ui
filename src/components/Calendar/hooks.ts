@@ -60,6 +60,7 @@ export const useCalendarRangeValidation = (
   minDate: string,
   maxDate: string,
   minLength: number,
+  maxLength: number | undefined,
   onSelection: ICalendar["onSelection"],
 ): { validateRange: (startDate: string, endDate: string) => boolean } => {
   const validateRange = (startDate: string, endDate: string): boolean => {
@@ -83,6 +84,13 @@ export const useCalendarRangeValidation = (
 
       return false;
     }
+
+    if (maxLength && dayjs(endDate).diff(dayjs(startDate), "day") > maxLength) {
+      toast.error(`Maximum length is ${maxLength} days`);
+
+      return false;
+    }
+    
     onSelection({ endDate, startDate });
 
     return true;

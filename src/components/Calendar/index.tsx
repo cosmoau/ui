@@ -25,6 +25,7 @@ const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 export default function Calendar({
   onSelection,
   minLength = 2,
+  maxLength,
   mode = "range",
   minDate,
   maxDate,
@@ -44,6 +45,7 @@ export default function Calendar({
     minDate || "",
     maxDate || "",
     minLength,
+    maxLength,
     onSelection,
   );
 
