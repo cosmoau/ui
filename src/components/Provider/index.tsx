@@ -25,7 +25,7 @@ export default function Provider({ children, css, dark }: IProvider): JSX.Elemen
       css={{
         ...css,
       }}>
-      <Icons.IconContext.Provider value={{ alignmentBaseline: "middle", height: 20, width: 20 }}>
+      <Icons.IconContext.Provider value={{ alignmentBaseline: "middle", height: 20, weight: "duotone", width: 20 }}>
         <ToastController />
 
         {children}
