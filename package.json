@@ -1,7 +1,7 @@
 {
   "name": "@cosmoau/ui",
   "description": "Cosmo's internal component library, built with React, Next.js, and Stitches.",
-  "version": "1.9.26",
+  "version": "1.9.27",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": {
     "production": [
@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.16.6",
-    "@phosphor-icons/react": "2.0.15",
+    "@phosphor-icons/react": "2.1.5",
     "@popperjs/core": "^2.11.8",
     "@stitches/react": "^1.2.8",
     "@swc/helpers": "^0.5.11",

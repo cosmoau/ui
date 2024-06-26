@@ -1,7 +1,7 @@
+import { IconContext } from "@phosphor-icons/react";
 import { useEffect } from "react";
 
 import packageJson from "../../../package.json";
-import { Icons } from "../../icons";
 import { darkTheme } from "../../stitches.config";
 import { IProvider } from "../../types";
 
@@ -22,16 +22,14 @@ export default function Provider({ children, css, dark }: IProvider): JSX.Elemen
   return (
     <ProviderStyled
       className={dark ? darkTheme : ""}
-      css={{
-        ...css,
-      }}>
-      <Icons.IconContext.Provider
+      css={css}>
+      <IconContext.Provider
         value={{ alignmentBaseline: "middle", height: 20, weight: "duotone", width: 20 }}>
         <ToastController />
 
         {children}
         <Portal />
-      </Icons.IconContext.Provider>
+      </IconContext.Provider>
     </ProviderStyled>
   );
 }
