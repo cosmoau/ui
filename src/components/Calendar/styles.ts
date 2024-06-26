@@ -20,7 +20,6 @@ export const CalendarGridStyled = styled("div", {
   display: "grid",
   gap: "$small",
   gridArea: "calendar",
-  gridTemplateColumns: "repeat(7, 1fr)",
   maxWidth: "100%",
 
   [`& ${ButtonStyled}`]: {
@@ -39,7 +38,19 @@ export const CalendarGridStyled = styled("div", {
       padding: "$smallest",
     },
   },
+
   textAlign: "center",
+
+  variants: {
+    mode: {
+      days: {
+        gridTemplateColumns: "repeat(7, 1fr)",
+      },
+      months: {
+        gridTemplateColumns: "repeat(3, 1fr)",
+      },
+    },
+  },
 });
 
 export const CalendarFooterStyled = styled("div", {

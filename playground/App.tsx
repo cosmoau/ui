@@ -11,6 +11,7 @@ export function App(): ReactElement {
   const [startDate, setStartDate] = useState<string>("");
   const [endDate, setEndDate] = useState<string>("");
   const [singleDate, setSingleDate] = useState<string>("");
+  const [selectedDate, setSelectedDate] = useState<string>("2023-01-01");
 
   return (
     <C.Provider>
@@ -30,6 +31,17 @@ export function App(): ReactElement {
           toast.success(`Selected dates: ${JSON.stringify(dates)}`);
         }}
       />
+      <C.Popover trigger={<C.Button>Calendar Months</C.Button>}>
+        <C.CalendarMonths
+          maxDate="2026-05-01"
+          minDate="2020-04-01"
+          selectedDate={selectedDate}
+          onSelection={(date) => {
+            setSelectedDate(date);
+            toast.success(`Selected month: ${date}`);
+          }}
+        />
+      </C.Popover>
 
       <C.View bottom="larger" container id="view-3" top="larger">
         <C.Stack align="center" bottom="large">

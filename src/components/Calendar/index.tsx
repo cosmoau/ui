@@ -104,7 +104,7 @@ export default function Calendar({
         </Stack>
       </CalendarHeaderStyled>
 
-      <CalendarGridStyled>
+      <CalendarGridStyled mode="days">
         {daysOfWeek.map((day) => (
           <Text key={day} accent as="span">
             {day}

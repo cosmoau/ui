@@ -109,6 +109,13 @@ export interface ICalendar {
   startDate?: string;
 }
 
+export interface ICalendarMonths {
+  maxDate?: string;
+  minDate?: string;
+  onSelection: (date: string) => void;
+  selectedDate: string;
+}
+
 export interface ICalendarInline extends ICalendar {
   title: string;
   trigger: ReactNode;
