@@ -49,7 +49,7 @@ export default function Button({
       )}
       {external && (
         <ButtonIconStyled align="right">
-          <Icons.ArrowSquareOut />
+          <Icons.ArrowUpRight />
         </ButtonIconStyled>
       )}
     </ButtonStyled>

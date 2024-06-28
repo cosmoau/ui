@@ -1,5 +1,5 @@
 import {
-  ArrowSquareOut,
+  ArrowUpRight,
   ArrowsOutSimple,
   ArrowsInSimple,
   ClipboardText,
@@ -44,8 +44,8 @@ export const Icons = {
   ArrowDown,
   ArrowLeft,
   ArrowRight,
-  ArrowSquareOut,
   ArrowUp,
+  ArrowUpRight,
   ArrowsInSimple,
   ArrowsOutSimple,
   CaretDoubleLeft,
