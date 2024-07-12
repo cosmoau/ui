@@ -67,8 +67,8 @@ const defaultTheme = {
     serif: "Tiempos Headline, $default, apple-system, sans-serif",
   },
   lineHeights: {
-    default: "1.5",
-    small: "1.25",
+    default: "1.6",
+    small: "1.3",
   },
   radii: {
     large: "1rem",
