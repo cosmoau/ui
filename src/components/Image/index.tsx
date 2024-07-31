@@ -11,7 +11,7 @@ export default function Image({
   fillFit,
   fillPosition = "center",
   fillHeight = "100%",
-  quality = 60,
+  quality = 90,
   ...rest
 }: IImage): JSX.Element {
   return (
