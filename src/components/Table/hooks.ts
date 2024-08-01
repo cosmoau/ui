@@ -191,7 +191,7 @@ export function useTablePagination(
 
   useEffect(() => {
     resetPagination();
-  }, [JSON.stringify(tbody)]);
+  }, [tbody]);
 
   useEffect(() => {
     if (tbody && tbody.length && storage.offset >= tbody.length && storage.page > 1) {
