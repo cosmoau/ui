@@ -180,6 +180,18 @@ export const TableFiltersStyled = styled("div", {
   width: "100%",
 });
 
+export const TableLengthStyled = styled("div", {
+  alignItems: "center",
+  border: "0.1rem solid $border",
+  borderTop: 0,
+  padding: "$smaller $medium",
+  small: {
+    opacity: 0.7,
+  },
+  textAlign: "center",
+  visible: "phone",
+});
+
 export const TablePaginationStyled = styled("div", {
   alignItems: "center",
   backgroundColor: "$defaultSubtle",

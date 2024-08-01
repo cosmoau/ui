@@ -12,6 +12,7 @@ export function App(): ReactElement {
   const [endDate, setEndDate] = useState<string>("");
   const [singleDate, setSingleDate] = useState<string>("");
   const [selectedDate, setSelectedDate] = useState<string>("2023-01-01");
+  const [tableFilter, setTableFilter] = useState("");
 
   return (
     <C.Provider>
@@ -376,10 +377,14 @@ export function App(): ReactElement {
         <C.Stack bottom="larger" direction="column">
           <C.Input id="table-search" name="table-search" placeholder="Filter" />
           <C.Table
-            collapse
-            collapseDisabled={[2]}
-            collapseSortable
-            filters={<C.Input id="table-search" name="table-search" placeholder="Filter" />}
+            filters={
+              <C.Input
+                id="table-search"
+                name="table-search"
+                placeholder="Filter"
+                onChange={(e) => setTableFilter(e.target.value)}
+              />
+            }
             header={{
               full: true,
               options: (
@@ -401,24 +406,26 @@ export function App(): ReactElement {
             kbd
             pagination
             sortable
-            tbody={Array.from(Array(30).keys()).map((i) => [
-              {
-                label: i + 1 + Math.random() + "a",
-                value: i + 1 + Math.random() + "a",
-              },
-              {
-                label: i + "b",
-                value: i * 2 + "b",
-              },
-              {
-                label: i + "c",
-                value: i * 3 + "c",
-              },
-              {
-                label: i + "d",
-                value: i * 4 + "d",
-              },
-            ])}
+            tbody={Array.from(Array(30).keys())
+              .map((i) => [
+                {
+                  label: i + "a",
+                  value: i + "a",
+                },
+                {
+                  label: i + "b",
+                  value: i * 2 + "b",
+                },
+                {
+                  label: i + "c",
+                  value: i * 3 + "c",
+                },
+                {
+                  label: i + "d",
+                  value: i * 4 + "d",
+                },
+              ])
+              .filter((row) => row[0].label.includes(tableFilter))}
             thead={["Column A", "Column B", "Column C"]}
           />
           CC.

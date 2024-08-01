@@ -1,5 +1,5 @@
 import { sort } from "fast-sort";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useMemo } from "react";
 
 import { ITable } from "../../types";
 
@@ -56,7 +56,7 @@ export function useTableColumns(identifier: string, tbody: ITable["tbody"]): str
     }
   }, [tbody]);
 
-  return columnWidths.map((width) => `${width}%`);
+  return useMemo(() => columnWidths.map((width) => `${width}%`), [columnWidths]);
 }
 
 export function useTableKeyboard(
@@ -101,7 +101,8 @@ export function useTablePagination(
 ): {
   endPagination: () => void;
   handlePageChange: (direction: "next" | "prev") => void;
-  handlePageSelection: (value: string) => void;
+  handlePageNavigation: (page: number) => void;
+  handleRowsPerPageChange: (value: string) => void;
   resetPagination: () => void;
   scrollToTop: () => void;
 } {
@@ -109,35 +110,33 @@ export function useTablePagination(
     const element = document.getElementById(`${identifier}`);
 
     if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest",
-      });
+      try {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest",
+        });
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.warn("Scroll failed:", error);
+      }
     }
   }
 
-  function handlePageSelection(value: string): void {
+  const handleRowsPerPageChange = (value: string): void => {
+    const limit = parseInt(value, 10);
+
     setStorage({
       ...storage,
-      limit: parseInt(value),
+      limit: limit,
       offset: 0,
       page: 1,
     });
-  }
+    scrollToTop();
+  };
 
-  function handlePageChange(direction: "next" | "prev"): void {
-    const totalPages = Math.ceil(tbody ? tbody.length / storage.limit : 0);
-
-    if (
-      (direction === "prev" && storage.page === 1) ||
-      (direction === "next" && storage.page === totalPages)
-    ) {
-      return;
-    }
-    const offset =
-      direction === "next" ? storage.offset + storage.limit : storage.offset - storage.limit;
-    const page = direction === "next" ? storage.page + 1 : storage.page - 1;
+  const handlePageNavigation = (page: number): void => {
+    const offset = (page - 1) * storage.limit;
 
     setStorage({
       ...storage,
@@ -145,8 +144,31 @@ export function useTablePagination(
       offset: offset,
       page: page,
     });
-
     scrollToTop();
+  };
+
+  function handlePageChange(direction: "next" | "prev"): void {
+    const totalPages = Math.ceil(tbody ? tbody.length / storage.limit : 0);
+    const newOffset =
+      direction === "next" ? storage.offset + storage.limit : storage.offset - storage.limit;
+    const newPage = direction === "next" ? storage.page + 1 : storage.page - 1;
+
+    if (
+      (direction === "prev" && storage.page === 1) ||
+      (direction === "next" && storage.page === totalPages)
+    ) {
+      return;
+    }
+
+    if (newOffset !== storage.offset || newPage !== storage.page) {
+      setStorage({
+        ...storage,
+        limit: storage.limit,
+        offset: newOffset,
+        page: newPage,
+      });
+      scrollToTop();
+    }
   }
 
   const resetPagination = (): void => {
@@ -169,7 +191,7 @@ export function useTablePagination(
 
   useEffect(() => {
     resetPagination();
-  }, [tbody]);
+  }, [JSON.stringify(tbody)]);
 
   useEffect(() => {
     if (tbody && tbody.length && storage.offset >= tbody.length && storage.page > 1) {
@@ -180,7 +202,8 @@ export function useTablePagination(
   return {
     endPagination,
     handlePageChange,
-    handlePageSelection,
+    handlePageNavigation,
+    handleRowsPerPageChange,
     resetPagination,
     scrollToTop,
   };
@@ -196,7 +219,6 @@ export function useTableSort({
   defaultDirection?: "asc" | "desc";
   defaultSort?: number;
   setStorage: ISetStorage;
-  sortDisabled?: number[];
   storage: IStorage;
   tbody: ITable["tbody"];
 }): {
@@ -229,11 +251,13 @@ export function useTableSort({
     });
   }
 
-  const sortedTBody = tbody
-    ? sortDirection === "asc"
+  const sortedTBody = useMemo(() => {
+    if (!tbody) return tbody;
+
+    return sortDirection === "asc"
       ? sort(tbody).asc((row) => row[sortColumn].value)
-      : sort(tbody).desc((row) => row[sortColumn].value)
-    : tbody;
+      : sort(tbody).desc((row) => row[sortColumn].value);
+  }, [tbody, sortColumn, sortDirection]);
 
   return {
     handleSortMapping,

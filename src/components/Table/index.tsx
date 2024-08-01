@@ -1,4 +1,3 @@
-import { SortAscending } from "@phosphor-icons/react";
 import { useEffect } from "react";
 
 import { Icons } from "../../icons";
@@ -8,7 +7,6 @@ import {
   Select,
   Stack,
   Text,
-  fadeIn,
   theme,
   useBreakpoints,
   useLocalStorage,
@@ -32,6 +30,7 @@ import {
   TableHeaderCoreStyled,
   TableHeaderOptionsStyled,
   TableHeaderStyled,
+  TableLengthStyled,
   TablePaginationStyled,
   TableStyled,
 } from "./styles";
@@ -73,8 +72,14 @@ export default function NewTable({
 
   const columnWidths = useTableColumns(identifier, tbody);
 
-  const { endPagination, scrollToTop, handlePageChange, handlePageSelection, resetPagination } =
-    useTablePagination(tbody, storage, setStorage, initialKey);
+  const {
+    endPagination,
+    scrollToTop,
+    handlePageChange,
+    handlePageNavigation,
+    handleRowsPerPageChange,
+    resetPagination,
+  } = useTablePagination(tbody, storage, setStorage, initialKey);
 
   useTableKeyboard(pagination, kbd, handlePageChange, resetPagination, endPagination);
 
@@ -125,7 +130,7 @@ export default function NewTable({
                       }))}
                     trigger={
                       <Button>
-                        <SortAscending />
+                        <Icons.SortAscending />
                       </Button>
                     }
                     onSelection={(value: string): void => {
@@ -186,7 +191,7 @@ export default function NewTable({
                 value: index.toString(),
               }))}
             trigger={
-              <Button block icon={<SortAscending />} theme="fill">
+              <Button block icon={<Icons.SortAscending />} theme="fill">
                 Sort
               </Button>
             }
@@ -313,6 +318,17 @@ export default function NewTable({
           </tbody>
         </table>
       </TableCoreStyled>
+      {data && data.length && (
+        <TableLengthStyled>
+          <Text accent as="small">
+            {data.length} total (showing {storage.offset + 1} -{" "}
+            {storage.offset + storage.limit > data.length
+              ? data.length
+              : storage.offset + storage.limit}
+            )
+          </Text>
+        </TableLengthStyled>
+      )}
       {pagination && data && (
         <TablePaginationStyled>
           <Stack>
@@ -320,7 +336,7 @@ export default function NewTable({
               <Select
                 disabled={data && data.length < 10}
                 initial={storage?.limit?.toString() || TABLE_PAGES[0].toString()}
-                label="Page Size"
+                label="Rows per page"
                 options={TABLE_PAGES.map((size) => ({
                   label: size.toString(),
                   value: size.toString(),
@@ -328,55 +344,57 @@ export default function NewTable({
                 trigger={
                   <Button
                     disabled={data && data?.length < 10}
-                    icon={<Icons.TableRows />}
+                    icon={<Icons.Rows />}
                     inline="small"
                     small>
                     {storage.limit}
-                    <Text as="span" css={{ hiddenInline: "tablet" }}>
-                      &nbsp;rows
-                    </Text>
                   </Button>
                 }
                 vertical="top"
                 width={125}
                 onSelection={(value: string): void => {
-                  handlePageSelection(value);
+                  scrollToTop();
+                  handleRowsPerPageChange(value);
                 }}
               />
             )}
+            <Select
+              key={storage.page}
+              initial={storage.page.toString()}
+              label="Jump to page"
+              options={Array.from({ length: Math.ceil(data.length / storage.limit) }, (_, i) => ({
+                label: `Page ${i + 1}`,
+                value: (i + 1).toString(),
+              }))}
+              trigger={
+                <Button
+                  disabled={data.length <= storage.limit}
+                  icon={<Icons.ListNumbers />}
+                  inline="medium"
+                  small>
+                  {storage.page}
+                </Button>
+              }
+              onSelection={(value: string): void => {
+                scrollToTop();
+                handlePageNavigation(parseInt(value));
+              }}
+            />
             <Text
               accent
               as="small"
               css={{
-                "&:hover": {
-                  svg: {
-                    transform: "scale(1.2)",
-                  },
-                },
-                cursor: "pointer",
-                svg: {
-                  transition: "$default",
-                },
+                hiddenInline: "phone",
               }}
-              inline="small"
-              onClick={(): void => {
-                scrollToTop();
-              }}>
-              <Icons.ArrowUp
-                style={{ animation: `${fadeIn} 0.3s ease-in-out`, marginRight: "0.5rem" }}
-              />
-              <Text as="span" css={{ hiddenInline: "tablet" }}>
-                {storage.offset + 1} -{" "}
-                {storage.offset + storage.limit > data.length
-                  ? data.length
-                  : storage.offset + storage.limit}{" "}
-                of {data.length}
-              </Text>
-              <Text as="span" css={{ visibleInline: "tablet" }}>
-                {`${storage.page} / ${Math.ceil(data.length / storage.limit)}`}
-              </Text>
+              inline="auto">
+              {data.length} total (showing {storage.offset + 1} -{" "}
+              {storage.offset + storage.limit > data.length
+                ? data.length
+                : storage.offset + storage.limit}
+              )
             </Text>
           </Stack>
+
           <Stack>
             <Button
               disabled={storage.page === 1}
