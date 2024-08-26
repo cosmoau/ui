@@ -31,7 +31,6 @@ export const StackStyled = styled("div", {
         },
         alignItems: "center",
         display: "flex",
-        flexWrap: "wrap",
         gap: "$small",
         justifyContent: "space-between",
         verticalAlign: "middle",
