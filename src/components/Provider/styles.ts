@@ -20,17 +20,20 @@ export const ToastStyled = styled("div", {
   borderRadius: "$small",
   boxShadow: "$large",
   cursor: "pointer",
-  marginTop: "$small",
+  marginBottom: "$small",
   maxWidth: "60rem",
   padding: "$smaller $small",
   phone: {
     margin: "0 auto",
-    marginBottom: "$small",
+    marginTop: "$small",
+    marginBottom: "0",
+    '&:last-child': {
+      marginBottom: "$small",
+    },
     maxWidth: "90%",
     textAlign: "center",
   },
   pointerEvents: "all",
-
   transition: "$default",
 
   variants: {
@@ -49,18 +52,27 @@ export const ToastStyled = styled("div", {
 });
 
 export const ToastContainerStyled = styled("div", {
-  bottom: "$medium",
-  left: "$medium",
+  bottom: "0",
+  left: "0",
+  paddingLeft: "$small",
+  transition: "$default",
   phone: {
     bottom: "auto",
     left: "50%",
-    top: "$medium",
+    top: "0",
     transform: "translateX(-50%)",
+    background: "linear-gradient(to top, rgba(14,22,35,0) 0%,rgba(14,22,35,0.15) 100%) !important",
+    darkModeSpec: {
+      background: "linear-gradient(to top, rgba(254, 248, 244,0) 0%,rgba(254, 248, 244,0.15) 100%) !important",
+    },
   },
   pointerEvents: "none",
   position: "fixed",
   userSelect: "none",
-
+  background: "linear-gradient(to bottom, rgba(14,22,35,0) 0%,rgba(14,22,35,0.25) 100%)",
+  darkModeSpec: {
+    background: "linear-gradient(to bottom, rgba(254, 248, 244,0) 0%,rgba(254, 248, 244,0.075) 100%)",
+  },
   width: "100%",
   zIndex: "$toast",
 });
