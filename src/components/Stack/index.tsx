@@ -106,11 +106,11 @@ export default function Stack({
   return (
     <StackStyled
       className={className}
+      collapseduo={collapseduo}
       css={{
         ...shared,
       }}
       flexduo={flexduo}
-      collapseduo={collapseduo}
       {...rest}>
       {children}
     </StackStyled>
