@@ -16,6 +16,15 @@ export function App(): ReactElement {
 
   return (
     <C.Provider>
+      <C.Stack flexduo>
+        <C.Text>
+          Flexduo side 1
+        </C.Text>
+        <C.Text>
+          Flexduo side 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget consectetur adipiscing elit. Donec euismod, nisl eget
+        </C.Text>
+      </C.Stack>
+      <C.Button onClick={() => toast.success("Hello toast!")}>Toast</C.Button>
       <C.Icon>
         <FacebookLogo />
       </C.Icon>

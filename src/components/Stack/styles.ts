@@ -6,7 +6,7 @@ export const StackStyled = styled("div", {
   marginBlockStart: 0,
 
   variants: {
-    flexduo: {
+    collapseduo: {
       true: {
         [`& ${TextStyled}`]: {
           marginBottom: "0 !important",
@@ -15,10 +15,25 @@ export const StackStyled = styled("div", {
         alignItems: "center",
         display: "flex",
         gap: "$medium",
+        flexWrap: "wrap",
         justifyContent: "space-between",
         phone: {
           gap: "$small",
         },
+        verticalAlign: "middle",
+      },
+    },
+    flexduo: {
+      true: {
+        [`& ${TextStyled}`]: {
+          marginBottom: "0 !important",
+          verticalAlign: "middle",
+        },
+        alignItems: "center",
+        display: "flex",
+        gap: "$small",
+        flexWrap: "wrap",
+        justifyContent: "space-between",
         verticalAlign: "middle",
       },
     },

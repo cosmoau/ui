@@ -313,6 +313,7 @@ export interface IStack {
   direction?: "row" | "column";
   flex?: CSSProperties["alignItems"];
   flexduo?: boolean;
+  collapseduo?: boolean;
   id?: string;
   minimal?: boolean;
   noPrint?: boolean;

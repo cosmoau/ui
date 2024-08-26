@@ -9,6 +9,7 @@ export default function Stack({
   bottom,
   flex,
   flexduo,
+  collapseduo,
   minimal,
   width = 100,
   children,
@@ -109,6 +110,7 @@ export default function Stack({
         ...shared,
       }}
       flexduo={flexduo}
+      collapseduo={collapseduo}
       {...rest}>
       {children}
     </StackStyled>
