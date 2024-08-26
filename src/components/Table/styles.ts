@@ -16,6 +16,7 @@ export const TableCoreStyled = styled("div", {
     border: 0,
     borderCollapse: "separate",
     borderSpacing: "0",
+    fontSize: "$default",
     margin: 0,
     minWidth: "100%",
     padding: 0,

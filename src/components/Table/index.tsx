@@ -318,7 +318,7 @@ export default function NewTable({
           </tbody>
         </table>
       </TableCoreStyled>
-      {data && data.length && (
+      {data && data.length ? (
         <TableLengthStyled>
           <Text accent as="small">
             {data.length} total (showing {storage.offset + 1} -{" "}
@@ -328,7 +328,7 @@ export default function NewTable({
             )
           </Text>
         </TableLengthStyled>
-      )}
+      ) : null}
       {pagination && data && (
         <TablePaginationStyled>
           <Stack>
