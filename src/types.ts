@@ -1,5 +1,5 @@
-import { CSSProperties, CSS } from "@stitches/react";
-import { ImageProps } from "next/image";
+import { type CSSProperties, type CSS } from "@stitches/react";
+import { type ImageProps } from "next/image";
 import {
   ReactNode,
   ComponentPropsWithRef,
@@ -231,7 +231,9 @@ export interface ILogo {
 export interface IMenu {
   children?: ReactNode;
   css?: CSS;
+  full?: boolean;
   initial?: string;
+  logo?: ReactNode;
   onSelection?: (value: string, label: string) => void;
   options: Array<{
     label: string;

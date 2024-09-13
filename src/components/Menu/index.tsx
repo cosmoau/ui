@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 
 import { Icons } from "../../icons";
-import { useEventListener, useOutsideClick } from "../../index";
+import { Button, Text, useEventListener, useOutsideClick } from "../../index";
 import { IMenu } from "../../types";
 
 import {
@@ -13,6 +13,7 @@ import {
   MenuIconStyled,
   MenuSubItemStyled,
   MenuSubGroupStyled,
+  MenuHeaderStyled,
 } from "./styles";
 
 export default function Menu({
@@ -22,6 +23,8 @@ export default function Menu({
   initial,
   onSelection,
   children,
+  full,
+  logo,
 }: IMenu): JSX.Element {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -78,7 +81,20 @@ export default function Menu({
       </MenuTriggerStyled>
 
       {isMounted && (
-        <MenuGroupStyled ref={ref} animation={isOpen}>
+        <MenuGroupStyled ref={ref} animation={isOpen} full={full ? true : false}>
+          {full && (
+            <MenuHeaderStyled>
+              {logo ?? (
+                <Text as="h4" inline="auto">
+                  Menu
+                </Text>
+              )}
+
+              <Button small onClick={(): void => handleClose()}>
+                <Icons.ArrowsInSimple />
+              </Button>
+            </MenuHeaderStyled>
+          )}
           {options.map((option) => (
             <>
               <MenuItemStyled

@@ -18,14 +18,10 @@ export const MenuGroupStyled = styled("div", {
   border: "0.1rem solid $border",
   borderRadius: "$large",
   boxShadow: "$large",
-  left: "2rem",
   lineBreak: "auto",
-  marginTop: "$larger !important",
   overflowY: "auto",
   padding: "$small",
   pointerEvents: "auto",
-  position: "absolute",
-  right: "auto",
   textAlign: "left !important",
   transition: "$default",
   variants: {
@@ -39,9 +35,30 @@ export const MenuGroupStyled = styled("div", {
         animationFillMode: "forwards",
       },
     },
+    full: {
+      false: {
+        left: "2rem",
+        marginTop: "$larger !important",
+        position: "absolute",
+        right: "auto",
+        width: "calc(100vw - 4rem)",
+      },
+      true: {
+        borderRadius: 0,
+        bottom: 0,
+        height: "100vh",
+        left: 0,
+        margin: 0,
+        overflowY: "auto",
+        padding: "$medium",
+        position: "fixed",
+        right: 0,
+        top: 0,
+        width: "100vw",
+      },
+    },
   },
 
-  width: "calc(100vw - 4rem)",
   zIndex: "$menu",
 });
 
@@ -126,6 +143,15 @@ export const MenuContentStyled = styled("div", {
   display: "block",
   marginTop: "$small",
   padding: "$medium $small $small $small",
+});
+
+export const MenuHeaderStyled = styled("div", {
+  alignItems: "center",
+  borderBottom: "0.1rem solid $border",
+  display: "flex",
+  justifyContent: "space-between",
+  marginBottom: "$small",
+  padding: "0 $small $small $small",
 });
 
 export default MenuStyled;
