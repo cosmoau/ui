@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import Balancer from "react-wrap-balancer";
+import { Balancer } from "react-wrap-balancer";
 
 import { IText } from "../../types";
 

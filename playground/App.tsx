@@ -29,7 +29,7 @@ export function App(): ReactElement {
       </C.Icon>
       <C.CalendarInline
         endDate={endDate}
-        minLength={10}
+        minLength={0}
         mode="range"
         startDate={startDate}
         title="Test"
@@ -58,6 +58,20 @@ export function App(): ReactElement {
             <C.Text as="span" highlight="red">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget.
             </C.Text>
+          </C.Text>
+          <C.Text as="h1" bottom="large">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget. Lorem ipsum dolor
+            sit amet, consectetur adipiscing elit. Donec euismod, nisl eget. Lorem ipsum dolor sit
+            amet, consectetur adipiscing elit. Donec euismod, nisl eget.
+          </C.Text>
+          <C.Text as="h1" balanced bottom="large">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget. Lorem ipsum dolor
+            sit amet, consectetur adipiscing elit. Donec euismod, nisl eget. Lorem ipsum dolor sit
+            amet, consectetur adipiscing elit. Donec euismod, nisl eget.
           </C.Text>
           <C.Menu
             full

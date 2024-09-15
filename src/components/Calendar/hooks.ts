@@ -37,12 +37,17 @@ export const useCalendarState = ({
 };
 
 export const useCalendarSingleValidation = (
-  minDate: string,
-  maxDate: string,
+  minDate: string | undefined,
+  maxDate: string | undefined,
   onSelection: ICalendar["onSelection"],
 ): ((date: string) => boolean) => {
   const validateSingleDate = (date: string): boolean => {
-    if (isDateOutOfRange(date, minDate, maxDate)) {
+    const selectedDate = dayjs(date);
+
+    if (
+      (minDate && selectedDate.isBefore(dayjs(minDate), "day")) ||
+      (maxDate && selectedDate.isAfter(dayjs(maxDate), "day"))
+    ) {
       toast.error("Selected date is out of range");
 
       return false;
@@ -57,36 +62,48 @@ export const useCalendarSingleValidation = (
 };
 
 export const useCalendarRangeValidation = (
-  minDate: string,
-  maxDate: string,
-  minLength: number,
+  minDate: string | undefined,
+  maxDate: string | undefined,
+  minLength: number | undefined,
   maxLength: number | undefined,
   onSelection: ICalendar["onSelection"],
 ): { validateRange: (startDate: string, endDate: string) => boolean } => {
   const validateRange = (startDate: string, endDate: string): boolean => {
-    if (isDateOutOfRange(endDate, minDate, maxDate)) {
-      toast.error("Selected date is out of range");
+    const start = dayjs(startDate);
+    const end = dayjs(endDate);
+    let diff = end.diff(start, "day");
+
+    if (end.isBefore(start)) {
+      diff = start.diff(end, "day");
+      if (
+        (minLength === undefined || diff >= minLength) &&
+        (maxLength === undefined || diff <= maxLength)
+      ) {
+        onSelection({ endDate: startDate, startDate: endDate });
+
+        return true;
+      }
+      toast(`Date range must be between ${minLength ?? 0} and ${maxLength ?? "∞"} days`);
 
       return false;
     }
-    if (dayjs(endDate).isBefore(dayjs(startDate), "day")) {
-      toast.error("End date cannot be before start date");
+
+    if (minDate && end.isBefore(dayjs(minDate), "day")) {
+      toast(`Selected date must be after ${minDate}`);
 
       return false;
     }
-    if (dayjs(endDate).isSame(dayjs(startDate), "day")) {
-      toast.error("Start date and end date cannot be the same");
-
-      return false;
-    }
-    if (dayjs(endDate).diff(dayjs(startDate), "day") < minLength) {
-      toast.error(`Minimum length is ${minLength} days`);
+    if (maxDate && end.isAfter(dayjs(maxDate), "day")) {
+      toast(`Selected date must be before ${maxDate}`);
 
       return false;
     }
 
-    if (maxLength && dayjs(endDate).diff(dayjs(startDate), "day") > maxLength) {
-      toast.error(`Maximum length is ${maxLength} days`);
+    if (
+      (minLength !== undefined && diff < minLength) ||
+      (maxLength !== undefined && diff > maxLength)
+    ) {
+      toast(`Date range must be between ${minLength ?? 0} and ${maxLength ?? "∞"} days`);
 
       return false;
     }

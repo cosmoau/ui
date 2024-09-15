@@ -40,10 +40,10 @@ export default function Calendar({
     startDate,
   });
 
-  const validateSingleDate = useCalendarSingleValidation(minDate || "", maxDate || "", onSelection);
+  const validateSingleDate = useCalendarSingleValidation(minDate, maxDate, onSelection);
   const { validateRange } = useCalendarRangeValidation(
-    minDate || "",
-    maxDate || "",
+    minDate,
+    maxDate,
     minLength,
     maxLength,
     onSelection,
