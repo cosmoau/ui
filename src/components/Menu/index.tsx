@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 
 import { Icons } from "../../icons";
-import { Button, Text, useEventListener, useOutsideClick } from "../../index";
+import { Button, Text, useEventListener, useOutsideClick, useScrollLock } from "../../index";
 import { IMenu } from "../../types";
 
 import {
@@ -68,6 +68,7 @@ export default function Menu({
     }
   });
 
+  useScrollLock(isMounted);
   useOutsideClick(ref, () => handleClose());
 
   return (
