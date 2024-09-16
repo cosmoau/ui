@@ -16,11 +16,9 @@ export const MenuTriggerStyled = styled("div", {
 export const MenuGroupStyled = styled("div", {
   backgroundColor: "$background",
   border: "0.1rem solid $border",
-  borderRadius: "$large",
   boxShadow: "$large",
   lineBreak: "auto",
   overflowY: "auto",
-  padding: "$small",
   pointerEvents: "auto",
   textAlign: "left !important",
   transition: "$default",
@@ -37,8 +35,10 @@ export const MenuGroupStyled = styled("div", {
     },
     full: {
       false: {
+        borderRadius: "$large",
         left: "2rem",
         marginTop: "$larger !important",
+        padding: "$small",
         position: "absolute",
         right: "auto",
         width: "calc(100vw - 4rem)",
@@ -46,11 +46,8 @@ export const MenuGroupStyled = styled("div", {
       true: {
         borderRadius: 0,
         bottom: 0,
-        height: "100%",
         left: 0,
         margin: 0,
-        minHeight: "100vh",
-        overflowY: "auto",
         padding: "$medium",
         position: "fixed",
         right: 0,
@@ -59,7 +56,6 @@ export const MenuGroupStyled = styled("div", {
       },
     },
   },
-
   zIndex: "$menu",
 });
 
