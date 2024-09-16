@@ -46,9 +46,10 @@ export const MenuGroupStyled = styled("div", {
       true: {
         borderRadius: 0,
         bottom: 0,
-        height: "100vh",
+        height: "100%",
         left: 0,
         margin: 0,
+        minHeight: "100vh",
         overflowY: "auto",
         padding: "$medium",
         position: "fixed",
