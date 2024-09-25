@@ -8,10 +8,10 @@ import * as C from "../src/index";
 
 export function App(): ReactElement {
   const [file, setFile] = useState<File | null>(null);
-  const [startDate, setStartDate] = useState<string>("");
+  const [startDate, setStartDate] = useState<string>("2024-05-01");
   const [endDate, setEndDate] = useState<string>("");
   const [singleDate, setSingleDate] = useState<string>("");
-  const [selectedDate, setSelectedDate] = useState<string>("2023-01-01");
+  const [selectedDate, setSelectedDate] = useState<string>("");
   const [tableFilter, setTableFilter] = useState("");
 
   return (
@@ -33,6 +33,7 @@ export function App(): ReactElement {
         mode="range"
         startDate={startDate}
         title="Test"
+        viewDate="2024-04-01"
         trigger={<C.Button>Calendar Inline</C.Button>}
         onSelection={(dates) => {
           setStartDate(dates.startDate);
@@ -44,6 +45,7 @@ export function App(): ReactElement {
         <C.CalendarMonths
           maxDate="2026-05-01"
           minDate="2020-04-01"
+          viewDate="2021-04-01"
           selectedDate={selectedDate}
           onSelection={(date) => {
             setSelectedDate(date);

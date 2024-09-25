@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 
 import { Text, Stack, Button } from "../../../";
 import { Icons } from "../../../icons";
@@ -13,31 +13,34 @@ export default function CalendarMonths({
   onSelection,
   minDate,
   maxDate,
+  viewDate,
 }: ICalendarMonths): JSX.Element {
-  const [viewDate, setViewDate] = useState(dayjs(selectedDate));
+  const [viewYear, setViewYear] = useState(
+    dayjs(selectedDate || viewDate || dayjs().startOf("month")),
+  );
 
   const handleYearChange = (direction: "prev" | "next"): void => {
-    const newDate = direction === "prev" ? viewDate.subtract(1, "year") : viewDate.add(1, "year");
+    const newDate = direction === "prev" ? viewYear.subtract(1, "year") : viewYear.add(1, "year");
 
-    setViewDate(newDate);
+    setViewYear(newDate);
   };
 
   const handleMonthSelection = (month: number): void => {
-    const newDate = viewDate.month(month).date(1);
+    const newDate = viewYear.month(month).date(1);
 
     onSelection(newDate.format("YYYY-MM-DD"));
   };
 
   const isPrevYearDisabled = useMemo(() => {
-    return minDate ? viewDate.subtract(1, "year").endOf("year").isBefore(dayjs(minDate)) : false;
-  }, [viewDate, minDate]);
+    return minDate ? viewYear.subtract(1, "year").endOf("year").isBefore(dayjs(minDate)) : false;
+  }, [viewYear, minDate]);
 
   const isNextYearDisabled = useMemo(() => {
-    return maxDate ? viewDate.add(1, "year").startOf("year").isAfter(dayjs(maxDate)) : false;
-  }, [viewDate, maxDate]);
+    return maxDate ? viewYear.add(1, "year").startOf("year").isAfter(dayjs(maxDate)) : false;
+  }, [viewYear, maxDate]);
 
   const isMonthDisabled = (month: number): boolean => {
-    const monthDate = viewDate.month(month).date(1);
+    const monthDate = viewYear.month(month).date(1);
 
     if (minDate && maxDate) {
       return monthDate.isBefore(dayjs(minDate)) || monthDate.isAfter(dayjs(maxDate));
@@ -50,11 +53,18 @@ export default function CalendarMonths({
     return false;
   };
 
+  useEffect(() => {
+    const initialViewDate =
+      selectedDate || viewYear || dayjs().startOf("month").format("YYYY-MM-DD");
+
+    setViewYear(dayjs(initialViewDate));
+  }, []);
+
   return (
     <CalendarStyled>
       <CalendarHeaderStyled>
         <Text as="h5" bottom="none">
-          {viewDate.year()}
+          {viewYear.year()}
         </Text>
         <Stack>
           <Button
@@ -76,7 +86,7 @@ export default function CalendarMonths({
 
       <CalendarGridStyled mode="months">
         {months.map((monthName, index) => {
-          const isSelected = dayjs(selectedDate).isSame(viewDate.month(index), "month");
+          const isSelected = dayjs(selectedDate).isSame(viewYear.month(index), "month");
           const isDisabled = isMonthDisabled(index);
 
           return (

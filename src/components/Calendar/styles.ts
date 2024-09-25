@@ -56,6 +56,6 @@ export const CalendarGridStyled = styled("div", {
 export const CalendarFooterStyled = styled("div", {
   display: "flex",
   justifyContent: "space-between",
-  marginTop: "$small",
+  marginTop: "$medium",
   transition: "$default",
 });

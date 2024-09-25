@@ -29,6 +29,7 @@ export default function Calendar({
   mode = "range",
   minDate,
   maxDate,
+  viewDate,
   startDate,
   endDate,
 }: ICalendar): JSX.Element {
@@ -52,7 +53,6 @@ export default function Calendar({
   const { nextMonthDisabled, nextYearDisabled, prevMonthDisabled, prevYearDisabled } =
     useNavigationDisabledState({
       maxDate: values.maxDate,
-
       minDate: values.minDate,
       viewDate: values.viewDate,
     });
@@ -75,7 +75,7 @@ export default function Calendar({
   };
 
   useEffect(() => {
-    const initialViewDate = startDate || dayjs().format("YYYY-MM-DD");
+    const initialViewDate = startDate || viewDate || dayjs().startOf("month").format("YYYY-MM-DD");
 
     setValues((currentValues) => ({ ...currentValues, viewDate: initialViewDate }));
   }, []);

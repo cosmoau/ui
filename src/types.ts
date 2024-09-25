@@ -107,13 +107,15 @@ export interface ICalendar {
   mode?: "range" | "single";
   onSelection: (dates: { endDate: string; startDate: string }) => void;
   startDate?: string;
+  viewDate?: string;
 }
 
 export interface ICalendarMonths {
   maxDate?: string;
   minDate?: string;
   onSelection: (date: string) => void;
-  selectedDate: string;
+  selectedDate?: string;
+  viewDate?: string;
 }
 
 export interface ICalendarInline extends ICalendar {
