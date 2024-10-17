@@ -3,7 +3,7 @@ import { Select, Button, useTheme, useMountSSR } from "../../../index";
 import { ISelect } from "../../../types";
 
 export default function ProviderToggle(): JSX.Element {
-  const { theme, setTheme, isDarkTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const mounted = useMountSSR();
 
   const options = [
@@ -23,7 +23,7 @@ export default function ProviderToggle(): JSX.Element {
           }}
           icon={options.find((option) => option.value === theme)?.icon}
           small>
-          {isDarkTheme ? "Dark" : "Light"}
+          {theme}
         </Button>
       }
       onSelection={(value): void => {
