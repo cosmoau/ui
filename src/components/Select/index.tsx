@@ -173,11 +173,11 @@ export default function Select({
                     setFocused(option.value);
                   }
                 }}>
-                {option.icon && option.iconPosition !== "right" && (
+                {option.icon && option.iconPosition === "left" && (
                   <SelectIconStyled align="left">{option.icon}</SelectIconStyled>
                 )}
                 {option.label}
-                {option.icon && option.iconPosition === "right" && (
+                {option.icon && option.iconPosition !== "left" && (
                   <SelectIconStyled align="right">{option.icon}</SelectIconStyled>
                 )}
               </SelectItemStyled>

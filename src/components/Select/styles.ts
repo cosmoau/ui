@@ -50,6 +50,8 @@ export const SelectFilterStyled = styled("div", {
   padding: "$small $smallest $smallest $smallest",
   position: "sticky",
   top: 0,
+
+  zIndex: "$select",
 });
 
 export const SelectItemStyled = styled("div", {
@@ -106,6 +108,7 @@ export const SelectItemStyled = styled("div", {
       },
     },
   },
+  zIndex: "auto",
 });
 
 export const SelectEmptyStyled = styled("div", {
