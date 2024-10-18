@@ -134,7 +134,13 @@ export default function Box({
       {expandable && !cta && (
         <BoxExpanderTrigger expanded={isExpanded}>
           <Button
-            icon={isExpanded ? <Icons.ArrowsInSimple /> : <Icons.ArrowsOutSimple />}
+            icon={
+              isExpanded ? (
+                <Icons.ArrowsInSimple weight="regular" />
+              ) : (
+                <Icons.ArrowsOutSimple weight="regular" />
+              )
+            }
             small
             theme={isExpanded ? "default" : "solid"}
             onClick={() => setIsExpanded(!isExpanded)}>

@@ -144,18 +144,18 @@ export default function NewTable({
                     icon={
                       breakpoint !== "phone" ? (
                         storage.filtering ? (
-                          <Icons.ArrowsInSimple />
+                          <Icons.ArrowsInSimple weight="regular" />
                         ) : (
-                          <Icons.MagnifyingGlass />
+                          <Icons.MagnifyingGlass weight="regular" />
                         )
                       ) : undefined
                     }
                     onClick={(): void => setStorage({ ...storage, filtering: !storage.filtering })}>
                     {breakpoint === "phone" ? (
                       storage.filtering ? (
-                        <Icons.ArrowsInSimple />
+                        <Icons.ArrowsInSimple weight="regular" />
                       ) : (
-                        <Icons.MagnifyingGlass />
+                        <Icons.MagnifyingGlass weight="regular" />
                       )
                     ) : (
                       "Search"
@@ -403,7 +403,7 @@ export default function NewTable({
               onClick={(): void => {
                 handlePageChange("prev");
               }}>
-              <Icons.ArrowLeft />
+              <Icons.ArrowLeft weight="regular" />
             </Button>
             <Button
               disabled={storage.offset + storage.limit >= data.length}
@@ -411,7 +411,7 @@ export default function NewTable({
               onClick={(): void => {
                 handlePageChange("next");
               }}>
-              <Icons.ArrowRight />
+              <Icons.ArrowRight weight="regular" />
             </Button>
           </Stack>
         </TablePaginationStyled>

@@ -92,7 +92,7 @@ export default function Menu({
               )}
 
               <Button small onClick={(): void => handleClose()}>
-                <Icons.ArrowsInSimple />
+                <Icons.ArrowsInSimple weight="regular" />
               </Button>
             </MenuHeaderStyled>
           )}

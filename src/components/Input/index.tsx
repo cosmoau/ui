@@ -162,7 +162,7 @@ export default function Input({
             {submit && (
               <Button
                 disabled={!submitValid || !submitValid(inputValue) || isSubmitted || disabled}
-                icon={!isPhone ? <Icons.ArrowRight /> : undefined}
+                icon={!isPhone ? <Icons.ArrowRight weight="regular" /> : undefined}
                 iconPosition="right"
                 small
                 theme={submitValid && submitValid(inputValue) ? "solid" : "default"}
@@ -173,7 +173,7 @@ export default function Input({
                     setIsSubmitted(true);
                   }
                 }}>
-                {!isPhone ? submit : <Icons.ArrowRight />}
+                {!isPhone ? submit : <Icons.ArrowRight weight="regular" />}
               </Button>
             )}
           </InputFunctionStyled>

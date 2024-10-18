@@ -102,7 +102,7 @@ export default function Dialog({
               <DialogHeaderStyled>
                 <Text as="h4">{title}</Text>
                 <Button small theme="fill" onClick={(): void => handleClose()}>
-                  <Icons.ArrowsInSimple />
+                  <Icons.ArrowsInSimple weight="regular" />
                 </Button>
               </DialogHeaderStyled>
               <DialogContentStyled>{children}</DialogContentStyled>
