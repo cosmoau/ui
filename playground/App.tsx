@@ -18,12 +18,16 @@ export function App(): ReactElement {
     <C.Provider>
       <C.ProviderToggle />
       <C.Stack flexduo>
-        <C.Text>Flexduo side 1</C.Text>
         <C.Text>
-          Flexduo side 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod,
-          nisl eget consectetur adipiscing elit. Donec euismod, nisl eget
+          Flexduo side 2: Lorem{" "}
+          <C.Text as="a" href="/start" inline="smallest" link="blog" target="_blank">
+            Flexduo side 1
+          </C.Text>
+          ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget consectetur
+          adipiscing elit. Donec euismod, nisl eget
         </C.Text>
       </C.Stack>
+      <C.Text inline="small">Test inlining</C.Text>
       <C.Button onClick={() => toast.success("Hello toast!")}>Toast</C.Button>
       <C.Icon>
         <FacebookLogo />
@@ -34,8 +38,8 @@ export function App(): ReactElement {
         mode="range"
         startDate={startDate}
         title="Test"
-        viewDate="2024-04-01"
         trigger={<C.Button>Calendar Inline</C.Button>}
+        viewDate="2024-04-01"
         onSelection={(dates) => {
           setStartDate(dates.startDate);
           setEndDate(dates.endDate);
@@ -46,8 +50,8 @@ export function App(): ReactElement {
         <C.CalendarMonths
           maxDate="2026-05-01"
           minDate="2020-04-01"
-          viewDate="2021-04-01"
           selectedDate={selectedDate}
+          viewDate="2021-04-01"
           onSelection={(date) => {
             setSelectedDate(date);
             toast.success(`Selected month: ${date}`);
@@ -125,17 +129,17 @@ export function App(): ReactElement {
               { label: "Option 3", value: "option3" },
               { label: "Option 4", value: "option4" },
               { label: "Option 5", value: "option5" },
-              { label: "Option 6", value: "option6", icon: <FacebookLogo /> },
+              { icon: <FacebookLogo />, label: "Option 6", value: "option6" },
               {
-                label: "Option 7",
-                value: "option7",
                 icon: (
                   <C.Icon>
                     <FacebookLogo />
                   </C.Icon>
                 ),
+                label: "Option 7",
+                value: "option7",
               },
-              { label: "Option 8", value: "option8", icon: <C.Avatar fallback="s" /> },
+              { icon: <C.Avatar fallback="s" />, label: "Option 8", value: "option8" },
               { label: "Option 9", value: "option9" },
               { label: "Option 10", value: "option10" },
               { label: "Option 11", value: "option11" },

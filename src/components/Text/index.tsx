@@ -1,7 +1,10 @@
+import Link from "next/link";
 import { Fragment } from "react";
 import { Balancer } from "react-wrap-balancer";
 
+import { Icons } from "../../icons";
 import { IText } from "../../types";
+import Icon from "../Icon";
 
 import { TextStyled } from "./styles";
 
@@ -11,14 +14,18 @@ export default function Text({
   bottom,
   highlight,
   inline,
-  as,
+  as = "p",
   override,
   css,
   children,
   balanced,
   link,
+  href,
+  rel,
+  target,
   ...rest
 }: IText): JSX.Element {
+  const isLocalLink = href?.startsWith("/") || href?.startsWith("#");
   const TextBalancer = balanced ? Balancer : Fragment;
 
   return (
@@ -35,23 +42,36 @@ export default function Text({
           paddingBottom: `$${bottom}`,
         }),
         ...(inline && {
-          ...(as !== "strong" &&
-            as !== "span" && {
-              alignSelf: "center",
-              display: "inline-flex",
-              marginBottom: "0 !important",
-              verticalAlign: "middle",
-            }),
           marginRight: inline === "auto" ? "auto" : `$${inline}`,
         }),
 
         ...css,
       }}
       highlight={highlight}
-      link={link}
+      href={as === "a" ? href : undefined}
+      inline={inline && !["a", "span", "strong"].includes(as)}
+      link={link || (as === "a" ? "default" : undefined)}
+      rel={as === "a" ? rel : undefined}
       size={as || "p"}
+      target={as === "a" ? target : undefined}
       {...rest}>
-      <TextBalancer>{children}</TextBalancer>
+      {isLocalLink ? (
+        <Link href={href || "#"} rel={rel} target={target}>
+          {children}
+        </Link>
+      ) : (
+        <TextBalancer>{children}</TextBalancer>
+      )}
+      {as === "a" && target === "_blank" && (
+        <Icon
+          css={{
+            marginLeft: "$smallest",
+            marginTop: "-$smallest",
+          }}
+          forceSize={18}>
+          <Icons.ArrowUpRight weight="regular" />
+        </Icon>
+      )}
     </TextStyled>
   );
 }

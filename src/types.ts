@@ -16,7 +16,7 @@ import { theme } from "./stitches.config";
 
 type IThemeSpacing = keyof typeof theme.space;
 
-type InferComponentProps<T extends ElementType> =
+type InferToastComponentProps<T extends ElementType> =
   T extends ComponentType<infer U>
     ? U
     : T extends keyof JSX.IntrinsicElements
@@ -363,7 +363,7 @@ export interface ITable {
   thead?: Array<string>;
 }
 
-export interface IText extends ComponentPropsWithoutRef<"div"> {
+export interface IText extends ComponentPropsWithRef<"p"> {
   accent?: boolean;
   as?: keyof typeof TextSizes;
   balanced?: boolean;
@@ -371,10 +371,13 @@ export interface IText extends ComponentPropsWithoutRef<"div"> {
   children: ReactNode;
   css?: CSS;
   highlight?: "red" | "orange" | "purple" | "blue" | "green" | "default" | "alternate";
+  href?: string;
   inline?: IThemeSpacing | "auto";
-  link?: "minimal" | "default" | "alternate";
+  link?: "minimal" | "default" | "alternate" | "blog";
   override?: keyof typeof TextSizes;
+  rel?: string;
   subtle?: boolean;
+  target?: "_blank" | "_self";
   top?: IThemeSpacing;
 }
 
@@ -391,7 +394,7 @@ export interface IUpload<T extends boolean> {
   successMessage?: string;
 }
 
-export type IToast = InferComponentProps<typeof Toaster>;
+export type IToast = InferToastComponentProps<typeof Toaster>;
 
 export interface IView {
   app?: boolean;

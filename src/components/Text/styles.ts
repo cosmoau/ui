@@ -17,14 +17,15 @@ const link = {
 
   borderBottom: "1px solid $border",
   cursor: "pointer",
-  display: "inline-block",
   margin: 0,
-  padding: 0,
-
+  padding: "0 $smallest",
   transition: "$default",
 };
 
 export const TextSizes = {
+  a: {
+    marginBottom: 0,
+  },
   h1: {
     fontFamily: "$serif",
     fontSize: "$h1",
@@ -150,13 +151,27 @@ export const TextStyled = styled("div", {
         backgroundColor: "$redBackground",
       },
     },
+    inline: {
+      false: {
+        verticalAlign: "baseline !important",
+      },
+      true: {
+        alignSelf: "center",
+        display: "inline-flex",
+        marginBottom: "0 !important",
+        verticalAlign: "middle",
+      },
+    },
     link: {
       alternate: {
         ...link,
         "&:hover": {
           backgroundColor: "$defaultHover",
-          borderRadius: "$small",
         },
+      },
+      blog: {
+        ...link,
+        borderColor: "$text",
       },
       default: {
         ...link,
@@ -173,6 +188,8 @@ export const TextStyled = styled("div", {
       },
     },
   },
+
+  verticalAlign: "baseline",
 });
 
 export default TextStyled;
