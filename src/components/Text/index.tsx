@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Fragment } from "react";
 import { Balancer } from "react-wrap-balancer";
 
@@ -25,7 +24,6 @@ export default function Text({
   target,
   ...rest
 }: IText): JSX.Element {
-  const isLocalLink = href?.startsWith("/") || href?.startsWith("#");
   const TextBalancer = balanced ? Balancer : Fragment;
 
   return (
@@ -55,13 +53,7 @@ export default function Text({
       size={as || "p"}
       target={as === "a" ? target : undefined}
       {...rest}>
-      {isLocalLink ? (
-        <Link href={href || "#"} rel={rel} target={target}>
-          {children}
-        </Link>
-      ) : (
-        <TextBalancer>{children}</TextBalancer>
-      )}
+      <TextBalancer>{children}</TextBalancer>
       {as === "a" && target === "_blank" && (
         <Icon
           css={{
