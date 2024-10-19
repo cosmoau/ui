@@ -16,8 +16,25 @@ export default function useTheme(): UseThemeOutput {
   const [theme, setLocalStorageTheme] = useLocalStorage<Theme>("cosmo-ui-theme", "system");
   const [isDarkTheme, setIsDarkTheme] = useState<boolean | undefined>();
 
+  const checkDarkMode = (): boolean => {
+    return document.documentElement.classList.contains("dark");
+  };
+
+  const mutateTheme = (currentTheme: Theme): void => {
+    const rootElement = document.documentElement;
+
+    rootElement.classList.remove("dark", "light");
+
+    if (currentTheme === "dark" || (currentTheme === "system" && systemTheme)) {
+      rootElement.classList.add("dark");
+    } else {
+      rootElement.classList.add("light");
+    }
+  };
+
   const setTheme = (newTheme: Theme): void => {
     setLocalStorageTheme(newTheme);
+    mutateTheme(newTheme);
   };
 
   useEffect(() => {
@@ -32,14 +49,28 @@ export default function useTheme(): UseThemeOutput {
 
       const handleThemeChange = (e: MediaQueryListEvent): void => {
         setSystemTheme(e.matches);
+        if (theme === "system") {
+          mutateTheme("system");
+        }
       };
 
       themeMediaQuery.addEventListener("change", handleThemeChange);
 
       setSystemTheme(themeMediaQuery.matches);
+      mutateTheme(theme);
+
+      const mutationObserver = new MutationObserver(() => {
+        setIsDarkTheme(checkDarkMode());
+      });
+
+      mutationObserver.observe(document.documentElement, {
+        attributeFilter: ["class"],
+        attributes: true,
+      });
 
       return (): void => {
         themeMediaQuery.removeEventListener("change", handleThemeChange);
+        mutationObserver.disconnect();
       };
     }
 

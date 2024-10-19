@@ -13,9 +13,10 @@ export function App(): ReactElement {
   const [singleDate, setSingleDate] = useState<string>("");
   const [selectedDate, setSelectedDate] = useState<string>("");
   const [tableFilter, setTableFilter] = useState("");
+  const { isDarkTheme } = C.useTheme();
 
   return (
-    <C.Provider>
+    <C.Provider dark={isDarkTheme}>
       <C.ProviderToggle />
       <C.Stack flexduo>
         <C.Text>
