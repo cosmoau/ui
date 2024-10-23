@@ -18,7 +18,6 @@ const link = {
   borderBottom: "1px solid $border",
   cursor: "pointer",
   margin: 0,
-  padding: "0 $smallest",
   transition: "$default",
 };
 
