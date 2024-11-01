@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import packageJson from "../../../package.json";
 import { darkTheme } from "../../stitches.config";
 import { IProvider } from "../../types";
+import { BASE_SIZE } from "../Icon";
 
 import Portal from "./ProviderPortal";
 import { ProviderStyled, providerReset } from "./styles";
@@ -22,7 +23,12 @@ export default function Provider({ children, css, dark }: IProvider): JSX.Elemen
   return (
     <ProviderStyled className={dark ? darkTheme : ""} css={css}>
       <IconContext.Provider
-        value={{ alignmentBaseline: "middle", height: 20, weight: "regular", width: 20 }}>
+        value={{
+          alignmentBaseline: "middle",
+          height: BASE_SIZE,
+          weight: "regular",
+          width: BASE_SIZE,
+        }}>
         <ToastController />
 
         {children}

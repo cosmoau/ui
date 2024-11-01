@@ -2,11 +2,13 @@ import { IIcon } from "../../types";
 
 import { IconStyled } from "./styles";
 
+export const BASE_SIZE = 21;
+
 export default function Icon({
   css,
   inline,
   forceColor,
-  forceSize = 20,
+  forceSize = BASE_SIZE,
   children,
 }: IIcon): JSX.Element {
   return (
