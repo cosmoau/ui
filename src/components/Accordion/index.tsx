@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { Icons } from "../../icons";
-import { Button, Text } from "../../index";
+import { Button, Icon, Text } from "../../index";
 import { IAccordion } from "../../types";
 
 import {
@@ -25,12 +25,14 @@ export default function Accordion({ defaultOpen = null, options }: IAccordion): 
     <AccordionStyled>
       {options.map((option, index) => (
         <AccordionItemStyled key={index}>
-          <AccordionHeaderStyled onClick={() => handleToggle(index)}>
+          <AccordionHeaderStyled open={selected === index} onClick={() => handleToggle(index)}>
             <AccordionTitleStyled>
               <Text as={option.as || "h4"}>{option.title}</Text>
             </AccordionTitleStyled>
             <AccordionIconStyled open={selected === index}>
-              <Icons.CaretDown />
+              <Icon>
+                <Icons.CaretDown />
+              </Icon>
             </AccordionIconStyled>
           </AccordionHeaderStyled>
           <AccordionContentStyled open={selected === index}>

@@ -12,15 +12,17 @@ export const AccordionStyled = styled("div", {
 
 export const AccordionItemStyled = styled("div", {
   "&:first-child": {
-    paddingTop: 0,
+    marginTop: 0,
   },
   "&:last-child": {
-    borderBottom: "none",
-    paddingBottom: 0,
+    marginBottom: 0,
   },
-  borderBottom: "1px solid $border",
-  paddingBottom: "$medium",
-  paddingTop: "$medium",
+  marginTop: "$small",
+  marginBottom: "$small",
+  border: "0.1rem solid $border",
+  borderRadius: "$small",
+  overflow: "hidden",
+  transition: "$default",
 });
 
 export const AccordionHeaderStyled = styled("div", {
@@ -28,6 +30,21 @@ export const AccordionHeaderStyled = styled("div", {
   cursor: "pointer",
   display: "flex",
   justifyContent: "space-between",
+  backgroundColor: "$defaultSubtle",
+  padding: "$small",
+  borderRadius: "$small",
+  borderBottom: "0.1rem solid transparent",
+  transition: "$default",
+  variants: {
+    open: {
+      true: {
+        backgroundColor: "$default",
+        borderColor: "$borderSubtle",
+        borderBottomLeftRadius: 0,
+        borderBottomRightRadius: 0,
+      },
+    },
+  },
 });
 
 export const AccordionTitleStyled = styled("div", {
@@ -51,9 +68,10 @@ export const AccordionIconStyled = styled("div", {
 });
 
 export const AccordionContentStyled = styled("div", {
-  paddingBottom: "$small",
-  paddingTop: "$medium",
+  padding: "$medium $small",
   textAlign: "left",
+  transition: "$default",
+
   variants: {
     open: {
       false: {
