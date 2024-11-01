@@ -18,6 +18,27 @@ export function App(): ReactElement {
   return (
     <C.Provider dark={isDarkTheme}>
       <C.ProviderToggle />
+      <C.Stack bottom="largest">
+        <C.Stack>
+          <C.Icon inline="small">
+            <FacebookLogo />
+          </C.Icon>
+          <C.Button inline="small" theme="cosmo">
+            Cosmo Button
+          </C.Button>
+          <C.Text as="span" highlight="cosmo">
+            Label
+          </C.Text>
+        </C.Stack>
+        <C.Stack top="small">
+          <C.Icon inline="small">
+            <FacebookLogo />
+          </C.Icon>
+          <C.Text as="small" inline="auto">
+            Label
+          </C.Text>
+        </C.Stack>
+      </C.Stack>
       <C.Stack flexduo>
         <C.Text>
           Flexduo side 2: Lorem{" "}
@@ -609,9 +630,9 @@ export function App(): ReactElement {
               defaultOpen={0}
               options={[
                 {
-                  content: <C.Text as="h3">Custom Content</C.Text>,
-                  description: "",
-                  title: "Item 1",
+                  description:
+                    "We allow early check-ins and late check-outs, but this is always dependent on availability. To secure your adjusted arrival or departure time, please submit a request through our ‘Guest Portal’ link, which you’ll see when booking and can access after verification. Please keep in mind that this is only a request and requires approval from our Guest Support team. If you request too far in advance, we may ask you to contact us again closer to your arrival date. Requests for early check-in or late check - out may be declined for reasons such as back-to-back reservations or if another guest has already been approved for an altered check-in /check-out time. If you have any questions, please contact our team through your booking channel.",
+                  title: "Are early check-ins and late check-outs available with Cosmo properties?",
                 },
                 { description: "Description for item 2\n\nTest new line", title: "Item 2" },
                 {
