@@ -72,14 +72,14 @@ export default function CalendarMonths({
             small
             theme="minimal"
             onClick={() => handleYearChange("prev")}>
-            <Icons.CaretLeft />
+            <Icons.ArrowLeft />
           </Button>
           <Button
             disabled={isNextYearDisabled}
             small
             theme="minimal"
             onClick={() => handleYearChange("next")}>
-            <Icons.CaretRight />
+            <Icons.ArrowRight />
           </Button>
         </Stack>
       </CalendarHeaderStyled>

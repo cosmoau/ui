@@ -8,7 +8,7 @@ import * as C from "../src/index";
 
 export function App(): ReactElement {
   const [file, setFile] = useState<File | null>(null);
-  const [startDate, setStartDate] = useState<string>("2024-05-01");
+  const [startDate, setStartDate] = useState<string>("");
   const [endDate, setEndDate] = useState<string>("");
   const [singleDate, setSingleDate] = useState<string>("");
   const [selectedDate, setSelectedDate] = useState<string>("");
@@ -55,6 +55,8 @@ export function App(): ReactElement {
         <FacebookLogo />
       </C.Icon>
       <C.CalendarInline
+        blockedDates={["2024-04-05", "2024-04-20", "2024-05-05"]}
+        description="From $200 /night (savings applied)"
         endDate={endDate}
         minLength={0}
         mode="range"

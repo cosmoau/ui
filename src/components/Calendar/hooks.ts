@@ -67,11 +67,30 @@ export const useCalendarRangeValidation = (
   minLength: number | undefined,
   maxLength: number | undefined,
   onSelection: ICalendar["onSelection"],
+  blockedDates: string[] = [],
 ): { validateRange: (startDate: string, endDate: string) => boolean } => {
   const validateRange = (startDate: string, endDate: string): boolean => {
     const start = dayjs(startDate);
     const end = dayjs(endDate);
     let diff = end.diff(start, "day");
+
+    const unavailableInRange = blockedDates.filter((unavailableDate) => {
+      const unavailable = dayjs(unavailableDate);
+
+      return (
+        (unavailable.isAfter(start, "day") && unavailable.isBefore(end, "day")) ||
+        unavailable.isSame(start, "day") ||
+        unavailable.isSame(end, "day")
+      );
+    });
+
+    if (unavailableInRange.length > 0) {
+      const unavailableList = unavailableInRange.join(", ");
+
+      toast.error(`Selected range includes unavailable dates: ${unavailableList}`);
+
+      return false;
+    }
 
     if (end.isBefore(start)) {
       diff = start.diff(end, "day");

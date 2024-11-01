@@ -99,6 +99,8 @@ export interface IButton extends ComponentPropsWithoutRef<"button"> {
 }
 
 export interface ICalendar {
+  blockedDates?: string[];
+  description?: string;
   endDate?: string;
   maxDate?: string;
   maxLength?: number;

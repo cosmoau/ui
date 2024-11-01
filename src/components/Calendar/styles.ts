@@ -8,9 +8,9 @@ export const CalendarStyled = styled("div", {
 });
 
 export const CalendarHeaderStyled = styled("div", {
-  alignItems: "center",
   borderBottom: "0.1rem solid $border",
   display: "flex",
+  alignItems: "center",
   justifyContent: "space-between",
   marginBottom: "$small",
   paddingBottom: "$small",

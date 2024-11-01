@@ -29,6 +29,8 @@ export default function Calendar({
   mode = "range",
   minDate,
   maxDate,
+  description,
+  blockedDates,
   viewDate,
   startDate,
   endDate,
@@ -48,6 +50,7 @@ export default function Calendar({
     minLength,
     maxLength,
     onSelection,
+    blockedDates,
   );
 
   const { nextMonthDisabled, nextYearDisabled, prevMonthDisabled, prevYearDisabled } =
@@ -83,26 +86,36 @@ export default function Calendar({
   return (
     <CalendarStyled>
       <CalendarHeaderStyled>
-        <Text as="h5" bottom="none">
+        <Text as={description ? "h4" : "h5"} bottom="none">
           {dayjs(values.viewDate).format("MMMM YYYY")}
         </Text>
         <Stack>
-          <Button
-            disabled={prevMonthDisabled}
-            small={isPhone}
-            theme="minimal"
-            onClick={() => handleDateChange("month", "prev")}>
-            <Icons.CaretLeft />
-          </Button>
-          <Button
-            disabled={nextMonthDisabled}
-            small={isPhone}
-            theme="minimal"
-            onClick={() => handleDateChange("month", "next")}>
-            <Icons.CaretRight />
-          </Button>
+          {!prevMonthDisabled && (
+            <Button
+              disabled={prevMonthDisabled}
+              inline={description ? "small" : "auto"}
+              small={isPhone}
+              theme={description ? "solid" : "minimal"}
+              onClick={() => handleDateChange("month", "prev")}>
+              <Icons.ArrowLeft />
+            </Button>
+          )}
+          {!nextMonthDisabled && (
+            <Button
+              disabled={nextMonthDisabled}
+              small={isPhone}
+              theme={description ? "solid" : "minimal"}
+              onClick={() => handleDateChange("month", "next")}>
+              <Icons.ArrowRight />
+            </Button>
+          )}
         </Stack>
       </CalendarHeaderStyled>
+      {description && (
+        <Text accent as="p" bottom="medium">
+          {description}
+        </Text>
+      )}
 
       <CalendarGridStyled mode="days">
         {daysOfWeek.map((day) => (
@@ -118,11 +131,14 @@ export default function Calendar({
           const isBetween =
             dates.startDate &&
             dates.endDate &&
-            dayjs(date).isAfter(dates.startDate) &&
-            dayjs(date).isBefore(dates.endDate);
+            ((dayjs(date).isAfter(dates.startDate, "day") &&
+              dayjs(date).isBefore(dates.endDate, "day")) ||
+              (dayjs(date).isAfter(dates.endDate, "day") &&
+                dayjs(date).isBefore(dates.startDate, "day")));
           const isDisabled = Boolean(
             (values.minDate && dayjs(date).isBefore(values.minDate, "day")) ||
-              (values.maxDate && dayjs(date).isAfter(values.maxDate, "day")),
+              (values.maxDate && dayjs(date).isAfter(values.maxDate, "day")) ||
+              blockedDates?.includes(date),
           );
 
           return (
@@ -134,6 +150,19 @@ export default function Calendar({
                     backgroundColor: "$text !important",
                     color: "$background !important",
                     opacity: 0.7,
+                  },
+                }),
+                ...(isDisabled && {
+                  "&::after": {
+                    content: "''",
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%) rotate(45deg)",
+                    width: "100%",
+                    height: "1px",
+                    background: "$text",
+                    borderRadius: "$large",
                   },
                 }),
               }}
@@ -150,7 +179,7 @@ export default function Calendar({
         {!prevYearDisabled && (
           <Button
             disabled={prevYearDisabled}
-            icon={<Icons.ClockCounterClockwise />}
+            icon={<Icons.CaretLeft />}
             small
             onClick={() => handleDateChange("year", "prev")}>
             {dayjs(values.viewDate).subtract(1, "year").format("YYYY")}
@@ -159,7 +188,7 @@ export default function Calendar({
         {!nextYearDisabled && (
           <Button
             disabled={nextYearDisabled}
-            icon={<Icons.ClockClockwise />}
+            icon={<Icons.CaretRight />}
             iconPosition="right"
             small
             onClick={() => handleDateChange("year", "next")}>
