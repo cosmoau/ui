@@ -55,8 +55,8 @@ const defaultTheme = {
   },
   fontSizes: {
     default: "1.7rem",
-    h1: "3.7rem",
-    h2: "3.4rem",
+    h1: "3.8rem",
+    h2: "3.3rem",
     h3: "2.7rem",
     h4: "2.2rem",
     h5: "1.8rem",
