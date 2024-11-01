@@ -47,7 +47,7 @@ export default function Text({
       }}
       highlight={highlight}
       href={as === "a" ? href : undefined}
-      inline={inline && !["a", "span", "strong"].includes(as)}
+      inline={inline && !["span", "strong"].includes(as) ? true : false}
       link={link || (as === "a" ? "default" : undefined)}
       rel={as === "a" ? rel : undefined}
       size={as || "p"}
