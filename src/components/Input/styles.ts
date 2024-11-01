@@ -73,7 +73,7 @@ export const InputFunctionStyled = styled("div", {
 
 export const InputCallbackStyled = styled("div", {
   display: "block",
-  paddingTop: "$smaller",
+  paddingTop: "$small",
   textAlign: "left",
 });
 
