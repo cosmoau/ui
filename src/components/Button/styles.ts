@@ -64,6 +64,13 @@ export const ButtonStyled = styled("button", {
       },
     },
     theme: {
+      cosmo: {
+        backgroundColor: "$accentCosmo",
+        color: "$background",
+        darkModeSpec: {
+          color: "$text",
+        },
+      },
       default: {
         backgroundColor: "transparent",
         borderColor: "$border",

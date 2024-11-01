@@ -133,6 +133,14 @@ export const TextStyled = styled("div", {
           backgroundColor: "$defaultHover",
         },
       },
+      cosmo: {
+        ...highlight,
+        backgroundColor: "$accentCosmo",
+        color: "$background",
+        darkModeSpec: {
+          color: "$text",
+        },
+      },
       green: {
         ...highlight,
         backgroundColor: "$greenBackground",
@@ -156,7 +164,7 @@ export const TextStyled = styled("div", {
       },
       true: {
         alignSelf: "center",
-        display: "inline-flex",
+        display: "inline-flex !important",
         marginBottom: "0 !important",
         verticalAlign: "middle",
       },

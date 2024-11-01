@@ -95,7 +95,7 @@ export interface IButton extends ComponentPropsWithoutRef<"button"> {
   inline?: IThemeSpacing | "auto";
   loading?: boolean;
   small?: boolean;
-  theme?: "default" | "fill" | "minimal" | "solid";
+  theme?: "default" | "cosmo" | "fill" | "minimal" | "solid";
 }
 
 export interface ICalendar {
@@ -370,7 +370,7 @@ export interface IText extends ComponentPropsWithRef<"p"> {
   bottom?: IThemeSpacing;
   children: ReactNode;
   css?: CSS;
-  highlight?: "red" | "orange" | "purple" | "blue" | "green" | "default" | "alternate";
+  highlight?: "red" | "orange" | "purple" | "blue" | "green" | "cosmo" | "default" | "alternate";
   href?: string;
   inline?: IThemeSpacing | "auto";
   link?: "minimal" | "default" | "alternate" | "blog";
