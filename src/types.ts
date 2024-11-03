@@ -108,6 +108,7 @@ export interface ICalendar {
   minLength?: number;
   mode?: "range" | "single";
   onSelection: (dates: { endDate: string; startDate: string }) => void;
+  onViewChange?: (dates: { endDate: string; startDate: string }) => void;
   startDate?: string;
   viewDate?: string;
 }

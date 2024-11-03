@@ -180,15 +180,26 @@ export const useDaysInMonth = (viewDate: string): { days: string[]; offset: numb
 
 export const useCalendarViewChange = (
   setValues: Dispatch<SetStateAction<{ maxDate?: string; minDate?: string; viewDate: string }>>,
+  onViewChange?: (dates: { endDate: string; startDate: string }) => void,
 ): { handleDateChange: (type: "month" | "year", direction: "next" | "prev") => void } => {
   const handleDateChange = (type: "month" | "year", direction: "next" | "prev"): void => {
     const amount = direction === "next" ? 1 : -1;
     const unit = type === "month" ? "month" : "year";
 
-    setValues((currentValues) => ({
-      ...currentValues,
-      viewDate: dayjs(currentValues.viewDate).add(amount, unit).format("YYYY-MM-DD"),
-    }));
+    setValues((currentValues) => {
+      const newViewDate = dayjs(currentValues.viewDate).add(amount, unit);
+      const newStartDate = newViewDate.startOf("month").format("YYYY-MM-DD");
+      const newEndDate = newViewDate.endOf("month").format("YYYY-MM-DD");
+
+      if (onViewChange) {
+        onViewChange({ startDate: newStartDate, endDate: newEndDate });
+      }
+
+      return {
+        ...currentValues,
+        viewDate: newViewDate.format("YYYY-MM-DD"),
+      };
+    });
   };
 
   return { handleDateChange };

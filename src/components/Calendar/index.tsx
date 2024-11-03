@@ -24,6 +24,7 @@ const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 export default function Calendar({
   onSelection,
+  onViewChange,
   minLength = 2,
   maxLength,
   mode = "range",
@@ -59,7 +60,7 @@ export default function Calendar({
       minDate: values.minDate,
       viewDate: values.viewDate,
     });
-  const { handleDateChange } = useCalendarViewChange(setValues);
+  const { handleDateChange } = useCalendarViewChange(setValues, onViewChange);
 
   const { days, offset } = useDaysInMonth(values.viewDate);
 
@@ -81,6 +82,13 @@ export default function Calendar({
     const initialViewDate = startDate || viewDate || dayjs().startOf("month").format("YYYY-MM-DD");
 
     setValues((currentValues) => ({ ...currentValues, viewDate: initialViewDate }));
+
+    if (onViewChange) {
+      onViewChange({
+        startDate: initialViewDate,
+        endDate: dayjs(initialViewDate).endOf("month").format("YYYY-MM-DD"),
+      });
+    }
   }, []);
 
   return (

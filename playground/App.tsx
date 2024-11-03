@@ -10,6 +10,8 @@ export function App(): ReactElement {
   const [file, setFile] = useState<File | null>(null);
   const [startDate, setStartDate] = useState<string>("");
   const [endDate, setEndDate] = useState<string>("");
+  const [viewStartDate, setViewStartDate] = useState<string>("");
+  const [viewEndDate, setViewEndDate] = useState<string>("");
   const [singleDate, setSingleDate] = useState<string>("");
   const [selectedDate, setSelectedDate] = useState<string>("");
   const [tableFilter, setTableFilter] = useState("");
@@ -54,6 +56,14 @@ export function App(): ReactElement {
       <C.Icon>
         <FacebookLogo />
       </C.Icon>
+      <h1>
+        {JSON.stringify({
+          startDate,
+          endDate,
+          viewStartDate,
+          viewEndDate,
+        })}
+      </h1>
       <C.CalendarInline
         blockedDates={["2024-04-05", "2024-04-20", "2024-05-05"]}
         description="From $200 /night (savings applied)"
@@ -68,6 +78,10 @@ export function App(): ReactElement {
           setStartDate(dates.startDate);
           setEndDate(dates.endDate);
           toast.success(`Selected dates: ${JSON.stringify(dates)}`);
+        }}
+        onViewChange={({ startDate, endDate }) => {
+          setViewStartDate(startDate);
+          setViewEndDate(endDate);
         }}
       />
       <C.Popover trigger={<C.Button>Calendar Months</C.Button>}>
