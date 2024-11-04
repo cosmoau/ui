@@ -161,6 +161,7 @@ export default function Calendar({
                   },
                 }),
                 ...(isDisabled && {
+                  opacity: 0.25,
                   "&::after": {
                     content: "''",
                     position: "absolute",
