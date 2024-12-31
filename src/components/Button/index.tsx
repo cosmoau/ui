@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 import { Icons } from "../../icons";
 import { Loading } from "../../index";
 import { IButton } from "../../types";

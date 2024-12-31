@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 import { Icons } from "../../../icons";
 import { Select, Button, useTheme } from "../../../index";
 import { ISelect } from "../../../types";

@@ -8,6 +8,7 @@ import {
   ElementType,
   ComponentType,
   RefObject,
+  type JSX,
 } from "react";
 import { Toaster } from "react-hot-toast";
 
@@ -201,7 +202,7 @@ export interface IInput extends ComponentPropsWithRef<"input"> {
   id?: string;
   listen?: boolean;
   loading?: boolean;
-  mustRef?: RefObject<HTMLInputElement>;
+  mustRef?: RefObject<HTMLInputElement | null>;
   name: string;
   reset?: boolean;
   resetFunction?: () => void;

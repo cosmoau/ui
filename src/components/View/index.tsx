@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 import { darkTheme } from "../../stitches.config";
 import { IView } from "../../types";
 

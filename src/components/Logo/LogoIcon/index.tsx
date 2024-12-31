@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 import { colors } from "..";
 import { ILogo } from "../../../types";
 import { LogoStyled } from "../styles";

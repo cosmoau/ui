@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 import { IStack } from "../../types";
 
 import { StackStyled, StackColumnStyled, StackRowStyled } from "./styles";

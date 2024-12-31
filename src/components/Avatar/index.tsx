@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 import { Image, Text, theme } from "../../index";
 import { IAvatar } from "../../types";
 

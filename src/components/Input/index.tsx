@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useState, type JSX } from "react";
 import toast from "react-hot-toast";
 
 import { Icons } from "../../icons";

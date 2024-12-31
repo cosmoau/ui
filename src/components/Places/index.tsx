@@ -1,5 +1,5 @@
 import { Loader } from "@googlemaps/js-api-loader";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, type JSX } from "react";
 import { toast } from "react-hot-toast";
 
 import { Input } from "../../index";

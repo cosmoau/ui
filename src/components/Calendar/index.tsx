@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { useEffect } from "react";
+import { useEffect, type JSX } from "react";
 
 import { Icons } from "../../icons";
 import { Stack, Text, Button, useBreakpoints } from "../../index";

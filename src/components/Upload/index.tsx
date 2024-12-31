@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { ChangeEvent, useRef, useState } from "react";
+import { ChangeEvent, useRef, useState, type JSX } from "react";
 import toast from "react-hot-toast";
 
 import { Icons } from "../../icons";

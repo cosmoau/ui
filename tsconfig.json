@@ -1,4 +1,4 @@
 {
   "extends": "eslint-config-dolmios/configs/lib/tsconfig",
-  "include": ["src"]
+  "include": ["src"],
 }

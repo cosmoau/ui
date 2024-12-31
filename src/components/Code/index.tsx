@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type JSX } from "react";
 import { toast } from "react-hot-toast";
 
 import { Icons } from "../../icons";

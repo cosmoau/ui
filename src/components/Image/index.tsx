@@ -1,4 +1,5 @@
 import { default as NextImage } from "next/image";
+import type { JSX } from "react";
 
 import { IImage } from "../../types";
 

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type JSX } from "react";
 
 import { Icons } from "../../icons";
 import { Button, Icon, Text } from "../../index";

@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 import { IDivider } from "../../types";
 
 import { DividerStyled } from "./styles";

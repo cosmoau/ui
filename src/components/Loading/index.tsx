@@ -1,4 +1,5 @@
 import { styled } from "@stitches/react";
+import type { JSX } from "react";
 
 import { ILoading } from "../../types";
 

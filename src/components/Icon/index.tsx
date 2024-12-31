@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 import { IIcon } from "../../types";
 
 import { IconStyled } from "./styles";

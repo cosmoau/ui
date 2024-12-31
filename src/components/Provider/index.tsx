@@ -1,5 +1,5 @@
 import { IconContext } from "@phosphor-icons/react";
-import { useEffect } from "react";
+import { useEffect, type JSX } from "react";
 
 import packageJson from "../../../package.json";
 import { darkTheme } from "../../stitches.config";

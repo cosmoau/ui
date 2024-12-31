@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 import { useEventListener, useOutsideClick, usePopper } from "../../index";
 import { IPopover } from "../../types";
 

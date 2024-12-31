@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, type JSX } from "react";
 
 import { Icons } from "../../icons";
 import { Button, Text, useEventListener, useOutsideClick, useScrollLock } from "../../index";

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type JSX } from "react";
 
 import { Button, useEventListener } from "../../index";
 import { IForm } from "../../types";
