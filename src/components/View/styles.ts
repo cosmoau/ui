@@ -41,9 +41,6 @@ export const ViewContainerStyled = styled("div", {
           maxWidth: "2000px",
         },
         margin: "auto",
-        phone: {
-          width: "96%",
-        },
         wide: {
           maxWidth: "2400px",
         },
@@ -59,13 +56,10 @@ export const ViewContainerStyled = styled("div", {
           maxWidth: "1800px",
         },
         margin: "auto",
-        phone: {
-          width: "96%",
-        },
         wide: {
           maxWidth: "2200px",
         },
-        width: "94%",
+        width: "96%",
       },
     },
   },
