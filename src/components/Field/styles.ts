@@ -1,4 +1,5 @@
 import { styled } from "../../stitches.config";
+import { ButtonStyled } from "../Button/styles";
 
 export const FieldStyled = styled("div", {
   position: "relative",
@@ -86,7 +87,10 @@ export const FieldFunctionStyled = styled("div", {
   },
   position: "relative",
   verticalAlign: "middle",
-
+  [`& ${ButtonStyled}`]: {
+    padding: "0 $smaller",
+    minHeight: "none !important",
+  },
   width: "100%",
 });
 

@@ -119,7 +119,6 @@ export default function Input({
               <Button
                 disabled={isCopied || disabled}
                 icon={!isPhone ? <Icons.ClipboardText /> : undefined}
-                small
                 onClick={(): void => {
                   handleCopy();
                 }}>
@@ -130,7 +129,6 @@ export default function Input({
               <Button
                 disabled={disabled}
                 icon={!isPhone ? !isRevealed ? <Icons.Eye /> : <Icons.EyeClosed /> : undefined}
-                small
                 onClick={(): void => {
                   handleReveal();
                 }}>
@@ -151,7 +149,6 @@ export default function Input({
             {reset && inputValue && (
               <Button
                 disabled={disabled}
-                small
                 onClick={(): void => {
                   handleReset();
                 }}>
@@ -164,7 +161,6 @@ export default function Input({
                 disabled={!submitValid || !submitValid(inputValue) || isSubmitted || disabled}
                 icon={!isPhone ? <Icons.ArrowRight weight="regular" /> : undefined}
                 iconPosition="right"
-                small
                 theme={submitValid && submitValid(inputValue) ? "solid" : "default"}
                 type="submit"
                 onClick={(): void => {

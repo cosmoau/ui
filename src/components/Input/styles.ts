@@ -1,4 +1,5 @@
 import { styled } from "../../stitches.config";
+import { ButtonStyled } from "../Button/styles";
 
 export const InputStyled = styled("div", {
   position: "relative",
@@ -66,9 +67,12 @@ export const InputFunctionStyled = styled("div", {
   gap: "$smaller",
   height: "100%",
   justifyContent: "center",
-  marginLeft: "$small",
-  padding: "0 $small",
   verticalAlign: "middle",
+  padding: "$smallest $small $smallest 0",
+  [`& ${ButtonStyled}`]: {
+    padding: "0 $smaller",
+    minHeight: "none !important",
+  },
 });
 
 export const InputCallbackStyled = styled("div", {

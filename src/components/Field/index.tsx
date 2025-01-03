@@ -99,7 +99,6 @@ export default function Field({
               <Button
                 disabled={isCopied}
                 icon={<Icons.ClipboardText />}
-                small
                 onClick={(): void => {
                   handleCopy();
                 }}>
@@ -112,7 +111,6 @@ export default function Field({
                 css={{
                   marginLeft: "$smaller",
                 }}
-                small
                 onClick={(): void => {
                   handleReset();
                 }}>
@@ -124,7 +122,6 @@ export default function Field({
               <Button
                 disabled={!submitValid || !submitValid(inputValue) || isSubmitted}
                 inline={loading ? "small" : undefined}
-                small
                 type="submit"
                 onClick={(): void => {
                   if (submitFunction && submitValid && submitValid(inputValue)) {
