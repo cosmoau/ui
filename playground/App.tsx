@@ -470,7 +470,7 @@ export function App(): ReactElement {
       </C.View>
       <C.View>
         <C.Stack bottom="larger" direction="column">
-          <C.Input id="table-search" name="table-search" placeholder="Filter" />
+          <C.Input copy id="table-search" name="table-search" placeholder="Filter" />
           <C.Table
             filters={
               <C.Input
