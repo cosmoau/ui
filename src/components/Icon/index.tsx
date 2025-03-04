@@ -1,17 +1,16 @@
 import type { JSX } from "react";
 
 import { IIcon } from "../../types";
-
 import { IconStyled } from "./styles";
 
 export const BASE_SIZE = 21;
 
 export default function Icon({
+  children,
   css,
-  inline,
   forceColor,
   forceSize = BASE_SIZE,
-  children,
+  inline,
 }: IIcon): JSX.Element {
   return (
     <IconStyled

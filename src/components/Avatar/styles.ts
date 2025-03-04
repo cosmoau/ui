@@ -2,13 +2,6 @@ import { styled } from "../../stitches.config";
 import { ImageStyled } from "../Image/styles";
 
 export const AvatarStyled = styled("div", {
-  alignSelf: "center",
-  backgroundColor: "$default",
-  borderRadius: "100%",
-  color: "$accent",
-  display: "inline-flex",
-  height: "100%",
-
   [`& ${ImageStyled}`]: {
     borderRadius: "100% !important",
     height: "100%",
@@ -18,6 +11,13 @@ export const AvatarStyled = styled("div", {
     },
     width: "100%",
   },
+  alignSelf: "center",
+  backgroundColor: "$default",
+  borderRadius: "100%",
+  color: "$accent",
+  display: "inline-flex",
+
+  height: "100%",
   justifyContent: "center",
 
   span: {

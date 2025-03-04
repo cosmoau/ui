@@ -126,9 +126,9 @@ export const providerReset = globalCss({
   ],
 
   "a, a:visited, a:active, a:hover": {
-    WebkitTapHighlightColor: "rgba(15, 23, 36, 0)",
     color: "inherit",
     textDecoration: "none",
+    WebkitTapHighlightColor: "rgba(15, 23, 36, 0)",
   },
 
   body: {
@@ -137,8 +137,6 @@ export const providerReset = globalCss({
       backgroundColor: darkTheme.colors.background,
       color: darkTheme.colors.text,
     },
-    MozOsxFontSmoothing: "grayscale",
-    WebkitFontSmoothing: "antialiased",
     backgroundColor: theme.colors.background,
     boxSizing: "border-box",
     color: theme.colors.text,
@@ -147,26 +145,28 @@ export const providerReset = globalCss({
     fontWeight: "normal",
     lineHeight: 1.4,
     margin: 0,
+    MozOsxFontSmoothing: "grayscale",
     padding: 0,
+    WebkitFontSmoothing: "antialiased",
   },
 
   html: {
-    fontSize: "62.5%",
-    [breakpoints.special.micro]: {
-      fontSize: "57.5%",
-    },
     [breakpoints.phoneX]: {
       fontSize: "60.5%",
     },
-    [breakpoints.tabletX]: {
-      fontSize: "61.5%",
+    [breakpoints.special.micro]: {
+      fontSize: "57.5%",
     },
     [breakpoints.special.print]: {
       fontSize: "62.5%",
     },
+    [breakpoints.tabletX]: {
+      fontSize: "61.5%",
+    },
     [breakpoints.wide]: {
       fontSize: "68.5%",
     },
+    fontSize: "62.5%",
   },
 
   img: {

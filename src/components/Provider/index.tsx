@@ -5,7 +5,6 @@ import packageJson from "../../../package.json";
 import { darkTheme } from "../../stitches.config";
 import { IProvider } from "../../types";
 import { BASE_SIZE } from "../Icon";
-
 import Portal from "./ProviderPortal";
 import { ProviderStyled, providerReset } from "./styles";
 import { ToastController } from "./ToastController";

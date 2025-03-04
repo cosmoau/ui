@@ -11,7 +11,6 @@ import {
   useWindowDimensions,
 } from "../../index";
 import { ISelect } from "../../types";
-
 import {
   SelectStyled,
   SelectTriggerStyled,
@@ -24,22 +23,22 @@ import {
 } from "./styles";
 
 export default function Select({
-  options,
   css,
-  onSelection,
-  label,
   disabled,
-  initial,
-  width,
-  height,
-  trigger,
-  loading,
-  triggerCSS,
-  wrapperCSS,
-  last,
   filter,
+  height,
+  initial,
+  label,
+  last,
+  loading,
+  onSelection,
+  options,
+  trigger,
+  triggerCSS,
+  width,
+  wrapperCSS,
 }: ISelect): JSX.Element {
-  const { triggerRef, contentRef, isOpen, isMounted, handleClick, handleClose } = usePopper();
+  const { contentRef, handleClick, handleClose, isMounted, isOpen, triggerRef } = usePopper();
 
   const { breakpoint } = useBreakpoints();
   const { height: windowHeight } = useWindowDimensions();

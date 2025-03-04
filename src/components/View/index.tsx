@@ -2,20 +2,19 @@ import type { JSX } from "react";
 
 import { darkTheme } from "../../stitches.config";
 import { IView } from "../../types";
-
 import { ViewStyled, ViewContainerStyled } from "./styles";
 
 export default function View({
-  container,
-  inverted,
-  gradient,
-  top,
-  bottom,
-  css,
-  children,
   app,
+  bottom,
+  children,
+  container,
+  css,
+  gradient,
   id,
+  inverted,
   noPrint,
+  top,
 }: IView): JSX.Element {
   return (
     <ViewStyled

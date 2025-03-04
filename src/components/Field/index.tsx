@@ -4,7 +4,6 @@ import toast from "react-hot-toast";
 import { Icons } from "../../icons";
 import { Button, Loading, Text } from "../../index";
 import { IField } from "../../types";
-
 import {
   FieldStyled,
   FieldAreaStyled,
@@ -14,29 +13,29 @@ import {
 } from "./styles";
 
 export default function Field({
+  cols,
   copy,
-  disabled,
-  placeholder,
-  width,
   css,
-  value,
-  onChange,
-  success,
-  successMessage,
-  warning,
-  warningMessage,
-  reset,
-  resetFunction,
+  disabled,
   error,
   errorMessage,
+  id,
   loading,
+  name,
+  onChange,
+  placeholder,
+  reset,
+  resetFunction,
+  rows,
   submit,
   submitFunction,
   submitValid,
-  rows,
-  cols,
-  id,
-  name,
+  success,
+  successMessage,
+  value,
+  warning,
+  warningMessage,
+  width,
 }: IField): JSX.Element {
   const [inputValue, setInputValue] = useState(value || "") as [string, (value: string) => void];
   const [isCopied, setIsCopied] = useState(false);

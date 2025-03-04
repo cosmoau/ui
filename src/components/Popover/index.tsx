@@ -2,20 +2,19 @@ import type { JSX } from "react";
 
 import { useEventListener, useOutsideClick, usePopper } from "../../index";
 import { IPopover } from "../../types";
-
 import { PopoverStyled, PopoverContentStyled, PopoverTriggerStyled } from "./styles";
 
 export default function Popover({
-  css,
-  trigger,
   children,
+  css,
   disabled,
   minimal = false,
+  small = false,
+  trigger,
   triggerCSS,
   wrapperCSS,
-  small = false,
 }: IPopover): JSX.Element {
-  const { triggerRef, contentRef, isOpen, isMounted, handleClick, handleClose } = usePopper();
+  const { contentRef, handleClick, handleClose, isMounted, isOpen, triggerRef } = usePopper();
 
   useOutsideClick(contentRef, () => handleClose());
 

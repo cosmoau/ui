@@ -1,17 +1,17 @@
-import { default as NextImage } from "next/image";
 import type { JSX } from "react";
 
-import { IImage } from "../../types";
+import { default as NextImage } from "next/image";
 
+import { IImage } from "../../types";
 import { ImageStyled } from "./styles";
 
 export default function Image({
-  css,
   borderRadius,
+  css,
   fill,
   fillFit,
-  fillPosition = "center",
   fillHeight = "100%",
+  fillPosition = "center",
   quality = 90,
   ...rest
 }: IImage): JSX.Element {

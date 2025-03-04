@@ -4,7 +4,6 @@ import { useEffect, type JSX } from "react";
 import { Icons } from "../../icons";
 import { Stack, Text, Button, useBreakpoints } from "../../index";
 import { ICalendar } from "../../types";
-
 import {
   useCalendarState,
   useCalendarSingleValidation,
@@ -23,21 +22,21 @@ import {
 const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 export default function Calendar({
+  blockedDates,
+  description,
+  endDate,
+  maxDate,
+  maxLength,
+  minDate,
+  minLength = 2,
+  mode = "range",
   onSelection,
   onViewChange,
-  minLength = 2,
-  maxLength,
-  mode = "range",
-  minDate,
-  maxDate,
-  description,
-  blockedDates,
-  viewDate,
   startDate,
-  endDate,
+  viewDate,
 }: ICalendar): JSX.Element {
   const { isPhone } = useBreakpoints();
-  const { dates, setDates, values, setValues } = useCalendarState({
+  const { dates, setDates, setValues, values } = useCalendarState({
     endDate,
     maxDate,
     minDate,
@@ -85,8 +84,8 @@ export default function Calendar({
 
     if (onViewChange) {
       onViewChange({
-        startDate: initialViewDate,
         endDate: dayjs(initialViewDate).endOf("month").format("YYYY-MM-DD"),
+        startDate: initialViewDate,
       });
     }
   }, []);
@@ -161,18 +160,18 @@ export default function Calendar({
                   },
                 }),
                 ...(isDisabled && {
-                  opacity: 0.25,
                   "&::after": {
-                    content: "''",
-                    position: "absolute",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%) rotate(45deg)",
-                    width: "100%",
-                    height: "1px",
                     background: "$text",
                     borderRadius: "$large",
+                    content: "''",
+                    height: "1px",
+                    left: "50%",
+                    position: "absolute",
+                    top: "50%",
+                    transform: "translate(-50%, -50%) rotate(45deg)",
+                    width: "100%",
                   },
+                  opacity: 0.25,
                 }),
               }}
               disabled={isDisabled}

@@ -210,10 +210,10 @@ export function useTablePagination(
 }
 
 export function useTableSort({
-  defaultSort = 0,
   defaultDirection = "asc",
-  storage,
+  defaultSort = 0,
   setStorage,
+  storage,
   tbody,
 }: {
   defaultDirection?: "asc" | "desc";

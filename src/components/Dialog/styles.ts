@@ -143,16 +143,16 @@ export const DialogCoreStyled = styled("div", {
 });
 
 export const DialogHeaderStyled = styled("div", {
-  alignItems: "center",
-  backgroundColor: "$defaultSubtle",
-  borderBottom: "0.1rem solid $borderSubtle",
-  display: "flex",
-  gap: "$small",
   [`& ${TextStyled}`]: {
     marginBottom: "0 !important",
     verticalAlign: "middle",
     whiteSpace: "pre-wrap",
   },
+  alignItems: "center",
+  backgroundColor: "$defaultSubtle",
+  borderBottom: "0.1rem solid $borderSubtle",
+  display: "flex",
+  gap: "$small",
   justifyContent: "space-between",
   padding: "$medium calc($medium * 1.25)",
   phone: {

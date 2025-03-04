@@ -5,10 +5,10 @@ import { ILogo } from "../../../types";
 import { LogoStyled } from "../styles";
 
 export default function LogoIcon({
-  height = 50,
-  width = 50,
-  inline,
   css,
+  height = 50,
+  inline,
+  width = 50,
   ...rest
 }: ILogo): JSX.Element {
   return (

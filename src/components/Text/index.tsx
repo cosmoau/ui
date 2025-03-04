@@ -4,24 +4,23 @@ import { Balancer } from "react-wrap-balancer";
 import { Icons } from "../../icons";
 import { IText } from "../../types";
 import Icon from "../Icon";
-
 import { TextStyled } from "./styles";
 
 export default function Text({
   accent,
-  top,
-  bottom,
-  highlight,
-  inline,
   as = "p",
-  override,
-  css,
-  children,
   balanced,
-  link,
+  bottom,
+  children,
+  css,
+  highlight,
   href,
+  inline,
+  link,
+  override,
   rel,
   target,
+  top,
   ...rest
 }: IText): JSX.Element {
   const TextBalancer = balanced ? Balancer : Fragment;

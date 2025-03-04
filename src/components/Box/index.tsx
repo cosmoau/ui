@@ -3,7 +3,6 @@ import { useState, type JSX } from "react";
 import { Icons } from "../../icons";
 import { Button, Image, Loading } from "../../index";
 import { IBox } from "../../types";
-
 import {
   BoxExitStyled,
   BoxExpanderTrigger,
@@ -16,26 +15,26 @@ import {
 } from "./styles";
 
 export default function Box({
+  children,
+  closable,
+  css,
+  cta,
+  expandable,
+  expandableHeight,
+  footer,
+  header,
   image,
   imageAlt,
   imageCTA,
   imageFit,
-  imageSizes,
   imageHeight,
   imagePosition,
+  imageSizes,
   imageTarget,
-  css,
-  cta,
-  small,
-  header,
   loading,
-  theme,
-  children,
-  footer,
   minimal,
-  closable,
-  expandable,
-  expandableHeight,
+  small,
+  theme,
 }: IBox): JSX.Element | null {
   const [isOpen, setIsOpen] = useState(true);
   const [isMounted, setIsMounted] = useState(true);

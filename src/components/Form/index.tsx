@@ -2,20 +2,19 @@ import { useState, type JSX } from "react";
 
 import { Button, useEventListener } from "../../index";
 import { IForm } from "../../types";
-
 import { FormStyled } from "./styles";
 
 export default function Form({
   children,
   css,
   disabled,
+  id,
   listen,
   loading,
+  name,
   submit,
   submitFunction,
   submitValid,
-  id,
-  name,
   ...rest
 }: IForm): JSX.Element {
   const [isSubmitted, setIsSubmitted] = useState(false);

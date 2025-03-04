@@ -3,22 +3,21 @@ import type { JSX } from "react";
 import { Icons } from "../../icons";
 import { Loading } from "../../index";
 import { IButton } from "../../types";
-
 import { ButtonIconStyled, ButtonStyled } from "./styles";
 
 export default function Button({
+  block,
+  children,
+  css,
+  disabled,
+  external,
   icon,
   iconPosition,
+  inline,
   loading,
+  onClick,
   small,
   theme,
-  disabled,
-  inline,
-  children,
-  block,
-  external,
-  css,
-  onClick,
   ...rest
 }: IButton): JSX.Element {
   return (

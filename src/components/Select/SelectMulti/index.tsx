@@ -25,23 +25,23 @@ import {
 } from "../styles";
 
 export default function SelectMulti({
-  options,
   css,
-  onSelection,
-  label,
   disabled,
-  initial,
-  width,
-  height,
-  triggerCSS,
-  wrapperCSS,
-  limit,
-  trigger,
-  loading,
-  reset = true,
   filter,
+  height,
+  initial,
+  label,
+  limit,
+  loading,
+  onSelection,
+  options,
+  reset = true,
+  trigger,
+  triggerCSS,
+  width,
+  wrapperCSS,
 }: ISelectMulti): JSX.Element {
-  const { triggerRef, contentRef, isOpen, isMounted, handleClick, handleClose } = usePopper();
+  const { contentRef, handleClick, handleClose, isMounted, isOpen, triggerRef } = usePopper();
 
   const { breakpoint } = useBreakpoints();
   const { height: windowHeight } = useWindowDimensions();

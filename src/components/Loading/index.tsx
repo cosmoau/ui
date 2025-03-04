@@ -1,11 +1,12 @@
-import { styled } from "@stitches/react";
 import type { JSX } from "react";
+
+import { styled } from "@stitches/react";
 
 import { ILoading } from "../../types";
 
 const SVGStyled = styled("svg");
 
-export default function Loading({ width = 20, css }: ILoading): JSX.Element {
+export default function Loading({ css, width = 20 }: ILoading): JSX.Element {
   return (
     <SVGStyled
       css={{

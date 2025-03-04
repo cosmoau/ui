@@ -5,7 +5,7 @@ import useBreakpoints from "../../hooks/useBreakpoints";
 import { ICalendarInline } from "../../types";
 import Dialog from "../Dialog";
 
-export default function CalendarInline({ trigger, title, ...props }: ICalendarInline): JSX.Element {
+export default function CalendarInline({ title, trigger, ...props }: ICalendarInline): JSX.Element {
   const { isPhone } = useBreakpoints();
 
   if (isPhone) {

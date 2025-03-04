@@ -12,7 +12,6 @@ import {
   useLocalStorage,
 } from "../../index";
 import { ITable } from "../../types";
-
 import {
   IStorage,
   MAX_PAGES,
@@ -36,26 +35,26 @@ import {
 } from "./styles";
 
 export default function NewTable({
-  header,
-  filters,
-  thead,
-  tbody,
-  css,
   collapse,
   collapseDisabled,
   collapseSortable,
-  sortable,
-  sortDisabled,
-  defaultSort,
+  css,
   defaultDirection,
-  rowNumbers,
-  loading,
+  defaultLimit,
+  defaultSort,
   error,
+  filters,
+  header,
+  identifier = "new",
+  kbd,
+  loading,
   pagination,
   restrictLimit,
-  kbd,
-  defaultLimit,
-  identifier = "new",
+  rowNumbers,
+  sortable,
+  sortDisabled,
+  tbody,
+  thead,
   ...rest
 }: ITable): JSX.Element {
   const { breakpoint } = useBreakpoints();
@@ -74,11 +73,11 @@ export default function NewTable({
 
   const {
     endPagination,
-    scrollToTop,
     handlePageChange,
     handlePageNavigation,
     handleRowsPerPageChange,
     resetPagination,
+    scrollToTop,
   } = useTablePagination(tbody, storage, setStorage, initialKey);
 
   useTableKeyboard(pagination, kbd, handlePageChange, resetPagination, endPagination);

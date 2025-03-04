@@ -1,35 +1,34 @@
 import type { JSX } from "react";
 
 import { IStack } from "../../types";
-
 import { StackStyled, StackColumnStyled, StackRowStyled } from "./styles";
 
 export default function Stack({
-  direction,
   align,
-  top,
   bottom,
+  children,
+  className,
+  collapseduo,
+  css,
+  direction,
   flex,
   flexduo,
-  collapseduo,
-  minimal,
-  width = 100,
-  children,
-  offset = 0,
-  widthPhone,
-  offsetPhone,
-  widthTablet,
-  offsetTablet,
-  widthLaptop,
-  offsetLaptop,
-  widthDesktop,
-  offsetDesktop,
-  widthWide,
-  className,
-  offsetWide,
   id,
-  css,
+  minimal,
   noPrint,
+  offset = 0,
+  offsetDesktop,
+  offsetLaptop,
+  offsetPhone,
+  offsetTablet,
+  offsetWide,
+  top,
+  width = 100,
+  widthDesktop,
+  widthLaptop,
+  widthPhone,
+  widthTablet,
+  widthWide,
   ...rest
 }: IStack): JSX.Element {
   const shared = {

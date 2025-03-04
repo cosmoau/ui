@@ -2,7 +2,6 @@ import type { JSX } from "react";
 
 import { Image, Text, theme } from "../../index";
 import { IAvatar } from "../../types";
-
 import { AvatarStyled } from "./styles";
 
 const hexToRGB = (hex: string): string => {
@@ -57,14 +56,14 @@ const getLetter = (
 };
 
 export default function Avatar({
-  src,
   alt,
-  fallback,
-  width = 24,
-  css,
   colors,
+  css,
+  fallback,
+  src,
+  width = 24,
 }: IAvatar): JSX.Element {
-  const { color, backgroundColor, borderColor } = getLetter(fallback);
+  const { backgroundColor, borderColor, color } = getLetter(fallback);
 
   return (
     <AvatarStyled

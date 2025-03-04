@@ -3,7 +3,6 @@ import { useRef, useState, type JSX } from "react";
 import { Icons } from "../../icons";
 import { Button, Text, useEventListener, useOutsideClick, useScrollLock } from "../../index";
 import { IMenu } from "../../types";
-
 import {
   MenuGroupStyled,
   MenuItemStyled,
@@ -17,14 +16,14 @@ import {
 } from "./styles";
 
 export default function Menu({
-  css,
-  trigger,
-  options,
-  initial,
-  onSelection,
   children,
+  css,
   full,
+  initial,
   logo,
+  onSelection,
+  options,
+  trigger,
 }: IMenu): JSX.Element {
   const ref = useRef<HTMLDivElement>(null);
 

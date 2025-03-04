@@ -17,31 +17,31 @@ export const AccordionItemStyled = styled("div", {
   "&:last-child": {
     marginBottom: 0,
   },
-  marginTop: "$small",
-  marginBottom: "$small",
   border: "0.1rem solid $border",
   borderRadius: "$small",
+  marginBottom: "$small",
+  marginTop: "$small",
   overflow: "hidden",
   transition: "$default",
 });
 
 export const AccordionHeaderStyled = styled("div", {
   alignItems: "center",
+  backgroundColor: "$defaultSubtle",
+  borderBottom: "0.1rem solid transparent",
+  borderRadius: "$small",
   cursor: "pointer",
   display: "flex",
   justifyContent: "space-between",
-  backgroundColor: "$defaultSubtle",
   padding: "$small",
-  borderRadius: "$small",
-  borderBottom: "0.1rem solid transparent",
   transition: "$default",
   variants: {
     open: {
       true: {
         backgroundColor: "$default",
-        borderColor: "$borderSubtle",
         borderBottomLeftRadius: 0,
         borderBottomRightRadius: 0,
+        borderColor: "$borderSubtle",
       },
     },
   },

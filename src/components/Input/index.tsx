@@ -4,7 +4,6 @@ import toast from "react-hot-toast";
 import { Icons } from "../../icons";
 import { Button, Loading, useEventListener, useBreakpoints, Text } from "../../index";
 import { IInput } from "../../types";
-
 import {
   InputAreaStyled,
   InputCallbackStyled,
@@ -15,30 +14,30 @@ import {
 
 export default function Input({
   copy,
-  mustRef,
-  type,
-  disabled,
-  placeholder,
-  width,
   css,
-  value,
-  onChange,
-  success,
-  successMessage,
-  warning,
-  warningMessage,
+  disabled,
   error,
   errorMessage,
-  reveal,
+  id,
+  listen,
   loading,
+  mustRef,
+  name,
+  onChange,
+  placeholder,
+  reset,
+  resetFunction,
+  reveal,
   submit,
   submitFunction,
   submitValid,
-  listen,
-  reset,
-  resetFunction,
-  id,
-  name,
+  success,
+  successMessage,
+  type,
+  value,
+  warning,
+  warningMessage,
+  width,
 }: IInput): JSX.Element {
   const { isPhone } = useBreakpoints();
   const [inputValue, setInputValue] = useState((value as string) || "");

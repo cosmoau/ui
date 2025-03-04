@@ -3,34 +3,35 @@ import { ButtonStyled } from "../Button/styles";
 
 export const CalendarStyled = styled("div", {
   minHeight: "100%",
+  minWidth: "25rem",
   overflow: "visible",
   width: "100%",
 });
 
 export const CalendarHeaderStyled = styled("div", {
+  alignItems: "center",
   borderBottom: "0.1rem solid $border",
   display: "flex",
-  alignItems: "center",
   justifyContent: "space-between",
   marginBottom: "$small",
   paddingBottom: "$small",
 });
 
 export const CalendarGridStyled = styled("div", {
-  display: "grid",
-  gap: "$small",
-  gridArea: "calendar",
-  maxWidth: "100%",
-
   [`& ${ButtonStyled}`]: {
     padding: "$smaller",
   },
+  display: "grid",
+  gap: "$small",
+  gridArea: "calendar",
+
+  maxWidth: "100%",
 
   micro: {
-    gap: "$smaller",
     [`& ${ButtonStyled}`]: {
       padding: "0",
     },
+    gap: "$smaller",
   },
 
   phone: {

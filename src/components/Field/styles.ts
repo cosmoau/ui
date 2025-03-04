@@ -68,13 +68,17 @@ export const FieldAreaStyled = styled("textarea", {
 });
 
 export const FieldFunctionStyled = styled("div", {
+  [`& ${ButtonStyled}`]: {
+    minHeight: "none !important",
+    padding: "0 $smaller",
+  },
   alignItems: "center",
   backgroundColor: "$defaultSubtle",
   borderTop: "0.1rem solid $borderSubtle",
+
   button: {
     marginLeft: "$small",
   },
-
   display: "flex",
   height: "100%",
   justifyContent: "flex-end",
@@ -87,10 +91,6 @@ export const FieldFunctionStyled = styled("div", {
   },
   position: "relative",
   verticalAlign: "middle",
-  [`& ${ButtonStyled}`]: {
-    padding: "0 $smaller",
-    minHeight: "none !important",
-  },
   width: "100%",
 });
 

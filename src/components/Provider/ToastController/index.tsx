@@ -13,8 +13,8 @@ function prepareMessage(message: Toast["message"]): string {
 }
 
 export function ToastController(props: IToast): JSX.Element {
-  const { toasts, handlers } = useToaster();
-  const { startPause, endPause } = handlers;
+  const { handlers, toasts } = useToaster();
+  const { endPause, startPause } = handlers;
   const TOAST_LIMIT = 4;
 
   useEventListener("keydown", (event: KeyboardEvent) => {

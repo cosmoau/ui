@@ -21,9 +21,9 @@ export const breakpoints = {
 const defaultTheme = {
   colors: {
     accent: "#4b5363",
+    accentCosmo: "rgb(49, 112, 183)",
     background: "#fef8f4",
     blueBackground: "#d1dfe8",
-    accentCosmo: "rgb(49, 112, 183)",
     blueData: "#0D4EA6",
     blueDataAlt: "#278e9c",
     blueText: "#223c63",
@@ -53,6 +53,10 @@ const defaultTheme = {
     subtle: "#253256",
     text: "rgb(10, 37, 64)",
   },
+  fonts: {
+    default: "Untitled Sans, apple-system, sans-serif",
+    serif: "Tiempos Headline, $default, apple-system, sans-serif",
+  },
   fontSizes: {
     default: "1.7rem",
     h1: "3.8rem",
@@ -62,10 +66,6 @@ const defaultTheme = {
     h5: "1.8rem",
     h6: "1.7rem",
     small: "1.6rem",
-  },
-  fonts: {
-    default: "Untitled Sans, apple-system, sans-serif",
-    serif: "Tiempos Headline, $default, apple-system, sans-serif",
   },
   lineHeights: {
     default: "1.6",
@@ -107,9 +107,9 @@ const defaultTheme = {
 export const darkTheme = createTheme({
   colors: {
     accent: "#bccee1",
+    accentCosmo: "rgb(49, 112, 183)",
     background: "rgb(15, 23, 36)",
     blueBackground: "#2C5572",
-    accentCosmo: "rgb(49, 112, 183)",
     blueText: "#d9e6ff",
     border: "rgba(254, 247, 242, 0.22)",
     borderSubtle: "rgba(254, 247, 242, 0.12)",
@@ -134,7 +134,7 @@ export const darkTheme = createTheme({
   },
 });
 
-export const { theme, css, styled, getCssText, globalCss, keyframes } = createStitches({
+export const { css, getCssText, globalCss, keyframes, styled, theme } = createStitches({
   theme: defaultTheme,
   utils: {
     darkModeSpec: (value: unknown) => ({
@@ -172,10 +172,10 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
         | "desktopX"
         | "wide",
     ) => ({
-      display: "inline-block !important",
       [breakpoints[value]]: {
         display: "none !important",
       },
+      display: "inline-block !important",
     }),
     hiddenSpecial: (value: "micro" | "retina" | "print") => ({
       [breakpoints.special[value]]: {
@@ -221,10 +221,10 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
         | "desktopX"
         | "wide",
     ) => ({
-      display: "none",
       [breakpoints[value]]: {
         display: "block",
       },
+      display: "none",
     }),
     visibleInline: (
       value:
@@ -237,16 +237,16 @@ export const { theme, css, styled, getCssText, globalCss, keyframes } = createSt
         | "desktopX"
         | "wide",
     ) => ({
-      display: "none",
       [breakpoints[value]]: {
         display: "inline-block",
       },
+      display: "none",
     }),
     visibleSpecial: (value: "micro" | "retina" | "print") => ({
-      display: "none",
       [breakpoints.special[value]]: {
         display: "block",
       },
+      display: "none",
     }),
     wide: (value: unknown) => ({
       [breakpoints.wide]: value,

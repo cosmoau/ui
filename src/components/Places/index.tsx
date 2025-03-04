@@ -4,17 +4,16 @@ import { toast } from "react-hot-toast";
 
 import { Input } from "../../index";
 import { IPlaces } from "../../types";
-
 import { PlacesStyled } from "./styles";
 
 export default function Places({
-  placeholder,
-  country = "au",
-  restrict,
   apiKey,
-  handleAutocomplete,
+  country = "au",
   css,
+  handleAutocomplete,
   name,
+  placeholder,
+  restrict,
   ...rest
 }: IPlaces): JSX.Element {
   const ref = useRef<HTMLInputElement | null>(null);

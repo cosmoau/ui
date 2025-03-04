@@ -5,7 +5,7 @@ import { Select, Button, useTheme } from "../../../index";
 import { ISelect } from "../../../types";
 
 export default function ProviderToggle(): JSX.Element {
-  const { theme, setTheme } = useTheme();
+  const { setTheme, theme } = useTheme();
   const options = [
     { icon: <Icons.Moon />, iconPosition: "right", label: "Dark", value: "dark" },
     { icon: <Icons.Sun />, iconPosition: "right", label: "Light", value: "light" },

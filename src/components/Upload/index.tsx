@@ -8,18 +8,17 @@ import Badge from "../Badge";
 import Button from "../Button";
 import Loading from "../Loading";
 import Text from "../Text";
-
 import { UploadCoreStyled, UploadFooterStyled, UploadInputStyled, UploadStyled } from "./styles";
 
 export default function Upload<T extends boolean>({
-  onUpload,
   accept,
-  multiple,
   error,
-  success,
   loading,
-  maxSize = 5000000,
   maxFiles = 25,
+  maxSize = 5000000,
+  multiple,
+  onUpload,
+  success,
 }: IUpload<T>): JSX.Element {
   const ref = useRef<HTMLInputElement>(null);
   const [forceError, setForceError] = useState(error);

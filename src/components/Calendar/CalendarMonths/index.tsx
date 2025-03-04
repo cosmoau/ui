@@ -9,10 +9,10 @@ import { CalendarStyled, CalendarHeaderStyled, CalendarGridStyled } from "../sty
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 export default function CalendarMonths({
-  selectedDate,
-  onSelection,
-  minDate,
   maxDate,
+  minDate,
+  onSelection,
+  selectedDate,
   viewDate,
 }: ICalendarMonths): JSX.Element {
   const [viewYear, setViewYear] = useState(
@@ -69,15 +69,16 @@ export default function CalendarMonths({
         <Stack>
           <Button
             disabled={isPrevYearDisabled}
+            inline="small"
             small
-            theme="minimal"
+            theme="solid"
             onClick={() => handleYearChange("prev")}>
             <Icons.ArrowLeft />
           </Button>
           <Button
             disabled={isNextYearDisabled}
             small
-            theme="minimal"
+            theme="solid"
             onClick={() => handleYearChange("next")}>
             <Icons.ArrowRight />
           </Button>

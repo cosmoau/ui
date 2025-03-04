@@ -4,23 +4,22 @@ import { toast } from "react-hot-toast";
 import { Icons } from "../../icons";
 import { Loading } from "../../index";
 import { IBadge } from "../../types";
-
 import { BadgeIconStyled, BadgeStyled, BadgeLoadingStyled } from "./styles";
 
 export default function Badge({
+  block,
+  children,
   closable,
+  copy,
+  css,
   icon,
   iconPosition,
-  loading,
-  theme,
-  small,
   inline,
   link,
-  block,
-  css,
+  loading,
   onClick,
-  children,
-  copy,
+  small,
+  theme,
 }: IBadge): JSX.Element | null {
   const [isOpen, setIsOpen] = useState(true);
   const [isMounted, setIsMounted] = useState(true);

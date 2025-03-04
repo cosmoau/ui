@@ -8,15 +8,15 @@ export const isDateOutOfRange = (date: string, minDate: string, maxDate: string)
   return dayjs(date).isBefore(minDate, "day") || dayjs(date).isAfter(maxDate, "day");
 };
 
-export const formatDate = (date: string | Dayjs, format: string = "YYYY-MM-DD"): string => {
+export const formatDate = (date: string | Dayjs, format = "YYYY-MM-DD"): string => {
   return dayjs(date).format(format);
 };
 
 export const useCalendarState = ({
-  startDate,
   endDate,
-  minDate,
   maxDate,
+  minDate,
+  startDate,
 }: Pick<ICalendar, "startDate" | "endDate" | "minDate" | "maxDate">): {
   dates: { endDate?: string; startDate?: string };
   setDates: Dispatch<SetStateAction<{ endDate?: string; startDate?: string }>>;
@@ -136,9 +136,9 @@ export const useCalendarRangeValidation = (
 };
 
 export const useNavigationDisabledState = ({
-  viewDate,
-  minDate,
   maxDate,
+  minDate,
+  viewDate,
 }: {
   maxDate?: string;
   minDate?: string;
@@ -192,7 +192,7 @@ export const useCalendarViewChange = (
       const newEndDate = newViewDate.endOf("month").format("YYYY-MM-DD");
 
       if (onViewChange) {
-        onViewChange({ startDate: newStartDate, endDate: newEndDate });
+        onViewChange({ endDate: newEndDate, startDate: newStartDate });
       }
 
       return {

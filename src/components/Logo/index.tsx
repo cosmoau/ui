@@ -1,16 +1,15 @@
 import type { JSX } from "react";
 
 import { ILogo } from "../../types";
-
 import { LogoStyled } from "./styles";
 
 export const colors = ["#583749", "#3170B7", "#EE363D", "#A9C3CA", "#295F9C", "#AE282E", "#FFFFFF"];
 
 export default function Logo({
-  height = 70,
-  width = 231,
   css,
+  height = 70,
   inline,
+  width = 231,
   ...rest
 }: ILogo): JSX.Element {
   return (

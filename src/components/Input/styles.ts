@@ -61,18 +61,18 @@ export const InputAreaStyled = styled("input", {
 });
 
 export const InputFunctionStyled = styled("div", {
+  [`& ${ButtonStyled}`]: {
+    minHeight: "none !important",
+    padding: "0 $smaller",
+  },
   alignItems: "center",
   alignSelf: "center",
   display: "flex",
   gap: "$smaller",
   height: "100%",
   justifyContent: "center",
-  verticalAlign: "middle",
   padding: "$smallest $small $smallest 0",
-  [`& ${ButtonStyled}`]: {
-    padding: "0 $smaller",
-    minHeight: "none !important",
-  },
+  verticalAlign: "middle",
 });
 
 export const InputCallbackStyled = styled("div", {

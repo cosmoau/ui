@@ -4,7 +4,6 @@ import { Icons } from "../../icons";
 import { Button, Text, useEventListener, useOutsideClick, useScrollLock } from "../../index";
 import { IDialog } from "../../types";
 import Portal from "../Provider/ProviderPortal";
-
 import {
   DialogContentStyled,
   DialogCoreStyled,
@@ -15,16 +14,16 @@ import {
 } from "./styles";
 
 export default function Dialog({
-  css,
-  wrapperCSS,
-  trigger,
   children,
-  title,
+  css,
   disabled,
   forceHeight,
-  small,
-  triggerCSS,
   portal = true,
+  small,
+  title,
+  trigger,
+  triggerCSS,
+  wrapperCSS,
 }: IDialog): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
