@@ -19,7 +19,14 @@ export const CalendarHeaderStyled = styled("div", {
 
 export const CalendarGridStyled = styled("div", {
   [`& ${ButtonStyled}`]: {
+    micro: {
+      padding: "0 !important",
+    },
+
     padding: "$smaller",
+    phone: {
+      padding: "$smallest",
+    },
   },
   display: "grid",
   gap: "$small",
@@ -28,16 +35,8 @@ export const CalendarGridStyled = styled("div", {
   maxWidth: "100%",
 
   micro: {
-    [`& ${ButtonStyled}`]: {
-      padding: "0",
-    },
+    
     gap: "$smaller",
-  },
-
-  phone: {
-    [`& ${ButtonStyled}`]: {
-      padding: "$smallest",
-    },
   },
 
   textAlign: "center",
