@@ -222,7 +222,7 @@ export const { css, getCssText, globalCss, keyframes, styled, theme } = createSt
         | "wide",
     ) => ({
       [breakpoints[value]]: {
-        display: "block",
+        display: "block !important",
       },
       display: "none",
     }),
@@ -238,13 +238,13 @@ export const { css, getCssText, globalCss, keyframes, styled, theme } = createSt
         | "wide",
     ) => ({
       [breakpoints[value]]: {
-        display: "inline-block",
+        display: "inline-block !important",
       },
       display: "none",
     }),
     visibleSpecial: (value: "micro" | "retina" | "print") => ({
       [breakpoints.special[value]]: {
-        display: "block",
+        display: "block !important",
       },
       display: "none",
     }),
