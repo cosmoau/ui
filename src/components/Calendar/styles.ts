@@ -35,7 +35,6 @@ export const CalendarGridStyled = styled("div", {
   maxWidth: "100%",
 
   micro: {
-    
     gap: "$smaller",
   },
 
