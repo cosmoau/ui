@@ -59,13 +59,13 @@ const defaultTheme = {
   },
   fontSizes: {
     default: "1.7rem",
-    h1: "3.8rem",
-    h2: "3.3rem",
-    h3: "2.7rem",
+    h1: "4.4rem",
+    h2: "3.5rem",
+    h3: "2.8rem",
     h4: "2.2rem",
     h5: "1.8rem",
     h6: "1.7rem",
-    small: "1.6rem",
+    small: "1.5rem",
   },
   lineHeights: {
     default: "1.6",

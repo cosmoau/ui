@@ -768,7 +768,6 @@ export function App(): ReactElement {
               <C.Input copy name="input-100" />
             </C.Stack>
 
-            <img src={file ? URL.createObjectURL(file) : ""} />
             <C.Upload
               accept="image/*"
               error
