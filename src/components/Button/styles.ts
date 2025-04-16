@@ -36,15 +36,15 @@ export const ButtonStyled = styled("button", {
   minHeight: "3.4rem",
   outline: 0,
   padding: "$smallest $small",
-  phone: {
-    minHeight: "3.4rem",
-    padding: "$smallest calc($small * 1.1)",
-  },
+
   position: "relative",
   textOverflow: "ellipsis",
 
   transition: "$default",
-
+  phone: {
+    minHeight: "3.4rem",
+    padding: "$smallest calc($small * 1.1)",
+  },
   variants: {
     block: {
       true: {

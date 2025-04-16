@@ -132,10 +132,10 @@ export default function Select({
             maxHeight: windowHeight < 700 ? "50vh" : "70vh",
             maxWidth: width || "50rem",
             minWidth: width || filter ? "20rem" : "12.5rem",
+            width: width || "auto",
             phone: {
               maxWidth: deviceWidth ? deviceWidth * 0.8 : "80vw",
             },
-            width: width || "auto",
             ...css,
           }}>
           {label && (

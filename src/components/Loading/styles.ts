@@ -11,6 +11,13 @@ export const LoadingOverlayStyled = styled("div", {
   justifyContent: "center",
   maxWidth: "60rem",
   padding: "$smaller $small",
+
+  pointerEvents: "none",
+  position: "fixed",
+  right: "$medium",
+  userSelect: "none",
+
+  zIndex: 1000,
   phone: {
     left: "50%",
     maxWidth: "95%",
@@ -18,12 +25,6 @@ export const LoadingOverlayStyled = styled("div", {
     transform: "translateX(-50%)",
     width: "fit-content",
   },
-  pointerEvents: "none",
-  position: "fixed",
-  right: "$medium",
-  userSelect: "none",
-
-  zIndex: 1000,
 });
 
 export const LoadingOverlayTitledStyled = styled("div", {

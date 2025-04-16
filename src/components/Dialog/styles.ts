@@ -107,6 +107,9 @@ export const DialogCoreStyled = styled("div", {
     },
     small: {
       false: {
+        tabletX: {
+          width: "75% !important",
+        },
         phone: {
           bottom: 0,
           height: "auto",
@@ -116,9 +119,6 @@ export const DialogCoreStyled = styled("div", {
           right: 0,
           top: "auto",
           width: "100% !important",
-        },
-        tabletX: {
-          width: "75% !important",
         },
         width: "55%",
       },

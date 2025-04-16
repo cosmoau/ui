@@ -149,10 +149,11 @@ export const TableHeaderCoreStyled = styled("div", {
     marginBottom: 0,
   },
   justifyContent: "space-between",
+
+  width: "100%",
   phone: {
     flexDirection: "column",
   },
-  width: "100%",
 });
 
 export const TableHeaderOptionsStyled = styled("div", {

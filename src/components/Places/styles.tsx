@@ -47,14 +47,15 @@ export const placesReset = {
     left: "0 !important",
 
     marginTop: "$small",
-    phone: {
-      margin: "0 auto",
-      marginTop: "$small",
-    },
+
     position: "absolute !important",
     top: "100% !important",
     width: "100% !important",
     zIndex: 9999999,
+    phone: {
+      margin: "0 auto",
+      marginTop: "$small",
+    },
   },
   ".pac-logo:after": {
     display: "none",

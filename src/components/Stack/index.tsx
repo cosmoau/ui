@@ -71,16 +71,6 @@ export default function Stack({
       <StackColumnStyled
         className={className}
         css={{
-          desktopX: {
-            flex: `0 0 ${widthDesktop || width}%`,
-            marginLeft: `${offsetDesktop || offset}%`,
-            width: `${widthDesktop || width}%`,
-          },
-          laptopX: {
-            flex: `0 0 ${widthLaptop || width}%`,
-            marginLeft: `${offsetLaptop || offset}%`,
-            width: `${widthLaptop || width}%`,
-          },
           phone: {
             flex: `0 0 ${widthPhone || 100}%`,
             marginLeft: `${offsetPhone || 0}%`,
@@ -90,6 +80,16 @@ export default function Stack({
             flex: `0 0 ${widthTablet || width}%`,
             marginLeft: `${offsetTablet || offset}%`,
             width: `${widthTablet || width}%`,
+          },
+          laptopX: {
+            flex: `0 0 ${widthLaptop || width}%`,
+            marginLeft: `${offsetLaptop || offset}%`,
+            width: `${widthLaptop || width}%`,
+          },
+          desktopX: {
+            flex: `0 0 ${widthDesktop || width}%`,
+            marginLeft: `${offsetDesktop || offset}%`,
+            width: `${widthDesktop || width}%`,
           },
           wide: {
             flex: `0 0 ${widthWide || width}%`,

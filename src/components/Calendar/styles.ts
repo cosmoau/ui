@@ -19,13 +19,12 @@ export const CalendarHeaderStyled = styled("div", {
 
 export const CalendarGridStyled = styled("div", {
   [`& ${ButtonStyled}`]: {
-    micro: {
-      padding: "0 !important",
-    },
-
     padding: "$smaller",
     phone: {
       padding: "$smallest",
+    },
+    micro: {
+      padding: "0 !important",
     },
   },
   display: "grid",

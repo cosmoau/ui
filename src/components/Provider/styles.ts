@@ -23,6 +23,9 @@ export const ToastStyled = styled("div", {
   marginBottom: "$small",
   maxWidth: "60rem",
   padding: "$smaller $small",
+
+  pointerEvents: "all",
+  transition: "$default",
   phone: {
     "&:last-child": {
       marginBottom: "$small",
@@ -33,9 +36,6 @@ export const ToastStyled = styled("div", {
     maxWidth: "90%",
     textAlign: "center",
   },
-  pointerEvents: "all",
-  transition: "$default",
-
   variants: {
     animation: {
       false: {
@@ -60,6 +60,12 @@ export const ToastContainerStyled = styled("div", {
   },
   left: "0",
   paddingLeft: "$small",
+  pointerEvents: "none",
+  position: "fixed",
+  transition: "$default",
+  userSelect: "none",
+  width: "100%",
+  zIndex: "$toast",
   phone: {
     background: "linear-gradient(to top, rgba(14,22,35,0) 0%,rgba(14,22,35,0.15) 100%) !important",
     bottom: "auto",
@@ -71,12 +77,6 @@ export const ToastContainerStyled = styled("div", {
     top: "0",
     transform: "translateX(-50%)",
   },
-  pointerEvents: "none",
-  position: "fixed",
-  transition: "$default",
-  userSelect: "none",
-  width: "100%",
-  zIndex: "$toast",
 });
 
 const baseFontURL = "https://cosmogroup.io/fonts";

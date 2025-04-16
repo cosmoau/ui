@@ -140,11 +140,41 @@ export const { css, getCssText, globalCss, keyframes, styled, theme } = createSt
     darkModeSpec: (value: unknown) => ({
       [`.${darkTheme} &`]: value,
     }),
+    micro: (value: unknown) => ({
+      [breakpoints.special.micro]: value,
+    }),
+    print: (value: unknown) => ({
+      [breakpoints.special.print]: value,
+    }),
+    retina: (value: unknown) => ({
+      [breakpoints.special.retina]: value,
+    }),
+    phone: (value: unknown) => ({
+      [breakpoints.phone]: value,
+    }),
+    phoneX: (value: unknown) => ({
+      [breakpoints.phoneX]: value,
+    }),
+    tablet: (value: unknown) => ({
+      [breakpoints.tablet]: value,
+    }),
+    tabletX: (value: unknown) => ({
+      [breakpoints.tabletX]: value,
+    }),
+    laptop: (value: unknown) => ({
+      [breakpoints.laptop]: value,
+    }),
+    laptopX: (value: unknown) => ({
+      [breakpoints.laptopX]: value,
+    }),
     desktop: (value: unknown) => ({
       [breakpoints.desktop]: value,
     }),
     desktopX: (value: unknown) => ({
       [breakpoints.desktopX]: value,
+    }),
+    wide: (value: unknown) => ({
+      [breakpoints.wide]: value,
     }),
     hidden: (
       value:
@@ -175,40 +205,12 @@ export const { css, getCssText, globalCss, keyframes, styled, theme } = createSt
       [breakpoints[value]]: {
         display: "none !important",
       },
-      display: "inline-block !important",
+      display: "inline-block",
     }),
     hiddenSpecial: (value: "micro" | "retina" | "print") => ({
       [breakpoints.special[value]]: {
         display: "none !important",
       },
-    }),
-    laptop: (value: unknown) => ({
-      [breakpoints.laptop]: value,
-    }),
-    laptopX: (value: unknown) => ({
-      [breakpoints.laptopX]: value,
-    }),
-
-    lightThemeSpec: (value: unknown) => ({
-      "@media (prefers-color-scheme: light)": value,
-    }),
-    micro: (value: unknown) => ({
-      [breakpoints.special.micro]: value,
-    }),
-    phone: (value: unknown) => ({
-      [breakpoints.phone]: value,
-    }),
-    print: (value: unknown) => ({
-      [breakpoints.special.print]: value,
-    }),
-    retina: (value: unknown) => ({
-      [breakpoints.special.retina]: value,
-    }),
-    tablet: (value: unknown) => ({
-      [breakpoints.tablet]: value,
-    }),
-    tabletX: (value: unknown) => ({
-      [breakpoints.tabletX]: value,
     }),
     visible: (
       value:
@@ -222,9 +224,9 @@ export const { css, getCssText, globalCss, keyframes, styled, theme } = createSt
         | "wide",
     ) => ({
       [breakpoints[value]]: {
-        display: "block !important",
+        display: "block",
       },
-      display: "none",
+      display: "none !important",
     }),
     visibleInline: (
       value:
@@ -238,18 +240,18 @@ export const { css, getCssText, globalCss, keyframes, styled, theme } = createSt
         | "wide",
     ) => ({
       [breakpoints[value]]: {
-        display: "inline-block !important",
+        display: "inline-block",
       },
-      display: "none",
+      display: "none !important",
     }),
     visibleSpecial: (value: "micro" | "retina" | "print") => ({
       [breakpoints.special[value]]: {
-        display: "block !important",
+        display: "block",
       },
-      display: "none",
+      display: "none !important",
     }),
-    wide: (value: unknown) => ({
-      [breakpoints.wide]: value,
+    lightThemeSpec: (value: unknown) => ({
+      "@media (prefers-color-scheme: light)": value,
     }),
   },
 });

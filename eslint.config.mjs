@@ -5,7 +5,8 @@ export default [
     ...dolmios,
    {
     rules: {
-        "react-hooks/exhaustive-deps": "off"
+        "react-hooks/exhaustive-deps": "off",
+        "perfectionist/sort-objects": "off"
     }
    }
 ];

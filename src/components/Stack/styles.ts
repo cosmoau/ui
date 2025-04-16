@@ -17,10 +17,11 @@ export const StackStyled = styled("div", {
         flexWrap: "wrap",
         gap: "$medium",
         justifyContent: "space-between",
+
+        verticalAlign: "middle",
         phone: {
           gap: "$small",
         },
-        verticalAlign: "middle",
       },
     },
     flexduo: {
