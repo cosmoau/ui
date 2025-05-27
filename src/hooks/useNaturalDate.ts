@@ -1,18 +1,14 @@
-import * as chrono from "chrono-node";
+import dayjs from "dayjs";
 import { useState, useEffect } from "react";
 
 export default function useNaturalDate(dateString: string): string | null {
   const [date, setDate] = useState<string | null>(null);
 
   useEffect(() => {
-    const parsedDate = chrono.parseDate(dateString);
+    const parsedDate = dayjs(dateString);
 
-    if (parsedDate) {
-      const year = parsedDate.getFullYear();
-      const month = String(parsedDate.getMonth() + 1).padStart(2, "0");
-      const day = String(parsedDate.getDate()).padStart(2, "0");
-
-      setDate(`${year}-${month}-${day}`);
+    if (parsedDate.isValid()) {
+      setDate(parsedDate.format("YYYY-MM-DD"));
     } else {
       setDate(null);
     }
