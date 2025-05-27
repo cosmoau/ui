@@ -379,19 +379,6 @@ export default function NewTable({
                 handlePageNavigation(parseInt(value));
               }}
             />
-            <Text
-              accent
-              as="small"
-              css={{
-                hiddenInline: "phone",
-              }}
-              inline="auto">
-              {data.length} total (showing {storage.offset + 1} -{" "}
-              {storage.offset + storage.limit > data.length
-                ? data.length
-                : storage.offset + storage.limit}
-              )
-            </Text>
           </Stack>
 
           <Stack>

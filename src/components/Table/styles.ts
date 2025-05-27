@@ -191,7 +191,6 @@ export const TableLengthStyled = styled("div", {
     opacity: 0.7,
   },
   textAlign: "center",
-  visible: "phone",
 });
 
 export const TablePaginationStyled = styled("div", {
