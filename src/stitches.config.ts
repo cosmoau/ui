@@ -20,7 +20,7 @@ export const breakpoints = {
 
 const defaultTheme = {
   colors: {
-    accent: "#4b5363",
+    accent: "#536177",
     accentCosmo: "rgb(49, 112, 183)",
     background: "#fef8f4",
     blueBackground: "#d1dfe8",
@@ -50,8 +50,8 @@ const defaultTheme = {
     redData: "#d80000",
     redDataAlt: "#f76f74",
     redText: "#4d0704",
-    subtle: "#2d3747",
-    text: "rgb(15, 23, 36)",
+    subtle: "#334155",
+    text: "#0A2540",
   },
   fonts: {
     default: "Untitled Sans, apple-system, sans-serif",
@@ -106,7 +106,7 @@ const defaultTheme = {
 
 export const darkTheme = createTheme({
   colors: {
-    accent: "#bccee1",
+    accent: "#94A3B8",
     accentCosmo: "rgb(49, 112, 183)",
     background: "rgb(15, 23, 36)",
     blueBackground: "#2C5572",
@@ -125,8 +125,8 @@ export const darkTheme = createTheme({
     purpleText: "#f5e5ff",
     redBackground: "#65333A",
     redText: "#ffe5e5",
-    subtle: "#e8edf3",
-    text: "rgb(245, 240, 235)",
+    subtle: "#E2E8F0",
+    text: "#F4F6F8",
   },
   shadows: {
     large: "0 0.6rem 1.8rem -0.2rem rgba(0, 0, 0, 0.24)",
