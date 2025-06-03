@@ -20,6 +20,7 @@ export function App(): ReactElement {
   return (
     <C.Provider dark={isDarkTheme}>
       <C.ProviderToggle />
+      <C.LoadingOverlay title="Loading..." />
       <C.Stack bottom="largest">
         <C.Stack>
           <C.Icon inline="small">
