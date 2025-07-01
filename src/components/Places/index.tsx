@@ -1,3 +1,4 @@
+/// <reference types="@types/google.maps" />
 import { Loader } from "@googlemaps/js-api-loader";
 import { useCallback, useEffect, useRef, useState, type JSX } from "react";
 import { toast } from "react-hot-toast";
@@ -40,11 +41,12 @@ export default function Places({
       const init = {
         address: place?.formatted_address || "",
         city:
-          place?.address_components?.find((component) => component.types.includes("locality"))
-            ?.long_name || "",
+          place?.address_components?.find((component: google.maps.GeocoderAddressComponent) =>
+            component.types.includes("locality"),
+          )?.long_name || "",
         restrictedAddress: place?.formatted_address?.replace(/^[0-9]+ /, "") || "",
         state:
-          place?.address_components?.find((component) =>
+          place?.address_components?.find((component: google.maps.GeocoderAddressComponent) =>
             component.types.includes("administrative_area_level_1"),
           )?.short_name || "",
       };
@@ -66,13 +68,15 @@ export default function Places({
       version: "weekly",
     });
 
-    const loadGoogleMaps = async (): Promise<typeof google | void> => {
+    const loadGoogleMaps = async (): Promise<void> => {
       try {
-        const google = await loader.load();
+        const { Autocomplete } = (await loader.importLibrary(
+          "places",
+        )) as google.maps.PlacesLibrary;
 
         if (!ref.current) return;
 
-        autocompleteRef.current = new google.maps.places.Autocomplete(ref.current, {
+        autocompleteRef.current = new Autocomplete(ref.current, {
           componentRestrictions: { country },
           fields: ["address_components", "formatted_address", "geometry", "name"],
           types: ["address"],
@@ -89,8 +93,6 @@ export default function Places({
         if (ref.current) {
           ref.current.addEventListener("focus", movePacContainer);
         }
-
-        return google;
       } catch (error: unknown) {
         const errorMessage =
           (error as Error).message || "Error loading Google Maps for autocomplete, please refresh.";

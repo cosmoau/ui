@@ -1,7 +1,7 @@
 {
   "name": "@cosmoau/ui",
   "description": "Cosmo's internal component library, built with React, Next.js, and Stitches.",
-  "version": "1.12.2",
+  "version": "1.12.3",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": {
     "production": [
@@ -18,7 +18,7 @@
     "url": "https://github.com/cosmoau/ui/issues"
   },
   "dependencies": {
-    "@googlemaps/js-api-loader": "^1.16.8",
+    "@googlemaps/js-api-loader": "^1.16.10",
     "@phosphor-icons/react": "^2.1.10",
     "@popperjs/core": "^2.11.8",
     "@stitches/react": "^1.2.8",
@@ -29,19 +29,19 @@
     "react-wrap-balancer": "^1.1.1"
   },
   "devDependencies": {
-    "@parcel/optimizer-htmlnano": "^2.15.2",
-    "@parcel/packager-ts": "^2.15.2",
-    "@parcel/transformer-typescript-types": "^2.15.2",
+    "@parcel/optimizer-htmlnano": "^2.15.4",
+    "@parcel/packager-ts": "^2.15.4",
+    "@parcel/transformer-typescript-types": "^2.15.4",
     "@types/google.maps": "^3.58.1",
-    "@types/node": "^22.15.29",
-    "@types/react": "^19.1.6",
-    "@types/react-dom": "^19.1.5",
-    "eslint": "^9.28.0",
-    "eslint-config-dolmios": "^2.0.7",
-    "next": "^15.3.3",
-    "parcel": "^2.15.2",
+    "@types/node": "^22.16.0",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "eslint": "^9.30.1",
+    "eslint-config-dolmios": "^2.0.9",
+    "next": "^15.3.4",
+    "parcel": "^2.15.4",
     "path-browserify": "^1.0.1",
-    "prettier": "^3.5.3",
+    "prettier": "^3.6.2",
     "process": "^0.11.10",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
